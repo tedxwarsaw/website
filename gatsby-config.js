@@ -2,5 +2,14 @@ module.exports = {
   siteMetadata: {
     title: "tedxwarsaw",
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true,
+        jsxPragma: `jsx`,
+        allExtensions: true,
+      },
+    },
+  ]
 };
