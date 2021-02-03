@@ -2,6 +2,7 @@ image: node:10.19-alpine
 cache:
   paths:
     - node_modules/
+
 pages:
   script:
     - npm install
@@ -9,3 +10,15 @@ pages:
   artifacts:
     paths:
       - public
+  only:
+    - master
+
+preview:
+  script:
+    - npm install
+    - ./node_modules/.bin/gatsby build --prefix-paths
+  artifacts:
+    paths:
+      - public
+  except:
+    - master
