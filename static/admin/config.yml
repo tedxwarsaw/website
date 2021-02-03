@@ -1,6 +1,6 @@
 backend:
   name: gitlab
-  repo: tedxwarsaw/website
+  repo: tedxwarsaw/tedxwarsaw.gitlab.io
 publish_mode: editorial_workflow
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
