@@ -2,8 +2,6 @@ image: node:10.19-alpine
 cache:
   paths:
     - node_modules/
-    - .cache/
-    - public/
 pages:
   script:
     - npm install
