@@ -1,12 +1,19 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { MarkdownDoc } from "../types";
 
 interface Props {
   title: String;
 }
 
-export const IndexPageTemplate = ({ title }: Props) => <div>{title}</div>;
+export const IndexPageTemplate = ({ title }: Props) => (
+  <>
+    {title}
+    <div>
+      <Link to="/about.html">About</Link>
+    </div>
+  </>
+);
 
 const IndexPage = ({ data }: { data: MarkdownDoc<Props> }) => {
   return <IndexPageTemplate {...data.markdownRemark.frontmatter} />;
