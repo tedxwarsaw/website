@@ -5,7 +5,7 @@ cache:
     - public/
     - node_modules/
 variables:
-  PREVIEW_PATH: ${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}/-/jobs/${CI_JOB_ID}/artifacts/public
+  PREVIEW_PATH: -/${CI_PROJECT_NAME}/-/jobs/${CI_JOB_ID}/artifacts/public
 stages:
   - build
   - announce_preview_end
