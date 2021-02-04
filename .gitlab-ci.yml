@@ -22,19 +22,19 @@ pages:
       "https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/statuses/${CI_COMMIT_SHA}"
     - npm install
     - >
-      if ["$CI_COMMIT_REF_NAME" != "master"]; then;
-        sed -i -e "s#pathPrefix: \"/\"#pathPrefix: \"/${PREVIEW_PATH}\"#g" gatsby-config.js;
+      if ["$CI_COMMIT_REF_NAME" != "master"]; then
+        sed -i -e "s#pathPrefix: \"/\"#pathPrefix: \"/${PREVIEW_PATH}\"#g" gatsby-config.js
       fi
     - mkdir -p public/preview/
     - mv public old_public
     - ./node_modules/.bin/gatsby build --prefix-paths
     - mv public/* old_public/preview/${CI_JOB_ID}/
     - >
-      if ["$CI_COMMIT_REF_NAME" == "master"]; then;
-        mv old_public/preview/${CI_JOB_ID}/* public/;
-        mv old_public/preview/* public/preview/;
+      if ["$CI_COMMIT_REF_NAME" == "master"]; then
+        mv old_public/preview/${CI_JOB_ID}/* public/
+        mv old_public/preview/* public/preview/
       else;
-        mv old_public/* public/;
+        mv old_public/* public/
       fi
     - >
       curl
