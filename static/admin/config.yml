@@ -1,14 +1,15 @@
 backend:
   name: gitlab
+  preview_context: preview_status
   repo: tedxwarsaw/tedxwarsaw.gitlab.io
 publish_mode: editorial_workflow
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 collections:
-  - name: "posts"
-    label: "Posts" # Used in the UI
-    folder: "src/pages/posts"
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  - name: "home"
+    label: "Home" # Used in the UI
+    folder: "src/pages/"
+    create: false # Allow users to create new documents in this collection
+    slug: "index.md" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
