@@ -5,7 +5,7 @@ cache:
     - public/
     - node_modules/
 variables:
-  PREVIEW_PATH: ${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}/-/jobs/${CI_JOB_ID}/artifacts/file/public/index.html
+  PREVIEW_PATH: ${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}/-/jobs/${CI_JOB_ID}/artifacts/public/
 stages:
   - build
   - announce_preview_end
@@ -39,13 +39,13 @@ preview:
       curl
       --request POST
       --header "PRIVATE-TOKEN: ${API_TOKEN}"
-      --data-urlencode "target_url=https://gitlab.com/${PREVIEW_PATH}"
+      --data-urlencode "target_url=https://gitlab.com/${PREVIEW_PATH}/index.html"
       --data-urlencode "state=success"
       --data-urlencode "name=preview_status"
       "https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/statuses/${CI_COMMIT_SHA}"
   environment:
     name: preview
-    url: https://gitlab.com/${PREVIEW_PATH}
+    url: https://gitlab.com/${PREVIEW_PATH}/index.html
   artifacts:
     paths:
       - public
