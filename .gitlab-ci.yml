@@ -49,6 +49,7 @@ preview:
   artifacts:
     paths:
       - public
+    expire_in: 4 weeks
   except:
     - master
 
