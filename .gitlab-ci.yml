@@ -5,12 +5,23 @@ cache:
     - public/
     - node_modules/
 variables:
-  PREVIEW_PATH: preview/${CI_JOB_ID}/
+  PREVIEW_PATH: ${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}/-/jobs/${CI_JOB_ID}/artifacts/file/public/index.html
 stages:
   - build
   - announce_preview_end
 
 pages:
+  stage: build
+  script:
+    - npm install
+    - ./node_modules/.bin/gatsby build --prefix-paths
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+
+preview:
   stage: build
   script:
     - >
@@ -22,34 +33,24 @@ pages:
       "https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/statuses/${CI_COMMIT_SHA}"
     - npm install
     - >
-      if ["$CI_COMMIT_REF_NAME" != "master"]; then
-        sed -i -e "s#pathPrefix: \"/\"#pathPrefix: \"/${PREVIEW_PATH}\"#g" gatsby-config.js
-      fi
-    - mkdir -p public/preview/
-    - mv public old_public
+      sed -i -e "s#pathPrefix: \"/\"#pathPrefix: \"/${PREVIEW_PATH}\"#g" gatsby-config.js
     - ./node_modules/.bin/gatsby build --prefix-paths
-    - mv public/* old_public/preview/${CI_JOB_ID}/
-    - >
-      if ["$CI_COMMIT_REF_NAME" == "master"]; then
-        mv old_public/preview/${CI_JOB_ID}/* public/
-        mv old_public/preview/* public/preview/
-      else;
-        mv old_public/* public/
-      fi
     - >
       curl
       --request POST
       --header "PRIVATE-TOKEN: ${API_TOKEN}"
-      --data-urlencode "target_url=${CI_PAGES_URL}/${PREVIEW_PATH}"
+      --data-urlencode "target_url=https://gitlab.com/${PREVIEW_PATH}"
       --data-urlencode "state=success"
       --data-urlencode "name=preview_status"
       "https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/statuses/${CI_COMMIT_SHA}"
   environment:
     name: preview
-    url: ${CI_PAGES_URL}/${PREVIEW_PATH}
+    url: https://gitlab.com/${PREVIEW_PATH}
   artifacts:
     paths:
       - public
+  except:
+    - master
 
 announce_preview_end_failure:
   stage: announce_preview_end
@@ -61,3 +62,5 @@ announce_preview_end_failure:
     --data-urlencode "name=preview_status"
     "https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/statuses/${CI_COMMIT_SHA}"
   when: on_failure
+  except:
+    - master
