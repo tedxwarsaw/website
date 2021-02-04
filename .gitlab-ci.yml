@@ -19,6 +19,9 @@ preview:
   script:
     - npm install
     - ./node_modules/.bin/gatsby build --prefix-paths
+  environment:
+    name: preview
+    url: https://gitlab.com/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}/-/jobs/${CI_JOB_ID}/artifacts/browse/public/index.html
   artifacts:
     paths:
       - public
