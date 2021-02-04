@@ -2,7 +2,7 @@ const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
 
   return graphql(`
     {
@@ -30,8 +30,10 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach((edge) => {
       const id = edge.node.id;
+      const slug = edge.node.fields.slug;
+      const htmlPath = slug == "/" ? slug : slug.replace(/\/$/, "") + ".html";
       createPage({
-        path: edge.node.fields.slug,
+        path: htmlPath,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.tsx`
         ),
@@ -39,6 +41,13 @@ exports.createPages = ({ actions, graphql }) => {
           id,
         },
       });
+      if (slug != "/") {
+        createRedirect({
+          fromPath: slug,
+          toPath: htmlPath,
+          isPermanent: true,
+        });
+      }
     });
   });
 };
