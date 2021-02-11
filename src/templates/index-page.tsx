@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import { MarkdownDoc } from "../types";
+import { Navbar } from "../components/Navbar";
 
 interface Props {
   title: String;
@@ -8,6 +9,7 @@ interface Props {
 
 export const IndexPageTemplate = ({ title }: Props) => (
   <>
+    <Navbar />
     {title}
     <div>
       <Link to="/about.html">About</Link>
