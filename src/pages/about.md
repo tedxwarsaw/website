@@ -1,4 +1,4 @@
 ---
 
 templateKey: about-page
-body: The about page updated
+body: The about page updated 2
