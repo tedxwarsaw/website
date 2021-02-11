@@ -1,11 +1,14 @@
 module.exports = {
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     extend: {},
+    fontFamily: {
+      sans: ["Helvetica", "Arial", "sans-serif"],
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
