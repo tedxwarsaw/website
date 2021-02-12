@@ -8,13 +8,7 @@ export interface Props {
 
 export const NavbarTemplate = ({ fixed }: Props) => (
   <div className="text-lg">
-    <Img
-      fixed={fixed}
-      fadeIn={false}
-      alt="Site logo"
-      placeholderStyle={{ visibility: "hidden" }} // I don't want a quick flash of the placeholder since fadeIn is false
-      className="text-transparent" // and I also don't want black alt text to appear
-    />
+    <Img fixed={fixed} alt="Site logo" />
   </div>
 );
 
