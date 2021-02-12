@@ -23,10 +23,10 @@ collections:
         file: "src/pages/content/global/navbar.yaml"
         fields:
           - label: Navbar Links
-            name: navbar-links
+            name: navbarLinks
             widget: list
             fields:
               - label: Display Name
-                name: display-name
+                name: displayName
                 widget: "string"
               - { label: "Path", name: "path", widget: "string" }

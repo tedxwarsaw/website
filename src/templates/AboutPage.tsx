@@ -16,7 +16,7 @@ export default AboutPage;
 
 export const pageQuery = graphql`
   query AboutPageTemplate {
-    pagesYaml(templateKey: { eq: "about-page" }) {
+    pagesYaml(templateKey: { eq: "AboutPage" }) {
       body
     }
   }

@@ -1,5 +1,5 @@
-navbar-links:
-  - display-name: Home
+navbarLinks:
+  - displayName: Home
     path: /
-  - display-name: About
+  - displayName: About
     path: /about.html

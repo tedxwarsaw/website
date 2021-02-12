@@ -25,7 +25,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    pagesYaml(templateKey: { eq: "index-page" }) {
+    pagesYaml(templateKey: { eq: "IndexPage" }) {
       title
     }
   }
