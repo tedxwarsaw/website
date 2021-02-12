@@ -12,13 +12,11 @@ module.exports = {
         allExtensions: true,
       },
     },
-    {
-      resolve: "gatsby-transformer-remark",
-    },
+    "gatsby-transformer-yaml",
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/content`,
+        path: `${__dirname}/src/pages/content`,
         name: "content",
       },
     },

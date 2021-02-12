@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import { MarkdownDoc } from "../types";
+import { YamlPage } from "../types";
 import { Navbar } from "../components/Navbar";
 
 interface Props {
@@ -17,18 +17,16 @@ export const IndexPageTemplate = ({ title }: Props) => (
   </>
 );
 
-const IndexPage = ({ data }: { data: MarkdownDoc<Props> }) => {
-  return <IndexPageTemplate {...data.markdownRemark.frontmatter} />;
+const IndexPage = ({ data }: { data: YamlPage<Props> }) => {
+  return <IndexPageTemplate {...data.pagesYaml} />;
 };
 
 export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-      frontmatter {
-        title
-      }
+    pagesYaml(templateKey: { eq: "index-page" }) {
+      title
     }
   }
 `;

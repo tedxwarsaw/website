@@ -6,16 +6,12 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allPagesYaml {
         edges {
           node {
             id
-            fields {
-              slug
-            }
-            frontmatter {
-              templateKey
-            }
+            slug
+            templateKey
           }
         }
       }
@@ -26,16 +22,16 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    const posts = result.data.allMarkdownRemark.edges;
+    const pages = result.data.allPagesYaml.edges;
 
-    posts.forEach((edge) => {
-      const id = edge.node.id;
-      const slug = edge.node.fields.slug;
+    pages.forEach(({ node }) => {
+      const id = node.id;
+      const slug = node.slug;
       const htmlPath = slug == "/" ? slug : slug.replace(/\/$/, "") + ".html";
       createPage({
         path: htmlPath,
         component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.tsx`
+          `src/templates/${String(node.templateKey)}.tsx`
         ),
         context: {
           id,
@@ -55,7 +51,7 @@ exports.createPages = ({ actions, graphql }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `PagesYaml`) {
     const value = createFilePath({ node, getNode });
     createNodeField({
       name: `slug`,

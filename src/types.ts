@@ -1,5 +1,3 @@
-export interface MarkdownDoc<Fields> {
-    markdownRemark: {
-        frontmatter: Fields,
-    }
+export interface YamlPage<Fields> {
+  pagesYaml: Fields;
 }
