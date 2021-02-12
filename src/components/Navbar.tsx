@@ -56,7 +56,8 @@ export const NavbarTemplate = ({
     >
       {navbarLinks.map((link) => (
         <Link
-          className={`${getLinkClasses(link.variant)} pr-10`}
+          className={`h-full flex flex-row items-center pr-10 
+                      ${getLinkClasses(link.variant)}`}
           to={link.path}
         >
           {link.displayName}
