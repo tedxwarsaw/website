@@ -6,10 +6,25 @@ publish_mode: editorial_workflow
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 collections:
-  - name: "home"
-    label: "Home" # Used in the UI
-    folder: "src/pages/"
-    create: false # Allow users to create new documents in this collection
-    slug: "index.md" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - { label: "Title", name: "title", widget: "string" }
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Home" # Used in the UI
+        name: "home"
+        file: "src/content/index.md"
+        slug: "index.md" # Filename template, e.g., YYYY-MM-DD-title.md
+        fields: # The fields for each document, usually in front matter
+          - { label: "Title", name: "title", widget: "string" }
+  - label: "Miscellaneous"
+    name: "miscellaneous"
+    files:
+      - label: "Navbar"
+        name: "navbar"
+        file: "src/content/navbar.md"
+        fields:
+          - label: NavbarPages
+            name: navbar_pages
+            widget: list
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Path", name: "path", widget: "string" }
