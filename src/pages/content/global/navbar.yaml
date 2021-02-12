@@ -1,5 +1,14 @@
 navbarLinks:
   - displayName: Home
+    variant: black
     path: /
   - displayName: About
+    variant: black
     path: /about.html
+navbarButtons:
+  - displayName: Get Involved
+    variant: black
+    path: /getinvolved.html
+  - displayName: Newsletter
+    variant: red
+    path: /newsletter.html
