@@ -1,0 +1,5 @@
+navbar_pages:
+  - display_name: Home
+    path: /
+  - display_name: About
+    path: /about.html

@@ -11,20 +11,22 @@ collections:
     files:
       - label: "Home" # Used in the UI
         name: "home"
-        file: "src/content/index.md"
+        file: "src/content/pages/index.yaml"
         slug: "index.md" # Filename template, e.g., YYYY-MM-DD-title.md
         fields: # The fields for each document, usually in front matter
           - { label: "Title", name: "title", widget: "string" }
-  - label: "Miscellaneous"
-    name: "miscellaneous"
+  - label: "Global"
+    name: "global"
     files:
       - label: "Navbar"
         name: "navbar"
-        file: "src/content/navbar.md"
+        file: "src/content/global/navbar.yaml"
         fields:
           - label: NavbarPages
             name: navbar_pages
             widget: list
             fields:
-              - { label: "Name", name: "name", widget: "string" }
+              - label: "Display Name",
+                name: "display_name",
+                widget: "string",
               - { label: "Path", name: "path", widget: "string" }
