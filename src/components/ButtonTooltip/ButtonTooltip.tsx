@@ -1,18 +1,8 @@
 import React from "react";
 import { usePopperTooltip } from "react-popper-tooltip";
 import "./ButtonTooltip.css";
-import { LinkVariant } from "../Navbar";
+import { LinkVariant, getButtonClasses } from "../Navbar";
 import { Link } from "gatsby";
-
-const getButtonClasses = (variant: LinkVariant): String => {
-  if (variant == LinkVariant.Red) {
-    return "text-red-500";
-  } else if (variant == LinkVariant.Black) {
-    return "text-black";
-  } else {
-    return "";
-  }
-};
 
 export interface Props {
   displayName: string;

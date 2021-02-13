@@ -21,7 +21,7 @@ const getLinkClasses = (variant: LinkVariant): String => {
   }
 };
 
-const getButtonClasses = (variant: LinkVariant): String => {
+export const getButtonClasses = (variant: LinkVariant): String => {
   if (variant == LinkVariant.Red) {
     return "text-red-500";
   } else if (variant == LinkVariant.Black) {
