@@ -6,7 +6,7 @@ import {
   Props as ButtonTooltipProps,
 } from "./ButtonTooltip/ButtonTooltip";
 
-enum LinkVariant {
+export enum LinkVariant {
   Red = "red",
   Black = "black",
 }
@@ -74,6 +74,7 @@ export const NavbarTemplate = ({
         button.isTooltip ? (
           <ButtonTooltip
             displayName={button.displayName}
+            variant={button.variant}
             contents={button.tooltipContents}
             key={idx}
           />

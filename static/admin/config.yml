@@ -26,7 +26,27 @@ collections:
             name: navbarLinks
             widget: list
             fields:
-              - label: Display Name
-                name: displayName
-                widget: "string"
+              - { label: "Display Name", name: "displayName", widget: "string" }
               - { label: "Path", name: "path", widget: "string" }
+              - label: "Variant"
+                name: "variant"
+                widget: "select"
+                options: ["red", "black"]
+          - label: Navbar Buttons
+            name: navbarButtons
+            widget: list
+            fields:
+              - { label: "Display Name", name: "displayName", widget: "string" }
+              - { label: "Path", name: "path", widget: "string" }
+              - { label: "Is Tooltip", name: "isTooltip", widget: "boolean" }
+              - label: "Variant"
+                name: "variant"
+                widget: "select"
+                options: ["red", "black"]
+              - label: "Tooltip Contents"
+                name: tooltipContents
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: string }
+                  - { label: Path, name: path, widget: string }

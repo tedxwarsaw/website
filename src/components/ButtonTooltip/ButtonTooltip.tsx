@@ -1,10 +1,22 @@
 import React from "react";
 import { usePopperTooltip } from "react-popper-tooltip";
 import "./ButtonTooltip.css";
+import { LinkVariant } from "../Navbar";
 import { Link } from "gatsby";
+
+const getButtonClasses = (variant: LinkVariant): String => {
+  if (variant == LinkVariant.Red) {
+    return "text-red-500";
+  } else if (variant == LinkVariant.Black) {
+    return "text-black";
+  } else {
+    return "";
+  }
+};
 
 export interface Props {
   displayName: string;
+  variant: LinkVariant;
   contents: Array<{
     title: string;
     description: string;
@@ -12,7 +24,7 @@ export interface Props {
   }>;
 }
 
-export const ButtonTooltip = ({ displayName, contents }: Props) => {
+export const ButtonTooltip = ({ displayName, variant, contents }: Props) => {
   const {
     getArrowProps,
     getTooltipProps,
@@ -24,7 +36,7 @@ export const ButtonTooltip = ({ displayName, contents }: Props) => {
   return (
     <button
       className={`h-full flex flex-row items-center border-l px-6
-                  ${visible && "bg-gray-200"}`}
+                  ${visible && "bg-gray-200"} ${getButtonClasses(variant)}`}
       ref={setTriggerRef}
     >
       <span className="font-bold tracking-wide uppercase">{displayName}</span>
