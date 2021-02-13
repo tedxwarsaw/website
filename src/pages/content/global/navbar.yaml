@@ -9,6 +9,17 @@ navbarButtons:
   - displayName: Get Involved
     variant: black
     path: /getinvolved.html
+    isTooltip: true
+    tooltipContents:
+      - title: Volunteers
+        description: Become a TEDxWarsaw volunteer or suggest a candidate.
+        path: /volunteers.html
+      - title: Speakers
+        description: Become a TEDxWarsaw speaker or suggest a candidate.
+        path: /speakers.html
+      - title: Partners
+        description: Become a TEDxWarsaw partner.
+        path: /partners.html
   - displayName: Newsletter
     variant: red
     path: /newsletter.html

@@ -1,6 +1,10 @@
 import React from "react";
 import { StaticQuery, graphql, Link } from "gatsby";
 import Img, { FixedObject } from "gatsby-image";
+import {
+  ButtonTooltip,
+  Props as ButtonTooltipProps,
+} from "./ButtonTooltip/ButtonTooltip";
 
 enum LinkVariant {
   Red = "red",
@@ -35,9 +39,11 @@ export interface Props {
     path: string;
   }>;
   navbarButtons: Array<{
+    isTooltip: boolean;
     displayName: string;
     variant: LinkVariant;
     path: string;
+    tooltipContents: ButtonTooltipProps["contents"];
   }>;
 }
 
@@ -54,24 +60,34 @@ export const NavbarTemplate = ({
       className={`h-full hidden lg:flex flex-row items-center uppercase font-bold
                   tracking-wide`}
     >
-      {navbarLinks.map((link) => (
+      {navbarLinks.map((link, idx) => (
         <Link
           className={`h-full flex flex-row items-center pr-10 
                       ${getLinkClasses(link.variant)}`}
+          key={idx}
           to={link.path}
         >
           {link.displayName}
         </Link>
       ))}
-      {navbarButtons.map((button) => (
-        <Link
-          className={`h-full flex flex-row items-center border-gray-200 hover:bg-gray-200
+      {navbarButtons.map((button, idx) =>
+        button.isTooltip ? (
+          <ButtonTooltip
+            displayName={button.displayName}
+            contents={button.tooltipContents}
+            key={idx}
+          />
+        ) : (
+          <Link
+            className={`h-full flex flex-row items-center border-gray-200 hover:bg-gray-200
                       border-l px-6 ${getButtonClasses(button.variant)}`}
-          to={button.path}
-        >
-          {button.displayName}
-        </Link>
-      ))}
+            to={button.path}
+            key={idx}
+          >
+            {button.displayName}
+          </Link>
+        )
+      )}
     </div>
   </header>
 );
@@ -113,6 +129,12 @@ const componentQuery = graphql`
           displayName
           variant
           path
+          isTooltip
+          tooltipContents {
+            title
+            description
+            path
+          }
         }
       }
     }
