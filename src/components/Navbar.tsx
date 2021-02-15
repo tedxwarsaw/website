@@ -52,45 +52,47 @@ export const NavbarTemplate = ({
   navbarLinks,
   navbarButtons,
 }: Props) => (
-  <header className="flex flex-row justify-center items-center h-16 shadow">
-    <div className="flex flex-row items-center h-full justify-between w-full max-w-screen-2xl">
-      <Link to="/" className="h-full flex flex-row items-center px-4">
-        <Img fixed={imgFixed} alt="Site logo" />
-      </Link>
-      <div
-        className={`h-full hidden lg:flex flex-row items-center uppercase font-bold
+  <header className="main-grid h-16 shadow">
+    <div className="col-span-full flex flex-row items-center justify-center">
+      <div className="flex flex-row items-center h-full w-full justify-between max-w-screen-2xl">
+        <Link to="/" className="h-full flex flex-row items-center">
+          <Img fixed={imgFixed} alt="Site logo" />
+        </Link>
+        <div
+          className={`h-full hidden lg:flex flex-row items-center uppercase font-bold
                   tracking-wide`}
-      >
-        {navbarLinks.map((link, idx) => (
-          <Link
-            className={`h-full flex flex-row items-center pr-10 
+        >
+          {navbarLinks.map((link, idx) => (
+            <Link
+              className={`h-full flex flex-row items-center pr-10 
                       ${getLinkClasses(link.variant)}`}
-            key={idx}
-            to={link.path}
-          >
-            {link.displayName}
-          </Link>
-        ))}
-        <div className="flex flex-row items-center h-full last:border-r">
-          {navbarButtons.map((button, idx) =>
-            button.isTooltip ? (
-              <ButtonTooltip
-                displayName={button.displayName}
-                variant={button.variant}
-                contents={button.tooltipContents}
-                key={idx}
-              />
-            ) : (
-              <Link
-                className={`h-full flex flex-row items-center border-gray-200 hover:bg-gray-200
+              key={idx}
+              to={link.path}
+            >
+              {link.displayName}
+            </Link>
+          ))}
+          <div className="flex flex-row items-center h-full last:border-r">
+            {navbarButtons.map((button, idx) =>
+              button.isTooltip ? (
+                <ButtonTooltip
+                  displayName={button.displayName}
+                  variant={button.variant}
+                  contents={button.tooltipContents}
+                  key={idx}
+                />
+              ) : (
+                <Link
+                  className={`h-full flex flex-row items-center border-gray-200 hover:bg-gray-200
                       border-l px-6 ${getButtonClasses(button.variant)}`}
-                to={button.path}
-                key={idx}
-              >
-                {button.displayName}
-              </Link>
-            )
-          )}
+                  to={button.path}
+                  key={idx}
+                >
+                  {button.displayName}
+                </Link>
+              )
+            )}
+          </div>
         </div>
       </div>
     </div>

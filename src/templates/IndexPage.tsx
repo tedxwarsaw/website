@@ -10,6 +10,15 @@ interface Props {
 export const IndexPageTemplate = ({ title }: Props) => (
   <>
     <Navbar />
+    <main className="main-grid">
+      <span>hello</span>
+      <span>hello</span>
+      <div className="inner-grid">
+        <span>hey 1</span>
+        <span>hey 2</span>
+        <span>hey 3</span>
+      </div>
+    </main>
     {title}
     <div>
       <Link to="/about.html">About</Link>
