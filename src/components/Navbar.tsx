@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { StaticQuery, graphql, Link } from "gatsby";
 import Img, { FixedObject } from "gatsby-image";
 import {
   ButtonTooltip,
   Props as ButtonTooltipProps,
 } from "./ButtonTooltip/ButtonTooltip";
+import { SideNavbar } from "./SideNavbar/SideNavbar";
 
 export enum LinkVariant {
   Red = "red",
@@ -47,57 +48,66 @@ export interface Props {
   }>;
 }
 
-export const NavbarTemplate = ({
-  imgFixed,
-  navbarLinks,
-  navbarButtons,
-}: Props) => (
-  <header className="main-grid h-16 shadow">
-    <div className="col-span-full flex flex-row items-center justify-center">
-      <div className="flex flex-row items-center h-full w-full justify-between max-w-screen-2xl">
-        <Link to="/" className="h-full flex flex-row items-center">
-          <Img fixed={imgFixed} alt="Site logo" />
-        </Link>
-        <div
-          className={`h-full hidden lg:flex flex-row items-center uppercase font-bold
-                  tracking-wide`}
-        >
-          {navbarLinks.map((link, idx) => (
-            <Link
-              className={`h-full flex flex-row items-center pr-10 
-                      ${getLinkClasses(link.variant)}`}
-              key={idx}
-              to={link.path}
-            >
-              {link.displayName}
+export const NavbarTemplate = (props: Props) => {
+  const { imgFixed, navbarLinks, navbarButtons } = props;
+  const [sideOpen, setSideOpen] = useState(false);
+  return (
+    <>
+      <header className="main-grid h-16 shadow">
+        <div className="col-span-full flex flex-row items-center justify-center">
+          <div className="flex flex-row items-center h-full w-full justify-between max-w-screen-2xl">
+            <Link to="/" className="h-full flex flex-row items-center">
+              <Img fixed={imgFixed} alt="Site logo" />
             </Link>
-          ))}
-          <div className="flex flex-row items-center h-full last:border-r">
-            {navbarButtons.map((button, idx) =>
-              button.isTooltip ? (
-                <ButtonTooltip
-                  displayName={button.displayName}
-                  variant={button.variant}
-                  contents={button.tooltipContents}
-                  key={idx}
-                />
-              ) : (
+            <div
+              className={`h-full hidden lg:flex flex-row items-center uppercase font-bold
+                  tracking-wide`}
+            >
+              {navbarLinks.map((link, idx) => (
                 <Link
-                  className={`h-full flex flex-row items-center border-gray-200 hover:bg-gray-200
-                      border-l px-6 ${getButtonClasses(button.variant)}`}
-                  to={button.path}
+                  className={`h-full flex flex-row items-center pr-10 
+                      ${getLinkClasses(link.variant)}`}
                   key={idx}
+                  to={link.path}
                 >
-                  {button.displayName}
+                  {link.displayName}
                 </Link>
-              )
-            )}
+              ))}
+              <div className="flex flex-row items-center h-full last:border-r">
+                {navbarButtons.map((button, idx) =>
+                  button.isTooltip ? (
+                    <ButtonTooltip
+                      displayName={button.displayName}
+                      variant={button.variant}
+                      contents={button.tooltipContents}
+                      key={idx}
+                    />
+                  ) : (
+                    <Link
+                      className={`h-full flex flex-row items-center border-gray-200 hover:bg-gray-200
+                      border-l px-6 ${getButtonClasses(button.variant)}`}
+                      to={button.path}
+                      key={idx}
+                    >
+                      {button.displayName}
+                    </Link>
+                  )
+                )}
+              </div>
+            </div>
+            <button
+              className="h-full flex items-center lg:hidden"
+              onClick={() => setSideOpen(true)}
+            >
+              open
+            </button>
           </div>
         </div>
-      </div>
-    </div>
-  </header>
-);
+      </header>
+      <SideNavbar {...props} open={sideOpen} setOpen={setSideOpen} />
+    </>
+  );
+};
 
 export const Navbar = () => (
   <StaticQuery
