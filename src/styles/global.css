@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .main-grid {
-  --side-gap: max(16px, calc(calc(100% - theme("screens.2xl")) / 2));
+  --side-gap: max(16px, calc(calc(100% - theme("screens.xl")) / 2));
   display: grid;
   grid-template-columns:
     var(--side-gap)
@@ -15,7 +15,7 @@
   grid-column: 2 / 3;
 }
 
-@media (min-width: theme("screens.2xl")) {
+@media (min-width: theme("screens.xl")) {
   .inner-grid {
     display: grid;
     grid-template-columns:
@@ -26,7 +26,7 @@
   }
 }
 
-@media (min-width: theme("screens.lg")) and (max-width: theme("screens.2xl")) {
+@media (min-width: theme("screens.lg")) and (max-width: theme("screens.xl")) {
   .inner-grid {
     display: grid;
     grid-template-columns:

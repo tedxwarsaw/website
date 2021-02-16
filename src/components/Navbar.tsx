@@ -56,7 +56,7 @@ export const NavbarTemplate = (props: Props) => {
     <>
       <header className="main-grid h-16 shadow">
         <div className="col-span-full flex flex-row items-center justify-center">
-          <div className="flex flex-row items-center h-full w-full justify-between max-w-screen-2xl">
+          <div className="flex flex-row items-center h-full w-full justify-between max-w-screen-xl">
             <Link to="/" className="h-full flex flex-row items-center">
               <Img fixed={imgFixed} alt="Site logo" />
             </Link>
