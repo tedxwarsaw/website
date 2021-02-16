@@ -115,12 +115,8 @@ export const Navbar = () => (
     render={(data) => (
       <NavbarTemplate
         imgFixed={data.file.childImageSharp.fixed}
-        navbarLinks={data.allGlobalYaml.nodes
-          .map((node) => node.navbarLinks)
-          .flat(1)}
-        navbarButtons={data.allGlobalYaml.nodes
-          .map((node) => node.navbarButtons)
-          .flat(1)}
+        navbarLinks={data.globalYaml.navbarLinks}
+        navbarButtons={data.globalYaml.navbarButtons}
       />
     )}
   />
@@ -135,23 +131,21 @@ const componentQuery = graphql`
         }
       }
     }
-    allGlobalYaml {
-      nodes {
-        navbarLinks {
-          displayName
-          variant
+    globalYaml(collectionId: { eq: "navbar" }) {
+      navbarLinks {
+        displayName
+        variant
+        path
+      }
+      navbarButtons {
+        displayName
+        variant
+        path
+        isTooltip
+        tooltipContents {
+          title
+          description
           path
-        }
-        navbarButtons {
-          displayName
-          variant
-          path
-          isTooltip
-          tooltipContents {
-            title
-            description
-            path
-          }
         }
       }
     }

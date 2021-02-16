@@ -22,6 +22,9 @@ collections:
         name: "navbar"
         file: "src/pages/content/global/navbar.yaml"
         fields:
+          - name: collectionId
+            widget: hidden
+            default: navbar
           - label: Navbar Links
             name: navbarLinks
             widget: list
