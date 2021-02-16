@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { YamlPage } from "../types";
 import { Navbar } from "../components/Navbar/Navbar";
+import { Footer } from "../components/Footer/Footer";
 
 interface Props {
   title: String;
@@ -11,30 +12,15 @@ export const IndexPageTemplate = ({ title }: Props) => (
   <>
     <Navbar />
     <main className="main-grid">
-      <span>hello</span>
-      <span>hello</span>
       <div className="inner-grid">
-        <span className="h-96">hey 1</span>
-        <span className="h-96">hey 1</span>
-        <span className="h-96">hey 1</span>
-        <span className="h-96">hey 1</span>
-        <span className="h-96">hey 1</span>
-        <span className="h-96">hey 1</span>
-        <span className="h-96">hey 1</span>
-        <span className="h-96">hey 1</span>
-        <span className="h-96">hey 1</span>
-        <span className="h-96">hey 1</span>
-        <span className="h-96">hey 1</span>
-        <span className="h-96">hey 1</span>
+        <span>hello</span>
+        <span>hello</span>
         <span className="h-96" id="newsletter">
           newsletter
         </span>
       </div>
     </main>
-    {title}
-    <div>
-      <Link to="/about.html">About</Link>
-    </div>
+    <Footer />
   </>
 );
 
