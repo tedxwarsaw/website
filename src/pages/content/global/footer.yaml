@@ -1,0 +1,24 @@
+collectionId: footer
+footerSecondColumn:
+  displayName: Events
+  links:
+    - displayName: Attend
+      path: /attend
+    - displayName: Watch
+      path: /watch
+    - displayName: About
+      path: /about
+footerThirdColumn:
+  displayName: Get Involved
+  links:
+    - displayName: Speakers
+      path: /speakers
+    - displayName: Volunteers
+      path: /volunteers
+    - displayName: Partners
+      path: /partners
+footerBottomLinks:
+  - displayName: Privacy Policy
+    path: /privacy-policy
+  - displayName: Cookie Policy
+    path: /cookie-policy
