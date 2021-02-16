@@ -55,12 +55,11 @@ export const SideNavbar = ({
           </div>
           <div className="px-4 mt-4 mb-4 space-y-4">
             {navbarLinks.map((link, idx) => (
-              <div>
+              <div key={idx}>
                 <Link
                   className={`text-md uppercase font-semibold ${getLinkClasses(
                     link.variant
                   )}`}
-                  key={idx}
                   to={link.path}
                 >
                   {link.displayName}
@@ -70,12 +69,12 @@ export const SideNavbar = ({
           </div>
           <div className="p-4 bg-gray-100 h-full space-y-4">
             {navbarButtons.map((button, idx) => (
-              <div className="space-y-4">
+              <div className="space-y-4" key={idx}>
                 {button.isTooltip ? (
                   <>
                     <div className="font-light">{button.displayName}</div>
-                    {button.tooltipContents.map((contents) => (
-                      <div className="px-4">
+                    {button.tooltipContents.map((contents, idx) => (
+                      <div className="px-4" key={idx}>
                         <Link to={contents.path} key={idx}>
                           {contents.title}
                         </Link>
