@@ -14,9 +14,21 @@ export const IndexPageTemplate = ({ title }: Props) => (
       <span>hello</span>
       <span>hello</span>
       <div className="inner-grid">
-        <span>hey 1</span>
-        <span>hey 2</span>
-        <span>hey 3</span>
+        <span className="h-96">hey 1</span>
+        <span className="h-96">hey 1</span>
+        <span className="h-96">hey 1</span>
+        <span className="h-96">hey 1</span>
+        <span className="h-96">hey 1</span>
+        <span className="h-96">hey 1</span>
+        <span className="h-96">hey 1</span>
+        <span className="h-96">hey 1</span>
+        <span className="h-96">hey 1</span>
+        <span className="h-96">hey 1</span>
+        <span className="h-96">hey 1</span>
+        <span className="h-96">hey 1</span>
+        <span className="h-96" id="newsletter">
+          newsletter
+        </span>
       </div>
     </main>
     {title}

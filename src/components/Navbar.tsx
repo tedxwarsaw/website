@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { StaticQuery, graphql, Link } from "gatsby";
 import Img, { FixedObject } from "gatsby-image";
+import { MdMenu } from "react-icons/md";
 import {
   ButtonTooltip,
   Props as ButtonTooltipProps,
@@ -12,7 +13,7 @@ export enum LinkVariant {
   Black = "black",
 }
 
-const getLinkClasses = (variant: LinkVariant): String => {
+export const getLinkClasses = (variant: LinkVariant): String => {
   if (variant == LinkVariant.Red) {
     return "hover:text-black text-red-500";
   } else if (variant == LinkVariant.Black) {
@@ -60,8 +61,7 @@ export const NavbarTemplate = (props: Props) => {
               <Img fixed={imgFixed} alt="Site logo" />
             </Link>
             <div
-              className={`h-full hidden lg:flex flex-row items-center uppercase font-bold
-                  tracking-wide`}
+              className={`h-full hidden lg:flex flex-row items-center uppercase font-semibold`}
             >
               {navbarLinks.map((link, idx) => (
                 <Link
@@ -99,7 +99,7 @@ export const NavbarTemplate = (props: Props) => {
               className="h-full flex items-center lg:hidden"
               onClick={() => setSideOpen(true)}
             >
-              open
+              <MdMenu className="h-8 w-8 text-red-500" />
             </button>
           </div>
         </div>

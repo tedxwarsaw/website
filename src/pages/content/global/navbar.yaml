@@ -22,4 +22,4 @@ navbarButtons:
         path: /partners.html
   - displayName: Newsletter
     variant: red
-    path: /newsletter.html
+    path: "#newsletter"

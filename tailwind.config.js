@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      sans: ["Helvetica", "Arial", "sans-serif"],
+      sans: ["Inter", "Helvetica", "Arial", "sans-serif"],
     },
   },
   variants: {
