@@ -46,7 +46,7 @@ export const FooterTemplate = (props: Props) => (
         alt="Site logo"
         className="col-span-full xl:col-span-1"
       />
-      <div className="col-span-full xl:col-span-2 grid gap-16 grid-cols-2 xl:grid-cols-4">
+      <div className="col-span-full xl:col-span-2 grid gap-16 grid-cols-2 md:grid-cols-4">
         <Column title="featured event">
           <div>
             <Link
