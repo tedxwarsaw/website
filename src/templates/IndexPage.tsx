@@ -11,7 +11,7 @@ interface Props {
 export const IndexPageTemplate = ({ title }: Props) => (
   <>
     <Navbar />
-    <main className="main-grid">
+    <main className="main-grid" style={{ minHeight: "calc(100vh - 64px)" }}>
       <div className="inner-grid">
         <span>hello</span>
         <span>hello</span>
