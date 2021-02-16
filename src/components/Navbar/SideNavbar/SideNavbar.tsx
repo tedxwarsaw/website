@@ -36,15 +36,15 @@ export const SideNavbar = ({
       } absolute inset-0 w-screen h-screen`}
     >
       <div
-        className={`fixed w-screen h-screen bg-black z-20 transition-colors
+        className={`fixed w-screen h-full bg-black z-20 transition-colors
                   ${open && !isClosing ? "bg-opacity-20" : "bg-opacity-0"}`}
         onClick={onClose}
       ></div>
       <div
-        className={`fixed h-screen w-80 bg-white shadow-xl z-30 transition
+        className={`fixed h-full w-80 bg-gray-100 shadow-xl z-30 transition overflow-y-auto
                     transform ${open && !isClosing ? "" : "-translate-x-80"}`}
       >
-        <div className="h-full text-md uppercase font-semibold">
+        <div className="text-md uppercase font-semibold bg-white">
           <div className="px-4 w-full flex flex-row justify-between">
             <Link to="/" className="h-16 flex flex-row items-center">
               <Img fixed={imgFixed} alt="Site logo" />
