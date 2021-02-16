@@ -103,8 +103,8 @@ export const NavbarTemplate = (props: Props) => {
             </button>
           </div>
         </div>
+        <SideNavbar {...props} open={sideOpen} setOpen={setSideOpen} />
       </header>
-      <SideNavbar {...props} open={sideOpen} setOpen={setSideOpen} />
     </>
   );
 };
