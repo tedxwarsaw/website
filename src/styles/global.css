@@ -15,6 +15,10 @@
   grid-column: 2 / 3;
 }
 
+.main-grid-full-span {
+  grid-column: 1 / 4 !important;
+}
+
 @media (min-width: theme("screens.xl")) {
   .inner-grid {
     display: grid;
