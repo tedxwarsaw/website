@@ -1,27 +1,20 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import { YamlPage } from "../types";
-import { Navbar } from "../components/Navbar/Navbar";
-import { Footer } from "../components/Footer/Footer";
+import { Page } from "../components/Page/Page";
 
 interface Props {
   title: String;
 }
 
 export const IndexPageTemplate = ({ title }: Props) => (
-  <>
-    <Navbar />
-    <main className="main-grid" style={{ minHeight: "calc(100vh - 64px)" }}>
-      <div className="inner-grid">
-        <span>hello</span>
-        <span>hello</span>
-        <span className="h-96" id="newsletter">
-          newsletter
-        </span>
-      </div>
-    </main>
-    <Footer />
-  </>
+  <Page>
+    <span>hello</span>
+    <span>hello</span>
+    <span className="h-96" id="newsletter">
+      newsletter
+    </span>
+  </Page>
 );
 
 const IndexPage = ({ data }: { data: YamlPage<Props> }) => {
