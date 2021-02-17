@@ -9,11 +9,13 @@ interface Props {
 
 export const IndexPageTemplate = ({ title }: Props) => (
   <Page>
-    <span>hello</span>
-    <span>hello</span>
-    <span className="h-96" id="newsletter">
-      newsletter
-    </span>
+    <div className="inner-grid">
+      <span>hello</span>
+      <span>hello</span>
+      <span className="h-96" id="newsletter">
+        newsletter
+      </span>
+    </div>
   </Page>
 );
 

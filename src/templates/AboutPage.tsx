@@ -7,7 +7,11 @@ interface Props {
   body: String;
 }
 
-export const AboutPageTemplate = ({ body }: Props) => <Page>{body}</Page>;
+export const AboutPageTemplate = ({ body }: Props) => (
+  <Page>
+    <div className="inner-grid">{body}</div>
+  </Page>
+);
 
 const AboutPage = ({ data }: { data: YamlPage<Props> }) => {
   return <AboutPageTemplate {...data.pagesYaml} />;

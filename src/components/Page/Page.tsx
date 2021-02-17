@@ -10,7 +10,7 @@ export const Page = (props: Props) => (
   <>
     <Navbar />
     <main className="main-grid" style={{ minHeight: "calc(100vh - 64px)" }}>
-      <div className="inner-grid">{props.children}</div>
+      {props.children}
     </main>
     <Footer />
   </>
