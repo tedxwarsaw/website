@@ -71,6 +71,7 @@ export const EventPageTemplate = (props: Props) => {
           height="100%"
           width="100%"
           className="col-span-3 md:col-span-2 xl:col-span-4"
+          style={{ height: "30rem" }}
         ></iframe>
       </div>
     </Page>
