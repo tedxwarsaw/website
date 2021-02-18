@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.main-grid {
+:root {
   --side-gap: max(16px, calc(calc(100% - theme("screens.xl")) / 2));
+  --column-gap: 64px;
+}
+
+.main-grid {
   display: grid;
   grid-template-columns:
     var(--side-gap)
@@ -26,7 +30,19 @@
       1fr
       1fr
       1fr;
-    column-gap: 64px;
+    column-gap: var(--column-gap);
+  }
+
+  .seamless-grid {
+    display: grid;
+    grid-template-columns:
+      var(--side-gap)
+      1fr
+      var(--column-gap)
+      1fr
+      var(--column-gap)
+      1fr
+      var(--side-gap);
   }
 }
 
@@ -36,7 +52,17 @@
     grid-template-columns:
       1fr
       1fr;
-    column-gap: 64px;
+    column-gap: var(--column-gap);
+  }
+
+  .seamless-grid {
+    display: grid;
+    grid-template-columns:
+      var(--side-gap)
+      1fr
+      var(--column-gap)
+      1fr
+      var(--side-gap);
   }
 }
 
@@ -45,4 +71,16 @@
     display: grid;
     grid-template-columns: 1fr;
   }
+
+  .seamless-grid {
+    display: grid;
+    grid-template-columns:
+      var(--side-gap)
+      1fr
+      var(--side-gap);
+  }
+}
+
+.text-shadow {
+  text-shadow: 0 1px 20px #000;
 }
