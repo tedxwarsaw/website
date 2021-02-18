@@ -2,28 +2,28 @@ collectionId: navbar
 navbarLinks:
   - displayName: Watch
     variant: black
-    path: /watch.html
+    path: /watch
   - displayName: Attend
     variant: black
-    path: /attend.html
+    path: /attend
   - displayName: About
     variant: black
-    path: /about.html
+    path: /about
 navbarButtons:
   - displayName: Get Involved
     variant: black
-    path: /getinvolved.html
+    path: /getinvolved
     isTooltip: true
     tooltipContents:
       - title: Volunteers
         description: Become a TEDxWarsaw volunteer or suggest a candidate.
-        path: /volunteers.html
+        path: /volunteers
       - title: Speakers
         description: Become a TEDxWarsaw speaker or suggest a candidate.
-        path: /speakers.html
+        path: /speakers
       - title: Partners
         description: Become a TEDxWarsaw partner.
-        path: /partners.html
+        path: /partners
   - displayName: Newsletter
     variant: red
     path: "#newsletter"

@@ -25,25 +25,15 @@ exports.createPages = ({ actions, graphql }) => {
     const pages = result.data.allPagesYaml.edges;
 
     pages.forEach(({ node }) => {
-      const id = node.id;
-      const slug = node.slug;
-      const htmlPath = slug == "/" ? slug : slug.replace(/\/$/, "") + ".html";
       createPage({
-        path: htmlPath,
+        path: node.slug,
         component: path.resolve(
           `src/templates/${String(node.templateKey)}.tsx`
         ),
         context: {
-          id,
+          id: node.id,
         },
       });
-      if (slug != "/") {
-        createRedirect({
-          fromPath: slug,
-          toPath: htmlPath,
-          isPermanent: true,
-        });
-      }
     });
   });
 };
