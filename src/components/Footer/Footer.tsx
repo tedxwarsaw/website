@@ -28,7 +28,7 @@ interface Props {
   bottomLinks: {
     displayName: string;
     path: string;
-  };
+  }[];
 }
 
 const Column = (props: { title: string; children: React.ReactNode }) => (
@@ -109,12 +109,11 @@ export const FooterTemplate = (props: Props) => (
         </Column>
       </div>
       <div className="col-span-full flex flex-row lowercase space-x-6 font-light">
-        <Link className="hover:opacity-50" to="privacy-policy">
-          privacy policy
-        </Link>
-        <Link className="hover:opacity-50" to="cookie-policy">
-          cookie policy
-        </Link>
+        {props.bottomLinks.map((link) => (
+          <Link className="lowercase hover:opacity-50" to={link.path}>
+            {link.displayName}
+          </Link>
+        ))}
       </div>
     </div>
   </footer>
