@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import { FluidObject } from "gatsby-image";
-import BackgroundImage from "gatsby-background-image";
+import { BackgroundImage } from "../components/BackgroundImage/BackgroundImage";
 import { Button } from "../components/Button/Button";
 import { Page } from "../components/Page/Page";
 import { splitTextInTwo } from "../utils";
@@ -25,17 +25,14 @@ export const EventPageTemplate = (props: Props) => {
     <Page>
       <div className="main-grid-full-span">
         <BackgroundImage
-          fluid={props.eventSplash}
+          style={{ height: "40rem" }}
+          image={props.eventSplash}
           alt="Cover photo"
-          Tag="section"
         >
-          <div
-            style={{ height: "40rem" }}
-            className="main-grid overflow-hidden"
-          >
+          <div className="h-full main-grid overflow-hidden">
             <div className="flex flex-row items-center">
               <div className="flex flex-col w-full items-center h-full justify-end p-20">
-                <div className="text-center m-8 text-white text-medium text-3xl text-shadow">
+                <div className="text-center my-8 text-white text-medium text-3xl text-shadow">
                   13 June 2019, Warsaw
                 </div>
                 <Button className="px-20 shadow-2xl">Attend</Button>
@@ -56,9 +53,8 @@ export const EventPageTemplate = (props: Props) => {
       <div className="main-grid-full-span seamless-grid">
         <div className="col-span-3">
           <BackgroundImage
-            fluid={props.locationImage}
+            image={props.locationImage}
             alt="Cover photo"
-            Tag="section"
             style={{ height: "30rem" }}
           >
             <div className="absolute w-screen main-grid h-60 overflow-hidden text-white space-y-0 py-10">
@@ -75,7 +71,6 @@ export const EventPageTemplate = (props: Props) => {
           height="100%"
           width="100%"
           className="col-span-3 md:col-span-2 xl:col-span-4"
-          style={{ height: "30rem" }}
         ></iframe>
       </div>
     </Page>

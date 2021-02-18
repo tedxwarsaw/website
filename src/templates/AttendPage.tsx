@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import { FluidObject } from "gatsby-image";
-import BackgroundImage from "gatsby-background-image";
+import { BackgroundImage } from "../components/BackgroundImage/BackgroundImage";
 import { Button } from "../components/Button/Button";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { Page } from "../components/Page/Page";
@@ -13,8 +13,12 @@ interface Props {
 export const AttendPageTemplate = (props: Props) => (
   <Page>
     <div className="main-grid-full-span">
-      <BackgroundImage fluid={props.imgFluid} alt="Cover photo" Tag="section">
-        <div style={{ height: "28rem" }} className="main-grid overflow-hidden">
+      <BackgroundImage
+        style={{ height: "28rem" }}
+        image={props.imgFluid}
+        alt="Cover photo"
+      >
+        <div className="h-full main-grid overflow-hidden">
           <div className="flex flex-row items-center">
             <div className="pl-8 pr-8 py-8 md:pr-2 max-w-xl space-y-10">
               <h1 className="text-white font-medium text-3xl">
