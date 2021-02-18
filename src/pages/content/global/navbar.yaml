@@ -1,8 +1,11 @@
 collectionId: navbar
 navbarLinks:
-  - displayName: Home
+  - displayName: Watch
     variant: black
-    path: /
+    path: /watch.html
+  - displayName: Attend
+    variant: black
+    path: /attend.html
   - displayName: About
     variant: black
     path: /about.html
