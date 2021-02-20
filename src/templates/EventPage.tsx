@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { FluidObject } from "gatsby-image";
 import { BackgroundImage } from "../components/BackgroundImage/BackgroundImage";
-import { Button } from "../components/Button/Button";
+import { Button, ButtonVariant } from "../components/Button/Button";
 import { Page } from "../components/Page/Page";
 import { splitTextInTwo } from "../utils";
 
@@ -103,6 +103,19 @@ export const EventPageTemplate = (props: Props) => {
           <div>
             <div className="font-bold">Session 2</div>
           </div>
+        </div>
+      </div>
+      <div className="main-grid-full-span h-96 bg-red-600 flex flex-row items-center justify-center">
+        <div className="text-4xl text-center text-white space-y-4 m-4">
+          <div className="font-semibold">TEDxWarsaw 2020 pass</div>
+          <div className="font-medium">150 PLN</div>
+          <div className="h-2" />
+          <Button
+            variant={ButtonVariant.outlineWhite}
+            className="font-normal text-lg px-20"
+          >
+            Buy now
+          </Button>
         </div>
       </div>
     </Page>
