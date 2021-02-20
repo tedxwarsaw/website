@@ -12,3 +12,8 @@ export const splitTextInTwo = (text: string): [string, string] => {
   }
   return [words.slice(0, j).join(" "), words.slice(j, words.length).join(" ")];
 };
+
+export const debug = <T>(obj: T): T => {
+  console.log(obj);
+  return obj;
+};

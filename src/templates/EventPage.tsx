@@ -1,14 +1,15 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import { FluidObject } from "gatsby-image";
+import Img, { FluidObject, FixedObject } from "gatsby-image";
 import { BackgroundImage } from "../components/BackgroundImage/BackgroundImage";
 import { Button, ButtonVariant } from "../components/Button/Button";
 import { Page } from "../components/Page/Page";
-import { splitTextInTwo } from "../utils";
+import { splitTextInTwo, debug } from "../utils";
 
 interface Props {
   eventSplash: FluidObject;
   locationImage: FluidObject;
+  partnerLogos: FixedObject[];
 }
 
 export const EventPageTemplate = (props: Props) => {
@@ -58,7 +59,7 @@ export const EventPageTemplate = (props: Props) => {
             style={{ height: "30rem" }}
           >
             <div className="absolute w-screen main-grid h-60 overflow-hidden text-white space-y-0 py-10">
-              <div className="font-medium text-3xl text-shadow">
+              <div className="font-medium text-4xl text-shadow">
                 Billenium,
                 <br />
                 <span className="font-light">Warsaw</span>
@@ -118,6 +119,14 @@ export const EventPageTemplate = (props: Props) => {
           </Button>
         </div>
       </div>
+      <div className="py-20 space-y-6">
+        <div className="font-semibold text-4xl">Event partners</div>
+        <div className="flex flex-wrap justify-between space-y-2">
+          {props.partnerLogos.map((fixed) => (
+            <Img fixed={fixed} alt="Partner logo" />
+          ))}
+        </div>
+      </div>
     </Page>
   );
 };
@@ -127,6 +136,9 @@ const EventPage = ({ data }) => {
     <EventPageTemplate
       eventSplash={data.eventSplash.childImageSharp.fluid}
       locationImage={data.locationImage.childImageSharp.fluid}
+      partnerLogos={data.partnerLogos.nodes.map(
+        (node) => node.childImageSharp.fixed
+      )}
     />
   );
 };
@@ -146,6 +158,18 @@ export const pageQuery = graphql`
       childImageSharp {
         fluid(quality: 90, sizes: "(max:-width: 600px)") {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    partnerLogos: allFile(
+      filter: { relativeDirectory: { eq: "events/2020/partnerLogos" } }
+      sort: { fields: base }
+    ) {
+      nodes {
+        childImageSharp {
+          fixed(height: 90) {
+            ...GatsbyImageSharpFixed
+          }
         }
       }
     }
