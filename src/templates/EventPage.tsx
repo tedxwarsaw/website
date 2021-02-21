@@ -30,7 +30,6 @@ export const EventPageTemplate = (props: Props) => {
   someone to figure out the way forward. To lead is to dare, to hope is to
   dare. To solve problems is to dare.`;
   const parts = splitTextInTwo(text);
-  console.log(props);
 
   return (
     <Page>
