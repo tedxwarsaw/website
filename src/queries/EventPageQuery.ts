@@ -50,8 +50,9 @@ const secondQuery = `#graphql
       filter: { relativePath: { in: $partnershipTeamPhotoPaths } }
     ) {
       nodes {
+        relativePath
         childImageSharp {
-          fixed(height: 150) {
+          fixed(height: 100) {
             ${gatsbyImageFixedFragment}
           }
         }
@@ -78,9 +79,19 @@ export const queryForProps = async (
     partnershipTeamPhotoPaths,
   });
 
+  // time complexity is O(n^2) here, but n is a single digit number so it's fine
+  const partnershipTeam = partnershipTeamYaml.members.map((member) => {
+    const photo = partnershipTeamPhotos.nodes.find(
+      ({ relativePath }) => relativePath === member.photo
+    );
+    member.photo = photo.childImageSharp.fixed;
+    return member;
+  });
+
   return {
     eventSplash: eventSplash.childImageSharp.fluid,
     locationImage: locationImage.childImageSharp.fluid,
     partnerLogos: partnerLogos.nodes.map((node) => node.childImageSharp.fixed),
+    partnershipTeam,
   };
 };

@@ -10,6 +10,15 @@ export interface Props {
   eventSplash: FluidObject;
   locationImage: FluidObject;
   partnerLogos: FixedObject[];
+  partnershipTeam: PartnershipTeamMember[];
+}
+
+export interface PartnershipTeamMember {
+  areaOfResponsibility: string;
+  email: string;
+  name: string;
+  phoneNumber: string;
+  photo: FixedObject;
 }
 
 export const EventPageTemplate = (props: Props) => {
@@ -21,6 +30,7 @@ export const EventPageTemplate = (props: Props) => {
   someone to figure out the way forward. To lead is to dare, to hope is to
   dare. To solve problems is to dare.`;
   const parts = splitTextInTwo(text);
+  console.log(props);
 
   return (
     <Page>
@@ -132,9 +142,21 @@ export const EventPageTemplate = (props: Props) => {
           <div className="font-bold">Become our partner</div>
           <div className="font-light">and enter the world of TEDx</div>
         </div>
-        <div>
-          <div>Sponsorship</div>
-        </div>
+        {props.partnershipTeam.map((member) => (
+          <div className="space-y-2">
+            <Img
+              className="rounded-full"
+              fixed={member.photo}
+              alt={`Photo of ${member.name}`}
+            />
+            <div className="font-bold">{member.areaOfResponsibility}</div>
+            <div>{member.name}</div>
+            <div className="text-red-500 font-semibold">
+              {member.phoneNumber}
+            </div>
+            <div className="text-red-500 font-semibold">{member.email}</div>
+          </div>
+        ))}
       </div>
     </Page>
   );
