@@ -109,8 +109,8 @@ export const FooterTemplate = (props: Props) => (
         </Column>
       </div>
       <div className="col-span-full flex flex-row lowercase space-x-6 font-light">
-        {props.bottomLinks.map((link) => (
-          <Link className="lowercase hover:opacity-50" to={link.path}>
+        {props.bottomLinks.map((link, idx) => (
+          <Link key={idx} className="lowercase hover:opacity-50" to={link.path}>
             {link.displayName}
           </Link>
         ))}

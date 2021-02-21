@@ -1,10 +1,10 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Img, { FluidObject, FixedObject } from "gatsby-image";
 import { BackgroundImage } from "../components/BackgroundImage/BackgroundImage";
 import { Button, ButtonVariant } from "../components/Button/Button";
 import { Page } from "../components/Page/Page";
-import { splitTextInTwo, debug } from "../utils";
+import { splitTextInTwo } from "../utils";
 
 interface Props {
   eventSplash: FluidObject;
@@ -30,8 +30,8 @@ export const EventPageTemplate = (props: Props) => {
           image={props.eventSplash}
           alt="Cover photo"
         >
-          <div className="h-full main-grid overflow-hidden">
-            <div className="flex flex-row items-center">
+          <div className="h-full overflow-hidden">
+            <div className="h-full flex flex-row items-center">
               <div className="flex flex-col w-full items-center h-full justify-end p-20">
                 <div className="text-center my-8 text-white text-medium text-3xl text-shadow">
                   13 June 2019, Warsaw
@@ -120,10 +120,10 @@ export const EventPageTemplate = (props: Props) => {
         </div>
       </div>
       <div className="py-20 space-y-6">
-        <div className="font-semibold text-4xl">Event partners</div>
+        <div className="font-medium text-3xl pb-6">Event partners</div>
         <div className="flex flex-wrap justify-between space-y-2">
-          {props.partnerLogos.map((fixed) => (
-            <Img fixed={fixed} alt="Partner logo" />
+          {props.partnerLogos.map((fixed, idx) => (
+            <Img key={idx} fixed={fixed} alt="Partner logo" />
           ))}
         </div>
       </div>
@@ -149,7 +149,7 @@ export const pageQuery = graphql`
   query EventPageTemplate {
     eventSplash: file(relativePath: { eq: "images/uploads/dare-splash.jpg" }) {
       childImageSharp {
-        fluid(quality: 90, sizes: "(max:-width: 2000px)") {
+        fluid(quality: 90, sizes: "(max:-width: 768px)") {
           ...GatsbyImageSharpFluid
         }
       }
@@ -167,14 +167,11 @@ export const pageQuery = graphql`
     ) {
       nodes {
         childImageSharp {
-          fixed(height: 90) {
+          fixed(height: 60) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-    }
-    pagesYaml(templateKey: { eq: "EventPage" }) {
-      templateKey
     }
   }
 `;
