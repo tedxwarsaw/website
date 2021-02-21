@@ -50,7 +50,7 @@ export const FooterTemplate = (props: Props) => (
         <Column title="featured event">
           <div>
             <Link
-              to="/event"
+              to="/event/2020"
               className="text-red-500 font-bold hover:opacity-50"
             >
               Join <FaArrowRight className="inline" />

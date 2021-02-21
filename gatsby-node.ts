@@ -1,39 +1,67 @@
-const path = require("path");
-const { createFilePath } = require("gatsby-source-filesystem");
+import path from "path";
+import { queryForProps as queryForEventProps } from "./src/queries/EventPageQuery";
 
-exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions;
-
-  return graphql(`
-    {
-      allPagesYaml {
-        edges {
-          node {
-            id
-            slug
-            templateKey
-          }
+const pageQuery = `#graphql
+  query Page {
+    allPagesYaml {
+      edges {
+        node {
+          id
+          slug
+          templateKey
         }
       }
     }
-  `).then((result) => {
-    if (result.errors) {
-      result.errors.forEach((e) => console.error(e.toString()));
-      return Promise.reject(result.errors);
+  }
+`;
+
+const eventQuery = `#graphql
+  query Events {
+    allEventsYaml(filter: {collectionId: {eq: "event"}}) {
+      nodes {
+        slug
+      }
     }
+  }
+`;
 
-    const pages = result.data.allPagesYaml.edges;
+export const createPages = async ({ actions, graphql }) => {
+  const { createPage } = actions;
+  const pagesResult = await graphql(pageQuery);
+  if (pagesResult.errors) {
+    pagesResult.errors.forEach((e) => console.error(e.toString()));
+    throw pagesResult.errors;
+  }
 
-    pages.forEach(({ node }) => {
-      createPage({
-        path: node.slug,
-        component: path.resolve(
-          `src/templates/${String(node.templateKey)}.tsx`
-        ),
-        context: {
-          id: node.id,
-        },
-      });
+  const pages = pagesResult.data.allPagesYaml.edges;
+  pages.forEach(({ node }) => {
+    createPage({
+      path: node.slug,
+      component: path.resolve(`src/templates/${String(node.templateKey)}.tsx`),
+      context: {
+        id: node.id,
+      },
     });
   });
+
+  const eventsResult = await graphql(eventQuery);
+  if (eventsResult.errors) {
+    eventsResult.errors.forEach((e) => console.error(e.toString()));
+    throw eventsResult.errors;
+  }
+
+  const events = eventsResult.data.allEventsYaml.nodes;
+  await Promise.all(
+    events.map(async (node) => {
+      const slug = node.slug;
+      const props = await queryForEventProps(graphql, node.slug);
+      createPage({
+        path: `event/${slug}`,
+        component: path.resolve(`src/templates/EventPage.tsx`),
+        context: {
+          props,
+        },
+      });
+    })
+  );
 };

@@ -6,7 +6,7 @@ import { Button, ButtonVariant } from "../components/Button/Button";
 import { Page } from "../components/Page/Page";
 import { splitTextInTwo } from "../utils";
 
-interface Props {
+export interface Props {
   eventSplash: FluidObject;
   locationImage: FluidObject;
   partnerLogos: FixedObject[];
@@ -127,51 +127,21 @@ export const EventPageTemplate = (props: Props) => {
           ))}
         </div>
       </div>
+      <div className="py-20 inner-grid space-y-6">
+        <div className="col-span-full text-3xl">
+          <div className="font-bold">Become our partner</div>
+          <div className="font-light">and enter the world of TEDx</div>
+        </div>
+        <div>
+          <div>Sponsorship</div>
+        </div>
+      </div>
     </Page>
   );
 };
 
-const EventPage = ({ data }) => {
-  return (
-    <EventPageTemplate
-      eventSplash={data.eventSplash.childImageSharp.fluid}
-      locationImage={data.locationImage.childImageSharp.fluid}
-      partnerLogos={data.partnerLogos.nodes.map(
-        (node) => node.childImageSharp.fixed
-      )}
-    />
-  );
+const EventPage = ({ pageContext }) => {
+  return <EventPageTemplate {...pageContext.props} />;
 };
 
 export default EventPage;
-
-export const pageQuery = graphql`
-  query EventPageTemplate {
-    eventSplash: file(relativePath: { eq: "images/uploads/dare-splash.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, sizes: "(max:-width: 768px)") {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    locationImage: file(relativePath: { eq: "images/uploads/billenium.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, sizes: "(max:-width: 600px)") {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    partnerLogos: allFile(
-      filter: { relativeDirectory: { eq: "events/2020/partnerLogos" } }
-      sort: { fields: base }
-    ) {
-      nodes {
-        childImageSharp {
-          fixed(height: 60) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  }
-`;

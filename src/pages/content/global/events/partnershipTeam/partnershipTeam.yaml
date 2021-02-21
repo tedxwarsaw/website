@@ -1,0 +1,17 @@
+collectionId: eventPartnershipTeam
+members:
+  - areaOfResponsibility: Sponsorship
+    name: Marguerite Carson
+    phoneNumber: (959) 303-9191
+    email: example@tedxwarsaw.org
+    photo: global/events/partnershipTeam/photo-1.png
+  - areaOfResponsibility: Partnership
+    name: Scott Sparks
+    phoneNumber: (825) 414-3736
+    email: example@tedxwarsaw.org
+    photo: global/events/partnershipTeam/photo-2.png
+  - areaOfResponsibility: Media partnership
+    name: Jose Thornton
+    phoneNumber: (276) 597-2919
+    email: example@tedxwarsaw.org
+    photo: global/events/partnershipTeam/photo-3.png
