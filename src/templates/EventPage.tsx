@@ -1,16 +1,24 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Link } from "gatsby";
 import Img, { FluidObject, FixedObject } from "gatsby-image";
 import { BackgroundImage } from "../components/BackgroundImage/BackgroundImage";
 import { Button, ButtonVariant } from "../components/Button/Button";
 import { Page } from "../components/Page/Page";
 import { splitTextInTwo } from "../utils";
+import { FaArrowRight, FaBars } from "react-icons/fa";
 
 export interface Props {
   eventSplash: FluidObject;
   locationImage: FluidObject;
   partnerLogos: FixedObject[];
   partnershipTeam: PartnershipTeamMember[];
+  suggestedEvent: SuggestedEvent;
+}
+
+export interface SuggestedEvent {
+  slug: string;
+  displayName: string;
+  photos: FluidObject[];
 }
 
 export interface PartnershipTeamMember {
@@ -141,8 +149,8 @@ export const EventPageTemplate = (props: Props) => {
           <div className="font-bold">Become our partner</div>
           <div className="font-light">and enter the world of TEDx</div>
         </div>
-        {props.partnershipTeam.map((member) => (
-          <div className="space-y-2">
+        {props.partnershipTeam.map((member, idx) => (
+          <div key={idx} className="space-y-2">
             <Img
               className="rounded-full"
               fixed={member.photo}
@@ -156,6 +164,48 @@ export const EventPageTemplate = (props: Props) => {
             <div className="text-red-500 font-semibold">{member.email}</div>
           </div>
         ))}
+      </div>
+      <div className="inner-grid py-20 space-y-4">
+        <div className="space-y-4 col-span-full">
+          <div className="text-4xl font-bold">
+            {props.suggestedEvent.displayName}
+          </div>
+          <div className="text-red-500 flex space-x-6">
+            <Link
+              to={`/watch?event=${props.suggestedEvent.slug}`}
+              className="font-semibold hover:opacity-50"
+            >
+              Watch the talks <FaArrowRight className="ml-2 inline" />
+            </Link>
+            <Link
+              to={`/event/${props.suggestedEvent.slug}/`}
+              className="font-semibold hover:opacity-50"
+            >
+              Read more <FaBars className="ml-2 inline" />
+            </Link>
+          </div>
+        </div>
+        <div
+          className="flex flew-nowrap overflow-scroll col-span-full"
+          style={{ gap: "var(--column-gap)" }}
+        >
+          {props.suggestedEvent.photos.map((fluid, idx) => (
+            <div
+              key={idx}
+              className="h-96"
+              style={{
+                minWidth: "var(--column-width)",
+                width: "var(--column-width)",
+              }}
+            >
+              <Img
+                fluid={fluid}
+                className="h-full w-full rounded"
+                alt={`Photo from ${props.suggestedEvent.displayName}`}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </Page>
   );

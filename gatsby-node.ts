@@ -65,3 +65,17 @@ export const createPages = async ({ actions, graphql }) => {
     })
   );
 };
+
+export const createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `#graphql
+    type EventsYaml implements Node {
+      slug: String
+    }
+
+    type SuggestedEventYaml implements Node {
+      slug: String
+    }
+  `;
+  createTypes(typeDefs);
+};

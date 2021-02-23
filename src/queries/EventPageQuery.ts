@@ -17,6 +17,12 @@ const firstQuery = `#graphql
         }
       }
     }
+    suggestedEventYaml(collectionId: { eq: "suggestedEvent" }) {
+      slug
+      photos {
+        path
+      }
+    }
     partnershipTeamYaml(collectionId: { eq: "eventPartnershipTeam" }) {
       members {
         areaOfResponsibility
@@ -33,6 +39,8 @@ const secondQuery = `#graphql
   query SecondEvent(
     $partnerLogosFolder: String
     $partnershipTeamPhotoPaths: [String]
+    $suggestedEventSlug: String,
+    $suggestedEventPhotoPaths: [String]
   ) {
     partnerLogos: allFile(
       filter: { relativeDirectory: { eq: $partnerLogosFolder } }
@@ -58,6 +66,22 @@ const secondQuery = `#graphql
         }
       }
     }
+    suggestedEventInfo: eventsYaml(slug: {eq: $suggestedEventSlug}) {
+      slug
+      displayName
+    }
+    suggestedEventPhotos: allFile(
+      filter: { relativePath: { in: $suggestedEventPhotoPaths } }
+    ) {
+      nodes {
+        relativePath
+        childImageSharp {
+          fluid(fit: COVER) {
+            ${gatsbyImageFluidFragment}
+          }
+        }
+      }
+    }
   }
 `;
 
@@ -66,17 +90,29 @@ export const queryForProps = async (
   slug: string
 ): Promise<Props> => {
   const {
-    data: { partnershipTeamYaml, eventSplash, locationImage },
+    data: {
+      partnershipTeamYaml,
+      eventSplash,
+      locationImage,
+      suggestedEventYaml,
+    },
   } = await graphql(firstQuery);
   const partnershipTeamPhotoPaths = partnershipTeamYaml.members.map(
     ({ photo }) => photo
   );
 
   const {
-    data: { partnerLogos, partnershipTeamPhotos },
+    data: {
+      partnerLogos,
+      partnershipTeamPhotos,
+      suggestedEventInfo,
+      suggestedEventPhotos,
+    },
   } = await graphql(secondQuery, {
     partnerLogosFolder: `events/${slug}/partnerLogos`,
     partnershipTeamPhotoPaths,
+    suggestedEventSlug: suggestedEventYaml.slug,
+    suggestedEventPhotoPaths: suggestedEventYaml.photos.map(({ path }) => path),
   });
 
   // time complexity is O(n^2) here, but n is a single digit number so it's fine
@@ -88,10 +124,19 @@ export const queryForProps = async (
     return member;
   });
 
+  const suggestedEvent = {
+    displayName: suggestedEventInfo.displayName,
+    slug: suggestedEventInfo.slug,
+    photos: suggestedEventPhotos.nodes.map(
+      (node) => node.childImageSharp.fluid
+    ),
+  };
+
   return {
     eventSplash: eventSplash.childImageSharp.fluid,
     locationImage: locationImage.childImageSharp.fluid,
     partnerLogos: partnerLogos.nodes.map((node) => node.childImageSharp.fixed),
     partnershipTeam,
+    suggestedEvent,
   };
 };
