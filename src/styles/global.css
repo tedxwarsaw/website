@@ -26,9 +26,7 @@
 @media (min-width: theme("screens.xl")) {
   :root {
     --column-width: calc(
-      calc(
-          100vw - calc(calc(2 * var(--side-gap)) + calc(2 * var(--column-gap)))
-        ) / 3
+      calc(theme("screens.xl") - calc(2 * var(--column-gap))) / 3
     );
   }
 
@@ -82,7 +80,7 @@
 
 @media (max-width: theme("screens.md")) {
   :root {
-    --column-width: calc(calc(100vw - calc(2 * var(--side-gap))));
+    --column-width: calc(100vw - calc(2 * var(--side-gap)));
   }
 
   .inner-grid {
