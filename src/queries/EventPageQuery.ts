@@ -1,27 +1,12 @@
 import { Props } from "../templates/EventPage";
-import { gatsbyImageFixedFragment, gatsbyImageFluidFragment } from "./utils";
+import { getFixedImage, getFluidImage } from "./utils";
+import moment from "moment";
 
 const firstQuery = `#graphql
   query FirstEvent {
-    eventSplash: file(relativePath: { eq: "images/uploads/dare-splash.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, sizes: "(max:-width: 768px)") {
-          ${gatsbyImageFluidFragment}
-        }
-      }
-    }
-    locationImage: file(relativePath: { eq: "images/uploads/billenium.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, sizes: "(max:-width: 600px)") {
-          ${gatsbyImageFluidFragment}
-        }
-      }
-    }
     suggestedEventYaml(collectionId: { eq: "suggestedEvent" }) {
       slug
-      photos {
-        path
-      }
+      photos
     }
     partnershipTeamYaml(collectionId: { eq: "eventPartnershipTeam" }) {
       members {
@@ -37,50 +22,42 @@ const firstQuery = `#graphql
 
 const secondQuery = `#graphql
   query SecondEvent(
-    $partnerLogosFolder: String
-    $partnershipTeamPhotoPaths: [String]
+    $eventSlug: String
     $suggestedEventSlug: String,
-    $suggestedEventPhotoPaths: [String]
   ) {
-    partnerLogos: allFile(
-      filter: { relativeDirectory: { eq: $partnerLogosFolder } }
-      sort: { fields: base }
-    ) {
-      nodes {
-        childImageSharp {
-          fixed(height: 60) {
-            ${gatsbyImageFixedFragment}
-          }
+    event: eventsYaml(slug: {eq: $eventSlug}) {
+      displayName
+      city
+      date
+      description
+      hook
+      callToAction {
+        buttonText
+        buttonUrl
+        subtitle
+        title
+      }
+      cover {
+        variant
+        image {
+          desktop
+          mobile
+        }
+        button {
+          show
+          text
         }
       }
-    }
-    partnershipTeamPhotos: allFile(
-      filter: { relativePath: { in: $partnershipTeamPhotoPaths } }
-    ) {
-      nodes {
-        relativePath
-        childImageSharp {
-          fixed(height: 100) {
-            ${gatsbyImageFixedFragment}
-          }
-        }
+      partnerLogoPaths
+      location {
+        city
+        displayName
+        image
       }
     }
     suggestedEventInfo: eventsYaml(slug: {eq: $suggestedEventSlug}) {
       slug
       displayName
-    }
-    suggestedEventPhotos: allFile(
-      filter: { relativePath: { in: $suggestedEventPhotoPaths } }
-    ) {
-      nodes {
-        relativePath
-        childImageSharp {
-          fluid(fit: COVER) {
-            ${gatsbyImageFluidFragment}
-          }
-        }
-      }
     }
   }
 `;
@@ -90,53 +67,75 @@ export const queryForProps = async (
   slug: string
 ): Promise<Props> => {
   const {
-    data: {
-      partnershipTeamYaml,
-      eventSplash,
-      locationImage,
-      suggestedEventYaml,
-    },
+    data: { partnershipTeamYaml, suggestedEventYaml },
   } = await graphql(firstQuery);
-  const partnershipTeamPhotoPaths = partnershipTeamYaml.members.map(
-    ({ photo }) => photo
-  );
 
   const {
-    data: {
-      partnerLogos,
-      partnershipTeamPhotos,
-      suggestedEventInfo,
-      suggestedEventPhotos,
-    },
+    data: { suggestedEventInfo, event },
   } = await graphql(secondQuery, {
-    partnerLogosFolder: `events/${slug}/partnerLogos`,
-    partnershipTeamPhotoPaths,
+    eventSlug: slug,
     suggestedEventSlug: suggestedEventYaml.slug,
-    suggestedEventPhotoPaths: suggestedEventYaml.photos.map(({ path }) => path),
   });
 
-  // time complexity is O(n^2) here, but n is a single digit number so it's fine
-  const partnershipTeam = partnershipTeamYaml.members.map((member) => {
-    const photo = partnershipTeamPhotos.nodes.find(
-      ({ relativePath }) => relativePath === member.photo
-    );
-    member.photo = photo.childImageSharp.fixed;
-    return member;
-  });
+  const partnershipTeam: any = await Promise.all(
+    partnershipTeamYaml.members.map(async (member) => {
+      member.photo = await getFixedImage({
+        graphql,
+        path: member.photo,
+        height: 100,
+      });
+      return member;
+    })
+  );
 
-  const suggestedEvent = {
+  const suggestedEvent: any = {
     displayName: suggestedEventInfo.displayName,
     slug: suggestedEventInfo.slug,
-    photos: suggestedEventPhotos.nodes.map(
-      (node) => node.childImageSharp.fluid
+    photos: await Promise.all(
+      suggestedEventYaml.photos.map(
+        async (path) => await getFluidImage({ graphql, path })
+      )
     ),
   };
 
+  const partnerLogos: any = await Promise.all(
+    event.partnerLogoPaths.map(
+      async (path) => await getFixedImage({ graphql, path, height: 60 })
+    )
+  );
+
+  const cover: any = {
+    ...event.cover,
+    image: {
+      desktop: await getFluidImage({
+        graphql,
+        path: event.cover.image.desktop,
+        quality: 90,
+        sizes: "(max:-width: 2000px)",
+      }),
+      mobile: await getFluidImage({
+        graphql,
+        path: event.cover.image.mobile,
+        quality: 90,
+        sizes: "(max:-width: 768px)",
+      }),
+    },
+  };
+
+  const location: any = {
+    ...event.location,
+    image: await getFluidImage({
+      graphql,
+      path: event.location.image,
+    }),
+  };
+
   return {
-    eventSplash: eventSplash.childImageSharp.fluid,
-    locationImage: locationImage.childImageSharp.fluid,
-    partnerLogos: partnerLogos.nodes.map((node) => node.childImageSharp.fixed),
+    ...event,
+    partnerLogos,
     partnershipTeam,
     suggestedEvent,
+    cover,
+    location,
   };
 };

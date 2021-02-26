@@ -1,3 +1,50 @@
 collectionId: event
 slug: "2020"
 displayName: TEDxWarsaw 2020
+city: Warsaw
+date: 13/06/2019
+hook: We passionately believe in the power of ideas to change the attitudes,
+  lives, and, ultimately, the world.
+description:
+  In today's World challenges are now coming at us constantly, and from
+  every direction. To deal with them in the time-honoured way of "wait and
+  see" is no longer a viable option. Solutions to housing problems, social
+  inequality, cultural tensions and environmental pollution are only going
+  to be found if we dare to face the problems, instead of waiting for
+  someone to figure out the way forward. To lead is to dare, to hope is to
+  dare. To solve problems is to dare.
+cover:
+  variant: dark
+  button:
+    text: Attend
+    show: true
+  image:
+    desktop: events/2020/coverPhotos/desktop.jpg
+    mobile: events/2020/coverPhotos/desktop.jpg
+location:
+  displayName: Billenium
+  city: Warsaw
+  image: events/2020/locationPhoto/billenium.jpg
+callToAction:
+  title: TEDxWarsaw 2020 pass
+  subtitle: 150 PLN
+  buttonText: Buy now
+  buttonUrl: https://example.com/
+partnerLogoPaths:
+  - events/2020/partnerLogos/logo-1.png
+  - events/2020/partnerLogos/logo-2.png
+  - events/2020/partnerLogos/logo-3.png
+  - events/2020/partnerLogos/logo-4.png
+  - events/2020/partnerLogos/logo-5.png
+  - events/2020/partnerLogos/logo-6.png
+  - events/2020/partnerLogos/logo-7.png
+  - events/2020/partnerLogos/logo-8.png
+  - events/2020/partnerLogos/logo-9.png
+  - events/2020/partnerLogos/logo-10.png
+  - events/2020/partnerLogos/logo-11.png
+  - events/2020/partnerLogos/logo-12.png
+  - events/2020/partnerLogos/logo-13.png
+  - events/2020/partnerLogos/logo-14.png
+  - events/2020/partnerLogos/logo-15.png
+  - events/2020/partnerLogos/logo-16.png
+  - events/2020/partnerLogos/logo-17.png

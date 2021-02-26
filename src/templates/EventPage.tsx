@@ -6,13 +6,43 @@ import { Button, ButtonVariant } from "../components/Button/Button";
 import { Page } from "../components/Page/Page";
 import { splitTextInTwo } from "../utils";
 import { FaArrowRight, FaBars } from "react-icons/fa";
+import moment, { Moment } from "moment";
+
+enum CoverVariant {
+  Dark = "dark",
+}
 
 export interface Props {
-  eventSplash: FluidObject;
-  locationImage: FluidObject;
   partnerLogos: FixedObject[];
   partnershipTeam: PartnershipTeamMember[];
   suggestedEvent: SuggestedEvent;
+  city: string;
+  displayName: string;
+  date: string;
+  hook: string;
+  description: string;
+  cover: {
+    variant: CoverVariant;
+    button: {
+      text: string;
+      show: boolean;
+    };
+    image: {
+      desktop: FluidObject;
+      mobile: FluidObject;
+    };
+  };
+  location: {
+    displayName: string;
+    city: string;
+    image: FluidObject;
+  };
+  callToAction: {
+    title: string;
+    subtitle: string;
+    buttonText: string;
+    buttonUrl: string;
+  };
 }
 
 export interface SuggestedEvent {
@@ -30,30 +60,28 @@ export interface PartnershipTeamMember {
 }
 
 export const EventPageTemplate = (props: Props) => {
-  const text = `In today's World challenges are now coming at us constantly, and from
-  every direction. To deal with them in the time-honoured way of "wait and
-  see" is no longer a viable option. Solutions to housing problems, social
-  inequality, cultural tensions and environmental pollution are only going
-  to be found if we dare to face the problems, instead of waiting for
-  someone to figure out the way forward. To lead is to dare, to hope is to
-  dare. To solve problems is to dare.`;
-  const parts = splitTextInTwo(text);
+  const descriptionParts = splitTextInTwo(props.description);
+  const date = moment(props.date, "DD/MM/YYYY");
 
   return (
     <Page>
       <div className="main-grid-full-span">
         <BackgroundImage
           style={{ height: "40rem" }}
-          image={props.eventSplash}
+          image={props.cover.image.desktop}
           alt="Cover photo"
         >
           <div className="h-full overflow-hidden">
             <div className="h-full flex flex-row items-center">
               <div className="flex flex-col w-full items-center h-full justify-end p-20">
                 <div className="text-center my-8 text-white text-medium text-3xl text-shadow">
-                  13 June 2019, Warsaw
+                  {date.format("D MMMM YYYY")}, {props.location.city}
                 </div>
-                <Button className="px-20 shadow-2xl">Attend</Button>
+                {props.cover.button.show && (
+                  <Button className="px-20 shadow-2xl">
+                    {props.cover.button.text}
+                  </Button>
+                )}
               </div>
             </div>
           </div>
@@ -61,25 +89,24 @@ export const EventPageTemplate = (props: Props) => {
       </div>
       <div className="inner-grid py-20 space-y-10 xl:space-y-0">
         <div className="font-bold text-3xl md:col-span-2 xl:col-span-1">
-          We passionately believe in the power of ideas to change the attitudes,
-          lives, and, ultimately, the world.
+          {props.hook}
         </div>
-        <div className="text-lg hidden md:block">{parts[0]}</div>
-        <div className="text-lg hidden md:block">{parts[1]}</div>
-        <div className="text-lg block md:hidden">{text}</div>
+        <div className="text-lg hidden md:block">{descriptionParts[0]}</div>
+        <div className="text-lg hidden md:block">{descriptionParts[1]}</div>
+        <div className="text-lg block md:hidden">{props.description}</div>
       </div>
       <div className="main-grid-full-span seamless-grid">
         <div className="col-span-3">
           <BackgroundImage
-            image={props.locationImage}
+            image={props.location.image}
             alt="Cover photo"
             style={{ height: "30rem" }}
           >
             <div className="absolute w-screen main-grid h-60 overflow-hidden text-white space-y-0 py-10">
               <div className="font-medium text-4xl text-shadow">
-                Billenium,
+                {props.location.displayName},
                 <br />
-                <span className="font-light">Warsaw</span>
+                <span className="font-light">{props.location.city}</span>
               </div>
             </div>
           </BackgroundImage>
@@ -125,15 +152,21 @@ export const EventPageTemplate = (props: Props) => {
       </div>
       <div className="main-grid-full-span h-96 bg-red-600 flex flex-row items-center justify-center">
         <div className="text-4xl text-center text-white space-y-4 m-4">
-          <div className="font-semibold">TEDxWarsaw 2020 pass</div>
-          <div className="font-medium">150 PLN</div>
+          <div className="font-semibold">{props.callToAction.title}</div>
+          <div className="font-medium">{props.callToAction.subtitle}</div>
           <div className="h-2" />
-          <Button
-            variant={ButtonVariant.outlineWhite}
-            className="font-normal text-lg px-20"
+          <a
+            href={props.callToAction.buttonUrl}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Buy now
-          </Button>
+            <Button
+              variant={ButtonVariant.outlineWhite}
+              className="font-normal text-lg px-20"
+            >
+              {props.callToAction.buttonText}
+            </Button>
+          </a>
         </div>
       </div>
       <div className="py-20 space-y-6">
