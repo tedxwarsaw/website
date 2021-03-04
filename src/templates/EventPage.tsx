@@ -218,10 +218,7 @@ export const EventPageTemplate = (props: Props) => {
             </Link>
           </div>
         </div>
-        <div
-          className="flex flew-nowrap overflow-scroll col-span-full"
-          style={{ gap: "var(--column-gap)" }}
-        >
+        <div className="flex flew-nowrap overflow-scroll col-span-full">
           {props.suggestedEvent.photos.map((fluid, idx) => (
             <div
               key={idx}
@@ -229,6 +226,10 @@ export const EventPageTemplate = (props: Props) => {
               style={{
                 minWidth: "var(--column-width)",
                 width: "var(--column-width)",
+                marginRight:
+                  idx + 1 !== props.suggestedEvent.photos.length
+                    ? "var(--column-gap)"
+                    : null,
               }}
             >
               <Img
