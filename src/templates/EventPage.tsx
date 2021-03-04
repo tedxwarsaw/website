@@ -26,6 +26,7 @@ export interface Props {
     button: {
       text: string;
       show: boolean;
+      link: string;
     };
     image: {
       desktop: FluidObject;
@@ -78,9 +79,15 @@ export const EventPageTemplate = (props: Props) => {
                   {date.format("D MMMM YYYY")}, {props.location.city}
                 </div>
                 {props.cover.button.show && (
-                  <Button className="px-20 shadow-2xl">
-                    {props.cover.button.text}
-                  </Button>
+                  <a
+                    href={props.cover.button.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="px-20 shadow-2xl">
+                      {props.cover.button.text}
+                    </Button>
+                  </a>
                 )}
               </div>
             </div>

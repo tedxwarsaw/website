@@ -18,6 +18,7 @@ cover:
   button:
     text: Attend
     show: true
+    link: https://example.com/
   image:
     desktop: events/2020/coverPhotos/desktop.jpg
     mobile: events/2020/coverPhotos/desktop.jpg

@@ -1,6 +1,5 @@
 import { Props } from "../templates/EventPage";
 import { getFixedImage, getFluidImage } from "./utils";
-import moment from "moment";
 
 const firstQuery = `#graphql
   query FirstEvent {
@@ -46,6 +45,7 @@ const secondQuery = `#graphql
         button {
           show
           text
+          link
         }
       }
       partnerLogoPaths
