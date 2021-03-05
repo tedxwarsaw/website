@@ -1,8 +1,6 @@
 image: node:14.15
 cache:
   paths:
-    - .cache/
-    - public/
     - node_modules/
 variables:
   PREVIEW_PATH: -/${CI_PROJECT_NAME}/-/jobs/${CI_JOB_ID}/artifacts/public
