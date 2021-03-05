@@ -6,7 +6,7 @@ import { Button, ButtonVariant } from "../components/Button/Button";
 import { Page } from "../components/Page/Page";
 import { splitTextInTwo } from "../utils";
 import { FaArrowRight, FaBars } from "react-icons/fa";
-import moment, { Moment } from "moment";
+import moment from "moment";
 
 enum CoverVariant {
   Dark = "dark",
@@ -37,6 +37,7 @@ export interface Props {
     displayName: string;
     city: string;
     image: FluidObject;
+    mapSrc: string;
   };
   callToAction: {
     title: string;
@@ -119,7 +120,7 @@ export const EventPageTemplate = (props: Props) => {
           </BackgroundImage>
         </div>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4892.379921455228!2d21.048522457084005!3d52.18541970970105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc9b773b2197%3A0x6338f59562daf786!2sBillennium%20-%20IT%20solutions%20for%20business!5e0!3m2!1sen!2spl!4v1613682341312!5m2!1sen!2spl"
+          src={props.location.mapSrc}
           height="100%"
           width="100%"
           className="col-span-3 md:col-span-2 xl:col-span-4"

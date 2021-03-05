@@ -1,3 +1,4 @@
+import { parse as parseHTML, HTMLElement } from "node-html-parser";
 import { Props } from "../templates/EventPage";
 import { getFixedImage, getFluidImage } from "./utils";
 
@@ -53,6 +54,7 @@ const secondQuery = `#graphql
         city
         displayName
         image
+        mapIframe
       }
     }
     suggestedEventInfo: eventsYaml(slug: {eq: $suggestedEventSlug}) {
@@ -124,6 +126,8 @@ export const queryForProps = async (
 
   const location: any = {
     ...event.location,
+    mapSrc: (<HTMLElement>parseHTML(event.location.mapIframe).childNodes[0])
+      .attrs.src,
     image: await getFluidImage({
       graphql,
       path: event.location.image,
