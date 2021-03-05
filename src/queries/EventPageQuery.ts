@@ -126,7 +126,7 @@ export const queryForProps = async (
 
   const location: any = {
     ...event.location,
-    mapSrc: (<HTMLElement>parseHTML(event.location.mapIframe).childNodes[0])
+    mapSrc: (parseHTML(event.location.mapIframe).childNodes[0] as HTMLElement)
       .attrs.src,
     image: await getFluidImage({
       graphql,
