@@ -53,3 +53,133 @@ collections:
                   - { label: Title, name: title, widget: string }
                   - { label: Description, name: description, widget: string }
                   - { label: Path, name: path, widget: string }
+  - label: "Events"
+    name: events
+    folder: "src/pages/content/events"
+    create: true
+    identifier_field: slug
+    extension: yml
+    fields:
+      - name: collectionId
+        widget: hidden
+        default: event
+      - name: slug
+        label: Slug
+        widget: string
+        pattern:
+          [
+            "^[a-zA-Z0-9_-]+$",
+            "it can be composed only of the letters of the English alphabet, digits, dashes, and underscores",
+          ]
+        hint: "The part of the URL which identifies an event."
+      - name: displayName
+        label: "Display name"
+        widget: string
+        hint: "The name of the event. For example, TEDxWarsaw 2020."
+      - name: city
+        label: City
+        widget: string
+        hint: "The city where the event takes place. Probably Warsaw."
+      - name: date
+        label: Date
+        widget: datetime
+        format: "DD/MM/YYYY"
+        date_format: "DD/MM/YYYY"
+        time_format: false
+        picker_utc: true
+      - name: hook
+        label: Hook
+        widget: text
+        hint: A very short, attention grabbing piece of text. It's usually displayed next to the title of the event.
+      - name: description
+        label: Description
+        widget: text
+        hint: A couple of sentences that explain what the event is about, its theme, etc.
+      - name: cover
+        label: Cover
+        widget: object
+        hint: The topmost section on an event page.
+        fields:
+          - name: "variant"
+            label: "Photo variant"
+            widget: "select"
+            hint: Use 'light' when the cover image is light, 'dark' when its dark. This will adjust the text's color appropriately.
+            options: ["dark", "light"]
+          - name: button
+            label: Button
+            widget: object
+            fields:
+              - name: text
+                label: Text
+                widget: string
+              - name: link
+                label: URL
+                widget: string
+                hint: The URL the button should point to.
+              - name: show
+                label: Show
+                widget: boolean
+                hint: Whether to show the button or not.
+          - name: image
+            label: Cover image
+            widget: object
+            fields:
+              - name: mobile
+                label: Mobile variant
+                widget: image
+                allow_multiple: false
+                media_folder: "{{slug}}/coverPhotos"
+              - name: desktop
+                label: Desktop variant
+                widget: image
+                allow_multiple: false
+                media_folder: "{{slug}}/coverPhotos"
+      - name: location
+        label: Location
+        widget: object
+        fields:
+          - name: displayName
+            label: Name
+            hint: The name of the place where the event takes place.
+            widget: string
+          - name: city
+            label: City
+            hint: The city where the location is.
+            widget: string
+          - name: mapIframe
+            label: Map HTML
+            hint:
+              A Google Maps embeddable map. To fill this field out, go on Google
+              Maps, find a location, click "Share", then open the "Embed a map"
+              tab, click "COPY HTML", and paste it here.
+            widget: text
+          - name: image
+            label: Image
+            hint: A background image.
+            widget: image
+            allow_multiple: false
+            media_folder: "{{slug}}/locationPhoto"
+      - name: callToAction
+        label: The Red Section
+        widget: object
+        fields:
+          - name: title
+            widget: string
+            label: Title
+          - name: subtitle
+            widget: string
+            label: Subtitle
+          - name: buttonText
+            widget: string
+            label: Button Text
+          - name: buttonUrl
+            widget: string
+            label: Button URL
+      - name: partnerLogoPaths
+        label: Partner Logos
+        widget: image
+        allow_multiple: true
+        media_folder: "{{slug}}/partnerLogos"
+        media_library:
+          config:
+            multiple: true
