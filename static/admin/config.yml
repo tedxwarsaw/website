@@ -53,6 +53,53 @@ collections:
                   - { label: Title, name: title, widget: string }
                   - { label: Description, name: description, widget: string }
                   - { label: Path, name: path, widget: string }
+      - label: "Footer"
+        name: "footer"
+        file: "src/pages/content/global/footer.yaml"
+        fields:
+          - name: collectionId
+            widget: hidden
+            default: footer
+          - label: Second Column
+            name: footerSecondColumn
+            widget: object
+            fields:
+              - {
+                  label: "Column Header",
+                  name: "displayName",
+                  widget: "string",
+                }
+              - name: links
+                label: Links
+                widget: list
+                fields:
+                  - name: displayName
+                    label: Display Name
+                    widget: string
+                  - name: path
+                    label: Path
+                    widget: string
+                    pattern: ["^/.+$", "it must start with '/'"]
+          - label: Third Column
+            name: footerThirdColumn
+            widget: object
+            fields:
+              - {
+                  label: "Column Header",
+                  name: "displayName",
+                  widget: "string",
+                }
+              - name: links
+                label: Links
+                widget: list
+                fields:
+                  - name: displayName
+                    label: Display Name
+                    widget: string
+                  - name: path
+                    label: Path
+                    widget: string
+                    pattern: ["^/.+$", "it must start with '/'"]
       - label: "Partnership Team (shown on all event pages)"
         name: "partnershipTeam"
         file: "src/pages/content/global/events/partnershipTeam/partnershipTeam.yaml"
