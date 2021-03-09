@@ -53,6 +53,54 @@ collections:
                   - { label: Title, name: title, widget: string }
                   - { label: Description, name: description, widget: string }
                   - { label: Path, name: path, widget: string }
+      - label: "Partnership Team (shown on all event pages)"
+        name: "partnershipTeam"
+        file: "src/pages/content/global/events/partnershipTeam/partnershipTeam.yaml"
+        fields:
+          - name: collectionId
+            widget: hidden
+            default: eventPartnershipTeam
+          - name: members
+            label: Team Members
+            hint: "Partnership team members are shown on every event page."
+            widget: list
+            fields:
+              - name: name
+                label: Name
+                widget: string
+              - name: areaOfResponsibility
+                label: Area of Responsibility
+                widget: string
+              - name: phoneNumber
+                label: Phone Number
+                widget: string
+              - name: email
+                label: Email
+                widget: string
+              - name: photo
+                label: Photo
+                widget: image
+                allow_multiple: false
+                media_folder: "photos"
+      - label: "Suggested Event (shown on all event pages)"
+        name: "suggestedEvent"
+        file: "src/pages/content/global/events/suggestedEvent/suggestedEvent.yaml"
+        fields:
+          - name: collectionId
+            widget: hidden
+            default: suggestedEvent
+          - name: slug
+            label: Event
+            widget: relation
+            collection: events
+            value_field: slug
+            display_fields: ["displayName"]
+            search_fields: ["displayName", "slug"]
+          - name: photos
+            label: Featured Photos
+            widget: image
+            allow_multiple: true
+            media_folder: "photos"
   - label: "Events"
     name: events
     folder: "src/pages/content/events"
