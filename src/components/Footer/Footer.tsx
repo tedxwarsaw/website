@@ -8,6 +8,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
+import { FeaturedEvent } from "../../types";
 
 interface Props {
   imgFixed: FixedObject;
@@ -29,6 +30,7 @@ interface Props {
     displayName: string;
     path: string;
   }[];
+  featuredEvent: FeaturedEvent;
 }
 
 const Column = (props: { title: string; children: React.ReactNode }) => (
@@ -47,16 +49,29 @@ export const FooterTemplate = (props: Props) => (
         className="col-span-full xl:col-span-1"
       />
       <div className="col-span-full xl:col-span-2 grid gap-16 grid-cols-2 md:grid-cols-4">
-        <Column title="featured event">
-          <div>
-            <Link
-              to="/event/2020"
-              className="text-red-500 font-bold hover:opacity-50"
-            >
-              Join <FaArrowRight className="inline" />
-            </Link>
-          </div>
-        </Column>
+        {props.featuredEvent.show ? (
+          <Column title={props.featuredEvent.displayName}>
+            <div>
+              <Link
+                to={`/event/${props.featuredEvent.slug}`}
+                className="text-red-500 font-bold hover:opacity-50"
+              >
+                Join <FaArrowRight className="inline" />
+              </Link>
+            </div>
+          </Column>
+        ) : (
+          <Column title="Newsletter">
+            <div>
+              <a
+                href="#newsletter"
+                className="text-red-500 font-bold hover:opacity-50"
+              >
+                Join <FaArrowRight className="inline" />
+              </a>
+            </div>
+          </Column>
+        )}
         <Column title={props.secondColumn.displayName}>
           {props.secondColumn.links.map(({ displayName, path }, idx) => (
             <div key={idx}>
@@ -128,6 +143,7 @@ export const Footer = () => (
         secondColumn={data.globalYaml.footerSecondColumn}
         thirdColumn={data.globalYaml.footerThirdColumn}
         bottomLinks={data.globalYaml.footerBottomLinks}
+        featuredEvent={data.featuredEventYaml}
       />
     )}
   />
@@ -161,6 +177,11 @@ const componentQuery = graphql`
         displayName
         path
       }
+    }
+    featuredEventYaml(collectionId: { eq: "featuredEvent" }) {
+      displayName
+      show
+      slug
     }
   }
 `;
