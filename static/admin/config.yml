@@ -150,7 +150,7 @@ collections:
             media_folder: "photos"
       - label: "Featured Event (shown in the navbar, footer, home page, attend page)"
         name: "featuredEvent"
-        file: "src/pages/content/global/featuredEvent.yaml"
+        file: "src/pages/content/global/featuredEvent/featuredEvent.yaml"
         fields:
           - name: collectionId
             widget: hidden
