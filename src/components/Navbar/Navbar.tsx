@@ -7,6 +7,7 @@ import {
   Props as ButtonTooltipProps,
 } from "./ButtonTooltip/ButtonTooltip";
 import { SideNavbar } from "./SideNavbar/SideNavbar";
+import { FeaturedEvent } from "../../types";
 
 export enum LinkVariant {
   Red = "red",
@@ -47,11 +48,23 @@ export interface Props {
     path: string;
     tooltipContents: ButtonTooltipProps["contents"];
   }>;
+  featuredEvent: FeaturedEvent;
 }
 
 export const NavbarTemplate = (props: Props) => {
-  const { imgFixed, navbarLinks, navbarButtons } = props;
+  const { imgFixed, navbarButtons, featuredEvent } = props;
+  var { navbarLinks } = props;
   const [sideOpen, setSideOpen] = useState(false);
+  navbarLinks = featuredEvent.show
+    ? [
+        {
+          displayName: featuredEvent.displayName,
+          variant: LinkVariant.Black,
+          path: `/event/${featuredEvent.slug}`,
+        },
+        ...navbarLinks,
+      ]
+    : navbarLinks;
   return (
     <>
       <header className="main-grid h-16 shadow">
@@ -117,6 +130,7 @@ export const Navbar = () => (
         imgFixed={data.file.childImageSharp.fixed}
         navbarLinks={data.globalYaml.navbarLinks}
         navbarButtons={data.globalYaml.navbarButtons}
+        featuredEvent={data.featuredEventYaml}
       />
     )}
   />
@@ -148,6 +162,11 @@ const componentQuery = graphql`
           path
         }
       }
+    }
+    featuredEventYaml(collectionId: { eq: "featuredEvent" }) {
+      displayName
+      show
+      slug
     }
   }
 `;
