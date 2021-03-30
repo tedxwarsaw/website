@@ -2,7 +2,6 @@ backend:
   name: gitlab
   preview_context: preview_status
   repo: tedxwarsaw/tedxwarsaw.gitlab.io
-  site_domain: practical-keller-f240c6.netlify.app
 publish_mode: editorial_workflow
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
