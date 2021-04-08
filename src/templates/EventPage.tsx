@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
 import Img, { FluidObject, FixedObject } from "gatsby-image";
-import { BackgroundImage } from "../components/BackgroundImage/BackgroundImage";
-import { Button, ButtonVariant } from "../components/Button/Button";
-import { Page } from "../components/Page/Page";
+import { BackgroundImage } from "@/components/shared/BackgroundImage";
+import { Button, ButtonVariant } from "@/components/shared/Button";
+import { Page } from "@/components/shared/Page";
 import { splitTextInTwo } from "../utils";
 import { FaArrowRight, FaBars } from "react-icons/fa";
 import moment from "moment";

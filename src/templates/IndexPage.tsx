@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { YamlPage } from "../types";
-import { Page } from "../components/Page/Page";
+import { Page } from "@/components/shared/Page";
 
 interface Props {
   title: String;
