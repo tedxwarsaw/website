@@ -1,8 +1,9 @@
 import React from "react";
-import { HeroSection, HeroSectionProps } from "@/components/HeroSection";
 import { Page } from "@/components/shared/Page";
+import { HeroSection, HeroSectionProps } from "@/components/HeroSection";
+import { OurStory, OurStoryProps } from "@/components/OurStory";
 
-export interface Props extends HeroSectionProps {}
+export interface Props extends HeroSectionProps, OurStoryProps {}
 
 export const IndexPageTemplate = (props: Props) => (
   <Page>
@@ -16,6 +17,11 @@ export const IndexPageTemplate = (props: Props) => (
       heroBackgroundImageDesktop={props.heroBackgroundImageDesktop}
       heroBackgroundImageAlt={props.heroBackgroundImageAlt}
     />
+    <OurStory
+      ourStoryTitle={props.ourStoryTitle}
+      ourStoryItems={props.ourStoryItems}
+    />
+    <div className="h-96"></div>
   </Page>
 );
 
