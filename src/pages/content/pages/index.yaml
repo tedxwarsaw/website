@@ -1,3 +1,13 @@
 slug: /
 templateKey: IndexPage
-title: The home page
+
+heroTitle: Ideas worth spreading
+heroSubtitle: TEDxWarsaw is an annual event where dreamers,founders, activists, engineers, artists and other amazing speakers meet to share their ideas worth spreading.
+heroButtonText: Get Involved
+heroButtonLink: /testing
+heroLinks:
+  - displayName: About
+    path: /about
+heroBackgroundImageUrl: images/uploads/speaker-stage-logo.jpg
+heroBackgroundImageUrlDesktop: images/uploads/speaker-stage-logo.jpg
+heroBackgroundImageAlt: Cover image

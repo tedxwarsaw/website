@@ -1,5 +1,6 @@
 import React from "react";
 import Img, { FluidObject } from "gatsby-image";
+import "./BackgroundImage.styled.css";
 
 interface Props {
   image: FluidObject;
@@ -25,7 +26,6 @@ export const BackgroundImage = (props: Props): JSX.Element => (
     >
       {props.children}
     </div>
-    <Img className="h-full w-full z-0" fluid={props.image} alt={props.alt} />
     {props.imageDesktop ? (
       <>
         <Img

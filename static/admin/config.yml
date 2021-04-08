@@ -14,7 +14,37 @@ collections:
         file: "src/pages/content/pages/index.yaml"
         slug: "index.md" # Filename template, e.g., YYYY-MM-DD-title.md
         fields: # The fields for each document, usually in front matter
-          - { label: "Title", name: "title", widget: "string" }
+          - label: "Hero title"
+            name: "heroTitle" 
+            widget: "string" 
+          - label: "Hero subtitle"
+            name: "heroSubtitle"
+            widget: "string"
+          - label: "Hero button text"
+            name: "heroButtonText"
+            widget: "string"
+          - label: "Hero button link"
+            name: "heroButtonLink"
+            widget: "string"
+          - label: "Hero links"
+            name: "heroLinks"
+            widget: "list"
+            fields: 
+              - { label: "Display name", name: "displayName", widget: "string"}
+              - { label: "Path", name: "path", widget: "string"}
+          - label: "Hero background mobile image"
+            name: "heroBackgroundImageUrl"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Hero background desktop image"
+            name: "heroBackgroundImageUrlDesktop"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Hero background image alt"
+            name: "heroBackgroundImageAlt"
+            widget: string
   - label: "Global"
     name: "global"
     files:

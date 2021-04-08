@@ -1,6 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
-import { YamlPage } from "../types";
+import { HeroSection, HeroSectionProps } from "@/components/HeroSection";
 import { Page } from "@/components/shared/Page";
 
 export interface Props extends HeroSectionProps {}

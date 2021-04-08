@@ -26,7 +26,23 @@ export const queryForProps = async (
     data: { pagesYaml },
   } = await graphql(pageQuery);
 
+  const heroBackgroundImage = await getFluidImage({
+    graphql,
+    path: pagesYaml.heroBackgroundImageUrl,
+    quality: 90,
+    sizes: "(max:-width: 768px)",
+  });
+
+  const heroBackgroundImageDesktop = await getFluidImage({
+    graphql,
+    path: pagesYaml.heroBackgroundImageUrlDesktop,
+    quality: 90,
+    sizes: "(max:-width: 2000px)",
+  });
+
   return {
     ...pagesYaml,
+    heroBackgroundImage,
+    heroBackgroundImageDesktop,
   };
 };

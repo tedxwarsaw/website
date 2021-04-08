@@ -1,5 +1,6 @@
 import path from "path";
 import { queryForProps as queryForEventProps } from "./src/queries/EventPageQuery";
+import { queryForProps as queryForHomeProps } from "./src/queries/IndexPageQuery";
 
 const pageQuery = `#graphql
   query Page {
@@ -34,12 +35,18 @@ export const createPages = async ({ actions, graphql }) => {
   }
 
   const pages = pagesResult.data.allPagesYaml.edges;
-  pages.forEach(({ node }) => {
+  pages.forEach(async ({ node }) => {
+    let props = {};
+
+    if (String(node.templateKey) === "IndexPage") {
+      props = await queryForHomeProps(graphql);
+    }
     createPage({
       path: node.slug,
       component: path.resolve(`src/templates/${String(node.templateKey)}.tsx`),
       context: {
         id: node.id,
+        props,
       },
     });
   });

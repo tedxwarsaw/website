@@ -1,0 +1,14 @@
+.background-image-only-mobile {
+  display: block !important;
+}
+.background-image-only-desktop {
+  display: none !important;
+}
+@media (min-width: 768px) {
+  .background-image-only-mobile {
+    display: none !important;
+  }
+  .background-image-only-desktop {
+    display: block !important;
+  }
+}
