@@ -31,7 +31,7 @@ export const SideNavbar = ({
 
   return (
     <div
-      className={`${
+      className={`md:hidden ${
         open ? "visible" : "invisible"
       } absolute inset-0 w-screen h-screen`}
     >
