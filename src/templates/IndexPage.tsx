@@ -1,8 +1,12 @@
 import React from "react";
 import { HeroSection, HeroSectionProps } from "@/components/HeroSection";
 import { Page } from "@/components/shared/Page";
+import {
+  EventHighlight,
+  EventHighlightProps,
+} from "@/components/EventHighlight";
 
-export interface Props extends HeroSectionProps {}
+export interface Props extends HeroSectionProps, EventHighlightProps {}
 
 export const IndexPageTemplate = (props: Props) => (
   <Page>
@@ -15,6 +19,15 @@ export const IndexPageTemplate = (props: Props) => (
       heroBackgroundImage={props.heroBackgroundImage}
       heroBackgroundImageDesktop={props.heroBackgroundImageDesktop}
       heroBackgroundImageAlt={props.heroBackgroundImageAlt}
+    />
+    <EventHighlight
+      eventHiglightImage={props.eventHiglightImage}
+      eventHeader={props.eventHeader}
+      eventSubheader={props.eventSubheader}
+      eventPartnersProfiles={props.eventPartnersProfiles}
+      eventDescriptonColOne={props.eventDescriptonColOne}
+      eventDescriptonColTwo={props.eventDescriptonColTwo}
+      eventReadMoreLink={props.eventReadMoreLink}
     />
   </Page>
 );
