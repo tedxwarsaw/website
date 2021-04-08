@@ -11,8 +11,7 @@ stages:
 pages:
   stage: build
   script:
-    - npm install yarn
-    - yarn install
+    - yarn
     - ./node_modules/.bin/gatsby build --prefix-paths
   artifacts:
     paths:
@@ -30,8 +29,7 @@ preview:
       --data-urlencode "state=running"
       --data-urlencode "name=preview_status"
       "https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/statuses/${CI_COMMIT_SHA}"
-    - npm install yarn
-    - yarn install
+    - yarn
     - >
       sed -i -e "s#pathPrefix: \"/\"#pathPrefix: \"/${PREVIEW_PATH}/\"#g" gatsby-config.js
     - ./node_modules/.bin/gatsby build --prefix-paths

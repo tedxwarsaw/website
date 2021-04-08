@@ -45,6 +45,51 @@ collections:
           - label: "Hero background image alt"
             name: "heroBackgroundImageAlt"
             widget: string
+          - label: "Our story section title"
+            name: "ourStoryTitle"
+            widget: string
+          - label: "Our story section items"
+            name: "ourStoryItems"
+            widget: "list"
+            fields: 
+              - { label: "Bold text", name: "boldText", widget: "string"}
+              - { label: "Text", name: "text", widget: "string"}
+          - label: Event eventHiglightImage 
+            name: eventHiglightImage
+            widget: string
+          - label: Event header
+            name: eventHeader
+            widget: string
+          - label: Event subheader
+            name: eventSubheader
+            widget: string
+          - label: Event partners profile images
+            name: eventPartnersProfilesUrls
+            widget: image
+            allow_multiple: true
+            media_folder: "photos"
+            media_library:
+                config:
+                  multiple: true
+          - label: Event description column 1
+            name: eventDescriptonColOne
+            widget: string
+          - label: Event description column 2
+            name: eventDescriptonColTwo
+            widget: string
+          - label: Event read more link path
+            name: eventReadMoreLink
+            widget: string
+          - label: Youtube banner heading
+            name: youtubeBannerHeading
+            hint: "You can pass HTML here"
+            widget: string
+          - label: Youtube banner button text
+            name: youtubeBannerLinkText
+            widget: string
+          - label: Youtube banner button link
+            name: youtubeBannerLinkUrl
+            widget: string
   - label: "Global"
     name: "global"
     files:
