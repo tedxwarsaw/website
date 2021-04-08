@@ -3,32 +3,25 @@ import { graphql } from "gatsby";
 import { YamlPage } from "../types";
 import { Page } from "@/components/shared/Page";
 
-interface Props {
-  title: String;
-}
+export interface Props extends HeroSectionProps {}
 
-export const IndexPageTemplate = ({ title }: Props) => (
+export const IndexPageTemplate = (props: Props) => (
   <Page>
-    <div className="inner-grid">
-      <span>hello</span>
-      <span>hello</span>
-      <span className="h-96" id="newsletter">
-        newsletter
-      </span>
-    </div>
+    <HeroSection
+      heroTitle={props.heroTitle}
+      heroSubtitle={props.heroSubtitle}
+      heroButtonText={props.heroButtonText}
+      heroButtonLink={props.heroButtonLink}
+      heroLinks={props.heroLinks}
+      heroBackgroundImage={props.heroBackgroundImage}
+      heroBackgroundImageDesktop={props.heroBackgroundImageDesktop}
+      heroBackgroundImageAlt={props.heroBackgroundImageAlt}
+    />
   </Page>
 );
 
-const IndexPage = ({ data }: { data: YamlPage<Props> }) => {
-  return <IndexPageTemplate {...data.pagesYaml} />;
+const IndexPage = ({ pageContext }) => {
+  return <IndexPageTemplate {...pageContext.props} />;
 };
 
 export default IndexPage;
-
-export const pageQuery = graphql`
-  query IndexPageTemplate {
-    pagesYaml(templateKey: { eq: "IndexPage" }) {
-      title
-    }
-  }
-`;
