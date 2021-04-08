@@ -7,7 +7,7 @@ import {
   Props as ButtonTooltipProps,
 } from "./ButtonTooltip/ButtonTooltip";
 import { SideNavbar } from "./SideNavbar/SideNavbar";
-import { FeaturedEvent } from "../../types";
+import { FeaturedEvent } from "@/types";
 
 export enum LinkVariant {
   Red = "red",

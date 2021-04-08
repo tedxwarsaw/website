@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   siteMetadata: {
     title: "tedxwarsaw",
@@ -24,6 +26,13 @@ module.exports = {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-root-import",
+      options: {
+        "@": path.join(__dirname, "src"),
+        static: path.join(__dirname, "static"),
       },
     },
     "gatsby-plugin-postcss",
