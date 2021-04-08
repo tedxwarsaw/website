@@ -1,8 +1,9 @@
 import React from "react";
 import { HeroSection, HeroSectionProps } from "@/components/HeroSection";
+import { YoutubeBanner, YoutubeBannerProps } from "@/components/YoutubeBanner";
 import { Page } from "@/components/shared/Page";
 
-export interface Props extends HeroSectionProps {}
+export interface Props extends HeroSectionProps, YoutubeBannerProps {}
 
 export const IndexPageTemplate = (props: Props) => (
   <Page>
@@ -15,6 +16,11 @@ export const IndexPageTemplate = (props: Props) => (
       heroBackgroundImage={props.heroBackgroundImage}
       heroBackgroundImageDesktop={props.heroBackgroundImageDesktop}
       heroBackgroundImageAlt={props.heroBackgroundImageAlt}
+    />
+    <YoutubeBanner
+      youtubeBannerHeading={props.youtubeBannerHeading}
+      youtubeBannerLinkText={props.youtubeBannerLinkText}
+      youtubeBannerLinkUrl={props.youtubeBannerLinkUrl}
     />
   </Page>
 );

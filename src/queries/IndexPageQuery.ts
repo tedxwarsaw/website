@@ -15,6 +15,9 @@ export const pageQuery = `#graphql
       heroBackgroundImageUrl
       heroBackgroundImageUrlDesktop
       heroBackgroundImageAlt
+      youtubeBannerHeading
+      youtubeBannerLinkText
+      youtubeBannerLinkUrl
     }
   }
 `;
