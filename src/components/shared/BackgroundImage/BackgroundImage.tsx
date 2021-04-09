@@ -26,23 +26,15 @@ export const BackgroundImage = (props: Props): JSX.Element => (
     >
       {props.children}
     </div>
-    {props.imageDesktop ? (
-      <>
-        <Img
-          className="h-full w-full z-0 background-image-only-mobile"
-          fluid={props.image}
-          alt={props.alt}
-        />
-        <Img
-          className="h-full w-full z-0 background-image-only-desktop"
-          fluid={props.imageDesktop}
-          alt={props.alt}
-        />
-      </>
-    ) : (
+    <Img
+      className="h-full w-full z-0 background-image-only-mobile"
+      fluid={props.image}
+      alt={props.alt}
+    />
+    {props.imageDesktop && (
       <Img
-        className="h-full w-full z-0 background-image-only-mobile"
-        fluid={props.image}
+        className="h-full w-full z-0 background-image-only-desktop"
+        fluid={props.imageDesktop}
         alt={props.alt}
       />
     )}
