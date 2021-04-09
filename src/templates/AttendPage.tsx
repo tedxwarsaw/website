@@ -1,10 +1,10 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import { FluidObject } from "gatsby-image";
-import { BackgroundImage } from "../components/BackgroundImage/BackgroundImage";
-import { Button } from "../components/Button/Button";
+import { BackgroundImage } from "@/components/shared/BackgroundImage";
+import { Button } from "@/components/shared/Button";
 import { HiMenuAlt2 } from "react-icons/hi";
-import { Page } from "../components/Page/Page";
+import { Page } from "@/components/shared/Page";
 
 interface Props {
   imgFluid: FluidObject;

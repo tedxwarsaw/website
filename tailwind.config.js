@@ -8,7 +8,11 @@ module.exports = {
   ],
   darkMode: false,
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        customLightGrey: "#f6f6f6",
+      },
+    },
     fontFamily: {
       sans: ["Inter", "Helvetica", "Arial", "sans-serif"],
     },
