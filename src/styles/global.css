@@ -23,6 +23,16 @@
   grid-column: 1 / 4 !important;
 }
 
+.main-grid-mobile-full-span {
+  grid-column: 2 / 3;
+}
+
+@media (max-width: theme("screens.md")) {
+  .main-grid-mobile-full-span {
+    grid-column: 1 / 4 !important;
+  }
+}
+
 @media (min-width: theme("screens.xl")) {
   :root {
     --column-width: calc(

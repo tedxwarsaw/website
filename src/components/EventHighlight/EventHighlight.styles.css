@@ -1,0 +1,10 @@
+.partners-profile-images {
+  max-width: 50px;
+  max-height: 50px;
+}
+@media (min-width: theme("screens.md")) {
+  .partners-profile-images {
+    max-width: 60px;
+    max-height: 60px;
+  }
+}

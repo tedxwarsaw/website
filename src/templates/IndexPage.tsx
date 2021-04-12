@@ -1,9 +1,18 @@
 import React from "react";
-import { HeroSection, HeroSectionProps } from "@/components/HeroSection";
-import { YoutubeBanner, YoutubeBannerProps } from "@/components/YoutubeBanner";
 import { Page } from "@/components/shared/Page";
+import { HeroSection, HeroSectionProps } from "@/components/HeroSection";
+import { OurStory, OurStoryProps } from "@/components/OurStory";
+import { YoutubeBanner, YoutubeBannerProps } from "@/components/YoutubeBanner";
+import {
+  EventHighlight,
+  EventHighlightProps,
+} from "@/components/EventHighlight";
 
-export interface Props extends HeroSectionProps, YoutubeBannerProps {}
+export interface Props
+  extends HeroSectionProps,
+    OurStoryProps,
+    YoutubeBannerProps,
+    EventHighlightProps {}
 
 export const IndexPageTemplate = (props: Props) => (
   <Page>
@@ -17,10 +26,23 @@ export const IndexPageTemplate = (props: Props) => (
       heroBackgroundImageDesktop={props.heroBackgroundImageDesktop}
       heroBackgroundImageAlt={props.heroBackgroundImageAlt}
     />
+    <OurStory
+      ourStoryTitle={props.ourStoryTitle}
+      ourStoryItems={props.ourStoryItems}
+    />
     <YoutubeBanner
       youtubeBannerHeading={props.youtubeBannerHeading}
       youtubeBannerLinkText={props.youtubeBannerLinkText}
       youtubeBannerLinkUrl={props.youtubeBannerLinkUrl}
+    />
+    <EventHighlight
+      eventHiglightImage={props.eventHiglightImage}
+      eventHeader={props.eventHeader}
+      eventSubheader={props.eventSubheader}
+      eventPartnersProfiles={props.eventPartnersProfiles}
+      eventDescriptonColOne={props.eventDescriptonColOne}
+      eventDescriptonColTwo={props.eventDescriptonColTwo}
+      eventReadMoreLink={props.eventReadMoreLink}
     />
   </Page>
 );
