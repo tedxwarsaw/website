@@ -82,7 +82,7 @@ collections:
             widget: string
           - label: Youtube banner heading
             name: youtubeBannerHeading
-            hint: "You can pass HTML here"
+            hint: "This field supports HTML syntax"
             widget: string
           - label: Youtube banner button text
             name: youtubeBannerLinkText
