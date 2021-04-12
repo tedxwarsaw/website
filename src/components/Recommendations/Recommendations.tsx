@@ -5,10 +5,10 @@ import {
 } from "./RecommendationCard";
 import eventCover from "./event-cover.png";
 import talkCover from "./talk-cover.png";
-import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "./Recommendations.styled.css";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
+import { useRecommendations } from "./Recommendations.hooks";
 
 const recommendations = [
   {
@@ -38,18 +38,14 @@ const recommendations = [
 ];
 
 export const Recommendations = () => {
-  const [currentSlide, setCurrentSlide] = useState(1);
-  const [inputSliderPosition, setInputSliderPosition] = useState(1);
-  const [sliderRef, slider] = useKeenSlider({
-    slidesPerView: 1.1,
-    breakpoints: {
-      "(min-width: 768px)": {
-        slidesPerView: 3,
-        spacing: 20,
-      },
-    },
-    slideChanged: (slider) => console.log(slider?.details()),
-  });
+  const numberOfSlides = 4;
+  const {
+    sliderRef,
+    inputSliderPosition,
+    inputSliderOnChange,
+    nextSlide,
+    prevSlide,
+  } = useRecommendations(numberOfSlides);
 
   return (
     <div className="my-10 main-grid-full-span recommendations-container">
@@ -100,26 +96,18 @@ export const Recommendations = () => {
         </div>
       </div>
       <div className="slider-controls text-customRed text-2xl flex justify-between mt-5 items-center">
-        <BsChevronLeft onClick={() => slider.prev()} />
+        <BsChevronLeft onClick={prevSlide} />
         <input
           type="range"
-          min="1"
+          min="0"
           max="100"
           value={inputSliderPosition}
-          onChange={(e) => {
-            // slider.moveToSlide(parseInt(e.target.value) % (100 / 3));
-            setInputSliderPosition(parseInt(e.target.value));
-            const slideToChange = Math.floor(inputSliderPosition / (100 / 4));
-
-            if (inputSliderPosition !== slideToChange) {
-              slider.moveToSlide(slideToChange);
-            }
-          }}
+          onChange={inputSliderOnChange}
           className="input-slider bg-customRed"
           id="myRange"
         />
 
-        <BsChevronRight onClick={() => slider.next()} />
+        <BsChevronRight onClick={nextSlide} />
       </div>
     </div>
   );

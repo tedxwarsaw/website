@@ -63,14 +63,12 @@ export const queryForProps = async (
 
   const eventPartnersProfiles: any = await Promise.all(
     pagesYaml.eventPartnersProfilesUrls.map(async (path) => {
-      console.log(path);
       const image = await getFixedImage({
         graphql,
         path: path,
         height: 60,
         width: 60,
       });
-      console.log(image);
       return image;
     })
   );
