@@ -1,10 +1,14 @@
 import React from "react";
 import { EventCard } from "./EventCard";
-import { TalkCard } from "./TalkCard";
+import {
+  RecommendationCard,
+  RecommendationCardTypes,
+} from "./RecommendationCard";
 import eventCover from "./event-cover.png";
 import talkCover from "./talk-cover.png";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import "./Recommendations.styled.css";
 
 const recommendations = [
   {
@@ -34,25 +38,39 @@ const recommendations = [
 ];
 
 export const Recommendations = () => {
-  const [sliderRef] = useKeenSlider({ slidesPerView: 3, spacing: 20 });
+  const [sliderRef] = useKeenSlider({
+    slidesPerView: 1,
+    breakpoints: {
+      "(min-width: 768px)": {
+        slidesPerView: 3,
+        spacing: 20,
+      },
+    },
+  });
 
   return (
-    <div className="my-10">
+    <div className="my-10 main-grid-full-span recommendations-container">
       <h2 className="text-2xl md:text-3xl font-bold w-32">
         TEDxWarsaw Recommends
       </h2>
-      <div ref={sliderRef} className="keen-slider w-full mt-10">
-        <div className="keen-slider__slide ">
-          <EventCard
+      <div
+        ref={sliderRef}
+        className="keen-slider max-w-full mt-10 recommendations-slider-container"
+      >
+        <div className="keen-slider__slide">
+          <RecommendationCard
+            type={RecommendationCardTypes.EVENT}
             thumbnailImage={recommendations[0].thumbnailImage}
             title={recommendations[0].title}
             eventDate={recommendations[0].eventDate}
             attendLink={recommendations[0].attendLink}
             learnMoreLink={recommendations[0].learnMoreLink}
+            talkEventName={recommendations[1].talkEventName}
           />
         </div>
         <div className="keen-slider__slide ">
-          <TalkCard
+          <RecommendationCard
+            type={RecommendationCardTypes.TALK}
             thumbnailImage={recommendations[1].thumbnailImage}
             speaker={recommendations[1].speaker}
             title={recommendations[1].title}
@@ -61,7 +79,8 @@ export const Recommendations = () => {
           />
         </div>
         <div className="keen-slider__slide ">
-          <TalkCard
+          <RecommendationCard
+            type={RecommendationCardTypes.TALK}
             thumbnailImage={recommendations[1].thumbnailImage}
             speaker={recommendations[1].speaker}
             title={recommendations[1].title}
@@ -70,7 +89,8 @@ export const Recommendations = () => {
           />
         </div>
         <div className="keen-slider__slide">
-          <TalkCard
+          <RecommendationCard
+            type={RecommendationCardTypes.TALK}
             thumbnailImage={recommendations[1].thumbnailImage}
             speaker={recommendations[1].speaker}
             title={recommendations[1].title}
