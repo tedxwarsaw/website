@@ -34,15 +34,15 @@ const recommendations = [
 ];
 
 export const Recommendations = () => {
-  const [sliderRef] = useKeenSlider({ slidesPerView: 3 });
+  const [sliderRef] = useKeenSlider({ slidesPerView: 3, spacing: 20 });
 
   return (
     <div className="my-10">
       <h2 className="text-2xl md:text-3xl font-bold w-32">
         TEDxWarsaw Recommends
       </h2>
-      <div ref={sliderRef} className="keen-slider w-full">
-        <div className="keen-slider__slide">
+      <div ref={sliderRef} className="keen-slider w-full mt-10">
+        <div className="keen-slider__slide ">
           <EventCard
             thumbnailImage={recommendations[0].thumbnailImage}
             title={recommendations[0].title}
@@ -51,7 +51,7 @@ export const Recommendations = () => {
             learnMoreLink={recommendations[0].learnMoreLink}
           />
         </div>
-        <div className="keen-slider__slide">
+        <div className="keen-slider__slide ">
           <TalkCard
             thumbnailImage={recommendations[1].thumbnailImage}
             speaker={recommendations[1].speaker}
@@ -60,7 +60,7 @@ export const Recommendations = () => {
             duration={recommendations[1].duration}
           />
         </div>
-        <div className="keen-slider__slide">
+        <div className="keen-slider__slide ">
           <TalkCard
             thumbnailImage={recommendations[1].thumbnailImage}
             speaker={recommendations[1].speaker}
