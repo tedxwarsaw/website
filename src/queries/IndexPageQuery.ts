@@ -15,6 +15,11 @@ export const pageQuery = `#graphql
       heroBackgroundImageUrl
       heroBackgroundImageUrlDesktop
       heroBackgroundImageAlt
+      ourStoryTitle
+      ourStoryItems {
+        boldText
+        text
+      }
       eventHiglightImage
       eventHeader
       eventSubheader
