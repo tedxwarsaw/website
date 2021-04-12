@@ -95,7 +95,7 @@ export const Recommendations = () => {
           />
         </div>
       </div>
-      <div className="slider-controls text-customRed text-2xl flex justify-between mt-5 items-center">
+      <div className="slider-controls text-customRed text-2xl flex justify-between mt-5 items-center md:hidden">
         <BsChevronLeft onClick={prevSlide} />
         <input
           type="range"
