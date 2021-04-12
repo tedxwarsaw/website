@@ -2,6 +2,7 @@ import React from "react";
 import { Page } from "@/components/shared/Page";
 import { HeroSection, HeroSectionProps } from "@/components/HeroSection";
 import { OurStory, OurStoryProps } from "@/components/OurStory";
+import { Recommendations } from "@/components/Recommendations";
 import { YoutubeBanner, YoutubeBannerProps } from "@/components/YoutubeBanner";
 import {
   EventHighlight,
@@ -30,6 +31,7 @@ export const IndexPageTemplate = (props: Props) => (
       ourStoryTitle={props.ourStoryTitle}
       ourStoryItems={props.ourStoryItems}
     />
+    <Recommendations />
     <YoutubeBanner
       youtubeBannerHeading={props.youtubeBannerHeading}
       youtubeBannerLinkText={props.youtubeBannerLinkText}
