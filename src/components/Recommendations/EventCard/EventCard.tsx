@@ -17,8 +17,8 @@ export const EventCard = ({
   attendLink,
   learnMoreLink,
 }: EventCardProps) => (
-  <div className="w-1/3 p-2 relative">
-    <img src={thumbnailImage} alt="Event thumbnail image" />
+  <div className="p-2 relative">
+    <img src={thumbnailImage} alt="Event thumbnail image" className="w-full" />
     <span className="absolute left-0 top-0 bg-customRed text-white font-light text-sm px-3">
       UPCOMING
     </span>

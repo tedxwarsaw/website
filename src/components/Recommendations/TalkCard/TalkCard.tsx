@@ -15,9 +15,9 @@ export const TalkCard = ({
   talkEventName,
   duration,
 }: TalkCardProps) => (
-  <div className="w-1/3 p-2 relative">
+  <div className="p-2 relative">
     <div className="relative">
-      <img src={thumbnailImage} alt="Talk thumnail image" />
+      <img src={thumbnailImage} alt="Talk thumnail image" className="w-full" />
       <span className="absolute right-2 bottom-2 bg-customDarkGrey text-white font-light text-xs px-2">
         {duration}
       </span>
