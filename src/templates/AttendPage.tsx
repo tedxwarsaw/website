@@ -33,7 +33,7 @@ export const AttendPageTemplate = (props: Props) => (
                 >
                   <Button>Attend</Button>
                 </a>
-                <div className="text-red-600 font-medium flex flex-row items-center hover:text-white">
+                <div className="text-customRed font-medium flex flex-row items-center hover:text-white">
                   <Link to="/event/2019">
                     <span>
                       Read more <HiMenuAlt2 className="inline w-6 h-6" />

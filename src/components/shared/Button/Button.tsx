@@ -8,7 +8,7 @@ export enum ButtonVariant {
 
 const classes = {};
 classes[ButtonVariant.filledRed] =
-  "text-white bg-red-600 hover:bg-white hover:text-red-500";
+  "text-white bg-customRed hover:bg-white hover:text-customRed";
 classes[ButtonVariant.outlineWhite] =
   "border border-white text-white bg-transparent hover:bg-white hover:text-red-500";
 classes[ButtonVariant.filledGrey] =

@@ -4,7 +4,7 @@ import "./BackgroundImage.styled.css";
 
 interface Props {
   image: FluidObject;
-  imageDesktop: FluidObject;
+  imageDesktop?: FluidObject;
   alt?: string;
   className?: string;
   classNameChild?: string;
