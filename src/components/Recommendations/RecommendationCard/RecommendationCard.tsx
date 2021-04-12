@@ -65,7 +65,7 @@ export const RecommendationCard = ({
       <div className="flex items-center ">
         <a
           href={attendLink}
-          className="mb-5 md:mb-0 text-sm "
+          className="text-sm"
           target="_blank"
           rel="noopener noreferrer"
         >
