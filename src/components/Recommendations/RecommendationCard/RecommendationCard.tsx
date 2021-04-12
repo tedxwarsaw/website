@@ -49,7 +49,7 @@ export const RecommendationCard = ({
       {type === RecommendationCardTypes.TALK ? "TALK" : "UPCOMMING"}
     </span>
 
-    <div className="md:flex justify-between items-end my-5">
+    <div className="md:flex justify-between items-end mb-2 mt-5 md:my-5">
       <div>
         <span className="my-10">
           {type === RecommendationCardTypes.TALK ? speaker : "Title"}
@@ -57,7 +57,9 @@ export const RecommendationCard = ({
         <h3>{title}</h3>
       </div>
     </div>
-    <p>{type === RecommendationCardTypes.TALK ? talkEventName : eventDate}</p>
+    <p className="pb-3">
+      {type === RecommendationCardTypes.TALK ? talkEventName : eventDate}
+    </p>
 
     {type === RecommendationCardTypes.EVENT && (
       <div className="flex items-center ">
