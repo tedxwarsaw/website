@@ -12,7 +12,19 @@ export const useRecommendations = (numberOfSlides: number) => {
         spacing: 20,
       },
     },
-    slideChanged: (slider) => setCurrentSlide(slider.details().absoluteSlide),
+    afterChange: (slider) => {
+      if (slider.details().absoluteSlide === numberOfSlides - 1) {
+        setInputSliderPosition(100);
+        return;
+      }
+      setInputSliderPosition(
+        slider.details().absoluteSlide *
+          (100 / numberOfSlides + 100 / numberOfSlides / numberOfSlides)
+      );
+    },
+    slideChanged: (slider) => {
+      setCurrentSlide(slider.details().absoluteSlide);
+    },
   });
 
   const inputSliderOnChange = (e) => {
