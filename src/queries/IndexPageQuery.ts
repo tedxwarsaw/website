@@ -20,13 +20,25 @@ export const pageQuery = `#graphql
         boldText
         text
       }
-      eventHiglightImage
-      eventHeader
-      eventSubheader
-      eventPartnersProfilesUrls
-      eventDescriptonColOne
-      eventDescriptonColTwo
-      eventReadMoreLink
+      eventSlug
+    }
+  }
+`;
+
+const secondQuery = `#graphql
+  query SecondEvent(
+    $eventSlug: String
+  ) {
+    event: eventsYaml(slug: {eq: $eventSlug}) {
+      displayName
+      description
+      cover {
+        image {
+          desktop
+          mobile
+        }
+      }
+      organizersProfilePaths
     }
   }
 `;
@@ -37,6 +49,12 @@ export const queryForProps = async (
   const {
     data: { pagesYaml },
   } = await graphql(pageQuery);
+
+  const {
+    data: { event },
+  } = await graphql(secondQuery, {
+    eventSlug: pagesYaml.eventSlug,
+  });
 
   const heroBackgroundImage = await getFluidImage({
     graphql,
@@ -52,14 +70,23 @@ export const queryForProps = async (
     sizes: "(max:-width: 2000px)",
   });
 
+  console.log(event.cover.image.mobile);
   const eventHiglightImage = await getFluidImage({
     graphql,
-    path: pagesYaml.eventHiglightImage,
+    path: event.cover.image.mobile,
     quality: 90,
+    sizes: "(max:-width: 768px)",
+  });
+  const eventHiglightImageDesktop = await getFluidImage({
+    graphql,
+    path: event.cover.image.desktop,
+    quality: 90,
+    sizes: "(max:-width: 2000px)",
   });
 
+  console.log(event.organizersProfilePaths);
   const eventPartnersProfiles: any = await Promise.all(
-    pagesYaml.eventPartnersProfilesUrls.map(async (path) => {
+    event.organizersProfilePaths.map(async (path) => {
       console.log(path);
       const image = await getFixedImage({
         graphql,
@@ -67,7 +94,6 @@ export const queryForProps = async (
         height: 60,
         width: 60,
       });
-      console.log(image);
       return image;
     })
   );
@@ -76,7 +102,10 @@ export const queryForProps = async (
     ...pagesYaml,
     heroBackgroundImage,
     heroBackgroundImageDesktop,
+    eventHeader: event.displayName,
+    eventDescription: event.description,
     eventHiglightImage,
+    eventHiglightImageDesktop,
     eventPartnersProfiles,
   };
 };

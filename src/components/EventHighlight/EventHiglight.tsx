@@ -6,13 +6,13 @@ import "./EventHighlight.styles.css";
 
 export const EventHighlight = ({
   eventHiglightImage,
+  eventHiglightImageDesktop,
   eventHeader,
-  eventSubheader,
   eventPartnersProfiles,
-  eventDescriptonColOne,
-  eventDescriptonColTwo,
-  eventReadMoreLink,
+  eventDescription,
+  eventSlug,
 }: EventHighlightProps) => {
+  console.log(eventHiglightImage);
   return (
     <div className="pb-10 main-grid-mobile-full-span">
       <div style={{ height: "fit-content" }}>
@@ -25,7 +25,7 @@ export const EventHighlight = ({
       <div className="px-5 md:px-0 ">
         <div className="w-full py-10">
           <span className="text-2xl md:text-3xl">{eventHeader}</span>
-          <h2 className="text-2xl md:text-3xl font-bold">{eventSubheader}</h2>
+          {/* <h2 className="text-2xl md:text-3xl font-bold">{eventSubheader}</h2> */}
         </div>
         <div className="flex flex-col md:grid md:grid-flow-col md:grid-cols-3 md:grid-rows-1 md:gap-10">
           <div className="grid grid-flow-row grid-cols-5 gap-4 mb-10">
@@ -42,12 +42,12 @@ export const EventHighlight = ({
             })}
           </div>
           <div>
-            <p>{eventDescriptonColOne}</p>
+            <p>{eventDescription}</p>
           </div>
           <div>
-            <p>{eventDescriptonColTwo}</p>
+            <p>{eventDescription}</p>
             <a
-              href={eventReadMoreLink}
+              href={`/${eventSlug}`}
               className="text-red-500 flex font-bold hover:opacity-50 mt-5 items-center"
               style={{ width: "fit-content" }}
             >

@@ -21,20 +21,7 @@ ourStoryItems:
     text: speakers
   - boldText: "1"
     text: marriage proposal on stage
-eventHiglightImage: images/uploads/desktop.jpg
-eventHeader: TEDxWarsaw 2020
-eventSubheader: Dare
-eventPartnersProfilesUrls: 
-  - images/uploads/woman.jpg
-  - images/uploads/woman.jpg
-  - images/uploads/woman.jpg
-  - images/uploads/woman.jpg
-  - images/uploads/woman.jpg
-  - images/uploads/woman.jpg
-
-eventDescriptonColOne: In today's World challenges are now coming at us constantly, and from every direction. To deal with them in the time-honoured way of "wait and see" is no longer a viable option. Solutions to housing problems, social inequality, cultural
-eventDescriptonColTwo: tensions and environmental pollution are only going to be found if we dare to face the problems, instead of waiting for someone to figure out the way forward. To lead is to dare, to hope is to dare. To solve problems is to dare.
-eventReadMoreLink: /2020
+eventSlug: "2020"
 youtubeBannerHeading: We have <b>2mln+</b> views on YouTube
 youtubeBannerLinkText: Watch all talks
 youtubeBannerLinkUrl: www.youtube.com
