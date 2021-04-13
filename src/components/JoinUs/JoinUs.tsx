@@ -29,9 +29,9 @@ export const JoinUs = ({
   joinUsBecomeSpeakerLink,
 }: JoinUsProps) => (
   <div className=" bg-customLightGrey main-grid-full-span">
-    <div className="flex join-us-section-content">
+    <div className="flex flex-col-reverse md:flex-row join-us-section-content">
       <div className="flex items-center join-us-section-left">
-        <div className="pr-20">
+        <div className="pr-20 py-10">
           <h2 className="text-2xl md:text-3xl">{joinUsTitle}</h2>
           <p className="my-5">{joinUsSubtitle}</p>
           <a
