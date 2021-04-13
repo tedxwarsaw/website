@@ -10,6 +10,7 @@ export interface PartnersProps {
   joinOurPartnersText: string;
   joinOurPartnersLink: string;
   partnerLogos: FixedObject[];
+  partnerLogosDesktop: FixedObject[];
 }
 
 export const Partners = ({
@@ -19,13 +20,14 @@ export const Partners = ({
   joinOurPartnersText,
   joinOurPartnersLink,
   partnerLogos,
+  partnerLogosDesktop,
 }: PartnersProps) => (
   <div className="py-20 space-y-6">
     <div className="flex justify-between pb-6">
       <h2 className="font-medium text-2xl md:text-3xl">
         {partnerSectionTitle}
       </h2>
-      <div className="flex items-center">
+      <div className="flex items-center hidden md:flex">
         <a
           href={getToKnowOurPartnersLink}
           className="text-customRed flex hover:opacity-50 items-center"
@@ -41,10 +43,39 @@ export const Partners = ({
       </div>
     </div>
 
-    <div className="flex flex-wrap justify-between space-y-2">
+    <div className="flex flex-wrap justify-between space-y-2 md:hidden">
       {partnerLogos.map((fixed, idx) => (
-        <Img key={idx} fixed={fixed} alt="Partner logo" />
+        <Img
+          key={idx}
+          fixed={fixed}
+          alt="Partner logo"
+          className="partner-logo-image"
+        />
       ))}
+    </div>
+    <div className="flex flex-wrap justify-between space-y-2 hidden md:block">
+      {partnerLogosDesktop.map((fixed, idx) => (
+        <Img
+          key={idx}
+          fixed={fixed}
+          alt="Partner logo"
+          className="partner-logo-image"
+        />
+      ))}
+    </div>
+    <div className="flex flex-col items-start md:hidden">
+      <a href={joinOurPartnersLink} target="_blank" rel="noopener noreferrer">
+        <Button className="my-5">{joinOurPartnersText}</Button>
+      </a>
+      <a
+        href={getToKnowOurPartnersLink}
+        className="text-customRed flex hover:opacity-50 items-center"
+        style={{ width: "fit-content" }}
+      >
+        <span className="my-2 flex items-center">
+          {getToKnowOurPartnersText} <FaArrowRight className="ml-6 " />
+        </span>
+      </a>
     </div>
   </div>
 );
