@@ -34,6 +34,16 @@ export const pageQuery = `#graphql
       youtubeBannerLinkText
       youtubeBannerLinkUrl
       eventSlug
+      joinUsTitle
+      joinUsSubtitle
+      joinUsImagePath
+      joinUsImageDesktopPath
+      joinUsVolonteerText
+      joinUsVolonteerLink
+      joinUsGetToKnowOurTeemText
+      joinUsGetToKnowOurTeemLink
+      joinUsBecomeSpeakerText
+      joinUsBecomeSpeakerLink
     }
   }
 `;
@@ -243,6 +253,19 @@ export const queryForProps = async (
     })
   );
 
+  const joinUsImage = await getFluidImage({
+    graphql,
+    path: pagesYaml.joinUsImagePath,
+    quality: 90,
+    sizes: "(max:-width: 768px)",
+  });
+  const joinUsImageDesktop = await getFluidImage({
+    graphql,
+    path: pagesYaml.joinUsImageDesktopPath,
+    quality: 90,
+    sizes: "(max:-width: 2000px)",
+  });
+
   return {
     ...pagesYaml,
     heroBackgroundImage,
@@ -253,5 +276,7 @@ export const queryForProps = async (
     eventHiglightImageDesktop,
     eventSpeakerPhotos,
     recommendations,
+    joinUsImage,
+    joinUsImageDesktop,
   };
 };
