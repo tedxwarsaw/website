@@ -94,6 +94,16 @@ collections:
           - label: Join us section subtitle
             name: joinUsSubtitle
             widget: string
+          - label: "Join us section image"
+            name: "joinUsImage"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Join us section image desktop"
+            name: "joinUsImageDesktop"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
           - label: Join us volunteer link text
             name: joinUsVolonteerText
             widget: string

@@ -38,6 +38,8 @@ youtubeBannerLinkText: Watch all talks
 youtubeBannerLinkUrl: www.youtube.com
 joinUsTitle: "Join TEXx Warsaw."
 joinUsSubtitle: "Become our volunteer"
+joinUsImage: "images/uploads/joinus.png"
+joinUsImageDesktop: "images/uploads/joinus.png"
 joinUsVolonteerText: "Get involved as a volonteer"
 joinUsVolonteerLink: "/about"
 joinUsGetToKnowOurTeemText: "Get to know our team"
