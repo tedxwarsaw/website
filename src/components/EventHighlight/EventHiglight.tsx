@@ -3,6 +3,7 @@ import Img from "gatsby-image";
 import { EventHighlightProps } from "./EventHighlight.types";
 import { FaArrowRight } from "react-icons/fa";
 import "./EventHighlight.styles.css";
+import { splitTextInTwo } from "@/utils";
 
 export const EventHighlight = ({
   eventHiglightImage,
@@ -13,12 +14,18 @@ export const EventHighlight = ({
   eventSlug,
 }: EventHighlightProps) => {
   console.log(eventHiglightImage);
+  const descrtiptionSplit = splitTextInTwo(eventDescription);
   return (
     <div className="pb-10 main-grid-mobile-full-span">
       <div style={{ height: "fit-content" }}>
         <Img
-          className="w-full z-0"
+          className="w-full z-0 md:hidden"
           fluid={eventHiglightImage}
+          alt="Event highlight background"
+        />
+        <Img
+          className="w-full z-0 hidden md:block"
+          fluid={eventHiglightImageDesktop}
           alt="Event highlight background"
         />
       </div>
@@ -42,12 +49,12 @@ export const EventHighlight = ({
             })}
           </div>
           <div>
-            <p>{eventDescription}</p>
+            <p>{descrtiptionSplit[0]}</p>
           </div>
           <div>
-            <p>{eventDescription}</p>
+            <p>{descrtiptionSplit[1]}</p>
             <a
-              href={`/${eventSlug}`}
+              href={`/event/${eventSlug}`}
               className="text-red-500 flex font-bold hover:opacity-50 mt-5 items-center"
               style={{ width: "fit-content" }}
             >
