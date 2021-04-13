@@ -1,0 +1,9 @@
+collectionId: talk
+slug: "open-your-eyes"
+displayName: "Open your eyes, open your mind"
+speaker: "Magdalena Król"
+eventSlug: "TEDxWarsaw 2019"
+cover:
+  image:
+    desktop: talks/open-your-eyes/coverPhotos/talk-cover.jpg
+    mobile: talks/open-your-eyes/coverPhotos/talk-cover.jpg
