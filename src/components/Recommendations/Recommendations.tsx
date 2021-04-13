@@ -22,7 +22,6 @@ export const Recommendations = ({ recommendations }: RecommendationsProps) => {
     slider,
     currentSlide,
   } = useRecommendations(numberOfSlides);
-  console.log(recommendations);
   return (
     <div className="my-10 main-grid-full-span recommendations-container">
       <h2 className="text-2xl md:text-3xl font-bold w-32">

@@ -13,7 +13,6 @@ export const EventHighlight = ({
   eventDescription,
   eventSlug,
 }: EventHighlightProps) => {
-  console.log(eventHiglightImage);
   const descrtiptionSplit = splitTextInTwo(eventDescription);
   return (
     <div className="pb-10 main-grid-mobile-full-span">
@@ -37,7 +36,6 @@ export const EventHighlight = ({
         <div className="flex flex-col md:grid md:grid-flow-col md:grid-cols-3 md:grid-rows-1 md:gap-10">
           <div className="grid grid-flow-row grid-cols-5 gap-4 mb-10">
             {eventSpeakerPhotos.map((profileImage, index) => {
-              console.log(profileImage);
               return (
                 <Img
                   className="rounded-full max-h-0.5 partners-profile-images"
