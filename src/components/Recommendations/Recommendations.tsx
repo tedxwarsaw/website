@@ -22,7 +22,7 @@ export const Recommendations = ({ recommendations }: RecommendationsProps) => {
   } = useRecommendations(numberOfSlides);
   return (
     <div className="my-10 main-grid-full-span recommendations-container">
-      <h2 className="text-2xl md:text-3xl font-bold w-32">
+      <h2 className="font-medium text-2xl md:text-3xl font-bold w-32">
         TEDxWarsaw Recommends
       </h2>
       <div className="slider-wrapper max-w-full mt-10 relative">

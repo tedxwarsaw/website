@@ -1,5 +1,7 @@
 import React from "react";
 import Img, { FixedObject } from "gatsby-image";
+import { Button } from "@/components/shared/Button";
+import { FaArrowRight } from "react-icons/fa";
 
 export interface PartnersProps {
   partnerSectionTitle: string;
@@ -19,7 +21,26 @@ export const Partners = ({
   partnerLogos,
 }: PartnersProps) => (
   <div className="py-20 space-y-6">
-    <div className="font-medium text-3xl pb-6">Event partners</div>
+    <div className="flex justify-between pb-6">
+      <h2 className="font-medium text-2xl md:text-3xl">
+        {partnerSectionTitle}
+      </h2>
+      <div className="flex items-center">
+        <a
+          href={getToKnowOurPartnersLink}
+          className="text-customRed flex hover:opacity-50 items-center"
+          style={{ width: "fit-content" }}
+        >
+          <span className="my-auto flex items-center">
+            {getToKnowOurPartnersText} <FaArrowRight className="ml-6 " />
+          </span>
+        </a>
+        <a href={joinOurPartnersLink} target="_blank" rel="noopener noreferrer">
+          <Button className="ml-5">{joinOurPartnersText}</Button>
+        </a>
+      </div>
+    </div>
+
     <div className="flex flex-wrap justify-between space-y-2">
       {partnerLogos.map((fixed, idx) => (
         <Img key={idx} fixed={fixed} alt="Partner logo" />
