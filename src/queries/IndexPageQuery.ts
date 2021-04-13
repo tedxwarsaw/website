@@ -228,7 +228,8 @@ export const queryForProps = async (
     item: {};
     order: number;
   }[] = await queryRecommendationsData();
-  console.log(recommendations.sort((a, b) => a.order - b.order));
+
+  recommendations.sort((a, b) => a.order - b.order);
 
   const eventSpeakerPhotos: any = await Promise.all(
     event.speakerPhotoPaths.map(async (path) => {
