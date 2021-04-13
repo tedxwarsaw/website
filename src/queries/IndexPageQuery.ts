@@ -23,13 +23,25 @@ export const pageQuery = `#graphql
       youtubeBannerHeading
       youtubeBannerLinkText
       youtubeBannerLinkUrl
-      eventHiglightImage
-      eventHeader
-      eventSubheader
-      eventPartnersProfilesUrls
-      eventDescriptonColOne
-      eventDescriptonColTwo
-      eventReadMoreLink
+      eventSlug
+    }
+  }
+`;
+
+const eventQuery = `#graphql
+  query EventQuery(
+    $eventSlug: String
+  ) {
+    event: eventsYaml(slug: {eq: $eventSlug}) {
+      displayName
+      description
+      cover {
+        image {
+          desktop
+          mobile
+        }
+      }
+      organizersProfilePaths
     }
   }
 `;
@@ -40,6 +52,12 @@ export const queryForProps = async (
   const {
     data: { pagesYaml },
   } = await graphql(pageQuery);
+
+  const {
+    data: { event },
+  } = await graphql(eventQuery, {
+    eventSlug: pagesYaml.eventSlug,
+  });
 
   const heroBackgroundImage = await getFluidImage({
     graphql,
@@ -57,12 +75,19 @@ export const queryForProps = async (
 
   const eventHiglightImage = await getFluidImage({
     graphql,
-    path: pagesYaml.eventHiglightImage,
+    path: event.cover.image.mobile,
     quality: 90,
+    sizes: "(max:-width: 768px)",
+  });
+  const eventHiglightImageDesktop = await getFluidImage({
+    graphql,
+    path: event.cover.image.desktop,
+    quality: 90,
+    sizes: "(max:-width: 2000px)",
   });
 
   const eventPartnersProfiles: any = await Promise.all(
-    pagesYaml.eventPartnersProfilesUrls.map(async (path) => {
+    event.organizersProfilePaths.map(async (path) => {
       const image = await getFixedImage({
         graphql,
         path: path,
@@ -77,7 +102,10 @@ export const queryForProps = async (
     ...pagesYaml,
     heroBackgroundImage,
     heroBackgroundImageDesktop,
+    eventHeader: event.displayName,
+    eventDescription: event.description,
     eventHiglightImage,
+    eventHiglightImageDesktop,
     eventPartnersProfiles,
   };
 };
