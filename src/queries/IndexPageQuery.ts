@@ -43,6 +43,7 @@ const eventQuery = `#graphql
     $eventSlug: String
   ) {
     event: eventsYaml(slug: {eq: $eventSlug}) {
+      slug
       displayName
       description
       cover {
@@ -52,6 +53,7 @@ const eventQuery = `#graphql
         }
       }
       speakerPhotoPaths
+      date
     }
   }
 `;
@@ -61,6 +63,7 @@ query TalkQuery(
   $talkSlug: String
 ) {
   talk: talksYaml(slug: {eq: $talkSlug}) {
+    slug
     displayName
     speaker
     eventSlug
@@ -248,5 +251,6 @@ export const queryForProps = async (
     eventHiglightImage,
     eventHiglightImageDesktop,
     eventSpeakerPhotos,
+    recommendations,
   };
 };

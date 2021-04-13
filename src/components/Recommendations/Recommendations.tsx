@@ -9,35 +9,9 @@ import "keen-slider/keen-slider.min.css";
 import "./Recommendations.styled.css";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import { useRecommendations } from "./Recommendations.hooks";
+import { RecommendationsProps } from "./Recommendations.types";
 
-const recommendations = [
-  {
-    category: "event",
-    thumbnailImage: eventCover,
-    title: "TedxWarsaw Live",
-    eventDate: "22.12.2020",
-    attendLink: "/",
-    learnMoreLink: "/",
-  },
-  {
-    category: "talk",
-    thumbnailImage: talkCover,
-    speaker: "Agnieszka Trzeszczak",
-    title: "Baby do garów - czy do muzyki trzeba się nadawać",
-    talkEventName: "TEDxWarsaw 2019",
-    duration: "13.45",
-  },
-  {
-    category: "talk",
-    thumbnailImage: talkCover,
-    speaker: "Magdalena Król",
-    title: "baby do garów - czy do muzyki trzeba się nadawać",
-    talkEventName: "TEDxWarsaw 2018",
-    duration: "13.45",
-  },
-];
-
-export const Recommendations = () => {
+export const Recommendations = ({ recommendations }: RecommendationsProps) => {
   const numberOfSlides = 4;
   const {
     sliderRef,
@@ -48,7 +22,7 @@ export const Recommendations = () => {
     slider,
     currentSlide,
   } = useRecommendations(numberOfSlides);
-
+  console.log(recommendations);
   return (
     <div className="my-10 main-grid-full-span recommendations-container">
       <h2 className="text-2xl md:text-3xl font-bold w-32">
@@ -72,47 +46,25 @@ export const Recommendations = () => {
           </div>
         )}
         <div ref={sliderRef} className="keen-slider ">
-          <div className="keen-slider__slide">
-            <RecommendationCard
-              type={RecommendationCardTypes.EVENT}
-              thumbnailImage={recommendations[0].thumbnailImage}
-              title={recommendations[0].title}
-              eventDate={recommendations[0].eventDate}
-              attendLink={recommendations[0].attendLink}
-              learnMoreLink={recommendations[0].learnMoreLink}
-              talkEventName={recommendations[1].talkEventName}
-            />
-          </div>
-          <div className="keen-slider__slide ">
-            <RecommendationCard
-              type={RecommendationCardTypes.TALK}
-              thumbnailImage={recommendations[1].thumbnailImage}
-              speaker={recommendations[1].speaker}
-              title={recommendations[1].title}
-              talkEventName={recommendations[1].talkEventName}
-              duration={recommendations[1].duration}
-            />
-          </div>
-          <div className="keen-slider__slide ">
-            <RecommendationCard
-              type={RecommendationCardTypes.TALK}
-              thumbnailImage={recommendations[1].thumbnailImage}
-              speaker={recommendations[1].speaker}
-              title={recommendations[1].title}
-              talkEventName={recommendations[1].talkEventName}
-              duration={recommendations[1].duration}
-            />
-          </div>
-          <div className="keen-slider__slide">
-            <RecommendationCard
-              type={RecommendationCardTypes.TALK}
-              thumbnailImage={recommendations[1].thumbnailImage}
-              speaker={recommendations[1].speaker}
-              title={recommendations[1].title}
-              talkEventName={recommendations[1].talkEventName}
-              duration={recommendations[1].duration}
-            />
-          </div>
+          {recommendations.map(({ item }) => (
+            <div className="keen-slider__slide">
+              <RecommendationCard
+                type={
+                  item?.speaker
+                    ? RecommendationCardTypes.TALK
+                    : RecommendationCardTypes.EVENT
+                }
+                cover={item.cover}
+                coverDesktop={item.coverDesktop}
+                displayName={item.displayName}
+                speaker={item.speaker}
+                eventName={item.eventName}
+                duration={item.duration}
+                eventSlug={item.eventSlug}
+                date={item.date}
+              />
+            </div>
+          ))}
         </div>
       </div>
 

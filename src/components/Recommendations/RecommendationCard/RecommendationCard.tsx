@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/shared/Button";
 import { FaArrowRight } from "react-icons/fa";
+import Img, { FluidObject } from "gatsby-image";
 
 export enum RecommendationCardTypes {
   EVENT = "EVENT",
@@ -9,30 +10,42 @@ export enum RecommendationCardTypes {
 
 interface RecommendationCardProps {
   type: RecommendationCardTypes;
-  thumbnailImage: string;
-  title: string;
+  cover: FluidObject;
+  coverDesktop: FluidObject;
+  displayName: string;
   speaker?: string;
-  talkEventName?: string;
+  eventName?: string;
+  eventSlug?: string;
   duration?: string;
-  eventDate?: string;
+  date?: string;
   attendLink?: string;
   learnMoreLink?: string;
 }
 
 export const RecommendationCard = ({
   type,
-  thumbnailImage,
+  cover,
+  coverDesktop,
   speaker,
-  title,
-  talkEventName,
+  displayName,
+  eventName,
   duration,
-  eventDate,
+  date,
   attendLink,
   learnMoreLink,
 }: RecommendationCardProps) => (
   <div className="p-2 relative border-b-4 border-customTransparent  hover:border-customRed">
     <div className="relative">
-      <img src={thumbnailImage} alt="Talk thumnail image" className="w-full" />
+      <Img
+        className="w-full h-full md:hidden"
+        fluid={cover}
+        alt="Slider item image"
+      />
+      <Img
+        className="w-full h-full hidden md:block"
+        fluid={coverDesktop}
+        alt="Slider item image"
+      />
       {type === RecommendationCardTypes.TALK && (
         <span className="absolute right-2 bottom-2 bg-customDarkGrey text-white font-light text-xs px-2">
           {duration}
@@ -61,13 +74,13 @@ export const RecommendationCard = ({
         <h3
           className={type === RecommendationCardTypes.TALK ? "font-bold" : ""}
         >
-          {title}
+          {displayName}
         </h3>
       </div>
-      {type === RecommendationCardTypes.EVENT && <p>{eventDate}</p>}
+      {type === RecommendationCardTypes.EVENT && <p>{date}</p>}
     </div>
     {type === RecommendationCardTypes.TALK && (
-      <p className="pb-3">{talkEventName}</p>
+      <p className="pb-3">{eventName}</p>
     )}
 
     {type === RecommendationCardTypes.EVENT && (
