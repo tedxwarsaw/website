@@ -36,8 +36,8 @@ export const RecommendationCard = ({
   attendLink,
   learnMoreLink,
 }: RecommendationCardProps) => (
-  <div className="p-2 relative border-b-4 border-customTransparent  hover:border-customRed">
-    <div className="relative">
+  <div className="p-2 relative border-b-4 border-customTransparent  hover:border-customRed h-full flex flex-col">
+    <div className="relative flex-grow">
       <a
         href={
           type === RecommendationCardTypes.EVENT
