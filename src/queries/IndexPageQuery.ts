@@ -25,8 +25,8 @@ export const pageQuery = `#graphql
   }
 `;
 
-const secondQuery = `#graphql
-  query SecondEvent(
+const eventQuery = `#graphql
+  query EventQuery(
     $eventSlug: String
   ) {
     event: eventsYaml(slug: {eq: $eventSlug}) {
@@ -52,7 +52,7 @@ export const queryForProps = async (
 
   const {
     data: { event },
-  } = await graphql(secondQuery, {
+  } = await graphql(eventQuery, {
     eventSlug: pagesYaml.eventSlug,
   });
 
@@ -70,7 +70,6 @@ export const queryForProps = async (
     sizes: "(max:-width: 2000px)",
   });
 
-  console.log(event.cover.image.mobile);
   const eventHiglightImage = await getFluidImage({
     graphql,
     path: event.cover.image.mobile,
@@ -84,10 +83,8 @@ export const queryForProps = async (
     sizes: "(max:-width: 2000px)",
   });
 
-  console.log(event.organizersProfilePaths);
   const eventPartnersProfiles: any = await Promise.all(
     event.organizersProfilePaths.map(async (path) => {
-      console.log(path);
       const image = await getFixedImage({
         graphql,
         path: path,
