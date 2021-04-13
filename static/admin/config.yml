@@ -88,6 +88,30 @@ collections:
           - label: Youtube banner button link
             name: youtubeBannerLinkUrl
             widget: string
+          - label: Join us section title
+            name: joinUsTitle
+            widget: string
+          - label: Join us section subtitle
+            name: joinUsSubtitle
+            widget: string
+          - label: Join us volunteer link text
+            name: joinUsVolonteerText
+            widget: string
+          - label: Join us volunteer link
+            name: joinUsVolonteerLink
+            widget: string
+          - label: Get to know our team link text
+            name: joinUsGetToKnowOurTeemText
+            widget: string
+          - label: Get to know our team link
+            name: joinUsGetToKnowOurTeemLink
+            widget: string
+          - label: Become speaker link text
+            name: joinUsBecomeSpeakerText
+            widget: string
+          - label: Become speaker link
+            name: joinUsBecomeSpeakerLink
+            widget: string            
   - label: "Global"
     name: "global"
     files:
