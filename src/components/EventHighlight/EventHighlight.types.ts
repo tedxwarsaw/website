@@ -2,10 +2,9 @@ import { FluidObject, FixedObject } from "gatsby-image";
 
 export interface EventHighlightProps {
   eventHiglightImage: FluidObject;
+  eventHiglightImageDesktop: FluidObject;
   eventHeader: string;
-  eventSubheader: string;
   eventPartnersProfiles: FixedObject[];
-  eventDescriptonColOne: string;
-  eventDescriptonColTwo: string;
-  eventReadMoreLink: string;
+  eventDescription: string;
+  eventSlug: string;
 }

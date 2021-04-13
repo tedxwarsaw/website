@@ -37,17 +37,17 @@ export const IndexPageTemplate = (props: Props) => (
     />
     <EventHighlight
       eventHiglightImage={props.eventHiglightImage}
+      eventHiglightImageDesktop={props.eventHiglightImageDesktop}
       eventHeader={props.eventHeader}
-      eventSubheader={props.eventSubheader}
       eventPartnersProfiles={props.eventPartnersProfiles}
-      eventDescriptonColOne={props.eventDescriptonColOne}
-      eventDescriptonColTwo={props.eventDescriptonColTwo}
-      eventReadMoreLink={props.eventReadMoreLink}
+      eventDescription={props.eventDescription}
+      eventSlug={props.eventSlug}
     />
   </Page>
 );
 
 const IndexPage = ({ pageContext }) => {
+  console.log(pageContext);
   return <IndexPageTemplate {...pageContext.props} />;
 };
 

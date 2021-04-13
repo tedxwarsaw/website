@@ -54,32 +54,13 @@ collections:
             fields: 
               - { label: "Bold text", name: "boldText", widget: "string"}
               - { label: "Text", name: "text", widget: "string"}
-          - label: Event eventHiglightImage 
-            name: eventHiglightImage
-            widget: string
-          - label: Event header
-            name: eventHeader
-            widget: string
-          - label: Event subheader
-            name: eventSubheader
-            widget: string
-          - label: Event partners profile images
-            name: eventPartnersProfilesUrls
-            widget: image
-            allow_multiple: true
-            media_folder: "photos"
-            media_library:
-                config:
-                  multiple: true
-          - label: Event description column 1
-            name: eventDescriptonColOne
-            widget: string
-          - label: Event description column 2
-            name: eventDescriptonColTwo
-            widget: string
-          - label: Event read more link path
-            name: eventReadMoreLink
-            widget: string
+          - name: eventSlug
+            label: Event
+            widget: relation
+            collection: events
+            value_field: slug
+            display_fields: ["displayName"]
+            search_fields: ["displayName", "slug"]
           - label: Youtube banner heading
             name: youtubeBannerHeading
             hint: "This field supports HTML syntax"
@@ -373,6 +354,14 @@ collections:
         widget: image
         allow_multiple: true
         media_folder: "{{slug}}/partnerLogos"
+        media_library:
+          config:
+            organizersProfilePaths: true
+      - name: organizersProfilePaths
+        label: Organizer profiles
+        widget: image
+        allow_multiple: true
+        media_folder: "{{slug}}/organizerProfiles"
         media_library:
           config:
             multiple: true
