@@ -121,7 +121,32 @@ collections:
             widget: string
           - label: Become speaker link
             name: joinUsBecomeSpeakerLink
-            widget: string            
+            widget: string
+
+
+          - label: Partner section title
+            name: partnerSectionTitle
+            widget: string
+          - label: Get to know our partners link text
+            name: getToKnowOurPartnersText
+            widget: string
+          - label: Get to know our partners link
+            name: getToKnowOurPartnersLink
+            widget: string
+          - label: Join our partners link text
+            name: joinOurPartnersText
+            widget: string
+          - label: Join our partners link
+            name: joinOurPartnersLink
+            widget: string
+          - name: partnerLogoPaths
+            label: Partner Logos
+            widget: image
+            allow_multiple: true
+            media_folder: "photos/partnerLogos"
+            media_library:
+              config:
+                multiple: true
   - label: "Global"
     name: "global"
     files:

@@ -46,3 +46,26 @@ joinUsGetToKnowOurTeemText: "Get to know our team"
 joinUsGetToKnowOurTeemLink: "/about"
 joinUsBecomeSpeakerText: "Become TEDx Speaker"
 joinUsBecomeSpeakerLink: "/about"
+partnerSectionTitle: "Our partners"
+getToKnowOurPartnersText: "Get to know our partners"
+getToKnowOurPartnersLink: "/join"
+joinOurPartnersText: "Join our partners"
+joinOurPartnersLink: "/join"
+partnerLogoPaths:
+  - events/2020/partnerLogos/logo-1.png
+  - events/2020/partnerLogos/logo-2.png
+  - events/2020/partnerLogos/logo-3.png
+  - events/2020/partnerLogos/logo-4.png
+  - events/2020/partnerLogos/logo-5.png
+  - events/2020/partnerLogos/logo-6.png
+  - events/2020/partnerLogos/logo-7.png
+  - events/2020/partnerLogos/logo-8.png
+  - events/2020/partnerLogos/logo-9.png
+  - events/2020/partnerLogos/logo-10.png
+  - events/2020/partnerLogos/logo-11.png
+  - events/2020/partnerLogos/logo-12.png
+  - events/2020/partnerLogos/logo-13.png
+  - events/2020/partnerLogos/logo-14.png
+  - events/2020/partnerLogos/logo-15.png
+  - events/2020/partnerLogos/logo-16.png
+  - events/2020/partnerLogos/logo-17.png
