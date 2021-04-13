@@ -12,6 +12,7 @@ import {
   EventHighlightProps,
 } from "@/components/EventHighlight";
 import { JoinUs, JoinUsProps } from "@/components/JoinUs";
+import { Partners, PartnersProps } from "@/components/shared/Partners";
 
 export interface Props
   extends HeroSectionProps,
@@ -19,7 +20,8 @@ export interface Props
     RecommendationsProps,
     YoutubeBannerProps,
     EventHighlightProps,
-    JoinUsProps {}
+    JoinUsProps,
+    PartnersProps {}
 
 export const IndexPageTemplate = (props: Props) => (
   <Page>
@@ -62,6 +64,14 @@ export const IndexPageTemplate = (props: Props) => (
       joinUsGetToKnowOurTeemLink={props.joinUsGetToKnowOurTeemLink}
       joinUsBecomeSpeakerText={props.joinUsBecomeSpeakerText}
       joinUsBecomeSpeakerLink={props.joinUsBecomeSpeakerLink}
+    />
+    <Partners
+      partnerSectionTitle={props.partnerSectionTitle}
+      getToKnowOurPartnersText={props.getToKnowOurPartnersText}
+      getToKnowOurPartnersLink={props.getToKnowOurPartnersLink}
+      joinOurPartnersText={props.joinOurPartnersText}
+      joinOurPartnersLink={props.joinOurPartnersLink}
+      partnerLogos={props.partnerLogos}
     />
   </Page>
 );
