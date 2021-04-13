@@ -4,7 +4,7 @@ export interface EventHighlightProps {
   eventHiglightImage: FluidObject;
   eventHiglightImageDesktop: FluidObject;
   eventHeader: string;
-  eventPartnersProfiles: FixedObject[];
+  eventSpeakerPhotos: FixedObject[];
   eventDescription: string;
   eventSlug: string;
 }

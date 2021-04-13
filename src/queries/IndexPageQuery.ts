@@ -41,7 +41,7 @@ const eventQuery = `#graphql
           mobile
         }
       }
-      organizersProfilePaths
+      speakerPhotoPaths
     }
   }
 `;
@@ -86,8 +86,8 @@ export const queryForProps = async (
     sizes: "(max:-width: 2000px)",
   });
 
-  const eventPartnersProfiles: any = await Promise.all(
-    event.organizersProfilePaths.map(async (path) => {
+  const eventSpeakerPhotos: any = await Promise.all(
+    event.speakerPhotoPaths.map(async (path) => {
       const image = await getFixedImage({
         graphql,
         path: path,
@@ -106,6 +106,6 @@ export const queryForProps = async (
     eventDescription: event.description,
     eventHiglightImage,
     eventHiglightImageDesktop,
-    eventPartnersProfiles,
+    eventSpeakerPhotos,
   };
 };

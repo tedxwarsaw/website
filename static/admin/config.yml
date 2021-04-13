@@ -357,11 +357,11 @@ collections:
         media_library:
           config:
             multiple: true
-      - name: organizersProfilePaths
-        label: Organizer profiles
+      - name: speakerPhotoPaths
+        label: Speaker photos
         widget: image
         allow_multiple: true
-        media_folder: "{{slug}}/organizerProfiles"
+        media_folder: "{{slug}}/speakerPhotos"
         media_library:
           config:
             multiple: true

@@ -52,11 +52,11 @@ partnerLogoPaths:
   - events/2020/partnerLogos/logo-15.png
   - events/2020/partnerLogos/logo-16.png
   - events/2020/partnerLogos/logo-17.png
-organizersProfilePaths:
-  - events/2020/organizerProfiles/woman.jpg
-  - events/2020/organizerProfiles/woman.jpg
-  - events/2020/organizerProfiles/woman.jpg
-  - events/2020/organizerProfiles/woman.jpg
-  - events/2020/organizerProfiles/woman.jpg
-  - events/2020/organizerProfiles/woman.jpg
-  - events/2020/organizerProfiles/woman.jpg
+speakerPhotoPaths:
+  - events/2020/speakerPhotos/woman.jpg
+  - events/2020/speakerPhotos/woman.jpg
+  - events/2020/speakerPhotos/woman.jpg
+  - events/2020/speakerPhotos/woman.jpg
+  - events/2020/speakerPhotos/woman.jpg
+  - events/2020/speakerPhotos/woman.jpg
+  - events/2020/speakerPhotos/woman.jpg
