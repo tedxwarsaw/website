@@ -24,10 +24,10 @@ ourStoryItems:
 recommendations: 
   events:
     - eventSlug: "2020"
-      order: 1
+      order: 2
   talks:
     - talkSlug: "baby-do-garow"
-      order: 2
+      order: 1
     - talkSlug: "open-your-eyes"
       order: 3
     - talkSlug: "test-talk"
