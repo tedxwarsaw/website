@@ -54,6 +54,23 @@ collections:
             fields: 
               - { label: "Bold text", name: "boldText", widget: "string"}
               - { label: "Text", name: "text", widget: "string"}
+          - name: recommendations
+            label: "Recommendations"
+            widget: object
+            hint: "Events and talks that will be shown in the recommendations slider"
+            fields: 
+              - name: "events"
+                label: "Events"
+                widget: list
+                fields: 
+                  - { label: "Event", name: "eventSlug", widget: "relation", collection: events, value_field: "slug", display_fields: ["displayName"], search_fields: ["displayName", "slug"]}
+                  - { label: "Order", name: "order", widget: number, hint: "Order number in which this item will be displayed on the slider"}
+              - name: "talks"
+                label: "Talks"
+                widget: list
+                fields: 
+                  - { label: "Talk", name: "talkSlug", widget: "relation", collection: talks, value_field: "slug", display_fields: ["displayName"], search_fields: ["displayName", "slug"]}
+                  - { label: "Order", name: "order", widget: number, hint: "Order number in which this item will be displayed on the slider"}
           - name: eventSlug
             label: Event
             widget: relation

@@ -28,8 +28,8 @@ export const pageQuery = `#graphql
   }
 `;
 
-const eventQuery = `#graphql
-  query EventQuery(
+const eventHighlightQuery = `#graphql
+  query EventHighlightQuery(
     $eventSlug: String
   ) {
     event: eventsYaml(slug: {eq: $eventSlug}) {
@@ -55,7 +55,7 @@ export const queryForProps = async (
 
   const {
     data: { event },
-  } = await graphql(eventQuery, {
+  } = await graphql(eventHighlightQuery, {
     eventSlug: pagesYaml.eventSlug,
   });
 

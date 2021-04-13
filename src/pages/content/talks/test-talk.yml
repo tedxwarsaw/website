@@ -2,7 +2,7 @@ collectionId: talk
 slug: "test"
 displayName: "Test talk - to be removed"
 speaker: "Agnieszka Trzeszczak"
-organization: "TEDxWarsaw 2019"
+eventSlug: "2020"
 cover:
   image:
     desktop: talks/test-talk/coverPhotos/talk-cover.jpg

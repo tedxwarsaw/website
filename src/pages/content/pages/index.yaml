@@ -21,6 +21,17 @@ ourStoryItems:
     text: speakers
   - boldText: "1"
     text: marriage proposal on stage
+recommendations: 
+  events:
+    - eventSlug: "2020"
+      order: 1
+  talks:
+    - talkSlug: "baby-do-garow"
+      order: 2
+    - talkSlug: "open-your-eyes"
+      order: 3
+    - talkSlug: "test-talk"
+      order: 4
 eventSlug: "2020"
 youtubeBannerHeading: We have <b>2mln+</b> views on YouTube
 youtubeBannerLinkText: Watch all talks
