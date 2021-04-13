@@ -357,7 +357,7 @@ collections:
         media_library:
           config:
             organizersProfilePaths: true
-      - name: partnerLogoPaths
+      - name: organizersProfilePaths
         label: Organizer profiles
         widget: image
         allow_multiple: true
