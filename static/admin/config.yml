@@ -356,7 +356,7 @@ collections:
         media_folder: "{{slug}}/partnerLogos"
         media_library:
           config:
-            organizersProfilePaths: true
+            multiple: true
       - name: organizersProfilePaths
         label: Organizer profiles
         widget: image
