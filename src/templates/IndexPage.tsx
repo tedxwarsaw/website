@@ -11,13 +11,15 @@ import {
   EventHighlight,
   EventHighlightProps,
 } from "@/components/EventHighlight";
+import { JoinUs, JoinUsProps } from "@/components/JoinUs";
 
 export interface Props
   extends HeroSectionProps,
     OurStoryProps,
     RecommendationsProps,
     YoutubeBannerProps,
-    EventHighlightProps {}
+    EventHighlightProps,
+    JoinUsProps {}
 
 export const IndexPageTemplate = (props: Props) => (
   <Page>
@@ -48,6 +50,18 @@ export const IndexPageTemplate = (props: Props) => (
       eventSpeakerPhotos={props.eventSpeakerPhotos}
       eventDescription={props.eventDescription}
       eventSlug={props.eventSlug}
+    />
+    <JoinUs
+      joinUsTitle={props.joinUsTitle}
+      joinUsSubtitle={props.joinUsSubtitle}
+      joinUsImage={props.joinUsImage}
+      joinUsImageDesktop={props.joinUsImageDesktop}
+      joinUsVolonteerText={props.joinUsVolonteerText}
+      joinUsVolonteerLink={props.joinUsVolonteerLink}
+      joinUsGetToKnowOurTeemText={props.joinUsGetToKnowOurTeemText}
+      joinUsGetToKnowOurTeemLink={props.joinUsGetToKnowOurTeemLink}
+      joinUsBecomeSpeakerText={props.joinUsBecomeSpeakerText}
+      joinUsBecomeSpeakerLink={props.joinUsBecomeSpeakerLink}
     />
   </Page>
 );

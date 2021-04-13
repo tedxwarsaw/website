@@ -1,7 +1,7 @@
 import { FluidObject } from "gatsby-image";
 import React from "react";
 
-interface JoinUsProps {
+export interface JoinUsProps {
   joinUsTitle: string;
   joinUsSubtitle: string;
   joinUsImage: FluidObject;
