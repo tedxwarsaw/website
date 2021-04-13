@@ -54,6 +54,7 @@ export const Recommendations = ({ recommendations }: RecommendationsProps) => {
                     ? RecommendationCardTypes.TALK
                     : RecommendationCardTypes.EVENT
                 }
+                slug={item.slug}
                 cover={item.cover}
                 coverDesktop={item.coverDesktop}
                 displayName={item.displayName}

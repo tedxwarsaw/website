@@ -10,6 +10,7 @@ export enum RecommendationCardTypes {
 
 interface RecommendationCardProps {
   type: RecommendationCardTypes;
+  slug: string;
   cover: FluidObject;
   coverDesktop: FluidObject;
   displayName: string;
@@ -24,6 +25,7 @@ interface RecommendationCardProps {
 
 export const RecommendationCard = ({
   type,
+  slug,
   cover,
   coverDesktop,
   speaker,
@@ -36,16 +38,24 @@ export const RecommendationCard = ({
 }: RecommendationCardProps) => (
   <div className="p-2 relative border-b-4 border-customTransparent  hover:border-customRed">
     <div className="relative">
-      <Img
-        className="w-full h-full md:hidden"
-        fluid={cover}
-        alt="Slider item image"
-      />
-      <Img
-        className="w-full h-full hidden md:block"
-        fluid={coverDesktop}
-        alt="Slider item image"
-      />
+      <a
+        href={
+          type === RecommendationCardTypes.EVENT
+            ? `/event/${slug}`
+            : `/talk/${slug}`
+        }
+      >
+        <Img
+          className="w-full h-full md:hidden"
+          fluid={cover}
+          alt="Slider item image"
+        />
+        <Img
+          className="w-full h-full hidden md:block"
+          fluid={coverDesktop}
+          alt="Slider item image"
+        />
+      </a>
       {type === RecommendationCardTypes.TALK && (
         <span className="absolute right-2 bottom-2 bg-customDarkGrey text-white font-light text-xs px-2">
           {duration}
@@ -86,7 +96,7 @@ export const RecommendationCard = ({
     {type === RecommendationCardTypes.EVENT && (
       <div className="flex items-center ">
         <a
-          href={attendLink}
+          href={`/attend/${slug}`}
           className="text-sm"
           target="_blank"
           rel="noopener noreferrer"
@@ -94,7 +104,7 @@ export const RecommendationCard = ({
           <Button>Attend</Button>
         </a>
         <a
-          href={learnMoreLink}
+          href={`/event/${slug}`}
           className="text-customRed text-sm flex hover:opacity-50 items-center ml-5"
           style={{ width: "fit-content" }}
         >
