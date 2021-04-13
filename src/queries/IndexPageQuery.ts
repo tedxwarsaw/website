@@ -117,15 +117,29 @@ export const queryForProps = async (
     sizes: "(max:-width: 2000px)",
   });
 
-  const queryRecommendationsData: () => {
-    item: {};
-    order: number;
-  }[] = async () => {
+  const queryRecommendationsData = async () => {
     const eventsData = await Promise.all(
       pagesYaml.recommendations.events.map(async (eventQueryData) => {
         if (loadedEvents[eventQueryData.eventSlug]) {
+          const cover = await getFluidImage({
+            graphql,
+            path: loadedEvents[eventQueryData.eventSlug].cover.image.mobile,
+            quality: 90,
+            sizes: "(max:-width: 768px)",
+          });
+          const coverDesktop = await getFluidImage({
+            graphql,
+            path: loadedEvents[eventQueryData.eventSlug].cover.image.desktop,
+            quality: 90,
+            sizes: "(max:-width: 2000px)",
+          });
+
           return {
-            item: loadedEvents[eventQueryData.eventSlug],
+            item: {
+              ...loadedEvents[eventQueryData.eventSlug],
+              cover,
+              coverDesktop,
+            },
             order: eventQueryData.order,
           };
         } else {
@@ -134,8 +148,21 @@ export const queryForProps = async (
           } = await graphql(eventQuery, {
             eventSlug: eventQueryData.eventSlug,
           });
+          const cover = await getFluidImage({
+            graphql,
+            path: event.cover.image.mobile,
+            quality: 90,
+            sizes: "(max:-width: 768px)",
+          });
+          const coverDesktop = await getFluidImage({
+            graphql,
+            path: event.cover.image.desktop,
+            quality: 90,
+            sizes: "(max:-width: 2000px)",
+          });
+
           return {
-            item: event,
+            item: { ...event, cover, coverDesktop },
             order: eventQueryData.order,
           };
         }
@@ -148,11 +175,27 @@ export const queryForProps = async (
         } = await graphql(talkQuery, {
           talkSlug: talkQueryData.talkSlug,
         });
+
+        const cover = await getFluidImage({
+          graphql,
+          path: talk.cover.image.mobile,
+          quality: 90,
+          sizes: "(max:-width: 768px)",
+        });
+        const coverDesktop = await getFluidImage({
+          graphql,
+          path: talk.cover.image.desktop,
+          quality: 90,
+          sizes: "(max:-width: 2000px)",
+        });
+
         if (loadedEvents[talk.eventSlug]) {
           return {
             item: {
               ...talk,
               eventName: loadedEvents[talk.eventSlug].displayName,
+              cover,
+              coverDesktop,
             },
             order: talkQueryData.order,
           };
@@ -166,6 +209,8 @@ export const queryForProps = async (
             item: {
               ...talk,
               eventName: event.displayName,
+              cover,
+              coverDesktop,
             },
             order: talkQueryData.order,
           };

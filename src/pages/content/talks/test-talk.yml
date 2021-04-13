@@ -5,5 +5,5 @@ speaker: "Agnieszka Trzeszczak"
 eventSlug: "2020"
 cover:
   image:
-    desktop: talks/test-talk/coverPhotos/talk-cover.jpg
-    mobile: talks/test-talk/coverPhotos/talk-cover.jpg
+    desktop: talks/test-talk/coverPhotos/talk-cover.png
+    mobile: talks/test-talk/coverPhotos/talk-cover.png
