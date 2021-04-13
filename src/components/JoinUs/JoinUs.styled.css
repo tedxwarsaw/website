@@ -1,0 +1,8 @@
+@media (min-width: theme("screens.md")) {
+  .join-us-section-content {
+    padding: 0 0 0 var(--side-gap);
+  }
+  .join-us-section-left {
+    width: calc((100vw - 2 * var(--side-gap)) / 3);
+  }
+}
