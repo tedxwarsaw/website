@@ -436,3 +436,7 @@ collections:
                 widget: image
                 allow_multiple: false
                 media_folder: "{{slug}}/coverPhotos"
+      - name: duration
+        label: Duration
+        widget: string
+        hint: "Duration of this talk"

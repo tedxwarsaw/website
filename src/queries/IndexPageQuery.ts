@@ -70,6 +70,7 @@ query TalkQuery(
           mobile
         }
     }
+    duration
   }
 }
 `;
