@@ -43,8 +43,8 @@ export const Recommendations = ({ recommendations }: RecommendationsProps) => {
           </div>
         )}
         <div ref={sliderRef} className="keen-slider ">
-          {recommendations.map(({ item }) => (
-            <div className="keen-slider__slide">
+          {recommendations.map(({ item, order }) => (
+            <div className="keen-slider__slide" key={order}>
               <RecommendationCard
                 type={
                   item?.speaker
