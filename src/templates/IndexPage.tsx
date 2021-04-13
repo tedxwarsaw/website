@@ -39,7 +39,7 @@ export const IndexPageTemplate = (props: Props) => (
       eventHiglightImage={props.eventHiglightImage}
       eventHiglightImageDesktop={props.eventHiglightImageDesktop}
       eventHeader={props.eventHeader}
-      eventPartnersProfiles={props.eventPartnersProfiles}
+      eventSpeakerPhotos={props.eventSpeakerPhotos}
       eventDescription={props.eventDescription}
       eventSlug={props.eventSlug}
     />
