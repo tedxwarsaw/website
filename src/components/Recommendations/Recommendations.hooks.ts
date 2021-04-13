@@ -66,6 +66,7 @@ export const useRecommendations = (numberOfSlides: number) => {
 
   return {
     sliderRef,
+    slider,
     numberOfSlides,
     currentSlide,
     inputSliderPosition,

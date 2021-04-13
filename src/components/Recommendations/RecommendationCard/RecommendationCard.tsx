@@ -30,7 +30,7 @@ export const RecommendationCard = ({
   attendLink,
   learnMoreLink,
 }: RecommendationCardProps) => (
-  <div className="p-2 relative">
+  <div className="p-2 relative border-b-4 border-customTransparent  hover:border-customRed">
     <div className="relative">
       <img src={thumbnailImage} alt="Talk thumnail image" className="w-full" />
       {type === RecommendationCardTypes.TALK && (
@@ -51,15 +51,24 @@ export const RecommendationCard = ({
 
     <div className="md:flex justify-between items-end mb-2 mt-5 md:my-5">
       <div>
-        <span className="my-10">
+        <span
+          className={
+            type === RecommendationCardTypes.EVENT ? "font-bold my-10" : "my-10"
+          }
+        >
           {type === RecommendationCardTypes.TALK ? speaker : "Title"}
         </span>
-        <h3>{title}</h3>
+        <h3
+          className={type === RecommendationCardTypes.TALK ? "font-bold" : ""}
+        >
+          {title}
+        </h3>
       </div>
+      {type === RecommendationCardTypes.EVENT && <p>{eventDate}</p>}
     </div>
-    <p className="pb-3">
-      {type === RecommendationCardTypes.TALK ? talkEventName : eventDate}
-    </p>
+    {type === RecommendationCardTypes.TALK && (
+      <p className="pb-3">{talkEventName}</p>
+    )}
 
     {type === RecommendationCardTypes.EVENT && (
       <div className="flex items-center ">

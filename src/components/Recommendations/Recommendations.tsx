@@ -45,6 +45,8 @@ export const Recommendations = () => {
     inputSliderOnChange,
     nextSlide,
     prevSlide,
+    slider,
+    currentSlide,
   } = useRecommendations(numberOfSlides);
 
   return (
@@ -52,49 +54,68 @@ export const Recommendations = () => {
       <h2 className="text-2xl md:text-3xl font-bold w-32">
         TEDxWarsaw Recommends
       </h2>
-      <div ref={sliderRef} className="keen-slider max-w-full mt-10">
-        <div className="keen-slider__slide">
-          <RecommendationCard
-            type={RecommendationCardTypes.EVENT}
-            thumbnailImage={recommendations[0].thumbnailImage}
-            title={recommendations[0].title}
-            eventDate={recommendations[0].eventDate}
-            attendLink={recommendations[0].attendLink}
-            learnMoreLink={recommendations[0].learnMoreLink}
-            talkEventName={recommendations[1].talkEventName}
-          />
-        </div>
-        <div className="keen-slider__slide ">
-          <RecommendationCard
-            type={RecommendationCardTypes.TALK}
-            thumbnailImage={recommendations[1].thumbnailImage}
-            speaker={recommendations[1].speaker}
-            title={recommendations[1].title}
-            talkEventName={recommendations[1].talkEventName}
-            duration={recommendations[1].duration}
-          />
-        </div>
-        <div className="keen-slider__slide ">
-          <RecommendationCard
-            type={RecommendationCardTypes.TALK}
-            thumbnailImage={recommendations[1].thumbnailImage}
-            speaker={recommendations[1].speaker}
-            title={recommendations[1].title}
-            talkEventName={recommendations[1].talkEventName}
-            duration={recommendations[1].duration}
-          />
-        </div>
-        <div className="keen-slider__slide">
-          <RecommendationCard
-            type={RecommendationCardTypes.TALK}
-            thumbnailImage={recommendations[1].thumbnailImage}
-            speaker={recommendations[1].speaker}
-            title={recommendations[1].title}
-            talkEventName={recommendations[1].talkEventName}
-            duration={recommendations[1].duration}
-          />
+      <div className="slider-wrapper max-w-full mt-10 relative">
+        {slider && (
+          <div className="hidden md:block">
+            <BsChevronLeft
+              className={`text-customRed text-3xl absolute -left-10 top-1/2 ${
+                currentSlide === 0 ? "hidden" : ""
+              }`}
+              onClick={prevSlide}
+            />
+            <BsChevronRight
+              className={`text-customRed text-3xl absolute -right-10 top-1/2 ${
+                currentSlide === numberOfSlides - 3 ? "hidden" : ""
+              }`}
+              onClick={nextSlide}
+            />
+          </div>
+        )}
+        <div ref={sliderRef} className="keen-slider ">
+          <div className="keen-slider__slide">
+            <RecommendationCard
+              type={RecommendationCardTypes.EVENT}
+              thumbnailImage={recommendations[0].thumbnailImage}
+              title={recommendations[0].title}
+              eventDate={recommendations[0].eventDate}
+              attendLink={recommendations[0].attendLink}
+              learnMoreLink={recommendations[0].learnMoreLink}
+              talkEventName={recommendations[1].talkEventName}
+            />
+          </div>
+          <div className="keen-slider__slide ">
+            <RecommendationCard
+              type={RecommendationCardTypes.TALK}
+              thumbnailImage={recommendations[1].thumbnailImage}
+              speaker={recommendations[1].speaker}
+              title={recommendations[1].title}
+              talkEventName={recommendations[1].talkEventName}
+              duration={recommendations[1].duration}
+            />
+          </div>
+          <div className="keen-slider__slide ">
+            <RecommendationCard
+              type={RecommendationCardTypes.TALK}
+              thumbnailImage={recommendations[1].thumbnailImage}
+              speaker={recommendations[1].speaker}
+              title={recommendations[1].title}
+              talkEventName={recommendations[1].talkEventName}
+              duration={recommendations[1].duration}
+            />
+          </div>
+          <div className="keen-slider__slide">
+            <RecommendationCard
+              type={RecommendationCardTypes.TALK}
+              thumbnailImage={recommendations[1].thumbnailImage}
+              speaker={recommendations[1].speaker}
+              title={recommendations[1].title}
+              talkEventName={recommendations[1].talkEventName}
+              duration={recommendations[1].duration}
+            />
+          </div>
         </div>
       </div>
+
       <div className="slider-controls text-customRed text-2xl flex justify-between mt-5 items-center md:hidden">
         <BsChevronLeft onClick={prevSlide} />
         <input

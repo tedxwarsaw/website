@@ -13,6 +13,7 @@ module.exports = {
         customLightGrey: "#f6f6f6",
         customDarkGrey: "#333333",
         customRed: "#E62B1E",
+        customTransparent: "rgba(0,0,0,0)",
       },
     },
     fontFamily: {
