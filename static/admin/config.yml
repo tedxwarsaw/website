@@ -95,12 +95,12 @@ collections:
             name: joinUsSubtitle
             widget: string
           - label: "Join us section image"
-            name: "joinUsImage"
+            name: "joinUsImagePath"
             widget: image
             allow_multiple: false
             media_folder: "photos"
           - label: "Join us section image desktop"
-            name: "joinUsImageDesktop"
+            name: "joinUsImageDesktopPath"
             widget: image
             allow_multiple: false
             media_folder: "photos"
