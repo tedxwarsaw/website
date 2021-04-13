@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   RecommendationCard,
   RecommendationCardTypes,
 } from "./RecommendationCard";
-import eventCover from "./event-cover.png";
-import talkCover from "./talk-cover.png";
 import "keen-slider/keen-slider.min.css";
 import "./Recommendations.styled.css";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
@@ -79,7 +77,6 @@ export const Recommendations = ({ recommendations }: RecommendationsProps) => {
           className="input-slider bg-customRed"
           id="myRange"
         />
-
         <BsChevronRight onClick={nextSlide} />
       </div>
     </div>
