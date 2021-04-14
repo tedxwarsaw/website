@@ -22,13 +22,13 @@ export const RecommendationsSlider = ({ children }) => {
         {slider && (
           <div className="hidden md:block">
             <BsChevronLeft
-              className={`text-customRed text-3xl absolute -left-10 top-1/2 ${
+              className={`text-customRed stroke-1 text-3xl absolute left-0 top-1/3 z-10 xl:-left-10 xl:top-1/2 ${
                 currentSlide === 0 ? "hidden" : ""
               }`}
               onClick={prevSlide}
             />
             <BsChevronRight
-              className={`text-customRed text-3xl absolute -right-10 top-1/2 ${
+              className={`text-customRed stroke-1 text-3xl absolute right-0 top-1/3 z-10 xl:-right-10 xl:top-1/2 ${
                 currentSlide === numberOfSlides - 3 ? "hidden" : ""
               }`}
               onClick={nextSlide}
