@@ -40,7 +40,6 @@ export const IndexPageTemplate = (props: Props) => (
 );
 
 const IndexPage = ({ pageContext }) => {
-  console.log(pageContext);
   return <IndexPageTemplate {...pageContext.props} />;
 };
 
