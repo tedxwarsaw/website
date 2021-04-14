@@ -1,6 +1,7 @@
 import React from "react";
 import { BackgroundImage } from "@/components/shared/BackgroundImage";
 import { FluidObject } from "gatsby-image";
+import { NewsletterForm } from "./NewsletterForm";
 
 export enum NewsletterVariant {
   black = "black",
@@ -42,7 +43,7 @@ export const Newsletter = ({
               <p className="text-white my-5">{newsletterMessage1}</p>
               <p className="text-white">{newsletterMessage2}</p>
             </div>
-            <p>form</p>
+            <NewsletterForm />
           </div>
         </BackgroundImage>
       </div>

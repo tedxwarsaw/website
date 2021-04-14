@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@fontsource/inter": "^4.2.1",
+    "@hookform/resolvers": "^2.3.0",
     "gatsby": "^2.32.0",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-netlify-cms": "^4.10.0",
@@ -35,8 +36,10 @@
     "ramda": "^0.27.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-hook-form": "^7.1.0",
     "react-icons": "^4.2.0",
-    "react-popper-tooltip": "^4.0.1"
+    "react-popper-tooltip": "^4.0.1",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "gatsby-plugin-ts-config": "^1.1.5",

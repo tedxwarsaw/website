@@ -26,6 +26,7 @@ interface Props {
   children: React.ReactNode;
   className?: string;
   variant?: ButtonVariant;
+  type?: "button" | "submit" | "reset";
 }
 
 export const Button = (props: Props): JSX.Element => (
@@ -33,6 +34,7 @@ export const Button = (props: Props): JSX.Element => (
     className={`p-2 px-6 rounded transform transition hover:scale-110
                 active:scale-90 ${getButtonClasses(props.variant)}
                 ${props.className != null ? props.className : ""}`}
+    type={props.type}
   >
     {props.children}
   </button>
