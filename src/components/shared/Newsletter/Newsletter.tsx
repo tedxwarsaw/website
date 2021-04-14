@@ -2,6 +2,7 @@ import React from "react";
 import { BackgroundImage } from "@/components/shared/BackgroundImage";
 import { FluidObject } from "gatsby-image";
 import { NewsletterForm } from "./NewsletterForm";
+import "./Newsletter.styled.css";
 
 export enum NewsletterVariant {
   black = "black",
@@ -32,12 +33,12 @@ export const Newsletter = ({
           image={newsletterBackgroundImage}
           imageDesktop={newsletterBackgroundImageDesktop}
           alt="Newsletter backgound image"
-          style={{ height: "33rem" }}
           classNameChild="flex flex-col justify-end md:justify-center"
+          className="newsletter-container"
         >
-          <div className="seamless-grid">
-            <div className="col-start-2 col-end-3 pr-10 md:pr-0">
-              <h2 className="text-white font-medium text-2xl md:text-3xl">
+          <div className="seamless-grid mb-10 md:mb-0">
+            <div className="col-start-2 col-end-3 pr-10 md:pr-0 mb-10">
+              <h2 className="text-white font-medium text-3xl">
                 {newsletterTitle}
               </h2>
               <p className="text-white my-5">{newsletterMessage1}</p>
