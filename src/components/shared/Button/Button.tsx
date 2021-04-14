@@ -3,6 +3,7 @@ import React from "react";
 export enum ButtonVariant {
   filledRed = "filledRed",
   outlineWhite = "outlineWhite",
+  filledGrey = "filledGrey",
 }
 
 const classes = {};
@@ -10,6 +11,8 @@ classes[ButtonVariant.filledRed] =
   "text-white bg-red-600 hover:bg-white hover:text-red-500";
 classes[ButtonVariant.outlineWhite] =
   "border border-white text-white bg-transparent hover:bg-white hover:text-red-500";
+classes[ButtonVariant.filledGrey] =
+  "text-white bg-customDarkGrey hover:bg-white hover:text-customDarkGrey";
 
 const getButtonClasses = (variant?: ButtonVariant): string => {
   if (variant == null || !classes.hasOwnProperty(variant)) {

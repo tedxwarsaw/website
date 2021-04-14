@@ -1,15 +1,17 @@
 import React from "react";
 import { Page } from "@/components/shared/Page";
+import { HeroSection, HeroSectionProps } from "@/components/HeroSection";
+import { OurStory, OurStoryProps } from "@/components/OurStory";
+import { YoutubeBanner, YoutubeBannerProps } from "@/components/YoutubeBanner";
 import {
   EventHighlight,
   EventHighlightProps,
 } from "@/components/EventHighlight";
-import { HeroSection, HeroSectionProps } from "@/components/HeroSection";
-import { OurStory, OurStoryProps } from "@/components/OurStory";
 
 export interface Props
   extends HeroSectionProps,
     OurStoryProps,
+    YoutubeBannerProps,
     EventHighlightProps {}
 
 export const IndexPageTemplate = (props: Props) => (
@@ -27,6 +29,11 @@ export const IndexPageTemplate = (props: Props) => (
     <OurStory
       ourStoryTitle={props.ourStoryTitle}
       ourStoryItems={props.ourStoryItems}
+    />
+    <YoutubeBanner
+      youtubeBannerHeading={props.youtubeBannerHeading}
+      youtubeBannerLinkText={props.youtubeBannerLinkText}
+      youtubeBannerLinkUrl={props.youtubeBannerLinkUrl}
     />
     <EventHighlight
       eventHiglightImage={props.eventHiglightImage}

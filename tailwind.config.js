@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       colors: {
         customLightGrey: "#f6f6f6",
+        customDarkGrey: "#333333",
       },
     },
     fontFamily: {

@@ -20,6 +20,9 @@ export const pageQuery = `#graphql
         boldText
         text
       }
+      youtubeBannerHeading
+      youtubeBannerLinkText
+      youtubeBannerLinkUrl
       eventSlug
     }
   }
