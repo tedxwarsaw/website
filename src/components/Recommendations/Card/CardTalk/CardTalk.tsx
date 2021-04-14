@@ -1,7 +1,6 @@
 import React from "react";
-import { Button } from "@/components/shared/Button";
-import { FaArrowRight } from "react-icons/fa";
 import Img, { FluidObject } from "gatsby-image";
+import "../Card.styled.css";
 
 export enum RecommendationCardTypes {
   EVENT = "EVENT",
@@ -28,7 +27,7 @@ export const CardTalk = ({
   duration,
 }: CardTalkProps) => (
   <div className="p-2 relative border-b-4 border-customTransparent  hover:border-customRed h-full flex flex-col">
-    <div className="relative flex-grow">
+    <div className="relative card-image-container">
       <a href={`/talk/${slug}`}>
         <Img
           className="w-full h-full md:hidden"
@@ -56,6 +55,6 @@ export const CardTalk = ({
         <h3 className="font-bold">{displayName}</h3>
       </div>
     </div>
-    <p className="pb-3">{eventName}</p>
+    <p className="pb-1 mt-auto">{eventName}</p>
   </div>
 );

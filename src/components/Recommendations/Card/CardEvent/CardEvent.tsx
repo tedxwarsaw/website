@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/shared/Button";
 import { FaArrowRight } from "react-icons/fa";
 import Img, { FluidObject } from "gatsby-image";
+import "../Card.styled.css";
 
 interface CardEventProps {
   slug: string;
@@ -19,7 +20,7 @@ export const CardEvent = ({
   date,
 }: CardEventProps) => (
   <div className="p-2 relative border-b-4 border-customTransparent  hover:border-customRed h-full flex flex-col">
-    <div className="relative flex-grow">
+    <div className="relative card-image-container">
       <a href={`/event/${slug}`}>
         <Img
           className="w-full h-full md:hidden"
@@ -45,7 +46,7 @@ export const CardEvent = ({
       <p>{date}</p>
     </div>
 
-    <div className="flex items-center ">
+    <div className="flex items-center mt-auto">
       <a
         href={`/attend/${slug}`}
         className="text-sm"
