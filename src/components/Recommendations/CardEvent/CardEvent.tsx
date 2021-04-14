@@ -40,7 +40,7 @@ export const CardEvent = ({
     <div className="md:flex justify-between items-end mb-2 mt-5 md:my-5">
       <div>
         <span className="font-bold my-10">Title</span>
-        <h3>{displayName}</h3>
+        <h3 className="min-h-10">{displayName}</h3>
       </div>
       <p>{date}</p>
     </div>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 
-export const useRecommendations = (numberOfSlides: number) => {
+export const useRecommendationsSlider = (numberOfSlides: number) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [inputSliderPosition, setInputSliderPosition] = useState(0);
   const [sliderRef, slider] = useKeenSlider({
