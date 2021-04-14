@@ -33,7 +33,7 @@ export const EventHighlight = ({
           <span className="text-2xl md:text-3xl">{eventHeader}</span>
         </div>
         <div className="inner-grid">
-          <div className="grid grid-flow-row grid-cols-5 gap-4 mb-10">
+          <div className="grid grid-flow-row grid-cols-5 md:grid-cols-4 md:gap-0 xl:gap-4 xl:grid-cols-5 gap-4 row-gap-4 mb-10">
             {eventSpeakerPhotos.map((profileImage, index) => {
               return (
                 <Img
