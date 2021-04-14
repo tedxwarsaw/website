@@ -43,7 +43,7 @@ export const Partners = ({
       </div>
     </div>
 
-    <div className="flex flex-wrap justify-between space-y-2 md:hidden">
+    <div className="flex flex-wrap justify-between space-y-4 xl:hidden">
       {partnerLogos.map((fixed, idx) => (
         <Img
           key={idx}
@@ -53,7 +53,7 @@ export const Partners = ({
         />
       ))}
     </div>
-    <div className="flex flex-wrap justify-between space-y-2 hidden md:block">
+    <div className="flex flex-wrap justify-between space-y-4  hidden xl:block">
       {partnerLogosDesktop.map((fixed, idx) => (
         <Img
           key={idx}
@@ -63,7 +63,7 @@ export const Partners = ({
         />
       ))}
     </div>
-    <div className="flex flex-col items-start md:hidden">
+    <div className="flex flex-col md:flex-row  md:items-center  items-start xl:hidden">
       <a href={joinOurPartnersLink} target="_blank" rel="noopener noreferrer">
         <Button className="my-5">{joinOurPartnersText}</Button>
       </a>
@@ -72,7 +72,7 @@ export const Partners = ({
         className="text-customRed flex hover:opacity-50 items-center"
         style={{ width: "fit-content" }}
       >
-        <span className="my-2 flex items-center">
+        <span className="my-2 md:my-0 md:ml-5 flex items-center">
           {getToKnowOurPartnersText} <FaArrowRight className="ml-6 " />
         </span>
       </a>
