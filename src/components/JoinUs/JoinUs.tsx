@@ -28,8 +28,8 @@ export const JoinUs = ({
   joinUsBecomeSpeakerText,
   joinUsBecomeSpeakerLink,
 }: JoinUsProps) => (
-  <div className=" bg-customLightGrey main-grid-full-span">
-    <div className="flex flex-col-reverse md:flex-row join-us-section-content">
+  <div className="bg-customLightGrey main-grid-full-span">
+    <div className="seamless-grid join-us-section-content">
       <div className="flex items-center join-us-section-left">
         <div className="pr-20 py-10">
           <h2 className="text-2xl md:text-3xl">{joinUsTitle}</h2>
@@ -39,7 +39,7 @@ export const JoinUs = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="my-5">{joinUsVolunteerText}</Button>
+            <Button className="my-7">{joinUsVolunteerText}</Button>
           </a>
           <a
             href={joinUsGetToKnowOurTeamLink}
@@ -61,7 +61,7 @@ export const JoinUs = ({
           </a>
         </div>
       </div>
-      <div className="md:flex-grow">
+      <div className="join-us-section-right">
         <Img
           className="w-full h-full md:hidden"
           fluid={joinUsImage}
