@@ -1,5 +1,6 @@
 import { Props } from "../templates/IndexPage";
 import { getFixedImage, getFluidImage } from "./utils";
+import { queryForNewsletter } from "./globalQueries";
 
 export const pageQuery = `#graphql
   query IndexPageTemplate {
@@ -283,6 +284,10 @@ export const queryForProps = async (
     )
   );
 
+  const newsletter = await queryForNewsletter(graphql);
+
+  console.log(newsletter);
+
   return {
     ...pagesYaml,
     heroBackgroundImage,
@@ -297,5 +302,6 @@ export const queryForProps = async (
     joinUsImageDesktop,
     partnerLogos,
     partnerLogosDesktop,
+    ...newsletter,
   };
 };
