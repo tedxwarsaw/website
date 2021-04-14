@@ -8,10 +8,10 @@ export interface JoinUsProps {
   joinUsSubtitle: string;
   joinUsImage: FluidObject;
   joinUsImageDesktop: FluidObject;
-  joinUsVolonteerText: string;
-  joinUsVolonteerLink: string;
-  joinUsGetToKnowOurTeemText: string;
-  joinUsGetToKnowOurTeemLink: string;
+  joinUsVolunteerText: string;
+  joinUsVolunteerLink: string;
+  joinUsGetToKnowOurTeamText: string;
+  joinUsGetToKnowOurTeamLink: string;
   joinUsBecomeSpeakerText: string;
   joinUsBecomeSpeakerLink: string;
 }
@@ -21,10 +21,10 @@ export const JoinUs = ({
   joinUsSubtitle,
   joinUsImage,
   joinUsImageDesktop,
-  joinUsVolonteerText,
-  joinUsVolonteerLink,
-  joinUsGetToKnowOurTeemText,
-  joinUsGetToKnowOurTeemLink,
+  joinUsVolunteerText,
+  joinUsVolunteerLink,
+  joinUsGetToKnowOurTeamText,
+  joinUsGetToKnowOurTeamLink,
   joinUsBecomeSpeakerText,
   joinUsBecomeSpeakerLink,
 }: JoinUsProps) => (
@@ -35,19 +35,19 @@ export const JoinUs = ({
           <h2 className="text-2xl md:text-3xl">{joinUsTitle}</h2>
           <p className="my-5">{joinUsSubtitle}</p>
           <a
-            href={joinUsVolonteerLink}
+            href={joinUsVolunteerLink}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="my-5">{joinUsVolonteerText}</Button>
+            <Button className="my-5">{joinUsVolunteerText}</Button>
           </a>
           <a
-            href={joinUsGetToKnowOurTeemLink}
+            href={joinUsGetToKnowOurTeamLink}
             className="text-customRed flex hover:opacity-50 items-center mb-5"
             style={{ width: "fit-content" }}
           >
             <span className="my-auto flex items-center">
-              {joinUsGetToKnowOurTeemText} <FaArrowRight className="ml-3 " />
+              {joinUsGetToKnowOurTeamText} <FaArrowRight className="ml-3 " />
             </span>
           </a>
           <a

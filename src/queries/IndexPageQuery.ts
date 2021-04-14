@@ -38,10 +38,10 @@ export const pageQuery = `#graphql
       joinUsSubtitle
       joinUsImagePath
       joinUsImageDesktopPath
-      joinUsVolonteerText
-      joinUsVolonteerLink
-      joinUsGetToKnowOurTeemText
-      joinUsGetToKnowOurTeemLink
+      joinUsVolunteerText
+      joinUsVolunteerLink
+      joinUsGetToKnowOurTeamText
+      joinUsGetToKnowOurTeamLink
       joinUsBecomeSpeakerText
       joinUsBecomeSpeakerLink
     }

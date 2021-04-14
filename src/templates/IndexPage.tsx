@@ -56,10 +56,10 @@ export const IndexPageTemplate = (props: Props) => (
       joinUsSubtitle={props.joinUsSubtitle}
       joinUsImage={props.joinUsImage}
       joinUsImageDesktop={props.joinUsImageDesktop}
-      joinUsVolonteerText={props.joinUsVolonteerText}
-      joinUsVolonteerLink={props.joinUsVolonteerLink}
-      joinUsGetToKnowOurTeemText={props.joinUsGetToKnowOurTeemText}
-      joinUsGetToKnowOurTeemLink={props.joinUsGetToKnowOurTeemLink}
+      joinUsVolunteerText={props.joinUsVolunteerText}
+      joinUsVolunteerLink={props.joinUsVolunteerLink}
+      joinUsGetToKnowOurTeamText={props.joinUsGetToKnowOurTeamText}
+      joinUsGetToKnowOurTeamLink={props.joinUsGetToKnowOurTeamLink}
       joinUsBecomeSpeakerText={props.joinUsBecomeSpeakerText}
       joinUsBecomeSpeakerLink={props.joinUsBecomeSpeakerLink}
     />
