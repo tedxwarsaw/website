@@ -19,7 +19,7 @@ export const CardEvent = ({
   displayName,
   date,
 }: CardEventProps) => (
-  <div className="p-2 relative border-b-4 border-customTransparent  hover:border-customRed h-full flex flex-col">
+  <div className="relative border-b-4 border-customTransparent  hover:border-customRed h-full flex flex-col overflow-visible">
     <div className="relative card-image-container">
       <a href={`/event/${slug}`}>
         <Img
@@ -34,7 +34,7 @@ export const CardEvent = ({
         />
       </a>
     </div>
-    <span className="absolute left-0 top-0  text-white text-sm px-3 bg-customRed md:py-1">
+    <span className="absolute -left-2 top-0  text-white text-sm px-3 md:py-1  bg-customRed">
       UPCOMMING
     </span>
 
