@@ -12,7 +12,7 @@ heroBackgroundImageUrl: images/uploads/speaker-stage-logo.jpg
 heroBackgroundImageUrlDesktop: images/uploads/speaker-stage-logo.jpg
 heroBackgroundImageAlt: Cover image
 ourStoryTitle: Our story so far
-ourStoryItems: 
+ourStoryItems:
   - boldText: "10"
     text: major events
   - boldText: 7000+
@@ -21,7 +21,7 @@ ourStoryItems:
     text: speakers
   - boldText: "1"
     text: marriage proposal on stage
-recommendations: 
+recommendations:
   events:
     - eventSlug: "2020"
       order: 2
@@ -40,10 +40,10 @@ joinUsTitle: "Join TEXx Warsaw."
 joinUsSubtitle: "Become our volunteer and enter the amazing world of TEDx"
 joinUsImagePath: "images/uploads/joinus.png"
 joinUsImageDesktopPath: "images/uploads/joinus.png"
-joinUsVolonteerText: "Get involved as a volonteer"
-joinUsVolonteerLink: "/about"
-joinUsGetToKnowOurTeemText: "Get to know our team"
-joinUsGetToKnowOurTeemLink: "/about"
+joinUsVolunteerText: "Get involved as a Volunteer"
+joinUsVolunteerLink: "/about"
+joinUsGetToKnowOurTeamText: "Get to know our team"
+joinUsGetToKnowOurTeamLink: "/about"
 joinUsBecomeSpeakerText: "Become TEDx Speaker"
 joinUsBecomeSpeakerLink: "/about"
 partnerSectionTitle: "Our partners"

@@ -15,8 +15,8 @@ collections:
         slug: "index.md" # Filename template, e.g., YYYY-MM-DD-title.md
         fields: # The fields for each document, usually in front matter
           - label: "Hero title"
-            name: "heroTitle" 
-            widget: "string" 
+            name: "heroTitle"
+            widget: "string"
           - label: "Hero subtitle"
             name: "heroSubtitle"
             widget: "string"
@@ -29,9 +29,9 @@ collections:
           - label: "Hero links"
             name: "heroLinks"
             widget: "list"
-            fields: 
-              - { label: "Display name", name: "displayName", widget: "string"}
-              - { label: "Path", name: "path", widget: "string"}
+            fields:
+              - { label: "Display name", name: "displayName", widget: "string" }
+              - { label: "Path", name: "path", widget: "string" }
           - label: "Hero background mobile image"
             name: "heroBackgroundImageUrl"
             widget: image
@@ -51,26 +51,52 @@ collections:
           - label: "Our story section items"
             name: "ourStoryItems"
             widget: "list"
-            fields: 
-              - { label: "Bold text", name: "boldText", widget: "string"}
-              - { label: "Text", name: "text", widget: "string"}
+            fields:
+              - { label: "Bold text", name: "boldText", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
           - name: recommendations
             label: "Recommendations"
             widget: object
             hint: "Events and talks that will be shown in the recommendations slider"
-            fields: 
+            fields:
               - name: "events"
                 label: "Events"
                 widget: list
-                fields: 
-                  - { label: "Event", name: "eventSlug", widget: "relation", collection: events, value_field: "slug", display_fields: ["displayName"], search_fields: ["displayName", "slug"]}
-                  - { label: "Order", name: "order", widget: number, hint: "Order number in which this item will be displayed on the slider"}
+                fields:
+                  - {
+                      label: "Event",
+                      name: "eventSlug",
+                      widget: "relation",
+                      collection: events,
+                      value_field: "slug",
+                      display_fields: ["displayName"],
+                      search_fields: ["displayName", "slug"],
+                    }
+                  - {
+                      label: "Order",
+                      name: "order",
+                      widget: number,
+                      hint: "Order number in which this item will be displayed on the slider",
+                    }
               - name: "talks"
                 label: "Talks"
                 widget: list
-                fields: 
-                  - { label: "Talk", name: "talkSlug", widget: "relation", collection: talks, value_field: "slug", display_fields: ["displayName"], search_fields: ["displayName", "slug"]}
-                  - { label: "Order", name: "order", widget: number, hint: "Order number in which this item will be displayed on the slider"}
+                fields:
+                  - {
+                      label: "Talk",
+                      name: "talkSlug",
+                      widget: "relation",
+                      collection: talks,
+                      value_field: "slug",
+                      display_fields: ["displayName"],
+                      search_fields: ["displayName", "slug"],
+                    }
+                  - {
+                      label: "Order",
+                      name: "order",
+                      widget: number,
+                      hint: "Order number in which this item will be displayed on the slider",
+                    }
           - name: eventSlug
             label: Event
             widget: relation
@@ -105,16 +131,16 @@ collections:
             allow_multiple: false
             media_folder: "photos"
           - label: Join us volunteer link text
-            name: joinUsVolonteerText
+            name: joinUsVolunteerText
             widget: string
           - label: Join us volunteer link
-            name: joinUsVolonteerLink
+            name: joinUsVolunteerLink
             widget: string
           - label: Get to know our team link text
-            name: joinUsGetToKnowOurTeemText
+            name: joinUsGetToKnowOurTeamText
             widget: string
           - label: Get to know our team link
-            name: joinUsGetToKnowOurTeemLink
+            name: joinUsGetToKnowOurTeamLink
             widget: string
           - label: Become speaker link text
             name: joinUsBecomeSpeakerText
@@ -122,8 +148,6 @@ collections:
           - label: Become speaker link
             name: joinUsBecomeSpeakerLink
             widget: string
-
-
           - label: Partner section title
             name: partnerSectionTitle
             widget: string
