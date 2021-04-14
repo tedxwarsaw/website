@@ -8,7 +8,11 @@ export const useRecommendationsSlider = (numberOfSlides: number) => {
     slidesPerView: 1.1,
     spacing: 10,
     breakpoints: {
-      "(min-width: 768px)": {
+      "(min-width: 768px) and (max-width: 1280px)": {
+        slidesPerView: 2.2,
+        spacing: 20,
+      },
+      "(min-width: 1280px)": {
         slidesPerView: 3,
         spacing: 20,
       },
