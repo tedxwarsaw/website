@@ -6,6 +6,7 @@ export const useRecommendationsSlider = (numberOfSlides: number) => {
   const [inputSliderPosition, setInputSliderPosition] = useState(0);
   const [sliderRef, slider] = useKeenSlider({
     slidesPerView: 1.1,
+    spacing: 10,
     breakpoints: {
       "(min-width: 768px)": {
         slidesPerView: 3,

@@ -26,7 +26,7 @@ export const CardTalk = ({
   eventName,
   duration,
 }: CardTalkProps) => (
-  <div className="p-2 relative border-b-4 border-customTransparent  hover:border-customRed h-full flex flex-col">
+  <div className="border-b-4 pt-2 md:pt-3 border-customTransparent  hover:border-customRed h-full flex flex-col">
     <div className="relative card-image-container">
       <a href={`/talk/${slug}`}>
         <Img
