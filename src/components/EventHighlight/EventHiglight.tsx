@@ -32,8 +32,8 @@ export const EventHighlight = ({
         <div className="w-full py-10">
           <span className="text-2xl md:text-3xl">{eventHeader}</span>
         </div>
-        <div className="flex flex-col md:grid md:grid-flow-col md:grid-cols-3 md:grid-rows-1 md:gap-10">
-          <div className="grid grid-flow-row grid-cols-5 gap-4 mb-10">
+        <div className="inner-grid">
+          <div className="grid grid-flow-row grid-cols-5 md:grid-cols-4 md:gap-0 xl:gap-4 xl:grid-cols-5 gap-4 row-gap-4 mb-10">
             {eventSpeakerPhotos.map((profileImage, index) => {
               return (
                 <Img
@@ -45,11 +45,13 @@ export const EventHighlight = ({
               );
             })}
           </div>
-          <div>
+          <div className="xl:block hidden">
             <p>{descriptionSplit[0]}</p>
           </div>
-          <div>
-            <p>{descriptionSplit[1]}</p>
+
+          <div className="md:col-start-2 xl:col-start-3">
+            <p className="xl:block hidden">{descriptionSplit[1]}</p>
+            <p className="xl:hidden">{eventDescription}</p>
             <a
               href={`/event/${eventSlug}`}
               className="text-red-500 flex font-bold hover:opacity-50 mt-5 items-center"
