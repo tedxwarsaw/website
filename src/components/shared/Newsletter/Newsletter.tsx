@@ -35,8 +35,8 @@ export const Newsletter = ({
           style={{ height: "33rem" }}
           classNameChild="flex flex-col justify-end md:justify-center"
         >
-          <div className="full-span-main-grid-padding">
-            <div className="w-96 max-w-full pr-10 md:pr-0">
+          <div className="seamless-grid">
+            <div className="col-start-2 col-end-3 pr-10 md:pr-0">
               <h2 className="text-white font-medium text-2xl md:text-3xl">
                 {newsletterTitle}
               </h2>

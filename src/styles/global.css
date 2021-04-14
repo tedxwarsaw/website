@@ -27,10 +27,6 @@
   grid-column: 2 / 3;
 }
 
-.full-span-main-grid-padding {
-  padding: 0 var(--side-gap);
-}
-
 @media (max-width: theme("screens.md")) {
   .main-grid-mobile-full-span {
     grid-column: 1 / 4 !important;
