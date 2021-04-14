@@ -13,7 +13,11 @@ import {
 } from "@/components/EventHighlight";
 import { JoinUs, JoinUsProps } from "@/components/JoinUs";
 import { Partners, PartnersProps } from "@/components/shared/Partners";
-import { Newsletter, NewsletterProps } from "@/components/shared/Newsletter";
+import {
+  Newsletter,
+  NewsletterProps,
+  NewsletterVariant,
+} from "@/components/shared/Newsletter";
 
 export interface Props
   extends HeroSectionProps,
@@ -77,6 +81,7 @@ export const IndexPageTemplate = (props: Props) => (
       partnerLogosDesktop={props.partnerLogosDesktop}
     />
     <Newsletter
+      variant={NewsletterVariant.black}
       newsletterTitle={props.newsletterTitle}
       newsletterMessage1={props.newsletterMessage1}
       newsletterMessage2={props.newsletterMessage2}

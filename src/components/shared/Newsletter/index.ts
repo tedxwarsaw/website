@@ -1,1 +1,1 @@
-export { Newsletter, NewsletterProps } from "./Newsletter";
+export { Newsletter, NewsletterProps, NewsletterVariant } from "./Newsletter";
