@@ -1,1 +1,0 @@
-export { CardTalk } from "./CardTalk";
