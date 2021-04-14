@@ -27,7 +27,7 @@ export const Partners = ({
       <h2 className="font-medium text-2xl md:text-3xl">
         {partnerSectionTitle}
       </h2>
-      <div className="flex items-center hidden md:flex">
+      <div className="flex items-center hidden xl:flex">
         <a
           href={getToKnowOurPartnersLink}
           className="text-customRed flex hover:opacity-50 items-center"
