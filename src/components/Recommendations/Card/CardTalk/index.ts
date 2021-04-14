@@ -1,0 +1,1 @@
+export { CardTalk } from "./CardTalk";

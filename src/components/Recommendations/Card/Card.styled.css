@@ -1,0 +1,15 @@
+.card-image-container {
+  height: 150px;
+}
+
+@media (min-width: theme("screens.md")) {
+  .card-image-container {
+    height: 180px;
+  }
+}
+
+@media (min-width: theme("screens.xl")) {
+  .card-image-container {
+    height: 220px;
+  }
+}
