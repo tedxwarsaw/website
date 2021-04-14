@@ -1,8 +1,6 @@
 import React from "react";
-import {
-  RecommendationCard,
-  RecommendationCardTypes,
-} from "./RecommendationCard";
+import { CardTalk } from "./CardTalk";
+import { CardEvent } from "./CardEvent";
 import "keen-slider/keen-slider.min.css";
 import "./Recommendations.styled.css";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
@@ -10,7 +8,7 @@ import { useRecommendations } from "./Recommendations.hooks";
 import { RecommendationsProps } from "./Recommendations.types";
 
 export const Recommendations = ({ recommendations }: RecommendationsProps) => {
-  const numberOfSlides = 4;
+  const numberOfSlides = recommendations.length;
   const {
     sliderRef,
     inputSliderPosition,
@@ -20,7 +18,7 @@ export const Recommendations = ({ recommendations }: RecommendationsProps) => {
     slider,
     currentSlide,
   } = useRecommendations(numberOfSlides);
-  console.log(recommendations);
+
   return (
     <div className="my-10 main-grid-full-span recommendations-container">
       <h2 className="text-2xl md:text-3xl font-bold w-32">
@@ -46,22 +44,25 @@ export const Recommendations = ({ recommendations }: RecommendationsProps) => {
         <div ref={sliderRef} className="keen-slider ">
           {recommendations.map(({ item, order }) => (
             <div className="keen-slider__slide" key={order}>
-              <RecommendationCard
-                type={
-                  item?.speaker
-                    ? RecommendationCardTypes.TALK
-                    : RecommendationCardTypes.EVENT
-                }
-                slug={item.slug}
-                cover={item.cover}
-                coverDesktop={item.coverDesktop}
-                displayName={item.displayName}
-                speaker={item.speaker}
-                eventName={item.eventName}
-                duration={item.duration}
-                eventSlug={item.eventSlug}
-                date={item.date}
-              />
+              {item?.speaker ? (
+                <CardTalk
+                  slug={item.slug}
+                  cover={item.cover}
+                  coverDesktop={item.coverDesktop}
+                  displayName={item.displayName}
+                  speaker={item.speaker}
+                  eventName={item.eventName}
+                  duration={item.duration}
+                />
+              ) : (
+                <CardEvent
+                  slug={item.slug}
+                  cover={item.cover}
+                  coverDesktop={item.coverDesktop}
+                  displayName={item.displayName}
+                  date={item.date}
+                />
+              )}
             </div>
           ))}
         </div>
