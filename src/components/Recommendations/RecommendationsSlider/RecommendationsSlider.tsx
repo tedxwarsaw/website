@@ -22,13 +22,13 @@ export const RecommendationsSlider = ({ children }) => {
         {slider && (
           <div className="hidden md:block">
             <BsChevronLeft
-              className={`text-customRed stroke-1 text-3xl absolute left-0 top-1/3 z-10 xl:-left-10 ${
+              className={`text-customRed hover:opacity-40 cursor-pointer stroke-1 text-3xl absolute left-0 top-1/3 z-10 xl:-left-10 ${
                 currentSlide === 0 ? "hidden" : ""
               }`}
               onClick={prevSlide}
             />
             <BsChevronRight
-              className={`text-customRed stroke-1 text-3xl absolute right-0 top-1/3 z-10 xl:-right-10 ${
+              className={`text-customRed hover:opacity-40 cursor-pointer stroke-1 text-3xl absolute right-0 top-1/3 z-10 xl:-right-10 ${
                 currentSlide === numberOfSlides - 3 ? "hidden" : ""
               }`}
               onClick={nextSlide}
@@ -45,7 +45,10 @@ export const RecommendationsSlider = ({ children }) => {
       </div>
 
       <div className="slider-controls text-customRed text-2xl flex justify-between mt-5 items-center md:hidden">
-        <BsChevronLeft onClick={prevSlide} />
+        <BsChevronLeft
+          className="active:opacity-40 cursor-pointer stroke-1"
+          onClick={prevSlide}
+        />
         <input
           type="range"
           min="0"
@@ -55,7 +58,10 @@ export const RecommendationsSlider = ({ children }) => {
           className="input-slider bg-customRed"
           id="myRange"
         />
-        <BsChevronRight onClick={nextSlide} />
+        <BsChevronRight
+          className="active:opacity-40 cursor-pointer stroke-1"
+          onClick={nextSlide}
+        />
       </div>
     </>
   );
