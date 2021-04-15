@@ -13,11 +13,3 @@
     height: 220px;
   }
 }
-
-.fa-arrow-right-hover-effect > svg {
-  transition: all 0.3s ease;
-}
-
-.fa-arrow-right-hover-effect:hover > svg {
-  margin-left: 15px;
-}
