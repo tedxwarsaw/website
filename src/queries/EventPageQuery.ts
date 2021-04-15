@@ -100,9 +100,14 @@ export const queryForProps = async (
     ),
   };
 
-  const partnerLogos: any = await Promise.all(
+  const partnerLogosDesktop: any = await Promise.all(
     event.partnerLogoPaths.map(
       async (path) => await getFixedImage({ graphql, path, height: 60 })
+    )
+  );
+  const partnerLogos: any = await Promise.all(
+    event.partnerLogoPaths.map(
+      async (path) => await getFixedImage({ graphql, path, height: 30 })
     )
   );
 
@@ -137,6 +142,7 @@ export const queryForProps = async (
   return {
     ...event,
     partnerLogos,
+    partnerLogosDesktop,
     partnershipTeam,
     suggestedEvent,
     cover,

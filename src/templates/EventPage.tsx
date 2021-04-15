@@ -1,19 +1,19 @@
 import React from "react";
-import { Link } from "gatsby";
 import Img, { FluidObject, FixedObject } from "gatsby-image";
 import { BackgroundImage } from "@/components/shared/BackgroundImage";
 import { Button, ButtonVariant } from "@/components/shared/Button";
 import { Page } from "@/components/shared/Page";
 import { splitTextInTwo } from "../utils";
-import { FaArrowRight, FaBars } from "react-icons/fa";
-
 import { EventHero } from "@/components/EventHero";
+import { SuggestedEvent } from "@/components/shared/SuggestedEvent";
+
 enum CoverVariant {
   Dark = "dark",
 }
 
 export interface Props {
   partnerLogos: FixedObject[];
+  partnerLogosDesktop: FixedObject[];
   partnershipTeam: PartnershipTeamMember[];
   suggestedEvent: SuggestedEvent;
   city: string;
@@ -83,6 +83,7 @@ export const EventPageTemplate = (props: Props) => {
         <div className="text-lg hidden md:block">{descriptionParts[1]}</div>
         <div className="text-lg block md:hidden">{props.description}</div>
       </div>
+
       <div className="main-grid-full-span seamless-grid">
         <div className="col-span-3">
           <BackgroundImage
@@ -107,6 +108,7 @@ export const EventPageTemplate = (props: Props) => {
           style={{ height: "30rem" }}
         ></iframe>
       </div>
+
       <div className="inner-grid py-20 space-y-8 md:space-y-0">
         <div className="space-y-2">
           <div className="font-bold text-4xl">Schedule</div>
@@ -138,6 +140,7 @@ export const EventPageTemplate = (props: Props) => {
           </div>
         </div>
       </div>
+
       <div className="main-grid-full-span h-96 bg-customRed flex flex-row items-center justify-center">
         <div className="text-4xl text-center text-white space-y-4 m-4">
           <div className="font-semibold">{props.callToAction.title}</div>
@@ -157,14 +160,21 @@ export const EventPageTemplate = (props: Props) => {
           </a>
         </div>
       </div>
+
       <div className="py-20 space-y-6">
         <div className="font-medium text-3xl pb-6">Event partners</div>
-        <div className="flex flex-wrap justify-between space-y-2">
+        <div className="flex  flex-wrap justify-between space-y-2 xl:hidden">
           {props.partnerLogos.map((fixed, idx) => (
             <Img key={idx} fixed={fixed} alt="Partner logo" />
           ))}
         </div>
+        <div className="flex flex-wrap justify-between hidden xl:flex space-y-2">
+          {props.partnerLogosDesktop.map((fixed, idx) => (
+            <Img key={idx} fixed={fixed} alt="Partner logo" />
+          ))}
+        </div>
       </div>
+
       <div className="py-20 inner-grid space-y-6">
         <div className="col-span-full text-3xl">
           <div className="font-bold">Become our partner</div>
@@ -186,49 +196,12 @@ export const EventPageTemplate = (props: Props) => {
           </div>
         ))}
       </div>
-      <div className="inner-grid py-20 space-y-4">
-        <div className="space-y-4 col-span-full">
-          <div className="text-4xl font-bold">
-            {props.suggestedEvent.displayName}
-          </div>
-          <div className="text-red-500 flex space-x-6">
-            <Link
-              to={`/watch?event=${props.suggestedEvent.slug}`}
-              className="font-semibold hover:opacity-50"
-            >
-              Watch the talks <FaArrowRight className="ml-2 inline" />
-            </Link>
-            <Link
-              to={`/event/${props.suggestedEvent.slug}/`}
-              className="font-semibold hover:opacity-50"
-            >
-              Read more <FaBars className="ml-2 inline" />
-            </Link>
-          </div>
-        </div>
-        <div className="flex flew-nowrap overflow-scroll col-span-full">
-          {props.suggestedEvent.photos.map((fluid, idx) => (
-            <div
-              key={idx}
-              className="h-96"
-              style={{
-                minWidth: "var(--column-width)",
-                width: "var(--column-width)",
-                marginRight:
-                  idx + 1 !== props.suggestedEvent.photos.length
-                    ? "var(--column-gap)"
-                    : null,
-              }}
-            >
-              <Img
-                fluid={fluid}
-                className="h-full w-full rounded"
-                alt={`Photo from ${props.suggestedEvent.displayName}`}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+
+      <SuggestedEvent
+        displayName={props.suggestedEvent.displayName}
+        slug={props.suggestedEvent.slug}
+        photos={props.suggestedEvent.photos}
+      />
     </Page>
   );
 };

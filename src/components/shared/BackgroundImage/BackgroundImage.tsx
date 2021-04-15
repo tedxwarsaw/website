@@ -27,7 +27,9 @@ export const BackgroundImage = (props: Props): JSX.Element => (
       {props.children}
     </div>
     <Img
-      className="h-full w-full z-0 background-image-only-mobile"
+      className={`h-full w-full z-0 ${
+        props.imageDesktop ? "background-image-only-mobile" : ""
+      }`}
       fluid={props.image}
       alt={props.alt}
     />
