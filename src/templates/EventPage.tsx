@@ -6,6 +6,12 @@ import { Page } from "@/components/shared/Page";
 import { splitTextInTwo } from "../utils";
 import { EventHero } from "@/components/EventHero";
 import { SuggestedEvent } from "@/components/shared/SuggestedEvent";
+import {
+  BecomePartner,
+  PartnershipTeamMember,
+} from "@/components/BecomePartner/BecomePartner";
+import { Partners } from "@/components/shared/Partners";
+import { Newsletter } from "@/components/shared/Newsletter";
 
 enum CoverVariant {
   Dark = "dark",
@@ -51,14 +57,6 @@ export interface SuggestedEvent {
   slug: string;
   displayName: string;
   photos: FluidObject[];
-}
-
-export interface PartnershipTeamMember {
-  areaOfResponsibility: string;
-  email: string;
-  name: string;
-  phoneNumber: string;
-  photo: FixedObject;
 }
 
 export const EventPageTemplate = (props: Props) => {
@@ -161,41 +159,13 @@ export const EventPageTemplate = (props: Props) => {
         </div>
       </div>
 
-      <div className="py-20 space-y-6">
-        <div className="font-medium text-3xl pb-6">Event partners</div>
-        <div className="flex  flex-wrap justify-between space-y-2 xl:hidden">
-          {props.partnerLogos.map((fixed, idx) => (
-            <Img key={idx} fixed={fixed} alt="Partner logo" />
-          ))}
-        </div>
-        <div className="flex flex-wrap justify-between hidden xl:flex space-y-2">
-          {props.partnerLogosDesktop.map((fixed, idx) => (
-            <Img key={idx} fixed={fixed} alt="Partner logo" />
-          ))}
-        </div>
-      </div>
+      <Partners
+        partnerSectionTitle="Event partners"
+        partnerLogos={props.partnerLogos}
+        partnerLogosDesktop={props.partnerLogosDesktop}
+      />
 
-      <div className="py-20 inner-grid space-y-6">
-        <div className="col-span-full text-3xl">
-          <div className="font-bold">Become our partner</div>
-          <div className="font-light">and enter the world of TEDx</div>
-        </div>
-        {props.partnershipTeam.map((member, idx) => (
-          <div key={idx} className="space-y-2">
-            <Img
-              className="rounded-full"
-              fixed={member.photo}
-              alt={`Photo of ${member.name}`}
-            />
-            <div className="font-bold">{member.areaOfResponsibility}</div>
-            <div>{member.name}</div>
-            <div className="text-red-500 font-semibold">
-              {member.phoneNumber}
-            </div>
-            <div className="text-red-500 font-semibold">{member.email}</div>
-          </div>
-        ))}
-      </div>
+      <BecomePartner partnershipTeam={props.partnershipTeam} />
 
       <SuggestedEvent
         displayName={props.suggestedEvent.displayName}

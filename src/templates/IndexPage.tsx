@@ -79,6 +79,7 @@ export const IndexPageTemplate = (props: Props) => (
       joinOurPartnersLink={props.joinOurPartnersLink}
       partnerLogos={props.partnerLogos}
       partnerLogosDesktop={props.partnerLogosDesktop}
+      showLinks
     />
     <Newsletter
       variant={NewsletterVariant.black}
