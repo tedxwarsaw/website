@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Button } from "@/components/shared/Button";
+import { SelectInput } from "./SelectInput";
 import "./NewsletterForm.styled.css";
 
 enum FormTopic {
@@ -40,14 +41,15 @@ export const NewsletterForm = () => {
     >
       <p className="mt-3 md:w-full xl:w-auto xl:mt-0">Keep me updated about</p>
       <div className="newsletter-form-fields xl:flex xl:flex-grow">
-        <select
+        <SelectInput />
+        {/* <select
           className="my-3 p-4 border border-customGrey rounded-md md:col-start-2 md:col-end-3 xl:mx-4"
           name="topic"
           id="topic"
           {...register("topic")}
         >
           <option value={FormTopic.newEvents}>New events</option>
-        </select>
+        </select> */}
         <input
           className="my-3 p-4 border border-customGrey rounded-md md:row-start-2 md:col-start-2 md:col-end-3 xl:flex-grow "
           name="name"
