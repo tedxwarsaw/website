@@ -35,7 +35,7 @@ export const CardEvent = ({
       </a>
     </div>
     <span className="absolute left-0 top-0  text-white text-sm px-3 bg-customRed md:py-1">
-      UPCOMMING
+      UPCOMING
     </span>
 
     <div className="md:flex justify-between items-end mb-2 mt-5 md:my-5">
