@@ -2,6 +2,7 @@ import React from "react";
 
 export enum ButtonVariant {
   filledRed = "filledRed",
+  filledRedWithBG = "filledRedWithBG",
   outlineWhite = "outlineWhite",
   filledGrey = "filledGrey",
 }
@@ -9,6 +10,7 @@ export enum ButtonVariant {
 const classes = {};
 classes[ButtonVariant.filledRed] =
   "text-white bg-customRed hover:bg-white hover:text-customRed";
+classes[ButtonVariant.filledRedWithBG] = "text-white bg-customRed";
 classes[ButtonVariant.outlineWhite] =
   "border border-white text-white bg-transparent hover:bg-white hover:text-red-500";
 classes[ButtonVariant.filledGrey] =
