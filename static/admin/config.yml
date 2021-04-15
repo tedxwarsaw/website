@@ -327,6 +327,35 @@ collections:
             hint:
               Whether to show the featured event or not. If set to false, featured event sections
               will disappear from all the places where they would usually be.
+      - label: "Newsletter (shown globally)"
+        name: "newsletter"
+        file: "src/pages/content/global/newsletter.yaml"
+        fields:
+          - name: collectionId
+            widget: hidden
+            default: newsletter
+          - name: newsletterTitle
+            label: Newlsetter title
+            widget: string
+            hint: "Text shown in newsletter component header"
+          - name: newsletterMessage1
+            label: Newlsetter message part 1
+            widget: string
+            hint: "Text shown in newsletter component below header"
+          - name: newsletterMessage2
+            label: Newlsetter message part 2
+            widget: string
+            hint: "Text shown in newsletter component below header"
+          - name: newsletterBackgroundImagePath
+            label: Newsletter background image 
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - name: newsletterBackgroundImageDesktopPath
+            label: Newsletter background image desktop
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
   - label: "Events"
     name: events
     folder: "src/pages/content/events"
