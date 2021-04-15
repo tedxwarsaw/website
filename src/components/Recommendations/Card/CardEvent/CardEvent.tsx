@@ -19,8 +19,8 @@ export const CardEvent = ({
   displayName,
   date,
 }: CardEventProps) => (
-  <a href={`/event/${slug}`}>
-    <div className=" pt-2 md:pt-3 pb-5 border-b-4 border-customTransparent  hover:border-customRed h-full flex flex-col">
+  <div className=" pt-2 md:pt-3 pb-5 border-b-4 border-customTransparent  hover:border-customRed h-full flex flex-col">
+    <a href={`/event/${slug}`}>
       <div className="relative card-image-container">
         <Img
           className="w-full h-full md:hidden"
@@ -33,10 +33,12 @@ export const CardEvent = ({
           alt="Slider item image"
         />
       </div>
-      <span className="absolute left-0 top-0  text-white text-sm px-3 bg-customRed md:py-1">
-        UPCOMING
-      </span>
+    </a>
+    <span className="absolute left-0 top-0  text-white text-sm px-3 bg-customRed md:py-1">
+      <a href={`/event/${slug}`}>UPCOMING</a>
+    </span>
 
+    <a href={`/event/${slug}`}>
       <div className="md:flex justify-between items-end mb-2 mt-5 md:my-5">
         <div>
           <span className="font-bold my-10">Title</span>
@@ -44,27 +46,27 @@ export const CardEvent = ({
         </div>
         <p>{date}</p>
       </div>
+    </a>
 
-      <div className="flex items-center mt-auto">
-        <a
-          href={`/attend/${slug}`}
-          className="text-sm"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button variant={ButtonVariant.filledRedWithBG}>Attend</Button>
-        </a>
-        <a
-          href={`/event/${slug}`}
-          className="text-customRed text-sm flex hover:opacity-50 items-center ml-5"
-          style={{ width: "fit-content" }}
-        >
-          <span className="my-auto flex items-center">
-            Learn more
-            <FaArrowRight className="ml-3" />
-          </span>
-        </a>
-      </div>
+    <div className="flex items-center mt-auto">
+      <a
+        href={`/attend/${slug}`}
+        className="text-sm"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Button variant={ButtonVariant.filledRedWithBG}>Attend</Button>
+      </a>
+      <a
+        href={`/event/${slug}`}
+        className="text-customRed text-sm flex hover:opacity-50 items-center ml-5"
+        style={{ width: "fit-content" }}
+      >
+        <span className="my-auto flex items-center">
+          Learn more
+          <FaArrowRight className="ml-3" />
+        </span>
+      </a>
     </div>
-  </a>
+  </div>
 );
