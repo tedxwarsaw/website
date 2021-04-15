@@ -1,14 +1,15 @@
 import React, { useState, useRef } from "react";
 import { BsChevronUp } from "react-icons/bs";
 import "./SelectInput.styled.css";
-
+import { UseFormRegister, UseFormSetValue } from "react-hook-form";
+import { FormData } from "../NewsletterForm";
 interface SelectInputProps {
   options: {
     name: string;
     value: string;
   }[];
-  register: any;
-  setValue: any;
+  register: UseFormRegister<FormData>;
+  setValue: UseFormSetValue<FormData>;
 }
 
 export const SelectInput = ({
