@@ -26,7 +26,7 @@ export const Newsletter = ({
   newsletterBackgroundImage,
   newsletterBackgroundImageDesktop,
 }: NewsletterProps) => {
-  if (variant === NewsletterVariant.black) {
+  if (variant === NewsletterVariant.white) {
     return (
       <div className="main-grid-full-span">
         <BackgroundImage
@@ -47,6 +47,25 @@ export const Newsletter = ({
             <NewsletterForm />
           </div>
         </BackgroundImage>
+      </div>
+    );
+  } else if (variant === NewsletterVariant.black) {
+    return (
+      <div className="main-grid-full-span">
+        <div className="newsletter-container bg-customLightGrey py-12">
+          <div className="seamless-grid mb-10 md:mb-0">
+            <div className="col-start-2 col-end-7 inner-grid">
+              <h2 className="font-medium text-3xl">{newsletterTitle}</h2>
+              <p className="my-5 col-start-1 col-end-2 row-start-2">
+                {newsletterMessage1}
+              </p>
+              <p className="col-start-1 col-end-2 row-start-3 md:col-start-2 md:col-end-3 md:row-start-2 my-5 ">
+                {newsletterMessage2}
+              </p>
+            </div>
+            <NewsletterForm />
+          </div>
+        </div>
       </div>
     );
   }
