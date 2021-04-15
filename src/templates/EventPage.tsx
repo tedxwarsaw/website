@@ -1,7 +1,5 @@
 import React from "react";
-import Img, { FluidObject, FixedObject } from "gatsby-image";
-import { BackgroundImage } from "@/components/shared/BackgroundImage";
-import { Button, ButtonVariant } from "@/components/shared/Button";
+import { FluidObject, FixedObject } from "gatsby-image";
 import { Page } from "@/components/shared/Page";
 import { splitTextInTwo } from "../utils";
 import { EventHero } from "@/components/EventHero";
@@ -16,7 +14,7 @@ import {
   NewsletterProps,
   NewsletterVariant,
 } from "@/components/shared/Newsletter";
-import { Banner } from "@/components/shared/Banner";
+import { Banner, BannerVariant } from "@/components/shared/Banner";
 import { EventSchedule } from "@/components/EventSchedule";
 import { EventPlace, EventPlaceProps } from "@/components/EventPlace";
 
@@ -101,6 +99,14 @@ export const EventPageTemplate = (props: Props) => {
       />
 
       <BecomePartner partnershipTeam={props.partnershipTeam} />
+
+      <Banner
+        title="Join TEDx Warsaw."
+        variant={BannerVariant.white}
+        subtitle="Become our volunteer and enter the amazing world of TEDx"
+        buttonText="Get involved as a volonteer"
+        buttonUrl="/"
+      />
 
       <SuggestedEvent
         displayName={props.suggestedEvent.displayName}
