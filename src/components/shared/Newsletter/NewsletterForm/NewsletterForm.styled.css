@@ -17,3 +17,7 @@
     flex-direction: column;
   }
 }
+
+input::placeholder {
+  color: theme("colors.black");
+}

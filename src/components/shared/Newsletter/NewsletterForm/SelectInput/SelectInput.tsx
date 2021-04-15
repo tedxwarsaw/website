@@ -1,51 +1,77 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { BsChevronUp } from "react-icons/bs";
 import "./SelectInput.styled.css";
 
-export const SelectInput = () => {
-  const [isSelectActive, setIsSelectActive] = useState(false);
-  const [selectValue, setSelectValue] = useState("Selected topic");
+interface SelectInputProps {
+  options: {
+    name: string;
+    value: string;
+  }[];
+  register: any;
+  setValue: any;
+}
 
+export const SelectInput = ({
+  options,
+  register,
+  setValue,
+}: SelectInputProps) => {
+  const [isSelectActive, setIsSelectActive] = useState(false);
+  const selectFieldRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (
+      selectFieldRef.current &&
+      !selectFieldRef.current.contains(event.target)
+    ) {
+      setIsSelectActive(false);
+    }
+  };
+  document.addEventListener("mousedown", handleClickOutside);
   const handleSelect = (value: string) => {
-    setSelectValue(value);
+    setValue("topic", value);
     setIsSelectActive(false);
   };
 
   return (
-    <div className="my-3 border border-customGrey rounded-md md:col-start-2 md:col-end-3 xl:mx-4">
+    <div
+      className="my-3 border border-customGrey border-opacity-50 rounded-md md:col-start-2 md:col-end-3 xl:mx-4"
+      ref={selectFieldRef}
+    >
       <div className="select-box p-4 ">
         <div
-          className={`options-container py-4 border border-customGrey rounded-md ${
+          className={`options-container py-4 border border-opacity-50 border-customGrey rounded-md ${
             isSelectActive ? "active" : ""
           }`}
         >
-          <div
-            className="option px-4 py-2 cursor-pointer"
-            onClick={() => handleSelect("New events")}
-          >
-            <input type="radio" class="radio" id="newEvents" name="topic" />
-            <label for="newEvents">New events</label>
-          </div>
-          <div
-            className="option px-4 py-2 cursor-pointer"
-            onClick={() => handleSelect("Inspirations staf")}
-          >
-            <input type="radio" class="radio" id="othertopic" name="topic" />
-            <label for="newEvents">Inspirations staf</label>
-          </div>
-          <div
-            className="option px-4 py-2 cursor-pointer"
-            onClick={() => handleSelect("All")}
-          >
-            <input type="radio" class="radio" id="oneMore" name="topic" />
-            <label for="newEvents">All</label>
-          </div>
+          {options.map((option) => (
+            <div
+              className="option px-4 py-2 cursor-pointer"
+              key={option.name}
+              onClick={() => handleSelect(option.value)}
+            >
+              <input
+                type="radio"
+                className="radio"
+                id={option.name}
+                name="topic"
+              />
+              <label htmlFor={option.name}>{option.value}</label>
+            </div>
+          ))}
         </div>
         <div
           className="selected-value cursor-pointer"
           onClick={() => setIsSelectActive((prev) => !prev)}
+          {...register("topic")}
         >
-          {selectValue}
+          <input
+            name="topic"
+            placeholder="Topic"
+            {...register("topic")}
+            readOnly
+            className="outline-none"
+          />
           <BsChevronUp className="stroke-1" />
         </div>
       </div>

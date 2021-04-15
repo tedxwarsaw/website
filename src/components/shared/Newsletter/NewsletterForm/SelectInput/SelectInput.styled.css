@@ -6,6 +6,7 @@
 
 .select-box .options-container {
   position: absolute;
+  z-index: 9;
   background: white;
   left: 0;
   top: 57px;
