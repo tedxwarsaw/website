@@ -6,8 +6,8 @@ import { Button, ButtonVariant } from "@/components/shared/Button";
 import { Page } from "@/components/shared/Page";
 import { splitTextInTwo } from "../utils";
 import { FaArrowRight, FaBars } from "react-icons/fa";
-import moment from "moment";
 
+import { EventHero } from "@/components/EventHero";
 enum CoverVariant {
   Dark = "dark",
 }
@@ -63,38 +63,18 @@ export interface PartnershipTeamMember {
 
 export const EventPageTemplate = (props: Props) => {
   const descriptionParts = splitTextInTwo(props.description);
-  const date = moment(props.date, "DD/MM/YYYY");
 
   return (
     <Page>
-      <div className="main-grid-full-span">
-        <BackgroundImage
-          style={{ height: "40rem" }}
-          image={props.cover.image.desktop}
-          alt="Cover photo"
-        >
-          <div className="h-full overflow-hidden">
-            <div className="h-full flex flex-row items-center">
-              <div className="flex flex-col w-full items-center h-full justify-end p-20">
-                <div className="text-center my-8 text-white text-medium text-3xl text-shadow">
-                  {date.format("D MMMM YYYY")}, {props.location.city}
-                </div>
-                {props.cover.button.show && (
-                  <a
-                    href={props.cover.button.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button className="px-20 shadow-2xl">
-                      {props.cover.button.text}
-                    </Button>
-                  </a>
-                )}
-              </div>
-            </div>
-          </div>
-        </BackgroundImage>
-      </div>
+      <EventHero
+        backgroundImage={props.cover.image.mobile}
+        backgroundImageDesktop={props.cover.image.desktop}
+        date={props.date}
+        city={props.location.city}
+        buttonShow={props.cover.button.show}
+        buttonText={props.cover.button.text}
+        buttonLink={props.cover.button.link}
+      />
       <div className="inner-grid py-20 space-y-10 xl:space-y-0">
         <div className="font-bold text-3xl md:col-span-2 xl:col-span-1">
           {props.hook}
