@@ -17,13 +17,14 @@ import {
   NewsletterVariant,
 } from "@/components/shared/Newsletter";
 import { Banner } from "@/components/shared/Banner";
-import { EventSchedule } from "@/components/shared/EventSchedule";
+import { EventSchedule } from "@/components/EventSchedule";
+import { EventPlace, EventPlaceProps } from "@/components/EventPlace";
 
 enum CoverVariant {
   Dark = "dark",
 }
 
-export interface Props extends NewsletterProps {
+export interface Props extends NewsletterProps, EventPlaceProps {
   partnerLogos: FixedObject[];
   partnerLogosDesktop: FixedObject[];
   partnershipTeam: PartnershipTeamMember[];
@@ -44,12 +45,6 @@ export interface Props extends NewsletterProps {
       desktop: FluidObject;
       mobile: FluidObject;
     };
-  };
-  location: {
-    displayName: string;
-    city: string;
-    image: FluidObject;
-    mapSrc: string;
   };
   callToAction: {
     title: string;
@@ -88,30 +83,7 @@ export const EventPageTemplate = (props: Props) => {
         <div className="text-lg block md:hidden">{props.description}</div>
       </div>
 
-      <div className="main-grid-full-span seamless-grid">
-        <div className="col-span-3">
-          <BackgroundImage
-            image={props.location.image}
-            alt="Cover photo"
-            style={{ height: "30rem" }}
-          >
-            <div className="absolute w-screen main-grid h-60 overflow-hidden text-white space-y-0 py-10">
-              <div className="font-medium text-4xl text-shadow">
-                {props.location.displayName},
-                <br />
-                <span className="font-light">{props.location.city}</span>
-              </div>
-            </div>
-          </BackgroundImage>
-        </div>
-        <iframe
-          src={props.location.mapSrc}
-          height="100%"
-          width="100%"
-          className="col-span-3 md:col-span-2 xl:col-span-4"
-          style={{ height: "30rem" }}
-        ></iframe>
-      </div>
+      <EventPlace location={props.location} />
 
       <EventSchedule />
 
