@@ -286,8 +286,6 @@ export const queryForProps = async (
 
   const newsletter = await queryForNewsletter(graphql);
 
-  console.log(newsletter);
-
   return {
     ...pagesYaml,
     heroBackgroundImage,

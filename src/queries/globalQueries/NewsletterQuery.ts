@@ -20,7 +20,6 @@ export const queryForNewsletter = async (
     data: { newsletter },
   } = await graphql(newsletterQuery);
 
-  console.log(newsletter);
   const newsletterBackgroundImage = await getFluidImage({
     graphql,
     path: newsletter.newsletterBackgroundImagePath,
