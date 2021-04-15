@@ -11,13 +11,17 @@ import {
   PartnershipTeamMember,
 } from "@/components/BecomePartner/BecomePartner";
 import { Partners } from "@/components/shared/Partners";
-import { Newsletter } from "@/components/shared/Newsletter";
+import {
+  Newsletter,
+  NewsletterProps,
+  NewsletterVariant,
+} from "@/components/shared/Newsletter";
 
 enum CoverVariant {
   Dark = "dark",
 }
 
-export interface Props {
+export interface Props extends NewsletterProps {
   partnerLogos: FixedObject[];
   partnerLogosDesktop: FixedObject[];
   partnershipTeam: PartnershipTeamMember[];
@@ -171,6 +175,12 @@ export const EventPageTemplate = (props: Props) => {
         displayName={props.suggestedEvent.displayName}
         slug={props.suggestedEvent.slug}
         photos={props.suggestedEvent.photos}
+      />
+      <Newsletter
+        variant={NewsletterVariant.white}
+        newsletterTitle={props.newsletterTitle}
+        newsletterMessage1={props.newsletterMessage1}
+        newsletterMessage2={props.newsletterMessage2}
       />
     </Page>
   );

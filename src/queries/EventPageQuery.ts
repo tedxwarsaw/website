@@ -1,6 +1,7 @@
 import { parse as parseHTML, HTMLElement } from "node-html-parser";
 import { Props } from "../templates/EventPage";
 import { getFixedImage, getFluidImage } from "./utils";
+import { queryForNewsletter } from "./globalQueries";
 
 const firstQuery = `#graphql
   query FirstEvent {
@@ -138,6 +139,7 @@ export const queryForProps = async (
       path: event.location.image,
     }),
   };
+  const newsletter = await queryForNewsletter(graphql);
 
   return {
     ...event,
@@ -147,5 +149,6 @@ export const queryForProps = async (
     suggestedEvent,
     cover,
     location,
+    ...newsletter,
   };
 };

@@ -14,8 +14,8 @@ export interface NewsletterProps {
   newsletterTitle: string;
   newsletterMessage1: string;
   newsletterMessage2: string;
-  newsletterBackgroundImage: FluidObject;
-  newsletterBackgroundImageDesktop: FluidObject;
+  newsletterBackgroundImage?: FluidObject;
+  newsletterBackgroundImageDesktop?: FluidObject;
 }
 
 export const Newsletter = ({
