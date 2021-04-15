@@ -22,14 +22,6 @@
   opacity: 1;
 }
 
-.select-box .option .selected-value {
-  cursor: pointer;
-}
-
-.select-box label {
-  cursor: pointer;
-}
-
 .select-box .option:hover {
   background: theme("colors.customLightGrey");
   color: theme("colors.customRed");
@@ -42,7 +34,7 @@
   position: absolute;
   top: 20px;
   right: 15px;
-  transition: all 0.4 ease;
+  transition: all 0.4s ease;
 }
 
 .select-box .options-container.active + .selected-value svg {
