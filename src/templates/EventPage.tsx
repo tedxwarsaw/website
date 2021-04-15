@@ -16,6 +16,7 @@ import {
   NewsletterProps,
   NewsletterVariant,
 } from "@/components/shared/Newsletter";
+import { Banner } from "@/components/shared/Banner";
 
 enum CoverVariant {
   Dark = "dark",
@@ -143,25 +144,12 @@ export const EventPageTemplate = (props: Props) => {
         </div>
       </div>
 
-      <div className="main-grid-full-span h-96 bg-customRed flex flex-row items-center justify-center">
-        <div className="text-4xl text-center text-white space-y-4 m-4">
-          <div className="font-semibold">{props.callToAction.title}</div>
-          <div className="font-medium">{props.callToAction.subtitle}</div>
-          <div className="h-2" />
-          <a
-            href={props.callToAction.buttonUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button
-              variant={ButtonVariant.outlineWhite}
-              className="font-normal text-lg px-20"
-            >
-              {props.callToAction.buttonText}
-            </Button>
-          </a>
-        </div>
-      </div>
+      <Banner
+        title={props.callToAction.title}
+        subtitle={props.callToAction.subtitle}
+        buttonText={props.callToAction.buttonText}
+        buttonUrl={props.callToAction.buttonUrl}
+      />
 
       <Partners
         partnerSectionTitle="Event partners"
