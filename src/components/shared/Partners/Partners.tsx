@@ -34,7 +34,7 @@ export const Partners = ({
           style={{ width: "fit-content" }}
         >
           <span className="my-auto flex items-center">
-            {getToKnowOurPartnersText} <FaArrowRight className="ml-6 " />
+            {getToKnowOurPartnersText} <FaArrowRight className="ml-2" />
           </span>
         </a>
         <a href={joinOurPartnersLink} target="_blank" rel="noopener noreferrer">
@@ -47,22 +47,12 @@ export const Partners = ({
 
     <div className="flex flex-wrap justify-between space-y-4 xl:hidden">
       {partnerLogos.map((fixed, idx) => (
-        <Img
-          key={idx}
-          fixed={fixed}
-          alt="Partner logo"
-          className="partner-logo-image"
-        />
+        <Img key={idx} fixed={fixed} alt="Partner logo" />
       ))}
     </div>
-    <div className="flex flex-wrap justify-between space-y-4  hidden xl:block">
+    <div className="flex flex-wrap justify-between space-y-4  hidden xl:flex">
       {partnerLogosDesktop.map((fixed, idx) => (
-        <Img
-          key={idx}
-          fixed={fixed}
-          alt="Partner logo"
-          className="partner-logo-image"
-        />
+        <Img key={idx} fixed={fixed} alt="Partner logo" />
       ))}
     </div>
     <div className="flex flex-col md:flex-row  md:items-center  items-start xl:hidden">
@@ -77,7 +67,7 @@ export const Partners = ({
         style={{ width: "fit-content" }}
       >
         <span className="my-2 md:my-0 md:ml-5 flex items-center">
-          {getToKnowOurPartnersText} <FaArrowRight className="ml-6 " />
+          {getToKnowOurPartnersText} <FaArrowRight className="ml-2" />
         </span>
       </a>
     </div>
