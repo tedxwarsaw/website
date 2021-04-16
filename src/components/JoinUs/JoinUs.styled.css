@@ -1,0 +1,22 @@
+@media (min-width: theme("screens.md")) {
+  .join-us-section-left {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .join-us-section-right {
+    grid-column-start: 4;
+    grid-column-end: end;
+  }
+}
+
+@media (max-width: theme("screens.md")) {
+  .join-us-section-left {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+  }
+  .join-us-section-right {
+    grid-column-start: 1;
+    grid-column-end: end;
+  }
+}
