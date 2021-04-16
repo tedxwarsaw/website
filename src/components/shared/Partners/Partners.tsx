@@ -1,6 +1,6 @@
 import React from "react";
 import Img, { FixedObject } from "gatsby-image";
-import { Button } from "@/components/shared/Button";
+import { Button, ButtonVariant } from "@/components/shared/Button";
 import { FaArrowRight } from "react-icons/fa";
 
 export interface PartnersProps {
@@ -38,7 +38,9 @@ export const Partners = ({
           </span>
         </a>
         <a href={joinOurPartnersLink} target="_blank" rel="noopener noreferrer">
-          <Button className="ml-5">{joinOurPartnersText}</Button>
+          <Button className="ml-5" variant={ButtonVariant.filledRedWithBG}>
+            {joinOurPartnersText}
+          </Button>
         </a>
       </div>
     </div>
@@ -65,7 +67,9 @@ export const Partners = ({
     </div>
     <div className="flex flex-col md:flex-row  md:items-center  items-start xl:hidden">
       <a href={joinOurPartnersLink} target="_blank" rel="noopener noreferrer">
-        <Button className="my-5">{joinOurPartnersText}</Button>
+        <Button className="my-5" variant={ButtonVariant.filledRedWithBG}>
+          {joinOurPartnersText}
+        </Button>
       </a>
       <a
         href={getToKnowOurPartnersLink}
