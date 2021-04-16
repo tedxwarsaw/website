@@ -1,0 +1,10 @@
+collectionId: talk
+slug: "open-your-eyes"
+displayName: "Open your eyes, open your mind"
+speaker: "Magdalena Król"
+eventSlug: "2020"
+cover:
+  image:
+    desktop: talks/open-your-eyes/coverPhotos/talk-cover.png
+    mobile: talks/open-your-eyes/coverPhotos/talk-cover.png
+duration: "3:14"

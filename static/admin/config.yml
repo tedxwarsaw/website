@@ -54,6 +54,23 @@ collections:
             fields: 
               - { label: "Bold text", name: "boldText", widget: "string"}
               - { label: "Text", name: "text", widget: "string"}
+          - name: recommendations
+            label: "Recommendations"
+            widget: object
+            hint: "Events and talks that will be shown in the recommendations slider"
+            fields: 
+              - name: "events"
+                label: "Events"
+                widget: list
+                fields: 
+                  - { label: "Event", name: "eventSlug", widget: "relation", collection: events, value_field: "slug", display_fields: ["displayName"], search_fields: ["displayName", "slug"]}
+                  - { label: "Order", name: "order", widget: number, hint: "Order number in which this item will be displayed on the slider"}
+              - name: "talks"
+                label: "Talks"
+                widget: list
+                fields: 
+                  - { label: "Talk", name: "talkSlug", widget: "relation", collection: talks, value_field: "slug", display_fields: ["displayName"], search_fields: ["displayName", "slug"]}
+                  - { label: "Order", name: "order", widget: number, hint: "Order number in which this item will be displayed on the slider"}
           - name: eventSlug
             label: Event
             widget: relation
@@ -365,3 +382,61 @@ collections:
         media_library:
           config:
             multiple: true
+  - label: "Talks"
+    name: talks
+    folder: "src/pages/content/talks"
+    create: true
+    identifier_field: slug
+    extension: yml
+    fields:
+      - name: collectionId
+        widget: hidden
+        default: talk
+      - name: slug
+        label: Slug
+        widget: string
+        pattern:
+          [
+            "^[a-zA-Z0-9_-]+$",
+            "it can be composed only of the letters of the English alphabet, digits, dashes, and underscores",
+          ]
+        hint: "The part of the URL which identifies an event."
+      - name: displayName
+        label: "Display name"
+        widget: string
+        hint: "The name of the event. For example, TEDxWarsaw 2020."
+      - name: speaker
+        label: "Speaker"
+        widget: string
+        hint: "The speaker this talk"
+      - name: eventSlug
+        label: "Event"
+        widget: relation
+        collection: events
+        value_field: slug
+        display_fields: ["displayName"]
+        search_fields: ["displayName", "slug"]
+        hint: "Event hosting this talk"
+      - name: cover
+        label: Cover
+        widget: object
+        hint: The topmost section on an event page.
+        fields:
+          - name: image
+            label: Cover image
+            widget: object
+            fields:
+              - name: mobile
+                label: Mobile variant
+                widget: image
+                allow_multiple: false
+                media_folder: "{{slug}}/coverPhotos"
+              - name: desktop
+                label: Desktop variant
+                widget: image
+                allow_multiple: false
+                media_folder: "{{slug}}/coverPhotos"
+      - name: duration
+        label: Duration
+        widget: string
+        hint: "Duration of this talk"

@@ -158,7 +158,7 @@ export const EventPageTemplate = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="main-grid-full-span h-96 bg-red-600 flex flex-row items-center justify-center">
+      <div className="main-grid-full-span h-96 bg-customRed flex flex-row items-center justify-center">
         <div className="text-4xl text-center text-white space-y-4 m-4">
           <div className="font-semibold">{props.callToAction.title}</div>
           <div className="font-medium">{props.callToAction.subtitle}</div>

@@ -20,6 +20,16 @@ export const pageQuery = `#graphql
         boldText
         text
       }
+      recommendations {
+        events {
+          eventSlug
+          order
+        }
+        talks {
+          talkSlug
+          order
+        }
+      }
       youtubeBannerHeading
       youtubeBannerLinkText
       youtubeBannerLinkUrl
@@ -33,6 +43,7 @@ const eventQuery = `#graphql
     $eventSlug: String
   ) {
     event: eventsYaml(slug: {eq: $eventSlug}) {
+      slug
       displayName
       description
       cover {
@@ -42,13 +53,35 @@ const eventQuery = `#graphql
         }
       }
       speakerPhotoPaths
+      date
     }
   }
+`;
+
+const talkQuery = `#graphql
+query TalkQuery(
+  $talkSlug: String
+) {
+  talk: talksYaml(slug: {eq: $talkSlug}) {
+    slug
+    displayName
+    speaker
+    eventSlug
+    cover {
+        image {
+          desktop
+          mobile
+        }
+    }
+    duration
+  }
+}
 `;
 
 export const queryForProps = async (
   graphql: (query: string, args?: any) => any
 ): Promise<Props> => {
+  const loadedEvents = {};
   const {
     data: { pagesYaml },
   } = await graphql(pageQuery);
@@ -58,6 +91,8 @@ export const queryForProps = async (
   } = await graphql(eventQuery, {
     eventSlug: pagesYaml.eventSlug,
   });
+
+  loadedEvents[pagesYaml.eventSlug] = event;
 
   const heroBackgroundImage = await getFluidImage({
     graphql,
@@ -86,6 +121,116 @@ export const queryForProps = async (
     sizes: "(max:-width: 2000px)",
   });
 
+  const queryRecommendationsData = async () => {
+    const eventsData = await Promise.all(
+      pagesYaml.recommendations.events.map(async (eventQueryData) => {
+        if (loadedEvents[eventQueryData.eventSlug]) {
+          const cover = await getFluidImage({
+            graphql,
+            path: loadedEvents[eventQueryData.eventSlug].cover.image.mobile,
+            quality: 90,
+            sizes: "(max:-width: 768px)",
+          });
+          const coverDesktop = await getFluidImage({
+            graphql,
+            path: loadedEvents[eventQueryData.eventSlug].cover.image.desktop,
+            quality: 90,
+            sizes: "(max:-width: 2000px)",
+          });
+
+          return {
+            item: {
+              ...loadedEvents[eventQueryData.eventSlug],
+              cover,
+              coverDesktop,
+            },
+            order: eventQueryData.order,
+          };
+        } else {
+          const {
+            data: { event },
+          } = await graphql(eventQuery, {
+            eventSlug: eventQueryData.eventSlug,
+          });
+          const cover = await getFluidImage({
+            graphql,
+            path: event.cover.image.mobile,
+            quality: 90,
+            sizes: "(max:-width: 768px)",
+          });
+          const coverDesktop = await getFluidImage({
+            graphql,
+            path: event.cover.image.desktop,
+            quality: 90,
+            sizes: "(max:-width: 2000px)",
+          });
+
+          return {
+            item: { ...event, cover, coverDesktop },
+            order: eventQueryData.order,
+          };
+        }
+      })
+    );
+    const talksData = await Promise.all(
+      pagesYaml.recommendations.talks.map(async (talkQueryData) => {
+        const {
+          data: { talk },
+        } = await graphql(talkQuery, {
+          talkSlug: talkQueryData.talkSlug,
+        });
+
+        const cover = await getFluidImage({
+          graphql,
+          path: talk.cover.image.mobile,
+          quality: 90,
+          sizes: "(max:-width: 768px)",
+        });
+        const coverDesktop = await getFluidImage({
+          graphql,
+          path: talk.cover.image.desktop,
+          quality: 90,
+          sizes: "(max:-width: 2000px)",
+        });
+
+        if (loadedEvents[talk.eventSlug]) {
+          return {
+            item: {
+              ...talk,
+              eventName: loadedEvents[talk.eventSlug].displayName,
+              cover,
+              coverDesktop,
+            },
+            order: talkQueryData.order,
+          };
+        } else {
+          const {
+            data: { event },
+          } = await graphql(eventQuery, {
+            eventSlug: talk.eventSlug,
+          });
+          return {
+            item: {
+              ...talk,
+              eventName: event.displayName,
+              cover,
+              coverDesktop,
+            },
+            order: talkQueryData.order,
+          };
+        }
+      })
+    );
+    return [...eventsData, ...talksData];
+  };
+
+  const recommendations: {
+    item: {};
+    order: number;
+  }[] = await queryRecommendationsData();
+
+  recommendations.sort((a, b) => a.order - b.order);
+
   const eventSpeakerPhotos: any = await Promise.all(
     event.speakerPhotoPaths.map(async (path) => {
       const image = await getFixedImage({
@@ -107,5 +252,6 @@ export const queryForProps = async (
     eventHiglightImage,
     eventHiglightImageDesktop,
     eventSpeakerPhotos,
+    recommendations,
   };
 };

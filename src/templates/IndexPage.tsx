@@ -2,6 +2,10 @@ import React from "react";
 import { Page } from "@/components/shared/Page";
 import { HeroSection, HeroSectionProps } from "@/components/HeroSection";
 import { OurStory, OurStoryProps } from "@/components/OurStory";
+import {
+  Recommendations,
+  RecommendationsProps,
+} from "@/components/Recommendations";
 import { YoutubeBanner, YoutubeBannerProps } from "@/components/YoutubeBanner";
 import {
   EventHighlight,
@@ -11,6 +15,7 @@ import {
 export interface Props
   extends HeroSectionProps,
     OurStoryProps,
+    RecommendationsProps,
     YoutubeBannerProps,
     EventHighlightProps {}
 
@@ -30,6 +35,7 @@ export const IndexPageTemplate = (props: Props) => (
       ourStoryTitle={props.ourStoryTitle}
       ourStoryItems={props.ourStoryItems}
     />
+    <Recommendations recommendations={props.recommendations} />
     <YoutubeBanner
       youtubeBannerHeading={props.youtubeBannerHeading}
       youtubeBannerLinkText={props.youtubeBannerLinkText}

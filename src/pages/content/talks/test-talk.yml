@@ -1,0 +1,10 @@
+collectionId: talk
+slug: "test-talk"
+displayName: "Test talk - to be removed"
+speaker: "Agnieszka Trzeszczak"
+eventSlug: "2020"
+cover:
+  image:
+    desktop: talks/test-talk/coverPhotos/talk-cover.png
+    mobile: talks/test-talk/coverPhotos/talk-cover.png
+duration: "3:14"
