@@ -50,7 +50,7 @@ export const CardEvent = ({
 
     <div className="flex items-center mt-auto">
       <a
-        href={`/attend/${slug}`}
+        href={`/event/${slug}`}
         className="text-sm"
         target="_blank"
         rel="noopener noreferrer"
