@@ -44,6 +44,12 @@ export const pageQuery = `#graphql
       joinUsGetToKnowOurTeamLink
       joinUsBecomeSpeakerText
       joinUsBecomeSpeakerLink
+      partnerSectionTitle
+      getToKnowOurPartnersText
+      getToKnowOurPartnersLink
+      joinOurPartnersText
+      joinOurPartnersLink
+      partnerLogoPaths
     }
   }
 `;
@@ -266,6 +272,17 @@ export const queryForProps = async (
     sizes: "(max:-width: 2000px)",
   });
 
+  const partnerLogos: any = await Promise.all(
+    pagesYaml.partnerLogoPaths.map(
+      async (path) => await getFixedImage({ graphql, path, height: 30 })
+    )
+  );
+  const partnerLogosDesktop: any = await Promise.all(
+    pagesYaml.partnerLogoPaths.map(
+      async (path) => await getFixedImage({ graphql, path, height: 60 })
+    )
+  );
+
   return {
     ...pagesYaml,
     heroBackgroundImage,
@@ -278,5 +295,7 @@ export const queryForProps = async (
     recommendations,
     joinUsImage,
     joinUsImageDesktop,
+    partnerLogos,
+    partnerLogosDesktop,
   };
 };
