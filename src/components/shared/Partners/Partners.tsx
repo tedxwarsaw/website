@@ -1,6 +1,6 @@
 import React from "react";
 import Img, { FixedObject } from "gatsby-image";
-import { Button } from "@/components/shared/Button";
+import { Button, ButtonVariant } from "@/components/shared/Button";
 import { FaArrowRight } from "react-icons/fa";
 
 export interface PartnersProps {
@@ -37,7 +37,7 @@ export const Partners = ({
             style={{ width: "fit-content" }}
           >
             <span className="my-auto flex items-center">
-              {getToKnowOurPartnersText} <FaArrowRight className="ml-6 " />
+              {getToKnowOurPartnersText} <FaArrowRight className="ml-2" />
             </span>
           </a>
           <a
@@ -45,7 +45,9 @@ export const Partners = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="ml-5">{joinOurPartnersText}</Button>
+            <Button className="ml-5" variant={ButtonVariant.filledRedWithBG}>
+              {joinOurPartnersText}
+            </Button>
           </a>
         </div>
       )}
@@ -53,22 +55,12 @@ export const Partners = ({
 
     <div className="flex flex-wrap justify-between space-y-4 xl:hidden">
       {partnerLogos.map((fixed, idx) => (
-        <Img
-          key={idx}
-          fixed={fixed}
-          alt="Partner logo"
-          className="partner-logo-image"
-        />
+        <Img key={idx} fixed={fixed} alt="Partner logo" />
       ))}
     </div>
-    <div className="flex flex-wrap justify-between space-y-4  hidden xl:block">
+    <div className="flex flex-wrap justify-between space-y-4  hidden xl:flex">
       {partnerLogosDesktop.map((fixed, idx) => (
-        <Img
-          key={idx}
-          fixed={fixed}
-          alt="Partner logo"
-          className="partner-logo-image"
-        />
+        <Img key={idx} fixed={fixed} alt="Partner logo" />
       ))}
     </div>
     {showLinks && (
@@ -82,7 +74,7 @@ export const Partners = ({
           style={{ width: "fit-content" }}
         >
           <span className="my-2 md:my-0 md:ml-5 flex items-center">
-            {getToKnowOurPartnersText} <FaArrowRight className="ml-6 " />
+            {getToKnowOurPartnersText} <FaArrowRight className="ml-2" />
           </span>
         </a>
       </div>
