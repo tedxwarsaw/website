@@ -1,8 +1,6 @@
 import React from "react";
-import { useRecommendationsSlider } from "./RecommendationsSlider.hooks";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
-import "keen-slider/keen-slider.min.css";
-import "./RecommendationsSlider.styled.css";
+import { Slider, SliderControls, useSlider } from "@/components/shared/Slider";
 
 export const RecommendationsSlider = ({ children }) => {
   const numberOfSlides = children.length;
@@ -14,7 +12,15 @@ export const RecommendationsSlider = ({ children }) => {
     prevSlide,
     slider,
     currentSlide,
-  } = useRecommendationsSlider(numberOfSlides);
+  } = useSlider(
+    numberOfSlides,
+    {
+      mobile: 1.1,
+      tablet: 2.2,
+      desktop: 3,
+    },
+    { mobile: 10, tablet: 20, desktop: 20 }
+  );
 
   return (
     <>
@@ -35,34 +41,16 @@ export const RecommendationsSlider = ({ children }) => {
             />
           </div>
         )}
-        <div ref={sliderRef} className="keen-slider ">
-          {React.Children.map(children || null, (child) => (
-            <div className="keen-slider__slide" key={child.props.order}>
-              <child.type {...child.props} />
-            </div>
-          ))}
-        </div>
-      </div>
 
-      <div className="slider-controls text-customRed text-2xl flex justify-between mt-5 items-center md:hidden">
-        <BsChevronLeft
-          className="active:opacity-40 cursor-pointer stroke-1"
-          onClick={prevSlide}
-        />
-        <input
-          type="range"
-          min="0"
-          max="100"
-          value={inputSliderPosition}
-          onChange={inputSliderOnChange}
-          className="input-slider bg-customRed"
-          id="myRange"
-        />
-        <BsChevronRight
-          className="active:opacity-40 cursor-pointer stroke-1"
-          onClick={nextSlide}
-        />
+        <Slider sliderRef={sliderRef} children={children} />
       </div>
+      <SliderControls
+        inputSliderPosition={inputSliderPosition}
+        inputSliderOnChange={inputSliderOnChange}
+        nextSlide={nextSlide}
+        prevSlide={prevSlide}
+        className="md:hidden"
+      />
     </>
   );
 };
