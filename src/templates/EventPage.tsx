@@ -86,7 +86,9 @@ export const EventPageTemplate = (props: Props) => {
 
       <EventPlace location={props.location} />
 
-      <EventSpeakers eventSpeakers={props.eventSpeakers} />
+      {props.eventSpeakers && props.eventSpeakers.length > 0 && (
+        <EventSpeakers eventSpeakers={props.eventSpeakers} />
+      )}
 
       <Banner
         title={props.callToAction.title}
