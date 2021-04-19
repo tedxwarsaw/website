@@ -53,6 +53,9 @@ export interface Props
     buttonText: string;
     buttonUrl: string;
   };
+  isOnline: boolean;
+  watchNowLink: string;
+  joinEventLink: string;
 }
 
 export interface SuggestedEvent {
@@ -84,7 +87,7 @@ export const EventPageTemplate = (props: Props) => {
         <div className="text-lg block md:hidden">{props.description}</div>
       </div>
 
-      <EventPlace location={props.location} />
+      {!props.isOnline && <EventPlace location={props.location} />}
 
       {props.eventSpeakers && props.eventSpeakers.length > 0 && (
         <EventSpeakers eventSpeakers={props.eventSpeakers} />

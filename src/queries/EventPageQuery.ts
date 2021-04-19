@@ -51,12 +51,15 @@ const secondQuery = `#graphql
         }
       }
       partnerLogoPaths
+      isOnline
       location {
         city
         displayName
         image
         mapIframe
       }
+      watchNowLink
+      joinEventLink
       speakers {
         speakerName
         speakerPhotoPath
