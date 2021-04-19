@@ -2,7 +2,7 @@ collectionId: event
 slug: "2020"
 displayName: TEDxWarsaw 2020
 city: Warsaw
-date: 12/06/2020
+date: 12/04/2021
 hook: We passionately believe in the power of ideas to change the attitudes,
   lives, and, ultimately, the world.
 description: In today's World challenges are now coming at us constantly, and
@@ -30,8 +30,6 @@ location:
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.082852696304!2d21.04509181635089!3d52.18736667975252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc9b773b2197%3A0x6338f59562daf786!2sBillennium%20-%20IT%20solutions%20for%20business!5e0!3m2!1sen!2spl!4v1614931960602!5m2!1sen!2spl"
     width="600" height="450" style="border:0;" allowfullscreen=""
     loading="lazy"></iframe>
-watchNowLink: www.example.com
-joinEventLink: www.example.com
 callToAction:
   title: TEDxWarsaw 2020 pass
   subtitle: 150 PLN

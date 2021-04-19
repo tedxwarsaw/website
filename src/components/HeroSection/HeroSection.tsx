@@ -43,10 +43,10 @@ export const HeroSection = ({
               >
                 <Button>{heroButtonText}</Button>
               </a>
-              {heroLinks.map((heroLink) => (
+              {heroLinks?.map((heroLink) => (
                 <a
                   href={heroLink.path}
-                  className="text-white flex font-bold hover:opacity-50 mb-10 md:mb-0 md:ml-5 items-center"
+                  className="text-white flex hover:opacity-50 mb-10 md:mb-0 md:ml-5 items-center"
                   key={heroLink.displayName}
                 >
                   <span className="my-auto flex items-center">

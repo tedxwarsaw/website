@@ -17,6 +17,9 @@ import {
 import { Banner, BannerVariant } from "@/components/shared/Banner";
 import { EventPlace, EventPlaceProps } from "@/components/EventPlace";
 import { EventSpeakers, EventSpeakersProps } from "@/components/EventSpeakers";
+import { HeroSection, HeroSectionProps } from "@/components/HeroSection";
+import moment from "moment";
+import { JoinSpeakersSectionProps } from "@/queries/globalQueries/JoinSpeakersQuery";
 
 enum CoverVariant {
   Dark = "dark",
@@ -54,8 +57,7 @@ export interface Props
     buttonUrl: string;
   };
   isOnline: boolean;
-  watchNowLink: string;
-  joinEventLink: string;
+  joinSpeakers: JoinSpeakersSectionProps;
 }
 
 export interface SuggestedEvent {
@@ -66,6 +68,10 @@ export interface SuggestedEvent {
 
 export const EventPageTemplate = (props: Props) => {
   const descriptionParts = splitTextInTwo(props.description);
+  const dateConverted = moment(props.date, "DD/MM/YYYY");
+  const today = moment(new Date(), "DD/MM/YYYY");
+  const isFutureEvent = today < dateConverted;
+  console.log(props.joinSpeakers);
 
   return (
     <Page>
@@ -106,21 +112,40 @@ export const EventPageTemplate = (props: Props) => {
         partnerLogosDesktop={props.partnerLogosDesktop}
       />
 
-      <BecomePartner partnershipTeam={props.partnershipTeam} />
-
-      <Banner
-        title="Join TEDx Warsaw."
-        variant={BannerVariant.white}
-        subtitle="Become our volunteer and enter the amazing world of TEDx"
-        buttonText="Get involved as a volonteer"
-        buttonUrl="/"
-      />
+      {isFutureEvent && (
+        <>
+          <BecomePartner partnershipTeam={props.partnershipTeam} />
+          <Banner
+            title="Join TEDx Warsaw."
+            variant={BannerVariant.white}
+            subtitle="Become our volunteer and enter the amazing world of TEDx"
+            buttonText="Get involved as a volonteer"
+            buttonUrl="/"
+          />
+        </>
+      )}
 
       <SuggestedEvent
         displayName={props.suggestedEvent.displayName}
         slug={props.suggestedEvent.slug}
         photos={props.suggestedEvent.photos}
       />
+
+      {!isFutureEvent && (
+        <HeroSection
+          heroTitle={props.joinSpeakers.sectionTitle}
+          heroSubtitle={props.joinSpeakers.sectionSubtitle}
+          heroBackgroundImage={props.joinSpeakers.sectionBackgroundImage}
+          heroBackgroundImageDesktop={
+            props.joinSpeakers.sectionBackgroundImageDesktop
+          }
+          heroBackgroundImageAlt={props.joinSpeakers.sectionBackgroundImageAlt}
+          heroButtonText={props.joinSpeakers.sectionButtonText}
+          heroButtonLink={props.joinSpeakers.sectionButtonLink}
+          heroLinks={props.joinSpeakers.sectionLinks}
+        />
+      )}
+
       <Newsletter
         variant={NewsletterVariant.white}
         newsletterTitle={props.newsletterTitle}
