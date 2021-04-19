@@ -1,0 +1,1 @@
+export { EventSpeakers } from "./EventSpeakers";
