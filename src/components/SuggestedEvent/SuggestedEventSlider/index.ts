@@ -1,0 +1,1 @@
+export { SuggestedEventSlider } from "./SuggestedEventSlider";

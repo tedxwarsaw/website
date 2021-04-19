@@ -30,7 +30,7 @@
 
 .keen-slider__slide {
   overflow: visible !important;
-  padding-left: 10px;
+  /* padding-left: 10px; */
 }
 
 .slider-wrapper {
