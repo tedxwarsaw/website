@@ -1,7 +1,7 @@
 import React from "react";
 import Img, { FluidObject } from "gatsby-image";
 import "./JoinUs.styled.css";
-import { Button } from "@/components/shared/Button";
+import { Button, ButtonVariant } from "@/components/shared/Button";
 import { FaArrowRight } from "react-icons/fa";
 export interface JoinUsProps {
   joinUsTitle: string;
@@ -39,7 +39,9 @@ export const JoinUs = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="my-7">{joinUsVolunteerText}</Button>
+            <Button className="my-7" variant={ButtonVariant.filledRedWithBG}>
+              {joinUsVolunteerText}
+            </Button>
           </a>
           <a
             href={joinUsGetToKnowOurTeamLink}

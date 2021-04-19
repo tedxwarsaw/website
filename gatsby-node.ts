@@ -35,21 +35,25 @@ export const createPages = async ({ actions, graphql }) => {
   }
 
   const pages = pagesResult.data.allPagesYaml.edges;
-  pages.forEach(async ({ node }) => {
-    let props = {};
+  await Promise.all(
+    pages.map(async ({ node }) => {
+      let props = {};
 
-    if (String(node.templateKey) === "IndexPage") {
-      props = await queryForHomeProps(graphql);
-    }
-    createPage({
-      path: node.slug,
-      component: path.resolve(`src/templates/${String(node.templateKey)}.tsx`),
-      context: {
-        id: node.id,
-        props,
-      },
-    });
-  });
+      if (String(node.templateKey) === "IndexPage") {
+        props = await queryForHomeProps(graphql);
+      }
+      createPage({
+        path: node.slug,
+        component: path.resolve(
+          `src/templates/${String(node.templateKey)}.tsx`
+        ),
+        context: {
+          id: node.id,
+          props,
+        },
+      });
+    })
+  );
 
   const eventsResult = await graphql(eventQuery);
   if (eventsResult.errors) {
