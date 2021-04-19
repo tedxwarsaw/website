@@ -11,7 +11,10 @@ export const EventSpeakers = ({ eventSpeakers }: EventSpeakersProps) => (
       Speakers
     </h2>
     {eventSpeakers.map((speaker, index) => (
-      <div className="col-span-1 flex items-center my-3">
+      <div
+        className="col-span-1 flex items-center my-3"
+        key={speaker.speakerName + index}
+      >
         <Img
           className="rounded-full max-h-0.5 partners-profile-images"
           fixed={speaker.speakerPhoto}
