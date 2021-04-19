@@ -24,7 +24,7 @@ export const RecommendationsSlider = ({ children }) => {
 
   return (
     <>
-      <div className="slider-wrapper max-w-full mt-10 relative">
+      <div className="slider-wrapper-recommendations max-w-full mt-10 relative">
         {slider && (
           <div className="hidden md:block">
             <BsChevronLeft

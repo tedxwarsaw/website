@@ -27,20 +27,3 @@
   background: #e62b1e;
   cursor: pointer;
 }
-
-.keen-slider__slide {
-  overflow: visible !important;
-  /* padding-left: 10px; */
-}
-
-.slider-wrapper {
-  margin-left: -10px;
-  margin-right: -10px;
-}
-
-@media (max-width: theme("screens.xl")) {
-  .slider-wrapper {
-    max-width: 100vw;
-    margin-right: -16px;
-  }
-}

@@ -25,7 +25,7 @@ export const SuggestedEventSlider = ({ children }) => {
         <Slider sliderRef={sliderRef} children={children} />
       </div>
       <div className="hidden xl:block">
-        <div className="inner-grid" style={{ margin: "0 -20px 0 -6px" }}>
+        <div className="inner-grid" style={{ margin: "0 -32px 0 -6px" }}>
           <SliderControls
             inputSliderPosition={inputSliderPosition}
             inputSliderOnChange={inputSliderOnChange}
