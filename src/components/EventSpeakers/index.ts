@@ -1,1 +1,1 @@
-export { EventSpeakers } from "./EventSpeakers";
+export { EventSpeakers, EventSpeakersProps } from "./EventSpeakers";
