@@ -7,7 +7,7 @@ import { HiMenuAlt2 } from "react-icons/hi";
 import { Page } from "@/components/shared/Page";
 import { CoverVariant } from "@/types";
 
-interface Props {
+export interface Props {
   isHeroNewsletter: boolean;
   isCurrentEvent: boolean;
   featuredEvent?: {
@@ -36,7 +36,7 @@ interface Props {
 export const AttendPageTemplate = (props: Props) => (
   <Page>
     <div className="main-grid-full-span">
-      <BackgroundImage
+      {/* <BackgroundImage
         style={{ height: "28rem" }}
         image={props.imgFluid}
         alt="Cover photo"
@@ -67,28 +67,14 @@ export const AttendPageTemplate = (props: Props) => (
             </div>
           </div>
         </div>
-      </BackgroundImage>
+      </BackgroundImage> */}
     </div>
   </Page>
 );
 
-const AttendPage = ({ data }) => {
-  return <AttendPageTemplate imgFluid={data.file.childImageSharp.fluid} />;
+const AttendPage = ({ pageContext }) => {
+  console.log(pageContext);
+  return <AttendPageTemplate {...pageContext.props} />;
 };
 
 export default AttendPage;
-
-export const pageQuery = graphql`
-  query AttendPageTemplate {
-    file(relativePath: { eq: "images/uploads/speaker-stage-logo.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, sizes: "(max:-width: 2000px)") {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    pagesYaml(templateKey: { eq: "AttendPage" }) {
-      templateKey
-    }
-  }
-`;

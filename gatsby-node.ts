@@ -1,6 +1,7 @@
 import path from "path";
 import { queryForProps as queryForEventProps } from "./src/queries/EventPageQuery";
 import { queryForProps as queryForHomeProps } from "./src/queries/IndexPageQuery";
+import { queryForProps as queryForAttendProps } from "./src/queries/AttendPageQuery";
 
 const pageQuery = `#graphql
   query Page {
@@ -41,7 +42,10 @@ export const createPages = async ({ actions, graphql }) => {
 
       if (String(node.templateKey) === "IndexPage") {
         props = await queryForHomeProps(graphql);
+      } else if (String(node.templateKey) === "AttendPage") {
+        props = await queryForAttendProps(graphql);
       }
+
       createPage({
         path: node.slug,
         component: path.resolve(

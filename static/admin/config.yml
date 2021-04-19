@@ -431,6 +431,9 @@ collections:
         date_format: "DD/MM/YYYY"
         time_format: false
         picker_utc: true
+      - name: time
+        label: "Time"
+        widget: string
       - name: hook
         label: Hook
         widget: text

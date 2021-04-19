@@ -1,13 +1,10 @@
 import { Props } from "../templates/AttendPage";
-import { getFixedImage, getFluidImage } from "./utils";
-import { queryForNewsletter } from "./globalQueries";
+import { getFluidImage } from "./utils";
+import { queryForNewsletter, queryForFeatureEvent } from "./globalQueries";
 
 const pageQuery = `#graphql
-  query PageQuery(
-    $eventSlug: String
-    $suggestedEventSlug: String,
-  ) {
-    pageYaml(templateKey: { eq: "AttendPage" }) {
+  query PageQuery {
+    pagesYaml(templateKey:{ eq: "AttendPage" }) {
       isHeroNewsletter
       isCurrentEvent
     }
@@ -21,7 +18,12 @@ export const queryForProps = async (
     data: { pagesYaml },
   } = await graphql(pageQuery);
 
+  const newsletter = await queryForNewsletter(graphql);
+  const featuredEvent = await queryForFeatureEvent(graphql);
+
   return {
     ...pagesYaml,
+    ...newsletter,
+    featuredEvent,
   };
 };
