@@ -1,2 +1,4 @@
 slug: /attend
 templateKey: AttendPage
+isHeroNewsletter: false
+isCurrentEvent: true

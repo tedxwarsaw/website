@@ -17,13 +17,10 @@ import {
 import { Banner, BannerVariant } from "@/components/shared/Banner";
 import { EventPlace, EventPlaceProps } from "@/components/EventPlace";
 import { EventSpeakers, EventSpeakersProps } from "@/components/EventSpeakers";
-import { HeroSection, HeroSectionProps } from "@/components/HeroSection";
+import { HeroSection } from "@/components/HeroSection";
 import moment from "moment";
 import { JoinSpeakersSectionProps } from "@/queries/globalQueries/JoinSpeakersQuery";
-
-enum CoverVariant {
-  Dark = "dark",
-}
+import { CoverVariant } from "@/types";
 
 export interface Props
   extends NewsletterProps,

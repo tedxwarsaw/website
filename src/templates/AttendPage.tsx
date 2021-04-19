@@ -5,9 +5,32 @@ import { BackgroundImage } from "@/components/shared/BackgroundImage";
 import { Button } from "@/components/shared/Button";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { Page } from "@/components/shared/Page";
+import { CoverVariant } from "@/types";
 
 interface Props {
-  imgFluid: FluidObject;
+  isHeroNewsletter: boolean;
+  isCurrentEvent: boolean;
+  featuredEvent?: {
+    slug: string;
+    hook: string;
+    displayName: string;
+    description: string;
+    location: string;
+    date: string;
+    time: string;
+    cover: {
+      variant: CoverVariant;
+      button: {
+        text: string;
+        show: boolean;
+        link: string;
+      };
+      image: {
+        desktop: FluidObject;
+        mobile: FluidObject;
+      };
+    };
+  };
 }
 
 export const AttendPageTemplate = (props: Props) => (
