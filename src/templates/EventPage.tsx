@@ -140,6 +140,7 @@ export const EventPageTemplate = (props: Props) => {
           heroButtonText={props.joinSpeakers.sectionButtonText}
           heroButtonLink={props.joinSpeakers.sectionButtonLink}
           heroLinks={props.joinSpeakers.sectionLinks}
+          fontMedium
         />
       )}
 

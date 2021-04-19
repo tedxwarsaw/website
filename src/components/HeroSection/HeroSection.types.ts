@@ -15,4 +15,5 @@ export interface HeroSectionProps {
   heroBackgroundImageDesktop: FluidObject;
   heroBackgroundImageAlt: string;
   featuredButtonLink?: string;
+  fontMedium?: boolean;
 }

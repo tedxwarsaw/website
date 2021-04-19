@@ -1,6 +1,10 @@
 import { Props } from "../templates/AttendPage";
 import { getFluidImage } from "./utils";
-import { queryForNewsletter, queryForFeatureEvent } from "./globalQueries";
+import {
+  queryForNewsletter,
+  queryForFeatureEvent,
+  queryForJoinSpeakers,
+} from "./globalQueries";
 
 const pageQuery = `#graphql
   query PageQuery {
@@ -20,10 +24,12 @@ export const queryForProps = async (
 
   const newsletter = await queryForNewsletter(graphql);
   const featuredEvent = await queryForFeatureEvent(graphql);
+  const joinSpeakers = await queryForJoinSpeakers(graphql);
 
   return {
     ...pagesYaml,
     ...newsletter,
+    joinSpeakers,
     featuredEvent,
   };
 };

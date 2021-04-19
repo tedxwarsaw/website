@@ -16,6 +16,7 @@ export const HeroSection = ({
   heroButtonLink,
   heroLinks,
   featuredButtonLink,
+  fontMedium,
 }: HeroSectionProps) => {
   return (
     <div className="main-grid-full-span">
@@ -30,7 +31,7 @@ export const HeroSection = ({
           <div className="md:max-w-xl flex flex-col">
             <h1
               className={`text-white  text-3xl  mb-7 ${
-                featuredButtonLink ? "" : "md:text-5xl font-bold"
+                fontMedium ? "" : "md:text-5xl font-bold"
               }`}
             >
               {heroTitle}
