@@ -50,7 +50,7 @@ export const NewsletterForm = () => {
   return (
     <form
       onSubmit={onSubmit}
-      className="bg-white md:flex justify-between items-center xl:px-8 rounded-md font-light col-start-2 col-end-3 md:col-end-5 xl:col-end-7 row-start-2 flex-col px-4 py-1 xl:flex xl:flex-row"
+      className="bg-white md:flex justify-between items-center xl:px-8 rounded-md font-light col-start-2 col-end-3 md:col-end-5 xl:col-end-7 row-start-2 flex-col px-4 py-1 xl:flex xl:flex-row shadow-md"
     >
       <p className="mt-3 md:w-full xl:w-auto xl:mt-0 font-medium">
         Keep me updated about

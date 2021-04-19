@@ -15,7 +15,6 @@ import {
   NewsletterVariant,
 } from "@/components/shared/Newsletter";
 import { Banner, BannerVariant } from "@/components/shared/Banner";
-import { EventSchedule } from "@/components/EventSchedule";
 import { EventPlace, EventPlaceProps } from "@/components/EventPlace";
 
 enum CoverVariant {
@@ -82,8 +81,6 @@ export const EventPageTemplate = (props: Props) => {
       </div>
 
       <EventPlace location={props.location} />
-
-      <EventSchedule />
 
       <Banner
         title={props.callToAction.title}
