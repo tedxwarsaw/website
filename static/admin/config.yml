@@ -171,6 +171,17 @@ collections:
             media_library:
               config:
                 multiple: true
+      - label: "Attend"
+        name: "attend"
+        file: "src/pages/content/pages/attend.yaml"
+        slug: "attend.md" # Filename template, e.g., YYYY-MM-DD-title.md
+        fields: # The fields for each document, usually in front matter
+          - label: "Show newsletter as hero"
+            name: "isHeroNewsletter"
+            widget: "boolean"
+          - label: "Show current featured event"
+            name: "isCurrentEvent"
+            widget: "boolean"
   - label: "Global"
     name: "global"
     files:
