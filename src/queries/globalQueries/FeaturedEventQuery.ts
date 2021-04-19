@@ -15,8 +15,13 @@ const eventQuery = `#graphql
   ) {
     event: eventsYaml(slug: {eq: $eventSlug}) {
       slug
+      hook
       description
-      cover {
+      location {
+        displayName
+        city
+      }
+      coverHero {
         button {
           text
           show
@@ -48,22 +53,22 @@ export const queryForFeatureEvent = async (
 
   const coverImage = await getFluidImage({
     graphql,
-    path: event.cover.image.mobile,
+    path: event.coverHero.image.mobile,
     quality: 90,
     sizes: "(max:-width: 768px)",
   });
   const coverImageDesktop = await getFluidImage({
     graphql,
-    path: event.cover.image.desktop,
+    path: event.coverHero.image.desktop,
     quality: 90,
     sizes: "(max:-width: 2000px)",
   });
 
-  const cover = {
+  const coverHero = {
     button: {
-      text: event.cover.button.text,
-      show: event.cover.button.show,
-      link: event.cover.button.link,
+      text: event.coverHero.button.text,
+      show: event.coverHero.button.show,
+      link: event.coverHero.button.link,
     },
     image: {
       desktop: coverImage,
@@ -73,6 +78,6 @@ export const queryForFeatureEvent = async (
 
   return {
     ...event,
-    cover,
+    coverHero,
   };
 };

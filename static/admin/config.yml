@@ -492,6 +492,40 @@ collections:
                 widget: image
                 allow_multiple: false
                 media_folder: "{{slug}}/coverPhotos"
+      - name: coverHero
+        label: Cover hero section
+        widget: object
+        hint: Cover show as page hero, when this event is featured
+        fields:
+          - name: button
+            label: Button
+            widget: object
+            fields:
+              - name: text
+                label: Text
+                widget: string
+              - name: link
+                label: URL
+                widget: string
+                hint: The URL the button should point to.
+              - name: show
+                label: Show
+                widget: boolean
+                hint: Whether to show the button or not.
+          - name: image
+            label: Cover image
+            widget: object
+            fields:
+              - name: mobile
+                label: Mobile variant
+                widget: image
+                allow_multiple: false
+                media_folder: "{{slug}}/coverPhotos"
+              - name: desktop
+                label: Desktop variant
+                widget: image
+                allow_multiple: false
+                media_folder: "{{slug}}/coverPhotos"
       - name: "isOnline"
         label: "Is this an online event?"
         widget: boolean

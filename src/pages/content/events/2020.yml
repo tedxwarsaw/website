@@ -22,6 +22,14 @@ cover:
   image:
     desktop: events/2020/coverPhotos/desktop.jpg
     mobile: events/2020/coverPhotos/desktop.jpg
+coverHero:
+  button:
+    text: Attend
+    show: true
+    link: https://example.com/
+  image:
+    desktop: events/2020/coverPhotos/speaker-stage-logo.jpg
+    mobile: events/2020/coverPhotos/speaker-stage-logo.jpg
 isOnline: true
 location:
   displayName: Billenium
