@@ -32,7 +32,7 @@ export const MainEvent = ({
 
   return (
     <div className="inner-grid">
-      <div className="col-start-1 col-end-3">
+      <div className="col-start-1 md:col-end-2 xl:col-end-3">
         <Link to={`/event/${slug}`}>
           <div className="relative h-full">
             <Img
@@ -48,19 +48,19 @@ export const MainEvent = ({
           </div>
         </Link>
       </div>
-      <div className="col-start-3 col-end-full flex flex-col justify-between">
-        <div>
+      <div className=" md:col-start-2 md:col-end-3  xl:col-start-3 xl:col-end-full flex flex-col justify-between">
+        <div className="mt-5 md:mt-0">
           <span className="text-white text-sm px-3 bg-customDarkGrey md:py-1 mr-3">
             <Link to={`/event/${slug}`}>{category}</Link>
           </span>
           <span>{dateConverted.format("MMM Do, YYYY")}</span>
         </div>
-        <h2 className="text-2xl md:text-3xl ">{displayName}</h2>
+        <h2 className="text-2xl md:text-3xl my-5 xl:my-0">{displayName}</h2>
         <p>{descriptionSplit[0]}</p>
         <div>
           <Link
             to={`/event/${slug}`}
-            className="text-customRed text-sm flex hover:opacity-50 items-center"
+            className="text-customRed text-sm flex hover:opacity-50 items-center my-5 xl:my-0"
           >
             <span className="text-customRed">
               Read more <HiMenuAlt2 className="inline w-6 h-6" />
