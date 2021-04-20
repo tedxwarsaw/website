@@ -11,10 +11,8 @@ export const useEventList = (events) => {
 
   const paginateEvents = (eventsToPrepare, pageToChange) => {
     setCurrentPage(pageToChange);
-    if (pageToChange === 0) {
-      setEventsToShow([
-        ...eventsToPrepare.slice(pageToChange - 1, eventsPerPage + 1),
-      ]);
+    if (pageToChange === 1) {
+      setEventsToShow([...eventsToPrepare.slice(0, eventsPerPage + 1)]);
       return;
     }
     setEventsToShow([
@@ -41,7 +39,7 @@ export const useEventList = (events) => {
   };
 
   useEffect(() => {
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 6; i++) {
       tempEvents.push({
         ...events[0],
         displayName: events[0].displayName + " " + i,
@@ -51,11 +49,15 @@ export const useEventList = (events) => {
         displayName: events[1].displayName + " " + i + i,
       });
     }
-    setNumberOfPages((prev) =>
-      Math.floor(prev + (tempEvents.length - 10) / eventsPerPage)
-    );
+    console.log(tempEvents);
     setTempEvents(tempEvents);
+    setFilteredEvents(tempEvents);
   }, []);
+
+  useEffect(() => {
+    console.log("pages change");
+    setNumberOfPages(1 + Math.ceil(filteredEvents.length / eventsPerPage));
+  }, [activeFilter]);
 
   return {
     activeFilter,

@@ -9,12 +9,20 @@ export const Pagination = ({
   numberOfPages,
   changePage,
   currentPage,
-}: PaginationProps) => (
-  <div>
-    <span onClick={() => changePage(1)}>1</span>
-    <span onClick={() => changePage(2)}>2</span>
-    <span onClick={() => changePage(3)}>3</span>
-    <span onClick={() => changePage(4)}>4</span>
-    <span onClick={() => changePage(5)}>5</span>
-  </div>
-);
+}: PaginationProps) => {
+  const pages = [];
+
+  for (let i = 1; i < numberOfPages; i++) {
+    pages.push(i);
+  }
+
+  return (
+    <div>
+      {pages.map((page) => (
+        <span key={page} onClick={() => changePage(page)}>
+          {page}
+        </span>
+      ))}
+    </div>
+  );
+};
