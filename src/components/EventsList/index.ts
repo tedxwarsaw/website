@@ -1,1 +1,2 @@
-export { EventsList, EventsListProps } from "./EventsList";
+export { EventsList } from "./EventsList";
+export { EventsListProps } from "./EventsList.types";

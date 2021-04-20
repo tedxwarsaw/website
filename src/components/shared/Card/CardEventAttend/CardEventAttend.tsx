@@ -25,8 +25,8 @@ export const CardEventAttend = ({
   const dateConverted = moment(date);
 
   return (
-    <div className=" pt-2 md:pt-3 pb-5 border-b-4 border-customTransparent  hover:border-customRed h-full flex flex-col">
-      <a href={`/event/${slug}`}>
+    <div className="relative pt-2 md:pt-3 pb-5 border-b-4 border-customTransparent  hover:border-customRed h-full flex flex-col">
+      <Link to={`/event/${slug}`}>
         <div className="relative card-image-container">
           <Img
             className="w-full h-full md:hidden"
@@ -39,12 +39,12 @@ export const CardEventAttend = ({
             alt="Slider item image"
           />
         </div>
-      </a>
-      <span className="absolute left-0 top-0  text-white text-sm px-3 bg-customRed md:py-1">
-        <a href={`/event/${slug}`}>{category}</a>
+      </Link>
+      <span className="absolute -left-2 top-0  text-white text-sm px-3 bg-customDarkGrey md:py-1">
+        <Link to={`/event/${slug}`}>{category}</Link>
       </span>
 
-      <a href={`/event/${slug}`}>
+      <Link to={`/event/${slug}`}>
         <div className="md:flex justify-between items-end mb-2 mt-5 md:my-5">
           <div>
             <span className="my-10">
@@ -52,14 +52,13 @@ export const CardEventAttend = ({
             </span>
             <h3 className="min-h-10">{displayName}</h3>
           </div>
-          <p>{date}</p>
         </div>
-      </a>
+      </Link>
 
       <div className="flex items-center mt-auto">
         <Link
           to={`/event/${slug}`}
-          className="text-customRed text-sm flex hover:opacity-50 items-center ml-5"
+          className="text-customRed text-sm flex hover:opacity-50 items-center "
         >
           <span className="text-customRed">
             Read more <HiMenuAlt2 className="inline w-6 h-6" />

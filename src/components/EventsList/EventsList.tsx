@@ -1,22 +1,7 @@
 import { MainEvent } from "./MainEvent";
-import { FluidObject } from "gatsby-image";
 import React from "react";
-
-export interface EventsListProps {
-  events: {
-    description: string;
-    displayName: string;
-    slug: string;
-    category: string;
-    cover: {
-      image: {
-        mobile: FluidObject;
-        desktop: FluidObject;
-      };
-    };
-    date: string;
-  }[];
-}
+import { EventsListProps } from "@/components/EventsList";
+import { EventGrid } from "@/components/EventsList/EventGrid/EventGrid";
 
 export const EventsList = ({ events }: EventsListProps) => {
   let tempEvents = [];
@@ -38,6 +23,8 @@ export const EventsList = ({ events }: EventsListProps) => {
         description={tempEvents[0].description}
         cover={tempEvents[0].cover}
       />
+
+      <EventGrid events={tempEvents} />
     </div>
   );
 };
