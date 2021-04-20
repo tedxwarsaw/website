@@ -182,6 +182,26 @@ collections:
           - label: "Show current featured event"
             name: "isCurrentEvent"
             widget: "boolean"
+          - label: "Call to action banner title"
+            name: ctaBannerText
+            widget: string
+            hint: Title of call to action section below featured event
+          - label: "Call to action button text"
+            name: ctaButtonText
+            widget: string
+          - label: "Call to action button link"
+            name: ctaButtonLink
+            widget: string
+          - label: "Title of past events section"
+            name: pastEventsSectionTitle
+            widget: string
+          - label: "Past events items"
+            name: "pastEventsItems"
+            widget: "list"
+            fields:
+              - { label: "Red title of section", name: "title", widget: "string" }
+              - { label: "Section name", name: "sectionName", widget: "string" }
+              - { label: "Section description", name: "description", widget: "string" }
   - label: "Global"
     name: "global"
     files:

@@ -2,3 +2,17 @@ slug: /attend
 templateKey: AttendPage
 isHeroNewsletter: false
 isCurrentEvent: true
+ctaBannerText: Become our partner and enter the amazing world of TEDx
+ctaButtonText: Become our partner and enter the amazing world of TEDx
+ctaButtonLink: Become our partner and enter the amazing world of TEDx
+pastEventsSectionTitle: TEDxWarsaw Past Events
+pastEventsItems:
+  - title: "x10"
+    sectionName: TEDx Salon
+    description: Please join our newsletter to be the first to know about TEDxWarsaw events, news and much more.
+  - title: "x10"
+    sectionName: TEDx Conference
+    description: Please join our newsletter to be the first to know about TEDxWarsaw events, news and much more.
+  - title: "x10"
+    sectionName: TEDx Live
+    description: Please join our newsletter to be the first to know about TEDxWarsaw events, news and much more.
