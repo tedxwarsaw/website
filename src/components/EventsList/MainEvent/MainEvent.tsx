@@ -6,26 +6,23 @@ import moment from "moment";
 import { HiMenuAlt2 } from "react-icons/hi";
 
 interface MainEventProps {
-  displayName: string;
-  slug: string;
-  category: string;
-  date: string;
-  description: string;
-  cover: {
-    image: {
-      desktop: FluidObject;
-      mobile: FluidObject;
+  event: {
+    displayName: string;
+    slug: string;
+    category: string;
+    date: string;
+    description: string;
+    cover: {
+      image: {
+        desktop: FluidObject;
+        mobile: FluidObject;
+      };
     };
   };
 }
 
 export const MainEvent = ({
-  displayName,
-  slug,
-  category,
-  date,
-  description,
-  cover,
+  event: { displayName, slug, category, date, description, cover },
 }: MainEventProps) => {
   const descriptionSplit = splitTextInTwo(description);
   const dateConverted = moment(date);
