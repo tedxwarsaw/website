@@ -3,42 +3,16 @@ import { MainEvent } from "./MainEvent";
 import { EventsListProps } from "@/components/EventsList";
 import { ListFilters } from "@/components/EventsList/ListFilters";
 import { CardEventAttend } from "@/components/shared/Card";
+import { useEventList } from "./EventList.hooks";
 
 export const EventsList = ({ events, categories }: EventsListProps) => {
-  const [tempEvents, setTempEvents] = useState([]);
-  const [activeFilter, setActiveFilter] = useState("all");
-  const [eventsToShow, setEventsToShow] = useState(null);
-
-  const filterPosts = (value) => {
-    setActiveFilter(value);
-    let eventsFiltered = tempEvents;
-    console.log(eventsFiltered);
-    if (value !== "all") {
-      eventsFiltered = tempEvents.filter((event) => event.category === value);
-    }
-
-    setEventsToShow(eventsFiltered);
-  };
-
-  useEffect(() => {
-    for (let i = 0; i < 40; i++) {
-      tempEvents.push({
-        ...events[0],
-        displayName: events[0].displayName + " " + i,
-      });
-      tempEvents.push({
-        ...events[1],
-        displayName: events[1].displayName + " " + i + i,
-      });
-    }
-    setTempEvents(tempEvents);
-  }, []);
+  const { filterEvents, activeFilter, eventsToShow } = useEventList(events);
 
   return (
     <div>
       <ListFilters
         filtersList={categories}
-        changeFilter={filterPosts}
+        changeFilter={filterEvents}
         activeFilter={activeFilter}
       />
       {eventsToShow && eventsToShow.length > 0 && (
