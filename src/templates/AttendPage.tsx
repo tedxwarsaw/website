@@ -1,9 +1,5 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
 import { FluidObject } from "gatsby-image";
-import { BackgroundImage } from "@/components/shared/BackgroundImage";
-import { Button } from "@/components/shared/Button";
-import { HiMenuAlt2 } from "react-icons/hi";
 import { Page } from "@/components/shared/Page";
 import { HeroSection } from "@/components/HeroSection";
 import {
@@ -13,6 +9,7 @@ import {
 } from "@/components/shared/Newsletter";
 import { JoinSpeakersSectionProps } from "@/queries/globalQueries/JoinSpeakersQuery";
 import { Banner, BannerVariant } from "@/components/shared/Banner";
+import { EventDetails } from "@/components/EventDetails";
 
 export interface Props extends NewsletterProps {
   isHeroNewsletter: boolean;
@@ -22,7 +19,10 @@ export interface Props extends NewsletterProps {
     hook: string;
     displayName: string;
     description: string;
-    location: string;
+    location: {
+      displayName: string;
+      city: string;
+    };
     date: string;
     time: string;
     coverHero: {
@@ -55,6 +55,13 @@ export const AttendPageTemplate = (props: Props) => (
           heroBackgroundImageAlt="Feture event hero"
           featuredButtonLink={`/events/${props.featuredEvent.slug}`}
           fontMedium
+        />
+        <EventDetails
+          location={props.featuredEvent.location}
+          description={props.featuredEvent.description}
+          date={props.featuredEvent.date}
+          time={props.featuredEvent.time}
+          slug={props.featuredEvent.slug}
         />
         <Banner
           title="Become our partner and enter the amazing world of TEDx"

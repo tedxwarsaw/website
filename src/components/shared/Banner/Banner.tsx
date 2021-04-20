@@ -31,7 +31,7 @@ export const Banner = ({
         variant === BannerVariant.white ? "" : "text-white"
       }`}
     >
-      <h2 className=" text-4xl md:max-w-xl">{title}</h2>
+      <h2 className="text-3xl xl:text-4xl md:max-w-xl">{title}</h2>
 
       {subtitle && (
         <p
