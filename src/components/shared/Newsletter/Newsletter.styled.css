@@ -1,0 +1,11 @@
+@media (min-width: theme("screens.md")) and (max-width: theme("screens.xl")) {
+  .newsletter-container {
+    height: 40rem;
+  }
+}
+
+@media (max-width: theme("screens.md")) {
+  .newsletter-container {
+    height: 50rem;
+  }
+}

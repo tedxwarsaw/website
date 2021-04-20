@@ -1,0 +1,1 @@
+export { queryForNewsletter } from "./NewsletterQuery";

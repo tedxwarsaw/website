@@ -1,0 +1,23 @@
+@media (min-width: theme("screens.md")) and (max-width: theme("screens.xl")) {
+  .newsletter-form-fields {
+    display: grid;
+    width: 100%;
+    grid-template-columns:
+      0
+      1fr
+      var(--column-gap)
+      1fr
+      0;
+  }
+}
+
+@media (max-width: theme("screens.md")) {
+  .newsletter-form-fields {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+input::placeholder {
+  color: theme("colors.black");
+}

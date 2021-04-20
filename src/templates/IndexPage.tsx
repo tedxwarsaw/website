@@ -13,6 +13,11 @@ import {
 } from "@/components/EventHighlight";
 import { JoinUs, JoinUsProps } from "@/components/JoinUs";
 import { Partners, PartnersProps } from "@/components/shared/Partners";
+import {
+  Newsletter,
+  NewsletterProps,
+  NewsletterVariant,
+} from "@/components/shared/Newsletter";
 
 export interface Props
   extends HeroSectionProps,
@@ -21,7 +26,8 @@ export interface Props
     YoutubeBannerProps,
     EventHighlightProps,
     JoinUsProps,
-    PartnersProps {}
+    PartnersProps,
+    NewsletterProps {}
 
 export const IndexPageTemplate = (props: Props) => (
   <Page>
@@ -73,6 +79,14 @@ export const IndexPageTemplate = (props: Props) => (
       joinOurPartnersLink={props.joinOurPartnersLink}
       partnerLogos={props.partnerLogos}
       partnerLogosDesktop={props.partnerLogosDesktop}
+    />
+    <Newsletter
+      variant={NewsletterVariant.black}
+      newsletterTitle={props.newsletterTitle}
+      newsletterMessage1={props.newsletterMessage1}
+      newsletterMessage2={props.newsletterMessage2}
+      newsletterBackgroundImage={props.newsletterBackgroundImage}
+      newsletterBackgroundImageDesktop={props.newsletterBackgroundImageDesktop}
     />
   </Page>
 );
