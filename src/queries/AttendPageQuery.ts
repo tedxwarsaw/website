@@ -3,6 +3,7 @@ import {
   queryForNewsletter,
   queryForFeatureEvent,
   queryForJoinSpeakers,
+  queryForAllEvents,
 } from "./globalQueries";
 
 const pageQuery = `#graphql
@@ -33,11 +34,13 @@ export const queryForProps = async (
   const newsletter = await queryForNewsletter(graphql);
   const featuredEvent = await queryForFeatureEvent(graphql);
   const joinSpeakers = await queryForJoinSpeakers(graphql);
+  const allEvents = await queryForAllEvents(graphql);
 
   return {
     ...pagesYaml,
     ...newsletter,
     joinSpeakers,
     featuredEvent,
+    allEvents,
   };
 };
