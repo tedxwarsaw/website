@@ -12,6 +12,7 @@ import {
   NewsletterVariant,
 } from "@/components/shared/Newsletter";
 import { JoinSpeakersSectionProps } from "@/queries/globalQueries/JoinSpeakersQuery";
+import { Banner, BannerVariant } from "@/components/shared/Banner";
 
 export interface Props extends NewsletterProps {
   isHeroNewsletter: boolean;
@@ -42,16 +43,26 @@ export interface Props extends NewsletterProps {
 export const AttendPageTemplate = (props: Props) => (
   <Page>
     {props.isCurrentEvent && (
-      <HeroSection
-        heroTitle={props.featuredEvent.hook}
-        heroButtonText={props.featuredEvent.coverHero.button.text}
-        heroButtonLink={props.featuredEvent.coverHero.button.link}
-        heroBackgroundImage={props.featuredEvent.coverHero.image.mobile}
-        heroBackgroundImageDesktop={props.featuredEvent.coverHero.image.desktop}
-        heroBackgroundImageAlt="Feture event hero"
-        featuredButtonLink={`/events/${props.featuredEvent.slug}`}
-        fontMedium
-      />
+      <>
+        <HeroSection
+          heroTitle={props.featuredEvent.hook}
+          heroButtonText={props.featuredEvent.coverHero.button.text}
+          heroButtonLink={props.featuredEvent.coverHero.button.link}
+          heroBackgroundImage={props.featuredEvent.coverHero.image.mobile}
+          heroBackgroundImageDesktop={
+            props.featuredEvent.coverHero.image.desktop
+          }
+          heroBackgroundImageAlt="Feture event hero"
+          featuredButtonLink={`/events/${props.featuredEvent.slug}`}
+          fontMedium
+        />
+        <Banner
+          title="Become our partner and enter the amazing world of TEDx"
+          variant={BannerVariant.white}
+          buttonText="Get involved as a partner"
+          buttonUrl="/"
+        />
+      </>
     )}
 
     {props.isHeroNewsletter && !props.isCurrentEvent && (
