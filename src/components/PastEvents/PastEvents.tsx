@@ -18,8 +18,8 @@ export const PastEvents = ({
       {pastEventsSectionTitle}
     </h2>
     <div className="inner-grid">
-      {pastEventsItems.map((pastEvent) => (
-        <div className="my-5 xl:my-0">
+      {pastEventsItems.map((pastEvent, index) => (
+        <div className="my-5 xl:my-0" key={pastEvent.title + index}>
           <span className="text-2xl md:text-3xl text-customRed">
             {pastEvent.title}
           </span>
