@@ -3,8 +3,13 @@ import React from "react";
 interface PaginationProps {
   numberOfPages: number;
   changePage: (pageOffset: number) => void;
+  currentPage: number;
 }
-export const Pagination = ({ numberOfPages, changePage }: PaginationProps) => (
+export const Pagination = ({
+  numberOfPages,
+  changePage,
+  currentPage,
+}: PaginationProps) => (
   <div>
     <span onClick={() => changePage(1)}>1</span>
     <span onClick={() => changePage(2)}>2</span>

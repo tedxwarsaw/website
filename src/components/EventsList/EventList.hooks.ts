@@ -2,39 +2,32 @@ import { useState, useEffect } from "react";
 
 export const useEventList = (events) => {
   const eventsPerPage = 9;
-  const [pageOffset, setPageOffset] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
   const [tempEvents, setTempEvents] = useState([]);
   const [activeFilter, setActiveFilter] = useState("all");
   const [filteredEvents, setFilteredEvents] = useState([]);
   const [eventsToShow, setEventsToShow] = useState(null);
   const [numberOfPages, setNumberOfPages] = useState(1);
 
-  const paginateEvents = (eventsToPrepare, pageOffsetToChange) => {
-    setPageOffset(pageOffsetToChange);
-    if (pageOffsetToChange === 0) {
+  const paginateEvents = (eventsToPrepare, pageToChange) => {
+    setCurrentPage(pageToChange);
+    if (pageToChange === 0) {
       setEventsToShow([
-        ...eventsToPrepare.slice(pageOffset, eventsPerPage + 1),
+        ...eventsToPrepare.slice(pageToChange - 1, eventsPerPage + 1),
       ]);
       return;
     }
-    console.log(pageOffsetToChange, [
-      ...eventsToPrepare.slice(
-        pageOffsetToChange * eventsPerPage + 1,
-        pageOffsetToChange * eventsPerPage + 1 + eventsPerPage
-      ),
-    ]);
-
     setEventsToShow([
       ...eventsToPrepare.slice(
-        pageOffsetToChange * eventsPerPage + 1,
-        pageOffsetToChange * eventsPerPage + 1 + eventsPerPage
+        (pageToChange - 1) * eventsPerPage + 1,
+        (pageToChange - 1) * eventsPerPage + 1 + eventsPerPage
       ),
     ]);
     return;
   };
 
   const changePage = (page: number) => {
-    paginateEvents(filteredEvents, page - 1);
+    paginateEvents(filteredEvents, page);
   };
 
   const filterEvents = (value: string) => {
@@ -43,9 +36,8 @@ export const useEventList = (events) => {
     if (value !== "all") {
       eventsFiltered = tempEvents.filter((event) => event.category === value);
     }
-    setPageOffset(0);
     setFilteredEvents(eventsFiltered);
-    paginateEvents(eventsFiltered, 0);
+    paginateEvents(eventsFiltered, 1);
   };
 
   useEffect(() => {
@@ -69,7 +61,7 @@ export const useEventList = (events) => {
     activeFilter,
     filterEvents,
     eventsToShow,
-    pageOffset,
+    currentPage,
     changePage,
     numberOfPages,
   };

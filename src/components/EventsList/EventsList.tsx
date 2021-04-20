@@ -11,7 +11,7 @@ export const EventsList = ({ events, categories }: EventsListProps) => {
     filterEvents,
     activeFilter,
     eventsToShow,
-    pageOffset,
+    currentPage,
     numberOfPages,
     changePage,
   } = useEventList(events);
@@ -27,7 +27,7 @@ export const EventsList = ({ events, categories }: EventsListProps) => {
         <>
           <div className="my-10 inner-grid gap-5">
             {eventsToShow.map((event, index) => {
-              if (index === 0 && pageOffset === 0) {
+              if (index === 0 && currentPage === 1) {
                 return <MainEvent event={event} />;
               } else {
                 return (
@@ -46,7 +46,11 @@ export const EventsList = ({ events, categories }: EventsListProps) => {
           </div>
         </>
       )}
-      <Pagination numberOfPages={numberOfPages} changePage={changePage} />
+      <Pagination
+        numberOfPages={numberOfPages}
+        changePage={changePage}
+        currentPage={currentPage}
+      />
     </div>
   );
 };
