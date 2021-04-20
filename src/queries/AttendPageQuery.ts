@@ -1,5 +1,4 @@
 import { Props } from "../templates/AttendPage";
-import { getFluidImage } from "./utils";
 import {
   queryForNewsletter,
   queryForFeatureEvent,
@@ -11,6 +10,15 @@ const pageQuery = `#graphql
     pagesYaml(templateKey:{ eq: "AttendPage" }) {
       isHeroNewsletter
       isCurrentEvent
+      ctaBannerText
+      ctaButtonText
+      ctaButtonLink
+      pastEventsSectionTitle
+      pastEventsItems {
+        title
+        sectionName
+        description
+      }
     }
   }
 `;

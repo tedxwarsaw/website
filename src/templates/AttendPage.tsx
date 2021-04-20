@@ -38,6 +38,15 @@ export interface Props extends NewsletterProps {
     };
   };
   joinSpeakers: JoinSpeakersSectionProps;
+  ctaBannerText: string;
+  ctaButtonText: string;
+  ctaButtonLink: string;
+  pastEventsSectionTitle: string;
+  pastEventsItems: {
+    title: string;
+    sectionName: string;
+    description: string;
+  }[];
 }
 
 export const AttendPageTemplate = (props: Props) => (
@@ -64,10 +73,10 @@ export const AttendPageTemplate = (props: Props) => (
           slug={props.featuredEvent.slug}
         />
         <Banner
-          title="Become our partner and enter the amazing world of TEDx"
+          title={props.ctaBannerText}
           variant={BannerVariant.white}
-          buttonText="Get involved as a partner"
-          buttonUrl="/"
+          buttonText={props.ctaButtonText}
+          buttonUrl={props.ctaButtonLink}
         />
       </>
     )}

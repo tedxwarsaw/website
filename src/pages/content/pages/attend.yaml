@@ -3,8 +3,8 @@ templateKey: AttendPage
 isHeroNewsletter: false
 isCurrentEvent: true
 ctaBannerText: Become our partner and enter the amazing world of TEDx
-ctaButtonText: Become our partner and enter the amazing world of TEDx
-ctaButtonLink: Become our partner and enter the amazing world of TEDx
+ctaButtonText: Get involved as a partner
+ctaButtonLink: /link
 pastEventsSectionTitle: TEDxWarsaw Past Events
 pastEventsItems:
   - title: "x10"
