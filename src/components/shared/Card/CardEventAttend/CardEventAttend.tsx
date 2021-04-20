@@ -40,7 +40,7 @@ export const CardEventAttend = ({
           />
         </div>
       </Link>
-      <span className="absolute -left-2 top-0  text-white text-sm px-3 bg-customDarkGrey md:py-1">
+      <span className="absolute -left-2 top-0  text-white text-sm px-3 bg-customDarkGrey md:py-1 uppercase">
         <Link to={`/event/${slug}`}>{category}</Link>
       </span>
 

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { MainEvent } from "./MainEvent";
 import { EventsListProps } from "@/components/EventsList";
-import { EventGrid } from "@/components/EventsList/EventGrid/EventGrid";
 import { ListFilters } from "@/components/EventsList/ListFilters";
 import { CardEventAttend } from "@/components/shared/Card";
 
@@ -26,6 +25,10 @@ export const EventsList = ({ events, categories }: EventsListProps) => {
       tempEvents.push({
         ...events[0],
         displayName: events[0].displayName + " " + i,
+      });
+      tempEvents.push({
+        ...events[1],
+        displayName: events[1].displayName + " " + i + i,
       });
     }
     setTempEvents(tempEvents);
