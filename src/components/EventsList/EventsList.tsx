@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { MainEvent } from "./MainEvent";
 import { EventsListProps } from "@/components/EventsList";
 import { ListFilters } from "@/components/EventsList/ListFilters";
