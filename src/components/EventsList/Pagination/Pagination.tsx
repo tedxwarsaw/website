@@ -19,7 +19,13 @@ export const Pagination = ({
   return (
     <div>
       {pages.map((page) => (
-        <span key={page} onClick={() => changePage(page)}>
+        <span
+          key={page}
+          onClick={() => changePage(page)}
+          className={`px-4 py-2 border border-1 rounded-md mx-1 cursor-pointer ${
+            currentPage === page ? "text-customRed" : ""
+          }`}
+        >
           {page}
         </span>
       ))}

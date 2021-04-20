@@ -39,7 +39,7 @@ export const useEventList = (events) => {
   };
 
   useEffect(() => {
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 40; i++) {
       tempEvents.push({
         ...events[0],
         displayName: events[0].displayName + " " + i,
