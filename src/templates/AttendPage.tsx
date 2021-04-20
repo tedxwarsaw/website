@@ -10,8 +10,9 @@ import {
 import { JoinSpeakersSectionProps } from "@/queries/globalQueries/JoinSpeakersQuery";
 import { Banner, BannerVariant } from "@/components/shared/Banner";
 import { EventDetails } from "@/components/EventDetails";
+import { PastEvents, PastEventsProps } from "@/components/PastEvents";
 
-export interface Props extends NewsletterProps {
+export interface Props extends NewsletterProps, PastEventsProps {
   isHeroNewsletter: boolean;
   isCurrentEvent: boolean;
   featuredEvent?: {
@@ -41,12 +42,6 @@ export interface Props extends NewsletterProps {
   ctaBannerText: string;
   ctaButtonText: string;
   ctaButtonLink: string;
-  pastEventsSectionTitle: string;
-  pastEventsItems: {
-    title: string;
-    sectionName: string;
-    description: string;
-  }[];
 }
 
 export const AttendPageTemplate = (props: Props) => (
@@ -117,6 +112,11 @@ export const AttendPageTemplate = (props: Props) => (
         />
       </>
     )}
+
+    <PastEvents
+      pastEventsSectionTitle={props.pastEventsSectionTitle}
+      pastEventsItems={props.pastEventsItems}
+    />
   </Page>
 );
 
