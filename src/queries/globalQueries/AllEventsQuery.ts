@@ -26,6 +26,8 @@ export const queryForAllEvents = async (
   const { data } = await graphql(eventsQuery);
   const events = data.allEventsYaml.nodes;
 
+  const everyCategory = [];
+
   const eventsData = await Promise.all(
     events.map(async (event) => {
       const coverMobile = await getFluidImage({
@@ -48,11 +50,13 @@ export const queryForAllEvents = async (
         },
       };
       console.log({ ...event, cover });
+      everyCategory.push(event.category);
       return { ...event, cover };
     })
   );
 
   return {
-    ...eventsData,
+    events: [...eventsData],
+    categories: [...new Set(everyCategory)],
   };
 };

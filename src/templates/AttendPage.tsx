@@ -122,7 +122,7 @@ export const AttendPageTemplate = (props: Props) => (
       pastEventsItems={props.pastEventsItems}
     />
 
-    <EventsList events={props.events} />
+    <EventsList events={props.events} categories={props.categories} />
   </Page>
 );
 

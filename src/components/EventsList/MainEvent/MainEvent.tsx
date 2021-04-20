@@ -28,7 +28,7 @@ export const MainEvent = ({
   const dateConverted = moment(date);
 
   return (
-    <div className="inner-grid">
+    <div className="inner-grid col-start-1 col-end-2 md:col-end-3 xl:col-end-4 mb-10">
       <div className="col-start-1 md:col-end-2 xl:col-end-3">
         <Link to={`/event/${slug}`}>
           <div className="relative h-full">

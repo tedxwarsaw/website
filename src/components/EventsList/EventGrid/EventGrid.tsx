@@ -1,8 +1,12 @@
 import React from "react";
-import { EventsListProps } from "../EventsList.types";
+import { Event } from "../EventsList.types";
 import { CardEventAttend } from "@/components/shared/Card";
 
-export const EventGrid = ({ events }: EventsListProps) => {
+interface EventGridProps {
+  events: Event[];
+}
+
+export const EventGrid = ({ events }: EventGridProps) => {
   console.log(events);
   return (
     <div className="my-10 inner-grid gap-5">

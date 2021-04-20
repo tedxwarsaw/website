@@ -16,4 +16,5 @@ export interface Event {
 
 export interface EventsListProps {
   events: Event[];
+  categories: string[];
 }

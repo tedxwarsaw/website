@@ -34,7 +34,7 @@ export const queryForProps = async (
   const newsletter = await queryForNewsletter(graphql);
   const featuredEvent = await queryForFeatureEvent(graphql);
   const joinSpeakers = await queryForJoinSpeakers(graphql);
-  const events = await queryForAllEvents(graphql);
+  const { events, categories } = await queryForAllEvents(graphql);
 
   return {
     ...pagesYaml,
@@ -42,5 +42,6 @@ export const queryForProps = async (
     joinSpeakers,
     featuredEvent,
     events,
+    categories,
   };
 };
