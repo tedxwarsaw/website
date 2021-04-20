@@ -4,9 +4,17 @@ import { EventsListProps } from "@/components/EventsList";
 import { ListFilters } from "@/components/EventsList/ListFilters";
 import { CardEventAttend } from "@/components/shared/Card";
 import { useEventList } from "./EventList.hooks";
+import { Pagination } from "./Pagination";
 
 export const EventsList = ({ events, categories }: EventsListProps) => {
-  const { filterEvents, activeFilter, eventsToShow } = useEventList(events);
+  const {
+    filterEvents,
+    activeFilter,
+    eventsToShow,
+    pageOffset,
+    numberOfPages,
+    changePage,
+  } = useEventList(events);
 
   return (
     <div>
@@ -19,7 +27,7 @@ export const EventsList = ({ events, categories }: EventsListProps) => {
         <>
           <div className="my-10 inner-grid gap-5">
             {eventsToShow.map((event, index) => {
-              if (index === 0) {
+              if (index === 0 && pageOffset === 0) {
                 return <MainEvent event={event} />;
               } else {
                 return (
@@ -38,6 +46,7 @@ export const EventsList = ({ events, categories }: EventsListProps) => {
           </div>
         </>
       )}
+      <Pagination numberOfPages={numberOfPages} changePage={changePage} />
     </div>
   );
 };
