@@ -14,8 +14,8 @@ export interface NewsletterProps {
   newsletterTitle: string;
   newsletterMessage1: string;
   newsletterMessage2: string;
-  newsletterBackgroundImage: FluidObject;
-  newsletterBackgroundImageDesktop: FluidObject;
+  newsletterBackgroundImage?: FluidObject;
+  newsletterBackgroundImageDesktop?: FluidObject;
 }
 
 export const Newsletter = ({
@@ -52,7 +52,7 @@ export const Newsletter = ({
   } else if (variant === NewsletterVariant.white) {
     return (
       <div className="main-grid-full-span">
-        <div className="newsletter-container bg-customLightGrey py-12">
+        <div className="bg-customLightGrey py-12">
           <div className="seamless-grid mb-10 md:mb-0">
             <div className="col-start-2 col-end-7 inner-grid">
               <h2 className="font-medium text-3xl">{newsletterTitle}</h2>

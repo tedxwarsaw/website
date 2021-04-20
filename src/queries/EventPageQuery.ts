@@ -1,6 +1,7 @@
 import { parse as parseHTML, HTMLElement } from "node-html-parser";
 import { Props } from "../templates/EventPage";
 import { getFixedImage, getFluidImage } from "./utils";
+import { queryForNewsletter } from "./globalQueries";
 
 const firstQuery = `#graphql
   query FirstEvent {
@@ -100,9 +101,14 @@ export const queryForProps = async (
     ),
   };
 
-  const partnerLogos: any = await Promise.all(
+  const partnerLogosDesktop: any = await Promise.all(
     event.partnerLogoPaths.map(
       async (path) => await getFixedImage({ graphql, path, height: 60 })
+    )
+  );
+  const partnerLogos: any = await Promise.all(
+    event.partnerLogoPaths.map(
+      async (path) => await getFixedImage({ graphql, path, height: 30 })
     )
   );
 
@@ -133,13 +139,16 @@ export const queryForProps = async (
       path: event.location.image,
     }),
   };
+  const newsletter = await queryForNewsletter(graphql);
 
   return {
     ...event,
     partnerLogos,
+    partnerLogosDesktop,
     partnershipTeam,
     suggestedEvent,
     cover,
     location,
+    ...newsletter,
   };
 };

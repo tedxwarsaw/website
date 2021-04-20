@@ -1,0 +1,1 @@
+export { EventHero } from "./EventHero";
