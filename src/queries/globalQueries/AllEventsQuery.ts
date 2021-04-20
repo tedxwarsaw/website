@@ -25,31 +25,34 @@ export const queryForAllEvents = async (
 ): Promise<any> => {
   const { data } = await graphql(eventsQuery);
   const events = data.allEventsYaml.nodes;
-  events.map(async (event) => {
-    const coverMobile = await getFluidImage({
-      graphql,
-      path: event.cover.image.mobile,
-      quality: 90,
-      sizes: "(max:-width: 768px)",
-    });
-    const coverDesktop = await getFluidImage({
-      graphql,
-      path: event.cover.image.desktop,
-      quality: 90,
-      sizes: "(max:-width: 2000px)",
-    });
 
-    const cover = {
-      image: {
-        desktop: coverDesktop,
-        mobile: coverMobile,
-      },
-    };
+  const eventsData = await Promise.all(
+    events.map(async (event) => {
+      const coverMobile = await getFluidImage({
+        graphql,
+        path: event.cover.image.mobile,
+        quality: 90,
+        sizes: "(max:-width: 768px)",
+      });
+      const coverDesktop = await getFluidImage({
+        graphql,
+        path: event.cover.image.desktop,
+        quality: 90,
+        sizes: "(max:-width: 2000px)",
+      });
 
-    return { ...event, cover };
-  });
+      const cover = {
+        image: {
+          desktop: coverDesktop,
+          mobile: coverMobile,
+        },
+      };
+      console.log({ ...event, cover });
+      return { ...event, cover };
+    })
+  );
 
   return {
-    events,
+    ...eventsData,
   };
 };

@@ -127,6 +127,7 @@ export const AttendPageTemplate = (props: Props) => (
 );
 
 const AttendPage = ({ pageContext }) => {
+  console.log(pageContext);
   return <AttendPageTemplate {...pageContext.props} />;
 };
 

@@ -1,3 +1,4 @@
+import { MainEvent } from "./MainEvent";
 import { FluidObject } from "gatsby-image";
 import React from "react";
 
@@ -18,10 +19,25 @@ export interface EventsListProps {
 }
 
 export const EventsList = ({ events }: EventsListProps) => {
-  console.log(events);
+  let tempEvents = [];
+  for (let i = 0; i < 40; i++) {
+    tempEvents.push({
+      ...events[0],
+      displayName: events[0].displayName + " " + i,
+    });
+  }
+
+  console.log(tempEvents);
   return (
     <div>
-      <h2>{events.length}Events</h2>
+      <MainEvent
+        displayName={tempEvents[0].displayName}
+        slug={tempEvents[0].slug}
+        category={tempEvents[0].category}
+        date={tempEvents[0].date}
+        description={tempEvents[0].description}
+        cover={tempEvents[0].cover}
+      />
     </div>
   );
 };

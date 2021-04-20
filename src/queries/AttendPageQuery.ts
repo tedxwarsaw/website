@@ -41,6 +41,6 @@ export const queryForProps = async (
     ...newsletter,
     joinSpeakers,
     featuredEvent,
-    ...events,
+    events,
   };
 };
