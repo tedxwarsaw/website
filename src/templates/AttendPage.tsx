@@ -11,8 +11,12 @@ import { JoinSpeakersSectionProps } from "@/queries/globalQueries/JoinSpeakersQu
 import { Banner, BannerVariant } from "@/components/shared/Banner";
 import { EventDetails } from "@/components/EventDetails";
 import { PastEvents, PastEventsProps } from "@/components/PastEvents";
+import { EventsList, EventsListProps } from "@/components/EventsList";
 
-export interface Props extends NewsletterProps, PastEventsProps {
+export interface Props
+  extends NewsletterProps,
+    PastEventsProps,
+    EventsListProps {
   isHeroNewsletter: boolean;
   isCurrentEvent: boolean;
   featuredEvent?: {
@@ -117,11 +121,12 @@ export const AttendPageTemplate = (props: Props) => (
       pastEventsSectionTitle={props.pastEventsSectionTitle}
       pastEventsItems={props.pastEventsItems}
     />
+
+    <EventsList events={props.events} />
   </Page>
 );
 
 const AttendPage = ({ pageContext }) => {
-  console.log(pageContext);
   return <AttendPageTemplate {...pageContext.props} />;
 };
 
