@@ -1,7 +1,14 @@
-.navbar-links > a {
+.navbar-links a {
   padding: 4px 0;
 }
 .navbar-links > a[aria-current="page"] {
   border-top: solid 4px theme("colors.customRed");
   padding-top: 0;
+}
+
+@media (max-width: theme("screens.xl")) {
+  .navbar-links a[aria-current="page"] {
+    border-bottom: solid 4px theme("colors.customRed");
+    padding-bottom: 0;
+  }
 }
