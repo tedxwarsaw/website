@@ -17,7 +17,7 @@ export const EventsList = ({ events, categories }: EventsListProps) => {
   } = useEventList(events);
 
   return (
-    <div>
+    <div className="py-10">
       <ListFilters
         filtersList={categories}
         changeFilter={filterEvents}
