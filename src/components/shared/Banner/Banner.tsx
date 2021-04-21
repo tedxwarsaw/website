@@ -47,8 +47,9 @@ export const Banner = ({
       <a href={buttonUrl} target="_blank" rel="noopener noreferrer">
         <Button
           variant={
-            (!variant || variant === BannerVariant.red) &&
-            ButtonVariant.outlineWhite
+            !variant || variant === BannerVariant.red
+              ? ButtonVariant.outlineWhite
+              : ButtonVariant.filledRedWithBG
           }
           className="font-normal text-lg px-20"
         >
