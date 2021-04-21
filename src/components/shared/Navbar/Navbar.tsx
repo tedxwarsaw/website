@@ -65,6 +65,7 @@ export const NavbarTemplate = (props: Props) => {
         ...navbarLinks,
       ]
     : navbarLinks;
+
   return (
     <>
       <header className="main-grid h-16 shadow">
@@ -116,7 +117,12 @@ export const NavbarTemplate = (props: Props) => {
             </button>
           </div>
         </div>
-        <SideNavbar {...props} open={sideOpen} setOpen={setSideOpen} />
+        <SideNavbar
+          {...props}
+          navbarLinks={navbarLinks}
+          open={sideOpen}
+          setOpen={setSideOpen}
+        />
       </header>
     </>
   );
