@@ -49,7 +49,6 @@ export const queryForAllEvents = async (
           mobile: coverMobile,
         },
       };
-      console.log({ ...event, cover });
       everyCategory.push(event.category);
       return { ...event, cover };
     })

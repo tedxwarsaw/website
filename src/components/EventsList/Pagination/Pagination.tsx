@@ -21,7 +21,6 @@ export const Pagination = ({
   }
 
   const handlePageClick = (e) => {
-    console.log(e);
     const selectedPage = e.selected + 1;
     changePage(selectedPage);
   };

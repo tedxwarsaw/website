@@ -68,7 +68,6 @@ export const EventPageTemplate = (props: Props) => {
   const dateConverted = moment(props.date, "DD/MM/YYYY");
   const today = moment(new Date(), "DD/MM/YYYY");
   const isFutureEvent = today < dateConverted;
-  console.log(props.joinSpeakers);
 
   return (
     <Page>
