@@ -21,7 +21,10 @@ export const SuggestedEventSlider = ({ children }) => {
 
   return (
     <>
-      <div className="slider-wrapper w-full max-w-full mt-10 relative">
+      <div
+        className="slider-wrapper w-full max-w-full mt-10 relative"
+        style={{ maxHeight: "32rem" }}
+      >
         <Slider sliderRef={sliderRef} children={children} />
       </div>
       <div className="hidden xl:block">
