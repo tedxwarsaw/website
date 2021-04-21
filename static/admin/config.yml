@@ -231,6 +231,32 @@ collections:
             widget: "list"
             fields:
               - { label: "Name", name: "name", widget: "string"}
+          - label: "Meet us background mobile image"
+            name: "meetUsBackgroundImage"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Meet us background desktop image"
+            name: "meetUsBackgroundDesktop"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Team members slider"
+            name: "teamMembersSlider"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string"}
+              - { label: "Title", name: "title", widget: "string"}
+              - { label: "Description", name: "description", widget: "markdown"}
+              - { label: "Profile image", name: "profileImage", widget: "image",allow_multiple: false, media_folder: "photos" }
+          - label: "Associates"
+            name: "associates"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string"}
+              - { label: "Title", name: "title", widget: "string"}
+              - { label: "Description", name: "description", widget: "markdown"}
+              - { label: "Profile image", name: "profileImage", widget: "image",allow_multiple: false, media_folder: "photos" }
   - label: "Global"
     name: "global"
     files:
