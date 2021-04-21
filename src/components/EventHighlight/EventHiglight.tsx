@@ -54,7 +54,7 @@ export const EventHighlight = ({
             <p className="xl:hidden">{eventDescription}</p>
             <a
               href={`/event/${eventSlug}`}
-              className="text-red-500 flex font-bold hover:opacity-50 mt-5 items-center"
+              className="text-customRed flex font-bold hover:opacity-50 mt-5 items-center"
               style={{ width: "fit-content" }}
             >
               <span className="my-auto flex items-center">

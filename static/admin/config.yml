@@ -171,6 +171,37 @@ collections:
             media_library:
               config:
                 multiple: true
+      - label: "Attend"
+        name: "attend"
+        file: "src/pages/content/pages/attend.yaml"
+        slug: "attend.md" # Filename template, e.g., YYYY-MM-DD-title.md
+        fields: # The fields for each document, usually in front matter
+          - label: "Show newsletter as hero"
+            name: "isHeroNewsletter"
+            widget: "boolean"
+          - label: "Show current featured event"
+            name: "isCurrentEvent"
+            widget: "boolean"
+          - label: "Call to action banner title"
+            name: ctaBannerText
+            widget: string
+            hint: Title of call to action section below featured event
+          - label: "Call to action button text"
+            name: ctaButtonText
+            widget: string
+          - label: "Call to action button link"
+            name: ctaButtonLink
+            widget: string
+          - label: "Title of past events section"
+            name: pastEventsSectionTitle
+            widget: string
+          - label: "Past events items"
+            name: "pastEventsItems"
+            widget: "list"
+            fields:
+              - { label: "Red title of section", name: "title", widget: "string" }
+              - { label: "Section name", name: "sectionName", widget: "string" }
+              - { label: "Section description", name: "description", widget: "string" }
   - label: "Global"
     name: "global"
     files:
@@ -431,6 +462,9 @@ collections:
         date_format: "DD/MM/YYYY"
         time_format: false
         picker_utc: true
+      - name: time
+        label: "Time"
+        widget: string
       - name: hook
         label: Hook
         widget: text
@@ -449,6 +483,40 @@ collections:
             widget: "select"
             hint: Use 'light' when the cover image is light, 'dark' when its dark. This will adjust the text's color appropriately.
             options: ["dark", "light"]
+          - name: button
+            label: Button
+            widget: object
+            fields:
+              - name: text
+                label: Text
+                widget: string
+              - name: link
+                label: URL
+                widget: string
+                hint: The URL the button should point to.
+              - name: show
+                label: Show
+                widget: boolean
+                hint: Whether to show the button or not.
+          - name: image
+            label: Cover image
+            widget: object
+            fields:
+              - name: mobile
+                label: Mobile variant
+                widget: image
+                allow_multiple: false
+                media_folder: "{{slug}}/coverPhotos"
+              - name: desktop
+                label: Desktop variant
+                widget: image
+                allow_multiple: false
+                media_folder: "{{slug}}/coverPhotos"
+      - name: coverHero
+        label: Cover hero section
+        widget: object
+        hint: Cover show as page hero, when this event is featured
+        fields:
           - name: button
             label: Button
             widget: object

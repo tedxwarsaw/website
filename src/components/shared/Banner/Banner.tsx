@@ -9,7 +9,7 @@ export enum BannerVariant {
 interface BannerProps {
   title: string;
   variant?: BannerVariant;
-  subtitle: string;
+  subtitle?: string;
   buttonText: string;
   buttonUrl: string;
 }
@@ -31,20 +31,25 @@ export const Banner = ({
         variant === BannerVariant.white ? "" : "text-white"
       }`}
     >
-      <h2 className="font-semibold text-4xl">{title}</h2>
-      <p
-        className={`${
-          variant === BannerVariant.white ? "" : "font-medium text-4xl"
-        }`}
-      >
-        {subtitle}
-      </p>
+      <h2 className="text-3xl xl:text-4xl md:max-w-xl">{title}</h2>
+
+      {subtitle && (
+        <p
+          className={`${
+            variant === BannerVariant.white ? "" : "font-medium text-4xl"
+          }`}
+        >
+          {subtitle}
+        </p>
+      )}
+
       <div className="h-2" />
       <a href={buttonUrl} target="_blank" rel="noopener noreferrer">
         <Button
           variant={
-            (!variant || variant === BannerVariant.red) &&
-            ButtonVariant.outlineWhite
+            !variant || variant === BannerVariant.red
+              ? ButtonVariant.outlineWhite
+              : ButtonVariant.filledRedWithBG
           }
           className="font-normal text-lg px-20"
         >

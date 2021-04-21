@@ -7,3 +7,7 @@ export interface FeaturedEvent {
   slug: string;
   show: boolean;
 }
+
+export enum CoverVariant {
+  Dark = "dark",
+}

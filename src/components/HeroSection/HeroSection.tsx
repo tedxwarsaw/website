@@ -3,6 +3,8 @@ import { HeroSectionProps } from "./HeroSection.types";
 import { BackgroundImage } from "@/components/shared/BackgroundImage";
 import { Button } from "@/components/shared/Button";
 import { FaArrowRight } from "react-icons/fa";
+import { HiMenuAlt2 } from "react-icons/hi";
+import { Link } from "gatsby";
 
 export const HeroSection = ({
   heroTitle,
@@ -13,6 +15,8 @@ export const HeroSection = ({
   heroButtonText,
   heroButtonLink,
   heroLinks,
+  featuredButtonLink,
+  fontMedium,
 }: HeroSectionProps) => {
   return (
     <div className="main-grid-full-span">
@@ -25,15 +29,23 @@ export const HeroSection = ({
       >
         <div className="main-grid">
           <div className="md:max-w-xl flex flex-col">
-            <h1 className="text-white font-bold text-3xl md:text-5xl mb-7">
+            <h1
+              className={`text-white  text-3xl  mb-7 ${
+                fontMedium ? "" : "md:text-5xl font-bold"
+              }`}
+            >
               {heroTitle}
             </h1>
-            <p
-              className="text-white text-sm md:text-lg md:font-light mb-10 md:mb-7"
-              style={{ lineHeight: "30px" }}
-            >
-              {heroSubtitle}
-            </p>
+
+            {heroSubtitle && (
+              <p
+                className="text-white text-sm md:text-lg md:font-light mb-10 md:mb-7"
+                style={{ lineHeight: "30px" }}
+              >
+                {heroSubtitle}
+              </p>
+            )}
+
             <div className="flex flex-col md:flex-row md:align-center">
               <a
                 href={heroButtonLink}
@@ -54,6 +66,15 @@ export const HeroSection = ({
                   </span>
                 </a>
               ))}
+              {featuredButtonLink && (
+                <div className="text-customRed font-medium flex flex-row items-center hover:text-white md:ml-5 mb-10 md:mb-0">
+                  <Link to={featuredButtonLink}>
+                    <span>
+                      Read more <HiMenuAlt2 className="inline w-6 h-6" />
+                    </span>
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </div>
