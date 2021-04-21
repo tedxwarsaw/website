@@ -14,16 +14,16 @@ export const PastEvents = ({
   pastEventsItems,
 }: PastEventsProps) => (
   <div className="my-16">
-    <h2 className="text-2xl md:text-3xl mb-5 xl:mb-10">
+    <h2 className="text-3xl md:text-4xl mb-5 xl:mb-10 font-bold">
       {pastEventsSectionTitle}
     </h2>
     <div className="inner-grid">
       {pastEventsItems.map((pastEvent, index) => (
         <div className="my-5 xl:my-0" key={pastEvent.title + index}>
-          <span className="text-2xl md:text-3xl text-customRed">
+          <span className="text-3xl md:text-4xl text-customRed font-bold">
             {pastEvent.title}
           </span>
-          <p className="my-5">{pastEvent.sectionName}</p>
+          <p className="my-5 font-bold">{pastEvent.sectionName}</p>
           <p>{pastEvent.description}</p>
         </div>
       ))}
