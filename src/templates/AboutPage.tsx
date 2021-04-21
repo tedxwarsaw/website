@@ -1,28 +1,36 @@
 import React from "react";
-import { graphql } from "gatsby";
-import { YamlPage } from "../types";
 import { Page } from "@/components/shared/Page";
+import { FluidObject } from "gatsby-image";
+import { HeroSection } from "../components/HeroSection";
+import { AboutTed, AboutTedProps } from "../components/AboutTed/AboutTed";
 
-interface Props {
-  body: String;
+interface Props extends AboutTedProps {
+  heroTitle: string;
+  heroBackgroundImage: FluidObject;
+  heroBackgroundImageDesktop: FluidObject;
+  heroBackgroundImageAlt: string;
 }
 
-export const AboutPageTemplate = ({ body }: Props) => (
+export const AboutPageTemplate = (props: Props) => (
   <Page>
-    <div className="inner-grid">{body}</div>
+    <HeroSection
+      heroTitle={props.heroTitle}
+      heroBackgroundImage={props.heroBackgroundImage}
+      heroBackgroundImageDesktop={props.heroBackgroundImageDesktop}
+      heroBackgroundImageAlt={props.heroBackgroundImageAlt}
+      centerContentVertically={true}
+    />
+    <AboutTed
+      aboutTedContent={props.aboutTedContent}
+      aboutTedSpeakers={props.aboutTedSpeakers}
+    />
+    <div style={{ height: "50vh" }} />
   </Page>
 );
 
-const AboutPage = ({ data }: { data: YamlPage<Props> }) => {
-  return <AboutPageTemplate {...data.pagesYaml} />;
+const AboutPage = ({ pageContext }) => {
+  console.log(pageContext.props);
+  return <AboutPageTemplate {...pageContext.props} />;
 };
 
 export default AboutPage;
-
-export const pageQuery = graphql`
-  query AboutPageTemplate {
-    pagesYaml(templateKey: { eq: "AboutPage" }) {
-      body
-    }
-  }
-`;

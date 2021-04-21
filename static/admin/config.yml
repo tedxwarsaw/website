@@ -202,10 +202,10 @@ collections:
               - { label: "Red title of section", name: "title", widget: "string" }
               - { label: "Section name", name: "sectionName", widget: "string" }
               - { label: "Section description", name: "description", widget: "string" }
-      - label: "MeetUs"
-        name: "meetUs"
-        file: "src/pages/content/pages/meetUs.yaml"
-        slug: "meetUs.md" # Filename template, e.g., YYYY-MM-DD-title.md"
+      - label: "About"
+        name: "about"
+        file: "src/pages/content/pages/about.yaml"
+        slug: "about.md" # Filename template, e.g., YYYY-MM-DD-title.md"
         fields:
           - label: "Hero Title"
             name: "heroTitle"
