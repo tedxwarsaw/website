@@ -50,7 +50,7 @@ export const CardEventAttend = ({
             <span className="my-10">
               {dateConverted.format("MMM Do, YYYY")}
             </span>
-            <h3 className="min-h-10">{displayName}</h3>
+            <h3 className="min-h-10 font-bold">{displayName}</h3>
           </div>
         </div>
       </Link>
