@@ -1,20 +1,24 @@
 import { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 
-export const useRecommendationsSlider = (numberOfSlides: number) => {
+export const useSlider = (
+  numberOfSlides: number,
+  slidesPerView: { mobile: number; tablet: number; desktop: number },
+  spacing: { mobile: number; tablet: number; desktop: number }
+) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [inputSliderPosition, setInputSliderPosition] = useState(0);
   const [sliderRef, slider] = useKeenSlider({
-    slidesPerView: 1.1,
-    spacing: 10,
+    slidesPerView: slidesPerView.mobile,
+    spacing: spacing.mobile,
     breakpoints: {
       "(min-width: 768px) and (max-width: 1280px)": {
-        slidesPerView: 2.2,
-        spacing: 20,
+        slidesPerView: slidesPerView.tablet,
+        spacing: spacing.tablet,
       },
       "(min-width: 1280px)": {
-        slidesPerView: 3,
-        spacing: 20,
+        slidesPerView: slidesPerView.desktop,
+        spacing: spacing.desktop,
       },
     },
     afterChange: (slider) => {

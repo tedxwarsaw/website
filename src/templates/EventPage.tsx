@@ -3,7 +3,7 @@ import { FluidObject, FixedObject } from "gatsby-image";
 import { Page } from "@/components/shared/Page";
 import { splitTextInTwo } from "../utils";
 import { EventHero } from "@/components/EventHero";
-import { SuggestedEvent } from "@/components/shared/SuggestedEvent";
+import { SuggestedEvent } from "@/components/SuggestedEvent";
 import {
   BecomePartner,
   PartnershipTeamMember,
