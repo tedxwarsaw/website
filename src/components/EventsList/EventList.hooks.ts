@@ -3,10 +3,9 @@ import { useState, useEffect } from "react";
 export const useEventList = (events) => {
   const eventsPerPage = 9;
   const [currentPage, setCurrentPage] = useState(1);
-  const [tempEvents, setTempEvents] = useState([]);
   const [activeFilter, setActiveFilter] = useState("all");
-  const [filteredEvents, setFilteredEvents] = useState([]);
-  const [eventsToShow, setEventsToShow] = useState(null);
+  const [filteredEvents, setFilteredEvents] = useState(events);
+  const [eventsToShow, setEventsToShow] = useState(events);
   const [numberOfPages, setNumberOfPages] = useState(1);
 
   const paginateEvents = (eventsToPrepare, pageToChange) => {
@@ -30,29 +29,13 @@ export const useEventList = (events) => {
 
   const filterEvents = (value: string) => {
     setActiveFilter(value);
-    let eventsFiltered = [...tempEvents];
+    let eventsFiltered = [...events];
     if (value !== "all") {
-      eventsFiltered = tempEvents.filter((event) => event.category === value);
+      eventsFiltered = events.filter((event) => event.category === value);
     }
     setFilteredEvents(eventsFiltered);
     paginateEvents(eventsFiltered, 1);
   };
-
-  useEffect(() => {
-    for (let i = 0; i < 40; i++) {
-      tempEvents.push({
-        ...events[0],
-        displayName: events[0].displayName + " " + i,
-      });
-      tempEvents.push({
-        ...events[1],
-        displayName: events[1].displayName + " " + i + i,
-      });
-    }
-    console.log(tempEvents);
-    setTempEvents(tempEvents);
-    setFilteredEvents(tempEvents);
-  }, []);
 
   useEffect(() => {
     console.log("pages change");

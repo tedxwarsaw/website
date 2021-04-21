@@ -46,11 +46,14 @@ export const EventsList = ({ events, categories }: EventsListProps) => {
           </div>
         </>
       )}
-      <Pagination
-        numberOfPages={numberOfPages}
-        changePage={changePage}
-        currentPage={currentPage}
-      />
+
+      {numberOfPages - 1 > 1 && (
+        <Pagination
+          numberOfPages={numberOfPages}
+          changePage={changePage}
+          currentPage={currentPage}
+        />
+      )}
     </div>
   );
 };
