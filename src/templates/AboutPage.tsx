@@ -35,7 +35,7 @@ export const AboutPageTemplate = (props: Props) => (
 );
 
 const AboutPage = ({ pageContext }) => {
-  console.log(pageContext.props);
+  console.log(pageContext);
   return <AboutPageTemplate {...pageContext.props} />;
 };
 

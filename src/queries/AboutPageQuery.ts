@@ -13,6 +13,19 @@ export const pageQuery = `#graphql
       aboutTedSpeakers{
         name
       }
+      meetUsBackgroundImage
+      meetUsBackgroundImageDesktop
+      teamMembersSlider {
+        name
+        title
+        description
+        profileImageUrl
+      }
+      associates {
+        name
+        title
+        profileImageUrl
+      }
     }
   }
 `;
@@ -38,9 +51,65 @@ export const queryForProps = async (
     sizes: "(max:-width: 2000px)",
   });
 
+  const associates: any = await Promise.all(
+    pagesYaml.associates.map(async (associate) => {
+      const image = await getFixedImage({
+        graphql,
+        path: associate.profileImageUrl,
+        height: 150,
+        width: 150,
+      });
+      return {
+        ...associate,
+        profileImage: image,
+      };
+    })
+  );
+  const teamMembersSlider: any = await Promise.all(
+    pagesYaml.teamMembersSlider.map(async (teamMember) => {
+      const profileImage = await getFluidImage({
+        graphql,
+        path: teamMember.profileImageUrl,
+        quality: 100,
+        sizes: "(max:-width: 768px)",
+      });
+
+      const profileImageDesktop = await getFluidImage({
+        graphql,
+        path: teamMember.profileImageUrl,
+        quality: 100,
+        sizes: "(max:-width: 2000px)",
+      });
+
+      return {
+        ...teamMember,
+        profileImage,
+        profileImageDesktop,
+      };
+    })
+  );
+
+  const meetUsBackgroundImage = await getFluidImage({
+    graphql,
+    path: pagesYaml.meetUsBackgroundImage,
+    quality: 90,
+    sizes: "(max:-width: 768px)",
+  });
+
+  const meetUsBackgroundImageDesktop = await getFluidImage({
+    graphql,
+    path: pagesYaml.meetUsBackgroundImageDesktop,
+    quality: 90,
+    sizes: "(max:-width: 2000px)",
+  });
+
   return {
     ...pagesYaml,
     heroBackgroundImage,
     heroBackgroundImageDesktop,
+    meetUsBackgroundImage,
+    meetUsBackgroundImageDesktop,
+    associates,
+    teamMembersSlider,
   };
 };

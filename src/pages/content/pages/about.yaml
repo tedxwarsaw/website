@@ -19,7 +19,7 @@ aboutTedSpeakers:
   - name: "Sal Khan"
   - name: "Daniel Kahneman"
 meetUsBackgroundImage: images/uploads/meet-us-here.png
-meetUsBackgroundDesktop: images/uploads/meet-us-here.png
+meetUsBackgroundImageDesktop: images/uploads/meet-us-here.png
 teamMembersSlider: 
   - name: Iryna Oleksiuk
     title: Host
@@ -50,8 +50,7 @@ teamMembersSlider:
     I'm the core team leader of TEDxWarsaw and I’m proud to mention that in 2019, 500 professionals attended the sold-out event. 
 
     I am passionate about helping people communicate and be more understanding towards each other’s needs."
-    profileImage: images/uploads/meetusphoto.png
-    profileImageDesktop: images/uploads/meetusphoto.png
+    profileImageUrl: images/uploads/meetusphoto.png
   - name: Martyna Hrankowska
     title: Host
     description: " work with IT and engineering leaders to build rock-star teams, increase job satisfaction and reduce turnover. Together we remove stumbling blocks to co-create a path forward.
