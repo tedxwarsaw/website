@@ -9,6 +9,10 @@ export const pageQuery = `#graphql
       heroBackgroundImageUrl
       heroBackgroundImageUrlDesktop
       heroBackgroundImageAlt
+      aboutTedContent
+      aboutTedSpeakers{
+        name
+      }
     }
   }
 `;

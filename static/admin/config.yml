@@ -223,6 +223,14 @@ collections:
           - label: "Hero background image alt"
             name: "heroBackgroundImageAlt"
             widget: string
+          - label: "About TED section content"
+            name: "aboutUsContent"
+            widget: 'markdown'
+          - label: "About Ted section speakers"
+            name: "aboutTedSpeakers"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string"}
   - label: "Global"
     name: "global"
     files:

@@ -2,9 +2,9 @@ import React from "react";
 import { Page } from "@/components/shared/Page";
 import {FluidObject} from "gatsby-image";
 import {HeroSection} from "../components/HeroSection";
-import {AboutTed} from "../components/AboutTed/AboutTed";
+import {AboutTed, AboutTedProps} from "../components/AboutTed/AboutTed";
 
-interface Props {
+interface Props extends AboutTedProps{
     heroTitle: string,
     heroBackgroundImage: FluidObject,
     heroBackgroundImageDesktop: FluidObject,
@@ -19,11 +19,13 @@ export const MeetUsPageTemplate = (props : Props) => (
             heroBackgroundImageDesktop={props.heroBackgroundImageDesktop}
             heroBackgroundImageAlt={props.heroBackgroundImageAlt}
             centerContentVertically={true}/>
-            <AboutTed/>
+        <AboutTed aboutTedContent={props.aboutTedContent} aboutTedSpeakers={props.aboutTedSpeakers}/>
+        <div style={{height: "50vh"}}/>
     </Page>
 );
 
 const MeetUsPage = ({ pageContext }) => {
+    console.log(pageContext.props);
     return <MeetUsPageTemplate {...pageContext.props} />;
 };
 

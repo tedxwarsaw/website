@@ -1,1 +1,1 @@
-import {AboutTed} from "./AboutTed";
+export {AboutTed, AboutTedProps} from "./AboutTed";
