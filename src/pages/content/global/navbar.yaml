@@ -6,9 +6,9 @@ navbarLinks:
   - displayName: Attend
     variant: black
     path: /attend
-  - displayName: About
+  - displayName: Meet Us
     variant: black
-    path: /about
+    path: /meet-us
 navbarButtons:
   - displayName: Get Involved
     variant: black

@@ -1,6 +1,7 @@
 import React from "react";
 import Img, { FluidObject } from "gatsby-image";
 import "../Card.styled.css";
+import { Link } from "gatsby";
 
 export enum RecommendationCardTypes {
   EVENT = "EVENT",
@@ -26,7 +27,7 @@ export const CardTalk = ({
   eventName,
   duration,
 }: CardTalkProps) => (
-  <a href={`/talk/${slug}`}>
+  <Link to={`/talk/${slug}`}>
     <div className="border-b-4 pb-5 pt-2 md:pt-3 border-customTransparent  hover:border-customRed h-full flex flex-col">
       <div className="relative card-image-container">
         <Img
@@ -56,5 +57,5 @@ export const CardTalk = ({
       </div>
       <p className="pb-1 mt-auto">{eventName}</p>
     </div>
-  </a>
+  </Link>
 );

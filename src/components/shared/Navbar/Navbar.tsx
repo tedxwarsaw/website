@@ -8,6 +8,7 @@ import {
 } from "./ButtonTooltip/ButtonTooltip";
 import { SideNavbar } from "./SideNavbar/SideNavbar";
 import { FeaturedEvent } from "@/types";
+import "./Navbar.styled.css";
 
 export enum LinkVariant {
   Red = "red",
@@ -65,6 +66,7 @@ export const NavbarTemplate = (props: Props) => {
         ...navbarLinks,
       ]
     : navbarLinks;
+
   return (
     <>
       <header className="main-grid h-16 shadow">
@@ -74,11 +76,11 @@ export const NavbarTemplate = (props: Props) => {
               <Img fixed={imgFixed} alt="Site logo" />
             </Link>
             <div
-              className={`h-full hidden lg:flex flex-row items-center uppercase font-semibold`}
+              className={`h-full hidden lg:flex flex-row items-center uppercase font-semibold navbar-links`}
             >
               {navbarLinks.map((link, idx) => (
                 <Link
-                  className={`h-full flex flex-row items-center pr-10 
+                  className={`h-full flex flex-row items-center mr-10 
                       ${getLinkClasses(link.variant)}`}
                   key={idx}
                   to={link.path}
@@ -116,7 +118,12 @@ export const NavbarTemplate = (props: Props) => {
             </button>
           </div>
         </div>
-        <SideNavbar {...props} open={sideOpen} setOpen={setSideOpen} />
+        <SideNavbar
+          {...props}
+          navbarLinks={navbarLinks}
+          open={sideOpen}
+          setOpen={setSideOpen}
+        />
       </header>
     </>
   );

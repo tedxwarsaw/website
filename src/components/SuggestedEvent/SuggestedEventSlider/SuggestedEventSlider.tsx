@@ -22,7 +22,11 @@ export const SuggestedEventSlider = ({ children }) => {
   return (
     <>
       <div className="slider-wrapper w-full max-w-full mt-10 relative">
-        <Slider sliderRef={sliderRef} children={children} />
+        <Slider
+          sliderRef={sliderRef}
+          children={children}
+          style={{ maxHeight: "32rem" }}
+        />
       </div>
       <div className="hidden xl:block">
         <div className="inner-grid" style={{ margin: "0 -32px 0 -6px" }}>
