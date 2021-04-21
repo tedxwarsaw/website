@@ -57,6 +57,10 @@ const secondQuery = `#graphql
         image
         mapIframe
       }
+      speakers {
+        speakerName
+        speakerPhotoPath
+      }
     }
     suggestedEventInfo: eventsYaml(slug: {eq: $suggestedEventSlug}) {
       slug
@@ -141,6 +145,21 @@ export const queryForProps = async (
   };
   const newsletter = await queryForNewsletter(graphql);
 
+  const eventSpeakers: any = await Promise.all(
+    event.speakers.map(async (speaker) => {
+      const image = await getFixedImage({
+        graphql,
+        path: speaker.speakerPhotoPath,
+        height: 60,
+        width: 60,
+      });
+      return {
+        speakerName: speaker.speakerName,
+        speakerPhoto: image,
+      };
+    })
+  );
+
   return {
     ...event,
     partnerLogos,
@@ -149,6 +168,7 @@ export const queryForProps = async (
     suggestedEvent,
     cover,
     location,
+    eventSpeakers,
     ...newsletter,
   };
 };

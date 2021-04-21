@@ -16,12 +16,16 @@ import {
 } from "@/components/shared/Newsletter";
 import { Banner, BannerVariant } from "@/components/shared/Banner";
 import { EventPlace, EventPlaceProps } from "@/components/EventPlace";
+import { EventSpeakers, EventSpeakersProps } from "@/components/EventSpeakers";
 
 enum CoverVariant {
   Dark = "dark",
 }
 
-export interface Props extends NewsletterProps, EventPlaceProps {
+export interface Props
+  extends NewsletterProps,
+    EventPlaceProps,
+    EventSpeakersProps {
   partnerLogos: FixedObject[];
   partnerLogosDesktop: FixedObject[];
   partnershipTeam: PartnershipTeamMember[];
@@ -81,6 +85,10 @@ export const EventPageTemplate = (props: Props) => {
       </div>
 
       <EventPlace location={props.location} />
+
+      {props.eventSpeakers && props.eventSpeakers.length > 0 && (
+        <EventSpeakers eventSpeakers={props.eventSpeakers} />
+      )}
 
       <Banner
         title={props.callToAction.title}

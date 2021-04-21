@@ -486,14 +486,12 @@ collections:
         media_library:
           config:
             multiple: true
-      - name: speakerPhotoPaths
-        label: Speaker photos
-        widget: image
-        allow_multiple: true
-        media_folder: "{{slug}}/speakerPhotos"
-        media_library:
-          config:
-            multiple: true
+      - name: speakers
+        label: Event speakers
+        widget: "list"
+        fields: 
+          - { label: "Speaker's name", name: "speakerName", widget: "string" }
+          - { label: "Speaker's phote", name: "speakerPhotoPath", widget: "image", allow_multiple: false, media_folder: "{{slug}}/speakerPhotos" }
   - label: "Talks"
     name: talks
     folder: "src/pages/content/talks"
