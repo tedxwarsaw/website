@@ -7,7 +7,7 @@ export interface Associate {
   profileImageDesktop: FixedObject;
 }
 
-export interface TeamMembers {
+export interface TeamMember {
   name: string;
   title: string;
   description: string;
@@ -18,6 +18,6 @@ export interface TeamMembers {
 export interface MeetUsProps {
   meetUsBackgroundImage: FluidObject;
   meetUsBackgroundImageDesktop: FluidObject;
-  teamMembersSlider: TeamMembers[];
+  teamMembersSlider: TeamMember[];
   associates: Associate[];
 }
