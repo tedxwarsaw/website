@@ -1,1 +1,2 @@
-export { MeetUs, MeetUsProps } from "./MeetUs";
+export { MeetUs } from "./MeetUs";
+export { MeetUsProps } from "./MeetUs.types";

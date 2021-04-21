@@ -103,8 +103,11 @@ export const queryForProps = async (
     sizes: "(max:-width: 2000px)",
   });
 
+  const newsletter = await queryForNewsletter(graphql);
+
   return {
     ...pagesYaml,
+    ...newsletter,
     heroBackgroundImage,
     heroBackgroundImageDesktop,
     meetUsBackgroundImage,
