@@ -1,7 +1,7 @@
 import { parse as parseHTML, HTMLElement } from "node-html-parser";
 import { Props } from "../templates/EventPage";
 import { getFixedImage, getFluidImage } from "./utils";
-import { queryForNewsletter } from "./globalQueries";
+import { queryForJoinSpeakers, queryForNewsletter } from "./globalQueries";
 
 const firstQuery = `#graphql
   query FirstEvent {
@@ -51,6 +51,7 @@ const secondQuery = `#graphql
         }
       }
       partnerLogoPaths
+      isOnline
       location {
         city
         displayName
@@ -144,6 +145,7 @@ export const queryForProps = async (
     }),
   };
   const newsletter = await queryForNewsletter(graphql);
+  const joinSpeakers = await queryForJoinSpeakers(graphql);
 
   const eventSpeakers: any = await Promise.all(
     event.speakers.map(async (speaker) => {
@@ -170,5 +172,6 @@ export const queryForProps = async (
     location,
     eventSpeakers,
     ...newsletter,
+    joinSpeakers,
   };
 };

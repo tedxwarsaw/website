@@ -1,0 +1,12 @@
+collectionId: joinSpeakersCta
+sectionTitle: We are looking for 2021 speakers.
+sectionSubtitle: Want to get involved? Know someone who should?
+sectionButtonText: Become TEDx Speaker
+sectionButtonLink: /speakers
+sectionLinks:
+  - displayName: Suggest speaker
+    path: /suggestSpeaker
+sectionBackgroundImageUrl: "global/joinSpeakersCta/photos/join_speakers_bg.png"
+sectionBackgroundImageUrlDesktop: "global/joinSpeakersCta/photos/join_speakers_bg.png"
+sectionBackgroundImageAlt: Cover image
+

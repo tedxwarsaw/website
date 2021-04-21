@@ -2,7 +2,7 @@ collectionId: event
 slug: "2020"
 displayName: TEDxWarsaw 2020
 city: Warsaw
-date: 12/06/2020
+date: 12/04/2021
 hook: We passionately believe in the power of ideas to change the attitudes,
   lives, and, ultimately, the world.
 description: In today's World challenges are now coming at us constantly, and
@@ -21,6 +21,7 @@ cover:
   image:
     desktop: events/2020/coverPhotos/desktop.jpg
     mobile: events/2020/coverPhotos/desktop.jpg
+isOnline: true
 location:
   displayName: Billenium
   city: Warsaw
