@@ -3,8 +3,8 @@ import { FluidObject } from "gatsby-image";
 export interface HeroSectionProps {
   heroTitle: string;
   heroSubtitle?: string;
-  heroButtonText: string;
-  heroButtonLink: string;
+  heroButtonText?: string;
+  heroButtonLink?: string;
   heroLinks?: [
     {
       displayName: string;
@@ -16,4 +16,5 @@ export interface HeroSectionProps {
   heroBackgroundImageAlt: string;
   featuredButtonLink?: string;
   fontMedium?: boolean;
+  centerContentVertically?: boolean;
 }

@@ -202,6 +202,27 @@ collections:
               - { label: "Red title of section", name: "title", widget: "string" }
               - { label: "Section name", name: "sectionName", widget: "string" }
               - { label: "Section description", name: "description", widget: "string" }
+      - label: "MeetUs"
+        name: "meetUs"
+        file: "src/pages/content/pages/meetUs.yaml"
+        slug: "meetUs.md" # Filename template, e.g., YYYY-MM-DD-title.md"
+        fields:
+          - label: "Hero Title"
+            name: "heroTitle"
+            widget: "string"
+          - label: "Hero background mobile image"
+            name: "heroBackgroundImageUrl"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Hero background desktop image"
+            name: "heroBackgroundImageUrlDesktop"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Hero background image alt"
+            name: "heroBackgroundImageAlt"
+            widget: string
   - label: "Global"
     name: "global"
     files:

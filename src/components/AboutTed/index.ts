@@ -1,0 +1,1 @@
+import {AboutTed} from "./AboutTed";
