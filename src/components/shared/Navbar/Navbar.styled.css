@@ -1,0 +1,7 @@
+.navbar-links > a {
+  padding: 4px 0;
+}
+.navbar-links > a[aria-current="page"] {
+  border-top: solid 4px theme("colors.customRed");
+  padding-top: 0;
+}
