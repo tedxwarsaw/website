@@ -18,3 +18,122 @@ aboutTedSpeakers:
   - name: "Ngozi Okonjo-Iweala"
   - name: "Sal Khan"
   - name: "Daniel Kahneman"
+meetUsBackgroundImage: images/uploads/meet-us-here.png
+meetUsBackgroundDesktop: images/uploads/meet-us-here.png
+teamMembersSlider: 
+  - name: Iryna Oleksiuk
+    title: Host
+    description: " work with IT and engineering leaders to build rock-star teams, increase job satisfaction and reduce turnover. Together we remove stumbling blocks to co-create a path forward.
+
+    I have spent more than a decade working with leadership teams for corporations such as Procter and Gamble, Motorola and Heineken. I have designed and delivered learning experiences for college students as part of AIESEC Poland, the largest student organization in the world. Most recently, I coached seven clean energy startup founders prior to their investment pitches at InnoEnergy 2020.
+
+    I'm the core team leader of TEDxWarsaw and I’m proud to mention that in 2019, 500 professionals attended the sold-out event. 
+
+    I am passionate about helping people communicate and be more understanding towards each other’s needs."
+    profileImage: images/uploads/meetusphoto.png
+    profileImageDesktop: images/uploads/meetusphoto.png
+  - name: Magdalena Fiałkowska
+    title: Host
+    description: " work with IT and engineering leaders to build rock-star teams, increase job satisfaction and reduce turnover. Together we remove stumbling blocks to co-create a path forward.
+
+    I have spent more than a decade working with leadership teams for corporations such as Procter and Gamble, Motorola and Heineken. I have designed and delivered learning experiences for college students as part of AIESEC Poland, the largest student organization in the world. Most recently, I coached seven clean energy startup founders prior to their investment pitches at InnoEnergy 2020.
+
+    I'm the core team leader of TEDxWarsaw and I’m proud to mention that in 2019, 500 professionals attended the sold-out event. 
+
+    I am passionate about helping people communicate and be more understanding towards each other’s needs."
+    profileImage: images/uploads/meetusphoto.png
+    profileImageDesktop: images/uploads/meetusphoto.png
+  - name: Edyta Kowal
+    title: Host
+    description: " work with IT and engineering leaders to build rock-star teams, increase job satisfaction and reduce turnover. Together we remove stumbling blocks to co-create a path forward.
+
+    I have spent more than a decade working with leadership teams for corporations such as Procter and Gamble, Motorola and Heineken. I have designed and delivered learning experiences for college students as part of AIESEC Poland, the largest student organization in the world. Most recently, I coached seven clean energy startup founders prior to their investment pitches at InnoEnergy 2020.
+
+    I'm the core team leader of TEDxWarsaw and I’m proud to mention that in 2019, 500 professionals attended the sold-out event. 
+
+    I am passionate about helping people communicate and be more understanding towards each other’s needs."
+    profileImage: images/uploads/meetusphoto.png
+    profileImageDesktop: images/uploads/meetusphoto.png
+  - name: Martyna Hrankowska
+    title: Host
+    description: " work with IT and engineering leaders to build rock-star teams, increase job satisfaction and reduce turnover. Together we remove stumbling blocks to co-create a path forward.
+
+    I have spent more than a decade working with leadership teams for corporations such as Procter and Gamble, Motorola and Heineken. I have designed and delivered learning experiences for college students as part of AIESEC Poland, the largest student organization in the world. Most recently, I coached seven clean energy startup founders prior to their investment pitches at InnoEnergy 2020.
+
+    I'm the core team leader of TEDxWarsaw and I’m proud to mention that in 2019, 500 professionals attended the sold-out event. 
+
+    I am passionate about helping people communicate and be more understanding towards each other’s needs."
+    profileImage: images/uploads/meetusphoto.png
+    profileImageDesktop: images/uploads/meetusphoto.png
+  - name: Michał Pienczak
+    title: Host
+    description: " work with IT and engineering leaders to build rock-star teams, increase job satisfaction and reduce turnover. Together we remove stumbling blocks to co-create a path forward.
+
+    I have spent more than a decade working with leadership teams for corporations such as Procter and Gamble, Motorola and Heineken. I have designed and delivered learning experiences for college students as part of AIESEC Poland, the largest student organization in the world. Most recently, I coached seven clean energy startup founders prior to their investment pitches at InnoEnergy 2020.
+
+    I'm the core team leader of TEDxWarsaw and I’m proud to mention that in 2019, 500 professionals attended the sold-out event. 
+
+    I am passionate about helping people communicate and be more understanding towards each other’s needs."
+    profileImage: images/uploads/meetusphoto.png
+    profileImageDesktop: images/uploads/meetusphoto.png
+  - name: Marek Zawada
+    title: Host
+    description: " work with IT and engineering leaders to build rock-star teams, increase job satisfaction and reduce turnover. Together we remove stumbling blocks to co-create a path forward.
+
+    I have spent more than a decade working with leadership teams for corporations such as Procter and Gamble, Motorola and Heineken. I have designed and delivered learning experiences for college students as part of AIESEC Poland, the largest student organization in the world. Most recently, I coached seven clean energy startup founders prior to their investment pitches at InnoEnergy 2020.
+
+    I'm the core team leader of TEDxWarsaw and I’m proud to mention that in 2019, 500 professionals attended the sold-out event. 
+
+    I am passionate about helping people communicate and be more understanding towards each other’s needs."
+    profileImage: images/uploads/meetusphoto.png
+    profileImageDesktop: images/uploads/meetusphoto.png
+  - name: Hugo Dutka
+    title: Host
+    description: " work with IT and engineering leaders to build rock-star teams, increase job satisfaction and reduce turnover. Together we remove stumbling blocks to co-create a path forward.
+
+    I have spent more than a decade working with leadership teams for corporations such as Procter and Gamble, Motorola and Heineken. I have designed and delivered learning experiences for college students as part of AIESEC Poland, the largest student organization in the world. Most recently, I coached seven clean energy startup founders prior to their investment pitches at InnoEnergy 2020.
+
+    I'm the core team leader of TEDxWarsaw and I’m proud to mention that in 2019, 500 professionals attended the sold-out event. 
+
+    I am passionate about helping people communicate and be more understanding towards each other’s needs."
+    profileImage: images/uploads/meetusphoto.png
+    profileImageDesktop: images/uploads/meetusphoto.png
+associates: 
+  - name: Monika Kaczmarska
+    title: Speakers Teams
+    profileImage: images/uploads/woman.jpg
+    profileImageDesktop: images/uploads/woman.jpg
+  - name: Monika Kaczmarska
+    title: Speakers Teams
+    profileImage: images/uploads/woman.jpg
+    profileImageDesktop: images/uploads/woman.jpg
+  - name: Monika Kaczmarska
+    title: Speakers Teams
+    profileImage: images/uploads/woman.jpg
+    profileImageDesktop: images/uploads/woman.jpg
+  - name: Monika Kaczmarska
+    title: Speakers Teams
+    profileImage: images/uploads/woman.jpg
+    profileImageDesktop: images/uploads/woman.jpg
+  - name: Monika Kaczmarska
+    title: Speakers Teams
+    profileImage: images/uploads/woman.jpg
+    profileImageDesktop: images/uploads/woman.jpg
+  - name: Monika Kaczmarska
+    title: Speakers Teams
+    profileImage: images/uploads/woman.jpg
+    profileImageDesktop: images/uploads/woman.jpg
+  - name: Monika Kaczmarska
+    title: Speakers Teams
+    profileImage: images/uploads/woman.jpg
+    profileImageDesktop: images/uploads/woman.jpg
+  - name: Monika Kaczmarska
+    title: Speakers Teams
+    profileImage: images/uploads/woman.jpg
+    profileImageDesktop: images/uploads/woman.jpg
+  - name: Monika Kaczmarska
+    title: Speakers Teams
+    profileImage: images/uploads/woman.jpg
+    profileImageDesktop: images/uploads/woman.jpg
+
+

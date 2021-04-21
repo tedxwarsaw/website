@@ -1,10 +1,11 @@
 import React from "react";
 import { Page } from "@/components/shared/Page";
 import { FluidObject } from "gatsby-image";
-import { HeroSection } from "../components/HeroSection";
-import { AboutTed, AboutTedProps } from "../components/AboutTed/AboutTed";
+import { HeroSection } from "@/components/HeroSection";
+import { AboutTed, AboutTedProps } from "@/components/AboutTed";
+import { MeetUs, MeetUsProps } from "@/components/MeetUs/";
 
-interface Props extends AboutTedProps {
+interface Props extends AboutTedProps, MeetUsProps {
   heroTitle: string;
   heroBackgroundImage: FluidObject;
   heroBackgroundImageDesktop: FluidObject;
@@ -24,7 +25,12 @@ export const AboutPageTemplate = (props: Props) => (
       aboutTedContent={props.aboutTedContent}
       aboutTedSpeakers={props.aboutTedSpeakers}
     />
-    <div style={{ height: "50vh" }} />
+    <MeetUs
+      meetUsBackgroundImage={props.meetUsBackgroundImage}
+      meetUsBackgroundImageDesktop={props.meetUsBackgroundImageDesktop}
+      teamMembersSlider={props.teamMembersSlider}
+      associates={props.associates}
+    />
   </Page>
 );
 
