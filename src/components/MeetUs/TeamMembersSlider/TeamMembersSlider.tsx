@@ -28,6 +28,7 @@ export const TeamMembersSlider = ({
     prevSlide,
     slider,
     currentSlide,
+    setCurrentSlide,
   } = useSlider(
     numberOfSlides,
     {
@@ -46,6 +47,7 @@ export const TeamMembersSlider = ({
           <MembersDisplay
             teamMembers={teamMembers}
             activeMemberIndex={currentSlide}
+            setCurrentSlide={setCurrentSlide}
           />
         </div>
       </div>

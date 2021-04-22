@@ -77,6 +77,7 @@ export const useSlider = (
     slider,
     numberOfSlides,
     currentSlide,
+    setCurrentSlide,
     inputSliderPosition,
     inputSliderOnChange,
     nextSlide,
