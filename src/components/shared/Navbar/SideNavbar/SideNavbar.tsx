@@ -31,7 +31,7 @@ export const SideNavbar = ({
 
   return (
     <div
-      className={`md:hidden ${
+      className={`xl:hidden ${
         open ? "visible" : "invisible"
       } absolute inset-0 w-screen h-screen`}
     >
@@ -53,7 +53,7 @@ export const SideNavbar = ({
               <IoMdClose className="w-8 h-8 text-red-500" />
             </button>
           </div>
-          <div className="px-4 mt-4 mb-4 space-y-4">
+          <div className="px-4 mt-4 mb-4 space-y-4 navbar-links">
             {navbarLinks.map((link, idx) => (
               <div key={idx}>
                 <Link

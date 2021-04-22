@@ -4,6 +4,7 @@ import { EventHighlightProps } from "./EventHighlight.types";
 import { FaArrowRight } from "react-icons/fa";
 import "./EventHighlight.styles.css";
 import { splitTextInTwo } from "@/utils";
+import { Link } from "gatsby";
 
 export const EventHighlight = ({
   eventHiglightImage,
@@ -52,15 +53,15 @@ export const EventHighlight = ({
           <div className="md:col-start-2 xl:col-start-3">
             <p className="xl:block hidden">{descriptionSplit[1]}</p>
             <p className="xl:hidden">{eventDescription}</p>
-            <a
-              href={`/event/${eventSlug}`}
+            <Link
+              to={`/event/${eventSlug}`}
               className="text-customRed flex font-bold hover:opacity-50 mt-5 items-center"
               style={{ width: "fit-content" }}
             >
               <span className="my-auto flex items-center">
                 Learn more <FaArrowRight className="ml-3 " />
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

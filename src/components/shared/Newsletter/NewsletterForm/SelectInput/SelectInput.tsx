@@ -27,7 +27,7 @@ export const SelectInput = ({
   };
 
   return (
-    <div className="my-3 border border-customGrey border-opacity-50 rounded-md md:col-start-2 md:col-end-3 xl:mx-4">
+    <div className="my-3 border border-customGrey border-opacity-50 rounded-md md:col-start-2 md:col-end-3 xl:mx-4 cursor-pointer">
       <OutsideClickHandler
         onOutsideClick={() => {
           setIsSelectActive(false);
@@ -47,11 +47,13 @@ export const SelectInput = ({
               >
                 <input
                   type="radio"
-                  className="radio"
+                  className="radio cursor-pointer"
                   id={option.name}
                   name="topic"
                 />
-                <label htmlFor={option.name}>{option.value}</label>
+                <label htmlFor={option.name} className="cursor-pointer">
+                  {option.value}
+                </label>
               </div>
             ))}
           </div>
@@ -65,7 +67,7 @@ export const SelectInput = ({
               placeholder="Topic"
               {...register("topic")}
               readOnly
-              className="outline-none"
+              className="outline-none cursor-pointer"
             />
             <BsChevronUp className="stroke-1" />
           </div>
