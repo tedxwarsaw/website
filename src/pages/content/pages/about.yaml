@@ -18,3 +18,35 @@ aboutTedSpeakers:
   - name: "Ngozi Okonjo-Iweala"
   - name: "Sal Khan"
   - name: "Daniel Kahneman"
+aboutTedEventsTitle: "## TED <b style='color: red'>events</b>"
+aboutTedEvents:
+  - content: The annual TED Conference takes place each spring in Vancouver, British Columbia.
+  - content: TED has established the annual TED Prize, where exceptional individuals with a wish to change the world get help translating their wishes into action
+  - content: TEDx, which supports individuals or groups in hosting local, self-organized TED-style events around the world, and the TED Fellows program, helping world-changing innovators from around the globe to amplify the impact of their remarkable projects and activities.
+mediaInitiativesTitle: "## <b>TED’s media initiatives include</b>"
+mediaInitiatives:
+  - content: TED’s media initiatives include <span style="color:red">[TED.com](https://www.ted.com)</span>, where new TED Talks are posted daily.
+  - content: The Open Translation Project, which provides subtitles and interactive transcripts as well as translations from volunteers worldwide.
+  - content: The educational initiative TED-Ed.
+aboutTedWarsawImageUrl: images/uploads/ted-x-warsaw.png
+aboutTedWarsawImageUrlDesktop: images/uploads/ted-x-warsaw.png
+aboutTedWarsawImageAlt: TEDxWarsaw image
+aboutTedWarsawTitle: "## <b><span style='color:red'>TEDx</span>Warsaw</b>"
+aboutTedWarsawContent: |
+  In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together
+  to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion
+  and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event.
+  The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized.
+  TEDxWarsaw has a focus on topics related to the city of Warsaw and its surroundings, but also caters to bring ideas,
+  knowledge and talks about broader topics.
+
+  <br/>
+
+  <b style='font-size:1.5rem'>We hope to connect you to our knowledge thirsty audience and uncover exhilarating, fascinating and eye-opening topics together.</b>
+
+  <br/>
+
+  Our main event - TEDxWarsaw Conference - is a series of short talks, ranging from approximately five to eighteen
+  minutes in length. In between speakers you will have the opportunity to enjoy performances, eat some eclectic food
+  choices and wander around our creatively inspired event spaces. From time to time we organize also online debates to discuss
+  the most important topics right here, right now.

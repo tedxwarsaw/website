@@ -13,7 +13,7 @@ export interface AboutTedProps {
 
 export const AboutTed = (props : AboutTedProps) => (
     <div className="bg-customLightGrey main-grid-full-span">
-        <div className="seamless-grid join-us-section-content pt-20 pb-20">
+        <div className="seamless-grid pt-20 pb-20">
             <div className="flex items-top col-start-2 col-end-3">
                 <h2 className={"text-2xl md:text-3xl"}>About <span className="text-customRed font-bold">TED</span></h2>
             </div>

@@ -1,0 +1,1 @@
+export {AboutTedWarsaw, AboutTedWarsawProps} from "./AboutTedWarsaw";

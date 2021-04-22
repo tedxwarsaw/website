@@ -1,0 +1,1 @@
+export {AboutTedEvents, TedEventsProps, MediaInitiatives} from "./AboutTedEvents";

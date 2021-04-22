@@ -231,6 +231,41 @@ collections:
             widget: "list"
             fields:
               - { label: "Name", name: "name", widget: "string"}
+          - label: "Ted Events Title"
+            name: "aboutTedEventsTitle"
+            widget: string
+          - label: "Ted Events"
+            name: "aboutTedEvents"
+            widget: "list"
+            fields:
+              - { label: "Content", name: "content", widget: string}
+          - label: "Media Initiatives Title"
+            name: "mediaInitiativesTitle"
+            widget: string
+              - label: "Media Initiatives"
+                name: "mediaInitiatives"
+                widget: "list"
+                fields:
+                  - { label: "Content", name: "content", widget: string }
+          - label: "About Ted Warsaw Title"
+            name: "aboutTedWarsawTitle"
+            widget: string
+          - label: "About Ted Warsaw Content"
+            name: "aboutTedWarsawContent"
+            widget: string
+          - label: "TEDxWarsaw Mobile Image"
+            name: "aboutTedWarsawImageUrl"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "TEDxWarsaw Desktop Image"
+            name: "aboutTedWarsawImageUrlDesktop"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "TEDxWarsaw image alt"
+            name: "aboutTedWarsawImageAlt"
+            widget: string
   - label: "Global"
     name: "global"
     files:

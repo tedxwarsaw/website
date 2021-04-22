@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "restart": "gatsby clean & yarn start"
   },
   "dependencies": {
     "@fontsource/inter": "^4.2.1",
