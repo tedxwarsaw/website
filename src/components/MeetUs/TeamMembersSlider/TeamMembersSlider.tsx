@@ -55,11 +55,19 @@ export const TeamMembersSlider = ({
         <div className="relative main-grid z-10 team-members-slider-container">
           <Slider sliderRef={sliderRef}>
             {teamMembers.map((member, index) => (
-              <div className="grid grid-cols-2 w-4/5" key={member.name + index}>
-                <div>
+              <div
+                className="flex flex-col md:grid md:grid-cols-2 md:grid-cols-2 w-full xl:w-4/5"
+                key={member.name + index}
+              >
+                <div className="h-64 md:h-auto">
                   <Img
-                    className="h-full w-full z-0 background-image-only-desktop"
+                    className="h-full w-full z-0 md:hidden"
                     fluid={member.profileImage}
+                    alt="Team member profile images"
+                  />
+                  <Img
+                    className="h-full w-full z-0 hidden md:block"
+                    fluid={member.profileImageDesktop}
                     alt="Team member profile images"
                   />
                 </div>

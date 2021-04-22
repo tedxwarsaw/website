@@ -12,12 +12,12 @@ export const MembersDisplay = ({
   activeMemberIndex,
   setCurrentSlide,
 }: MembersDisplayProps) => (
-  <div className="flex text-white mb-10">
+  <div className="hidden md:flex text-white mb-10 flex-wrap">
     {teamMembers.map((member, index) => {
       const name = member.name.split(" ");
       return (
         <div
-          className="flex flex-col font-semibold w-28 mr-5 cursor-pointer"
+          className="flex flex-col font-semibold w-28 mr-5 cursor-pointer mt-5"
           key={member.name + index}
           onClick={() => setCurrentSlide(index)}
         >

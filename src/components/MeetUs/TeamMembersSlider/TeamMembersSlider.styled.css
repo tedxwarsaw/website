@@ -19,3 +19,19 @@
 .team-members-slider-container .control-right {
   right: 0;
 }
+
+@media (max-width: theme("screens.xl")) {
+  .team-members-slider-container .team-members-slider-controls {
+    background: transparent;
+    width: 30px;
+    border: none;
+  }
+  .team-members-slider-container .control-left {
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+  .team-members-slider-container .control-right {
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+}
