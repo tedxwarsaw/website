@@ -9,8 +9,23 @@ import {
   NewsletterProps,
   NewsletterVariant,
 } from "@/components/shared/Newsletter";
+import {
+  AboutTedEvents,
+  MediaInitiatives,
+  TedEventsProps,
+} from "@/components/AboutTedEvents";
+import {
+  AboutTedWarsaw,
+  AboutTedWarsawProps,
+} from "@/components/AboutTedWarsaw";
 
-interface Props extends AboutTedProps, MeetUsProps, NewsletterProps {
+interface Props
+  extends AboutTedProps,
+    TedEventsProps,
+    MediaInitiatives,
+    AboutTedWarsawProps,
+    MeetUsProps,
+    NewsletterProps {
   heroTitle: string;
   heroBackgroundImage: FluidObject;
   heroBackgroundImageDesktop: FluidObject;
@@ -29,6 +44,22 @@ export const AboutPageTemplate = (props: Props) => (
     <AboutTed
       aboutTedContent={props.aboutTedContent}
       aboutTedSpeakers={props.aboutTedSpeakers}
+    />
+
+    <AboutTedEvents
+      aboutTedEventsTitle={props.aboutTedEventsTitle}
+      aboutTedEvents={props.aboutTedEvents}
+      titleFontClass={"text-2xl md:text-3xl about-ted-events-title-bold"}
+      background={"white"}
+    />
+    <AboutTedEvents
+      aboutTedEventsTitle={props.mediaInitiativesTitle}
+      aboutTedEvents={props.mediaInitiatives}
+    />
+    <AboutTedWarsaw
+      aboutTedWarsawTitle={props.aboutTedWarsawTitle}
+      aboutTedWarsawContent={props.aboutTedWarsawContent}
+      aboutTedWarsawImage={props.aboutTedWarsawImage}
     />
     <MeetUs
       meetUsBackgroundImage={props.meetUsBackgroundImage}

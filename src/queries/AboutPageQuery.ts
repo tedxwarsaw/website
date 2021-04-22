@@ -13,6 +13,19 @@ export const pageQuery = `#graphql
       aboutTedSpeakers{
         name
       }
+      aboutTedEventsTitle
+      aboutTedEvents{
+        content
+      }
+      mediaInitiativesTitle
+      mediaInitiatives{
+        content
+      }
+      aboutTedWarsawTitle
+      aboutTedWarsawContent
+      aboutTedWarsawImageUrl
+      aboutTedWarsawImageUrlDesktop
+      aboutTedWarsawImageAlt
       meetUsBackgroundImage
       meetUsBackgroundImageDesktop
       teamMembersSlider {
@@ -103,6 +116,20 @@ export const queryForProps = async (
     sizes: "(max:-width: 2000px)",
   });
 
+  const aboutTedWarsawImage = await getFluidImage({
+    graphql,
+    path: pagesYaml.aboutTedWarsawImageUrl,
+    quality: 90,
+    sizes: "(max:-width: 768px)",
+  });
+
+  const aboutTedWarsawImageDesktop = await getFluidImage({
+    graphql,
+    path: pagesYaml.aboutTedWarsawImageUrlDesktop,
+    quality: 90,
+    sizes: "(max:-width: 2000px)",
+  });
+
   const newsletter = await queryForNewsletter(graphql);
 
   return {
@@ -114,5 +141,7 @@ export const queryForProps = async (
     meetUsBackgroundImageDesktop,
     associates,
     teamMembersSlider,
+    aboutTedWarsawImage,
+    aboutTedWarsawImageDesktop,
   };
 };
