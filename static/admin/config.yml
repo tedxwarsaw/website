@@ -451,6 +451,10 @@ collections:
         label: "Display name"
         widget: string
         hint: "The name of the event. For example, TEDxWarsaw 2020."
+      - label: "Event category"
+        name: "category"
+        widget: "select"
+        options: ["Live", "Conference", "Salon"]
       - name: city
         label: City
         widget: string
