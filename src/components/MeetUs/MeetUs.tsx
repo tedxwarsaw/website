@@ -2,6 +2,7 @@ import React from "react";
 import { FixedObject, FluidObject } from "gatsby-image";
 import { MeetUsProps } from "./MeetUs.types";
 import { Associates } from "./Associates";
+import { TeamMembersSlider } from "@/components/MeetUs/TeamMembersSlider";
 
 export const MeetUs = ({
   meetUsBackgroundImage,
@@ -19,6 +20,7 @@ export const MeetUs = ({
     <div className="main-grid-full-span bg-black py-10">
       <div className="main-grid">
         <h2 className="font-bold text-5xl text-white mb-10">Meet us</h2>
+        <TeamMembersSlider teamMembers={teamMembersSlider} />
         <Associates associates={associates} />
       </div>
     </div>
