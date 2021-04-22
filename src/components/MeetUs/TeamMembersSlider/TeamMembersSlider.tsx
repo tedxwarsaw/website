@@ -22,13 +22,11 @@ export const TeamMembersSlider = ({
   const numberOfSlides = teamMembers.length;
   const {
     sliderRef,
-    inputSliderPosition,
     inputSliderOnChange,
     nextSlide,
     prevSlide,
     slider,
     currentSlide,
-    setCurrentSlide,
   } = useSlider(
     numberOfSlides,
     {
@@ -44,11 +42,13 @@ export const TeamMembersSlider = ({
       <div className="main-grid-full-span">
         <div className="main-grid">
           <h2>team members slide</h2>
-          <MembersDisplay
-            teamMembers={teamMembers}
-            activeMemberIndex={currentSlide}
-            setCurrentSlide={setCurrentSlide}
-          />
+          {slider && (
+            <MembersDisplay
+              teamMembers={teamMembers}
+              activeMemberIndex={currentSlide}
+              setCurrentSlide={slider.moveToSlide}
+            />
+          )}
         </div>
       </div>
       <div className="main-grid-full-span relative mb-10">
