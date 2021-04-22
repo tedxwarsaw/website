@@ -1,0 +1,8 @@
+.about-ted-content a {
+  color: theme("colors.customRed");
+}
+
+.about-ted-content a:hover {
+  color: theme("colors.customRed");
+  opacity: 0.5;
+}
