@@ -49,8 +49,6 @@ export const createPages = async ({ actions, graphql }) => {
         props = await queryForAboutProps(graphql);
       }
 
-      console.log(props);
-
       createPage({
         path: node.slug,
         component: path.resolve(
