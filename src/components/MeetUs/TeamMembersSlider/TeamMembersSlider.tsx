@@ -52,8 +52,8 @@ export const TeamMembersSlider = ({
       <div className="main-grid-full-span relative mb-10">
         <div className="relative main-grid z-10 team-members-slider-container">
           <Slider sliderRef={sliderRef}>
-            {teamMembers.map((member) => (
-              <div className="grid grid-cols-2 w-4/5">
+            {teamMembers.map((member, index) => (
+              <div className="grid grid-cols-2 w-4/5" key={member.name + index}>
                 <div>
                   <Img
                     className="h-full w-full z-0 background-image-only-desktop"
@@ -72,7 +72,7 @@ export const TeamMembersSlider = ({
             ))}
           </Slider>
           <div
-            className={`team-members-slider-controls control-left ${
+            className={`team-members-slider-controls control-left cursor-pointer ${
               currentSlide === 0 ? "hidden" : "flex justify-center items-center"
             }`}
             onClick={prevSlide}
@@ -80,7 +80,7 @@ export const TeamMembersSlider = ({
             <BsChevronLeft className="text-customRed hover:opacity-40 cursor-pointer stroke-1 text-3xl " />
           </div>
           <div
-            className={`team-members-slider-controls control-right ${
+            className={`team-members-slider-controls cursor-pointer control-right ${
               currentSlide === numberOfSlides - 1
                 ? "hidden"
                 : "flex justify-center items-center"

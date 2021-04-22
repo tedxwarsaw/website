@@ -14,7 +14,10 @@ export const MembersDisplay = ({
     {teamMembers.map((member, index) => {
       const name = member.name.split(" ");
       return (
-        <div className="flex flex-col font-semibold w-28 mr-5">
+        <div
+          className="flex flex-col font-semibold w-28 mr-5"
+          key={member.name + index}
+        >
           <span>{name[0]}</span>
           <span>{name[1]}</span>
           <span
