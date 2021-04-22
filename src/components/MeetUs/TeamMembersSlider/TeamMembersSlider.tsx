@@ -5,7 +5,8 @@ import Img, { FluidObject } from "gatsby-image";
 import { TeamMember } from "@/components/MeetUs/MeetUs.types";
 import { MembersDisplay } from "./MembersDisplay";
 import "./TeamMembersSlider.styled.css";
-import { BackgroundImage } from "@/components/shared/BackgroundImage";
+
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 interface TeamMembersSliderProps {
   meetUsBackgroundImage: FluidObject;
@@ -45,8 +46,8 @@ export const TeamMembersSlider = ({
           <MembersDisplay teamMembers={teamMembers} activeMemberIndex={0} />
         </div>
       </div>
-      <div className="main-grid-full-span relative">
-        <div className="relative main-grid z-10">
+      <div className="main-grid-full-span relative mb-10">
+        <div className="relative main-grid z-10 team-members-slider-container">
           <Slider sliderRef={sliderRef}>
             {teamMembers.map((member) => (
               <div className="grid grid-cols-2 w-4/5">
@@ -67,7 +68,24 @@ export const TeamMembersSlider = ({
               </div>
             ))}
           </Slider>
+          <div
+            className={`team-members-slider-controls control-left ${
+              currentSlide === 0 ? "hidden" : ""
+            }`}
+            onClick={prevSlide}
+          >
+            <BsChevronLeft className="text-customRed hover:opacity-40 cursor-pointer stroke-1 text-3xl " />
+          </div>
+          <div
+            className={`team-members-slider-controls control-right ${
+              currentSlide === numberOfSlides - 1 ? "hidden" : ""
+            }`}
+            onClick={nextSlide}
+          >
+            <BsChevronRight className="text-customRed hover:opacity-40 cursor-pointer stroke-1 text-3xl" />
+          </div>
         </div>
+
         <div className="w-full z-0 absolute top-0 left-0 bottom-0 right-0">
           <Img
             className="w-full h-full  z-0 md:hidden absolute top-0 left-0 bottom-0 right-0 z-0"

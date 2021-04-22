@@ -1,3 +1,24 @@
 .team-member-details-container p {
   margin-top: 20px;
 }
+
+.team-members-slider-container .team-members-slider-controls {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: theme("colors.black");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px theme("colors.customDarkGrey");
+}
+.team-members-slider-container .control-left {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.team-members-slider-container .control-right {
+  right: 0;
+}
