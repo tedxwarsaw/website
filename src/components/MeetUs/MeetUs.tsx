@@ -20,7 +20,11 @@ export const MeetUs = ({
     <div className="main-grid-full-span bg-black py-10">
       <div className="main-grid">
         <h2 className="font-bold text-5xl text-white mb-10">Meet us</h2>
-        <TeamMembersSlider teamMembers={teamMembersSlider} />
+        <TeamMembersSlider
+          meetUsBackgroundImage={meetUsBackgroundImage}
+          meetUsBackgroundImageDesktop={meetUsBackgroundImageDesktop}
+          teamMembers={teamMembersSlider}
+        />
         <Associates associates={associates} />
       </div>
     </div>

@@ -1,8 +1,8 @@
 slug: /about
 templateKey: AboutPage
 heroTitle: The People Behind the Stage. All volunteers.<br/>All passion.
-heroBackgroundImageUrl: images/uploads/meet-us-here.png
-heroBackgroundImageUrlDesktop: images/uploads/meet-us-here.png
+heroBackgroundImageUrl: images/uploads/meetus-bg.png
+heroBackgroundImageUrlDesktop: images/uploads/meetus-bg.png
 heroBackgroundImageAlt: Cover image
 aboutTedContent: TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in
   California 30 years ago, TED has grown to support its mission with multiple initiatives.
@@ -18,8 +18,8 @@ aboutTedSpeakers:
   - name: "Ngozi Okonjo-Iweala"
   - name: "Sal Khan"
   - name: "Daniel Kahneman"
-meetUsBackgroundImage: images/uploads/meet-us-here.png
-meetUsBackgroundImageDesktop: images/uploads/meet-us-here.png
+meetUsBackgroundImage: images/uploads/meet-us-bg.png
+meetUsBackgroundImageDesktop: images/uploads/meet-us-bg.png
 teamMembersSlider: 
   - name: Iryna Oleksiuk
     title: Host
