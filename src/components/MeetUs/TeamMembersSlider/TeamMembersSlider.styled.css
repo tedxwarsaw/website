@@ -10,9 +10,6 @@
   top: 50%;
   transform: translateY(-50%);
   background: theme("colors.black");
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: solid 1px theme("colors.customDarkGrey");
 }
 .team-members-slider-container .control-left {

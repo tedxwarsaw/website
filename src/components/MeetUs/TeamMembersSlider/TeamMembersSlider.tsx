@@ -43,7 +43,10 @@ export const TeamMembersSlider = ({
       <div className="main-grid-full-span">
         <div className="main-grid">
           <h2>team members slide</h2>
-          <MembersDisplay teamMembers={teamMembers} activeMemberIndex={0} />
+          <MembersDisplay
+            teamMembers={teamMembers}
+            activeMemberIndex={currentSlide}
+          />
         </div>
       </div>
       <div className="main-grid-full-span relative mb-10">
@@ -70,7 +73,7 @@ export const TeamMembersSlider = ({
           </Slider>
           <div
             className={`team-members-slider-controls control-left ${
-              currentSlide === 0 ? "hidden" : ""
+              currentSlide === 0 ? "hidden" : "flex justify-center items-center"
             }`}
             onClick={prevSlide}
           >
@@ -78,7 +81,9 @@ export const TeamMembersSlider = ({
           </div>
           <div
             className={`team-members-slider-controls control-right ${
-              currentSlide === numberOfSlides - 1 ? "hidden" : ""
+              currentSlide === numberOfSlides - 1
+                ? "hidden"
+                : "flex justify-center items-center"
             }`}
             onClick={nextSlide}
           >
