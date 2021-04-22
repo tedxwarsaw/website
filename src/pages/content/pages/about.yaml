@@ -28,8 +28,8 @@ mediaInitiatives:
   - content: TED’s media initiatives include **[TED.com](https://www.ted.com)**, where new TED Talks are posted daily.
   - content: "**The Open Translation Project**, which provides subtitles and interactive transcripts as well as translations from volunteers worldwide."
   - content: "The educational initiative **TED-Ed**."
-aboutTedWarsawImageUrl: images/uploads/ted-x-warsaw.png
-aboutTedWarsawImageUrlDesktop: images/uploads/ted-x-warsaw.png
+aboutTedWarsawImageUrl: images/uploads/ted-x-warsaw-banner.png
+aboutTedWarsawImageUrlDesktop: images/uploads/ted-x-warsaw-banner.png
 aboutTedWarsawImageAlt: TEDxWarsaw image
 aboutTedWarsawTitle: "## <b><span style='color:#E62B1E'>TEDx</span>Warsaw</b>"
 aboutTedWarsawContent: |

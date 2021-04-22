@@ -242,11 +242,11 @@ collections:
           - label: "Media Initiatives Title"
             name: "mediaInitiativesTitle"
             widget: string
-              - label: "Media Initiatives"
-                name: "mediaInitiatives"
-                widget: "list"
-                fields:
-                  - { label: "Content", name: "content", widget: string }
+          - label: "Media Initiatives"
+            name: "mediaInitiatives"
+            widget: "list"
+            fields:
+              - { label: "Content", name: "content", widget: string }
           - label: "About Ted Warsaw Title"
             name: "aboutTedWarsawTitle"
             widget: string
