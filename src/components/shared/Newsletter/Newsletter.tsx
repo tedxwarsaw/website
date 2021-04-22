@@ -28,7 +28,7 @@ export const Newsletter = ({
 }: NewsletterProps) => {
   if (variant === NewsletterVariant.black) {
     return (
-      <div className="main-grid-full-span">
+      <div className="main-grid-full-span" id="newsletter">
         <BackgroundImage
           image={newsletterBackgroundImage}
           imageDesktop={newsletterBackgroundImageDesktop}
