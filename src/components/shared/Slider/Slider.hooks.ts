@@ -37,10 +37,9 @@ export const useSlider = (
   });
 
   const inputSliderOnChange = (e) => {
-    setInputSliderPosition(parseInt(e.target.value));
-    const slideToChange = Math.floor(
-      inputSliderPosition / (100 / numberOfSlides)
-    );
+    const sliderPosition = parseInt(e.target.value);
+    setInputSliderPosition(sliderPosition);
+    const slideToChange = Math.floor(sliderPosition / (100 / numberOfSlides));
 
     if (currentSlide !== slideToChange) {
       slider.moveToSlide(slideToChange);
