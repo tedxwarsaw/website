@@ -79,7 +79,6 @@ export const AboutPageTemplate = (props: Props) => (
 );
 
 const AboutPage = ({ pageContext }) => {
-  console.log(pageContext);
   return <AboutPageTemplate {...pageContext.props} />;
 };
 
