@@ -1,8 +1,8 @@
 slug: /about
 templateKey: AboutPage
 heroTitle: The People Behind the Stage. All volunteers.<br/>All passion.
-heroBackgroundImageUrl: images/uploads/meetus-bg.png
-heroBackgroundImageUrlDesktop: images/uploads/meetus-bg.png
+heroBackgroundImageUrl: images/uploads/meet-us-here.png
+heroBackgroundImageUrlDesktop: images/uploads/meet-us-here.png
 heroBackgroundImageAlt: Cover image
 aboutTedContent: TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in
   California 30 years ago, TED has grown to support its mission with multiple initiatives.

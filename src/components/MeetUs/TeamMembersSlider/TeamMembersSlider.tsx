@@ -68,19 +68,18 @@ export const TeamMembersSlider = ({
             ))}
           </Slider>
         </div>
-        <div className="h-full z-0 absolute top-0 left-0 bottom-0 right-0">
+        <div className="w-full z-0 absolute top-0 left-0 bottom-0 right-0">
           <Img
-            className="h-full z-0"
+            className="w-full h-full  z-0 md:hidden absolute top-0 left-0 bottom-0 right-0 z-0"
             fluid={meetUsBackgroundImage}
+            alt="Team members slider background "
+          />
+          <Img
+            className="w-full h-full  mt-auto z-0 hidden md:block absolute top-0 left-0 bottom-0 right-0 z-0"
+            fluid={meetUsBackgroundImageDesktop}
             alt="Team members slider background"
           />
         </div>
-
-        {/* <Img
-          className="h-full w-full z-0 absolute top-0 left-0 bottom-0 right-0 z-0"
-          fluid={meetUsBackgroundImageDesktop}
-          alt="Team members slider background"
-        /> */}
       </div>
     </>
   );
