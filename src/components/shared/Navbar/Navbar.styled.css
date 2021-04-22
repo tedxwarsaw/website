@@ -6,7 +6,7 @@
   padding-top: 0;
 }
 
-@media (max-width: theme("screens.xl")) {
+@media (max-width: theme("screens.lg")) {
   .navbar-links a[aria-current="page"] {
     border-bottom: solid 4px theme("colors.customRed");
     padding-bottom: 0;
