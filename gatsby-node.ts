@@ -3,6 +3,7 @@ import { queryForProps as queryForEventProps } from "./src/queries/EventPageQuer
 import { queryForProps as queryForHomeProps } from "./src/queries/IndexPageQuery";
 import { queryForProps as queryForAttendProps } from "./src/queries/AttendPageQuery";
 import { queryForProps as queryForAboutProps } from "./src/queries/AboutPageQuery";
+import { queryForProps as queryForSpeakersProps } from "./src/queries/SpeakersPageQuery";
 
 const pageQuery = `#graphql
   query Page {
@@ -47,6 +48,8 @@ export const createPages = async ({ actions, graphql }) => {
         props = await queryForAttendProps(graphql);
       } else if (String(node.templateKey) === "AboutPage") {
         props = await queryForAboutProps(graphql);
+      } else if (String(node.templateKey) === "SpeakersPage") {
+        props = await queryForSpeakersProps(graphql);
       }
 
       createPage({

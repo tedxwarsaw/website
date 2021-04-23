@@ -292,6 +292,27 @@ collections:
               - { label: "Title", name: "title", widget: "string"}
               - { label: "Description", name: "description", widget: "markdown"}
               - { label: "Profile image", name: "profileImage", widget: "image",allow_multiple: false, media_folder: "photos" }
+      - label: "Speakers"
+        name: "speakers"
+        file: "src/pages/content/pages/speakers.yaml"
+        slug: "speakers.md" # Filename template, e.g., YYYY-MM-DD-title.md"
+        fields:
+          - label: "Hero Title"
+            name: "heroTitle"
+            widget: string
+          - label: "Hero background mobile image"
+            name: "heroBackgroundImageUrl"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Hero background desktop image"
+            name: "heroBackgroundImageUrlDesktop"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Hero background image alt"
+            name: "heroBackgroundImageAlt"
+            widget: string
   - label: "Global"
     name: "global"
     files:

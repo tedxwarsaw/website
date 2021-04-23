@@ -1,0 +1,6 @@
+slug: /speakers
+templateKey: SpeakersPage
+heroTitle: <span style="color:#E62B1E">Speakers</span> <br/> Have an idea to share?
+heroBackgroundImageUrl: images/uploads/speakers-bg.png
+heroBackgroundImageUrlDesktop: images/uploads/speakers-bg.png
+heroBackgroundImageAlt: Cover image
