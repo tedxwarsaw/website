@@ -292,6 +292,17 @@ collections:
               - { label: "Title", name: "title", widget: "string"}
               - { label: "Description", name: "description", widget: "markdown"}
               - { label: "Profile image", name: "profileImage", widget: "image",allow_multiple: false, media_folder: "photos" }
+      - label: "About"
+        name: "about"
+        file: "src/pages/content/pages/about.yaml"
+        slug: "about.md" # Filename template, e.g., YYYY-MM-DD-title.md"
+        fields:
+          - label: "Title of watch page"
+            name: "headerTitle"
+            widget: 'markdown'
+          - label: "Hero Title"
+            name: "headerSubtitle"
+            widget: "string"
   - label: "Global"
     name: "global"
     files:
