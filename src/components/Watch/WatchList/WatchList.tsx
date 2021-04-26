@@ -5,7 +5,7 @@ CardTalk;
 
 export const WatchList = ({ talks, eventNames }: WatchListProps) => {
   return (
-    <div className="my-10 inner-grid gap-5">
+    <div className="col-start-3 col-end-6 my-10 inner-grid gap-5">
       {talks.map((talk) => (
         <CardTalk
           slug={talk.slug}
@@ -16,6 +16,7 @@ export const WatchList = ({ talks, eventNames }: WatchListProps) => {
           eventName={eventNames[talk.eventSlug]}
           duration={talk.duration}
           key={talk.displayName}
+          isWatch
         />
       ))}
     </div>
