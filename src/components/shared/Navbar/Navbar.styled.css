@@ -1,0 +1,15 @@
+.navbar-links a {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.navbar-links > a[aria-current="page"] {
+  border-top: solid 4px theme("colors.customRed");
+  padding-top: 0;
+}
+
+@media (max-width: theme("screens.lg")) {
+  .navbar-links a[aria-current="page"] {
+    border-bottom: solid 4px theme("colors.customRed");
+    padding-bottom: 0;
+  }
+}

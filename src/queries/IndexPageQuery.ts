@@ -69,7 +69,10 @@ const eventQuery = `#graphql
           mobile
         }
       }
-      speakerPhotoPaths
+      speakers {
+        speakerName
+        speakerPhotoPath
+      }
       date
     }
   }
@@ -249,10 +252,10 @@ export const queryForProps = async (
   recommendations.sort((a, b) => a.order - b.order);
 
   const eventSpeakerPhotos: any = await Promise.all(
-    event.speakerPhotoPaths.map(async (path) => {
+    event.speakers.map(async (speaker) => {
       const image = await getFixedImage({
         graphql,
-        path: path,
+        path: speaker.speakerPhotoPath,
         height: 60,
         width: 60,
       });

@@ -171,6 +171,37 @@ collections:
             media_library:
               config:
                 multiple: true
+      - label: "Attend"
+        name: "attend"
+        file: "src/pages/content/pages/attend.yaml"
+        slug: "attend.md" # Filename template, e.g., YYYY-MM-DD-title.md
+        fields: # The fields for each document, usually in front matter
+          - label: "Show newsletter as hero"
+            name: "isHeroNewsletter"
+            widget: "boolean"
+          - label: "Show current featured event"
+            name: "isCurrentEvent"
+            widget: "boolean"
+          - label: "Call to action banner title"
+            name: ctaBannerText
+            widget: string
+            hint: Title of call to action section below featured event
+          - label: "Call to action button text"
+            name: ctaButtonText
+            widget: string
+          - label: "Call to action button link"
+            name: ctaButtonLink
+            widget: string
+          - label: "Title of past events section"
+            name: pastEventsSectionTitle
+            widget: string
+          - label: "Past events items"
+            name: "pastEventsItems"
+            widget: "list"
+            fields:
+              - { label: "Red title of section", name: "title", widget: "string" }
+              - { label: "Section name", name: "sectionName", widget: "string" }
+              - { label: "Section description", name: "description", widget: "string" }
   - label: "Global"
     name: "global"
     files:
@@ -356,6 +387,47 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+      - label: "Join speakers (shown globally)"
+        name: "joinSpeakersCta"
+        file: "src/pages/content/global/newsletter.yaml"
+        fields:
+          - name: collectionId
+            widget: hidden
+            default: joinSpeakersCta
+          - name: sectionTitle
+            label: Section title
+            widget: string
+            hint: "Text shown in join speakers component header"
+          - name: sectionSubtitle
+            label: Section subtitle
+            widget: string
+            hint: "Text shown in join speakers component subheader"
+          - name: sectionButtonText
+            label: Section main button text
+            widget: string
+            hint: "Text shown in join speakers component button"
+          - name: sectionButtonLink
+            label: Section main button link
+            widget: string
+          - label: "Section links"
+            name: "sectionLinks"
+            widget: "list"
+            fields:
+              - { label: "Display name", name: "displayName", widget: "string" }
+              - { label: "Path", name: "path", widget: "string" }
+          - name: sectionBackgroundImageUrl
+            label: Section background image 
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - name: sectionBackgroundImageUrlDesktop
+            label: Section background image desktop
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - name: sectionBackgroundImageAlt
+            label: Section background image alt
+            widget: string
   - label: "Events"
     name: events
     folder: "src/pages/content/events"
@@ -379,6 +451,10 @@ collections:
         label: "Display name"
         widget: string
         hint: "The name of the event. For example, TEDxWarsaw 2020."
+      - label: "Event category"
+        name: "category"
+        widget: "select"
+        options: ["Live", "Conference", "Salon"]
       - name: city
         label: City
         widget: string
@@ -390,6 +466,9 @@ collections:
         date_format: "DD/MM/YYYY"
         time_format: false
         picker_utc: true
+      - name: time
+        label: "Time"
+        widget: string
       - name: hook
         label: Hook
         widget: text
@@ -437,6 +516,43 @@ collections:
                 widget: image
                 allow_multiple: false
                 media_folder: "{{slug}}/coverPhotos"
+      - name: coverHero
+        label: Cover hero section
+        widget: object
+        hint: Cover show as page hero, when this event is featured
+        fields:
+          - name: button
+            label: Button
+            widget: object
+            fields:
+              - name: text
+                label: Text
+                widget: string
+              - name: link
+                label: URL
+                widget: string
+                hint: The URL the button should point to.
+              - name: show
+                label: Show
+                widget: boolean
+                hint: Whether to show the button or not.
+          - name: image
+            label: Cover image
+            widget: object
+            fields:
+              - name: mobile
+                label: Mobile variant
+                widget: image
+                allow_multiple: false
+                media_folder: "{{slug}}/coverPhotos"
+              - name: desktop
+                label: Desktop variant
+                widget: image
+                allow_multiple: false
+                media_folder: "{{slug}}/coverPhotos"
+      - name: "isOnline"
+        label: "Is this an online event?"
+        widget: boolean
       - name: location
         label: Location
         widget: object
@@ -486,14 +602,12 @@ collections:
         media_library:
           config:
             multiple: true
-      - name: speakerPhotoPaths
-        label: Speaker photos
-        widget: image
-        allow_multiple: true
-        media_folder: "{{slug}}/speakerPhotos"
-        media_library:
-          config:
-            multiple: true
+      - name: speakers
+        label: Event speakers
+        widget: "list"
+        fields: 
+          - { label: "Speaker's name", name: "speakerName", widget: "string" }
+          - { label: "Speaker's phote", name: "speakerPhotoPath", widget: "image", allow_multiple: false, media_folder: "{{slug}}/speakerPhotos" }
   - label: "Talks"
     name: talks
     folder: "src/pages/content/talks"

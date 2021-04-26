@@ -1,5 +1,5 @@
 import React from "react";
-import { CardTalk, CardEvent } from "./Card";
+import { CardTalk, CardEvent } from "@/components/shared/Card";
 import { RecommendationsSlider } from "./RecommendationsSlider";
 import { RecommendationsProps } from "./Recommendations.types";
 import "./Recommendations.styled.css";

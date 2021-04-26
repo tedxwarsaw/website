@@ -1,3 +1,20 @@
 .recommendations-container {
   padding: 0 var(--side-gap);
 }
+
+.slider-wrapper-recommendations .keen-slider__slide {
+  overflow: visible !important;
+  padding-left: 10px;
+}
+
+.slider-wrapper-recommendations {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+@media (max-width: theme("screens.xl")) {
+  .slider-wrapper-recommendations {
+    max-width: 100vw;
+    margin-right: -16px;
+  }
+}

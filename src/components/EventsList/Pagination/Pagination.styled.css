@@ -1,0 +1,27 @@
+.pagination {
+  display: flex;
+}
+
+.pagination > .previous,
+.pagination > .next {
+  display: none;
+}
+
+.pagination > li > a,
+.pagination-container > .previous-button,
+.pagination-container > .next-button,
+.pagination-container > .first-button,
+.pagination-container > .last-button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid theme("colors.customGrey");
+  border-radius: 5px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination > .active {
+  color: theme("colors.customRed");
+}
