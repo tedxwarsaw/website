@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import { WatchProps } from "./Watch.types";
 import { WatchList } from "./WatchList";
 import { Pagination } from "@/components/shared/Pagination";
+import { useWatch } from "./Watch.hooks";
 import "./Watch.styled.css";
 
 export const Watch = ({
@@ -11,6 +12,15 @@ export const Watch = ({
   talks,
   eventNames,
 }: WatchProps) => {
+  const {
+    activeFilter,
+    filterTalks,
+    talksToShow,
+    currentPage,
+    numberOfPages,
+    changePage,
+  } = useWatch(talks);
+
   return (
     <>
       <div className="main-grid-full-span pt-16 bg-customLightGrey">
@@ -25,12 +35,14 @@ export const Watch = ({
         </div>
       </div>
       <div className="pb-10">
-        <WatchList talks={talks} eventNames={eventNames} />
-        <Pagination
-          numberOfPages={10}
-          changePage={() => console.log("hello")}
-          currentPage={1}
-        />
+        <WatchList talks={talksToShow} eventNames={eventNames} />
+        {numberOfPages - 1 > 1 && (
+          <Pagination
+            numberOfPages={numberOfPages}
+            changePage={changePage}
+            currentPage={currentPage}
+          />
+        )}
       </div>
     </>
   );

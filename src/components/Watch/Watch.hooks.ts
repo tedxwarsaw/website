@@ -1,36 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { usePagination } from "@/components/shared/Pagination";
 
-export const useEventList = (events) => {
-  const eventsPerPage = 9;
+export const useWatch = (talks) => {
   const [activeFilter, setActiveFilter] = useState("all");
-  const [filteredEvents, setFilteredEvents] = useState(events);
-  const [eventsToShow, setEventsToShow] = useState(events);
-  const [numberOfPages, setNumberOfPages] = useState(1);
-  const { paginateItems, currentPage } = usePagination(eventsPerPage);
+  const [filteredTalks, setFilteredTalks] = useState(talks);
+  const { itemsToShow, changePage, currentPage, numberOfPages } = usePagination(
+    filteredTalks,
+    9
+  );
 
-  const changePage = (page: number) => {
-    setEventsToShow(paginateItems(filteredEvents, page));
-  };
-
-  const filterEvents = (value: string) => {
+  const filterTalks = (value: string) => {
     setActiveFilter(value);
-    let eventsFiltered = [...events];
+    let talksFiltered = [...talks];
     if (value !== "all") {
-      eventsFiltered = events.filter((event) => event.category === value);
+      talksFiltered = talks.filter((talk) => talk.category === value);
     }
-    setFilteredEvents(eventsFiltered);
-    setEventsToShow(paginateItems(eventsFiltered, 1));
+    setFilteredTalks(talksFiltered);
   };
-
-  useEffect(() => {
-    setNumberOfPages(1 + Math.ceil(filteredEvents.length / eventsPerPage));
-  }, [activeFilter]);
 
   return {
     activeFilter,
-    filterEvents,
-    eventsToShow,
+    filterTalks,
+    talksToShow: itemsToShow,
     currentPage,
     changePage,
     numberOfPages,
