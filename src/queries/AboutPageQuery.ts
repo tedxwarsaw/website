@@ -21,11 +21,11 @@ export const pageQuery = `#graphql
       mediaInitiatives{
         content
       }
-      aboutTedWarsawTitle
-      aboutTedWarsawContent
-      aboutTedWarsawImageUrl
-      aboutTedWarsawImageUrlDesktop
-      aboutTedWarsawImageAlt
+      AboutUsTitle
+      AboutUsContent
+      AboutUsImageUrl
+      AboutUsImageUrlDesktop
+      AboutUsImageAlt
       meetUsBackgroundImage
       meetUsBackgroundImageDesktop
       teamMembersSlider {
@@ -116,16 +116,16 @@ export const queryForProps = async (
     sizes: "(max:-width: 2000px)",
   });
 
-  const aboutTedWarsawImage = await getFluidImage({
+  const AboutUsImage = await getFluidImage({
     graphql,
-    path: pagesYaml.aboutTedWarsawImageUrl,
+    path: pagesYaml.AboutUsImageUrl,
     quality: 90,
     sizes: "(max:-width: 768px)",
   });
 
-  const aboutTedWarsawImageDesktop = await getFluidImage({
+  const AboutUsImageDesktop = await getFluidImage({
     graphql,
-    path: pagesYaml.aboutTedWarsawImageUrlDesktop,
+    path: pagesYaml.AboutUsImageUrlDesktop,
     quality: 90,
     sizes: "(max:-width: 2000px)",
   });
@@ -141,7 +141,7 @@ export const queryForProps = async (
     meetUsBackgroundImageDesktop,
     associates,
     teamMembersSlider,
-    aboutTedWarsawImage,
-    aboutTedWarsawImageDesktop,
+    AboutUsImage,
+    AboutUsImageDesktop,
   };
 };
