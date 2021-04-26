@@ -17,3 +17,7 @@
 .centerTextSection p{
     margin-top: 10px;
 }
+
+.centerTextSection a{
+    color: theme("colors.customRed");
+}

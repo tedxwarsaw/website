@@ -6,7 +6,7 @@ heroBackgroundImageUrlDesktop: images/uploads/speakers-bg.png
 heroBackgroundImageAlt: Cover image
 centerTextSectionTitle: "## If you have an idea or know someone with an idea that belongs on the TEDx stage, we want to hear from you."
 centerTextSectionContent: >-
-  We would kindly ask you to **[email](https://www.ted.com)** us to to make your suggestion for a future TEDx Conference. Please send us **a short essay with a rough draft of your idea** (approx 250-300 words).
+  We would kindly ask you to **[email](mailto:ted@test.com)** us to to make your suggestion for a future TEDx Conference. Please send us **a short essay with a rough draft of your idea** (approx 250-300 words).
 
 
   **A video of the speaker presenting the idea** (approx 5 min).
