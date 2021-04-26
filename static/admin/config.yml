@@ -329,7 +329,7 @@ collections:
             name: "howDoesItWorkSteps"
             widget: "list"
             fields:
-              - { label: "step", name: "step", widget: string }
+              - { label: "step", name: "name", widget: string }
 
   - label: "Global"
     name: "global"

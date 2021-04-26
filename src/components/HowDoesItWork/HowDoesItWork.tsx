@@ -2,10 +2,13 @@ import React from "react";
 import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";
 
+interface Step {
+    name: string
+}
+
 export interface HowDoesItWorkProps {
     howDoesItWorkTitle: string;
-    howDoesItWorkContent: string;
-    howDoesItWorkButtonLink: string;
+    howDoesItWorkSteps: Array<Step>;
 }
 
 export const HowDoesItWork = (props : HowDoesItWorkProps) => (

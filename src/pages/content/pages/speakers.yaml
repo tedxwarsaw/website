@@ -16,12 +16,12 @@ centerTextSectionContent: >-
 centerTextSectionButtonLink: /im-in
 howDoesItWorkTitle: "## How does it work?"
 howDoesItWorkSteps:
-  - step: volunteer or submit a candidate
-  - step: our team evaluates your submission (topic, means of presentation, idea)
-  - step: decision is made
-  - step: you get an invite to work on your talk
-  - step: you participate in an introductory workshop + selected additional training
-  - step: one-on-one meetings with an assigned guide
-  - step: you do several rehearsals
-  - step: eventually you come in for the final rehearsal
-  - step: you get to present on the stage!
+  - name: volunteer or submit a candidate
+  - name: our team evaluates your submission (topic, means of presentation, idea)
+  - name: decision is made
+  - name: you get an invite to work on your talk
+  - name: you participate in an introductory workshop + selected additional training
+  - name: one-on-one meetings with an assigned guide
+  - name: you do several rehearsals
+  - name: eventually you come in for the final rehearsal
+  - name: you get to present on the stage!
