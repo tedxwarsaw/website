@@ -1,3 +1,4 @@
+import { queryForAllTalks } from "./globalQueries/AllTalksQuery";
 import { Props } from "../templates/WatchPage";
 
 export const pageQuery = `#graphql
@@ -16,7 +17,11 @@ export const queryForProps = async (
     data: { pagesYaml },
   } = await graphql(pageQuery);
 
+  const { talks, eventNames } = await queryForAllTalks(graphql);
+
   return {
     ...pagesYaml,
+    talks,
+    eventNames,
   };
 };
