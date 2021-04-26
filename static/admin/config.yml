@@ -330,7 +330,12 @@ collections:
             widget: "list"
             fields:
               - { label: "step", name: "name", widget: string }
-
+          - label: "Content Panel Title"
+            name: "contentPanelTitle"
+            widget: string
+          - label: "Content Panel Text"
+            name: "contentPanelText"
+            widget: string
   - label: "Global"
     name: "global"
     files:

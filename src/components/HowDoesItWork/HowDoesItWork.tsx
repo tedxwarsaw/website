@@ -1,6 +1,8 @@
 import React from "react";
 import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";
+import "./HowDoesItWork.styled.css";
+import {ProgressLine} from "../ProgressLine";
 
 interface Step {
     name: string
@@ -12,11 +14,17 @@ export interface HowDoesItWorkProps {
 }
 
 export const HowDoesItWork = (props : HowDoesItWorkProps) => (
-    <div className="main-grid-full-span">
-        <div className="main-grid pt-10">
-            <ReactMarkdown rehypePlugins={[rehypeRaw]} className="mt-8">
+    <div className="seamless-grid pt-20 pb-20">
+        <div className="flex items-top col-start-2 col-end-3 text-2xl md:text-3xl font-bold">
+            <ReactMarkdown rehypePlugins={[rehypeRaw]}>
                 {props.howDoesItWorkTitle}
             </ReactMarkdown>
+        </div>
+        <ProgressLine/>
+        <div className="col-start-2 col-end-3 mt-8 md:col-start-2 md:col-end-5 md:mt-8 xl:col-start-4 xl:col-end-7 xl:mt-0 font-normal about-tedx-warsaw-content">
+            {props.howDoesItWorkSteps.map((step:Step) => <div>
+                {step.name}
+            </div>)}
         </div>
     </div>
 );

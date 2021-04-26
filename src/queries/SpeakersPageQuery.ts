@@ -1,5 +1,6 @@
 import { Props } from "../templates/IndexPage";
 import { getFluidImage } from "./utils";
+import {queryForNewsletter} from "./globalQueries";
 
 export const pageQuery = `#graphql
   query SpeakersPageTemplate {
@@ -11,6 +12,12 @@ export const pageQuery = `#graphql
       centerTextSectionTitle
       centerTextSectionContent
       centerTextSectionButtonLink
+      howDoesItWorkTitle
+      howDoesItWorkSteps{
+        name
+      }
+      contentPanelTitle
+      contentPanelText
     }
   }
 `;
@@ -36,8 +43,11 @@ export const queryForProps = async (
         sizes: "(max:-width: 2000px)",
     });
 
+    const newsletter = await queryForNewsletter(graphql);
+
     return {
         ...pagesYaml,
+        ...newsletter,
         heroBackgroundImage,
         heroBackgroundImageDesktop
     };

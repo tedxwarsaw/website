@@ -3,6 +3,7 @@ import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";
 import {Button} from "../shared/Button";
 import "./CenterTextSection.styled.css";
+import { Link } from "gatsby";
 
 export interface CenterTextSectionProps {
     centerTextSectionTitle: string;
@@ -12,7 +13,7 @@ export interface CenterTextSectionProps {
 
 export const CenterTextSection = (props : CenterTextSectionProps) => (
     <div className="main-grid-full-span bg-customLightGrey">
-        <div className="main-grid centerTextSection pt-14">
+        <div className="main-grid centerTextSection pt-14 pb-14">
             <ReactMarkdown rehypePlugins={[rehypeRaw]} className="mt-10 centerText text-2xl md:text-3xl font-bold">
                 {props.centerTextSectionTitle}
             </ReactMarkdown>
@@ -21,7 +22,9 @@ export const CenterTextSection = (props : CenterTextSectionProps) => (
             </ReactMarkdown>
             {props.centerTextSectionButtonLink &&
                 <div className="col-start-3 col-end-6">
-                    <Button children={<span>I'm in</span>} className="mt-10"/>
+                    <Link to={props.centerTextSectionButtonLink}>
+                        <Button children={<span>I'm in</span>} className="mt-10"/>
+                    </Link>
                 </div>
             }
         </div>
