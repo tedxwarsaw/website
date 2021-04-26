@@ -12,11 +12,11 @@ export interface CenterTextSectionProps {
 
 export const CenterTextSection = (props : CenterTextSectionProps) => (
     <div className="main-grid-full-span bg-customLightGrey">
-        <div className="main-grid centerTextSection pt-10">
-            <ReactMarkdown rehypePlugins={[rehypeRaw]} className="mt-8 centerText">
+        <div className="main-grid centerTextSection pt-14">
+            <ReactMarkdown rehypePlugins={[rehypeRaw]} className="mt-10 centerText text-2xl md:text-3xl font-bold">
                 {props.centerTextSectionTitle}
             </ReactMarkdown>
-            <ReactMarkdown rehypePlugins={[rehypeRaw]} className="mt-8 centerText-70">
+            <ReactMarkdown rehypePlugins={[rehypeRaw]} className="mt-12 centerText-70">
                 {props.centerTextSectionContent}
             </ReactMarkdown>
             {props.centerTextSectionButtonLink &&
