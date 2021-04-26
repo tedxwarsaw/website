@@ -29,6 +29,13 @@ const eventQuery = `#graphql
   }
 `;
 
+const propsQueries = {
+  IndexPage: queryForHomeProps,
+  AttendPage: queryForAttendProps,
+  AboutPage: queryForAboutProps,
+  SpeakersPage: queryForSpeakersProps,
+};
+
 export const createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
   const pagesResult = await graphql(pageQuery);
@@ -40,17 +47,9 @@ export const createPages = async ({ actions, graphql }) => {
   const pages = pagesResult.data.allPagesYaml.edges;
   await Promise.all(
     pages.map(async ({ node }) => {
-      let props = {};
-
-      if (String(node.templateKey) === "IndexPage") {
-        props = await queryForHomeProps(graphql);
-      } else if (String(node.templateKey) === "AttendPage") {
-        props = await queryForAttendProps(graphql);
-      } else if (String(node.templateKey) === "AboutPage") {
-        props = await queryForAboutProps(graphql);
-      } else if (String(node.templateKey) === "SpeakersPage") {
-        props = await queryForSpeakersProps(graphql);
-      }
+      const queryForProps = propsQueries[String(node.templateKey)];
+      const props =
+        queryForProps != null ? await queryForProps(graphql) : undefined;
 
       createPage({
         path: node.slug,

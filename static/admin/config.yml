@@ -248,23 +248,23 @@ collections:
             fields:
               - { label: "Content", name: "content", widget: string }
           - label: "About Ted Warsaw Title"
-            name: "aboutTedWarsawTitle"
+            name: "AboutUsTitle"
             widget: string
           - label: "About Ted Warsaw Content"
-            name: "aboutTedWarsawContent"
+            name: "AboutUsContent"
             widget: string
           - label: "TEDxWarsaw Mobile Image"
-            name: "aboutTedWarsawImageUrl"
+            name: "AboutUsImageUrl"
             widget: image
             allow_multiple: false
             media_folder: "photos"
           - label: "TEDxWarsaw Desktop Image"
-            name: "aboutTedWarsawImageUrlDesktop"
+            name: "AboutUsImageUrlDesktop"
             widget: image
             allow_multiple: false
             media_folder: "photos"
           - label: "TEDxWarsaw image alt"
-            name: "aboutTedWarsawImageAlt"
+            name: "AboutUsImageAlt"
             widget: string
           - label: "Meet us background mobile image"
             name: "meetUsBackgroundImage"

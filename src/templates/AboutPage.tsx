@@ -14,18 +14,13 @@ import {
   MediaInitiatives,
   TedEventsProps,
 } from "@/components/AboutTedEvents";
-import {
-  AboutTedWarsaw,
-  AboutTedWarsawProps,
-} from "@/components/AboutTedWarsaw";
+import { AboutUs, AboutUsProps } from "../components/AboutUs";
 
 interface Props
   extends AboutTedProps,
     TedEventsProps,
     MediaInitiatives,
-    AboutTedWarsawProps,
-    MeetUsProps,
-    NewsletterProps {
+    AboutUsProps {
   heroTitle: string;
   heroBackgroundImage: FluidObject;
   heroBackgroundImageDesktop: FluidObject;
@@ -55,10 +50,10 @@ export const AboutPageTemplate = (props: Props) => (
       aboutTedEventsTitle={props.mediaInitiativesTitle}
       aboutTedEvents={props.mediaInitiatives}
     />
-    <AboutTedWarsaw
-      aboutTedWarsawTitle={props.aboutTedWarsawTitle}
-      aboutTedWarsawContent={props.aboutTedWarsawContent}
-      aboutTedWarsawImage={props.aboutTedWarsawImage}
+    <AboutUs
+      AboutUsTitle={props.AboutUsTitle}
+      AboutUsContent={props.AboutUsContent}
+      AboutUsImage={props.AboutUsImage}
     />
     <MeetUs
       meetUsBackgroundImage={props.meetUsBackgroundImage}

@@ -46,7 +46,7 @@ export const EventDetails = ({
         <p className="xl:block hidden mb-5">{descriptionSplit[1]}</p>
         <p className="xl:hidden mt-5 md:mt-0 mb-5">{description}</p>
         <Link to={`/event/${slug}`}>
-          <span className="text-customRed">
+          <span className="text-customRed hover:opacity-50">
             Read more <HiMenuAlt2 className="inline w-6 h-6" />
           </span>
         </Link>
