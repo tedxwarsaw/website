@@ -313,6 +313,24 @@ collections:
           - label: "Hero background image alt"
             name: "heroBackgroundImageAlt"
             widget: string
+          - label: "CenterTextSection title"
+            name: "centerTextSectionTitle"
+            widget: string
+          - label: "CenterTextSection content"
+            name: "centerTextSectionContent"
+            widget: string,
+          - label: "CenterTextSection button link"
+            name: "centerTextSectionButtonLink"
+            widget: string
+          - label: "How does it work title"
+            name: "howDoesItWorkTitle"
+            widget: string
+          - label: "How does it work steps"
+            name: "howDoesItWorkSteps"
+            widget: "list"
+            fields:
+              - { label: "step", name: "step", widget: string }
+
   - label: "Global"
     name: "global"
     files:

@@ -8,6 +8,9 @@ export const pageQuery = `#graphql
       heroBackgroundImageUrl
       heroBackgroundImageUrlDesktop
       heroBackgroundImageAlt
+      centerTextSectionTitle
+      centerTextSectionContent
+      centerTextSectionButtonLink
     }
   }
 `;

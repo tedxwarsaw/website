@@ -4,3 +4,24 @@ heroTitle: <span style="color:#E62B1E">Speakers</span> <br/> Have an idea to sha
 heroBackgroundImageUrl: images/uploads/speakers-bg.png
 heroBackgroundImageUrlDesktop: images/uploads/speakers-bg.png
 heroBackgroundImageAlt: Cover image
+centerTextSectionTitle: "## If you have an idea or know someone with an idea that belongs on the TEDx stage, we want to hear from you."
+centerTextSectionContent: >-
+  We would kindly ask you to **[email](https://www.ted.com)** us to to make your suggestion for a future TEDx Conference. Please send us **a short essay with a rough draft of your idea** (approx 250-300 words).
+
+
+  **A video of the speaker presenting the idea** (approx 5 min).
+
+
+  We reserve the right to not review nominations and/or submissions unless there is a teaser video accompanying your written draft.
+centerTextSectionButtonLink: /im-in
+howDoesItWorkTitle: "## How does it work?"
+howDoesItWorkSteps:
+  - step: volunteer or submit a candidate
+  - step: our team evaluates your submission (topic, means of presentation, idea)
+  - step: decision is made
+  - step: you get an invite to work on your talk
+  - step: you participate in an introductory workshop + selected additional training
+  - step: one-on-one meetings with an assigned guide
+  - step: you do several rehearsals
+  - step: eventually you come in for the final rehearsal
+  - step: you get to present on the stage!
