@@ -36,7 +36,7 @@ export const queryForAllTalks = async (
   const { data } = await graphql(talksQuery);
   const talks = data.allTalksYaml.nodes;
 
-  const allEventsSlugs = [];
+  const allEvents = {};
 
   const talksData = await Promise.all(
     talks.map(async (talk) => {
@@ -59,25 +59,21 @@ export const queryForAllTalks = async (
           mobile: coverMobile,
         },
       };
-      allEventsSlugs.push(talk.eventSlug);
-      return { ...talk, cover };
-    })
-  );
 
-  const allEvents = await Promise.all(
-    allEventsSlugs.map(async (eventSlug) => {
       const {
         data: { event },
       } = await graphql(eventQuery, {
-        eventSlug: eventSlug,
+        eventSlug: talk.eventSlug,
       });
 
-      return event.displayName;
+      allEvents[talk.eventSlug] = event.displayName;
+
+      return { ...talk, cover };
     })
   );
 
   return {
     talks: [...talksData],
-    eventNames: [...new Set(allEvents)],
+    eventNames: allEvents,
   };
 };

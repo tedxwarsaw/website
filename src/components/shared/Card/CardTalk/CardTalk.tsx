@@ -3,11 +3,6 @@ import Img, { FluidObject } from "gatsby-image";
 import "../Card.styled.css";
 import { Link } from "gatsby";
 
-export enum RecommendationCardTypes {
-  EVENT = "EVENT",
-  TALK = "TALK",
-}
-
 interface CardTalkProps {
   slug: string;
   cover: FluidObject;

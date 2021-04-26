@@ -1,1 +1,2 @@
-export { Watch, WatchProps } from "./Watch";
+export { Watch } from "./Watch";
+export { WatchProps } from "./Watch.types";

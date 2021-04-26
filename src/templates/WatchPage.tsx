@@ -8,6 +8,8 @@ export const WatchPageTemplate = (props: Props) => (
     <Watch
       headerTitle={props.headerTitle}
       headerSubtitle={props.headerSubtitle}
+      talks={props.talks}
+      eventNames={props.eventNames}
     />
   </Page>
 );
