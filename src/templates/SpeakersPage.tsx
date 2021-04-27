@@ -6,8 +6,9 @@ import {CenterTextSection, CenterTextSectionProps} from "../components/shared/Ce
 import {ContentPanel} from "../components/shared/ContentPanel";
 import {HowDoesItWork, HowDoesItWorkProps} from "../components/HowDoesItWork/HowDoesItWork";
 import {Newsletter, NewsletterProps, NewsletterVariant} from "../components/shared/Newsletter";
+import {Recommendations, RecommendationsProps} from "../components/shared/Recommendations";
 
-interface Props extends CenterTextSectionProps, HowDoesItWorkProps, NewsletterProps{
+interface Props extends CenterTextSectionProps, HowDoesItWorkProps, NewsletterProps, RecommendationsProps{
     heroTitle: string;
     heroBackgroundImage: FluidObject;
     heroBackgroundImageDesktop: FluidObject;
@@ -33,6 +34,11 @@ export const SpeakersPageTemplate = (props: Props) => (
             centerTextSectionButtonText={props.centerTextSectionButtonText}
         />
         <HowDoesItWork howDoesItWorkTitle={props.howDoesItWorkTitle} howDoesItWorkSteps={props.howDoesItWorkSteps}/>
+        <Recommendations
+            recommendationsTitle={props.recommendationsTitle}
+            recommendations={props.recommendations}
+            className={"mb-20"}
+        />
         <Newsletter
             variant={NewsletterVariant.black}
             newsletterTitle={props.newsletterTitle}

@@ -20,9 +20,9 @@ export const HowDoesItWork = (props : HowDoesItWorkProps) => (
                 {props.howDoesItWorkTitle}
             </ReactMarkdown>
         </div>
-        <ProgressLine/>
-        <div className="col-start-2 col-end-3 mt-8 md:col-start-2 md:col-end-5 md:mt-8 xl:col-start-4 xl:col-end-7 xl:mt-0 font-normal about-tedx-warsaw-content">
-            {props.howDoesItWorkSteps.map((step:Step) => <div>
+        <div className="col-start-2 col-end-3 mt-8 md:col-start-2 md:col-end-5 md:mt-8 xl:col-start-4 xl:col-end-7 xl:mt-0 font-normal steps pl-6">
+            <ProgressLine/>
+            {props.howDoesItWorkSteps.map((step:Step) => <div className={"step"}>
                 {step.name}
             </div>)}
         </div>
