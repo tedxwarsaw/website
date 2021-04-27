@@ -3,7 +3,11 @@ import { usePagination } from "@/components/shared/Pagination";
 
 export const useWatch = (talks) => {
   const [filteredTalks, setFilteredTalks] = useState(talks);
-  const [activeFilters, setActiveFilters] = useState([]);
+  const [activeFilters, setActiveFilters] = useState({
+    searchPhrase: "",
+    eventSlug: "",
+    duration: "",
+  });
   const { itemsToShow, changePage, currentPage, numberOfPages } = usePagination(
     filteredTalks,
     9
@@ -11,10 +15,20 @@ export const useWatch = (talks) => {
 
   const filterTalks = (
     searchPhrase: string,
-    eventName: string,
+    eventSlug: string,
     duration: string
   ) => {
-    setActiveFilters([searchPhrase, eventName, duration]);
+    setActiveFilters({
+      searchPhrase: searchPhrase,
+      eventSlug: eventSlug,
+      duration: duration,
+    });
+
+    console.log({
+      searchPhrase: searchPhrase,
+      eventName: eventSlug,
+      duration: duration,
+    });
     let talksFiltered = [...talks];
 
     if (searchPhrase !== "") {
@@ -24,9 +38,9 @@ export const useWatch = (talks) => {
         )
       );
     }
-    if (eventName !== "") {
+    if (eventSlug !== "") {
       talksFiltered = talksFiltered.filter(
-        (talk) => talk.eventName === eventName
+        (talk) => talk.eventSlug === eventSlug
       );
     }
 

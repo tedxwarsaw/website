@@ -32,9 +32,14 @@ export const Watch = ({
             </ReactMarkdown>
             <p className="text-2xl">{headerSubtitle}</p>
           </div>
-          <SearchBar activeFilters={activeFilters} filterTalks={filterTalks} />
         </div>
+        <SearchBar
+          activeFilters={activeFilters}
+          filterTalks={filterTalks}
+          eventNames={eventNames}
+        />
       </div>
+
       <div className="pb-10">
         <WatchList talks={talksToShow} eventNames={eventNames} />
         {numberOfPages - 1 > 1 && (
