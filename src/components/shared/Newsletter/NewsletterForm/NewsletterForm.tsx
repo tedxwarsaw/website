@@ -62,6 +62,7 @@ export const NewsletterForm = () => {
           options={formTopics}
           register={register}
           handleOnChange={(value) => setValue("topic", value)}
+          className="md:col-start-2 md:col-end-3"
         />
         <input
           className="my-3 p-4 border border-opacity-50 border-customGrey rounded-md md:row-start-2 md:col-start-2 md:col-end-3 xl:flex-grow "
