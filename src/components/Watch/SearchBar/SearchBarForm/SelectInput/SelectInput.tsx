@@ -4,6 +4,7 @@ import OutsideClickHandler from "react-outside-click-handler";
 import "./SelectInput.styled.css";
 
 interface SelectInputProps {
+  name: string;
   options: {
     name: string;
     value: string;
@@ -16,6 +17,7 @@ interface SelectInputProps {
 }
 
 export const SelectInput = ({
+  name,
   options,
   selectedValue,
   handleOnChange,
@@ -57,7 +59,7 @@ export const SelectInput = ({
                   type="radio"
                   className="radio cursor-pointer"
                   id={option.name}
-                  name="topic"
+                  name={name}
                 />
                 <label htmlFor={option.name} className="cursor-pointer">
                   {option.value}
