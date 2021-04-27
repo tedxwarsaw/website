@@ -57,16 +57,16 @@ export const SearchBarForm = ({ eventNames, filterTalks, activeFilters }) => {
 
         <SelectInput
           options={eventOptions}
-          selectedValue={activeFilters.eventName}
+          selectedValue={eventNames[activeFilters.eventSlug]}
           handleOnChange={handleEventFilterChange}
           placeholder="Event"
         />
-        <SelectInput
+        {/* <SelectInput
           options={eventOptions}
           selectedValue={activeFilters.eventName}
           handleOnChange={handleEventFilterChange}
           placeholder="Duration"
-        />
+        /> */}
       </div>
     </div>
   );
