@@ -8,12 +8,13 @@ export interface JoinUsProps {
   joinUsSubtitle: string;
   joinUsImage: FluidObject;
   joinUsImageDesktop: FluidObject;
-  joinUsVolunteerText: string;
-  joinUsVolunteerLink: string;
-  joinUsGetToKnowOurTeamText: string;
-  joinUsGetToKnowOurTeamLink: string;
-  joinUsBecomeSpeakerText: string;
-  joinUsBecomeSpeakerLink: string;
+  joinUsVolunteerText?: string;
+  joinUsVolunteerLink?: string;
+  joinUsGetToKnowOurTeamText?: string;
+  joinUsGetToKnowOurTeamLink?: string;
+  joinUsBecomeSpeakerText?: string;
+  joinUsBecomeSpeakerLink?: string;
+  backgroundColor?:string;
 }
 
 export const JoinUs = ({
@@ -27,14 +28,15 @@ export const JoinUs = ({
   joinUsGetToKnowOurTeamLink,
   joinUsBecomeSpeakerText,
   joinUsBecomeSpeakerLink,
+  backgroundColor
 }: JoinUsProps) => (
-  <div className="bg-customLightGrey main-grid-full-span">
+  <div className={`${backgroundColor ? backgroundColor : 'bg-customLightGrey'} main-grid-full-span`}>
     <div className="seamless-grid join-us-section-content">
       <div className="flex items-center join-us-section-left">
         <div className="pr-20 py-10">
           <h2 className="font-medium text-2xl md:text-3xl">{joinUsTitle}</h2>
           <p className="my-5">{joinUsSubtitle}</p>
-          <a
+          {joinUsVolunteerText && <a
             href={joinUsVolunteerLink}
             target="_blank"
             rel="noopener noreferrer"
@@ -42,7 +44,7 @@ export const JoinUs = ({
             <Button className="my-7" variant={ButtonVariant.filledRedWithBG}>
               {joinUsVolunteerText}
             </Button>
-          </a>
+          </a>}
           <a
             href={joinUsGetToKnowOurTeamLink}
             className="text-customRed flex hover:opacity-50 items-center mb-5"
@@ -52,7 +54,7 @@ export const JoinUs = ({
               {joinUsGetToKnowOurTeamText} <FaArrowRight className="ml-3 " />
             </span>
           </a>
-          <a
+          {joinUsBecomeSpeakerLink && <a
             href={joinUsBecomeSpeakerLink}
             className="text-customRed flex hover:opacity-50 items-center"
             style={{ width: "fit-content" }}
@@ -60,7 +62,7 @@ export const JoinUs = ({
             <span className="my-auto flex items-center">
               {joinUsBecomeSpeakerText} <FaArrowRight className="ml-3 " />
             </span>
-          </a>
+          </a>}
         </div>
       </div>
       <div className="join-us-section-right">

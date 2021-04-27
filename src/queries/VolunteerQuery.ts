@@ -1,6 +1,6 @@
 import { Props } from "../templates/IndexPage";
 import { getFluidImage } from "./utils";
-import {queryForNewsletter} from "./globalQueries";
+import { queryForNewsletter } from "./globalQueries";
 
 export const pageQuery = `#graphql
   query SpeakersPageTemplate {
@@ -13,6 +13,15 @@ export const pageQuery = `#graphql
       centerTextSectionContent
       centerTextSectionButtonLink
       centerTextSectionButtonText
+      volunteerNewsletterTitle
+      volunteerNewsletterContent
+      meetUsTitle
+      meetUsContent
+      meetUsImageUrl
+      meetUsImageUrlDesktop
+      meetUsImageAlt
+      meetUsButtonText
+      meetUsButtonLink
     }
   }
 `;
@@ -38,12 +47,28 @@ export const queryForProps = async (
         sizes: "(max:-width: 2000px)",
     });
 
+    const meetUsImage = await getFluidImage({
+        graphql,
+        path: pagesYaml.meetUsImageUrl,
+        quality: 90,
+        sizes: "(max:-width: 768px)",
+    });
+
+    const meetUsImageDesktop = await getFluidImage({
+        graphql,
+        path: pagesYaml.meetUsImageUrlDesktop,
+        quality: 90,
+        sizes: "(max:-width: 2000px)",
+    });
+
     const newsletter = await queryForNewsletter(graphql);
 
     return {
         ...pagesYaml,
         ...newsletter,
         heroBackgroundImage,
-        heroBackgroundImageDesktop
+        heroBackgroundImageDesktop,
+        meetUsImage,
+        meetUsImageDesktop
     };
 };
