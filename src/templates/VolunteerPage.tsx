@@ -3,17 +3,13 @@ import { Page } from "@/components/shared/Page";
 import { FluidObject } from "gatsby-image";
 import { HeroSection } from "@/components/HeroSection";
 import {CenterTextSection, CenterTextSectionProps} from "../components/shared/CenterTextSection";
-import {ContentPanel} from "../components/shared/ContentPanel";
-import {HowDoesItWork, HowDoesItWorkProps} from "../components/HowDoesItWork/HowDoesItWork";
 import {Newsletter, NewsletterProps, NewsletterVariant} from "../components/shared/Newsletter";
 
-interface Props extends CenterTextSectionProps, HowDoesItWorkProps, NewsletterProps{
+interface Props extends CenterTextSectionProps, NewsletterProps{
     heroTitle: string;
     heroBackgroundImage: FluidObject;
     heroBackgroundImageDesktop: FluidObject;
     heroBackgroundImageAlt: string;
-    contentPanelTitle: string;
-    contentPanelText: string;
 }
 
 export const SpeakersPageTemplate = (props: Props) => (
@@ -25,16 +21,15 @@ export const SpeakersPageTemplate = (props: Props) => (
             heroBackgroundImageAlt={props.heroBackgroundImageAlt}
             centerContentVertically={true}
         />
-        <ContentPanel title={props.contentPanelTitle} content={props.contentPanelText}/>
         <CenterTextSection
             centerTextSectionTitle={props.centerTextSectionTitle}
             centerTextSectionContent={props.centerTextSectionContent}
             centerTextSectionButtonLink={props.centerTextSectionButtonLink}
             centerTextSectionButtonText={props.centerTextSectionButtonText}
+            background="grey"
         />
-        <HowDoesItWork howDoesItWorkTitle={props.howDoesItWorkTitle} howDoesItWorkSteps={props.howDoesItWorkSteps}/>
         <Newsletter
-            variant={NewsletterVariant.black}
+            variant={NewsletterVariant.white}
             newsletterTitle={props.newsletterTitle}
             newsletterMessage1={props.newsletterMessage1}
             newsletterMessage2={props.newsletterMessage2}
@@ -44,8 +39,9 @@ export const SpeakersPageTemplate = (props: Props) => (
     </Page>
 );
 
-const SpeakersPage = ({ pageContext }) => {
+const VolunteerPage = ({ pageContext }) => {
+    console.log(pageContext.props);
     return <SpeakersPageTemplate {...pageContext.props} />;
 };
 
-export default SpeakersPage;
+export default VolunteerPage;

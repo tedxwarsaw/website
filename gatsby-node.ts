@@ -4,6 +4,7 @@ import { queryForProps as queryForHomeProps } from "./src/queries/IndexPageQuery
 import { queryForProps as queryForAttendProps } from "./src/queries/AttendPageQuery";
 import { queryForProps as queryForAboutProps } from "./src/queries/AboutPageQuery";
 import { queryForProps as queryForSpeakersProps } from "./src/queries/SpeakersPageQuery";
+import { queryForProps as queryForVolunteerProps } from "./src/queries/VolunteerQuery";
 
 const pageQuery = `#graphql
   query Page {
@@ -34,6 +35,7 @@ const propsQueries = {
   AttendPage: queryForAttendProps,
   AboutPage: queryForAboutProps,
   SpeakersPage: queryForSpeakersProps,
+  VolunteerPage: queryForVolunteerProps,
 };
 
 export const createPages = async ({ actions, graphql }) => {

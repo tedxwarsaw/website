@@ -1,0 +1,14 @@
+slug: /volunteers
+templateKey: VolunteerPage
+heroTitle: >-
+  Wishing to volunteer?
+
+  <span style='color:#E62B1E'>We've got you covered</span>
+heroBackgroundImageUrl: images/uploads/speakers-bg.png
+heroBackgroundImageUrlDesktop: images/uploads/speakers-bg.png
+heroBackgroundImageAlt: Cover image
+centerTextSectionTitle: "## Want to contribute to the team behind TEDxWarsaw and help to create days of wonder, inspiration and awe?"
+centerTextSectionContent: >-
+  Do you feel like you are the perfect fit? Then we’d love to connect! Please fill out the form and tell us more about you. We’ll come back to you as soon as possible!
+centerTextSectionButtonText: I'm in
+centerTextSectionButtonLink: /im-in

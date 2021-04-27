@@ -4,21 +4,15 @@ import {queryForNewsletter} from "./globalQueries";
 
 export const pageQuery = `#graphql
   query SpeakersPageTemplate {
-    pagesYaml(templateKey: { eq: "SpeakersPage" }) {
+    pagesYaml(templateKey: { eq: "VolunteerPage" }) {
       heroTitle
       heroBackgroundImageUrl
       heroBackgroundImageUrlDesktop
       heroBackgroundImageAlt
       centerTextSectionTitle
       centerTextSectionContent
-      centerTextSectionButtonText
       centerTextSectionButtonLink
-      howDoesItWorkTitle
-      howDoesItWorkSteps{
-        name
-      }
-      contentPanelTitle
-      contentPanelText
+      centerTextSectionButtonText
     }
   }
 `;

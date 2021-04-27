@@ -336,6 +336,27 @@ collections:
           - label: "Content Panel Text"
             name: "contentPanelText"
             widget: string
+      - label: "Volunteer"
+        name: "volunteer"
+        file: "src/pages/content/pages/volunteer.yaml"
+        slug: "volunteer.md" # Filename template, e.g, YYYY-MM-DD-title.md
+        fields:
+          - label: "Hero Title"
+            name: "heroTitle"
+            widget: string
+          - label: "Hero background mobile image"
+            name: "heroBackgroundImageUrl"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Hero background desktop image"
+            name: "heroBackgroundImageUrlDesktop"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Hero background image alt"
+            name: "heroBackgroundImageAlt"
+            widget: string
   - label: "Global"
     name: "global"
     files:
