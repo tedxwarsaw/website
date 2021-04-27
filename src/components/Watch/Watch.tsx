@@ -1,6 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { WatchProps } from "./Watch.types";
+import { SearchBar } from "./SearchBar";
 import { WatchList } from "./WatchList";
 import { Pagination } from "@/components/shared/Pagination";
 import { useWatch } from "./Watch.hooks";
@@ -13,7 +14,7 @@ export const Watch = ({
   eventNames,
 }: WatchProps) => {
   const {
-    activeFilter,
+    activeFilters,
     filterTalks,
     talksToShow,
     currentPage,
@@ -31,7 +32,7 @@ export const Watch = ({
             </ReactMarkdown>
             <p className="text-2xl">{headerSubtitle}</p>
           </div>
-          {/* <SearchBar  /> */}
+          <SearchBar activeFilters={activeFilters} filterTalks={filterTalks} />
         </div>
       </div>
       <div className="pb-10">
