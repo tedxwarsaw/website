@@ -3,18 +3,23 @@ import { Page } from "@/components/shared/Page";
 import { FluidObject } from "gatsby-image";
 import { HeroSection } from "@/components/HeroSection";
 import {CenterTextSection, CenterTextSectionProps} from "../components/shared/CenterTextSection";
-import {ContentPanel} from "../components/shared/ContentPanel";
-import {HowDoesItWork, HowDoesItWorkProps} from "../components/HowDoesItWork/HowDoesItWork";
 import {Newsletter, NewsletterProps, NewsletterVariant} from "../components/shared/Newsletter";
-import {Recommendations, RecommendationsProps} from "../components/shared/Recommendations";
+import {JoinUs} from "../components/shared/JoinUs";
 
-interface Props extends CenterTextSectionProps, HowDoesItWorkProps, NewsletterProps, RecommendationsProps{
+interface Props extends CenterTextSectionProps, NewsletterProps{
     heroTitle: string;
     heroBackgroundImage: FluidObject;
     heroBackgroundImageDesktop: FluidObject;
     heroBackgroundImageAlt: string;
-    contentPanelTitle: string;
-    contentPanelText: string;
+    volunteerNewsletterTitle: string;
+    volunteerNewsletterContent: string;
+    meetUsTitle: string;
+    meetUsContent: string;
+    meetUsImage: FluidObject;
+    meetUsImageDesktop: FluidObject;
+    meetUsImageAlt: string;
+    meetUsButtonText: string;
+    meetUsButtonLink: string;
 }
 
 export const SpeakersPageTemplate = (props: Props) => (
@@ -26,32 +31,35 @@ export const SpeakersPageTemplate = (props: Props) => (
             heroBackgroundImageAlt={props.heroBackgroundImageAlt}
             centerContentVertically={true}
         />
-        <ContentPanel title={props.contentPanelTitle} content={props.contentPanelText}/>
         <CenterTextSection
             centerTextSectionTitle={props.centerTextSectionTitle}
             centerTextSectionContent={props.centerTextSectionContent}
             centerTextSectionButtonLink={props.centerTextSectionButtonLink}
             centerTextSectionButtonText={props.centerTextSectionButtonText}
+            background="grey"
         />
-        <HowDoesItWork howDoesItWorkTitle={props.howDoesItWorkTitle} howDoesItWorkSteps={props.howDoesItWorkSteps}/>
-        <Recommendations
-            recommendationsTitle={props.recommendationsTitle}
-            recommendations={props.recommendations}
-            className={"mb-20"}
+        <JoinUs
+            joinUsTitle={props.meetUsTitle}
+            joinUsSubtitle={props.meetUsContent}
+            joinUsImage={props.meetUsImage}
+            joinUsImageDesktop={props.meetUsImageDesktop}
+            joinUsGetToKnowOurTeamText={props.meetUsButtonText}
+            joinUsGetToKnowOurTeamLink={props.meetUsButtonLink}
+            backgroundColor={"bg-customWhite"}
         />
         <Newsletter
-            variant={NewsletterVariant.black}
-            newsletterTitle={props.newsletterTitle}
-            newsletterMessage1={props.newsletterMessage1}
-            newsletterMessage2={props.newsletterMessage2}
+            variant={NewsletterVariant.white}
+            newsletterTitle={props.volunteerNewsletterTitle}
+            newsletterMessage2={props.volunteerNewsletterContent}
             newsletterBackgroundImage={props.newsletterBackgroundImage}
             newsletterBackgroundImageDesktop={props.newsletterBackgroundImageDesktop}
         />
     </Page>
 );
 
-const SpeakersPage = ({ pageContext }) => {
+const VolunteerPage = ({ pageContext }) => {
+    console.log(pageContext.props);
     return <SpeakersPageTemplate {...pageContext.props} />;
 };
 
-export default SpeakersPage;
+export default VolunteerPage;

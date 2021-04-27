@@ -1,7 +1,7 @@
 import React from "react";
 import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";
-import {Button} from "../shared/Button";
+import {Button} from "../Button";
 import "./CenterTextSection.styled.css";
 import { Link } from "gatsby";
 
@@ -9,6 +9,8 @@ export interface CenterTextSectionProps {
     centerTextSectionTitle: string;
     centerTextSectionContent: string;
     centerTextSectionButtonLink: string;
+    centerTextSectionButtonText: string;
+    background?: string;
 }
 
 export const CenterTextSection = (props : CenterTextSectionProps) => (
@@ -23,7 +25,7 @@ export const CenterTextSection = (props : CenterTextSectionProps) => (
             {props.centerTextSectionButtonLink &&
                 <div className="col-start-3 col-end-6">
                     <Link to={props.centerTextSectionButtonLink}>
-                        <Button children={<span>I'm in</span>} className="mt-10"/>
+                        <Button children={<span>{props.centerTextSectionButtonText}</span>} className="mt-10"/>
                     </Link>
                 </div>
             }

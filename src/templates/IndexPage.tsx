@@ -11,7 +11,7 @@ import {
   EventHighlight,
   EventHighlightProps,
 } from "@/components/EventHighlight";
-import { JoinUs, JoinUsProps } from "@/components/JoinUs";
+import { JoinUs, JoinUsProps } from "@/components/shared/JoinUs";
 import { Partners, PartnersProps } from "@/components/shared/Partners";
 import {
   Newsletter,

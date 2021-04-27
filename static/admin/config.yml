@@ -293,6 +293,58 @@ collections:
           - label: "Content Panel Text"
             name: "contentPanelText"
             widget: string
+      - label: "Volunteer"
+        name: "volunteer"
+        file: "src/pages/content/pages/volunteer.yaml"
+        slug: "volunteer.md" # Filename template, e.g, YYYY-MM-DD-title.md
+        fields:
+          - label: "Hero Title"
+            name: "heroTitle"
+            widget: string
+          - label: "Hero background mobile image"
+            name: "heroBackgroundImageUrl"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Hero background desktop image"
+            name: "heroBackgroundImageUrlDesktop"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Hero background image alt"
+            name: "heroBackgroundImageAlt"
+            widget: string
+          - label: "Volunteer Newsletter Title"
+            name: "volunteerNewsletterTitle"
+            widget: string
+          - label: "Volunteer Newsletter Content"
+            name: "volunteerNewsletterContent"
+            widget: string
+          - label: "Meet Us Title"
+            name: "meetUsTitle"
+            widget: string
+          - label: "Meet Us Content"
+            name: "meetUsContent"
+            widget: string
+          - label: "Meet us background mobile image"
+            name: "meetUsImageUrl"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Meet us background desktop image"
+            name: "meetUsImageUrlDesktop"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Meet Us Image Alt"
+            name: "meetUsImageAlt"
+            widget: string
+          - label: "Meet Us Button Text"
+            name: "meetUsButtonText"
+            widget: string
+          - label: "Meet Us Button Link"
+            name: "meetUsButtonLink"
+            widget: string
   - label: "Global"
     name: "global"
     files:

@@ -1,24 +1,27 @@
 import { Props } from "../templates/IndexPage";
 import { getFluidImage } from "./utils";
-import {queryForNewsletter, queryForRecommendations} from "./globalQueries";
+import { queryForNewsletter } from "./globalQueries";
 
 export const pageQuery = `#graphql
   query SpeakersPageTemplate {
-    pagesYaml(templateKey: { eq: "SpeakersPage" }) {
+    pagesYaml(templateKey: { eq: "VolunteerPage" }) {
       heroTitle
       heroBackgroundImageUrl
       heroBackgroundImageUrlDesktop
       heroBackgroundImageAlt
       centerTextSectionTitle
       centerTextSectionContent
-      centerTextSectionButtonText
       centerTextSectionButtonLink
-      howDoesItWorkTitle
-      howDoesItWorkSteps{
-        name
-      }
-      contentPanelTitle
-      contentPanelText
+      centerTextSectionButtonText
+      volunteerNewsletterTitle
+      volunteerNewsletterContent
+      meetUsTitle
+      meetUsContent
+      meetUsImageUrl
+      meetUsImageUrlDesktop
+      meetUsImageAlt
+      meetUsButtonText
+      meetUsButtonLink
     }
   }
 `;
@@ -44,19 +47,28 @@ export const queryForProps = async (
         sizes: "(max:-width: 2000px)",
     });
 
-    const newsletter = await queryForNewsletter(graphql);
+    const meetUsImage = await getFluidImage({
+        graphql,
+        path: pagesYaml.meetUsImageUrl,
+        quality: 90,
+        sizes: "(max:-width: 768px)",
+    });
 
-    const {
-        recommendationsTitle,
-        recommendations,
-    } = await queryForRecommendations(graphql);
+    const meetUsImageDesktop = await getFluidImage({
+        graphql,
+        path: pagesYaml.meetUsImageUrlDesktop,
+        quality: 90,
+        sizes: "(max:-width: 2000px)",
+    });
+
+    const newsletter = await queryForNewsletter(graphql);
 
     return {
         ...pagesYaml,
         ...newsletter,
         heroBackgroundImage,
         heroBackgroundImageDesktop,
-        recommendationsTitle,
-        recommendations
+        meetUsImage,
+        meetUsImageDesktop
     };
 };
