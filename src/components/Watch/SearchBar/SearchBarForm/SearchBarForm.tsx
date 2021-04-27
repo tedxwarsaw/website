@@ -2,8 +2,8 @@ import React from "react";
 import { SelectInput } from "@/components/shared/SelectInput";
 import "./SearchBarForm.styled.css";
 import { AiOutlineSearch } from "react-icons/ai";
-import { durationOptions, durationValues } from "../..";
-import { useSearchBarForm } from "@/components/Watch/helpers/SearchBar/SearchBarForm/SearchBarForm.hooks";
+import { durationOptions, durationValues } from "../../helpers";
+import { useSearchBarForm } from "./SearchBarForm.hooks";
 import { ActiveFilters, FilterTalks } from "@/components/Watch/Watch.types";
 
 interface SearchBarFormProps {

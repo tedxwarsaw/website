@@ -53,23 +53,26 @@ export const SelectInput = ({
               isSelectActive ? "active" : ""
             } ${wideDropdown ? "wide-dropdown-select" : ""} `}
           >
-            {options.map((option) => (
-              <div
-                className="option px-4 py-2 cursor-pointer"
-                key={option.name}
-                onClick={() => handleSelect(option.value)}
-              >
-                <input
-                  type="radio"
-                  className="radio cursor-pointer"
-                  id={option.name}
-                  name={name}
-                />
-                <label htmlFor={option.name} className="cursor-pointer">
-                  {option.value}
-                </label>
-              </div>
-            ))}
+            {options.map((option) => {
+              const eventValue = register ? option.value : option.name;
+              return (
+                <div
+                  className="option px-4 py-2 cursor-pointer"
+                  key={option.name}
+                  onClick={() => handleSelect(eventValue)}
+                >
+                  <input
+                    type="radio"
+                    className="radio cursor-pointer"
+                    id={option.name}
+                    name={name}
+                  />
+                  <label htmlFor={option.name} className="cursor-pointer">
+                    {option.value}
+                  </label>
+                </div>
+              );
+            })}
           </div>
           <div
             className="selected-value cursor-pointer"
