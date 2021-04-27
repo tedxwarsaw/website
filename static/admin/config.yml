@@ -345,6 +345,27 @@ collections:
           - label: "Meet Us Button Link"
             name: "meetUsButtonLink"
             widget: string
+      - label: "Partners"
+          name: "partners"
+          file: "src/pages/content/pages/partners.yaml"
+          slug: "partners.md" # Filename template, e.g, YYYY-MM-DD-title.md
+          fields:
+            - label: "Hero Title"
+              name: "heroTitle"
+              widget: string
+            - label: "Hero background mobile image"
+              name: "heroBackgroundImageUrl"
+              widget: image
+              allow_multiple: false
+              media_folder: "photos"
+            - label: "Hero background desktop image"
+              name: "heroBackgroundImageUrlDesktop"
+              widget: image
+              allow_multiple: false
+              media_folder: "photos"
+            - label: "Hero background image alt"
+              name: "heroBackgroundImageAlt"
+              widget: string
   - label: "Global"
     name: "global"
     files:
