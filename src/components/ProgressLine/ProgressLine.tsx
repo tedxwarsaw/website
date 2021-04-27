@@ -1,7 +1,7 @@
 import React from "react";
 
 export const ProgressLine = () => (
-    <svg width="29px" height="367px" viewBox="0 0 29 367" version="1.1">
+    <svg width="29px" height="367px" viewBox="0 0 29 367" version="1.1" style={{'position': 'absolute', 'top': '9px', 'left': '0px'}}>
         <title>Group 2</title>
         <g id="MISSING-SUBPAGES" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g id="speaker" transform="translate(-476.000000, -1422.000000)">

@@ -1,6 +1,6 @@
 import { Props } from "../templates/IndexPage";
 import { getFluidImage } from "./utils";
-import {queryForNewsletter} from "./globalQueries";
+import {queryForNewsletter, queryForRecommendations} from "./globalQueries";
 
 export const pageQuery = `#graphql
   query SpeakersPageTemplate {
@@ -45,10 +45,17 @@ export const queryForProps = async (
 
     const newsletter = await queryForNewsletter(graphql);
 
+    const {
+        recommendationsTitle,
+        recommendations,
+    } = await queryForRecommendations(graphql);
+
     return {
         ...pagesYaml,
         ...newsletter,
         heroBackgroundImage,
-        heroBackgroundImageDesktop
+        heroBackgroundImageDesktop,
+        recommendationsTitle,
+        recommendations
     };
 };

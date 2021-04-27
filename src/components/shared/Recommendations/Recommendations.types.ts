@@ -18,4 +18,5 @@ export interface RecommendationsProps {
     order: number;
   }[];
   recommendationsTitle?: string;
+  className?: string;
 }
