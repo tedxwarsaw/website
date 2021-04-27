@@ -21,3 +21,14 @@
 input::placeholder {
   color: theme("colors.black");
 }
+
+.search-icon {
+  position: absolute;
+  right: 0;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+}

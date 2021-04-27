@@ -32,10 +32,15 @@ export const useWatch = (talks) => {
     let talksFiltered = [...talks];
 
     if (searchPhrase !== "") {
+      console.log(searchPhrase);
       talksFiltered = talksFiltered.filter((talk) =>
-        Object(talk).some((val) =>
-          val.toLowerCase().includes(searchPhrase.toLowerCase())
-        )
+        Object.values(talk).some((val: string) => {
+          if (typeof val === "string") {
+            return val.toLowerCase().includes(searchPhrase.toLowerCase());
+          } else {
+            return false;
+          }
+        })
       );
     }
     if (eventSlug !== "") {
