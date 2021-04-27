@@ -17,5 +17,5 @@ export interface RecommendationsProps {
     item: RecommendedItem;
     order: number;
   }[];
-  title?: string,
+  recommendationsTitle?: string;
 }
