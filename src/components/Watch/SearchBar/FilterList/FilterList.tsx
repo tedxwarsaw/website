@@ -24,7 +24,7 @@ export const FilterList = ({
   };
 
   return (
-    <div className="col-start-2 col-end-3 md:col-end-5 xl:col-end-7 py-5">
+    <div className="col-start-2 col-end-3 md:col-end-5 xl:col-end-7 py-5 flex items-center justify-between">
       <div className="flex items-center ">
         <p className="mr-4">Active filters</p>
         {activeFilters &&
@@ -41,7 +41,9 @@ export const FilterList = ({
               )
           )}
       </div>
-      <div></div>
+      <div>
+        <p>Sort by</p>
+      </div>
     </div>
   );
 };
