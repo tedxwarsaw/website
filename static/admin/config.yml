@@ -766,4 +766,4 @@ collections:
       - name: duration
         label: Duration
         widget: string
-        hint: "Duration of this talk"
+        hint: Duration of this talk in format mm:ss (f.e. "3:14" )

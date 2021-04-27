@@ -12,6 +12,7 @@ interface SelectInputProps {
   handleOnChange: (value: string) => void;
   placeholder: string;
   wideDropdown?: boolean;
+  className?: string;
 }
 
 export const SelectInput = ({
@@ -20,6 +21,7 @@ export const SelectInput = ({
   handleOnChange,
   placeholder,
   wideDropdown,
+  className,
 }: SelectInputProps) => {
   const [isSelectActive, setIsSelectActive] = useState(false);
 
@@ -29,7 +31,11 @@ export const SelectInput = ({
   };
 
   return (
-    <div className="my-3 border border-customGrey border-opacity-50 rounded-md md:col-start-2 md:col-end-3 xl:mx-4 cursor-pointer">
+    <div
+      className={`my-3 border border-customGrey border-opacity-50 rounded-md  xl:mx-4 cursor-pointer ${
+        className ? className : ""
+      }`}
+    >
       <OutsideClickHandler
         onOutsideClick={() => {
           setIsSelectActive(false);
@@ -37,7 +43,7 @@ export const SelectInput = ({
       >
         <div className="select-box p-4 ">
           <div
-            className={`options-container py-4 border border-opacity-50 border-customGrey rounded-md shadow-xl	 ${
+            className={`options-container z-10 py-4 border border-opacity-50 border-customGrey rounded-md shadow-xl	 ${
               isSelectActive ? "active" : ""
             } ${wideDropdown ? "wide-dropdown-select" : ""} `}
           >
