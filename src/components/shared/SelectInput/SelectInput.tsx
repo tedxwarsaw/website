@@ -1,33 +1,47 @@
 import React, { useState } from "react";
+import { UseFormRegister } from "react-hook-form";
 import { BsChevronUp } from "react-icons/bs";
 import OutsideClickHandler from "react-outside-click-handler";
+import { FormData } from "@/components/shared/Newsletter/NewsletterForm";
 import "./SelectInput.styled.css";
-import { UseFormRegister, UseFormSetValue } from "react-hook-form";
-import { FormData } from "../NewsletterForm";
 
 interface SelectInputProps {
+  name: string;
   options: {
     name: string;
     value: string;
   }[];
-  register: UseFormRegister<FormData>;
-  setValue: UseFormSetValue<FormData>;
+  placeholder: string;
+  handleOnChange: (value: string) => void;
+  selectedValue?: string;
+  wideDropdown?: boolean;
+  className?: string;
+  register?: UseFormRegister<FormData>;
 }
 
 export const SelectInput = ({
+  name,
   options,
+  selectedValue,
+  handleOnChange,
+  placeholder,
+  wideDropdown,
+  className,
   register,
-  setValue,
 }: SelectInputProps) => {
   const [isSelectActive, setIsSelectActive] = useState(false);
 
   const handleSelect = (value: string) => {
-    setValue("topic", value);
+    handleOnChange(value);
     setIsSelectActive(false);
   };
 
   return (
-    <div className="my-3 border border-customGrey border-opacity-50 rounded-md md:col-start-2 md:col-end-3 xl:mx-4 cursor-pointer">
+    <div
+      className={`my-3 border border-customGrey border-opacity-50 rounded-md  xl:mx-4 cursor-pointer ${
+        className ? className : ""
+      }`}
+    >
       <OutsideClickHandler
         onOutsideClick={() => {
           setIsSelectActive(false);
@@ -35,9 +49,9 @@ export const SelectInput = ({
       >
         <div className="select-box p-4 ">
           <div
-            className={`options-container py-4 border border-opacity-50 border-customGrey rounded-md ${
+            className={`options-container z-10 py-4 border border-opacity-50 border-customGrey rounded-md shadow-xl	 ${
               isSelectActive ? "active" : ""
-            }`}
+            } ${wideDropdown ? "wide-dropdown-select" : ""} `}
           >
             {options.map((option) => (
               <div
@@ -49,7 +63,7 @@ export const SelectInput = ({
                   type="radio"
                   className="radio cursor-pointer"
                   id={option.name}
-                  name="topic"
+                  name={name}
                 />
                 <label htmlFor={option.name} className="cursor-pointer">
                   {option.value}
@@ -60,15 +74,25 @@ export const SelectInput = ({
           <div
             className="selected-value cursor-pointer"
             onClick={() => setIsSelectActive((prev) => !prev)}
-            {...register("topic")}
           >
-            <input
-              name="topic"
-              placeholder="Topic"
-              {...register("topic")}
-              readOnly
-              className="outline-none cursor-pointer"
-            />
+            {register ? (
+              <input
+                name={name}
+                placeholder={placeholder}
+                {...register(name)}
+                readOnly
+                className="outline-none cursor-pointer"
+              />
+            ) : (
+              <input
+                name={name}
+                placeholder={placeholder}
+                value={selectedValue}
+                readOnly
+                className="outline-none cursor-pointer"
+              />
+            )}
+
             <BsChevronUp className="stroke-1" />
           </div>
         </div>
