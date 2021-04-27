@@ -25,9 +25,7 @@ export const usePagination = (items, itemsPerPage) => {
   useEffect(() => {
     setNumberOfPages(1 + Math.ceil(items.length / itemsPerPage));
     setItemsToShow(paginateItems(items, 1));
-  }, items);
-
-  useEffect(() => {}, [items]);
+  }, [items]);
 
   return {
     itemsToShow,
