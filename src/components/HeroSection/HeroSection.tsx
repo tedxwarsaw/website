@@ -5,6 +5,7 @@ import { Button } from "@/components/shared/Button";
 import { FaArrowRight } from "react-icons/fa";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { Link } from "gatsby";
+import parse from "html-react-parser";
 
 export const HeroSection = ({
   heroTitle,
@@ -17,6 +18,7 @@ export const HeroSection = ({
   heroLinks,
   featuredButtonLink,
   fontMedium,
+  centerContentVertically
 }: HeroSectionProps) => {
   return (
     <div className="main-grid-full-span">
@@ -25,7 +27,7 @@ export const HeroSection = ({
         imageDesktop={heroBackgroundImageDesktop}
         alt={heroBackgroundImageAlt}
         style={{ height: "35rem" }}
-        classNameChild="flex flex-col justify-end md:justify-center"
+        classNameChild={`flex flex-col ${centerContentVertically ? "justify-center" : "justify-end"} justify-end md:justify-center`}
       >
         <div className="main-grid">
           <div className="md:max-w-xl flex flex-col">
@@ -34,7 +36,7 @@ export const HeroSection = ({
                 fontMedium ? "" : "md:text-5xl font-bold"
               }`}
             >
-              {heroTitle}
+              {parse(heroTitle)}
             </h1>
 
             {heroSubtitle && (
@@ -47,14 +49,14 @@ export const HeroSection = ({
             )}
 
             <div className="flex flex-col md:flex-row md:align-center">
-              <a
+              {heroButtonText && (<a
                 href={heroButtonLink}
                 className="mb-5 md:mb-0"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Button>{heroButtonText}</Button>
-              </a>
+              </a>)}
               {heroLinks?.map((heroLink) => (
                 <a
                   href={heroLink.path}

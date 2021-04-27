@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "restart": "gatsby clean & yarn start"
   },
   "dependencies": {
     "@fontsource/inter": "^4.2.1",
@@ -38,9 +39,11 @@
     "react-dom": "^16.13.1",
     "react-hook-form": "^7.1.0",
     "react-icons": "^4.2.0",
+    "react-markdown": "^6.0.0",
     "react-outside-click-handler": "^1.3.0",
     "react-paginate": "^7.1.2",
     "react-popper-tooltip": "^4.0.1",
+    "rehype-raw": "^5.1.0",
     "yup": "^0.32.9"
   },
   "devDependencies": {

@@ -202,6 +202,70 @@ collections:
               - { label: "Red title of section", name: "title", widget: "string" }
               - { label: "Section name", name: "sectionName", widget: "string" }
               - { label: "Section description", name: "description", widget: "string" }
+      - label: "About"
+        name: "about"
+        file: "src/pages/content/pages/about.yaml"
+        slug: "about.md" # Filename template, e.g., YYYY-MM-DD-title.md"
+        fields:
+          - label: "Hero Title"
+            name: "heroTitle"
+            widget: "string"
+          - label: "Hero background mobile image"
+            name: "heroBackgroundImageUrl"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Hero background desktop image"
+            name: "heroBackgroundImageUrlDesktop"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Hero background image alt"
+            name: "heroBackgroundImageAlt"
+            widget: string
+          - label: "About TED section content"
+            name: "aboutUsContent"
+            widget: 'markdown'
+          - label: "About Ted section speakers"
+            name: "aboutTedSpeakers"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string"}
+          - label: "Ted Events Title"
+            name: "aboutTedEventsTitle"
+            widget: string
+          - label: "Ted Events"
+            name: "aboutTedEvents"
+            widget: "list"
+            fields:
+              - { label: "Content", name: "content", widget: string}
+          - label: "Media Initiatives Title"
+            name: "mediaInitiativesTitle"
+            widget: string
+              - label: "Media Initiatives"
+                name: "mediaInitiatives"
+                widget: "list"
+                fields:
+                  - { label: "Content", name: "content", widget: string }
+          - label: "About Ted Warsaw Title"
+            name: "AboutUsTitle"
+            widget: string
+          - label: "About Ted Warsaw Content"
+            name: "AboutUsContent"
+            widget: string
+          - label: "TEDxWarsaw Mobile Image"
+            name: "AboutUsImageUrl"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "TEDxWarsaw Desktop Image"
+            name: "AboutUsImageUrlDesktop"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "TEDxWarsaw image alt"
+            name: "AboutUsImageAlt"
+            widget: string
   - label: "Global"
     name: "global"
     files:

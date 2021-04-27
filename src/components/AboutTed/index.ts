@@ -1,0 +1,1 @@
+export {AboutTed, AboutTedProps} from "./AboutTed";

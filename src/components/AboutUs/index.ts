@@ -1,0 +1,1 @@
+export {AboutUs, AboutUsProps} from "./AboutUs";

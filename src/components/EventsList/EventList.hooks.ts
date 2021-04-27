@@ -38,7 +38,6 @@ export const useEventList = (events) => {
   };
 
   useEffect(() => {
-    console.log("pages change");
     setNumberOfPages(1 + Math.ceil(filteredEvents.length / eventsPerPage));
   }, [activeFilter]);
 
