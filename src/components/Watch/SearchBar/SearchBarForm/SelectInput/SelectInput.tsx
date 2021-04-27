@@ -11,6 +11,7 @@ interface SelectInputProps {
   selectedValue: string;
   handleOnChange: (value: string) => void;
   placeholder: string;
+  wideDropdown?: boolean;
 }
 
 export const SelectInput = ({
@@ -18,6 +19,7 @@ export const SelectInput = ({
   selectedValue,
   handleOnChange,
   placeholder,
+  wideDropdown,
 }: SelectInputProps) => {
   const [isSelectActive, setIsSelectActive] = useState(false);
 
@@ -35,9 +37,9 @@ export const SelectInput = ({
       >
         <div className="select-box p-4 ">
           <div
-            className={`options-container py-4 border border-opacity-50 border-customGrey rounded-md ${
+            className={`options-container py-4 border border-opacity-50 border-customGrey rounded-md shadow-xl	 ${
               isSelectActive ? "active" : ""
-            }`}
+            } ${wideDropdown ? "wide-dropdown-select" : ""} `}
           >
             {options.map((option) => (
               <div

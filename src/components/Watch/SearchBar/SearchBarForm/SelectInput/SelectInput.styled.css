@@ -14,7 +14,22 @@
   width: 100%;
   opacity: 0;
   transition: all 0.4 ease;
-  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 20px;
+  background-color: white;
+  border-radius: 0 8px 8px 0;
+  /* padding-right: 2px; */
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  border: 8px solid rgba(0, 0, 0, 0);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border-radius: 100px;
+  background-color: theme("colors.customRed");
 }
 
 .select-box .options-container.active {
@@ -41,4 +56,11 @@
 .select-box .options-container.active + .selected-value svg {
   transform: rotateX(180deg);
   top: 20px;
+}
+
+@media (min-width: theme("screens.md")) {
+  .wide-dropdown-select {
+    margin-top: 10px;
+    width: 150% !important;
+  }
 }
