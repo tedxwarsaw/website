@@ -2,7 +2,7 @@ import { CardTalk } from "@/components/shared/Card";
 import React from "react";
 import { WatchListProps } from "./WatchList.types";
 CardTalk;
-import { RecommendationsSlider } from "@/components/Recommendations/RecommendationsSlider";
+import { RecommendationsSlider } from "@/components/shared/Recommendations/RecommendationsSlider";
 
 export const WatchList = ({
   talks,
