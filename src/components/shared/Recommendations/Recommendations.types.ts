@@ -17,4 +17,6 @@ export interface RecommendationsProps {
     item: RecommendedItem;
     order: number;
   }[];
+  recommendationsTitle?: string;
+  className?: string;
 }

@@ -4,11 +4,16 @@ import { RecommendationsSlider } from "./RecommendationsSlider";
 import { RecommendationsProps } from "./Recommendations.types";
 import "./Recommendations.styled.css";
 
-export const Recommendations = ({ recommendations }: RecommendationsProps) => {
+export const Recommendations = ({
+  recommendations,
+  recommendationsTitle,
+  className
+}: RecommendationsProps) => {
+    console.log(className);
   return (
-    <div className="my-10 main-grid-full-span recommendations-container">
+    <div className={`my-10 main-grid-full-span recommendations-container ${className && className}`}>
       <h2 className="font-medium text-2xl md:text-3xl font-bold w-32">
-        TEDxWarsaw Recommends
+        {recommendationsTitle ? recommendationsTitle : "TEDxWarsaw Recommends"}
       </h2>
       <RecommendationsSlider>
         {recommendations.map(({ item, order }) => (

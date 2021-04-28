@@ -40,7 +40,6 @@ export const AboutPageTemplate = (props: Props) => (
       aboutTedContent={props.aboutTedContent}
       aboutTedSpeakers={props.aboutTedSpeakers}
     />
-
     <AboutTedEvents
       aboutTedEventsTitle={props.aboutTedEventsTitle}
       aboutTedEvents={props.aboutTedEvents}

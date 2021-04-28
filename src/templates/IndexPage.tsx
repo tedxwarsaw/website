@@ -5,13 +5,13 @@ import { OurStory, OurStoryProps } from "@/components/OurStory";
 import {
   Recommendations,
   RecommendationsProps,
-} from "@/components/Recommendations";
+} from "@/components/shared/Recommendations";
 import { YoutubeBanner, YoutubeBannerProps } from "@/components/YoutubeBanner";
 import {
   EventHighlight,
   EventHighlightProps,
 } from "@/components/EventHighlight";
-import { JoinUs, JoinUsProps } from "@/components/JoinUs";
+import { JoinUs, JoinUsProps } from "@/components/shared/JoinUs";
 import { Partners, PartnersProps } from "@/components/shared/Partners";
 import {
   Newsletter,
@@ -45,7 +45,10 @@ export const IndexPageTemplate = (props: Props) => (
       ourStoryTitle={props.ourStoryTitle}
       ourStoryItems={props.ourStoryItems}
     />
-    <Recommendations recommendations={props.recommendations} />
+    <Recommendations
+      recommendationsTitle={props.recommendationsTitle}
+      recommendations={props.recommendations}
+    />
     <YoutubeBanner
       youtubeBannerHeading={props.youtubeBannerHeading}
       youtubeBannerLinkText={props.youtubeBannerLinkText}
