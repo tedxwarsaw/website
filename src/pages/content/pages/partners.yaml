@@ -1,9 +1,47 @@
 slug: /partners
 templateKey: PartnersPage
 heroTitle: >-
-  Wishing to volunteer?
+  <span style='color:#E62B1E'>Partners</span>
 
-  <span style='color:#E62B1E'>We've got you covered</span>
+
+  Your valuable contribution
+
+
+  helps make this day possible.
 heroBackgroundImageUrl: images/uploads/speakers-bg.png
 heroBackgroundImageUrlDesktop: images/uploads/speakers-bg.png
 heroBackgroundImageAlt: Cover image
+partnerSectionTitle: Previous editions
+partnerLogoPaths:
+  - events/2020/partnerLogos/logo-1.png
+  - events/2020/partnerLogos/logo-2.png
+  - events/2020/partnerLogos/logo-3.png
+  - events/2020/partnerLogos/logo-4.png
+  - events/2020/partnerLogos/logo-5.png
+  - events/2020/partnerLogos/logo-6.png
+  - events/2020/partnerLogos/logo-7.png
+  - events/2020/partnerLogos/logo-8.png
+  - events/2020/partnerLogos/logo-9.png
+  - events/2020/partnerLogos/logo-10.png
+  - events/2020/partnerLogos/logo-11.png
+  - events/2020/partnerLogos/logo-12.png
+  - events/2020/partnerLogos/logo-13.png
+  - events/2020/partnerLogos/logo-14.png
+  - events/2020/partnerLogos/logo-15.png
+  - events/2020/partnerLogos/logo-16.png
+  - events/2020/partnerLogos/logo-17.png
+partnersContactContent: >-
+  We are a tight-knit team of passionate people who want to share the best with others. Above all, however, we are all volunteers.
+  We believe that with a strong partner who shares our values, we can do more and make a real difference.
+  So, if you feel we share the same values and ideas and you’d like to help us spread them, let us know!
+partnersContacts:
+  - image: images/uploads/woman.jpg
+    name: Martyna Hrankowska
+    title: partnership
+    email: martyna@tedxwarsaw.com
+    phone: +49 999 999 999
+  - image: images/uploads/woman.jpg
+    name: Martyna Hrankowska
+    title: partnership
+    email: martyna@tedxwarsaw.com
+    phone: +49 999 999 999

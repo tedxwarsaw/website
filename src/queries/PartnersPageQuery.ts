@@ -1,5 +1,5 @@
 import { Props } from "../templates/IndexPage";
-import { getFluidImage } from "./utils";
+import {getFixedImage, getFluidImage} from "./utils";
 import {queryForNewsletter, queryForRecommendations} from "./globalQueries";
 
 export const pageQuery = `#graphql
@@ -9,6 +9,17 @@ export const pageQuery = `#graphql
       heroBackgroundImageUrl
       heroBackgroundImageUrlDesktop
       heroBackgroundImageAlt
+      partnerSectionTitle
+      partnerLogoPaths
+      partnersContactContent
+      partnersContacts {
+        image
+        name
+        title
+        email
+        phone        
+      }
+    }
   }
 `;
 
@@ -40,12 +51,35 @@ export const queryForProps = async (
         recommendations,
     } = await queryForRecommendations(graphql);
 
+    const partnerLogos: any = await Promise.all(
+        pagesYaml.partnerLogoPaths.map(
+            async (path) => await getFixedImage({ graphql, path, height: 30 })
+        )
+    );
+
+    const partnerLogosDesktop: any = await Promise.all(
+        pagesYaml.partnerLogoPaths.map(
+            async (path) => await getFixedImage({ graphql, path, height: 60 })
+        )
+    );
+
+    const partnerContactsImages: any = await Promise.all(
+        pagesYaml.partnersContacts.map(x => x.image).map(
+            async (path) => await getFixedImage({ graphql, path, height: 100 })
+        )
+    );
+
+    pagesYaml.partnersContacts[0].image = partnerContactsImages[0];
+    pagesYaml.partnersContacts[1].image = partnerContactsImages[1];
+
     return {
         ...pagesYaml,
         ...newsletter,
         heroBackgroundImage,
         heroBackgroundImageDesktop,
         recommendationsTitle,
-        recommendations
+        recommendations,
+        partnerLogos,
+        partnerLogosDesktop
     };
 };

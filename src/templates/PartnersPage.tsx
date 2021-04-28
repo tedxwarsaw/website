@@ -4,15 +4,18 @@ import { FluidObject } from "gatsby-image";
 import { HeroSection } from "@/components/HeroSection";
 import {Newsletter, NewsletterProps, NewsletterVariant} from "../components/shared/Newsletter";
 import {Recommendations, RecommendationsProps} from "../components/shared/Recommendations";
+import {Partners, PartnersProps} from "../components/shared/Partners";
+import {PartnersContact} from "../components/PartnersContact";
+import {PartnersContactProps} from "../components/PartnersContact/PartnersContact";
 
-interface Props extends NewsletterProps, RecommendationsProps{
+interface Props extends NewsletterProps, RecommendationsProps, PartnersProps, PartnersContactProps{
     heroTitle: string;
     heroBackgroundImage: FluidObject;
     heroBackgroundImageDesktop: FluidObject;
     heroBackgroundImageAlt: string;
 }
 
-export const SpeakersPageTemplate = (props: Props) => (
+export const PartnersPageTemplate = (props: Props) => (
     <Page>
         <HeroSection
             heroTitle={props.heroTitle}
@@ -20,6 +23,12 @@ export const SpeakersPageTemplate = (props: Props) => (
             heroBackgroundImageDesktop={props.heroBackgroundImageDesktop}
             heroBackgroundImageAlt={props.heroBackgroundImageAlt}
             centerContentVertically={true}
+        />
+        <PartnersContact partnersContactContent={props.partnersContactContent} partnersContacts={props.partnersContacts}/>
+        <Partners
+            partnerSectionTitle={props.partnerSectionTitle}
+            partnerLogos={props.partnerLogos}
+            partnerLogosDesktop={props.partnerLogosDesktop}
         />
         <Recommendations
             recommendationsTitle={props.recommendationsTitle}
@@ -37,8 +46,9 @@ export const SpeakersPageTemplate = (props: Props) => (
     </Page>
 );
 
-const SpeakersPage = ({ pageContext }) => {
-    return <SpeakersPageTemplate {...pageContext.props} />;
+const PartnersPage = ({ pageContext }) => {
+    console.log(pageContext.props)
+    return <PartnersPageTemplate {...pageContext.props} />;
 };
 
-export default SpeakersPage;
+export default PartnersPage;
