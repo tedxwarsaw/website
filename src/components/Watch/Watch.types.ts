@@ -18,3 +18,4 @@ export type FilterTalks = (
   eventSlug: string,
   durationFilter: string
 ) => void;
+export type SortTalks = (sortType: string) => void;

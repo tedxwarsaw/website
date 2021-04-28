@@ -1,28 +1,32 @@
 import React from "react";
-import { ActiveFilters, FilterTalks } from "@/components/Watch/Watch.types";
+import {
+  ActiveFilters,
+  FilterTalks,
+  SortTalks,
+} from "@/components/Watch/Watch.types";
 import { FilterBlock } from "./FilterBlock";
+import { SelectInput } from "@/components/shared/SelectInput";
+import { useFitlerList } from "@/components/Watch/SearchBar/FilterList/FilterList.hooks";
 
 interface FilterListProps {
   activeFilters: ActiveFilters;
+  activeSorting: string;
   filterTalks: FilterTalks;
+  sortTalks: SortTalks;
   eventNames: {};
 }
 
 export const FilterList = ({
   activeFilters,
+  activeSorting,
   filterTalks,
+  sortTalks,
   eventNames,
 }: FilterListProps) => {
-  const handleRemoveFilter = (filterKey: string) => {
-    if (filterKey === "searchPhrase") {
-      filterTalks("", activeFilters.eventSlug, activeFilters.durationFilter);
-    } else if (filterKey === "eventSlug") {
-      filterTalks(activeFilters.searchPhrase, "", activeFilters.durationFilter);
-    } else {
-      filterTalks(activeFilters.searchPhrase, activeFilters.eventSlug, "");
-    }
-  };
-
+  const { handleRemoveFilter, sortOptions } = useFitlerList(
+    activeFilters,
+    filterTalks
+  );
   return (
     <div className="col-start-2 col-end-3 md:col-end-5 xl:col-end-7 py-5 flex items-center justify-between">
       <div className="flex items-center ">
@@ -41,8 +45,17 @@ export const FilterList = ({
               )
           )}
       </div>
-      <div>
+      <div className="flex items-center ">
         <p>Sort by</p>
+        <SelectInput
+          name="sortBy"
+          placeholder="-"
+          options={sortOptions}
+          selectedValue={activeSorting}
+          handleOnChange={sortTalks}
+          noBorder
+          className="w-36 text-centered-bold"
+        />
       </div>
     </div>
   );

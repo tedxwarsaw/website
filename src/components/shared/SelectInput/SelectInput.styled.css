@@ -1,7 +1,12 @@
 .select-box {
   position: relative;
   width: 100%;
-  min-width: 200px;
+}
+.text-centered-bold input {
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  padding-right: 20px;
 }
 
 .select-box .options-container {
@@ -15,13 +20,13 @@
   opacity: 0;
   transition: all 0.4 ease;
   overflow-y: scroll;
+  padding-left: 20px;
 }
 
 .select-box .options-container::-webkit-scrollbar {
   width: 20px;
   background-color: white;
   border-radius: 0 8px 8px 0;
-  /* padding-right: 2px; */
 }
 
 .select-box .options-container::-webkit-scrollbar-thumb {
@@ -63,4 +68,7 @@
     margin-top: 10px;
     width: 150% !important;
   }
+}
+
+.input-no-border-centered {
 }

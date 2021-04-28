@@ -20,6 +20,8 @@ export const Watch = ({
     currentPage,
     numberOfPages,
     changePage,
+    sortTalks,
+    activeSorting,
   } = useWatch(talks);
 
   return (
@@ -35,7 +37,9 @@ export const Watch = ({
         </div>
         <SearchBar
           activeFilters={activeFilters}
+          activeSorting={activeSorting}
           filterTalks={filterTalks}
+          sortTalks={sortTalks}
           eventNames={eventNames}
         />
         {talksToShow.length === 0 && (

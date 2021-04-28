@@ -9,6 +9,7 @@ export const useWatch = (talks) => {
     eventSlug: "",
     durationFilter: "",
   });
+  const [activeSorting, setActiveSortings] = useState("Newest");
   const { itemsToShow, changePage, currentPage, numberOfPages } = usePagination(
     filteredTalks,
     21
@@ -53,6 +54,19 @@ export const useWatch = (talks) => {
     setFilteredTalks(talksFiltered);
   };
 
+  const sortTalks = (sortType) => {
+    setActiveSortings(sortType);
+    let talksSorted = [...filteredTalks];
+    if (sortType !== "-") {
+      if (sortType === "Newest") {
+        talksSorted.sort((a, b) => b.date - a.date);
+      } else {
+        talksSorted.sort((a, b) => a.date - b.date);
+      }
+      setFilteredTalks(talksSorted);
+    }
+  };
+
   return {
     activeFilters,
     filterTalks,
@@ -60,5 +74,7 @@ export const useWatch = (talks) => {
     currentPage,
     changePage,
     numberOfPages,
+    sortTalks,
+    activeSorting,
   };
 };

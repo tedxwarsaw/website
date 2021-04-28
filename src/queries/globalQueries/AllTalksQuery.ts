@@ -26,6 +26,7 @@ const eventQuery = `#graphql
   ) {
     event: eventsYaml(slug: {eq: $eventSlug}) {
       displayName
+      date
     }
   }
 `;
@@ -39,7 +40,7 @@ export const queryForAllTalks = async (
   const allEvents = {};
 
   const talksData = await Promise.all(
-    talks.map(async (talk) => {
+    talks.map(async (talk, index) => {
       const coverMobile = await getFluidImage({
         graphql,
         path: talk.cover.image.mobile,
@@ -68,10 +69,19 @@ export const queryForAllTalks = async (
 
       allEvents[talk.eventSlug] = event.displayName;
 
-      return { ...talk, cover };
+      // const date = new Date(event.date);
+      let date = new Date(event.date).getTime();
+      if (index === 1) {
+        date = new Date("12/10/1999").getTime();
+      } else if (index === 2) {
+        date = new Date("12/10/2021").getTime();
+      }
+
+      return { ...talk, cover, date };
     })
   );
 
+  talksData.sort((a, b) => b.date - a.date);
   return {
     talks: [...talksData],
     eventNames: allEvents,

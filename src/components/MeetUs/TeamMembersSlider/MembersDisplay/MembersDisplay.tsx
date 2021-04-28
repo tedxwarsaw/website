@@ -21,8 +21,10 @@ export const MembersDisplay = ({
           key={member.name + index}
           onClick={() => setCurrentSlide(index)}
         >
-          <span>{name[0]}</span>
-          <span>{name[1]}</span>
+          {name.map((word) => (
+            <span>{name[word]}</span>
+          ))}
+
           <span
             className={`h-1 bg-customRed rounded-sm w-full mt-3  ${
               activeMemberIndex === index ? "opacity-100" : "opacity-50"
