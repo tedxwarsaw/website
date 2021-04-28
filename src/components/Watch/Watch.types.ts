@@ -1,12 +1,18 @@
 import { Talk } from "@/components/Watch/WatchList/WatchList.types";
+import { FluidObject } from "gatsby-image";
 
-export interface WatchProps {
-  headerTitle: string;
-  headerSubtitle: string;
-  talks: Talk[];
-  eventNames: {};
+export interface RecommendedTalk {
+  slug: string;
+  displayName: string;
+  speaker: string;
+  cover: {
+    image: {
+      desktop: FluidObject;
+      mobile: FluidObject;
+    };
+  };
+  duration;
 }
-
 export interface ActiveFilters {
   searchPhrase: string;
   eventSlug: string;
@@ -19,3 +25,11 @@ export type FilterTalks = (
   durationFilter: string
 ) => void;
 export type SortTalks = (sortType: string) => void;
+
+export interface WatchProps {
+  headerTitle: string;
+  headerSubtitle: string;
+  talks: Talk[];
+  eventNames: {};
+  recommendedTalks: RecommendedTalk[];
+}

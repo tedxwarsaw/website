@@ -11,7 +11,7 @@ interface CardTalkProps {
   speaker?: string;
   eventName?: string;
   duration?: string;
-  isWatch?: boolean;
+  noBadge?: boolean;
 }
 
 export const CardTalk = ({
@@ -22,7 +22,7 @@ export const CardTalk = ({
   displayName,
   eventName,
   duration,
-  isWatch,
+  noBadge,
 }: CardTalkProps) => (
   <Link to={`/talk/${slug}`}>
     <div className="border-b-4 pb-5 pt-2 md:pt-3 border-customTransparent  hover:border-customRed h-full flex flex-col">
@@ -44,7 +44,7 @@ export const CardTalk = ({
       </div>
       <span
         className={`absolute left-0 top-0 bg-customDarkGrey text-white md:py-1 text-sm px-3 ${
-          isWatch ? "hidden" : ""
+          noBadge ? "hidden" : ""
         }`}
       >
         TALK

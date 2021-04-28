@@ -1,4 +1,20 @@
+import { useState, useEffect } from "react";
+
 export const useFitlerList = (activeFilters, filterTalks) => {
+  const [filtersApplied, setFiltersApplied] = useState(false);
+
+  useEffect(() => {
+    let applied = false;
+    Object.keys(activeFilters).forEach((filter) => {
+      console.log(activeFilters[filter]);
+      if (activeFilters[filter] !== "") {
+        applied = true;
+      }
+    });
+    console.log("set");
+    setFiltersApplied(applied);
+  }, [activeFilters]);
+
   const sortOptions = [
     {
       name: "Newest",
@@ -20,5 +36,5 @@ export const useFitlerList = (activeFilters, filterTalks) => {
     }
   };
 
-  return { sortOptions, handleRemoveFilter };
+  return { sortOptions, handleRemoveFilter, filtersApplied };
 };

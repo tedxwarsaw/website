@@ -12,6 +12,7 @@ export const Watch = ({
   headerSubtitle,
   talks,
   eventNames,
+  recommendedTalks,
 }: WatchProps) => {
   const {
     activeFilters,
@@ -27,7 +28,7 @@ export const Watch = ({
   return (
     <>
       <div className="main-grid-full-span pt-16 bg-customLightGrey">
-        <div className="inner-grid">
+        <div className="inner-grid mb-10">
           <div className="col-start-1 col-span-full flex justify-center flex-col text-center gap-5">
             <ReactMarkdown className="text-4xl watch-heading-md">
               {headerTitle}
@@ -59,7 +60,11 @@ export const Watch = ({
       </div>
 
       <div className="pb-10">
-        <WatchList talks={talksToShow} eventNames={eventNames} />
+        <WatchList
+          talks={talksToShow}
+          eventNames={eventNames}
+          recommendedTalks={recommendedTalks}
+        />
         {numberOfPages - 1 > 1 && (
           <Pagination
             numberOfPages={numberOfPages}

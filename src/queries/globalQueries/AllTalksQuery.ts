@@ -40,7 +40,7 @@ export const queryForAllTalks = async (
   const allEvents = {};
 
   const talksData = await Promise.all(
-    talks.map(async (talk, index) => {
+    talks.map(async (talk) => {
       const coverMobile = await getFluidImage({
         graphql,
         path: talk.cover.image.mobile,
@@ -70,12 +70,7 @@ export const queryForAllTalks = async (
       allEvents[talk.eventSlug] = event.displayName;
 
       // const date = new Date(event.date);
-      let date = new Date(event.date).getTime();
-      if (index === 1) {
-        date = new Date("12/10/1999").getTime();
-      } else if (index === 2) {
-        date = new Date("12/10/2021").getTime();
-      }
+      const date = new Date(event.date).getTime();
 
       return { ...talk, cover, date };
     })

@@ -15,6 +15,7 @@ export const WatchPageTemplate = (props: Props) => (
       headerSubtitle={props.headerSubtitle}
       talks={props.talks}
       eventNames={props.eventNames}
+      recommendedTalks={props.recommendedTalks}
     />
     <Newsletter
       variant={NewsletterVariant.black}

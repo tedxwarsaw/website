@@ -1,3 +1,4 @@
+import { RecommendedTalk } from "@/components/Watch/Watch.types";
 import { FluidObject } from "gatsby-image";
 
 export interface Talk {
@@ -17,4 +18,5 @@ export interface Talk {
 export interface WatchListProps {
   talks: Talk[];
   eventNames: {};
+  recommendedTalks: RecommendedTalk[];
 }
