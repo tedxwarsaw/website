@@ -1,6 +1,6 @@
 import { Props } from "../templates/IndexPage";
 import { getFixedImage, getFluidImage } from "./utils";
-import { queryForNewsletter, queryForRecommendations } from "./globalQueries";
+import { queryForFeatureEvent, queryForNewsletter, queryForRecommendations } from "./globalQueries";
 
 export const pageQuery = `#graphql
   query IndexPageTemplate {
@@ -24,7 +24,6 @@ export const pageQuery = `#graphql
       youtubeBannerHeading
       youtubeBannerLinkText
       youtubeBannerLinkUrl
-      eventSlug
       joinUsTitle
       joinUsSubtitle
       joinUsImagePath
@@ -68,6 +67,8 @@ const eventQuery = `#graphql
   }
 `;
 
+
+
 export const queryForProps = async (
   graphql: (query: string, args?: any) => any
 ): Promise<Props> => {
@@ -76,13 +77,15 @@ export const queryForProps = async (
     data: { pagesYaml },
   } = await graphql(pageQuery);
 
+  const featuredEvent = await queryForFeatureEvent(graphql);
+
   const {
     data: { event },
   } = await graphql(eventQuery, {
-    eventSlug: pagesYaml.eventSlug,
+    eventSlug: featuredEvent.slug,
   });
 
-  loadedEvents[pagesYaml.eventSlug] = event;
+  loadedEvents[featuredEvent.slug] = event;
 
   const heroBackgroundImage = await getFluidImage({
     graphql,
