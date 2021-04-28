@@ -44,8 +44,8 @@ export const Watch = ({
           eventNames={eventNames}
         />
         {talksToShow.length === 0 && (
-          <div className="seamless-grid py-16">
-            <div className="col-start-2 col-end-3 md:col-start-2 md:col-end-5 xl:col-start-2 xl:col-end-5 pr-52">
+          <div className="seamless-grid pb-10 xl:py-16">
+            <div className="col-start-2 col-end-3 md:col-start-2 md:col-end-3 xl:col-start-2 xl:col-end-5 xl:pr-52">
               <h2 className="text-2xl md:text-3xl">
                 Sorry. We couldn't find a talk quite like that.
               </h2>

@@ -28,8 +28,8 @@ export const FilterList = ({
     filterTalks
   );
   return (
-    <div className="col-start-2 col-end-3 md:col-end-5 xl:col-end-7 py-5 flex items-center justify-between">
-      <div className="flex items-center ">
+    <div className="col-start-2 col-end-3 md:col-end-5 xl:col-end-7 py-5 flex flex-col xl:flex-row xl:items-center xl:justify-between">
+      <div className="flex  flex-col gap-2 items-start md:gap-0 md:items-center md:flex-row">
         {activeFilters && filtersApplied && (
           <>
             <p className="mr-4">Active filters</p>
