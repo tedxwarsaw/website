@@ -55,11 +55,12 @@
   position: absolute;
   top: 20px;
   right: 15px;
+  transform: rotateX(180deg);
   transition: all 0.4s ease;
 }
 
 .select-box .options-container.active + .selected-value svg {
-  transform: rotateX(180deg);
+  transform: rotateX(0deg);
   top: 20px;
 }
 
