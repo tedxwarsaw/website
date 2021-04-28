@@ -6,10 +6,15 @@ import {
   NewsletterProps,
   NewsletterVariant,
 } from "@/components/shared/Newsletter";
+import {
+  RelatedTalks,
+  RelatedTalksProps,
+} from "@/components/Talk/RelatedTalks";
 
-export interface Props extends NewsletterProps, TalkProps {}
+export interface Props extends NewsletterProps, TalkProps, RelatedTalksProps {}
 
 export const TalkPageTemplate = (props: Props) => {
+  console.log(props);
   return (
     <Page>
       <Talk
@@ -21,6 +26,10 @@ export const TalkPageTemplate = (props: Props) => {
         talkDescription={props.talkDescription}
         speakerProfileImage={props.speakerProfileImage}
         speakerDescription={props.speakerDescription}
+      />
+      <RelatedTalks
+        relatedTalks={props.relatedTalks}
+        eventName={props.eventDisplayName}
       />
       <Newsletter
         variant={NewsletterVariant.black}

@@ -25,7 +25,7 @@ export const RecommendationsSlider = ({ children }) => {
   return (
     <>
       <div className="slider-wrapper-recommendations max-w-full mt-10 relative">
-        {slider && (
+        {slider && numberOfSlides > 3 && (
           <div className="hidden md:block">
             <BsChevronLeft
               className={`text-customRed hover:opacity-40 cursor-pointer stroke-1 text-3xl absolute left-0 top-1/3 z-10 xl:-left-10 ${

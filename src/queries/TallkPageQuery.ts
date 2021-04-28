@@ -26,6 +26,29 @@ query TalkQuery(
 }
 `;
 
+const relatedTalksQuery = `#graphql
+query RelatedTalks (
+  $talkSlug: String,
+  $eventSlug: String,
+){
+    allTalksYaml(filter: {collectionId: {eq: "talk"}, eventSlug: {eq: $eventSlug}, slug: {ne: $talkSlug}}) {
+     nodes {
+        slug
+        displayName
+        speaker
+        eventSlug
+        cover {
+          image {
+            desktop
+            mobile
+          }
+        }
+        duration
+      }
+    }
+  }
+`;
+
 const eventQuery = `#graphql
   query EventQuery(
     $eventSlug: String
@@ -53,6 +76,13 @@ export const queryForProps = async (
     eventSlug: talk.eventSlug,
   });
 
+  const {
+    data: { allTalksYaml },
+  } = await graphql(relatedTalksQuery, {
+    talkSlug: talk.slug,
+    eventSlug: talk.eventSlug,
+  });
+
   const eventDisplayName = event.displayName;
 
   const coverMobile = await getFluidImage({
@@ -74,13 +104,47 @@ export const queryForProps = async (
       mobile: coverMobile,
     },
   };
-  const newsletter = await queryForNewsletter(graphql);
-
   const speakerProfileImage = await getFixedImage({
     graphql,
     path: talk.speakerProfileImage,
     height: 80,
   });
+
+  const relatedTalks = await Promise.all(
+    allTalksYaml.nodes.map(async (relatedTalk) => {
+      const coverMobile = await getFluidImage({
+        graphql,
+        path: relatedTalk.cover.image.mobile,
+        quality: 90,
+        sizes: "(max:-width: 768px)",
+      });
+      const coverDesktop = await getFluidImage({
+        graphql,
+        path: relatedTalk.cover.image.desktop,
+        quality: 90,
+        sizes: "(max:-width: 2000px)",
+      });
+
+      const cover = {
+        image: {
+          desktop: coverDesktop,
+          mobile: coverMobile,
+        },
+      };
+
+      const {
+        data: { event },
+      } = await graphql(eventQuery, {
+        eventSlug: talk.eventSlug,
+      });
+
+      const eventDisplayName = event.displayName;
+
+      return { ...relatedTalk, cover, eventDisplayName };
+    })
+  );
+
+  const newsletter = await queryForNewsletter(graphql);
 
   return {
     ...talk,
@@ -88,5 +152,6 @@ export const queryForProps = async (
     speakerProfileImage,
     cover,
     eventDisplayName,
+    relatedTalks,
   };
 };
