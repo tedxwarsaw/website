@@ -1,5 +1,6 @@
 import { getFluidImage } from "./utils";
 import { Props } from "../templates/EventPage";
+import { queryForNewsletter } from "./globalQueries";
 
 const talkQuery = `#graphql
 query TalkQuery(
@@ -9,7 +10,7 @@ query TalkQuery(
     slug
     displayName
     talkDescription
-    youtubeLink
+    youtubeVideoId
     speaker
     speakerProfileImage
     speakerDescription
@@ -73,9 +74,11 @@ export const queryForProps = async (
       mobile: coverMobile,
     },
   };
+  const newsletter = await queryForNewsletter(graphql);
 
   return {
     ...talk,
+    ...newsletter,
     cover,
     eventDisplayName,
   };

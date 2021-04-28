@@ -842,7 +842,7 @@ collections:
       - name: talkDescription
         label: "Talk description"
         widget: string
-      - name: youtubeLink
+      - name: youtubeVideoId
         label: "Youtube lin"
         widget: string
         hint: "Embed link for this talk"
