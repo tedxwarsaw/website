@@ -1,1 +1,1 @@
-export * from "./TalkMainSection";
+export { Talk, TalkProps } from "./Talk";

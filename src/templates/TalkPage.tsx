@@ -1,23 +1,26 @@
 import React from "react";
 import { Page } from "@/components/shared/Page";
-import { TalkMainSection, TalkMainSectionProps } from "@/components/Talk";
+import { Talk, TalkProps } from "@/components/Talk";
 import {
   Newsletter,
   NewsletterProps,
   NewsletterVariant,
 } from "@/components/shared/Newsletter";
 
-export interface Props extends NewsletterProps, TalkMainSectionProps {}
+export interface Props extends NewsletterProps, TalkProps {}
 
 export const TalkPageTemplate = (props: Props) => {
   return (
     <Page>
-      <TalkMainSection
+      <Talk
         youtubeVideoId={props.youtubeVideoId}
         speaker={props.speaker}
         displayName={props.displayName}
         eventDisplayName={props.eventDisplayName}
         duration={props.duration}
+        talkDescription={props.talkDescription}
+        speakerProfileImage={props.speakerProfileImage}
+        speakerDescription={props.speakerDescription}
       />
       <Newsletter
         variant={NewsletterVariant.black}

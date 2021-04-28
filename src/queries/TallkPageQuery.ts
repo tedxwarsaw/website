@@ -1,4 +1,4 @@
-import { getFluidImage } from "./utils";
+import { getFixedImage, getFluidImage } from "./utils";
 import { Props } from "../templates/EventPage";
 import { queryForNewsletter } from "./globalQueries";
 
@@ -76,9 +76,16 @@ export const queryForProps = async (
   };
   const newsletter = await queryForNewsletter(graphql);
 
+  const speakerProfileImage = await getFixedImage({
+    graphql,
+    path: talk.speakerProfileImage,
+    height: 80,
+  });
+
   return {
     ...talk,
     ...newsletter,
+    speakerProfileImage,
     cover,
     eventDisplayName,
   };
