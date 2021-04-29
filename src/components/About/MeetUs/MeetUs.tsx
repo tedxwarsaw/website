@@ -1,7 +1,7 @@
 import React from "react";
 import { MeetUsProps } from "./MeetUs.types";
 import { Associates } from "./Associates";
-import { TeamMembersSlider } from "@/components/MeetUs/TeamMembersSlider";
+import { TeamMembersSlider } from "@/components/About/MeetUs/TeamMembersSlider";
 
 export const MeetUs = ({
   meetUsBackgroundImage,

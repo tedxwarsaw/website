@@ -1,9 +1,7 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
 import Img, { FluidObject } from "gatsby-image";
 import "./AboutUs.styled.css";
-import {ContentPanel} from "../shared/ContentPanel";
+import { ContentPanel } from "@/components/shared/ContentPanel";
 
 export interface Content {
   content: string;
@@ -31,6 +29,6 @@ export const AboutUs = (props: AboutUsProps) => (
         />
       </div>
     </div>
-    <ContentPanel title={props.AboutUsTitle} content={props.AboutUsContent}/>
+    <ContentPanel title={props.AboutUsTitle} content={props.AboutUsContent} />
   </div>
 );

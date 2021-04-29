@@ -1,10 +1,10 @@
 import React from "react";
 import { MainEvent } from "./MainEvent";
-import { EventsListProps } from "@/components/EventsList";
-import { ListFilters } from "@/components/EventsList/ListFilters";
+import { EventsListProps } from "@/components/Attend/EventsList";
+import { ListFilters } from "@/components/Attend/EventsList/ListFilters";
 import { CardEventAttend } from "@/components/shared/Card";
 import { useEventList } from "./EventList.hooks";
-import { Pagination } from "../shared/Pagination";
+import { Pagination } from "../../shared/Pagination";
 
 export const EventsList = ({ events, categories }: EventsListProps) => {
   const {

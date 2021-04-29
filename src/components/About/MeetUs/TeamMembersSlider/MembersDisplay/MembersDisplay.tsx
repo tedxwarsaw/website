@@ -1,5 +1,5 @@
 import React from "react";
-import { TeamMember } from "@/components/MeetUs/MeetUs.types";
+import { TeamMember } from "@/components/About/MeetUs/MeetUs.types";
 
 interface MembersDisplayProps {
   teamMembers: TeamMember[];

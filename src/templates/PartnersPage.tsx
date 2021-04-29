@@ -1,7 +1,7 @@
 import React from "react";
 import { Page } from "./Page";
 import { FluidObject } from "gatsby-image";
-import { HeroSection } from "@/components/HeroSection";
+import { HeroSection } from "@/components/shared/HeroSection";
 import {
   Newsletter,
   NewsletterProps,
@@ -12,8 +12,8 @@ import {
   RecommendationsProps,
 } from "../components/shared/Recommendations";
 import { Partners, PartnersProps } from "../components/shared/Partners";
-import { PartnersContact } from "../components/PartnersContact";
-import { PartnersContactProps } from "../components/PartnersContact/PartnersContact";
+import { PartnersContact } from "../components/Partners/PartnersContact";
+import { PartnersContactProps } from "../components/Partners/PartnersContact/PartnersContact";
 
 interface Props
   extends NewsletterProps,
