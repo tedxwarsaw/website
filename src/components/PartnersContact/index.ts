@@ -1,0 +1,1 @@
+export {PartnersContact} from "./PartnersContact";

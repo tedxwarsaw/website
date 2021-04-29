@@ -5,7 +5,8 @@ import { queryForProps as queryForAttendProps } from "./src/queries/AttendPageQu
 import { queryForProps as queryForAboutProps } from "./src/queries/AboutPageQuery";
 import { queryForProps as queryForWatchProps } from "./src/queries/WatchPageQuery";
 import { queryForProps as queryForSpeakersProps } from "./src/queries/SpeakersPageQuery";
-import { queryForProps as queryForVolunteerProps } from "./src/queries/VolunteerQuery";
+import { queryForProps as queryForVolunteerProps } from "./src/queries/VolunteerPageQuery";
+import { queryForProps as queryForPartnersProps } from "./src/queries/PartnersPageQuery";
 
 const pageQuery = `#graphql
   query Page {
@@ -38,6 +39,7 @@ const propsQueries = {
   WatchPage: queryForWatchProps,
   SpeakersPage: queryForSpeakersProps,
   VolunteerPage: queryForVolunteerProps,
+  PartnersPage: queryForPartnersProps
 };
 
 export const createPages = async ({ actions, graphql }) => {
