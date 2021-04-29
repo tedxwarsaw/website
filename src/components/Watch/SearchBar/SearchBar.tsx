@@ -33,10 +33,6 @@ export const SearchBar = ({
     }
   }, []);
 
-  useEffect(() => {
-    console.log(offset);
-  }, [offset]);
-
   return (
     <>
       <div className="seamless-grid bg-customLightGrey duration-300">
