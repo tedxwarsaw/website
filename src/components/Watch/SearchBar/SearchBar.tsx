@@ -56,7 +56,7 @@ export const SearchBar = ({
       <div
         className={` ${
           offset >= 270
-            ? "sticky-search-bar shadow-md seamless-grid bg-customLightGrey duration-300"
+            ? "sticky-search-bar hidden xl:grid shadow-md xl:seamless-grid bg-customLightGrey duration-300"
             : " hidden"
         }`}
       >
