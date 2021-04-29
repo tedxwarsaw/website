@@ -1,5 +1,5 @@
 import React from "react";
-import { FluidObject } from "gatsby-image";
+import Img, { FluidObject } from "gatsby-image";
 import { Page } from "@/components/shared/Page";
 import { HeroSection } from "@/components/HeroSection";
 import {
@@ -12,6 +12,7 @@ import { Banner, BannerVariant } from "@/components/shared/Banner";
 import { EventDetails } from "@/components/EventDetails";
 import { PastEvents, PastEventsProps } from "@/components/PastEvents";
 import { EventsList, EventsListProps } from "@/components/EventsList";
+import {Button} from "../components/shared/Button";
 
 export interface Props
   extends NewsletterProps,
@@ -123,6 +124,20 @@ export const AttendPageTemplate = (props: Props) => (
     />
 
     <EventsList events={props.events} categories={props.categories} />
+    <div className="main-grid-full-span bg-customLightGrey py-10">
+      <div className="flex main-grid">
+        <div className="px-5 md:px-0 ">
+          <div className="inner-grid">
+            <div className="block">
+              Join TEDxWarsaw
+            </div>
+            <div className="block mt-12 md:mt-0">
+              <div className={"font-bold text-center text-2xl mt-4"}>XD</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </Page>
 );
 
