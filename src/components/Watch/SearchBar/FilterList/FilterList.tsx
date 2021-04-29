@@ -28,7 +28,7 @@ export const FilterList = ({
     filterTalks
   );
   return (
-    <div className="col-start-2 col-end-3 md:col-end-5 xl:col-end-7 flex flex-col xl:flex-row xl:items-center xl:justify-between">
+    <div className="col-start-2 col-end-3 md:col-end-5 xl:col-end-7 flex flex-col xl:flex-row xl:items-center xl:justify-between mt-5 xl:mt-0">
       <div className="flex  flex-col gap-2 items-start md:gap-0 md:items-center md:flex-row">
         {activeFilters && filtersApplied && (
           <>
