@@ -55,7 +55,7 @@ export const SearchBar = ({
       </div>
       <div
         className={` ${
-          offset >= 260
+          offset >= 270
             ? "sticky-search-bar shadow-md seamless-grid bg-customLightGrey duration-300"
             : " hidden"
         }`}
