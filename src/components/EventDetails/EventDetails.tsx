@@ -28,12 +28,19 @@ export const EventDetails = ({
   return (
     <div className="inner-grid py-10">
       <div className="gap-0 inner-grid">
-        <div className="col-start-1 row-start-1 flex flex-col font-bold">
-          <span>WHERE</span>
+        <div className="col-start-1 row-start-1 flex flex-col">
+          <span className="font-bold">WHERE</span>
+          <span className="md:hidden">
+            {location.displayName}, {location.city}
+          </span>
           <span className="mt-3 font-bold">WHEN</span>
+          <span className="mt-3 md:hidden">
+            {dateConverted.format("MMM Do, YYYY")}
+          </span>
+          <span className="md:hidden">{time}</span>
         </div>
 
-        <div className="col-start-2 col-end-5 row-start-1 flex flex-col">
+        <div className="col-start-2 col-end-5 row-start-1 hidden md:flex flex-col">
           <span>
             {location.displayName}, {location.city}
           </span>
