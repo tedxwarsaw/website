@@ -28,7 +28,7 @@ export const FilterList = ({
     filterTalks
   );
   return (
-    <div className="col-start-2 col-end-3 md:col-end-5 xl:col-end-7 flex flex-col xl:flex-row xl:items-center xl:justify-between">
+    <div className="col-start-2 col-end-3 md:col-end-5 xl:col-end-7 flex flex-col xl:flex-row xl:items-center xl:justify-between filters-list">
       <div className="flex  flex-col gap-2 items-start md:gap-0 md:items-center md:flex-row">
         {activeFilters && filtersApplied && (
           <>
@@ -57,7 +57,7 @@ export const FilterList = ({
           selectedValue={activeSorting}
           handleOnChange={sortTalks}
           noBorder
-          className="w-36 text-centered-bold"
+          className="w-36 text-centered-bold search-bar-sticky"
         />
       </div>
     </div>

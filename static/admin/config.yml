@@ -249,17 +249,6 @@ collections:
               - { label: "Title", name: "title", widget: "string"}
               - { label: "Description", name: "description", widget: "markdown"}
               - { label: "Profile image", name: "profileImage", widget: "image",allow_multiple: false, media_folder: "photos" }
-      - label: "About"
-        name: "about"
-        file: "src/pages/content/pages/about.yaml"
-        slug: "about.md" # Filename template, e.g., YYYY-MM-DD-title.md"
-        fields:
-          - label: "Title of watch page"
-            name: "headerTitle"
-            widget: 'markdown'
-          - label: "Hero Title"
-            name: "headerSubtitle"
-            widget: "string"
       - label: "Speakers"
         name: "speakers"
         file: "src/pages/content/pages/speakers.yaml"
@@ -389,6 +378,22 @@ collections:
               - { label: "title", name: "title", widget: string }
               - { label: "email", name: "email", widget: string }
               - { label: "phone", name: "phone", widget: string }
+      - label: "Privacy Policy"
+        name: "privacy-policy"
+        file: "src/pages/content/pages/privacy-policy.yaml"
+        slug: "privacy-policy.md" # Filename template, e.g, YYYY-MM-DD-title.md
+        fields:
+          - label: "Privacy policy"
+            name: "privacyPolicyContent"
+            widget: 'markdown'
+      - label: "Cookie Policy"
+        name: "cookie-policy"
+        file: "src/pages/content/pages/cookie-policy.yaml"
+        slug: "cookie-policy.md" # Filename template, e.g, YYYY-MM-DD-title.md
+        fields:
+          - label: "Cookie policy"
+            name: "cookiePolicyContent"
+            widget: 'markdown'
   - label: "Global"
     name: "global"
     files:
