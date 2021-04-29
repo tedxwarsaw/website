@@ -16,9 +16,8 @@ export const CookiePolicyPageTemplate = (props: Props) => (
   </Page>
 );
 
-const CookiePolicyPage = ({ pageContext }) => {
-  console.log(pageContext);
-  return <CookiePolicyPageTemplate {...pageContext.props} />;
-};
+const CookiePolicyPage = ({ pageContext }) => (
+  <CookiePolicyPageTemplate {...pageContext.props} />
+);
 
 export default CookiePolicyPage;
