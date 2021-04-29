@@ -6,6 +6,8 @@ import { FaArrowRight } from "react-icons/fa";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { Link } from "gatsby";
 import parse from "html-react-parser";
+import rehypeRaw from "rehype-raw";
+import ReactMarkdown from "react-markdown";
 
 export const HeroSection = ({
   heroTitle,
@@ -30,15 +32,14 @@ export const HeroSection = ({
         classNameChild={`flex flex-col ${centerContentVertically ? "justify-center" : "justify-end"} justify-end md:justify-center`}
       >
         <div className="main-grid">
-          <div className="md:max-w-xl flex flex-col">
-            <h1
-              className={`text-white  text-3xl  mb-7 ${
+          <div className="flex flex-col">
+            <div className={`text-white  text-3xl  mb-7 ${
                 fontMedium ? "" : "md:text-5xl font-bold"
-              }`}
-            >
-              {parse(heroTitle)}
-            </h1>
-
+            }`}>
+              <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                {heroTitle}
+              </ReactMarkdown>
+            </div>
             {heroSubtitle && (
               <p
                 className="text-white text-sm md:text-lg md:font-light mb-10 md:mb-7"

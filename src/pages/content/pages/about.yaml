@@ -7,7 +7,7 @@ heroBackgroundImageAlt: Cover image
 aboutTedContent: TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in
   California 30 years ago, TED has grown to support its mission with multiple initiatives.
   The two annual TED Conferences invite the world’s leading thinkers and doers to speak for 18 minutes
-  or less. Many of these talks are then made available, at **[TED.com](https://www.ted.com)**.
+  or less. Many of these talks are then made available, at **[TED.com ->](https://www.ted.com)**.
 aboutTedSpeakers:
   - name: "Bill Gates"
   - name: "Jane Goodall"
@@ -21,7 +21,7 @@ aboutTedSpeakers:
 aboutTedEventsTitle: "## TED **events**"
 aboutTedEvents:
   - content: The annual TED Conference takes place each spring in Vancouver, British Columbia.
-  - content: "TED has established the annual **TED Prize**, where exceptional individuals with a wish to change the world get help translating their wishes into action"
+  - content: "TED has established the annual **TED Prize**, where exceptional individuals with a wish to change the world get help translating their wishes into action."
   - content: "**TEDx**, which supports individuals or groups in hosting local, self-organized TED-style events around the world, and the TED Fellows program, helping world-changing innovators from around the globe to amplify the impact of their remarkable projects and activities."
 mediaInitiativesTitle: "## **TED’s media initiatives include**"
 mediaInitiatives:
