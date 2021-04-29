@@ -1,5 +1,5 @@
 import React from "react";
-import { Page } from "@/components/shared/Page";
+import { Page } from "./Page";
 import { Watch, WatchProps } from "@/components/Watch";
 import {
   Newsletter,

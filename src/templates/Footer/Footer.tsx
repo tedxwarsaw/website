@@ -11,7 +11,7 @@ import { RiInstagramFill } from "react-icons/ri";
 import { FeaturedEvent } from "../../types";
 
 interface Props {
-  imgFixed: FixedObject;
+  logoPath: string;
   secondColumn: {
     displayName: string;
     links: {
@@ -43,11 +43,9 @@ const Column = (props: { title: string; children: React.ReactNode }) => (
 export const FooterTemplate = (props: Props) => (
   <footer className="main-grid border-t">
     <div className="inner-grid my-10 space-y-10 xl:space-y-0">
-      <Img
-        fixed={props.imgFixed}
-        alt="Site logo"
-        className="col-span-full xl:col-span-1"
-      />
+      <Link to="/" className="h-12 flex flex-row items-center">
+        <img className="h-full" src={props.logoPath} alt="Logo" />
+      </Link>
       <div className="col-span-full xl:col-span-2 grid gap-16 grid-cols-2 md:grid-cols-4">
         {props.featuredEvent.show ? (
           <Column title={props.featuredEvent.displayName}>
@@ -139,7 +137,7 @@ export const Footer = () => (
     query={componentQuery}
     render={(data) => (
       <FooterTemplate
-        imgFixed={data.file.childImageSharp.fixed}
+        logoPath={data.file.publicURL}
         secondColumn={data.globalYaml.footerSecondColumn}
         thirdColumn={data.globalYaml.footerThirdColumn}
         bottomLinks={data.globalYaml.footerBottomLinks}
@@ -151,12 +149,8 @@ export const Footer = () => (
 
 const componentQuery = graphql`
   query Footer {
-    file(relativePath: { eq: "images/uploads/logo.png" }) {
-      childImageSharp {
-        fixed(height: 52) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+    file(relativePath: { eq: "images/uploads/logo.svg" }) {
+      publicURL
     }
     globalYaml(collectionId: { eq: "footer" }) {
       footerSecondColumn {

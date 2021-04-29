@@ -1,6 +1,6 @@
 import React from "react";
 import Img, { FluidObject } from "gatsby-image";
-import { Page } from "@/components/shared/Page";
+import { Page } from "./Page";
 import { HeroSection } from "@/components/HeroSection";
 import {
   Newsletter,
@@ -12,10 +12,10 @@ import { Banner, BannerVariant } from "@/components/shared/Banner";
 import { EventDetails } from "@/components/EventDetails";
 import { PastEvents, PastEventsProps } from "@/components/PastEvents";
 import { EventsList, EventsListProps } from "@/components/EventsList";
-import {Button} from "../components/shared/Button";
+import { Button } from "../components/shared/Button";
 import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";
-import {Link} from "gatsby";
+import { Link } from "gatsby";
 
 export interface Props
   extends NewsletterProps,
@@ -150,7 +150,10 @@ export const AttendPageTemplate = (props: Props) => (
                 </ReactMarkdown>
               </div>
               <Link to={props.joinUsButtonUrl1}>
-                <Button children={<span>{props.joinUsButton1}</span>} className="mt-10"/>
+                <Button
+                  children={<span>{props.joinUsButton1}</span>}
+                  className="mt-10"
+                />
               </Link>
             </div>
             <div className="block mt-12 md:mt-0">
@@ -160,7 +163,10 @@ export const AttendPageTemplate = (props: Props) => (
                 </ReactMarkdown>
               </div>
               <Link to={props.joinUsButtonUrl2}>
-                <Button children={<span>{props.joinUsButton2}</span>} className="mt-10"/>
+                <Button
+                  children={<span>{props.joinUsButton2}</span>}
+                  className="mt-10"
+                />
               </Link>
             </div>
           </div>

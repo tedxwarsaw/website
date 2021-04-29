@@ -1,5 +1,5 @@
 import React from "react";
-import { Page } from "@/components/shared/Page";
+import { Page } from "./Page";
 import { FluidObject } from "gatsby-image";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutTed, AboutTedProps } from "@/components/AboutTed";

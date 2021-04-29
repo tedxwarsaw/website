@@ -1,5 +1,5 @@
 import React from "react";
-import { Page } from "@/components/shared/Page";
+import { Page } from "./Page";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 

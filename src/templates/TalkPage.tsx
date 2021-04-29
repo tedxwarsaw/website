@@ -1,5 +1,5 @@
 import React from "react";
-import { Page } from "@/components/shared/Page";
+import { Page } from "./Page";
 import { Talk, TalkProps } from "@/components/Talk";
 import {
   Newsletter,

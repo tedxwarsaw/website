@@ -1,6 +1,6 @@
 import React from "react";
 import { FluidObject, FixedObject } from "gatsby-image";
-import { Page } from "@/components/shared/Page";
+import { Page } from "./Page";
 import { splitTextInTwo } from "../utils";
 import { EventHero } from "@/components/EventHero";
 import { SuggestedEvent } from "@/components/SuggestedEvent";
