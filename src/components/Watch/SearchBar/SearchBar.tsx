@@ -38,23 +38,41 @@ export const SearchBar = ({
   }, [offset]);
 
   return (
-    <div
-      className={`seamless-grid bg-customLightGrey duration-300 ${
-        offset >= 260 ? "sticky-search-bar shadow-md" : ""
-      }`}
-    >
-      <SearchBarForm
-        eventNames={eventNames}
-        filterTalks={filterTalks}
-        activeFilters={activeFilters}
-      />
-      <FilterList
-        activeFilters={activeFilters}
-        filterTalks={filterTalks}
-        eventNames={eventNames}
-        activeSorting={activeSorting}
-        sortTalks={sortTalks}
-      />
-    </div>
+    <>
+      <div className="seamless-grid bg-customLightGrey duration-300">
+        <SearchBarForm
+          eventNames={eventNames}
+          filterTalks={filterTalks}
+          activeFilters={activeFilters}
+        />
+        <FilterList
+          activeFilters={activeFilters}
+          filterTalks={filterTalks}
+          eventNames={eventNames}
+          activeSorting={activeSorting}
+          sortTalks={sortTalks}
+        />
+      </div>
+      <div
+        className={` ${
+          offset >= 270
+            ? "sticky-search-bar shadow-md seamless-grid bg-customLightGrey duration-300"
+            : " hidden"
+        }`}
+      >
+        <SearchBarForm
+          eventNames={eventNames}
+          filterTalks={filterTalks}
+          activeFilters={activeFilters}
+        />
+        <FilterList
+          activeFilters={activeFilters}
+          filterTalks={filterTalks}
+          eventNames={eventNames}
+          activeSorting={activeSorting}
+          sortTalks={sortTalks}
+        />
+      </div>
+    </>
   );
 };
