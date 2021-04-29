@@ -1,5 +1,5 @@
 import React from "react";
-import { FluidObject } from "gatsby-image";
+import Img, { FluidObject } from "gatsby-image";
 import { Page } from "@/components/shared/Page";
 import { HeroSection } from "@/components/HeroSection";
 import {
@@ -12,6 +12,10 @@ import { Banner, BannerVariant } from "@/components/shared/Banner";
 import { EventDetails } from "@/components/EventDetails";
 import { PastEvents, PastEventsProps } from "@/components/PastEvents";
 import { EventsList, EventsListProps } from "@/components/EventsList";
+import {Button} from "../components/shared/Button";
+import rehypeRaw from "rehype-raw";
+import ReactMarkdown from "react-markdown";
+import {Link} from "gatsby";
 
 export interface Props
   extends NewsletterProps,
@@ -46,6 +50,13 @@ export interface Props
   ctaBannerText: string;
   ctaButtonText: string;
   ctaButtonLink: string;
+  joinUsTitle: string;
+  joinUsContent1: string;
+  joinUsContent2: string;
+  joinUsButton1: string;
+  joinUsButton2: string;
+  joinUsButtonUrl1: string;
+  joinUsButtonUrl2: string;
 }
 
 export const AttendPageTemplate = (props: Props) => (
@@ -123,6 +134,39 @@ export const AttendPageTemplate = (props: Props) => (
     />
 
     <EventsList events={props.events} categories={props.categories} />
+    <div className="main-grid-full-span bg-customLightGrey py-10">
+      <div className="flex main-grid">
+        <div className="px-5 md:px-0 ">
+          <div className="inner-grid md:text-left text-center">
+            <div className="block">
+              <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                {props.joinUsTitle}
+              </ReactMarkdown>
+            </div>
+            <div className="block mt-12 md:mt-0">
+              <div>
+                <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                  {props.joinUsContent1}
+                </ReactMarkdown>
+              </div>
+              <Link to={props.joinUsButtonUrl1}>
+                <Button children={<span>{props.joinUsButton1}</span>} className="mt-10"/>
+              </Link>
+            </div>
+            <div className="block mt-12 md:mt-0">
+              <div>
+                <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                  {props.joinUsContent2}
+                </ReactMarkdown>
+              </div>
+              <Link to={props.joinUsButtonUrl2}>
+                <Button children={<span>{props.joinUsButton2}</span>} className="mt-10"/>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </Page>
 );
 
