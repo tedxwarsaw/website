@@ -20,6 +20,13 @@ const pageQuery = `#graphql
         sectionName
         description
       }
+      joinUsTitle
+      joinUsContent1
+      joinUsContent2
+      joinUsButton1
+      joinUsButton2
+      joinUsButtonUrl1
+      joinUsButtonUrl2
     }
   }
 `;
