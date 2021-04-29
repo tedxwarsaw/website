@@ -14,7 +14,6 @@ import {
 export interface Props extends NewsletterProps, TalkProps, RelatedTalksProps {}
 
 export const TalkPageTemplate = (props: Props) => {
-  console.log(props);
   return (
     <Page>
       <Talk

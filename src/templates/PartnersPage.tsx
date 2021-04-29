@@ -47,7 +47,6 @@ export const PartnersPageTemplate = (props: Props) => (
 );
 
 const PartnersPage = ({ pageContext }) => {
-    console.log(pageContext.props)
     return <PartnersPageTemplate {...pageContext.props} />;
 };
 

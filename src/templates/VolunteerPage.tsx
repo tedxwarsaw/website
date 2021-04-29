@@ -58,7 +58,6 @@ export const SpeakersPageTemplate = (props: Props) => (
 );
 
 const VolunteerPage = ({ pageContext }) => {
-    console.log(pageContext.props);
     return <SpeakersPageTemplate {...pageContext.props} />;
 };
 

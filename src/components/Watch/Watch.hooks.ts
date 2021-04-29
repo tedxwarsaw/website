@@ -29,7 +29,6 @@ export const useWatch = (talks) => {
     let talksFiltered = [...talks];
 
     if (searchPhrase !== "") {
-      console.log(searchPhrase);
       talksFiltered = talksFiltered.filter((talk) =>
         Object.values(talk).some((val: string) => {
           if (typeof val === "string") {

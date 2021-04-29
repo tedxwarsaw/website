@@ -29,7 +29,6 @@ export const WatchPageTemplate = (props: Props) => (
 );
 
 const WatchPage = ({ pageContext }) => {
-  console.log(pageContext);
   return <WatchPageTemplate {...pageContext.props} />;
 };
 
