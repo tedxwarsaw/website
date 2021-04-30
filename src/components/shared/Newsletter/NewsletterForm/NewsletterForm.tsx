@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -15,7 +15,7 @@ export interface FormData {
 const schema = yup.object().shape({
   topic: yup.string().required(),
   name: yup.string().required(),
-  email: yup.string().required(),
+  email: yup.string().email().required()
 });
 
 export const NewsletterForm = () => {
@@ -43,10 +43,23 @@ export const NewsletterForm = () => {
     },
   ];
 
+  const [validationError, setValidationError] = useState('');
+
+  useEffect(() => {
+    if(errors.topic){
+      setValidationError(errors.topic.message);
+    } else if(errors.name){
+      setValidationError(errors.name.message);
+    }else if(errors.email){
+      setValidationError(errors.email.message);
+    }else{
+      setValidationError('');
+    }
+  }, [errors]);
+
   const onSubmit = handleSubmit((data) => {
     console.log(data);
   });
-
   return (
     <form
       onSubmit={onSubmit}
@@ -65,7 +78,7 @@ export const NewsletterForm = () => {
           className="md:col-start-2 md:col-end-3"
         />
         <input
-          className="my-3 p-4 border border-opacity-50 border-customGrey rounded-md md:row-start-2 md:col-start-2 md:col-end-3 xl:flex-grow "
+          className="my-3 p-4 border border-opacity-50 border-customGrey rounded-md md:row-start-2 md:col-start-2 md:col-end-3 xl:flex-grow"
           name="name"
           placeholder="Name"
           {...register("name")}
@@ -77,6 +90,7 @@ export const NewsletterForm = () => {
           {...register("email")}
         />
       </div>
+      <div style={{"marginRight": "auto"}} className={"text-customRed text-sm"}>{validationError}</div>
       <Button
         type="submit"
         className="w-full my-3 md:w-80 xl:w-60 py-4 col-start-2 col-end-5"
