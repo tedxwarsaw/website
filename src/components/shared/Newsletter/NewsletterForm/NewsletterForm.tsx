@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -15,7 +15,7 @@ export interface FormData {
 const schema = yup.object().shape({
   topic: yup.string().required(),
   name: yup.string().required(),
-  email: yup.string().email().required()
+  email: yup.string().required(),
 });
 
 export const NewsletterForm = () => {
@@ -43,23 +43,10 @@ export const NewsletterForm = () => {
     },
   ];
 
-  const [validationError, setValidationError] = useState('');
-
-  useEffect(() => {
-    if(errors.topic){
-      setValidationError(errors.topic.message);
-    } else if(errors.name){
-      setValidationError(errors.name.message);
-    }else if(errors.email){
-      setValidationError(errors.email.message);
-    }else{
-      setValidationError('');
-    }
-  }, [errors]);
-
   const onSubmit = handleSubmit((data) => {
     console.log(data);
   });
+
   return (
     <form
       onSubmit={onSubmit}
@@ -78,7 +65,7 @@ export const NewsletterForm = () => {
           className={`md:col-start-2 md:col-end-3 ${errors.topic ? 'border border-opacity-100 border-customRed' : ''}`}
         />
         <input
-          className={`my-3 p-4 border rounded-md md:row-start-2 md:col-start-2 md:col-end-3 xl:flex-grow ${errors.name ? 'border-customRed' : 'border-opacity-50 border-customGrey'}`}
+          className="my-3 p-4 border border-opacity-50 border-customGrey rounded-md md:row-start-2 md:col-start-2 md:col-end-3 xl:flex-grow "
           name="name"
           placeholder="Name"
           {...register("name")}
