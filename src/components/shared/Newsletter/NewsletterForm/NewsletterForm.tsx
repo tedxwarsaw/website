@@ -62,7 +62,7 @@ export const NewsletterForm = () => {
           options={formTopics}
           register={register}
           handleOnChange={(value) => setValue("topic", value)}
-          className="md:col-start-2 md:col-end-3"
+          className={`md:col-start-2 md:col-end-3 ${errors.topic ? 'border border-opacity-100 border-customRed' : ''}`}
         />
         <input
           className="my-3 p-4 border border-opacity-50 border-customGrey rounded-md md:row-start-2 md:col-start-2 md:col-end-3 xl:flex-grow "
@@ -71,7 +71,7 @@ export const NewsletterForm = () => {
           {...register("name")}
         />
         <input
-          className="my-3 p-4 border border-opacity-50 border-customGrey rounded-md  md:row-start-2 md:col-start-4 md:col-end-5 xl:flex-grow xl:mx-4 "
+          className={`my-3 p-4 border rounded-md  md:row-start-2 md:col-start-4 md:col-end-5 xl:flex-grow xl:mx-4 ${errors.email ? 'border-customRed' : 'border-opacity-50 border-customGrey'}`}
           name="email"
           placeholder="Email"
           {...register("email")}
