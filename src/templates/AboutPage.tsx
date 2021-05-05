@@ -1,9 +1,9 @@
 import React from "react";
 import { Page } from "./Page";
 import { FluidObject } from "gatsby-image";
-import { HeroSection } from "@/components/HeroSection";
-import { AboutTed, AboutTedProps } from "@/components/AboutTed";
-import { MeetUs, MeetUsProps } from "@/components/MeetUs/";
+import { HeroSection } from "@/components/shared/HeroSection";
+import { AboutTed, AboutTedProps } from "@/components/About/AboutTed";
+import { MeetUs, MeetUsProps } from "@/components/About/MeetUs";
 import {
   Newsletter,
   NewsletterProps,
@@ -13,14 +13,16 @@ import {
   AboutTedEvents,
   MediaInitiatives,
   TedEventsProps,
-} from "@/components/AboutTedEvents";
-import { AboutUs, AboutUsProps } from "../components/AboutUs";
+} from "@/components/About/AboutTedEvents";
+import { AboutUs, AboutUsProps } from "@/components/About/AboutUs";
 
 interface Props
   extends AboutTedProps,
     TedEventsProps,
     MediaInitiatives,
-    AboutUsProps {
+    AboutUsProps,
+    MeetUsProps,
+    NewsletterProps {
   heroTitle: string;
   heroBackgroundImage: FluidObject;
   heroBackgroundImageDesktop: FluidObject;

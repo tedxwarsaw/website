@@ -1,16 +1,19 @@
 import React from "react";
 import { Page } from "./Page";
-import { HeroSection, HeroSectionProps } from "@/components/HeroSection";
-import { OurStory, OurStoryProps } from "@/components/OurStory";
+import { HeroSection, HeroSectionProps } from "@/components/shared/HeroSection";
+import { OurStory, OurStoryProps } from "@/components/Index/OurStory";
 import {
   Recommendations,
   RecommendationsProps,
 } from "@/components/shared/Recommendations";
-import { YoutubeBanner, YoutubeBannerProps } from "@/components/YoutubeBanner";
+import {
+  YoutubeBanner,
+  YoutubeBannerProps,
+} from "@/components/Index/YoutubeBanner";
 import {
   EventHighlight,
   EventHighlightProps,
-} from "@/components/EventHighlight";
+} from "@/components/Index/EventHighlight";
 import { JoinUs, JoinUsProps } from "@/components/shared/JoinUs";
 import { Partners, PartnersProps } from "@/components/shared/Partners";
 import {

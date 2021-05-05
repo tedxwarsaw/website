@@ -1,7 +1,7 @@
 import React from "react";
-import Img, { FluidObject } from "gatsby-image";
+import { FluidObject } from "gatsby-image";
 import { Page } from "./Page";
-import { HeroSection } from "@/components/HeroSection";
+import { HeroSection } from "@/components/shared/HeroSection";
 import {
   Newsletter,
   NewsletterProps,
@@ -9,9 +9,9 @@ import {
 } from "@/components/shared/Newsletter";
 import { JoinSpeakersSectionProps } from "@/queries/globalQueries/JoinSpeakersQuery";
 import { Banner, BannerVariant } from "@/components/shared/Banner";
-import { EventDetails } from "@/components/EventDetails";
-import { PastEvents, PastEventsProps } from "@/components/PastEvents";
-import { EventsList, EventsListProps } from "@/components/EventsList";
+import { EventDetails } from "@/components/Attend/EventDetails";
+import { PastEvents, PastEventsProps } from "@/components/Attend/PastEvents";
+import { EventsList, EventsListProps } from "@/components/Attend/EventsList";
 import { Button } from "../components/shared/Button";
 import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";

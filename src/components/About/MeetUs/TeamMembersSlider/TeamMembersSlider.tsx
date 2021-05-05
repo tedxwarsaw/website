@@ -2,7 +2,7 @@ import React from "react";
 import { Slider, useSlider } from "@/components/shared/Slider";
 import ReactMarkdown from "react-markdown";
 import Img, { FluidObject } from "gatsby-image";
-import { TeamMember } from "@/components/MeetUs/MeetUs.types";
+import { TeamMember } from "@/components/About/MeetUs/MeetUs.types";
 import { MembersDisplay } from "./MembersDisplay";
 import "./TeamMembersSlider.styled.css";
 

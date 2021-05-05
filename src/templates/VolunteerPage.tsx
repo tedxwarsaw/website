@@ -1,7 +1,7 @@
 import React from "react";
 import { Page } from "./Page";
 import { FluidObject } from "gatsby-image";
-import { HeroSection } from "@/components/HeroSection";
+import { HeroSection } from "@/components/shared/HeroSection";
 import {
   CenterTextSection,
   CenterTextSectionProps,

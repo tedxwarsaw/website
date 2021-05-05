@@ -65,13 +65,13 @@ export const NewsletterForm = () => {
           className="md:col-start-2 md:col-end-3"
         />
         <input
-          className="my-3 p-4 border border-opacity-50 border-customGrey rounded-md md:row-start-2 md:col-start-2 md:col-end-3 xl:flex-grow "
+          className="my-3 p-4 border border-opacity-50 border-customGrey rounded-md md:row-start-2 md:col-start-2 md:col-end-3 xl:flex-grow"
           name="name"
           placeholder="Name"
           {...register("name")}
         />
         <input
-          className="my-3 p-4 border border-opacity-50 border-customGrey rounded-md  md:row-start-2 md:col-start-4 md:col-end-5 xl:flex-grow xl:mx-4 "
+          className="my-3 p-4 border border-opacity-50 border-customGrey rounded-md  md:row-start-2 md:col-start-4 md:col-end-5 xl:flex-grow xl:mx-4"
           name="email"
           placeholder="Email"
           {...register("email")}
