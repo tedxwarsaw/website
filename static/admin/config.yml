@@ -872,10 +872,22 @@ collections:
         label: "Display name"
         widget: string
         hint: "The name of the event. For example, TEDxWarsaw 2020."
-      - name: speaker
-        label: "Speaker"
+      - name: talkDescription
+        label: "Talk description"
         widget: string
-        hint: "The speaker this talk"
+      - name: youtubeVideoId
+        label: "Youtube lin"
+        widget: string
+        hint: "Embed link for this talk"
+      - name: speaker
+        label: "Speaker name"
+        widget: string
+      - name: speakerProfileImage
+        label: "Speaker profile images"
+        widget: string
+      - name: speakerDescription
+        label: "Speaker description"
+        widget: string
       - name: eventSlug
         label: "Event"
         widget: relation

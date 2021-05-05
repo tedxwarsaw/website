@@ -12,6 +12,7 @@ export interface RecommendedTalk {
     };
   };
   duration;
+  eventDisplayName?: string;
 }
 export interface ActiveFilters {
   searchPhrase: string;

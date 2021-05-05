@@ -1,6 +1,6 @@
 import { FluidObject } from "gatsby-image";
 
-interface RecommendedItem {
+export interface RecommendedItem {
   displayName: string;
   slug: string;
   cover: FluidObject;
