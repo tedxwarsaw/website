@@ -2,6 +2,7 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import "./AboutTed.styled.css";
+import {FaArrowRight} from "react-icons/fa";
 
 interface TedSpeaker {
   name: string;
