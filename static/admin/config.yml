@@ -249,6 +249,17 @@ collections:
               - { label: "Title", name: "title", widget: "string"}
               - { label: "Description", name: "description", widget: "markdown"}
               - { label: "Profile image", name: "profileImage", widget: "image",allow_multiple: false, media_folder: "photos" }
+      - label: "About"
+        name: "about"
+        file: "src/pages/content/pages/about.yaml"
+        slug: "about.md" # Filename template, e.g., YYYY-MM-DD-title.md"
+        fields:
+          - label: "Title of watch page"
+            name: "headerTitle"
+            widget: 'markdown'
+          - label: "Hero Title"
+            name: "headerSubtitle"
+            widget: "string"
       - label: "Speakers"
         name: "speakers"
         file: "src/pages/content/pages/speakers.yaml"
@@ -895,4 +906,4 @@ collections:
       - name: duration
         label: Duration
         widget: string
-        hint: "Duration of this talk"
+        hint: Duration of this talk in format mm:ss (f.e. "3:14" )
