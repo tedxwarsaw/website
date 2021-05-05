@@ -8,6 +8,8 @@ import { queryForProps as queryForSpeakersProps } from "./src/queries/SpeakersPa
 import { queryForProps as queryForVolunteerProps } from "./src/queries/VolunteerPageQuery";
 import { queryForProps as queryForTalkProps } from "./src/queries/TallkPageQuery";
 import { queryForProps as queryForPartnersProps } from "./src/queries/PartnersPageQuery";
+import { queryForProps as queryForPrivacyPolicyProps } from "./src/queries/PrivacyPolicyPageQuery";
+import { queryForProps as queryForCookiePolicyProps } from "./src/queries/CookiePolicyPageQuery";
 
 const pageQuery = `#graphql
   query Page {
@@ -50,6 +52,8 @@ const propsQueries = {
   SpeakersPage: queryForSpeakersProps,
   VolunteerPage: queryForVolunteerProps,
   PartnersPage: queryForPartnersProps,
+  PrivacyPolicyPage: queryForPrivacyPolicyProps,
+  CookiePolicyPage: queryForCookiePolicyProps,
 };
 
 export const createPages = async ({ actions, graphql }) => {
