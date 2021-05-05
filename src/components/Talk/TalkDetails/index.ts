@@ -1,0 +1,1 @@
+export { TalkDetails } from "./TalkDetails";

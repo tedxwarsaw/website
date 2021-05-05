@@ -4,7 +4,7 @@ import { EventsListProps } from "@/components/EventsList";
 import { ListFilters } from "@/components/EventsList/ListFilters";
 import { CardEventAttend } from "@/components/shared/Card";
 import { useEventList } from "./EventList.hooks";
-import { Pagination } from "./Pagination";
+import { Pagination } from "../shared/Pagination";
 
 export const EventsList = ({ events, categories }: EventsListProps) => {
   const {

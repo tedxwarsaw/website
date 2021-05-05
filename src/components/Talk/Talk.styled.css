@@ -1,0 +1,17 @@
+.talk-video-iframe {
+  height: 300px;
+  width: 100%;
+}
+
+@media (min-width: theme("screens.md")) {
+  .talk-video-iframe {
+    height: 550px;
+  }
+}
+@media (min-width: theme("screens.xl")) {
+  .talk-details-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+}

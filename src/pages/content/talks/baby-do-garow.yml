@@ -1,10 +1,14 @@
 collectionId: talk
 slug: "baby-do-garow"
 displayName: "Baby do garów - czy do muzyki trzeba się nadawać?"
+talkDescription: "Oddychasz prawda? Ale czy robisz to dobrze? Okazuje się, że wielu z nas robi to źle, Reedukacja oddechowa polega na przywróceniu ooptymalnego odechu, który poprawia nasze życie i zdrowie. Z tego Ted talk dowiesz się rzeczy, których nie wiesz o czynności, którą wykonujesz przez całe życie i nauczysz się jej używać na swoją korzyść."
+youtubeVideoId: Rf1pHUbvmvc
 speaker: "Agnieszka Trzeszczak"
-eventSlug: "2020"
+speakerProfileImage: talks/baby-do-garow/photos/woman.jpg
+speakerDescription: "Sandra Osipiu - fixjoterapeutka na co dzień ucząca ludzi oddychać. Zajmuje się reedukacją oddechową oraz odbudową posturalną. Pracuje w Szpitalu Pediatrycznym Warszawskiego Uniwersytetu Medycznego gdzie zajmuje się rehabilitacją pulmonologiczną. Redaktor merytoryczny czasopisma 'Fizjoterapia Funkcjonalna'"
+eventSlug: 'testEvent'
 cover:
   image:
-    desktop: talks/baby-do-garow/coverPhotos/talk-cover.png
-    mobile: talks/baby-do-garow/coverPhotos/talk-cover.png
+    desktop: talks/baby-do-garow/photos/talk-cover.png
+    mobile: talks/baby-do-garow/photos/talk-cover.png
 duration: "3:14"

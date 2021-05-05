@@ -1,0 +1,5 @@
+@media (max-width: theme("screens.md")) {
+  .slider-off-container {
+    display: none !important;
+  }
+}

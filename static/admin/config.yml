@@ -54,49 +54,6 @@ collections:
             fields:
               - { label: "Bold text", name: "boldText", widget: "string" }
               - { label: "Text", name: "text", widget: "string" }
-          - name: recommendations
-            label: "Recommendations"
-            widget: object
-            hint: "Events and talks that will be shown in the recommendations slider"
-            fields:
-              - name: "events"
-                label: "Events"
-                widget: list
-                fields:
-                  - {
-                      label: "Event",
-                      name: "eventSlug",
-                      widget: "relation",
-                      collection: events,
-                      value_field: "slug",
-                      display_fields: ["displayName"],
-                      search_fields: ["displayName", "slug"],
-                    }
-                  - {
-                      label: "Order",
-                      name: "order",
-                      widget: number,
-                      hint: "Order number in which this item will be displayed on the slider",
-                    }
-              - name: "talks"
-                label: "Talks"
-                widget: list
-                fields:
-                  - {
-                      label: "Talk",
-                      name: "talkSlug",
-                      widget: "relation",
-                      collection: talks,
-                      value_field: "slug",
-                      display_fields: ["displayName"],
-                      search_fields: ["displayName", "slug"],
-                    }
-                  - {
-                      label: "Order",
-                      name: "order",
-                      widget: number,
-                      hint: "Order number in which this item will be displayed on the slider",
-                    }
           - name: eventSlug
             label: Event
             widget: relation
@@ -242,11 +199,11 @@ collections:
           - label: "Media Initiatives Title"
             name: "mediaInitiativesTitle"
             widget: string
-              - label: "Media Initiatives"
-                name: "mediaInitiatives"
-                widget: "list"
-                fields:
-                  - { label: "Content", name: "content", widget: string }
+          - label: "Media Initiatives"
+            name: "mediaInitiatives"
+            widget: "list"
+            fields:
+              - { label: "Content", name: "content", widget: string }
           - label: "About Ted Warsaw Title"
             name: "AboutUsTitle"
             widget: string
@@ -266,6 +223,177 @@ collections:
           - label: "TEDxWarsaw image alt"
             name: "AboutUsImageAlt"
             widget: string
+          - label: "Meet us background mobile image"
+            name: "meetUsBackgroundImage"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Meet us background desktop image"
+            name: "meetUsBackgroundDesktop"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Team members slider"
+            name: "teamMembersSlider"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string"}
+              - { label: "Title", name: "title", widget: "string"}
+              - { label: "Description", name: "description", widget: "markdown"}
+              - { label: "Profile image", name: "profileImage", widget: "image",allow_multiple: false, media_folder: "photos" }
+          - label: "Associates"
+            name: "associates"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string"}
+              - { label: "Title", name: "title", widget: "string"}
+              - { label: "Description", name: "description", widget: "markdown"}
+              - { label: "Profile image", name: "profileImage", widget: "image",allow_multiple: false, media_folder: "photos" }
+      - label: "Speakers"
+        name: "speakers"
+        file: "src/pages/content/pages/speakers.yaml"
+        slug: "speakers.md" # Filename template, e.g., YYYY-MM-DD-title.md"
+        fields:
+          - label: "Hero Title"
+            name: "heroTitle"
+            widget: string
+          - label: "Hero background mobile image"
+            name: "heroBackgroundImageUrl"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Hero background desktop image"
+            name: "heroBackgroundImageUrlDesktop"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Hero background image alt"
+            name: "heroBackgroundImageAlt"
+            widget: string
+          - label: "CenterTextSection title"
+            name: "centerTextSectionTitle"
+            widget: string
+          - label: "CenterTextSection content"
+            name: "centerTextSectionContent"
+            widget: string,
+          - label: "CenterTextSection button link"
+            name: "centerTextSectionButtonLink"
+            widget: string
+          - label: "How does it work title"
+            name: "howDoesItWorkTitle"
+            widget: string
+          - label: "How does it work steps"
+            name: "howDoesItWorkSteps"
+            widget: "list"
+            fields:
+              - { label: "step", name: "name", widget: string }
+          - label: "Content Panel Title"
+            name: "contentPanelTitle"
+            widget: string
+          - label: "Content Panel Text"
+            name: "contentPanelText"
+            widget: string
+      - label: "Volunteer"
+        name: "volunteer"
+        file: "src/pages/content/pages/volunteer.yaml"
+        slug: "volunteer.md" # Filename template, e.g, YYYY-MM-DD-title.md
+        fields:
+          - label: "Hero Title"
+            name: "heroTitle"
+            widget: string
+          - label: "Hero background mobile image"
+            name: "heroBackgroundImageUrl"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Hero background desktop image"
+            name: "heroBackgroundImageUrlDesktop"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Hero background image alt"
+            name: "heroBackgroundImageAlt"
+            widget: string
+          - label: "Volunteer Newsletter Title"
+            name: "volunteerNewsletterTitle"
+            widget: string
+          - label: "Volunteer Newsletter Content"
+            name: "volunteerNewsletterContent"
+            widget: string
+          - label: "Meet Us Title"
+            name: "meetUsTitle"
+            widget: string
+          - label: "Meet Us Content"
+            name: "meetUsContent"
+            widget: string
+          - label: "Meet us background mobile image"
+            name: "meetUsImageUrl"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Meet us background desktop image"
+            name: "meetUsImageUrlDesktop"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Meet Us Image Alt"
+            name: "meetUsImageAlt"
+            widget: string
+          - label: "Meet Us Button Text"
+            name: "meetUsButtonText"
+            widget: string
+          - label: "Meet Us Button Link"
+            name: "meetUsButtonLink"
+            widget: string
+      - label: "Partners"
+        name: "partners"
+        file: "src/pages/content/pages/partners.yaml"
+        slug: "partners.md" # Filename template, e.g, YYYY-MM-DD-title.md
+        fields:
+          - label: "Hero Title"
+            name: "heroTitle"
+            widget: string
+          - label: "Hero background mobile image"
+            name: "heroBackgroundImageUrl"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Hero background desktop image"
+            name: "heroBackgroundImageUrlDesktop"
+            widget: image
+            allow_multiple: false
+            media_folder: "photos"
+          - label: "Hero background image alt"
+            name: "heroBackgroundImageAlt"
+            widget: string
+          - label: "Partners Contacts Content"
+            name: "partnersContactContent"
+            widget: string
+          - label: "Partners contacts"
+            name: "partnersContacts"
+            widget: "list"
+            fields:
+              - { label: "image", name: "image", widget: image }
+              - { label: "name", name: "name", widget: string }
+              - { label: "title", name: "title", widget: string }
+              - { label: "email", name: "email", widget: string }
+              - { label: "phone", name: "phone", widget: string }
+      - label: "Privacy Policy"
+        name: "privacy-policy"
+        file: "src/pages/content/pages/privacy-policy.yaml"
+        slug: "privacy-policy.md" # Filename template, e.g, YYYY-MM-DD-title.md
+        fields:
+          - label: "Privacy policy"
+            name: "privacyPolicyContent"
+            widget: 'markdown'
+      - label: "Cookie Policy"
+        name: "cookie-policy"
+        file: "src/pages/content/pages/cookie-policy.yaml"
+        slug: "cookie-policy.md" # Filename template, e.g, YYYY-MM-DD-title.md
+        fields:
+          - label: "Cookie policy"
+            name: "cookiePolicyContent"
+            widget: 'markdown'
   - label: "Global"
     name: "global"
     files:
@@ -451,6 +579,60 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+      - label: "Recommendations (shown globally)"
+        name: "recommendations"
+        file: "src/pages/content/global/recommendations.yaml"
+        fields:
+          - name: collectionId
+            widget: hidden
+            default: recommendations
+          - name: recommendationsTitle
+            label: Recommendations title
+            widget: string
+            hint: "Text shown in recommendations component header"
+          - name: recommendations
+            label: "Recommendations"
+            widget: object
+            hint: "Events and talks that will be shown in the recommendations slider"
+            fields:
+              - name: "events"
+                label: "Events"
+                widget: list
+                fields:
+                  - {
+                    label: "Event",
+                    name: "eventSlug",
+                    widget: "relation",
+                    collection: events,
+                    value_field: "slug",
+                    display_fields: ["displayName"],
+                    search_fields: ["displayName", "slug"],
+                  }
+                  - {
+                    label: "Order",
+                    name: "order",
+                    widget: number,
+                    hint: "Order number in which this item will be displayed on the slider",
+                  }
+              - name: "talks"
+                label: "Talks"
+                widget: list
+                fields:
+                  - {
+                    label: "Talk",
+                    name: "talkSlug",
+                    widget: "relation",
+                    collection: talks,
+                    value_field: "slug",
+                    display_fields: ["displayName"],
+                    search_fields: ["displayName", "slug"],
+                  }
+                  - {
+                    label: "Order",
+                    name: "order",
+                    widget: number,
+                    hint: "Order number in which this item will be displayed on the slider",
+                  }
       - label: "Join speakers (shown globally)"
         name: "joinSpeakersCta"
         file: "src/pages/content/global/newsletter.yaml"
@@ -695,10 +877,22 @@ collections:
         label: "Display name"
         widget: string
         hint: "The name of the event. For example, TEDxWarsaw 2020."
-      - name: speaker
-        label: "Speaker"
+      - name: talkDescription
+        label: "Talk description"
         widget: string
-        hint: "The speaker this talk"
+      - name: youtubeVideoId
+        label: "Youtube lin"
+        widget: string
+        hint: "Embed link for this talk"
+      - name: speaker
+        label: "Speaker name"
+        widget: string
+      - name: speakerProfileImage
+        label: "Speaker profile images"
+        widget: string
+      - name: speakerDescription
+        label: "Speaker description"
+        widget: string
       - name: eventSlug
         label: "Event"
         widget: relation
@@ -729,4 +923,4 @@ collections:
       - name: duration
         label: Duration
         widget: string
-        hint: "Duration of this talk"
+        hint: Duration of this talk in format mm:ss (f.e. "3:14" )

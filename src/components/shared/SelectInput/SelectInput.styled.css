@@ -1,0 +1,75 @@
+.select-box {
+  position: relative;
+  width: 100%;
+}
+.text-centered-bold input {
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+.select-box .options-container {
+  position: absolute;
+  z-index: 9;
+  background: white;
+  left: 0;
+  top: 57px;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4 ease;
+  overflow-y: scroll;
+  padding-left: 20px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 20px;
+  background-color: white;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  border: 8px solid rgba(0, 0, 0, 0);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border-radius: 100px;
+  background-color: theme("colors.customRed");
+}
+
+.select-box .options-container.active {
+  max-height: 240px;
+  width: 100%;
+  opacity: 1;
+}
+
+.select-box .option:hover {
+  background: theme("colors.customLightGrey");
+  color: theme("colors.customRed");
+}
+
+.select-box .option .radio {
+  display: none;
+}
+.selected-value svg {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  transform: rotateX(180deg);
+  transition: all 0.4s ease;
+}
+
+.select-box .options-container.active + .selected-value svg {
+  transform: rotateX(0deg);
+  top: 20px;
+}
+
+@media (min-width: theme("screens.md")) {
+  .wide-dropdown-select {
+    margin-top: 10px;
+    width: 150% !important;
+  }
+}
+
+.input-no-border-centered {
+}
