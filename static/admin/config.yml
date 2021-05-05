@@ -159,6 +159,27 @@ collections:
               - { label: "Red title of section", name: "title", widget: "string" }
               - { label: "Section name", name: "sectionName", widget: "string" }
               - { label: "Section description", name: "description", widget: "string" }
+          - label: "Join us title"
+            name: joinUsTitle
+            widget: string
+          - label: "Join us content 1"
+            name: joinUsContent1
+            widget: string
+          - label: "Join us content 2"
+            name: joinUsContent2
+            widget: string
+          - label: "Join us button 1"
+            name: joinUsButton1
+            widget: string
+          - label: "Join us button 2"
+            name: joinUsButton2
+            widget: string
+          - label: "Join us button url 2"
+            name: joinUsButtonUrl1
+            widget: string
+          - label: "Join us button url 2"
+            name: joinUsButtonUrl2
+            widget: string
       - label: "About"
         name: "about"
         file: "src/pages/content/pages/about.yaml"

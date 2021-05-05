@@ -16,3 +16,18 @@ pastEventsItems:
   - title: "x10"
     sectionName: TEDx Live
     description: Please join our newsletter to be the first to know about TEDxWarsaw events, news and much more.
+joinUsTitle: "## Join **TEDx Warsaw** "
+joinUsContent1: >-
+  Become our volunteer
+
+
+  and enter the amazing world of TEDx
+joinUsContent2: >-
+  Become TEDx Speaker
+
+
+  or suggest someone who could
+joinUsButton1: Get involved as a volonteer
+joinUsButton2: Get involved as a speaker
+joinUsButtonUrl1: /test
+joinUsButtonUrl2: /test

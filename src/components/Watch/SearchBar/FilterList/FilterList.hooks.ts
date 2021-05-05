@@ -6,12 +6,10 @@ export const useFitlerList = (activeFilters, filterTalks) => {
   useEffect(() => {
     let applied = false;
     Object.keys(activeFilters).forEach((filter) => {
-      console.log(activeFilters[filter]);
       if (activeFilters[filter] !== "") {
         applied = true;
       }
     });
-    console.log("set");
     setFiltersApplied(applied);
   }, [activeFilters]);
 

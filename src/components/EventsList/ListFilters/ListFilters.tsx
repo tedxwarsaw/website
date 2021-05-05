@@ -11,7 +11,7 @@ export const ListFilters = ({
   changeFilter,
   activeFilter,
 }: ListFiltersProps) => (
-  <div className="flex items-center my-5 font-semibold">
+  <div className="flex items-center flex-wrap my-5 font-semibold gap-y-5">
     <span className="text-customRed mr-7">Filter</span>
     <span
       className={`py-2 px-6 mx-2 rounded-md cursor-pointer ${

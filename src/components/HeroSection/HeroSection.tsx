@@ -33,7 +33,7 @@ export const HeroSection = ({
       >
         <div className="main-grid">
           <div className="flex flex-col">
-            <div className={`text-white  text-3xl  mb-7 ${
+            <div className={`text-white  text-3xl  mb-7 w-4/5 md:w-1/2 ${
                 fontMedium ? "" : "md:text-5xl font-bold"
             }`}>
               <ReactMarkdown rehypePlugins={[rehypeRaw]}>
@@ -42,7 +42,7 @@ export const HeroSection = ({
             </div>
             {heroSubtitle && (
               <p
-                className="text-white text-sm md:text-lg md:font-light mb-10 md:mb-7"
+                className="text-white text-sm md:text-lg md:font-light mb-10 md:mb-7 w-4/5 md:w-1/2"
                 style={{ lineHeight: "30px" }}
               >
                 {heroSubtitle}

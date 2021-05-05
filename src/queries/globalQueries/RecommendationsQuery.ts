@@ -71,7 +71,6 @@ export const queryForRecommendations = async (
   } = await graphql(recommendationsQuery);
 
   const queryRecommendationsData = async () => {
-    console.log(recommendationsData.events);
     const eventsData = await Promise.all(
       recommendationsData.recommendations.events.map(async (eventQueryData) => {
         if (loadedEvents[eventQueryData.eventSlug]) {

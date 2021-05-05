@@ -36,7 +36,7 @@ export const getButtonClasses = (variant: LinkVariant): String => {
 };
 
 export interface Props {
-  imgFixed: FixedObject;
+  logoPath: string;
   navbarLinks: Array<{
     displayName: string;
     variant: LinkVariant;
@@ -53,7 +53,7 @@ export interface Props {
 }
 
 export const NavbarTemplate = (props: Props) => {
-  const { imgFixed, navbarButtons, featuredEvent } = props;
+  const { logoPath, navbarButtons, featuredEvent } = props;
   var { navbarLinks } = props;
   const [sideOpen, setSideOpen] = useState(false);
   navbarLinks = featuredEvent.show
@@ -72,8 +72,8 @@ export const NavbarTemplate = (props: Props) => {
       <header className="main-grid h-16 shadow">
         <div className="col-span-full flex flex-row items-center justify-center">
           <div className="flex flex-row items-center h-full w-full justify-between max-w-screen-xl">
-            <Link to="/" className="h-full flex flex-row items-center">
-              <Img fixed={imgFixed} alt="Site logo" />
+            <Link to="/" className="h-10 flex flex-row items-center">
+              <img className="h-full" src={logoPath} alt="Logo" />
             </Link>
             <div
               className={`h-full hidden lg:flex flex-row items-center uppercase font-semibold navbar-links`}
@@ -134,7 +134,7 @@ export const Navbar = () => (
     query={componentQuery}
     render={(data) => (
       <NavbarTemplate
-        imgFixed={data.file.childImageSharp.fixed}
+        logoPath={data.file.publicURL}
         navbarLinks={data.globalYaml.navbarLinks}
         navbarButtons={data.globalYaml.navbarButtons}
         featuredEvent={data.featuredEventYaml}
@@ -145,12 +145,8 @@ export const Navbar = () => (
 
 const componentQuery = graphql`
   query Navbar {
-    file(relativePath: { eq: "images/uploads/logo.png" }) {
-      childImageSharp {
-        fixed(height: 32) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+    file(relativePath: { eq: "images/uploads/logo.svg" }) {
+      publicURL
     }
     globalYaml(collectionId: { eq: "navbar" }) {
       navbarLinks {

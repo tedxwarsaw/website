@@ -1,5 +1,5 @@
 import React from "react";
-import { Page } from "@/components/shared/Page";
+import { Page } from "./Page";
 import { Watch, WatchProps } from "@/components/Watch";
 import {
   Newsletter,
@@ -29,7 +29,6 @@ export const WatchPageTemplate = (props: Props) => (
 );
 
 const WatchPage = ({ pageContext }) => {
-  console.log(pageContext);
   return <WatchPageTemplate {...pageContext.props} />;
 };
 

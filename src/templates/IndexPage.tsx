@@ -1,5 +1,5 @@
 import React from "react";
-import { Page } from "@/components/shared/Page";
+import { Page } from "./Page";
 import { HeroSection, HeroSectionProps } from "@/components/HeroSection";
 import { OurStory, OurStoryProps } from "@/components/OurStory";
 import {

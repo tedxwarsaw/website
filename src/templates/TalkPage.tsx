@@ -1,5 +1,5 @@
 import React from "react";
-import { Page } from "@/components/shared/Page";
+import { Page } from "./Page";
 import { Talk, TalkProps } from "@/components/Talk";
 import {
   Newsletter,
@@ -14,7 +14,6 @@ import {
 export interface Props extends NewsletterProps, TalkProps, RelatedTalksProps {}
 
 export const TalkPageTemplate = (props: Props) => {
-  console.log(props);
   return (
     <Page>
       <Talk

@@ -1,5 +1,5 @@
 import React from "react";
-import { Page } from "@/components/shared/Page";
+import { Page } from "./Page";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
@@ -16,9 +16,8 @@ export const PrivacyPolicyPageTemplate = (props: Props) => (
   </Page>
 );
 
-const PrivacyPolicyPage = ({ pageContext }) => {
-  console.log(pageContext);
-  return <PrivacyPolicyPageTemplate {...pageContext.props} />;
-};
+const PrivacyPolicyPage = ({ pageContext }) => (
+  <PrivacyPolicyPageTemplate {...pageContext.props} />
+);
 
 export default PrivacyPolicyPage;

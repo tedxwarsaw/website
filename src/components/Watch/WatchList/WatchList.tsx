@@ -9,7 +9,6 @@ export const WatchList = ({
   eventNames,
   recommendedTalks,
 }: WatchListProps) => {
-  console.log(recommendedTalks);
   return (
     <>
       {talks.length > 0 ? (

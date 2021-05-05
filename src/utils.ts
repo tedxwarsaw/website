@@ -14,6 +14,5 @@ export const splitTextInTwo = (text: string): [string, string] => {
 };
 
 export const debug = <T>(obj: T): T => {
-  console.log(obj);
   return obj;
 };
