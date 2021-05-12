@@ -41,3 +41,38 @@ callToAction:
   buttonText: Buy now
   buttonUrl: https://example.com/
 partnerLogoPaths: in-a-heartbeat-2016/partnerLogos/partners.png
+speakers:
+  - speakerName: Agnieszka Teodorowska
+    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+  - speakerName: Niskie Ciśnienie
+    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+  - speakerName: Shivers & Shakes
+    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+  - speakerName: Aleksandra Przegalińska
+    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+  - speakerName: Aleksandra Zaprutko-Janicka
+    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+  - speakerName: Anna Wysocka
+    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+  - speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+    speakerName: Bogusz Parzyszek
+  - speakerName: Dariusz Rosiak
+    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+  - speakerName: Ewa Jarczewska-Gerc
+    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+  - speakerName: James Briscione
+    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+  - speakerName: Josh Savage
+    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+  - speakerName: Kamil Baj
+    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+  - speakerName: Kamil Kulesza
+    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+  - speakerName: Maciej Sopyło
+    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+  - speakerName: Magdalena Fikus
+    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+  - speakerName: Szymon Drobniak
+    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+  - speakerName: Paweł Potoroczyn
+    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
