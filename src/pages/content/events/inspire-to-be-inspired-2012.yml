@@ -1,0 +1,39 @@
+collectionId: event
+slug: inspire-to-be-inspired-2012
+displayName: TEDxWarsaw 2012 Inspire to be inspired
+category: Conference
+city: Warsaw
+date: 23/03/2012
+time: 9:00am - 7:00pm CET (UTC +1hr)
+hook: Inspiration is a two-way street. We examine this exchange from many
+  different perspectives.
+description: todo
+cover:
+  variant: dark
+  button:
+    text: attend
+    link: https://example.com/
+    show: true
+  image:
+    mobile: inspire-to-be-inspired-2012/coverPhotos/blank.png
+    desktop: inspire-to-be-inspired-2012/coverPhotos/blank.png
+coverHero:
+  button:
+    text: attend
+    link: https://example.com/
+    show: true
+  image:
+    mobile: inspire-to-be-inspired-2012/coverPhotos/blank.png
+    desktop: inspire-to-be-inspired-2012/coverPhotos/blank.png
+isOnline: false
+location:
+  displayName: Multikino Zlote Tarasy Zlota 59
+  city: Warsaw
+  mapIframe: https://goo.gl/maps/Biwg1kKkbgrLyptGA
+  image: inspire-to-be-inspired-2012/locationPhoto/zlote.jpg
+callToAction:
+  title: TEDxWarsaw 2012 pass
+  subtitle: 150 PLN
+  buttonText: Buy now
+  buttonUrl: https://example.com/
+partnerLogoPaths: inspire-to-be-inspired-2012/partnerLogos/partners.png
