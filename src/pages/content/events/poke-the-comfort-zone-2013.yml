@@ -1,0 +1,42 @@
+collectionId: event
+slug: poke-the-comfort-zone-2013
+displayName: TEDxWarsaw Poke The Comfort Zone
+category: Salon
+city: Warsaw
+date: 22/03/2013
+time: 9:00am - 7:30pm CET (UTC +1hr)
+hook: Get ready to be slapped out of complacency ! :) This is our fourth major
+  event (tenth one all up for the team!).
+description: To keep the energy up between the main events, we have begun to
+  organise regular TEDxWarsawSalons - created with the same care and attention
+  but at a more intimate scale and with a lot less formality. Keep an eye on our
+  social media channels to find out when the next is due to roll around.
+cover:
+  variant: dark
+  button:
+    text: attend
+    link: https://example.com/
+    show: true
+  image:
+    mobile: poke-the-comfort-zone-2013/coverPhotos/blank.png
+    desktop: poke-the-comfort-zone-2013/coverPhotos/blank.png
+coverHero:
+  button:
+    text: attend
+    link: https://example.com/
+    show: true
+  image:
+    mobile: poke-the-comfort-zone-2013/coverPhotos/blank.png
+    desktop: poke-the-comfort-zone-2013/coverPhotos/blank.png
+isOnline: false
+location:
+  displayName: Multikino Zlote Tarasy Zlota 59
+  city: Warsaw
+  mapIframe: https://goo.gl/maps/Biwg1kKkbgrLyptGA
+  image: poke-the-comfort-zone-2013/locationPhoto/zlote.jpg
+callToAction:
+  title: TEDxWarsaw 2013 pass
+  subtitle: 150 PLN
+  buttonText: Buy now
+  buttonUrl: https://example.com/
+partnerLogoPaths: poke-the-comfort-zone-2013/partnerLogos/partners.png
