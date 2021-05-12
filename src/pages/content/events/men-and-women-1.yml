@@ -1,6 +1,6 @@
 collectionId: event
 slug: men-and-women-2018
-displayName: TEDX 2018 Men & Women
+displayName: TEDxWarsaw 2018 Men & Women
 category: Conference
 city: Warsaw
 date: 23/03/2018
@@ -29,10 +29,10 @@ location:
   displayName: Złote Tarasy Złota 59
   city: Warsaw
   mapIframe: https://goo.gl/maps/Biwg1kKkbgrLyptGA
-  image: men-and-women/locationPhoto/blank.png
+  image: men-and-women-2018/locationPhoto/zlote.jpg
 callToAction:
   title: TEDxWarsaw 2018 pass
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
-partnerLogoPaths: men-and-women/partnerLogos/blank.png
+partnerLogoPaths: men-and-women-2018/partnerLogos/partners.png
