@@ -37,3 +37,34 @@ callToAction:
   buttonText: Buy now
   buttonUrl: https://example.com/
 partnerLogoPaths: the-little-things-2015/partnerLogos/partners.png
+speakers:
+  - speakerName: Hofesinka
+    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Woodsmoke
+    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Alicja Peszkowska
+    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Andrzej Lubowski
+    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Bogdan Gałązka
+    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Daniel Lewczuk
+    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Emma Bonnici
+    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Jakub Stefek
+    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Kinga Panasiewicz
+    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Michał Krupiński
+    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Monika Leończyk
+    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Paweł Najgebauer
+    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Robert Krool
+    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Shirin Naeimi
+    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Tomasz Kopyra
+    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
