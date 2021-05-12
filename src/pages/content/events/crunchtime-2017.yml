@@ -1,16 +1,16 @@
 collectionId: event
 slug: crunchtime-2017
-displayName: TEDX 2017 Crunchtime
+displayName: TEDxWarsaw 2017 Crunchtime
 category: Conference
 city: Warsaw
 date: 24/03/2017
 time: 10:00am - 5:00pm CET (UTC +1hr)
-hook: Our eighth major event brings you many perspectives on the problems and
-  challenges facing us today. Our speakers cover a broad range of subjects, from
-  communities living on trash heaps to municipal planning, and from the refugee
-  crisis to radicalisation – presenting their take on likely solutions based on
-  their expertise.
-description: todo
+hook: todo
+description: Our eighth major event brings you many perspectives on the problems
+  and challenges facing us today. Our speakers cover a broad range of subjects,
+  from communities living on trash heaps to municipal planning, and from the
+  refugee crisis to radicalisation – presenting their take on likely solutions
+  based on their expertise.
 cover:
   variant: dark
   button:
