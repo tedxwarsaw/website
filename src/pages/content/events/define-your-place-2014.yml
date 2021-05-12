@@ -1,0 +1,42 @@
+collectionId: event
+slug: define-your-place-2014
+displayName: TEDxWarsaw 2014 Define Your Place
+category: Conference
+city: Warsaw
+date: 30/05/2014
+time: 10:00am - 5:00pm CEST (UTC +2hrs)
+hook: todo
+description: TEDxWarsaw team hosted a very special TEDx event, at the invitation
+  of the President of the Republic of Poland. Organised with the assistance of
+  the President's office but entirely independent in terms of theme, selection
+  of speakers, and every other aspect, this was a unique public event held at
+  the country's highest office.
+cover:
+  variant: dark
+  button:
+    text: attent
+    link: https://example.com/
+    show: true
+  image:
+    mobile: define-your-place-2014/coverPhotos/blank.png
+    desktop: define-your-place-2014/coverPhotos/blank.png
+coverHero:
+  button:
+    text: attend
+    link: https://example.com/
+    show: true
+  image:
+    mobile: define-your-place-2014/coverPhotos/blank.png
+    desktop: define-your-place-2014/coverPhotos/blank.png
+isOnline: false
+location:
+  displayName: Pałac Prezydencki
+  city: Warsaw
+  mapIframe: https://goo.gl/maps/CtnjDGy4NGYKaM8t9
+  image: define-your-place-2014/locationPhoto/palacprezydencki.jpg
+callToAction:
+  title: TEDxWarsaw 2014 pass
+  subtitle: "150 PLN "
+  buttonText: Buy now
+  buttonUrl: https://example.com/
+partnerLogoPaths: define-your-place-2014/partnerLogos/partners.png
