@@ -1,0 +1,38 @@
+collectionId: event
+slug: men-and-women
+displayName: TEDX 2018 Men & Women
+category: Conference
+city: Warsaw
+date: 23/03/2018
+time: 12:00
+hook: todo
+description: todo
+cover:
+  variant: dark
+  button:
+    text: attend
+    link: https://example.com/
+    show: true
+  image:
+    mobile: men-and-women/coverPhotos/blank.png
+    desktop: men-and-women/coverPhotos/blank.png
+coverHero:
+  button:
+    link: https://example.com/
+    text: attend
+    show: true
+  image:
+    mobile: men-and-women/coverPhotos/blank.png
+    desktop: men-and-women/coverPhotos/blank.png
+isOnline: false
+location:
+  displayName: Złote Tarasy Złota 59
+  city: Warsaw
+  mapIframe: https://goo.gl/maps/Biwg1kKkbgrLyptGA
+  image: men-and-women/locationPhoto/blank.png
+callToAction:
+  title: TEDxWarsaw 2018 pass
+  subtitle: 150 PLN
+  buttonText: Buy now
+  buttonUrl: https://example.com/
+partnerLogoPaths: men-and-women/partnerLogos/blank.png
