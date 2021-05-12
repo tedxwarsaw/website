@@ -1,0 +1,39 @@
+collectionId: event
+slug: the-little-things-2015
+displayName: TEDxWarsaw 2015 The Little Things
+category: Conference
+city: Warsaw
+date: 19/03/2015
+time: 9:00am - 3:00pm CET (UTC +1hr)
+hook: Our sixth major annual event held at a wonderful, historic theatre in the
+  centre of Warsaw.
+description: todo
+cover:
+  variant: dark
+  button:
+    text: attend
+    link: https://example.com/
+    show: true
+  image:
+    mobile: the-little-things-2015/coverPhotos/blank.png
+    desktop: the-little-things-2015/coverPhotos/blank.png
+coverHero:
+  button:
+    text: attend
+    link: https://example.com/
+    show: true
+  image:
+    mobile: the-little-things-2015/coverPhotos/blank.png
+    desktop: the-little-things-2015/coverPhotos/blank.png
+isOnline: false
+location:
+  displayName: Teatr Polski
+  city: Warsaw
+  mapIframe: https://g.page/TeatrPolskiwWarszawie?share
+  image: the-little-things-2015/locationPhoto/teatrpolski.jpg
+callToAction:
+  title: TEDxWarsaw 2015 pass
+  subtitle: 150 PLN
+  buttonText: Buy now
+  buttonUrl: https://example.com/
+partnerLogoPaths: the-little-things-2015/partnerLogos/partners.png
