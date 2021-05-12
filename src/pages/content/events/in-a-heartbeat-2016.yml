@@ -1,0 +1,43 @@
+collectionId: event
+slug: in-a-heartbeat-2016
+displayName: TEDxWarsaw 2016 In a Heartbeat
+category: Conference
+city: Warsaw
+date: 01/04/2016
+time: 9:00am - 5:00pm CEST (UTC +2hrs)
+hook: todo
+description: >-
+  Change is permanent and inevitable. Sometimes things change slowly. More often
+  than not, they change in a heartbeat. A choice is made. A direction is chosen.
+  A phone call is returned. Or not.
+
+  Is it about tiny, seemingly insignificant yet powerful and life-changing moments? Is it about our civilisation changing, and we're not even noticing it? Or is it about affairs of the heart? Passion? Health? Rhythm? All of the above? Let's find out.
+cover:
+  variant: dark
+  button:
+    text: Attend
+    link: https://example.com/
+    show: true
+  image:
+    mobile: in-a-heartbeat-2016/coverPhotos/2016.png
+    desktop: in-a-heartbeat-2016/coverPhotos/2016.png
+coverHero:
+  button:
+    text: attend
+    link: https://example.com/
+    show: true
+  image:
+    desktop: in-a-heartbeat-2016/coverPhotos/blank.png
+    mobile: in-a-heartbeat-2016/coverPhotos/blank.png
+isOnline: false
+location:
+  displayName: Polin, Muzeum Historii Żydów Polskich
+  city: Warsaw
+  mapIframe: https://g.page/polinmuseum?share
+  image: in-a-heartbeat-2016/locationPhoto/polin.jpg
+callToAction:
+  title: TEDxWarsaw 2016 pass
+  subtitle: 150 PLN
+  buttonText: Buy now
+  buttonUrl: https://example.com/
+partnerLogoPaths: in-a-heartbeat-2016/partnerLogos/partners.png
