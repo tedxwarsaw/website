@@ -40,3 +40,42 @@ callToAction:
   buttonText: Buy now
   buttonUrl: https://example.com/
 partnerLogoPaths: crunchtime-2017/partnerLogos/partners.png
+speakers:
+  - speakerName: Jazzpospolita
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+  - speakerName: Mohini Dance Group
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+  - speakerName: Adam Wiśniewski
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+  - speakerName: Agata Stafiej-Bartosik
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+  - speakerName: Andrzej Kruczyński
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+  - speakerName: Asia Pyrek
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+  - speakerName: Edi Pyrek
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+  - speakerName: Jakub Kreft
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+  - speakerName: Małgorzata Cholewa
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+  - speakerName: Marcin Sadowski
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+  - speakerName: Marta Bradshaw
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+  - speakerName: Olga Kozierowska
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+  - speakerName: Oskar Skibski
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+  - speakerName: Paweł Gora
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+  - speakerName: Priya Prakash
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+  - speakerName: Przemysław Modrzewski
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+  - speakerName: Resina (Karolina Rec)
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+  - speakerName: Resina (Karolina Rec)
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+  - speakerName: Zbyszek Pawlak
+    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
