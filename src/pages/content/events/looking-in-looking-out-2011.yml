@@ -1,0 +1,41 @@
+collectionId: event
+slug: looking-in-looking-out-2011
+displayName: TEDxWarsaw 2011 Looking in, Looking out
+category: Conference
+city: Warsaw
+date: 23/03/2011
+time: 9:00am - 7:00pm CET (UTC +1hr)
+hook: todo
+description: Our theme this year opens the door to introspection and discussion
+  of freedom, creative destruction, and inspiration from without. Prepare to be
+  challenged, surprised and delighted by a lineup of outstanding of speakers and
+  extraordinary artists.
+cover:
+  variant: dark
+  button:
+    text: attend
+    link: https://example.com/
+    show: true
+  image:
+    mobile: looking-in-looking-out-2011/coverPhotos/blank.png
+    desktop: looking-in-looking-out-2011/coverPhotos/blank.png
+coverHero:
+  button:
+    text: attend
+    link: https://example.com/
+    show: true
+  image:
+    mobile: looking-in-looking-out-2011/coverPhotos/blank.png
+    desktop: looking-in-looking-out-2011/coverPhotos/blank.png
+isOnline: false
+location:
+  displayName: Multikino Zlote Tarasy Zlota 59
+  city: Warsaw
+  mapIframe: https://goo.gl/maps/Biwg1kKkbgrLyptGA
+  image: looking-in-looking-out-2011/locationPhoto/zlote.jpg
+callToAction:
+  title: TEDxWarsaw 2011 pass
+  subtitle: 150 PLN
+  buttonText: Buy now
+  buttonUrl: https://example.com/
+partnerLogoPaths: looking-in-looking-out-2011/partnerLogos/partners.png
