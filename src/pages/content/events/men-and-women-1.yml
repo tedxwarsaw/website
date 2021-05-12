@@ -36,3 +36,36 @@ callToAction:
   buttonText: Buy now
   buttonUrl: https://example.com/
 partnerLogoPaths: men-and-women-2018/partnerLogos/partners.png
+speakers:
+  - speakerName: Anna Jakubowski
+    speakerPhotoPath: men-and-women-2018/speakerPhotos/partner.png
+  - speakerName: Anna Zaleska
+    speakerPhotoPath: men-and-women-2018/speakerPhotos/partner.png
+  - speakerName: Anthony Barba
+    speakerPhotoPath: men-and-women-2018/speakerPhotos/partner.png
+  - speakerName: Cedric Dumont
+    speakerPhotoPath: men-and-women-2018/speakerPhotos/partner.png
+  - speakerName: Ewa Błaszczak
+    speakerPhotoPath: men-and-women-2018/speakerPhotos/partner.png
+  - speakerName: João de Sousa
+    speakerPhotoPath: men-and-women-2018/speakerPhotos/partner.png
+  - speakerName: Katarzyna Bogusz - Przybylska
+    speakerPhotoPath: men-and-women-2018/speakerPhotos/partner.png
+  - speakerName: Katarzyna Szymańska
+    speakerPhotoPath: men-and-women-2018/speakerPhotos/partner.png
+  - speakerName: Maciej Kraus
+    speakerPhotoPath: men-and-women-2018/speakerPhotos/partner.png
+  - speakerName: Magdalena Król
+    speakerPhotoPath: men-and-women-2018/speakerPhotos/partner.png
+  - speakerName: Mateusz Franczak
+    speakerPhotoPath: men-and-women-2018/speakerPhotos/partner.png
+  - speakerName: Michał Przerwa - Tetmajer
+    speakerPhotoPath: men-and-women-2018/speakerPhotos/partner.png
+  - speakerName: Rafał Agnieszczak
+    speakerPhotoPath: men-and-women-2018/speakerPhotos/partner.png
+  - speakerName: Sandra Osipiuk
+    speakerPhotoPath: men-and-women-2018/speakerPhotos/partner.png
+  - speakerName: Wiesław Bartkowski
+    speakerPhotoPath: men-and-women-2018/speakerPhotos/partner.png
+  - speakerName: Witold Jankowski
+    speakerPhotoPath: men-and-women-2018/speakerPhotos/partner.png
