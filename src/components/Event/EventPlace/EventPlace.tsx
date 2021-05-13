@@ -20,7 +20,7 @@ export const EventPlace = ({ location }: EventPlaceProps) => (
         style={{ height: "30rem" }}
       >
         <div className="absolute w-screen main-grid h-60 overflow-hidden text-white space-y-0 py-10">
-          <div className="font-medium text-4xl text-shadow">
+          <div className="font-medium text-4xl text-shadow max-w-md">
             {location.displayName},
             <br />
             <span className="font-light">{location.city}</span>
