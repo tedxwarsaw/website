@@ -18,64 +18,65 @@ cover:
     link: https://example.com/
     show: true
   image:
-    mobile: crunchtime-2017/coverPhotos/blank.png
-    desktop: crunchtime-2017/coverPhotos/blank.png
+    mobile: events/crunchtime-2017/coverPhotos/blank.png
+    desktop: events/crunchtime-2017/coverPhotos/blank.png
 coverHero:
   button:
     text: attend
     link: https://example.com/
     show: true
   image:
-    mobile: crunchtime-2017/coverPhotos/blank.png
-    desktop: crunchtime-2017/coverPhotos/blank.png
+    mobile: events/crunchtime-2017/coverPhotos/blank.png
+    desktop: events/crunchtime-2017/coverPhotos/blank.png
 isOnline: false
 location:
-  mapIframe: https://goo.gl/maps/Biwg1kKkbgrLyptGA
+  mapIframe: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.7202868759105!2d20.999243415796712!3d52.23029947976031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8da58f0dd5%3A0x9f7d3a9040fbc02f!2sZ%C5%82ota%2059%2C%2000-120%20Warszawa!5e0!3m2!1sen!2spl!4v1620902876401!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   city: Warsaw
   displayName: Złote Tarasy Złota 59
-  image: crunchtime-2017/locationPhoto/zlote.jpg
+  image: events/crunchtime-2017/locationPhoto/zlote.jpg
 callToAction:
   title: TEDxWarsaw 2017 pass
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
-partnerLogoPaths: crunchtime-2017/partnerLogos/partners.png
+partnerLogoPaths:
+  - events/crunchtime-2017/partnerLogos/partners.png
 speakers:
   - speakerName: Jazzpospolita
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Mohini Dance Group
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Adam Wiśniewski
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Agata Stafiej-Bartosik
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Andrzej Kruczyński
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Asia Pyrek
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Edi Pyrek
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Jakub Kreft
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Małgorzata Cholewa
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Marcin Sadowski
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Marta Bradshaw
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Olga Kozierowska
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Oskar Skibski
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Paweł Gora
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Priya Prakash
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Przemysław Modrzewski
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Resina (Karolina Rec)
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Resina (Karolina Rec)
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Zbyszek Pawlak
-    speakerPhotoPath: crunchtime-2017/speakerPhotos/partner.png
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png

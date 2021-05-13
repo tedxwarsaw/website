@@ -15,56 +15,57 @@ cover:
     link: https://example.com/
     show: true
   image:
-    mobile: the-little-things-2015/coverPhotos/blank.png
-    desktop: the-little-things-2015/coverPhotos/blank.png
+    mobile: events/the-little-things-2015/coverPhotos/blank.png
+    desktop: events/the-little-things-2015/coverPhotos/blank.png
 coverHero:
   button:
     text: attend
     link: https://example.com/
     show: true
   image:
-    mobile: the-little-things-2015/coverPhotos/blank.png
-    desktop: the-little-things-2015/coverPhotos/blank.png
+    mobile: events/the-little-things-2015/coverPhotos/blank.png
+    desktop: events/the-little-things-2015/coverPhotos/blank.png
 isOnline: false
 location:
   displayName: Teatr Polski
   city: Warsaw
-  mapIframe: https://g.page/TeatrPolskiwWarszawie?share
-  image: the-little-things-2015/locationPhoto/teatrpolski.jpg
+  mapIframe: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.2674309086055!2d21.017512215797048!3d52.23852597976195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc5f030cd111%3A0x6200c65161dadc70!2sTeatr%20Polski%20im.%20Arnolda%20Szyfmana%20w%20Warszawie!5e0!3m2!1sen!2spl!4v1620903023719!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  image: events/the-little-things-2015/locationPhoto/teatrpolski.jpg
 callToAction:
   title: TEDxWarsaw 2015 pass
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
-partnerLogoPaths: the-little-things-2015/partnerLogos/partners.png
+partnerLogoPaths:
+  - events/the-little-things-2015/partnerLogos/partners.png
 speakers:
   - speakerName: Hofesinka
-    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
   - speakerName: Woodsmoke
-    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
   - speakerName: Alicja Peszkowska
-    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
   - speakerName: Andrzej Lubowski
-    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
   - speakerName: Bogdan Gałązka
-    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
   - speakerName: Daniel Lewczuk
-    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
   - speakerName: Emma Bonnici
-    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
   - speakerName: Jakub Stefek
-    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
   - speakerName: Kinga Panasiewicz
-    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
   - speakerName: Michał Krupiński
-    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
   - speakerName: Monika Leończyk
-    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
   - speakerName: Paweł Najgebauer
-    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
   - speakerName: Robert Krool
-    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
   - speakerName: Shirin Naeimi
-    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
   - speakerName: Tomasz Kopyra
-    speakerPhotoPath: the-little-things-2015/speakerPhotos/partner.png
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png

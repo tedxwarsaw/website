@@ -18,25 +18,26 @@ cover:
     link: https://example.com/
     show: true
   image:
-    mobile: define-your-place-2014/coverPhotos/blank.png
-    desktop: define-your-place-2014/coverPhotos/blank.png
+    mobile: events/define-your-place-2014/coverPhotos/blank.png
+    desktop: events/define-your-place-2014/coverPhotos/blank.png
 coverHero:
   button:
     text: attend
     link: https://example.com/
     show: true
   image:
-    mobile: define-your-place-2014/coverPhotos/blank.png
-    desktop: define-your-place-2014/coverPhotos/blank.png
+    mobile: events/define-your-place-2014/coverPhotos/blank.png
+    desktop: events/define-your-place-2014/coverPhotos/blank.png
 isOnline: false
 location:
   displayName: Pałac Prezydencki
   city: Warsaw
-  mapIframe: https://goo.gl/maps/CtnjDGy4NGYKaM8t9
-  image: define-your-place-2014/locationPhoto/palacprezydencki.jpg
+  mapIframe: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.01187383382!2d21.014423815797215!3d52.24316797976279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc6744146b3f%3A0x29d4dd8ead0dc6f6!2sPresidential%20Palace%2C%20Warsaw!5e0!3m2!1sen!2spl!4v1620902898869!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  image: events/define-your-place-2014/locationPhoto/palacprezydencki.jpg
 callToAction:
   title: TEDxWarsaw 2014 pass
   subtitle: "150 PLN "
   buttonText: Buy now
   buttonUrl: https://example.com/
-partnerLogoPaths: define-your-place-2014/partnerLogos/partners.png
+partnerLogoPaths:
+  - events/define-your-place-2014/partnerLogos/partners.png

@@ -19,60 +19,61 @@ cover:
     link: https://example.com/
     show: true
   image:
-    mobile: in-a-heartbeat-2016/coverPhotos/2016.png
-    desktop: in-a-heartbeat-2016/coverPhotos/2016.png
+    mobile: events/in-a-heartbeat-2016/coverPhotos/2016.png
+    desktop: events/in-a-heartbeat-2016/coverPhotos/2016.png
 coverHero:
   button:
     text: attend
     link: https://example.com/
     show: true
   image:
-    desktop: in-a-heartbeat-2016/coverPhotos/blank.png
-    mobile: in-a-heartbeat-2016/coverPhotos/blank.png
+    desktop: events/in-a-heartbeat-2016/coverPhotos/blank.png
+    mobile: events/in-a-heartbeat-2016/coverPhotos/blank.png
 isOnline: false
 location:
   displayName: Polin, Muzeum Historii Żydów Polskich
   city: Warsaw
-  mapIframe: https://g.page/polinmuseum?share
-  image: in-a-heartbeat-2016/locationPhoto/polin.jpg
+  mapIframe: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2442.668756914635!2d20.991175215797337!3d52.249399979763815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc79a995b873%3A0xe21ada43504430b0!2sPOLIN%20Museum%20of%20the%20History%20of%20Polish%20Jews!5e0!3m2!1sen!2spl!4v1620902940581!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  image: events/in-a-heartbeat-2016/locationPhoto/polin.jpg
 callToAction:
   title: TEDxWarsaw 2016 pass
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
-partnerLogoPaths: in-a-heartbeat-2016/partnerLogos/partners.png
+partnerLogoPaths:
+  - events/in-a-heartbeat-2016/partnerLogos/partners.png
 speakers:
   - speakerName: Agnieszka Teodorowska
-    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+    speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
   - speakerName: Niskie Ciśnienie
-    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+    speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
   - speakerName: Shivers & Shakes
-    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+    speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
   - speakerName: Aleksandra Przegalińska
-    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+    speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
   - speakerName: Aleksandra Zaprutko-Janicka
-    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+    speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
   - speakerName: Anna Wysocka
-    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
-  - speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+    speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
+  - speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
     speakerName: Bogusz Parzyszek
   - speakerName: Dariusz Rosiak
-    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+    speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
   - speakerName: Ewa Jarczewska-Gerc
-    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+    speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
   - speakerName: James Briscione
-    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+    speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
   - speakerName: Josh Savage
-    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+    speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
   - speakerName: Kamil Baj
-    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+    speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
   - speakerName: Kamil Kulesza
-    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+    speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
   - speakerName: Maciej Sopyło
-    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+    speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
   - speakerName: Magdalena Fikus
-    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+    speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
   - speakerName: Szymon Drobniak
-    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+    speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
   - speakerName: Paweł Potoroczyn
-    speakerPhotoPath: in-a-heartbeat-2016/speakerPhotos/partner.png
+    speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
