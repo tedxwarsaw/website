@@ -156,9 +156,17 @@ collections:
             name: "pastEventsItems"
             widget: "list"
             fields:
-              - { label: "Red title of section", name: "title", widget: "string" }
+              - {
+                  label: "Red title of section",
+                  name: "title",
+                  widget: "string",
+                }
               - { label: "Section name", name: "sectionName", widget: "string" }
-              - { label: "Section description", name: "description", widget: "string" }
+              - {
+                  label: "Section description",
+                  name: "description",
+                  widget: "string",
+                }
           - label: "Join us title"
             name: joinUsTitle
             widget: string
@@ -203,12 +211,12 @@ collections:
             widget: string
           - label: "About TED section content"
             name: "aboutUsContent"
-            widget: 'markdown'
+            widget: "markdown"
           - label: "About Ted section speakers"
             name: "aboutTedSpeakers"
             widget: "list"
             fields:
-              - { label: "Name", name: "name", widget: "string"}
+              - { label: "Name", name: "name", widget: "string" }
           - label: "Ted Events Title"
             name: "aboutTedEventsTitle"
             widget: string
@@ -216,7 +224,7 @@ collections:
             name: "aboutTedEvents"
             widget: "list"
             fields:
-              - { label: "Content", name: "content", widget: string}
+              - { label: "Content", name: "content", widget: string }
           - label: "Media Initiatives Title"
             name: "mediaInitiativesTitle"
             widget: string
@@ -258,18 +266,38 @@ collections:
             name: "teamMembersSlider"
             widget: "list"
             fields:
-              - { label: "Name", name: "name", widget: "string"}
-              - { label: "Title", name: "title", widget: "string"}
-              - { label: "Description", name: "description", widget: "markdown"}
-              - { label: "Profile image", name: "profileImage", widget: "image",allow_multiple: false, media_folder: "photos" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "markdown",
+                }
+              - {
+                  label: "Profile image",
+                  name: "profileImage",
+                  widget: "image",
+                  allow_multiple: false,
+                  media_folder: "photos",
+                }
           - label: "Associates"
             name: "associates"
             widget: "list"
             fields:
-              - { label: "Name", name: "name", widget: "string"}
-              - { label: "Title", name: "title", widget: "string"}
-              - { label: "Description", name: "description", widget: "markdown"}
-              - { label: "Profile image", name: "profileImage", widget: "image",allow_multiple: false, media_folder: "photos" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "markdown",
+                }
+              - {
+                  label: "Profile image",
+                  name: "profileImage",
+                  widget: "image",
+                  allow_multiple: false,
+                  media_folder: "photos",
+                }
       - label: "Speakers"
         name: "speakers"
         file: "src/pages/content/pages/speakers.yaml"
@@ -406,7 +434,7 @@ collections:
         fields:
           - label: "Privacy policy"
             name: "privacyPolicyContent"
-            widget: 'markdown'
+            widget: "markdown"
       - label: "Cookie Policy"
         name: "cookie-policy"
         file: "src/pages/content/pages/cookie-policy.yaml"
@@ -414,7 +442,7 @@ collections:
         fields:
           - label: "Cookie policy"
             name: "cookiePolicyContent"
-            widget: 'markdown'
+            widget: "markdown"
   - label: "Global"
     name: "global"
     files:
@@ -591,7 +619,7 @@ collections:
             widget: string
             hint: "Text shown in newsletter component below header"
           - name: newsletterBackgroundImagePath
-            label: Newsletter background image 
+            label: Newsletter background image
             widget: image
             allow_multiple: false
             media_folder: "photos"
@@ -621,39 +649,39 @@ collections:
                 widget: list
                 fields:
                   - {
-                    label: "Event",
-                    name: "eventSlug",
-                    widget: "relation",
-                    collection: events,
-                    value_field: "slug",
-                    display_fields: ["displayName"],
-                    search_fields: ["displayName", "slug"],
-                  }
+                      label: "Event",
+                      name: "eventSlug",
+                      widget: "relation",
+                      collection: events,
+                      value_field: "slug",
+                      display_fields: ["displayName"],
+                      search_fields: ["displayName", "slug"],
+                    }
                   - {
-                    label: "Order",
-                    name: "order",
-                    widget: number,
-                    hint: "Order number in which this item will be displayed on the slider",
-                  }
+                      label: "Order",
+                      name: "order",
+                      widget: number,
+                      hint: "Order number in which this item will be displayed on the slider",
+                    }
               - name: "talks"
                 label: "Talks"
                 widget: list
                 fields:
                   - {
-                    label: "Talk",
-                    name: "talkSlug",
-                    widget: "relation",
-                    collection: talks,
-                    value_field: "slug",
-                    display_fields: ["displayName"],
-                    search_fields: ["displayName", "slug"],
-                  }
+                      label: "Talk",
+                      name: "talkSlug",
+                      widget: "relation",
+                      collection: talks,
+                      value_field: "slug",
+                      display_fields: ["displayName"],
+                      search_fields: ["displayName", "slug"],
+                    }
                   - {
-                    label: "Order",
-                    name: "order",
-                    widget: number,
-                    hint: "Order number in which this item will be displayed on the slider",
-                  }
+                      label: "Order",
+                      name: "order",
+                      widget: number,
+                      hint: "Order number in which this item will be displayed on the slider",
+                    }
       - label: "Join speakers (shown globally)"
         name: "joinSpeakersCta"
         file: "src/pages/content/global/newsletter.yaml"
@@ -683,7 +711,7 @@ collections:
               - { label: "Display name", name: "displayName", widget: "string" }
               - { label: "Path", name: "path", widget: "string" }
           - name: sectionBackgroundImageUrl
-            label: Section background image 
+            label: Section background image
             widget: image
             allow_multiple: false
             media_folder: "photos"
@@ -872,9 +900,15 @@ collections:
       - name: speakers
         label: Event speakers
         widget: "list"
-        fields: 
+        fields:
           - { label: "Speaker's name", name: "speakerName", widget: "string" }
-          - { label: "Speaker's phote", name: "speakerPhotoPath", widget: "image", allow_multiple: false, media_folder: "{{slug}}/speakerPhotos" }
+          - {
+              label: "Speaker's phote",
+              name: "speakerPhotoPath",
+              widget: "image",
+              allow_multiple: false,
+              media_folder: "{{slug}}/speakerPhotos",
+            }
   - label: "Talks"
     name: talks
     folder: "src/pages/content/talks"
