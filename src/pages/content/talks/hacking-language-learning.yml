@@ -1,0 +1,17 @@
+collectionId: talk
+slug: hacking-language-learning
+displayName: Hacking language learning
+talkDescription: "\"Some people just don't have the language learning gene.\" To
+  prove that this statement is patently untrue is Benny Lewis's life mission."
+youtubeVideoId: https://www.youtube.com/watch?v=0x2_kWRB8-A&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=8
+speaker: Benny Lewis
+speakerProfileImage: todo
+speakerDescription: Benny now runs the World's most popular language learning
+  blog and is learning Egyptian Arabic which will be language number twelve, or
+  maybe thirteen. But who's counting?
+eventSlug: poke-the-comfort-zone-2013
+cover:
+  image:
+    mobile: hacking-language-learning/coverPhotos/benny.png
+    desktop: hacking-language-learning/coverPhotos/benny.png
+duration: 15:10
