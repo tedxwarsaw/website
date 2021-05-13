@@ -4,7 +4,7 @@ displayName: TEDxWarsaw 2018 Men & Women
 category: Conference
 city: Warsaw
 date: 23/03/2018
-time: "12:00"
+time: 12:00
 hook: todo
 description: todo
 cover:
@@ -28,15 +28,17 @@ isOnline: false
 location:
   displayName: Złote Tarasy Złota 59
   city: Warsaw
-  mapIframe: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.7202868759105!2d20.999243415796712!3d52.23029947976031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8da58f0dd5%3A0x9f7d3a9040fbc02f!2sZ%C5%82ota%2059%2C%2000-120%20Warszawa!5e0!3m2!1sen!2spl!4v1620902992935!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  mapIframe: <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.7202868759105!2d20.999243415796712!3d52.23029947976031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8da58f0dd5%3A0x9f7d3a9040fbc02f!2sZ%C5%82ota%2059%2C%2000-120%20Warszawa!5e0!3m2!1sen!2spl!4v1620902992935!5m2!1sen!2spl"
+    width="600" height="450" style="border:0;" allowfullscreen=""
+    loading="lazy"></iframe>
   image: events/men-and-women-2018/locationPhoto/zlote.jpg
 callToAction:
   title: TEDxWarsaw 2018 pass
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
-partnerLogoPaths:
-  - events/men-and-women-2018/partnerLogos/partners.png
+partnerLogoPaths: events/men-and-women-2018/partnerLogos/partners.png
 speakers:
   - speakerName: Anna Jakubowski
     speakerPhotoPath: events/men-and-women-2018/speakerPhotos/partner.png
