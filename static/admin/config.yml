@@ -805,12 +805,12 @@ collections:
                 label: Mobile variant
                 widget: image
                 allow_multiple: false
-                media_folder: "{{slug}}/coverPhotos"
+                media_folder: "events/{{slug}}/coverPhotos"
               - name: desktop
                 label: Desktop variant
                 widget: image
                 allow_multiple: false
-                media_folder: "{{slug}}/coverPhotos"
+                media_folder: "events/{{slug}}/coverPhotos"
       - name: coverHero
         label: Cover hero section
         widget: object
@@ -839,12 +839,12 @@ collections:
                 label: Mobile variant
                 widget: image
                 allow_multiple: false
-                media_folder: "{{slug}}/coverPhotos"
+                media_folder: "events/{{slug}}/coverPhotos"
               - name: desktop
                 label: Desktop variant
                 widget: image
                 allow_multiple: false
-                media_folder: "{{slug}}/coverPhotos"
+                media_folder: "events/{{slug}}/coverPhotos"
       - name: "isOnline"
         label: "Is this an online event?"
         widget: boolean
@@ -872,7 +872,7 @@ collections:
             hint: A background image.
             widget: image
             allow_multiple: false
-            media_folder: "{{slug}}/locationPhoto"
+            media_folder: "events/{{slug}}/locationPhoto"
       - name: callToAction
         label: The Red Section
         widget: object
@@ -893,7 +893,7 @@ collections:
         label: Partner Logos
         widget: image
         allow_multiple: true
-        media_folder: "{{slug}}/partnerLogos"
+        media_folder: "events/{{slug}}/partnerLogos"
         media_library:
           config:
             multiple: true
@@ -907,7 +907,7 @@ collections:
               name: "speakerPhotoPath",
               widget: "image",
               allow_multiple: false,
-              media_folder: "{{slug}}/speakerPhotos",
+              media_folder: "events/{{slug}}/speakerPhotos",
             }
   - label: "Talks"
     name: talks
