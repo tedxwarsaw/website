@@ -38,10 +38,35 @@ location:
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.119884714369!2d21.000902815797073!3d52.241206079762435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc62f900ec7f%3A0x9e0c6d6ac4d6e639!2sCapitol%20Theater!5e0!3m2!1sen!2spl!4v1620911355243!5m2!1sen!2spl"
     width="600" height="450" style="border:0;" allowfullscreen=""
     loading="lazy"></iframe>
-  image: events/polarization-2021/locationPhoto/capitol.jpg
+  image: events/polarization-2021/locationPhoto/blank.png
 callToAction:
   title: TEDxWarsaw 2021 pass
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
 partnerLogoPaths: events/polarization-2021/partnerLogos/blank.png
+speakers:
+  - speakerName: Jimek
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_jimek.png
+  - speakerName: Małgorzata Bonikowska
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_bonikowska.png
+  - speakerName: Maciej Gośniewski (Gąsiu)
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_gośniowski.png
+  - speakerName: Anna Wróblewska
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_wroblewska.png
+  - speakerName: Jacek Ambrosiewicz
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_ambrosiewicz.png
+  - speakerName: Przemek Gawroński
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_gawronski.png
+  - speakerName: Marianna Kłosińska
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_klosinska.png
+  - speakerName: Maciej Sawicki
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_sawicki.png
+  - speakerName: Joanna Ławicka
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_ławicka.png
+  - speakerName: Kacper Łukawski
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_łukawski.png
+  - speakerName: Zosia Kierner
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_kierner.png
+  - speakerName: Miguel Cano
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_miguel.png
