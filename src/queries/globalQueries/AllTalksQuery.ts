@@ -61,17 +61,34 @@ export const queryForAllTalks = async (
         },
       };
 
+      if (talk.eventSlug) {
+        console.log(talk.eventSlug);
+      } else {
+        console.log(
+          "************** there is no slug ********************************"
+        );
+      }
+
       const {
         data: { event },
       } = await graphql(eventQuery, {
         eventSlug: talk.eventSlug,
       });
-
-      allEvents[talk.eventSlug] = event.displayName;
+      if (!event) {
+        console.log(
+          "******************************** HERE ********************************"
+        );
+        console.log(talk.eventSlug);
+        console.log(event);
+      }
+      // allEvents[talk.eventSlug] = "poke-the-comfort-zone-2013";
 
       // const date = new Date(event.date);
-      const date = new Date(event.date).getTime();
+      // const date = new Date("24/03/2017").getTime();
+      // const date = new Date(event.date);
 
+      allEvents[talk.eventSlug] = event.displayName;
+      const date = new Date(event.date).getTime();
       return { ...talk, cover, date };
     })
   );
