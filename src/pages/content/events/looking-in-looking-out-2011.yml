@@ -43,3 +43,6 @@ callToAction:
   buttonUrl: https://example.com/
 partnerLogoPaths: 
   - events/looking-in-looking-out-2011/partnerLogos/blank.png
+speakers:
+  - speakerName: Unknown
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png

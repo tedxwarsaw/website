@@ -139,11 +139,12 @@ export const queryForProps = async (
     ...event.location,
     mapSrc: (parseHTML(event.location.mapIframe).childNodes[0] as HTMLElement)
       .attrs.src,
-    image: await getFluidImage({
-      graphql,
-      path: event.location.image,
-    }),
   };
+
+  if (!location.image) {
+    console.log(event);
+  }
+
   const newsletter = await queryForNewsletter(graphql);
   const joinSpeakers = await queryForJoinSpeakers(graphql);
 
