@@ -4,7 +4,7 @@ displayName: O odwadze
 talkDescription: todo
 youtubeVideoId: https://www.youtube.com/watch?v=lmn3m1xxyfU&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=11
 speaker: Katarzyna Miller
-speakerProfileImage: todo
+speakerProfileImage: general/profile-placeholder.png
 speakerDescription: Katarzyna Miller jest polską psychoterapeutką z wieloletnim
   doświadczeniem. W swojej praktyce, dzięki wnikliwej obserwacji, regularnie
   bada emocjonalne tętno społeczeństwa, a wyniki ujmuje w publikowanych przez
@@ -14,4 +14,4 @@ cover:
   image:
     mobile: o-odwadze/coverPhotos/kebab.png
     desktop: on-courage/coverPhotos/kebab.png
-duration: 14:06
+duration: "14:06"

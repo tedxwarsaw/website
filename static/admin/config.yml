@@ -943,8 +943,10 @@ collections:
         label: "Speaker name"
         widget: string
       - name: speakerProfileImage
-        label: "Speaker profile images"
-        widget: string
+        label: "Speakers profile image"
+        widget: image
+        allow_multiple: false
+        media_folder: "{{slug}}/photos
       - name: speakerDescription
         label: "Speaker description"
         widget: string

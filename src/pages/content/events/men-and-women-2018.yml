@@ -4,7 +4,7 @@ displayName: TEDxWarsaw 2018 Men & Women
 category: Conference
 city: Warsaw
 date: 23/03/2018
-time: 12:00
+time: "12:00"
 hook: todo
 description: todo
 cover:
@@ -38,7 +38,8 @@ callToAction:
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
-partnerLogoPaths: events/men-and-women-2018/partnerLogos/partners.png
+partnerLogoPaths: 
+  - events/men-and-women-2018/partnerLogos/partners.png
 speakers:
   - speakerName: Anna Jakubowski
     speakerPhotoPath: events/men-and-women-2018/speakerPhotos/partner.png

@@ -4,7 +4,7 @@ displayName: Moja googlefobia mnie niepokoi
 talkDescription: todo
 youtubeVideoId: https://www.youtube.com/watch?list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&v=wjIw5HYKS1Y
 speaker: Mark Borkowski
-speakerProfileImage: todo
+speakerProfileImage: general/profile-placeholder.png
 speakerDescription: Mark Borkowski, jeden z głównych specjalistów do spraw PR-u
   w Wielkiej Brytanii, przyczynił się do rozwoju karier wielu znanych artystów i
   do sukcesu firm i organizacji pozarządowych, które wszyscy znamy, ale to, co
@@ -15,4 +15,5 @@ cover:
   image:
     mobile: moja-googlefobia-mnie-niepokoi-2013/coverPhotos/googlefobia.png
     desktop: moja-googlefobia-mnie-niepokoi-2013/coverPhotos/googlefobia.png
-duration: 16:29
+duration: "16:29
+"

@@ -41,4 +41,5 @@ callToAction:
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
-partnerLogoPaths: events/looking-in-looking-out-2011/partnerLogos/blank.png
+partnerLogoPaths: 
+  - events/looking-in-looking-out-2011/partnerLogos/blank.png

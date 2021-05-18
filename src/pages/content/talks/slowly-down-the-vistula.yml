@@ -5,7 +5,7 @@ talkDescription: Louis-Philippe Loncke will tell us about how he packed what he
   could into a kayak and paddled down the Vistula from its source.
 youtubeVideoId: https://www.youtube.com/watch?v=wPUYejlFCxw&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=9
 speaker: Louis-Philippe Loncke
-speakerProfileImage: todo
+speakerProfileImage: general/profile-placeholder.png
 speakerDescription: Belgian adventurer Louis-Philippe Loncke has walked across
   Australia's Simpson Desert, arranged the World's highest chocolate tasting for
   charity (at the Mt Everest Base Camp) and traversed Iceland on foot in winter.
@@ -14,4 +14,4 @@ cover:
   image:
     mobile: slowly-down-the-vistula/coverPhotos/piggy.png
     desktop: slowly-down-the-vistula/coverPhotos/piggy.png
-duration: 15:04
+duration: "15:04"

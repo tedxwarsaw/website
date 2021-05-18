@@ -44,7 +44,8 @@ callToAction:
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
-partnerLogoPaths: events/polarization-2021/partnerLogos/blank.png
+partnerLogoPaths: 
+  - events/polarization-2021/partnerLogos/blank.png
 speakers:
   - speakerName: Jimek
     speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_jimek.png
