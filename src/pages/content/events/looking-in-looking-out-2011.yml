@@ -17,16 +17,16 @@ cover:
     link: https://example.com/
     show: true
   image:
-    mobile: looking-in-looking-out-2011/coverPhotos/blank.png
-    desktop: looking-in-looking-out-2011/coverPhotos/blank.png
+    mobile: events/looking-in-looking-out-2011/coverPhotos/blank.png
+    desktop: events/looking-in-looking-out-2011/coverPhotos/blank.png
 coverHero:
   button:
     text: attend
     link: https://example.com/
     show: true
   image:
-    mobile: looking-in-looking-out-2011/coverPhotos/blank.png
-    desktop: looking-in-looking-out-2011/coverPhotos/blank.png
+    mobile: events/looking-in-looking-out-2011/coverPhotos/blank.png
+    desktop: events/looking-in-looking-out-2011/coverPhotos/blank.png
 isOnline: false
 location:
   displayName: Multikino Zlote Tarasy Zlota 59
@@ -35,7 +35,7 @@ location:
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.7707144180404!2d20.999736915945203!3d52.22938336547791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8c3c80e54d%3A0x12702cc984d8e75c!2sZ%C5%82ote%20Tarasy!5e0!3m2!1sen!2spl!4v1620911968430!5m2!1sen!2spl"
     width="600" height="450" style="border:0;" allowfullscreen=""
     loading="lazy"></iframe>
-  image: events/looking-in-looking-out-2011/locationPhoto/blank.png
+  image: events/looking-in-looking-out-2011/locationPhoto/zlote.jpg
 callToAction:
   title: TEDxWarsaw 2011 pass
   subtitle: 150 PLN

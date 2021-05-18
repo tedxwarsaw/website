@@ -14,16 +14,16 @@ cover:
     link: https://example.com/
     show: true
   image:
-    mobile: events/men-and-women/coverPhotos/blank.png
-    desktop: events/men-and-women/coverPhotos/blank.png
+    mobile: events/men-and-women-2018/coverPhotos/blank.png
+    desktop: events/men-and-women-2018/coverPhotos/blank.png
 coverHero:
   button:
     link: https://example.com/
     text: attend
     show: true
   image:
-    mobile: events/men-and-women/coverPhotos/blank.png
-    desktop: events/men-and-women/coverPhotos/blank.png
+    mobile: events/men-and-women-2018/coverPhotos/blank.png
+    desktop: events/men-and-women-2018/coverPhotos/blank.png
 isOnline: false
 location:
   displayName: Złote Tarasy Złota 59
