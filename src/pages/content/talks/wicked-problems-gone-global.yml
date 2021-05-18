@@ -8,11 +8,11 @@ talkDescription: Not a day goes by without news of floods, unemployment,
   various scenarios of what happens when wicked problems go global.
 youtubeVideoId: https://www.youtube.com/watch?v=v7lO_6b4dBg&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=13
 speaker: Kacper Nosarzewski
-speakerProfileImage: general/profile-placeholder.png
+speakerProfileImage: talks/general/profile-placeholder.png
 speakerDescription: Futurist and strategic risk planner.
 eventSlug: poke-the-comfort-zone-2013
 cover:
   image:
-    mobile: wicked-problems-gone-global/coverPhotos/nosarz.png
-    desktop: wicked-problems-gone-global/coverPhotos/nosarz.png
+    mobile: talks/wicked-problems-gone-global/coverPhotos/nosarz.png
+    desktop: talks/wicked-problems-gone-global/coverPhotos/nosarz.png
 duration: "5:49"

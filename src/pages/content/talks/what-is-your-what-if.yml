@@ -7,13 +7,13 @@ talkDescription: Audrey Scott and Daniel Noll have been travelling for over 6
   resignations.
 youtubeVideoId: https://www.youtube.com/watch?v=gyF_kZcdEGQ&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=12
 speaker: Audrey Scott & Daniel Noll
-speakerProfileImage: general/profile-placeholder.png
+speakerProfileImage: talks/general/profile-placeholder.png
 speakerDescription: " As a married couple they are running one of the World's
   most popular travel blogs, and proving that there is more to life than
   material pursuits."
 eventSlug: poke-the-comfort-zone-2013
 cover:
   image:
-    mobile: what-is-your-what-if/coverPhotos/daniel.png
-    desktop: what-is-your-what-if/coverPhotos/daniel.png
+    mobile: talks/what-is-your-what-if/coverPhotos/daniel.png
+    desktop: talks/what-is-your-what-if/coverPhotos/daniel.png
 duration: "19:52"

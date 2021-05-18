@@ -4,7 +4,7 @@ displayName: Solo dance improvisation
 talkDescription: todo
 youtubeVideoId: https://www.youtube.com/watch?v=IRfTRdVPDdQ&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=14
 speaker: Adrianna Patłaszyńska
-speakerProfileImage: general/profile-placeholder.png
+speakerProfileImage: talks/general/profile-placeholder.png
 speakerDescription: Adrianna Patłaszyńska has been dancing since the age of 5
   and studying dance since she was 13. For the last few years she has
   consistently been in the top three at the World Championships in modern dance
@@ -13,6 +13,6 @@ speakerDescription: Adrianna Patłaszyńska has been dancing since the age of 5
 eventSlug: poke-the-comfort-zone-2013
 cover:
   image:
-    mobile: solo-dance-improvisation/coverPhotos/dance.png
-    desktop: solo-dance-improvisation/coverPhotos/dance.png
+    mobile: talks/solo-dance-improvisation/coverPhotos/dance.png
+    desktop: talks/solo-dance-improvisation/coverPhotos/dance.png
 duration: "3:15"

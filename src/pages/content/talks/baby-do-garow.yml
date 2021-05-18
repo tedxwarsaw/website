@@ -9,6 +9,6 @@ speakerDescription: "Sandra Osipiu - fixjoterapeutka na co dzień ucząca ludzi 
 eventSlug: 'testEvent'
 cover:
   image:
-    desktop: baby-do-garow/photos/talk-cover.png
-    mobile: baby-do-garow/photos/talk-cover.png
+    desktop: talks/baby-do-garow/photos/talk-cover.png
+    mobile: talks/baby-do-garow/photos/talk-cover.png
 duration: "3:14"

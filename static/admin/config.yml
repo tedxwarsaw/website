@@ -946,7 +946,7 @@ collections:
         label: "Speakers profile image"
         widget: image
         allow_multiple: false
-        media_folder: "{{slug}}/photos
+        media_folder: "talks/{{slug}}/photos"
       - name: speakerDescription
         label: "Speaker description"
         widget: string
@@ -971,12 +971,12 @@ collections:
                 label: Mobile variant
                 widget: image
                 allow_multiple: false
-                media_folder: "{{slug}}/coverPhotos"
+                media_folder: "talks/{{slug}}/coverPhotos"
               - name: desktop
                 label: Desktop variant
                 widget: image
                 allow_multiple: false
-                media_folder: "{{slug}}/coverPhotos"
+                media_folder: "talks/{{slug}}/coverPhotos"
       - name: duration
         label: Duration
         widget: string

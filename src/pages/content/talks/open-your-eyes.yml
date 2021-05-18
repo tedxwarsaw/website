@@ -9,6 +9,6 @@ speakerDescription: "Sandra Osipiu - fixjoterapeutka na co dzień ucząca ludzi 
 eventSlug: '2020'
 cover:
   image:
-    desktop: open-your-eyes/photos/talk-cover.png
-    mobile: open-your-eyes/photos/talk-cover.png
+    desktop: talks/open-your-eyes/photos/talk-cover.png
+    mobile: talks/open-your-eyes/photos/talk-cover.png
 duration: "9:14"

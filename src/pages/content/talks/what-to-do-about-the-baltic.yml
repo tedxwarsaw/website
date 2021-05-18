@@ -7,11 +7,11 @@ talkDescription: Finnish oceanographer Hanna Paulomäki has been focusing on the
   this body of water; Hanna and her colleagues are working to change that.
 youtubeVideoId: https://www.youtube.com/watch?v=9yPlMBPNf2M&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=15
 speaker: Hanna Paulomäki
-speakerProfileImage: general/profile-placeholder.png
+speakerProfileImage: talks/general/profile-placeholder.png
 speakerDescription: todo
 eventSlug: poke-the-comfort-zone-2013
 cover:
   image:
-    mobile: what-to-do-about-the-baltic/coverPhotos/finnish.png
-    desktop: what-to-do-about-the-baltic/coverPhotos/finnish.png
+    mobile: talks/what-to-do-about-the-baltic/coverPhotos/finnish.png
+    desktop: talks/what-to-do-about-the-baltic/coverPhotos/finnish.png
 duration: "17:48"

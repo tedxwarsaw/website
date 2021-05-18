@@ -5,13 +5,13 @@ talkDescription: Wearable technology will result in seamless experiences,
   allowing us to interact with the "Internet of Things" -- for better or worse.
 youtubeVideoId: https://www.youtube.com/watch?v=RuVdkNdeVAc&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=5
 speaker: Mikela Eskenazi
-speakerProfileImage: general/profile-placeholder.png
+speakerProfileImage: talks/general/profile-placeholder.png
 speakerDescription: Mikela Eskenazi is a mobile industry strategist based in
   London who draws freely on her multicultural heritage, education and
   experience in advising clients around the World.
 eventSlug: poke-the-comfort-zone-2013
 cover:
   image:
-    mobile: what-your-mobile-could-become/coverPhotos/mikela.png
-    desktop: what-your-mobile-could-become/coverPhotos/mikela.png
+    mobile: talks/what-your-mobile-could-become/coverPhotos/mikela.png
+    desktop: talks/what-your-mobile-could-become/coverPhotos/mikela.png
 duration: "10:43"

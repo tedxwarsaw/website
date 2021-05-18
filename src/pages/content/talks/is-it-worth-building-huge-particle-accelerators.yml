@@ -10,11 +10,11 @@ talkDescription: Accelerator and nuclear physicist Piotr Skowronski comes to us
   http://ted.com/tedx
 youtubeVideoId: https://www.youtube.com/watch?v=9oTzFSmKyaw&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=17
 speaker: Piotr Skowroński
-speakerProfileImage: general/profile-placeholder.png
+speakerProfileImage: talks/general/profile-placeholder.png
 speakerDescription: Accelerator and nuclear physicist.
 eventSlug: poke-the-comfort-zone-2013
 cover:
   image:
-    mobile: is-it-worth-building-huge-particle-accelerators/coverPhotos/piotr.png
-    desktop: is-it-worth-building-huge-particle-accelerators/coverPhotos/piotr.png
+    mobile: talks/is-it-worth-building-huge-particle-accelerators/coverPhotos/piotr.png
+    desktop: talks/is-it-worth-building-huge-particle-accelerators/coverPhotos/piotr.png
 duration: "13:21"

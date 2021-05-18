@@ -4,7 +4,7 @@ displayName: What We Don't Know
 talkDescription: todo
 youtubeVideoId: https://www.youtube.com/watch?v=p0BIqa_GAG0&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=10
 speaker: Jonathan MacDonald
-speakerProfileImage: general/profile-placeholder.png
+speakerProfileImage: talks/general/profile-placeholder.png
 speakerDescription: Jonathan MacDonald, strategist and crystal ball gazer. From
   his London base he advises global clients on product marketing strategy and
   execution and is a frequent speaker on the space where technology meets
@@ -12,6 +12,6 @@ speakerDescription: Jonathan MacDonald, strategist and crystal ball gazer. From
 eventSlug: poke-the-comfort-zone-2013
 cover:
   image:
-    mobile: what-we-dont-know/coverPhotos/neck.png
-    desktop: what-we-dont-know/coverPhotos/neck.png
+    mobile: talks/what-we-dont-know/coverPhotos/neck.png
+    desktop: talks/what-we-dont-know/coverPhotos/neck.png
 duration: "17:47"
