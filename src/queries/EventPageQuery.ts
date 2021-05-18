@@ -141,10 +141,6 @@ export const queryForProps = async (
       .attrs.src,
   };
 
-  if (!location.image) {
-    console.log(event);
-  }
-
   const newsletter = await queryForNewsletter(graphql);
   const joinSpeakers = await queryForJoinSpeakers(graphql);
 
