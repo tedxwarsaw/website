@@ -1,0 +1,1 @@
+export {CenterTextSection, CenterTextSectionProps} from "./CenterTextSection";

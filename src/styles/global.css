@@ -110,3 +110,15 @@
 .text-shadow {
   text-shadow: 0 1px 20px #000;
 }
+
+h1 {
+  font-size: theme("fontSize.4xl");
+}
+
+h2 {
+  font-size: theme("fontSize.3xl");
+}
+
+h3 {
+  font-size: theme("fontSize.2xl");
+}

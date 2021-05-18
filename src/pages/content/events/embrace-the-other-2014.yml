@@ -1,0 +1,43 @@
+collectionId: event
+slug: embrace-the-other-2014
+displayName: TEDxWarsaw Embrace The Other
+category: Conference
+city: Warsaw
+date: 14/03/2014
+time: 10:00am - 8:00pm CET (UTC +1hr)
+hook: We celebrated our fifth birthday with the largest TEDx event ever held in
+  Poland, and one of the largest in the World.
+description: todo
+cover:
+  variant: dark
+  button:
+    text: attend
+    show: true
+    link: https://example.com/
+  image:
+    mobile: events/embrace-the-other-2014/coverPhotos/blank.png
+    desktop: events/embrace-the-other-2014/coverPhotos/blank.png
+coverHero:
+  button:
+    link: https://example.com/
+    text: attend
+    show: true
+  image:
+    mobile: events/embrace-the-other-2014/coverPhotos/blank.png
+    desktop: events/embrace-the-other-2014/coverPhotos/blank.png
+isOnline: false
+location:
+  displayName: Złote Tarasy Złota 59
+  city: Warsaw
+  mapIframe: <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2443.7707125177826!2d20.9997369!3d52.2293834!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8c3c80e54d%3A0x12702cc984d8e75c!2sZ%C5%82ote%20Tarasy!5e0!3m2!1sen!2spl!4v1620902913424!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  image: events/embrace-the-other-2014/locationPhoto/zlote.jpg
+callToAction:
+  title: TEDxWarsaw 2014 pass
+  subtitle: 150 PLN
+  buttonText: Buy now
+  buttonUrl: https://example.com/
+partnerLogoPaths:
+  - events/embrace-the-other-2014/partnerLogos/partners.png
+speakers:
+  - speakerName: Unknown
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png

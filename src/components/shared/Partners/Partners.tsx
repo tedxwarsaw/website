@@ -53,14 +53,14 @@ export const Partners = ({
       )}
     </div>
 
-    <div className="flex flex-wrap justify-between space-y-4 xl:hidden">
+    <div className="flex flex-wrap space-y-4 xl:hidden">
       {partnerLogos.map((fixed, idx) => (
-        <Img key={idx} fixed={fixed} alt="Partner logo" />
+        <Img key={idx} fixed={fixed} alt="Partner logo" style={{"filter": "grayscale(100%)", "margin": "5px"}} />
       ))}
     </div>
     <div className="flex flex-wrap justify-between space-y-4  hidden xl:flex">
       {partnerLogosDesktop.map((fixed, idx) => (
-        <Img key={idx} fixed={fixed} alt="Partner logo" />
+        <Img key={idx} fixed={fixed} alt="Partner logo" style={{"filter": "grayscale(100%)"}} />
       ))}
     </div>
     {showLinks && (

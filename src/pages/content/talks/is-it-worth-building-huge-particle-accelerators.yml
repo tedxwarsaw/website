@@ -1,0 +1,20 @@
+collectionId: talk
+slug: is-it-worth-building-huge-particle-accelerators
+displayName: Is it wortyh building huge particle accelerators?
+talkDescription: Accelerator and nuclear physicist Piotr Skowronski comes to us
+  from CERN where he has been a staff researcher since 2009, following a long
+  association with the centre which goes back to his student days. He and his
+  colleagues are currently designing CERN's future giant particle accelerator
+  called CLIC.  This talk was given at a TEDx event using the TED conference
+  format but independently organized by a local community. Learn more at
+  http://ted.com/tedx
+youtubeVideoId: https://www.youtube.com/watch?v=9oTzFSmKyaw&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=17
+speaker: Piotr Skowroński
+speakerProfileImage: todo
+speakerDescription: Accelerator and nuclear physicist.
+eventSlug: poke-the-comfort-zone-2013
+cover:
+  image:
+    mobile: is-it-worth-building-huge-particle-accelerators/coverPhotos/piotr.png
+    desktop: is-it-worth-building-huge-particle-accelerators/coverPhotos/piotr.png
+duration: 13:21

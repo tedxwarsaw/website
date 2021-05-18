@@ -2,6 +2,14 @@ import path from "path";
 import { queryForProps as queryForEventProps } from "./src/queries/EventPageQuery";
 import { queryForProps as queryForHomeProps } from "./src/queries/IndexPageQuery";
 import { queryForProps as queryForAttendProps } from "./src/queries/AttendPageQuery";
+import { queryForProps as queryForAboutProps } from "./src/queries/AboutPageQuery";
+import { queryForProps as queryForWatchProps } from "./src/queries/WatchPageQuery";
+import { queryForProps as queryForSpeakersProps } from "./src/queries/SpeakersPageQuery";
+import { queryForProps as queryForVolunteerProps } from "./src/queries/VolunteerPageQuery";
+import { queryForProps as queryForTalkProps } from "./src/queries/TallkPageQuery";
+import { queryForProps as queryForPartnersProps } from "./src/queries/PartnersPageQuery";
+import { queryForProps as queryForPrivacyPolicyProps } from "./src/queries/PrivacyPolicyPageQuery";
+import { queryForProps as queryForCookiePolicyProps } from "./src/queries/CookiePolicyPageQuery";
 
 const pageQuery = `#graphql
   query Page {
@@ -26,10 +34,26 @@ const eventQuery = `#graphql
     }
   }
 `;
+const talksQuery = `#graphql
+  query Events {
+    allTalksYaml(filter: {collectionId: {eq: "talk"}}) {
+      nodes {
+        slug
+      }
+    }
+  }
+`;
 
 const propsQueries = {
   IndexPage: queryForHomeProps,
   AttendPage: queryForAttendProps,
+  AboutPage: queryForAboutProps,
+  WatchPage: queryForWatchProps,
+  SpeakersPage: queryForSpeakersProps,
+  VolunteerPage: queryForVolunteerProps,
+  PartnersPage: queryForPartnersProps,
+  PrivacyPolicyPage: queryForPrivacyPolicyProps,
+  CookiePolicyPage: queryForCookiePolicyProps,
 };
 
 export const createPages = async ({ actions, graphql }) => {
@@ -74,6 +98,27 @@ export const createPages = async ({ actions, graphql }) => {
       createPage({
         path: `event/${slug}`,
         component: path.resolve(`src/templates/EventPage.tsx`),
+        context: {
+          props,
+        },
+      });
+    })
+  );
+
+  const talksResult = await graphql(talksQuery);
+  if (talksResult.errors) {
+    talksResult.errors.forEach((e) => console.error(e.toString()));
+    throw talksResult.errors;
+  }
+
+  const talks = talksResult.data.allTalksYaml.nodes;
+  await Promise.all(
+    talks.map(async (node) => {
+      const slug = node.slug;
+      const props = await queryForTalkProps(graphql, node.slug);
+      createPage({
+        path: `talk/${slug}`,
+        component: path.resolve(`src/templates/TalkPage.tsx`),
         context: {
           props,
         },

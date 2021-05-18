@@ -1,13 +1,13 @@
 import React from "react";
 import { FluidObject, FixedObject } from "gatsby-image";
-import { Page } from "@/components/shared/Page";
+import { Page } from "./Page";
 import { splitTextInTwo } from "../utils";
-import { EventHero } from "@/components/EventHero";
-import { SuggestedEvent } from "@/components/SuggestedEvent";
+import { EventHero } from "@/components/Event/EventHero";
+import { SuggestedEvent } from "@/components/Event/SuggestedEvent";
 import {
   BecomePartner,
   PartnershipTeamMember,
-} from "@/components/BecomePartner/BecomePartner";
+} from "@/components/Event/BecomePartner";
 import { Partners } from "@/components/shared/Partners";
 import {
   Newsletter,
@@ -15,9 +15,12 @@ import {
   NewsletterVariant,
 } from "@/components/shared/Newsletter";
 import { Banner, BannerVariant } from "@/components/shared/Banner";
-import { EventPlace, EventPlaceProps } from "@/components/EventPlace";
-import { EventSpeakers, EventSpeakersProps } from "@/components/EventSpeakers";
-import { HeroSection } from "@/components/HeroSection";
+import { EventPlace, EventPlaceProps } from "@/components/Event/EventPlace";
+import {
+  EventSpeakers,
+  EventSpeakersProps,
+} from "@/components/Event/EventSpeakers";
+import { HeroSection } from "@/components/shared/HeroSection";
 import moment from "moment";
 import { JoinSpeakersSectionProps } from "@/queries/globalQueries/JoinSpeakersQuery";
 import { CoverVariant } from "@/types";

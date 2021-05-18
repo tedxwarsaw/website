@@ -22,7 +22,7 @@ export const CardEventAttend = ({
   date,
   category,
 }: CardEventAttendProps) => {
-  const dateConverted = moment(date);
+  const dateConverted = moment(date, "DD/MM/YYYY");
 
   return (
     <div className="relative pt-2 md:pt-3 pb-5 border-b-4 border-customTransparent  hover:border-customRed h-full flex flex-col">

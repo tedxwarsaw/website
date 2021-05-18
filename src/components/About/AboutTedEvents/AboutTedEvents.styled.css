@@ -1,0 +1,18 @@
+.line {
+  border: 1px solid black;
+  width: 100%;
+  height: 1px;
+  background: black;
+}
+
+.about-ted-events-title-bold strong {
+  color: theme("colors.customRed");
+}
+
+.anchor-red a {
+  color: theme("colors.customRed");
+}
+
+.anchor-red a:hover {
+  opacity: 0.5;
+}

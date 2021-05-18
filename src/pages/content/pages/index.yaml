@@ -20,22 +20,10 @@ ourStoryItems:
     text: speakers
   - boldText: "1"
     text: marriage proposal on stage
-recommendations:
-  events:
-    - eventSlug: "2020"
-      order: 2
-  talks:
-    - talkSlug: "baby-do-garow"
-      order: 1
-    - talkSlug: "open-your-eyes"
-      order: 3
-    - talkSlug: "test-talk"
-      order: 4
-eventSlug: "2020"
 youtubeBannerHeading: We have <b>2mln+</b> views on YouTube
 youtubeBannerLinkText: Watch all talks
 youtubeBannerLinkUrl: www.youtube.com
-joinUsTitle: "Join TEXx Warsaw."
+joinUsTitle: "Join **TEDx Warsaw**."
 joinUsSubtitle: "Become our volunteer and enter the amazing world of TEDx"
 joinUsImagePath: "images/uploads/joinus.png"
 joinUsImageDesktopPath: "images/uploads/joinus.png"
