@@ -57,7 +57,7 @@ export const FilterList = ({
           selectedValue={activeSorting}
           handleOnChange={sortTalks}
           noBorder
-          className="w-36 text-centered-bold search-bar-sticky"
+          className="w-36 text-centered-bold search-bar-sticky xl:ml-0"
         />
       </div>
     </div>

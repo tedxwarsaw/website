@@ -22,6 +22,9 @@
   }
   .sticky-search-bar .filters-list {
     padding: 0;
+    width: 100vw;
+    padding-left: var(--side-gap);
+    padding-right: var(--side-gap);
   }
   .search-bar-sticky {
     margin-top: 0;
