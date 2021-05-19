@@ -40,6 +40,13 @@ export const pageQuery = `#graphql
       joinOurPartnersText
       joinOurPartnersLink
       partnerLogoPaths
+      eventSlug
+      centerTextSectionTitle
+      centerTextSectionContent
+      centerTextSectionButtonText
+      centerTextSectionButtonLink
+      centerTextSectionButtonTextSecond
+      centerTextSectionButtonLinkSecond
     }
   }
 `;

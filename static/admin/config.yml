@@ -136,12 +136,16 @@ collections:
                 }
           - label: "CenterTextSection title"
             name: "centerTextSectionTitle"
-            widget: string
           - label: "CenterTextSection content"
             name: "centerTextSectionContent"
-            widget: string,
           - label: "CenterTextSection button link"
             name: "centerTextSectionButtonLink"
+          - label: "CenterTextSection button text"
+            name: "centerTextSectionButtonText"
+          - label: "CenterTextSection button link"
+            name: "centerTextSectionButtonLinkSecond"
+          - label: "CenterTextSection button text"
+            name: "centerTextSectionButtonTextSecond"
       - label: "Attend"
         name: "attend"
         file: "src/pages/content/pages/attend.yaml"
