@@ -23,6 +23,7 @@
   .sticky-search-bar .filters-list {
     padding: 0;
     width: 100vw;
+    margin: 0;
     padding-left: var(--side-gap);
     padding-right: var(--side-gap);
   }
