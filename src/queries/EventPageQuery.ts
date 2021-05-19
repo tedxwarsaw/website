@@ -50,7 +50,10 @@ const secondQuery = `#graphql
           link
         }
       }
-      partnerLogoPaths
+      partnerLogoPaths {
+        partnerName
+        partnerLogoPath
+      }
       isOnline
       location {
         city
@@ -107,12 +110,12 @@ export const queryForProps = async (
   };
 
   const partnerLogosDesktop: any = await Promise.all(
-    event.partnerLogoPaths.map(
+    event.partnerLogoPaths.map(x => x.partnerLogoPath).map(
       async (path) => await getFixedImage({ graphql, path, height: 60 })
     )
   );
   const partnerLogos: any = await Promise.all(
-    event.partnerLogoPaths.map(
+    event.partnerLogoPaths.map(x => x.partnerLogoPath).map(
       async (path) => await getFixedImage({ graphql, path, height: 30 })
     )
   );

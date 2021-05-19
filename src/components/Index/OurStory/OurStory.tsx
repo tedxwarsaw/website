@@ -1,20 +1,30 @@
 import React from "react";
 import { OurStoryProps } from "./OurStory.types";
+import Img from "gatsby-image";
+import {Link} from "gatsby";
 
-export const OurStory = ({ ourStoryTitle, ourStoryItems }: OurStoryProps) => (
-  <div className="bg-customLightGrey main-grid-full-span">
-    <div className="main-grid">
-      <div className="flex flex-wrap justify-start md:justify-center items-center py-10">
-        <p className="mb-5 md:mb-0 md:text-lg md:mx-5 w-full md:w-auto">
-          {ourStoryTitle}
-        </p>
-        {ourStoryItems.map((item) => (
-          <div className="flex mr-5 md:mx-5 items-center " key={item.text}>
-            <p className="font-bold md:text-lg mr-1">{item.boldText}</p>
-            <p className="md:text-lg">{item.text}</p>
-          </div>
-        ))}
-      </div>
+export const OurStory = ({ ourStoryTitle, ourStoryItems }: OurStoryProps) => {
+
+    let items = [];
+    items.push(<p>{ourStoryTitle}</p>);
+    ourStoryItems.forEach(item => {
+        items.push(<p className="md:text-lg"><b>{item.boldText}</b> {item.text}</p>);
+    });
+
+    let storyItems = [];
+
+    for(let i = 0; i < items.length; i += 2){
+        storyItems.push([
+            <div style={{display: "inline-block"}}>{items[i]}</div>,
+            <div style={{display: "inline-block"}} className={"ml-20"}>{items[i+1]}</div>
+        ]);
+    }
+
+    return <div className="bg-customLightGrey main-grid-full-span pt-10 pb-10">
+        <div className="main-grid">
+            <div className="inner-grid">
+                {storyItems.map(item => <div>{item}</div>)}
+            </div>
+        </div>
     </div>
-  </div>
-);
+};

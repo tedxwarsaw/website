@@ -19,5 +19,5 @@ meetUsContent: We hope to connect you to our knowledge thirsty audience and unco
 meetUsImageUrl: images/uploads/meet-us-banner.png
 meetUsImageUrlDesktop: images/uploads/meet-us-banner.png
 meetUsImageAlt: Cover image
-meetUsButtonText: Get to know our team
-meetUsButtonLink: /meet-ud
+meetUsButtonText: Get to know our team ->
+meetUsButtonLink: /about#meet-us-section

@@ -53,7 +53,7 @@ export const JoinUs = ({
             style={{ width: "fit-content" }}
           >
             <span className="my-auto flex items-center">
-              {joinUsGetToKnowOurTeamText} <FaArrowRight className="ml-3 " />
+              {joinUsGetToKnowOurTeamText}
             </span>
           </a>
           {joinUsBecomeSpeakerLink && <a
@@ -62,7 +62,7 @@ export const JoinUs = ({
             style={{ width: "fit-content" }}
           >
             <span className="my-auto flex items-center">
-              {joinUsBecomeSpeakerText} <FaArrowRight className="ml-3 " />
+              {joinUsBecomeSpeakerText}
             </span>
           </a>}
         </div>

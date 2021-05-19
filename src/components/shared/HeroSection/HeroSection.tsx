@@ -65,7 +65,7 @@ export const HeroSection = ({
                   key={heroLink.displayName}
                 >
                   <span className="my-auto flex items-center">
-                    {heroLink.displayName} <FaArrowRight className="ml-3 " />
+                    {heroLink.displayName + ' ->'}
                   </span>
                 </a>
               ))}

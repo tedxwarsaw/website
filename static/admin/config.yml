@@ -2,6 +2,7 @@ backend:
   name: gitlab
   preview_context: preview_status
   repo: tedxwarsaw/tedxwarsaw.gitlab.io
+local_backend: true
 publish_mode: editorial_workflow
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
@@ -122,12 +123,25 @@ collections:
             widget: string
           - name: partnerLogoPaths
             label: Partner Logos
-            widget: image
-            allow_multiple: true
-            media_folder: "photos/partnerLogos"
-            media_library:
-              config:
-                multiple: true
+            widget: "list"
+            required: false
+            fields:
+              - { label: "name", name: "partnerName", widget: "string", required: false }
+              - {
+                label: "Partner Logo",
+                name: "partnerLogoPath",
+                widget: "image",
+                allow_multiple: false,
+                media_folder: "events/{{slug}}/partnerLogos",
+                }
+          - label: "CenterTextSection title"
+            name: "centerTextSectionTitle"
+            widget: string
+          - label: "CenterTextSection content"
+            name: "centerTextSectionContent"
+            widget: string,
+          - label: "CenterTextSection button link"
+            name: "centerTextSectionButtonLink"
       - label: "Attend"
         name: "attend"
         file: "src/pages/content/pages/attend.yaml"
@@ -749,7 +763,7 @@ collections:
       - label: "Event category"
         name: "category"
         widget: "select"
-        options: ["Live", "Conference", "Salon"]
+        options: ["Live", "Conference", "Salon", "Circle"]
       - name: city
         label: City
         widget: string
@@ -889,17 +903,10 @@ collections:
           - name: buttonUrl
             widget: string
             label: Button URL
-      - name: partnerLogoPaths
-        label: Partner Logos
-        widget: image
-        allow_multiple: true
-        media_folder: "events/{{slug}}/partnerLogos"
-        media_library:
-          config:
-            multiple: true
       - name: speakers
         label: Event speakers
         widget: "list"
+        required: true
         fields:
           - { label: "Speaker's name", name: "speakerName", widget: "string" }
           - {
@@ -908,6 +915,19 @@ collections:
               widget: "image",
               allow_multiple: false,
               media_folder: "events/{{slug}}/speakerPhotos",
+            }
+      - name: partnerLogoPaths
+        label: Partner Logos
+        widget: "list"
+        required: false
+        fields:
+          - { label: "name", name: "partnerName", widget: "string", required: false }
+          - {
+            label: "Partner Logo",
+            name: "partnerLogoPath",
+            widget: "image",
+            allow_multiple: false,
+            media_folder: "events/{{slug}}/partnerLogos",
             }
   - label: "Talks"
     name: talks

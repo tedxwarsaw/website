@@ -1,0 +1,21 @@
+.partners-img-mobile-container{
+    margin-left: -15px;
+}
+
+.partners-img-desktop-container{
+    margin-left: -30px;
+}
+
+.partners-img-mobile{
+    filter: grayscale(100%);
+    margin: 15px;
+}
+
+.partners-img-desktop{
+    filter: grayscale(100%);
+    margin: 30px;
+}
+
+.partners-img-desktop img {
+    max-height: 50px;
+}

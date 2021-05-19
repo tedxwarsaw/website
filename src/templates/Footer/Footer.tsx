@@ -54,7 +54,7 @@ export const FooterTemplate = (props: Props) => (
                 to={`/event/${props.featuredEvent.slug}`}
                 className="text-red-500 font-bold hover:opacity-50"
               >
-                Join <FaArrowRight className="inline" />
+                Join {'->'}
               </Link>
             </div>
           </Column>
@@ -65,7 +65,7 @@ export const FooterTemplate = (props: Props) => (
                 href="#newsletter"
                 className="text-red-500 font-bold hover:opacity-50"
               >
-                Join <FaArrowRight className="inline" />
+                Join {'->'}
               </a>
             </div>
           </Column>

@@ -41,8 +41,41 @@ callToAction:
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
-partnerLogoPaths: 
-  - events/looking-in-looking-out-2011/partnerLogos/blank.png
+partnerLogoPaths:
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-1.png
+  - partnerName: logo2
+    partnerLogoPath: events/2020/partnerLogos/logo-2.png
+  - partnerName: logo3
+    partnerLogoPath: events/2020/partnerLogos/logo-3.png
+  - partnerName: logo4
+    partnerLogoPath: events/2020/partnerLogos/logo-4.png
+  - partnerName: logo5
+    partnerLogoPath: events/2020/partnerLogos/logo-5.png
+  - partnerName: logo6
+    partnerLogoPath: events/2020/partnerLogos/logo-6.png
+  - partnerName: logo7
+    partnerLogoPath: events/2020/partnerLogos/logo-7.png
+  - partnerName: logo8
+    partnerLogoPath: events/2020/partnerLogos/logo-8.png
+  - partnerName: logo9
+    partnerLogoPath: events/2020/partnerLogos/logo-9.png
+  - partnerName: logo10
+    partnerLogoPath: events/2020/partnerLogos/logo-10.png
+  - partnerName: logo11
+    partnerLogoPath: events/2020/partnerLogos/logo-11.png
+  - partnerName: logo12
+    partnerLogoPath: events/2020/partnerLogos/logo-12.png
+  - partnerName: logo13
+    partnerLogoPath: events/2020/partnerLogos/logo-13.png
+  - partnerName: logo14
+    partnerLogoPath: events/2020/partnerLogos/logo-14.png
+  - partnerName: logo15
+    partnerLogoPath: events/2020/partnerLogos/logo-15.png
+  - partnerName: logo16
+    partnerLogoPath: events/2020/partnerLogos/logo-16.png
+  - partnerName: logo17
+    partnerLogoPath: events/2020/partnerLogos/logo-17.png
 speakers:
   - speakerName: Unknown
     speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png

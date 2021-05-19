@@ -64,8 +64,7 @@ export const CardEvent = ({
         style={{ width: "fit-content" }}
       >
         <span className="my-auto flex items-center">
-          Learn more
-          <FaArrowRight className="ml-3" />
+          Learn more {'->'}
         </span>
       </Link>
     </div>

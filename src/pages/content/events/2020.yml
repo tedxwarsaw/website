@@ -1,7 +1,7 @@
 collectionId: event
-slug: '2020'
+slug: "2020"
 displayName: TEDxWarsaw 2020
-category: "Live"
+category: Live
 city: Warsaw
 date: 12/04/2021
 time: 18:00-22:00
@@ -46,23 +46,40 @@ callToAction:
   buttonText: Buy now
   buttonUrl: https://example.com/
 partnerLogoPaths:
-  - events/2020/partnerLogos/logo-1.png
-  - events/2020/partnerLogos/logo-2.png
-  - events/2020/partnerLogos/logo-3.png
-  - events/2020/partnerLogos/logo-4.png
-  - events/2020/partnerLogos/logo-5.png
-  - events/2020/partnerLogos/logo-6.png
-  - events/2020/partnerLogos/logo-7.png
-  - events/2020/partnerLogos/logo-8.png
-  - events/2020/partnerLogos/logo-9.png
-  - events/2020/partnerLogos/logo-10.png
-  - events/2020/partnerLogos/logo-11.png
-  - events/2020/partnerLogos/logo-12.png
-  - events/2020/partnerLogos/logo-13.png
-  - events/2020/partnerLogos/logo-14.png
-  - events/2020/partnerLogos/logo-15.png
-  - events/2020/partnerLogos/logo-16.png
-  - events/2020/partnerLogos/logo-17.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-1.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-2.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-3.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-4.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-5.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-6.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-7.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-8.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-9.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-10.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-11.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-12.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-13.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-14.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-15.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-16.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-17.png
 speakers:
   - speakerName: Luiza Brown
     speakerPhotoPath: events/2020/speakerPhotos/woman.jpg

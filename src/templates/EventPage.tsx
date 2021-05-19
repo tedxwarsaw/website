@@ -105,11 +105,13 @@ export const EventPageTemplate = (props: Props) => {
         buttonUrl={props.callToAction.buttonUrl}
       />
 
-      <Partners
-        partnerSectionTitle="Event partners"
-        partnerLogos={props.partnerLogos}
-        partnerLogosDesktop={props.partnerLogosDesktop}
-      />
+      {
+        props.partnerLogos.length !== 0 && <Partners
+            partnerSectionTitle="Event partners"
+            partnerLogos={props.partnerLogos}
+            partnerLogosDesktop={props.partnerLogosDesktop}
+        />
+      }
 
       {isFutureEvent && (
         <>
