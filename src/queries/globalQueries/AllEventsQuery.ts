@@ -53,9 +53,15 @@ export const queryForAllEvents = async (
       return { ...event, cover };
     })
   );
+  const sortedEventData = [...eventsData];
+  sortedEventData.sort(
+    (a, b) =>
+      new Date(...b.date.split("/").reverse()).getTime() -
+      new Date(...a.date.split("/").reverse()).getTime()
+  );
 
   return {
-    events: [...eventsData],
+    events: sortedEventData,
     categories: [...new Set(everyCategory)],
   };
 };
