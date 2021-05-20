@@ -134,6 +134,7 @@ export const AttendPageTemplate = (props: Props) => (
     />
 
     <EventsList events={props.events} categories={props.categories} />
+
     <div className="main-grid-full-span bg-customLightGrey py-10">
       <div className="flex main-grid">
         <div className="px-5 md:px-0 ">

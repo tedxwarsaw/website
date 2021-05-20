@@ -57,10 +57,18 @@ export const CardEventAttend = ({
 
       <div className="flex items-center mt-auto">
         <Link
+            to={`/watch?eventSlug=${slug}`}
+            className="text-customRed text-sm flex hover:opacity-50 items-center mr-6"
+        >
+          <span className="text-customRed font-bold">
+            {'Watch talks ->'}
+          </span>
+        </Link>
+        <Link
           to={`/event/${slug}`}
           className="text-customRed text-sm flex hover:opacity-50 items-center "
         >
-          <span className="text-customRed">
+          <span className="text-customRed font-bold">
             Read more <HiMenuAlt2 className="inline w-6 h-6" />
           </span>
         </Link>

@@ -38,7 +38,7 @@ getToKnowOurPartnersText: "Get to know our partners ->"
 getToKnowOurPartnersLink: "/join"
 joinOurPartnersText: "Join our partners"
 joinOurPartnersLink: "/join"
-partnerLogoPaths:
+partnerLogos:
   - events/2020/partnerLogos/logo-1.png
   - events/2020/partnerLogos/logo-2.png
   - events/2020/partnerLogos/logo-3.png

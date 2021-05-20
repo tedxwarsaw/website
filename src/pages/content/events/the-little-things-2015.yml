@@ -36,7 +36,7 @@ callToAction:
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
-partnerLogoPaths:
+partnerLogos:
   - partnerName: logo1
     partnerLogoPath: events/2020/partnerLogos/logo-1.png
   - partnerName: logo1
@@ -102,3 +102,4 @@ speakers:
     speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
   - speakerName: Tomasz Kopyra
     speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
+ticketProviderLogo: images/uploads/evenea2.png

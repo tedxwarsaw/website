@@ -50,7 +50,7 @@ const secondQuery = `#graphql
           link
         }
       }
-      partnerLogoPaths {
+      partnerLogos {
         partnerName
         partnerLogoPath
       }
@@ -111,14 +111,14 @@ export const queryForProps = async (
   };
 
   const partnerLogosDesktop: any = await Promise.all(
-    event.partnerLogoPaths.map(x => x.partnerLogoPath).map(
-      async (path) => await getFixedImage({ graphql, path, height: 60 })
+    event.partnerLogos.map(
+      async (logo) => await getFixedImage({ graphql, path: logo.partnerLogoPath, height: 60 })
     )
   );
 
   const partnerLogos: any = await Promise.all(
-    event.partnerLogoPaths.map(x => x.partnerLogoPath).map(
-      async (path) => await getFixedImage({ graphql, path, height: 30 })
+    event.partnerLogos.map(
+      async (logo) => await getFixedImage({ graphql, path: logo.partnerLogoPath, height: 30 })
     )
   );
 

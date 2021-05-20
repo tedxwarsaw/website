@@ -121,7 +121,7 @@ collections:
           - label: Join our partners link
             name: joinOurPartnersLink
             widget: string
-          - name: partnerLogoPaths
+          - name: partnerLogos
             label: Partner Logos
             widget: "list"
             required: false
@@ -920,7 +920,7 @@ collections:
               allow_multiple: false,
               media_folder: "events/{{slug}}/speakerPhotos",
             }
-      - name: partnerLogoPaths
+      - name: partnerLogos
         label: Partner Logos
         widget: "list"
         required: false

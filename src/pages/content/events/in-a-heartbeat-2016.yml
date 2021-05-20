@@ -40,7 +40,7 @@ callToAction:
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
-partnerLogoPaths:
+partnerLogos:
   - partnerName: logo1
     partnerLogoPath: events/2020/partnerLogos/logo-1.png
   - partnerName: logo1
@@ -110,3 +110,4 @@ speakers:
     speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
   - speakerName: Paweł Potoroczyn
     speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png
+ticketProviderLogo: images/uploads/evenea2.png

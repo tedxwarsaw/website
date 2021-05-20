@@ -44,7 +44,7 @@ callToAction:
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
-partnerLogoPaths:
+partnerLogos:
   - partnerName: logo1
     partnerLogoPath: events/2020/partnerLogos/logo-1.png
   - partnerName: logo1
@@ -104,3 +104,4 @@ speakers:
     speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_kierner.png
   - speakerName: Miguel Cano
     speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_miguel.png
+ticketProviderLogo: images/uploads/evenea2.png

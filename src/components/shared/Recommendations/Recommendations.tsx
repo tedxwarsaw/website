@@ -11,7 +11,7 @@ export const Recommendations = ({
 }: RecommendationsProps) => {
   return (
     <div className={`my-10 main-grid-full-span recommendations-container ${className && className}`}>
-      <h2 className="font-medium text-2xl md:text-3xl font-bold w-32">
+      <h2 className="font-medium text-2xl md:text-3xl font-bold">
         {recommendationsTitle ? recommendationsTitle : "TEDxWarsaw Recommends"}
       </h2>
       <RecommendationsSlider>

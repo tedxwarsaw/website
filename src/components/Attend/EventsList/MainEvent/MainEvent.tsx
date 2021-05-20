@@ -59,7 +59,7 @@ export const MainEvent = ({
             to={`/event/${slug}`}
             className="text-customRed text-sm flex hover:opacity-50 items-center my-5 xl:my-0"
           >
-            <span className="text-customRed">
+            <span className="text-customRed font-bold">
               Read more <HiMenuAlt2 className="inline w-6 h-6" />
             </span>
           </Link>

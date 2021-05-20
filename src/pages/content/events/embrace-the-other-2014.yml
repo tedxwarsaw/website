@@ -36,7 +36,7 @@ callToAction:
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
-partnerLogoPaths:
+partnerLogos:
   - partnerName: logo1
     partnerLogoPath: events/2020/partnerLogos/logo-1.png
   - partnerName: logo1
@@ -74,3 +74,4 @@ partnerLogoPaths:
 speakers:
   - speakerName: Unknown
     speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
+ticketProviderLogo: images/uploads/evenea2.png

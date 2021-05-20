@@ -39,7 +39,7 @@ export const pageQuery = `#graphql
       getToKnowOurPartnersLink
       joinOurPartnersText
       joinOurPartnersLink
-      partnerLogoPaths
+      partnerLogos
       eventSlug
       centerTextSectionTitle
       centerTextSectionContent
@@ -147,13 +147,13 @@ export const queryForProps = async (
   });
 
   const partnerLogos: any = await Promise.all(
-    pagesYaml.partnerLogoPaths.map(
+    pagesYaml.partnerLogos.map(
       async (path) => await getFixedImage({ graphql, path, height: 30 })
     )
   );
 
   const partnerLogosDesktop: any = await Promise.all(
-    pagesYaml.partnerLogoPaths.map(
+    pagesYaml.partnerLogos.map(
       async (path) => await getFixedImage({ graphql, path, height: 60 })
     )
   );
