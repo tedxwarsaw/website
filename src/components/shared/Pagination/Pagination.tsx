@@ -32,7 +32,9 @@ export const Pagination = ({
           currentPage === 1
             ? "text-customGrey pointer-events-none"
             : "text-customRed cursor-pointer"
-        }`}
+        }
+        ${numberOfPages <= 3 ? "previous-button-hidden" : ""}
+        `}
         onClick={() => handlePageClick({ selected: 0 })}
       >
         <BiChevronsLeft />
@@ -74,7 +76,9 @@ export const Pagination = ({
           currentPage >= numberOfPages - 1
             ? "text-customGrey pointer-events-none"
             : "text-customRed cursor-pointer"
-        }`}
+        }
+        ${numberOfPages <= 3 ? "previous-button-hidden" : ""}
+        `}
         onClick={() => handlePageClick({ selected: numberOfPages - 2 })}
       >
         <BiChevronsRight />

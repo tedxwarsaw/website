@@ -25,3 +25,7 @@
 .pagination > .active {
   color: theme("colors.customRed");
 }
+
+.previous-button-hidden {
+  display: none !important;
+}
