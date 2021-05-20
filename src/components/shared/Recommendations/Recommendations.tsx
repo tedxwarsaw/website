@@ -16,7 +16,7 @@ export const Recommendations = ({
       </h2>
       <RecommendationsSlider>
         {recommendations.map(({ item, order }) => (
-          <div key={order} className="h-full">
+          <div key={order} className="h-full card-container">
             {item?.speaker ? (
               <CardTalk
                 slug={item.slug}
@@ -36,6 +36,7 @@ export const Recommendations = ({
                 date={item.date}
               />
             )}
+            <div className={"red-border"}/>
           </div>
         ))}
       </RecommendationsSlider>
