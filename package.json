@@ -13,7 +13,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "restart": "gatsby clean & yarn start"
+    "restart": "gatsby clean & yarn start",
+    "netlify-proxy": "npx netlify-cms-proxy-server"
   },
   "dependencies": {
     "@fontsource/inter": "^4.2.1",
