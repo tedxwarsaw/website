@@ -151,6 +151,7 @@ export const queryForProps = async (
       async (path) => await getFixedImage({ graphql, path, height: 30 })
     )
   );
+
   const partnerLogosDesktop: any = await Promise.all(
     pagesYaml.partnerLogoPaths.map(
       async (path) => await getFixedImage({ graphql, path, height: 60 })

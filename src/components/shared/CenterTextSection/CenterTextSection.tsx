@@ -15,8 +15,8 @@ export interface CenterTextSectionProps {
     background?: string;
 }
 
-export const CenterTextSection = (props : CenterTextSectionProps) => (
-    <div className="main-grid-full-span bg-customLightGrey">
+export const CenterTextSection = (props : CenterTextSectionProps) => {
+    return <div className="main-grid-full-span bg-customLightGrey">
         <div className="main-grid centerTextSection pt-14 pb-14">
             <ReactMarkdown rehypePlugins={[rehypeRaw]} className="mt-10 centerText text-2xl md:text-3xl font-bold">
                 {props.centerTextSectionTitle}
@@ -39,4 +39,4 @@ export const CenterTextSection = (props : CenterTextSectionProps) => (
             }
         </div>
     </div>
-);
+};

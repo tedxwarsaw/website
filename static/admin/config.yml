@@ -933,6 +933,12 @@ collections:
             allow_multiple: false,
             media_folder: "events/{{slug}}/partnerLogos",
             }
+      - name: ticketProviderLogo
+        label: Ticket Provider Logo
+        widget: "image"
+        allow_multiple: false
+        media_folder: "images/uploads"
+        required: false
   - label: "Talks"
     name: talks
     folder: "src/pages/content/talks"

@@ -58,6 +58,7 @@ export interface Props
   };
   isOnline: boolean;
   joinSpeakers: JoinSpeakersSectionProps;
+  ticketProviderLogo: FixedObject;
 }
 
 export interface SuggestedEvent {
@@ -71,7 +72,6 @@ export const EventPageTemplate = (props: Props) => {
   const dateConverted = moment(props.date, "DD/MM/YYYY");
   const today = moment(new Date(), "DD/MM/YYYY");
   const isFutureEvent = today < dateConverted;
-
   return (
     <Page>
       <EventHero
@@ -103,6 +103,7 @@ export const EventPageTemplate = (props: Props) => {
         subtitle={props.callToAction.subtitle}
         buttonText={props.callToAction.buttonText}
         buttonUrl={props.callToAction.buttonUrl}
+        logo={props.ticketProviderLogo}
       />
 
       {
@@ -122,6 +123,7 @@ export const EventPageTemplate = (props: Props) => {
             subtitle="Become our volunteer and enter the amazing world of TEDx"
             buttonText="Get involved as a volonteer"
             buttonUrl="/"
+            logo={props.ticketProviderLogo}
           />
         </>
       )}

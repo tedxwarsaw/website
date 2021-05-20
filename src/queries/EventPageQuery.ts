@@ -65,6 +65,7 @@ const secondQuery = `#graphql
         speakerName
         speakerPhotoPath
       }
+      ticketProviderLogo
     }
     suggestedEventInfo: eventsYaml(slug: {eq: $suggestedEventSlug}) {
       slug
@@ -114,11 +115,17 @@ export const queryForProps = async (
       async (path) => await getFixedImage({ graphql, path, height: 60 })
     )
   );
+
   const partnerLogos: any = await Promise.all(
     event.partnerLogoPaths.map(x => x.partnerLogoPath).map(
       async (path) => await getFixedImage({ graphql, path, height: 30 })
     )
   );
+
+  let ticketProviderLogo : any;
+  if(event.ticketProviderLogo) {
+    ticketProviderLogo = await getFixedImage({ graphql, path: event.ticketProviderLogo, height: 15 });
+  }
 
   const cover: any = {
     ...event.cover,
@@ -173,5 +180,6 @@ export const queryForProps = async (
     eventSpeakers,
     ...newsletter,
     joinSpeakers,
+    ticketProviderLogo
   };
 };
