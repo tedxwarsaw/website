@@ -1,18 +1,7 @@
 import { useState, useEffect } from "react";
 import { usePagination } from "@/components/shared/Pagination";
 import { durationFilters } from "@/components/Watch/helpers";
-import qs from "query-string";
-
-const updateQueryParams = (queryParams) => {
-  var newurl =
-    window.location.protocol +
-    "//" +
-    window.location.host +
-    window.location.pathname +
-    "?" +
-    queryParams;
-  window.history.pushState({ path: newurl }, "", newurl);
-};
+import { useQueryParameters } from "@/hooks/useQueryParameters";
 
 export const useWatch = (talks) => {
   const [filteredTalks, setFilteredTalks] = useState(talks);
@@ -26,7 +15,8 @@ export const useWatch = (talks) => {
     filteredTalks,
     21
   );
-  const params = qs.parse(window.location.search);
+
+  const { qs, params, updateQueryParams } = useQueryParameters();
 
   const filterTalks = (
     searchPhrase: string,
@@ -67,8 +57,8 @@ export const useWatch = (talks) => {
     }
     setFilteredTalks(talksFiltered);
 
-    const params = qs.stringify(filters);
-    updateQueryParams(params);
+    const paramsString = qs.stringify(filters);
+    updateQueryParams(paramsString);
     // location.search = params;
   };
 
@@ -86,7 +76,6 @@ export const useWatch = (talks) => {
   };
 
   useEffect(() => {
-    console.log(activeFilters);
     filterTalks(
       params?.searchPhrase,
       params?.eventSlug,
