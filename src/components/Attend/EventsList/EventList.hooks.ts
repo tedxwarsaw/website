@@ -28,7 +28,9 @@ export const useEventList = (events) => {
   };
 
   useEffect(() => {
-    filterEvents(params.eventKind);
+    if (params.eventKind) {
+      filterEvents(params.eventKind);
+    }
   }, []);
 
   return {
