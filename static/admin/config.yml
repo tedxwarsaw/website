@@ -18,12 +18,15 @@ collections:
           - label: "Hero title"
             name: "heroTitle"
             widget: "string"
+            required: true
           - label: "Hero subtitle"
             name: "heroSubtitle"
             widget: "string"
+            required: true
           - label: "Hero button text"
             name: "heroButtonText"
             widget: "string"
+            required: true
           - label: "Hero button link"
             name: "heroButtonLink"
             widget: "string"

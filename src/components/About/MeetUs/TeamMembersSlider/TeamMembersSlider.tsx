@@ -72,7 +72,7 @@ export const TeamMembersSlider = ({
                   />
                 </div>
                 <div className="p-5 bg-white team-member-details-container">
-                  <h2 className="text-2xl font-semibold">{member.name}</h2>
+                  <h2 className="font-semibold">{member.name}</h2>
                   <span className="block text-2xl font-light mb-10">
                     {member.title}
                   </span>

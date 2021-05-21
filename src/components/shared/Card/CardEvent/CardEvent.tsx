@@ -20,7 +20,7 @@ export const CardEvent = ({
   displayName,
   date,
 }: CardEventProps) => (
-  <div className=" pt-2 md:pt-3 pb-5 border-b-4 border-customTransparent h-full flex flex-col">
+  <div className="pt-2 md:pt-3 pb-5 border-b-4 border-customTransparent h-full flex flex-col">
     <Link to={`/event/${slug}`}>
       <div className="relative card-image-container">
         <Img

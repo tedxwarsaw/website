@@ -27,7 +27,7 @@ export const Partners = ({
 }: PartnersProps) => (
   <div className="py-20 space-y-6">
     <div className="flex justify-between pb-6">
-      <h2 className="font-medium text-2xl md:text-3xl">
+      <h2 className="font-medium">
         {partnerSectionTitle}
       </h2>
       {showLinks && (

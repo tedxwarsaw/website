@@ -29,7 +29,7 @@ export const Banner = ({
       }`}
   >
     <div className={`text-center ${variant === BannerVariant.white ? "" : "text-white"}`}>
-      <h2 className="text-3xl xl:text-4xl md:max-w-xl font-bold">{title}</h2>
+      <h2 className="md:max-w-xl font-bold">{title}</h2>
       {subtitle && (
           <p className={`${variant === BannerVariant.white ? "" : "font-medium text-4xl"}`}>
             {subtitle}

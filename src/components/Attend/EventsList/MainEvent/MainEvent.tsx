@@ -52,7 +52,7 @@ export const MainEvent = ({
           </span>
           <span>{dateConverted.format("MMM Do, YYYY")}</span>
         </div>
-        <h2 className="text-2xl md:text-3xl my-5 xl:my-0">{displayName}</h2>
+        <h2 className="my-5 xl:my-0">{displayName}</h2>
         <p>{descriptionSplit[0]}</p>
         <div>
           <Link
