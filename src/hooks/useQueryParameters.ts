@@ -7,7 +7,7 @@ export const useQueryParameters = () => {
   useEffect(() => {
     const queryParams = qs.parse(window?.location.search);
     setParams(queryParams);
-  });
+  }, []);
 
   const updateQueryParams = (queryParams) => {
     var newurl =

@@ -28,7 +28,9 @@ export const EventsList = ({ events, categories }: EventsListProps) => {
           <div className="my-10 inner-grid gap-5">
             {eventsToShow.map((event, index) => {
               if (index === 0 && currentPage === 1) {
-                return <MainEvent event={event} />;
+                return (
+                  <MainEvent event={event} key={event.displayName + index} />
+                );
               } else {
                 return (
                   <CardEventAttend
