@@ -34,6 +34,7 @@ const eventQuery = `#graphql
     }
   }
 `;
+
 const talksQuery = `#graphql
   query Events {
     allTalksYaml(filter: {collectionId: {eq: "talk"}}) {
@@ -84,7 +85,9 @@ export const createPages = async ({ actions, graphql }) => {
     })
   );
 
+
   const eventsResult = await graphql(eventQuery);
+
   if (eventsResult.errors) {
     eventsResult.errors.forEach((e) => console.error(e.toString()));
     throw eventsResult.errors;
@@ -106,6 +109,7 @@ export const createPages = async ({ actions, graphql }) => {
   );
 
   const talksResult = await graphql(talksQuery);
+
   if (talksResult.errors) {
     talksResult.errors.forEach((e) => console.error(e.toString()));
     throw talksResult.errors;
@@ -118,7 +122,7 @@ export const createPages = async ({ actions, graphql }) => {
       const props = await queryForTalkProps(graphql, node.slug);
       createPage({
         path: `talk/${slug}`,
-        component: path.resolve(`src/templates/TalkPage.tsx`),
+        component: path.resolve(`src/templates/TalkPage.tsx`) ,
         context: {
           props,
         },

@@ -14,7 +14,7 @@ export const PastEvents = ({
   pastEventsItems,
 }: PastEventsProps) => (
   <div className="my-16">
-    <h2 className="text-3xl md:text-4xl mb-5 xl:mb-10 font-bold">
+    <h2 className="mb-5 xl:mb-10 font-bold">
       {pastEventsSectionTitle}
     </h2>
     <div className="inner-grid">

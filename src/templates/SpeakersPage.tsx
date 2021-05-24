@@ -58,7 +58,7 @@ export const SpeakersPageTemplate = (props: Props) => (
       howDoesItWorkSteps={props.howDoesItWorkSteps}
     />
     <Recommendations
-      recommendationsTitle={props.recommendationsTitle}
+      recommendationsTitle={"Watch past speakers"}
       recommendations={props.recommendations}
       className={"mb-20"}
     />

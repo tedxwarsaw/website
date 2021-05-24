@@ -36,8 +36,43 @@ callToAction:
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
-partnerLogoPaths:
-  - events/inspire-to-be-inspired-2012/partnerLogos/partners.png
+partnerLogos:
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-1.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-2.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-3.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-4.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-5.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-6.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-7.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-8.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-9.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-10.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-11.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-12.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-13.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-14.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-15.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-16.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-17.png
 speakers:
   - speakerName: Unknown
     speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
+ticketProviderLogo: images/uploads/evenea2.png
+eventPhotos: []

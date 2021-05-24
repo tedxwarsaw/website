@@ -5,7 +5,7 @@ talkDescription: "Jak to jest z agresją w telewizji: interesuje widza, i dlateg
   telewizja decyduje się na jej serwowanie, czy jest zupełnie odwrotnie?"
 youtubeVideoId: https://www.youtube.com/watch?v=NnbxKy8P_ZA&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=6
 speaker: Andrzej Godlewski
-speakerProfileImage: todo
+speakerProfileImage: talks/general/profile-placeholder.png
 speakerDescription: "Wieloletnie doświadczenie pracy w prasie i mediach
   elektronicznych sprawia, że Andrzej Godlewski, zastępca dyrektora TVP, potrafi
   ocenić psychologię danego medium rozsądnie i wnikliwie. Jego ocena jest daleka
@@ -13,6 +13,6 @@ speakerDescription: "Wieloletnie doświadczenie pracy w prasie i mediach
 eventSlug: poke-the-comfort-zone-2013
 cover:
   image:
-    mobile: ile-nienawisci-wystarczy-w-tv/coverPhotos/andrzej.png
-    desktop: ile-nienawisci-wystarczy-w-tv/coverPhotos/andrzej.png
-duration: 17:55
+    mobile: talks/ile-nienawisci-wystarczy-w-tv/coverPhotos/andrzej.png
+    desktop: talks/ile-nienawisci-wystarczy-w-tv/coverPhotos/andrzej.png
+duration: "17:55"

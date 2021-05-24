@@ -29,16 +29,16 @@ joinUsImagePath: "images/uploads/joinus.png"
 joinUsImageDesktopPath: "images/uploads/joinus.png"
 joinUsVolunteerText: "Get involved as a Volunteer"
 joinUsVolunteerLink: "/about"
-joinUsGetToKnowOurTeamText: "Get to know our team"
+joinUsGetToKnowOurTeamText: "Get to know our team ->"
 joinUsGetToKnowOurTeamLink: "/about"
-joinUsBecomeSpeakerText: "Become TEDx Speaker"
+joinUsBecomeSpeakerText: "Become TEDx Speaker ->"
 joinUsBecomeSpeakerLink: "/about"
 partnerSectionTitle: "Our partners"
-getToKnowOurPartnersText: "Get to know our partners"
+getToKnowOurPartnersText: "Get to know our partners ->"
 getToKnowOurPartnersLink: "/join"
 joinOurPartnersText: "Join our partners"
 joinOurPartnersLink: "/join"
-partnerLogoPaths:
+partnerLogos:
   - events/2020/partnerLogos/logo-1.png
   - events/2020/partnerLogos/logo-2.png
   - events/2020/partnerLogos/logo-3.png
@@ -56,3 +56,11 @@ partnerLogoPaths:
   - events/2020/partnerLogos/logo-15.png
   - events/2020/partnerLogos/logo-16.png
   - events/2020/partnerLogos/logo-17.png
+eventSlug: "2020"
+centerTextSectionTitle: "## TEDxWarsaw"
+centerTextSectionContent: >-
+  TEDxWarsaw is an annual event where dreamers, founders, activists, engineers, artists and other amazing speakers meet to share their ideas worth spreading.
+centerTextSectionButtonText: Get involved
+centerTextSectionButtonLink: /volunteers
+centerTextSectionButtonTextSecond: About ->
+centerTextSectionButtonLinkSecond: /about

@@ -26,7 +26,7 @@ export const SuggestedEvent = ({
               to={`/watch?event=${slug}`}
               className="font-semibold hover:opacity-50 flex items-center"
             >
-              Watch the talks <FaArrowRight className="ml-2 inline" />
+              Watch the talks {'->'}
             </Link>
             <Link
               to={`/event/${slug}/`}
@@ -42,7 +42,7 @@ export const SuggestedEvent = ({
               <div key={idx} className="h-full">
                 <Img
                   fluid={fluid}
-                  className="h-full w-full rounded"
+                  className="h-full w-full"
                   alt={`Photo from ${displayName}`}
                 />
               </div>

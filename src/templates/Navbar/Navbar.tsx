@@ -123,6 +123,7 @@ export const NavbarTemplate = (props: Props) => {
           navbarLinks={navbarLinks}
           open={sideOpen}
           setOpen={setSideOpen}
+          logoPath={logoPath}
         />
       </header>
     </>

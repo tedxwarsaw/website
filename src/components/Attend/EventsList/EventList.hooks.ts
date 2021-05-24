@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePagination } from "@/components/shared/Pagination";
+import { useQueryParameters } from "@/hooks/useQueryParameters";
 
 export const useEventList = (events) => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -9,6 +10,8 @@ export const useEventList = (events) => {
     9
   );
 
+  const { qs, params, updateQueryParams } = useQueryParameters();
+
   const filterEvents = (value: string) => {
     setActiveFilter(value);
     let eventsFiltered = [...events];
@@ -16,7 +19,19 @@ export const useEventList = (events) => {
       eventsFiltered = events.filter((event) => event.category === value);
     }
     setFilteredEvents(eventsFiltered);
+
+    const filterObject = {
+      eventKind: value,
+    };
+    const paramsString = qs.stringify(filterObject);
+    updateQueryParams(paramsString);
   };
+
+  useEffect(() => {
+    if (params.eventKind) {
+      filterEvents(params.eventKind);
+    }
+  }, []);
 
   return {
     activeFilter,
