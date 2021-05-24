@@ -45,9 +45,26 @@ callToAction:
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
+speakers:
+  - speakerName: Luiza Brown
+    speakerPhotoPath: events/2020/speakerPhotos/woman.jpg
+  - speakerName: Luiza Brown
+    speakerPhotoPath: events/2020/speakerPhotos/woman.jpg
+  - speakerName: Luiza Brown
+    speakerPhotoPath: events/2020/speakerPhotos/woman.jpg
+  - speakerName: Luiza Brown
+    speakerPhotoPath: events/2020/speakerPhotos/woman.jpg
+  - speakerName: Luiza Brown
+    speakerPhotoPath: events/2020/speakerPhotos/woman.jpg
+  - speakerName: Luiza Brown
+    speakerPhotoPath: events/2020/speakerPhotos/woman.jpg
+  - speakerName: Luiza Brown
+    speakerPhotoPath: events/2020/speakerPhotos/woman.jpg
+  - speakerName: Luiza Brown
+    speakerPhotoPath: events/2020/speakerPhotos/woman.jpg
+  - speakerName: Luiza Brown
+    speakerPhotoPath: events/2020/speakerPhotos/woman.jpg
 partnerLogos:
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-1.png
   - partnerName: logo1
     partnerLogoPath: events/2020/partnerLogos/logo-2.png
   - partnerName: logo1
@@ -80,23 +97,7 @@ partnerLogos:
     partnerLogoPath: events/2020/partnerLogos/logo-16.png
   - partnerName: logo1
     partnerLogoPath: events/2020/partnerLogos/logo-17.png
-speakers:
-  - speakerName: Luiza Brown
-    speakerPhotoPath: events/2020/speakerPhotos/woman.jpg
-  - speakerName: Luiza Brown
-    speakerPhotoPath: events/2020/speakerPhotos/woman.jpg
-  - speakerName: Luiza Brown
-    speakerPhotoPath: events/2020/speakerPhotos/woman.jpg
-  - speakerName: Luiza Brown
-    speakerPhotoPath: events/2020/speakerPhotos/woman.jpg
-  - speakerName: Luiza Brown
-    speakerPhotoPath: events/2020/speakerPhotos/woman.jpg
-  - speakerName: Luiza Brown
-    speakerPhotoPath: events/2020/speakerPhotos/woman.jpg
-  - speakerName: Luiza Brown
-    speakerPhotoPath: events/2020/speakerPhotos/woman.jpg
-  - speakerName: Luiza Brown
-    speakerPhotoPath: events/2020/speakerPhotos/woman.jpg
-  - speakerName: Luiza Brown
-    speakerPhotoPath: events/2020/speakerPhotos/woman.jpg
 ticketProviderLogo: images/uploads/evenea2.png
+eventPhotos:
+  - eventPhoto: events/crunchtime-2017/eventPhotos/teatrpolski.jpg
+  - eventPhoto: events/crunchtime-2017/eventPhotos/zlote.jpg

@@ -66,6 +66,9 @@ const secondQuery = `#graphql
         speakerPhotoPath
       }
       ticketProviderLogo
+      eventPhotos {
+        eventPhoto
+      }
     }
     suggestedEventInfo: eventsYaml(slug: {eq: $suggestedEventSlug}) {
       slug
@@ -133,6 +136,16 @@ export const queryForProps = async (
     });
   }
 
+  let eventPhotosDesktop: any;
+  if(event.eventPhotos && event.eventPhotos.length > 0){
+    eventPhotosDesktop = await Promise.all(
+        event.eventPhotos.map(
+            async (event) =>
+                await getFluidImage({ graphql, path: event.eventPhoto, quality: 90, sizes: "(max:-width: 2000px)"})
+        )
+    );
+  }
+
   const cover: any = {
     ...event.cover,
     image: {
@@ -190,5 +203,6 @@ export const queryForProps = async (
     ...newsletter,
     joinSpeakers,
     ticketProviderLogo,
+    eventPhotosDesktop
   };
 };

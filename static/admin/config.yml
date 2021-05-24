@@ -928,7 +928,6 @@ collections:
         widget: "list"
         required: false
         fields:
-          - { label: "name", name: "partnerName", widget: "string", required: false }
           - {
             label: "Partner Logo",
             name: "partnerLogoPath",
@@ -942,6 +941,18 @@ collections:
         allow_multiple: false
         media_folder: "images/uploads"
         required: false
+      - name: eventPhotos
+        label: Event Photos
+        widget: "list"
+        required: false
+        fields:
+          - {
+            lebel: "Event Photo",
+            name: "eventPhoto",
+            widget: "image",
+            allow_multiple: false,
+            media_folder: "events/{{slug}}/eventPhotos"
+            }
   - label: "Talks"
     name: talks
     folder: "src/pages/content/talks"

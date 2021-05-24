@@ -59,6 +59,8 @@ export interface Props
   isOnline: boolean;
   joinSpeakers: JoinSpeakersSectionProps;
   ticketProviderLogo: FixedObject;
+  eventPhotos: FixedObject[];
+  eventPhotosDesktop: FixedObject[];
 }
 
 export interface SuggestedEvent {
@@ -131,7 +133,7 @@ export const EventPageTemplate = (props: Props) => {
       <SuggestedEvent
         displayName={props.suggestedEvent.displayName}
         slug={props.suggestedEvent.slug}
-        photos={props.suggestedEvent.photos}
+        photos={props.eventPhotosDesktop ? props.eventPhotosDesktop : props.suggestedEvent.photos}
       />
 
       {!isFutureEvent && (

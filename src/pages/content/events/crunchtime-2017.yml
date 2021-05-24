@@ -30,7 +30,10 @@ coverHero:
     desktop: events/crunchtime-2017/coverPhotos/blank.png
 isOnline: false
 location:
-  mapIframe: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.7202868759105!2d20.999243415796712!3d52.23029947976031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8da58f0dd5%3A0x9f7d3a9040fbc02f!2sZ%C5%82ota%2059%2C%2000-120%20Warszawa!5e0!3m2!1sen!2spl!4v1620902876401!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  mapIframe: <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.7202868759105!2d20.999243415796712!3d52.23029947976031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8da58f0dd5%3A0x9f7d3a9040fbc02f!2sZ%C5%82ota%2059%2C%2000-120%20Warszawa!5e0!3m2!1sen!2spl!4v1620902876401!5m2!1sen!2spl"
+    width="600" height="450" style="border:0;" allowfullscreen=""
+    loading="lazy"></iframe>
   city: Warsaw
   displayName: Złote Tarasy Złota 59
   image: events/crunchtime-2017/locationPhoto/zlote.jpg
@@ -39,41 +42,6 @@ callToAction:
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
-partnerLogos:
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-1.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-2.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-3.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-4.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-5.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-6.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-7.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-8.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-9.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-10.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-11.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-12.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-13.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-14.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-15.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-16.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-17.png
 speakers:
   - speakerName: Jazzpospolita
     speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
@@ -113,4 +81,40 @@ speakers:
     speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Zbyszek Pawlak
     speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
+partnerLogos:
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-1.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-2.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-3.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-4.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-5.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-6.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-7.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-8.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-9.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-10.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-11.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-12.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-13.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-14.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-15.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-16.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-17.png
 ticketProviderLogo: images/uploads/evenea2.png
+eventPhotos: []
