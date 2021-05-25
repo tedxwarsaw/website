@@ -32,7 +32,7 @@ export const TeamMembersSlider = ({
     {
       mobile: 1,
       tablet: 1,
-      desktop: 1,
+      desktop: 1.2,
     },
     { mobile: 50, tablet: 50, desktop: 50 }
   );
@@ -53,10 +53,10 @@ export const TeamMembersSlider = ({
       </div>
       <div className="main-grid-full-span relative mb-10">
         <div className="relative main-grid z-10 team-members-slider-container">
-          <Slider sliderRef={sliderRef}>
+          <Slider sliderRef={sliderRef} style={{overflow: 'inherit'}}>
             {teamMembers.map((member, index) => (
               <div
-                className="flex flex-col md:grid md:grid-cols-2 md:grid-cols-2 w-full xl:w-4/5"
+                className="flex flex-col md:grid md:grid-cols-2 md:grid-cols-2 w-full"
                 key={member.name + index}
               >
                 <div className="h-64 md:h-auto">
