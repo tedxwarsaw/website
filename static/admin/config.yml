@@ -135,7 +135,7 @@ collections:
                 name: "partnerLogoPath",
                 widget: "image",
                 allow_multiple: false,
-                media_folder: "{{slug}}/partnerLogos",
+                media_folder: "photos",
                 }
           - label: "CenterTextSection title"
             name: "centerTextSectionTitle"
@@ -941,7 +941,8 @@ collections:
         label: Ticket Provider Logo
         widget: "image"
         allow_multiple: false
-        media_folder: "images/uploads"
+        media_folder: "{{slug}}/partnerLogos"
+        public_folder: "events/{{slug}}/partnerLogos"
         required: false
       - name: eventPhotos
         label: Event Photos
@@ -993,7 +994,8 @@ collections:
         label: "Speakers profile image"
         widget: image
         allow_multiple: false
-        media_folder: "talks/{{slug}}/photos"
+        media_folder: "{{slug}}/photos"
+        public_folder: "talks/{{slug}}/photos"
       - name: speakerDescription
         label: "Speaker description"
         widget: string
@@ -1018,12 +1020,14 @@ collections:
                 label: Mobile variant
                 widget: image
                 allow_multiple: false
-                media_folder: "talks/{{slug}}/coverPhotos"
+                media_folder: "{{slug}}/coverPhotos"
+                public_folder: "talks/{{slug}}/coverPhotos"
               - name: desktop
                 label: Desktop variant
                 widget: image
                 allow_multiple: false
-                media_folder: "talks/{{slug}}/coverPhotos"
+                media_folder: "{{slug}}/coverPhotos"
+                public_folder: "talks/{{slug}}/coverPhotos"
       - name: duration
         label: Duration
         widget: string
