@@ -34,6 +34,7 @@ export const CardEvent = ({
           alt="Slider item image"
         />
         <Button variant={ButtonVariant.filledRedWithBG} className={"hoverButton"}>View Event</Button>
+        <div className={"red-border"}/>
       </div>
     </Link>
     <span className="absolute left-0 top-0  text-white text-sm px-3 bg-customRed md:py-1">

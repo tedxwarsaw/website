@@ -42,6 +42,7 @@ export const CardTalk = ({
         <span className="absolute right-2 bottom-2 bg-customDarkGrey text-white font-light text-xs px-2">
           {duration}
         </span>
+        <div className={"red-border"}/>
       </div>
       <span
         className={`absolute left-0 top-0 bg-customDarkGrey text-white md:py-1 text-sm px-3 ${
