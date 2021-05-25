@@ -7,7 +7,6 @@ const firstQuery = `#graphql
   query FirstEvent {
     suggestedEventYaml(collectionId: { eq: "suggestedEvent" }) {
       slug
-      photos
     }
     partnershipTeamYaml(collectionId: { eq: "eventPartnershipTeam" }) {
       members {
@@ -106,15 +105,24 @@ export const queryForProps = async (
   const suggestedEvent: any = {
     displayName: suggestedEventInfo.displayName,
     slug: suggestedEventInfo.slug,
-    photos:
-      suggestedEventYaml.photos && suggestedEventYaml.photos.length! > 0
-        ? await Promise.all(
-            suggestedEventYaml.photos.map(
-              async (path) => await getFluidImage({ graphql, path })
-            )
-          )
-        : null,
   };
+
+  if (suggestedEvent.slug) {
+    const {
+      data: { event },
+    } = await graphql(secondQuery, {
+      eventSlug: suggestedEvent.slug,
+      suggestedEventSlug: suggestedEventYaml.slug,
+    });
+
+    const photos = await Promise.all(
+      event.eventPhotos.map(async (item) => {
+        const path = item.eventPhoto;
+        return await getFluidImage({ graphql, path });
+      })
+    );
+    suggestedEvent.photos = photos;
+  }
 
   const partnerLogosDesktop: any = await Promise.all(
     event.partnerLogos.map(
