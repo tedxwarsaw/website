@@ -49,7 +49,7 @@ export const Banner = ({
           {buttonText}
         </Button>
       </a>
-      {logo && <div className={"mt-6"}>
+      {(logo && BannerVariant.red) && <div className={"mt-6"}>
         <Img fixed={logo}/>
       </div>}
     </div>
