@@ -24,7 +24,7 @@ export const YoutubeBanner = ({
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Button variant={ButtonVariant.filledGrey}>
+        <Button variant={ButtonVariant.filledGrey} className={"hover:bg-white hover:text-customRed"}>
           {youtubeBannerLinkText}
         </Button>
       </a>

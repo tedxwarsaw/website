@@ -27,7 +27,7 @@ export const CenterTextSection = (props : CenterTextSectionProps) => {
             {props.centerTextSectionButtonLink &&
                 <div className="col-start-3 col-end-6">
                     <Link to={props.centerTextSectionButtonLink}>
-                        <Button children={<span>{props.centerTextSectionButtonText}</span>} className="mt-10"/>
+                        <Button children={<span>{props.centerTextSectionButtonText}</span>} className="mt-10 hover:bg-white hover:text-customRed"/>
                     </Link>
                     {props.centerTextSectionButtonLinkSecond &&
                     <Link to={props.centerTextSectionButtonLinkSecond} className="text-customRed font-bold hover:opacity-50 mt-5 ml-10">

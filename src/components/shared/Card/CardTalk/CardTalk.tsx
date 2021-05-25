@@ -38,10 +38,11 @@ export const CardTalk = ({
           fluid={coverDesktop}
           alt="Slider item image"
         />
-        <Button variant={ButtonVariant.filledRedWithBG} className={"hoverButton"}>View Talk</Button>
+        <Button variant={ButtonVariant.filledRedWithBG} className={"hoverButton hover:bg-white hover:text-customRed"}>View Talk</Button>
         <span className="absolute right-2 bottom-2 bg-customDarkGrey text-white font-light text-xs px-2">
           {duration}
         </span>
+        <div className={"red-border"}/>
       </div>
       <span
         className={`absolute left-0 top-0 bg-customDarkGrey text-white md:py-1 text-sm px-3 ${

@@ -135,7 +135,7 @@ collections:
                 name: "partnerLogoPath",
                 widget: "image",
                 allow_multiple: false,
-                media_folder: "events/{{slug}}/partnerLogos",
+                media_folder: "photos",
                 }
           - label: "CenterTextSection title"
             name: "centerTextSectionTitle"
@@ -592,11 +592,6 @@ collections:
             value_field: slug
             display_fields: ["displayName"]
             search_fields: ["displayName", "slug"]
-          - name: photos
-            label: Featured Photos
-            widget: image
-            allow_multiple: true
-            media_folder: "photos"
       - label: "Featured Event (shown in the navbar, footer, home page, attend page)"
         name: "featuredEvent"
         file: "src/pages/content/global/featuredEvent/featuredEvent.yaml"
@@ -826,12 +821,14 @@ collections:
                 label: Mobile variant
                 widget: image
                 allow_multiple: false
-                media_folder: "events/{{slug}}/coverPhotos"
+                media_folder: "{{slug}}/coverPhotos"
+                public_folder: "events/{{slug}}/coverPhotos"
               - name: desktop
                 label: Desktop variant
                 widget: image
                 allow_multiple: false
-                media_folder: "events/{{slug}}/coverPhotos"
+                media_folder: "{{slug}}/coverPhotos"
+                public_folder: "events/{{slug}}/coverPhotos"
       - name: coverHero
         label: Cover hero section
         widget: object
@@ -860,12 +857,14 @@ collections:
                 label: Mobile variant
                 widget: image
                 allow_multiple: false
-                media_folder: "events/{{slug}}/coverPhotos"
+                media_folder: "{{slug}}/coverPhotos"
+                public_folder: "events/{{slug}}/coverPhotos"
               - name: desktop
                 label: Desktop variant
                 widget: image
                 allow_multiple: false
-                media_folder: "events/{{slug}}/coverPhotos"
+                media_folder: "{{slug}}/coverPhotos"
+                public_folder: "events/{{slug}}/coverPhotos"
       - name: "isOnline"
         label: "Is this an online event?"
         widget: boolean
@@ -893,7 +892,8 @@ collections:
             hint: A background image.
             widget: image
             allow_multiple: false
-            media_folder: "events/{{slug}}/locationPhoto"
+            media_folder: "{{slug}}/locationPhoto"
+            public_folder: "events/{{slug}}/locationPhoto"
       - name: callToAction
         label: The Red Section
         widget: object
@@ -921,7 +921,8 @@ collections:
               name: "speakerPhotoPath",
               widget: "image",
               allow_multiple: false,
-              media_folder: "events/{{slug}}/speakerPhotos",
+              media_folder: "{{slug}}/speakerPhotos",
+              public_folder: "events/{{slug}}/speakerPhotos"
             }
       - name: partnerLogos
         label: Partner Logos
@@ -933,13 +934,15 @@ collections:
             name: "partnerLogoPath",
             widget: "image",
             allow_multiple: false,
-            media_folder: "events/{{slug}}/partnerLogos",
+            media_folder: "{{slug}}/partnerLogos",
+            public_folder: "events/{{slug}}/partnerLogos"
             }
       - name: ticketProviderLogo
         label: Ticket Provider Logo
         widget: "image"
         allow_multiple: false
-        media_folder: "images/uploads"
+        media_folder: "{{slug}}/partnerLogos"
+        public_folder: "events/{{slug}}/partnerLogos"
         required: false
       - name: eventPhotos
         label: Event Photos
@@ -952,7 +955,8 @@ collections:
             name: "eventPhoto",
             widget: "image",
             allow_multiple: false,
-            media_folder: "events/{{slug}}/eventPhotos"
+            media_folder: "{{slug}}/eventPhotos",
+            public_folder: "events/{{slug}}/eventPhotos"
             }
   - label: "Talks"
     name: talks
@@ -991,7 +995,8 @@ collections:
         label: "Speakers profile image"
         widget: image
         allow_multiple: false
-        media_folder: "talks/{{slug}}/photos"
+        media_folder: "{{slug}}/photos"
+        public_folder: "talks/{{slug}}/photos"
       - name: speakerDescription
         label: "Speaker description"
         widget: string
@@ -1016,12 +1021,14 @@ collections:
                 label: Mobile variant
                 widget: image
                 allow_multiple: false
-                media_folder: "talks/{{slug}}/coverPhotos"
+                media_folder: "{{slug}}/coverPhotos"
+                public_folder: "talks/{{slug}}/coverPhotos"
               - name: desktop
                 label: Desktop variant
                 widget: image
                 allow_multiple: false
-                media_folder: "talks/{{slug}}/coverPhotos"
+                media_folder: "{{slug}}/coverPhotos"
+                public_folder: "talks/{{slug}}/coverPhotos"
       - name: duration
         label: Duration
         widget: string

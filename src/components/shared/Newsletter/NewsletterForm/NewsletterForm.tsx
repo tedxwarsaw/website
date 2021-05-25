@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Button, ButtonVariant } from "@/components/shared/Button";
-import { SelectInput } from "@/components/shared/SelectInput";
 import "./NewsletterForm.styled.css";
 
 export interface FormData {
@@ -56,16 +55,8 @@ export const NewsletterForm = () => {
         Keep me updated about
       </p>
       <div className="newsletter-form-fields xl:flex xl:flex-grow">
-        <SelectInput
-          name="topic"
-          placeholder="Topic"
-          options={formTopics}
-          register={register}
-          handleOnChange={(value) => setValue("topic", value)}
-          className="md:col-start-2 md:col-end-3"
-        />
         <input
-          className="my-3 p-4 border border-opacity-50 border-customGrey rounded-md md:row-start-2 md:col-start-2 md:col-end-3 xl:flex-grow"
+          className="my-3 xl:ml-5 p-4 border border-opacity-50 border-customGrey rounded-md md:row-start-2 md:col-start-2 md:col-end-3 xl:flex-grow"
           name="name"
           placeholder="Name"
           {...register("name")}
@@ -79,7 +70,7 @@ export const NewsletterForm = () => {
       </div>
       <Button
         type="submit"
-        className="w-full my-3 md:w-80 xl:w-60 py-4 col-start-2 col-end-5"
+        className="w-full my-3 md:w-80 xl:w-60 py-4 col-start-2 col-end-5 hover:bg-white hover:text-customRed"
         variant={ButtonVariant.filledRedWithBG}
       >
         Subscribe

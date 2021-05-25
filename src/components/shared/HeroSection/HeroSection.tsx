@@ -56,7 +56,7 @@ export const HeroSection = ({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button>{heroButtonText}</Button>
+                <Button className={"hover:bg-white hover:text-customRed"}>{heroButtonText}</Button>
               </a>)}
               {heroLinks?.map((heroLink) => (
                 <a

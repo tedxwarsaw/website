@@ -108,13 +108,13 @@ export const EventPageTemplate = (props: Props) => {
         logo={props.ticketProviderLogo}
       />
 
-      {
-        props.partnerLogos.length !== 0 && <Partners
-            partnerSectionTitle="Event partners"
-            partnerLogos={props.partnerLogos}
-            partnerLogosDesktop={props.partnerLogosDesktop}
+      {props.partnerLogos.length !== 0 && (
+        <Partners
+          partnerSectionTitle="Event partners"
+          partnerLogos={props.partnerLogos}
+          partnerLogosDesktop={props.partnerLogosDesktop}
         />
-      }
+      )}
 
       {isFutureEvent && (
         <>
@@ -129,12 +129,18 @@ export const EventPageTemplate = (props: Props) => {
           />
         </>
       )}
-
-      <SuggestedEvent
-        displayName={props.suggestedEvent.displayName}
-        slug={props.suggestedEvent.slug}
-        photos={props.eventPhotosDesktop ? props.eventPhotosDesktop : props.suggestedEvent.photos}
-      />
+      {(props.eventPhotosDesktop ||
+        props.suggestedEvent?.photos.length > 0) && (
+        <SuggestedEvent
+          displayName={props.suggestedEvent.displayName}
+          slug={props.suggestedEvent.slug}
+          photos={
+            props.eventPhotosDesktop
+              ? props.eventPhotosDesktop
+              : props.suggestedEvent.photos
+          }
+        />
+      )}
 
       {!isFutureEvent && (
         <HeroSection

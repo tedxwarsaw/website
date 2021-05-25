@@ -117,4 +117,6 @@ partnerLogos:
   - partnerName: logo1
     partnerLogoPath: events/2020/partnerLogos/logo-17.png
 ticketProviderLogo: images/uploads/evenea2.png
-eventPhotos: []
+eventPhotos:
+  - eventPhoto: events/crunchtime-2017/eventPhotos/teatrpolski.jpg
+  - eventPhoto: events/crunchtime-2017/eventPhotos/zlote.jpg
