@@ -135,7 +135,7 @@ collections:
                 name: "partnerLogoPath",
                 widget: "image",
                 allow_multiple: false,
-                media_folder: "events/{{slug}}/partnerLogos",
+                media_folder: "{{slug}}/partnerLogos",
                 }
           - label: "CenterTextSection title"
             name: "centerTextSectionTitle"
@@ -826,12 +826,14 @@ collections:
                 label: Mobile variant
                 widget: image
                 allow_multiple: false
-                media_folder: "events/{{slug}}/coverPhotos"
+                media_folder: "{{slug}}/coverPhotos"
+                public_folder: "events/{{slug}}/eventPhotos"
               - name: desktop
                 label: Desktop variant
                 widget: image
                 allow_multiple: false
-                media_folder: "events/{{slug}}/coverPhotos"
+                media_folder: "{{slug}}/coverPhotos"
+                public_folder: "events/{{slug}}/eventPhotos"
       - name: coverHero
         label: Cover hero section
         widget: object
@@ -860,12 +862,14 @@ collections:
                 label: Mobile variant
                 widget: image
                 allow_multiple: false
-                media_folder: "events/{{slug}}/coverPhotos"
+                media_folder: "{{slug}}/coverPhotos"
+                public_folder: "events/{{slug}}/eventPhotos"
               - name: desktop
                 label: Desktop variant
                 widget: image
                 allow_multiple: false
-                media_folder: "events/{{slug}}/coverPhotos"
+                media_folder: "{{slug}}/coverPhotos"
+                public_folder: "events/{{slug}}/eventPhotos"
       - name: "isOnline"
         label: "Is this an online event?"
         widget: boolean
@@ -893,7 +897,8 @@ collections:
             hint: A background image.
             widget: image
             allow_multiple: false
-            media_folder: "events/{{slug}}/locationPhoto"
+            media_folder: "{{slug}}/locationPhoto"
+            public_folder: "events/{{slug}}/eventPhotos"
       - name: callToAction
         label: The Red Section
         widget: object
@@ -921,7 +926,8 @@ collections:
               name: "speakerPhotoPath",
               widget: "image",
               allow_multiple: false,
-              media_folder: "events/{{slug}}/speakerPhotos",
+              media_folder: "{{slug}}/speakerPhotos",
+              public_folder: "events/{{slug}}/eventPhotos"
             }
       - name: partnerLogos
         label: Partner Logos
@@ -933,7 +939,8 @@ collections:
             name: "partnerLogoPath",
             widget: "image",
             allow_multiple: false,
-            media_folder: "events/{{slug}}/partnerLogos",
+            media_folder: "{{slug}}/partnerLogos",
+            public_folder: "events/{{slug}}/eventPhotos"
             }
       - name: ticketProviderLogo
         label: Ticket Provider Logo
@@ -951,7 +958,8 @@ collections:
             name: "eventPhoto",
             widget: "image",
             allow_multiple: false,
-            media_folder: "events/{{slug}}/eventPhotos"
+            media_folder: "{{slug}}/eventPhotos",
+            public_folder: "events/{{slug}}/eventPhotos"
             }
   - label: "Talks"
     name: talks
