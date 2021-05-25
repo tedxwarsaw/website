@@ -44,7 +44,7 @@ export const Banner = ({
                   ? ButtonVariant.outlineWhite
                   : ButtonVariant.filledRedWithBG
             }
-            className="font-normal text-lg px-20 mt-6"
+            className="font-normal text-lg px-20 mt-6 hover:bg-white hover:text-customRed"
         >
           {buttonText}
         </Button>

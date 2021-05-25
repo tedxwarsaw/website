@@ -33,7 +33,7 @@ export const CardEvent = ({
           fluid={coverDesktop}
           alt="Slider item image"
         />
-        <Button variant={ButtonVariant.filledRedWithBG} className={"hoverButton"}>View Event</Button>
+        <Button variant={ButtonVariant.filledRedWithBG} className={"hoverButton hover:bg-white hover:text-customRed"}>View Event</Button>
         <div className={"red-border"}/>
       </div>
     </Link>
@@ -58,7 +58,7 @@ export const CardEvent = ({
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Button variant={ButtonVariant.filledRedWithBG}>Attend</Button>
+        <Button variant={ButtonVariant.filledRedWithBG} className={"hover:bg-white hover:text-customRed"}>Attend</Button>
       </Link>
       <Link
         to={`/event/${slug}`}
