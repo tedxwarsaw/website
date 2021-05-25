@@ -15,8 +15,8 @@ export const RelatedTalks = ({
   <div>
     {relatedTalks && relatedTalks.length > 0 && (
       <div className=" mb-10">
-        <h2 className="text-2xl md:text-3xl">More from</h2>
-        <p className="text-2xl md:text-3xl font-bold">{eventName}</p>
+        <h2>More from</h2>
+        <p className="font-bold">{eventName}</p>
         <RecommendationsSlider>
           {relatedTalks.map((relatedTalk) => (
             <>

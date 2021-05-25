@@ -56,7 +56,7 @@ export const SearchBarForm = ({
           handleOnChange={handleEventFilterChange}
           placeholder="Event"
           wideDropdown
-          className="md:col-start-2 md:col-end-3"
+          className="md:col-start-2 md:col-end-3 xl:mr-0"
         />
 
         <SelectInput

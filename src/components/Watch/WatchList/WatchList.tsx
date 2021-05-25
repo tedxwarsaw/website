@@ -29,7 +29,7 @@ export const WatchList = ({
         </div>
       ) : (
         <div>
-          <h2 className="font-medium text-2xl md:text-3xl font-bold w-32 pt-5">
+          <h2 className="font-bold w-32 pt-5">
             TEDxWarsaw Recommends
           </h2>
           <RecommendationsSlider>

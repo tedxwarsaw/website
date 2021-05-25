@@ -36,7 +36,7 @@ export const JoinUs = ({
     <div className="seamless-grid join-us-section-content">
       <div className="flex items-center join-us-section-left">
         <div className="pr-20 py-10">
-          <h2 className="font-medium text-2xl md:text-3xl"><ReactMarkdown rehypePlugins={[rehypeRaw]}>{joinUsTitle}</ReactMarkdown></h2>
+          <h2 className="font-medium"><ReactMarkdown rehypePlugins={[rehypeRaw]}>{joinUsTitle}</ReactMarkdown></h2>
           <p className="my-5">{joinUsSubtitle}</p>
           {joinUsVolunteerText && <a
             href={joinUsVolunteerLink}
@@ -53,7 +53,7 @@ export const JoinUs = ({
             style={{ width: "fit-content" }}
           >
             <span className="my-auto flex items-center">
-              {joinUsGetToKnowOurTeamText} <FaArrowRight className="ml-3 " />
+              {joinUsGetToKnowOurTeamText}
             </span>
           </a>
           {joinUsBecomeSpeakerLink && <a
@@ -62,7 +62,7 @@ export const JoinUs = ({
             style={{ width: "fit-content" }}
           >
             <span className="my-auto flex items-center">
-              {joinUsBecomeSpeakerText} <FaArrowRight className="ml-3 " />
+              {joinUsBecomeSpeakerText}
             </span>
           </a>}
         </div>

@@ -38,13 +38,47 @@ location:
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.119884714369!2d21.000902815797073!3d52.241206079762435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc62f900ec7f%3A0x9e0c6d6ac4d6e639!2sCapitol%20Theater!5e0!3m2!1sen!2spl!4v1620911355243!5m2!1sen!2spl"
     width="600" height="450" style="border:0;" allowfullscreen=""
     loading="lazy"></iframe>
-  image: events/polarization-2021/locationPhoto/blank.png
+  image: events/polarization-2021/locationPhoto/capitol.jpg
 callToAction:
   title: TEDxWarsaw 2021 pass
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
-partnerLogoPaths: events/polarization-2021/partnerLogos/blank.png
+partnerLogos:
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-1.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-2.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-3.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-4.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-5.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-6.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-7.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-8.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-9.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-10.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-11.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-12.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-13.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-14.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-15.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-16.png
+  - partnerName: logo1
+    partnerLogoPath: events/2020/partnerLogos/logo-17.png
 speakers:
   - speakerName: Jimek
     speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_jimek.png
@@ -70,3 +104,5 @@ speakers:
     speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_kierner.png
   - speakerName: Miguel Cano
     speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_miguel.png
+ticketProviderLogo: images/uploads/evenea2.png
+eventPhotos: []

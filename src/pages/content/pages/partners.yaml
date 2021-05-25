@@ -12,7 +12,7 @@ heroBackgroundImageUrl: images/uploads/speakers-bg.png
 heroBackgroundImageUrlDesktop: images/uploads/speakers-bg.png
 heroBackgroundImageAlt: Cover image
 partnerSectionTitle: Previous editions
-partnerLogoPaths:
+partnerLogos:
   - events/2020/partnerLogos/logo-1.png
   - events/2020/partnerLogos/logo-2.png
   - events/2020/partnerLogos/logo-3.png

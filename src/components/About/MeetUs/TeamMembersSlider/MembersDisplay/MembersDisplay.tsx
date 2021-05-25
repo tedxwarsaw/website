@@ -22,7 +22,7 @@ export const MembersDisplay = ({
           onClick={() => setCurrentSlide(index)}
         >
           {name.map((word) => (
-            <span>{name[word]}</span>
+            <span key={word}>{word}</span>
           ))}
 
           <span
