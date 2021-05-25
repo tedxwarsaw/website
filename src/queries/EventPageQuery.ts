@@ -106,11 +106,14 @@ export const queryForProps = async (
   const suggestedEvent: any = {
     displayName: suggestedEventInfo.displayName,
     slug: suggestedEventInfo.slug,
-    photos: await Promise.all(
-      suggestedEventYaml.photos.map(
-        async (path) => await getFluidImage({ graphql, path })
-      )
-    ),
+    photos:
+      suggestedEventYaml.photos && suggestedEventYaml.photos.length! > 0
+        ? await Promise.all(
+            suggestedEventYaml.photos.map(
+              async (path) => await getFluidImage({ graphql, path })
+            )
+          )
+        : null,
   };
 
   const partnerLogosDesktop: any = await Promise.all(
@@ -137,12 +140,17 @@ export const queryForProps = async (
   }
 
   let eventPhotosDesktop: any;
-  if(event.eventPhotos && event.eventPhotos.length > 0){
+  if (event.eventPhotos && event.eventPhotos.length > 0) {
     eventPhotosDesktop = await Promise.all(
-        event.eventPhotos.map(
-            async (event) =>
-                await getFluidImage({ graphql, path: event.eventPhoto, quality: 90, sizes: "(max:-width: 2000px)"})
-        )
+      event.eventPhotos.map(
+        async (event) =>
+          await getFluidImage({
+            graphql,
+            path: event.eventPhoto,
+            quality: 90,
+            sizes: "(max:-width: 2000px)",
+          })
+      )
     );
   }
 
@@ -203,6 +211,6 @@ export const queryForProps = async (
     ...newsletter,
     joinSpeakers,
     ticketProviderLogo,
-    eventPhotosDesktop
+    eventPhotosDesktop,
   };
 };
