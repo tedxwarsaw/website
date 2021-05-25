@@ -8,8 +8,8 @@ interface AssociatesProps {
 
 export const Associates = ({ associates }: AssociatesProps) => (
   <>
-    <h3 className="text-white font-semibold">Associates:</h3>
-    <div className="col-start-1 col-end-full grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 grid-flow-row gap-20 my-10 text-3xl">
+    <h3 className="text-white font-semibold text-3xl">Associates:</h3>
+    <div className="col-start-1 col-end-full grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 grid-flow-row gap-20 my-10">
       {associates.map((associate, index) => (
         <div
           key={associate.name + index}
