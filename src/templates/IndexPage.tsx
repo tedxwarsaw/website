@@ -36,6 +36,7 @@ export interface Props
     }
 
 export const IndexPageTemplate = (props: Props) => {
+    console.log(props);
     return (
         <Page>
             <HeroSection
@@ -48,7 +49,7 @@ export const IndexPageTemplate = (props: Props) => {
                 heroBackgroundImageDesktop={props.heroBackgroundImageDesktop}
                 heroBackgroundImageAlt={props.heroBackgroundImageAlt}
             />
-            {props.eventHeader && <CenterTextSection
+            {(props.featuredEventShow && props.eventHeader) && <CenterTextSection
                 centerTextSectionTitle={props.centerTextSectionTitle}
                 centerTextSectionContent={props.centerTextSectionContent}
                 centerTextSectionButtonLink={props.centerTextSectionButtonLink}
@@ -69,14 +70,14 @@ export const IndexPageTemplate = (props: Props) => {
                 youtubeBannerLinkText={props.youtubeBannerLinkText}
                 youtubeBannerLinkUrl={props.youtubeBannerLinkUrl}
             />
-            <EventHighlight
+            {props.featuredEventShow && <EventHighlight
                 eventHiglightImage={props.eventHiglightImage}
                 eventHiglightImageDesktop={props.eventHiglightImageDesktop}
                 eventHeader={props.eventHeader}
                 eventSpeakerPhotos={props.eventSpeakerPhotos}
                 eventDescription={props.eventDescription}
                 eventSlug={props.eventSlug}
-            />
+            />}
             <JoinUs
                 joinUsTitle={props.joinUsTitle}
                 joinUsSubtitle={props.joinUsSubtitle}

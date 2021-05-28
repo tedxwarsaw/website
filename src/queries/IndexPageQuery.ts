@@ -86,7 +86,7 @@ export const queryForProps = async (
 
   const featuredEvent = await queryForFeatureEvent(graphql);
 
-  const {
+    const {
     data: { event },
   } = await graphql(eventQuery, {
     eventSlug: featuredEvent.slug,
@@ -171,6 +171,7 @@ export const queryForProps = async (
     heroBackgroundImageDesktop,
     eventHeader: event.displayName,
     eventDescription: event.description,
+    featuredEventShow: featuredEvent.show,
     eventHiglightImage,
     eventHiglightImageDesktop,
     eventSpeakerPhotos,

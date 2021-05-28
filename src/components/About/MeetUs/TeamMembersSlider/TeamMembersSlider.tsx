@@ -9,15 +9,11 @@ import "./TeamMembersSlider.styled.css";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 interface TeamMembersSliderProps {
-  meetUsBackgroundImage: FluidObject;
-  meetUsBackgroundImageDesktop: FluidObject;
   teamMembers: TeamMember[];
 }
 
 export const TeamMembersSlider = ({
-  teamMembers,
-  meetUsBackgroundImage,
-  meetUsBackgroundImageDesktop,
+  teamMembers
 }: TeamMembersSliderProps) => {
   const numberOfSlides = teamMembers.length;
   const {
@@ -99,19 +95,6 @@ export const TeamMembersSlider = ({
           >
             <BsChevronRight className="text-customRed hover:opacity-40 cursor-pointer stroke-1 text-3xl" />
           </div>
-        </div>
-
-        <div className="w-full z-0 absolute top-0 left-0 bottom-0 right-0">
-          <Img
-            className="w-full h-full  z-0 md:hidden absolute top-0 left-0 bottom-0 right-0 z-0"
-            fluid={meetUsBackgroundImage}
-            alt="Team members slider background "
-          />
-          <Img
-            className="w-full h-full  mt-auto z-0 hidden md:block absolute top-0 left-0 bottom-0 right-0 z-0"
-            fluid={meetUsBackgroundImageDesktop}
-            alt="Team members slider background"
-          />
         </div>
       </div>
     </>

@@ -13,7 +13,6 @@ export const MeetUs = ({
     <div className="main-grid">
       <h2 className="font-bold text-white mt-10 text-8xl">Meet us</h2>
       <TeamMembersSlider
-        meetUsBackgroundImage={meetUsBackgroundImage}
         meetUsBackgroundImageDesktop={meetUsBackgroundImageDesktop}
         teamMembers={teamMembersSlider}
       />
