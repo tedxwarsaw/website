@@ -46,7 +46,7 @@ export const Partners = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="ml-5" variant={ButtonVariant.filledRedWithBG}>
+            <Button className="ml-5 hover:bg-white hover:text-customRed" variant={ButtonVariant.filledRedWithBG}>
               {joinOurPartnersText}
             </Button>
           </a>
@@ -67,7 +67,7 @@ export const Partners = ({
     {showLinks && (
       <div className="flex flex-col md:flex-row  md:items-center  items-start xl:hidden">
         <a href={joinOurPartnersLink} target="_blank" rel="noopener noreferrer">
-          <Button className="my-5">{joinOurPartnersText}</Button>
+          <Button className="my-5 hover:bg-white hover:text-customRed">{joinOurPartnersText}</Button>
         </a>
         <a
           href={getToKnowOurPartnersLink}

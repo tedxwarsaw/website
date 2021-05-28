@@ -153,7 +153,7 @@ export const AttendPageTemplate = (props: Props) => (
               <Link to={props.joinUsButtonUrl1}>
                 <Button
                   children={<span>{props.joinUsButton1}</span>}
-                  className="mt-10"
+                  className="mt-10 hover:bg-white hover:text-customRed"
                 />
               </Link>
             </div>
@@ -166,7 +166,7 @@ export const AttendPageTemplate = (props: Props) => (
               <Link to={props.joinUsButtonUrl2}>
                 <Button
                   children={<span>{props.joinUsButton2}</span>}
-                  className="mt-10"
+                  className="mt-10 hover:bg-white hover:text-customRed"
                 />
               </Link>
             </div>

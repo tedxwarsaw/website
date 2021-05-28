@@ -79,7 +79,7 @@ export const NewsletterForm = () => {
       </div>
       <Button
         type="submit"
-        className="w-full my-3 md:w-80 xl:w-60 py-4 col-start-2 col-end-5"
+        className="w-full my-3 md:w-80 xl:w-60 py-4 col-start-2 col-end-5 hover:bg-white hover:text-customRed"
         variant={ButtonVariant.filledRedWithBG}
       >
         Subscribe

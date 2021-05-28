@@ -32,7 +32,7 @@
   background: red;
   position: absolute;
   height: 3px;
-  top: 413px;
+  bottom: 0;
   transition: .2s;
 }
 

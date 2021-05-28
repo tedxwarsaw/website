@@ -43,7 +43,7 @@ export const JoinUs = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="my-7" variant={ButtonVariant.filledRedWithBG}>
+            <Button className="my-7 hover:bg-white hover:text-customRed" variant={ButtonVariant.filledRedWithBG}>
               {joinUsVolunteerText}
             </Button>
           </a>}
