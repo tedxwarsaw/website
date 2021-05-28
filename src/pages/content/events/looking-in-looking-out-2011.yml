@@ -17,16 +17,16 @@ cover:
     link: https://example.com/
     show: true
   image:
-    mobile: events/looking-in-looking-out-2011/coverPhotos/blank.png
-    desktop: events/looking-in-looking-out-2011/coverPhotos/blank.png
+    mobile: events/looking-in-looking-out-2011/coverPhotos/tedxwaw_lookinginout.png
+    desktop: events/looking-in-looking-out-2011/coverPhotos/tedxwaw_lookinginout.png
 coverHero:
   button:
     text: attend
     link: https://example.com/
     show: true
   image:
-    mobile: events/looking-in-looking-out-2011/coverPhotos/blank.png
-    desktop: events/looking-in-looking-out-2011/coverPhotos/blank.png
+    mobile: events/looking-in-looking-out-2011/coverPhotos/tedxwaw_lookinginout.png
+    desktop: events/looking-in-looking-out-2011/coverPhotos/tedxwaw_lookinginout.png
 isOnline: false
 location:
   displayName: Multikino Zlote Tarasy Zlota 59
@@ -41,6 +41,9 @@ callToAction:
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
+speakers:
+  - speakerName: Unknown
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
 partnerLogos:
   - partnerName: logo1
     partnerLogoPath: events/2020/partnerLogos/logo-1.png
@@ -76,8 +79,5 @@ partnerLogos:
     partnerLogoPath: events/2020/partnerLogos/logo-16.png
   - partnerName: logo17
     partnerLogoPath: events/2020/partnerLogos/logo-17.png
-speakers:
-  - speakerName: Unknown
-    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
 ticketProviderLogo: images/uploads/evenea2.png
 eventPhotos: []
