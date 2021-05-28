@@ -18,27 +18,33 @@ cover:
     link: https://example.com/
     show: true
   image:
-    mobile: events/define-your-place-2014/coverPhotos/blank.png
-    desktop: events/define-your-place-2014/coverPhotos/blank.png
+    mobile: events/define-your-place-2014/coverPhotos/tedxwaw_defineyourplace.png
+    desktop: events/define-your-place-2014/coverPhotos/tedxwaw_defineyourplace.png
 coverHero:
   button:
     text: attend
     link: https://example.com/
     show: true
   image:
-    mobile: events/define-your-place-2014/coverPhotos/blank.png
-    desktop: events/define-your-place-2014/coverPhotos/blank.png
+    mobile: events/define-your-place-2014/coverPhotos/tedxwaw_defineyourplace.png
+    desktop: events/define-your-place-2014/coverPhotos/tedxwaw_defineyourplace.png
 isOnline: false
 location:
   displayName: Pałac Prezydencki
   city: Warsaw
-  mapIframe: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.01187383382!2d21.014423815797215!3d52.24316797976279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc6744146b3f%3A0x29d4dd8ead0dc6f6!2sPresidential%20Palace%2C%20Warsaw!5e0!3m2!1sen!2spl!4v1620902898869!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  mapIframe: <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.01187383382!2d21.014423815797215!3d52.24316797976279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc6744146b3f%3A0x29d4dd8ead0dc6f6!2sPresidential%20Palace%2C%20Warsaw!5e0!3m2!1sen!2spl!4v1620902898869!5m2!1sen!2spl"
+    width="600" height="450" style="border:0;" allowfullscreen=""
+    loading="lazy"></iframe>
   image: events/define-your-place-2014/locationPhoto/palacprezydencki.jpg
 callToAction:
   title: TEDxWarsaw 2014 pass
   subtitle: "150 PLN "
   buttonText: Buy now
   buttonUrl: https://example.com/
+speakers:
+  - speakerName: Unknown
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
 partnerLogos:
   - partnerName: logo1
     partnerLogoPath: events/2020/partnerLogos/logo-1.png
@@ -74,8 +80,5 @@ partnerLogos:
     partnerLogoPath: events/2020/partnerLogos/logo-16.png
   - partnerName: logo1
     partnerLogoPath: events/2020/partnerLogos/logo-17.png
-speakers:
-  - speakerName: Unknown
-    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
 ticketProviderLogo: images/uploads/evenea2.png
 eventPhotos: []
