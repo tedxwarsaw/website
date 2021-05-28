@@ -948,6 +948,7 @@ collections:
         label: Event Photos
         widget: "list"
         required: false
+        default: []
         fields:
           - {
             lebel: "Event Photo",

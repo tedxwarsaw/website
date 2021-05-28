@@ -36,7 +36,7 @@ export const SuggestedEvent = ({
             </Link>
           </div>
         </div>
-        <div className="col-start-2 col-end-7 flex flex-col flew-nowrap col-span-full">
+        <div className="col-start-2 flex flex-col flew-nowrap col-span-full">
           <SuggestedEventSlider>
             {photos.map((fluid, idx) => (
               <div key={idx} className="h-full">
