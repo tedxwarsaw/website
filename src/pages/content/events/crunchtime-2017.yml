@@ -18,16 +18,16 @@ cover:
     link: https://example.com/
     show: true
   image:
-    mobile: events/crunchtime-2017/coverPhotos/blank.png
-    desktop: events/crunchtime-2017/coverPhotos/blank.png
+    mobile: events/crunchtime-2017/coverPhotos/tedxwaw_crunchtime.png
+    desktop: events/crunchtime-2017/coverPhotos/tedxwaw_crunchtime.png
 coverHero:
   button:
     text: attend
     link: https://example.com/
     show: true
   image:
-    mobile: events/crunchtime-2017/coverPhotos/blank.png
-    desktop: events/crunchtime-2017/coverPhotos/blank.png
+    mobile: events/crunchtime-2017/coverPhotos/tedxwaw_crunchtime.png
+    desktop: events/crunchtime-2017/coverPhotos/tedxwaw_crunchtime.png
 isOnline: false
 location:
   mapIframe: <iframe
