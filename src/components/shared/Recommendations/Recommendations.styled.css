@@ -18,28 +18,3 @@
     margin-right: -16px;
   }
 }
-
-.card-container:hover .red-border{
-    width: 403px;
-}
-
-.card-container:hover .hoverButton{
-  opacity: 1;
-}
-
-.red-border{
-  width: 0;
-  background: red;
-  position: absolute;
-  height: 3px;
-  transition: .2s;
-}
-
-.hoverButton{
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: .2s;
-}
