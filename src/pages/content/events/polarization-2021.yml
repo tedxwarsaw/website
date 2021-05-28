@@ -20,16 +20,16 @@ cover:
     link: https://example.com/
     show: true
   image:
-    mobile: events/polarization-2021/coverPhotos/logo-mini-.png
-    desktop: events/polarization-2021/coverPhotos/logo-mini-.png
+    mobile: events/polarization-2021/coverPhotos/1461x640_tedxwaw_polaryzacja_kv_www_desktop-1.png
+    desktop: events/polarization-2021/coverPhotos/1461x640_tedxwaw_polaryzacja_kv_www_desktop-2.png
 coverHero:
   button:
     text: attend
     link: https://example.com/
     show: true
   image:
-    mobile: events/polarization-2021/coverPhotos/logo-mini-.png
-    desktop: events/polarization-2021/coverPhotos/logo-mini-.png
+    mobile: events/polarization-2021/coverPhotos/375x640_tedxwaw_polaryzacja_kv_www_mobile-1.png
+    desktop: events/polarization-2021/coverPhotos/375x640_tedxwaw_polaryzacja_kv_www_mobile-2.png
 isOnline: false
 location:
   displayName: Teatr Capitol
@@ -44,6 +44,31 @@ callToAction:
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
+speakers:
+  - speakerName: Jimek
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_jimek.png
+  - speakerName: Małgorzata Bonikowska
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_bonikowska.png
+  - speakerName: Maciej Gośniewski (Gąsiu)
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_gośniowski.png
+  - speakerName: Anna Wróblewska
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_wroblewska.png
+  - speakerName: Jacek Ambrosiewicz
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_ambrosiewicz.png
+  - speakerName: Przemek Gawroński
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_gawronski.png
+  - speakerName: Marianna Kłosińska
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_klosinska.png
+  - speakerName: Maciej Sawicki
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_sawicki.png
+  - speakerName: Joanna Ławicka
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_ławicka.png
+  - speakerName: Kacper Łukawski
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_łukawski.png
+  - speakerName: Zosia Kierner
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_kierner.png
+  - speakerName: Miguel Cano
+    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_miguel.png
 partnerLogos:
   - partnerName: logo1
     partnerLogoPath: events/2020/partnerLogos/logo-1.png
@@ -79,30 +104,5 @@ partnerLogos:
     partnerLogoPath: events/2020/partnerLogos/logo-16.png
   - partnerName: logo1
     partnerLogoPath: events/2020/partnerLogos/logo-17.png
-speakers:
-  - speakerName: Jimek
-    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_jimek.png
-  - speakerName: Małgorzata Bonikowska
-    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_bonikowska.png
-  - speakerName: Maciej Gośniewski (Gąsiu)
-    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_gośniowski.png
-  - speakerName: Anna Wróblewska
-    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_wroblewska.png
-  - speakerName: Jacek Ambrosiewicz
-    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_ambrosiewicz.png
-  - speakerName: Przemek Gawroński
-    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_gawronski.png
-  - speakerName: Marianna Kłosińska
-    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_klosinska.png
-  - speakerName: Maciej Sawicki
-    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_sawicki.png
-  - speakerName: Joanna Ławicka
-    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_ławicka.png
-  - speakerName: Kacper Łukawski
-    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_łukawski.png
-  - speakerName: Zosia Kierner
-    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_kierner.png
-  - speakerName: Miguel Cano
-    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_miguel.png
 ticketProviderLogo: images/uploads/evenea2.png
 eventPhotos: []
