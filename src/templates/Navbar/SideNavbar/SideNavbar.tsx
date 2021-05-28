@@ -14,7 +14,7 @@ interface Props extends NavbarProps {
 }
 
 export const SideNavbar = ({
-  imgFixed,
+  logoPath,
   navbarLinks,
   navbarButtons,
   setOpen,
@@ -47,7 +47,7 @@ export const SideNavbar = ({
         <div className="text-md uppercase font-semibold bg-white">
           <div className="px-4 w-full flex flex-row justify-between">
             <Link to="/" className="h-16 flex flex-row items-center">
-              <Img fixed={imgFixed} alt="Site logo" />
+              <img src={logoPath} alt="Site logo" />
             </Link>
             <button onClick={onClose}>
               <IoMdClose className="w-8 h-8 text-red-500" />

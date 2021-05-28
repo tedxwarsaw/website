@@ -58,6 +58,9 @@ export interface Props
   };
   isOnline: boolean;
   joinSpeakers: JoinSpeakersSectionProps;
+  ticketProviderLogo: FixedObject;
+  eventPhotos: FixedObject[];
+  eventPhotosDesktop: FixedObject[];
 }
 
 export interface SuggestedEvent {
@@ -71,7 +74,6 @@ export const EventPageTemplate = (props: Props) => {
   const dateConverted = moment(props.date, "DD/MM/YYYY");
   const today = moment(new Date(), "DD/MM/YYYY");
   const isFutureEvent = today < dateConverted;
-
   return (
     <Page>
       <EventHero
@@ -103,13 +105,16 @@ export const EventPageTemplate = (props: Props) => {
         subtitle={props.callToAction.subtitle}
         buttonText={props.callToAction.buttonText}
         buttonUrl={props.callToAction.buttonUrl}
+        logo={props.ticketProviderLogo}
       />
 
-      <Partners
-        partnerSectionTitle="Event partners"
-        partnerLogos={props.partnerLogos}
-        partnerLogosDesktop={props.partnerLogosDesktop}
-      />
+      {props.partnerLogos.length !== 0 && (
+        <Partners
+          partnerSectionTitle="Event partners"
+          partnerLogos={props.partnerLogos}
+          partnerLogosDesktop={props.partnerLogosDesktop}
+        />
+      )}
 
       {isFutureEvent && (
         <>
@@ -118,17 +123,24 @@ export const EventPageTemplate = (props: Props) => {
             title="Join TEDx Warsaw."
             variant={BannerVariant.white}
             subtitle="Become our volunteer and enter the amazing world of TEDx"
-            buttonText="Get involved as a volonteer"
+            buttonText="Get involved as a volunteer"
             buttonUrl="/"
+            logo={props.ticketProviderLogo}
           />
         </>
       )}
-
-      <SuggestedEvent
-        displayName={props.suggestedEvent.displayName}
-        slug={props.suggestedEvent.slug}
-        photos={props.suggestedEvent.photos}
-      />
+      {(props.eventPhotosDesktop ||
+        props.suggestedEvent?.photos.length > 0) && (
+        <SuggestedEvent
+          displayName={props.suggestedEvent.displayName}
+          slug={props.suggestedEvent.slug}
+          photos={
+            props.eventPhotosDesktop
+              ? props.eventPhotosDesktop
+              : props.suggestedEvent.photos
+          }
+        />
+      )}
 
       {!isFutureEvent && (
         <HeroSection

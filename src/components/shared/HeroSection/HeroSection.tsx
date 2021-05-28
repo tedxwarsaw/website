@@ -56,7 +56,7 @@ export const HeroSection = ({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button>{heroButtonText}</Button>
+                <Button className={"hover:bg-white hover:text-customRed"}>{heroButtonText}</Button>
               </a>)}
               {heroLinks?.map((heroLink) => (
                 <a
@@ -65,7 +65,7 @@ export const HeroSection = ({
                   key={heroLink.displayName}
                 >
                   <span className="my-auto flex items-center">
-                    {heroLink.displayName} <FaArrowRight className="ml-3 " />
+                    {heroLink.displayName + ' ->'}
                   </span>
                 </a>
               ))}

@@ -134,6 +134,7 @@ export const AttendPageTemplate = (props: Props) => (
     />
 
     <EventsList events={props.events} categories={props.categories} />
+
     <div className="main-grid-full-span bg-customLightGrey py-10">
       <div className="flex main-grid">
         <div className="px-5 md:px-0 ">
@@ -152,7 +153,7 @@ export const AttendPageTemplate = (props: Props) => (
               <Link to={props.joinUsButtonUrl1}>
                 <Button
                   children={<span>{props.joinUsButton1}</span>}
-                  className="mt-10"
+                  className="mt-10 hover:bg-white hover:text-customRed"
                 />
               </Link>
             </div>
@@ -165,7 +166,7 @@ export const AttendPageTemplate = (props: Props) => (
               <Link to={props.joinUsButtonUrl2}>
                 <Button
                   children={<span>{props.joinUsButton2}</span>}
-                  className="mt-10"
+                  className="mt-10 hover:bg-white hover:text-customRed"
                 />
               </Link>
             </div>

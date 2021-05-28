@@ -7,7 +7,7 @@ export interface EventSpeakersProps {
 
 export const EventSpeakers = ({ eventSpeakers }: EventSpeakersProps) => (
   <div className="inner-grid py-20 grid-flow-row ">
-    <h2 className="font-medium text-2xl md:text-3xl row-start-1 col-span-full mb-10">
+    <h2 className="font-medium row-start-1 col-span-full mb-10">
       Speakers
     </h2>
     {eventSpeakers.map((speaker, index) => (

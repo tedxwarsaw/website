@@ -9,11 +9,10 @@ export const MeetUs = ({
   teamMembersSlider,
   associates,
 }: MeetUsProps) => (
-  <div className="main-grid-full-span bg-black py-10">
+  <div className="main-grid-full-span bg-black py-10" id={"meet-us-section"}>
     <div className="main-grid">
-      <h2 className="font-bold text-5xl text-white mb-10">Meet us</h2>
+      <h2 className="font-bold text-white mt-10 text-8xl">Meet us</h2>
       <TeamMembersSlider
-        meetUsBackgroundImage={meetUsBackgroundImage}
         meetUsBackgroundImageDesktop={meetUsBackgroundImageDesktop}
         teamMembers={teamMembersSlider}
       />

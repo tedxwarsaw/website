@@ -26,7 +26,7 @@ export const SuggestedEvent = ({
               to={`/watch?event=${slug}`}
               className="font-semibold hover:opacity-50 flex items-center"
             >
-              Watch the talks <FaArrowRight className="ml-2 inline" />
+              Watch the talks {'->'}
             </Link>
             <Link
               to={`/event/${slug}/`}
@@ -36,13 +36,13 @@ export const SuggestedEvent = ({
             </Link>
           </div>
         </div>
-        <div className="col-start-2 col-end-7 flex flex-col flew-nowrap col-span-full">
+        <div className="col-start-2 flex flex-col flew-nowrap col-span-full">
           <SuggestedEventSlider>
             {photos.map((fluid, idx) => (
               <div key={idx} className="h-full">
                 <Img
                   fluid={fluid}
-                  className="h-full w-full rounded"
+                  className="h-full w-full"
                   alt={`Photo from ${displayName}`}
                 />
               </div>

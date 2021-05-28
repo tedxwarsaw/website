@@ -7,7 +7,6 @@ const firstQuery = `#graphql
   query FirstEvent {
     suggestedEventYaml(collectionId: { eq: "suggestedEvent" }) {
       slug
-      photos
     }
     partnershipTeamYaml(collectionId: { eq: "eventPartnershipTeam" }) {
       members {
@@ -50,7 +49,10 @@ const secondQuery = `#graphql
           link
         }
       }
-      partnerLogoPaths
+      partnerLogos {
+        partnerName
+        partnerLogoPath
+      }
       isOnline
       location {
         city
@@ -61,6 +63,10 @@ const secondQuery = `#graphql
       speakers {
         speakerName
         speakerPhotoPath
+      }
+      ticketProviderLogo
+      eventPhotos {
+        eventPhoto
       }
     }
     suggestedEventInfo: eventsYaml(slug: {eq: $suggestedEventSlug}) {
@@ -99,23 +105,62 @@ export const queryForProps = async (
   const suggestedEvent: any = {
     displayName: suggestedEventInfo.displayName,
     slug: suggestedEventInfo.slug,
-    photos: await Promise.all(
-      suggestedEventYaml.photos.map(
-        async (path) => await getFluidImage({ graphql, path })
-      )
-    ),
   };
 
+  if (suggestedEvent.slug) {
+    const {
+      data: { event },
+    } = await graphql(secondQuery, {
+      eventSlug: suggestedEvent.slug,
+      suggestedEventSlug: suggestedEventYaml.slug,
+    });
+
+    const photos = await Promise.all(
+      event.eventPhotos.map(async (item) => {
+        const path = item.eventPhoto;
+        return await getFluidImage({ graphql, path });
+      })
+    );
+    suggestedEvent.photos = photos;
+  }
+
   const partnerLogosDesktop: any = await Promise.all(
-    event.partnerLogoPaths.map(
-      async (path) => await getFixedImage({ graphql, path, height: 60 })
+    event.partnerLogos.map(
+      async (logo) =>
+        await getFixedImage({ graphql, path: logo.partnerLogoPath, height: 60 })
     )
   );
+
   const partnerLogos: any = await Promise.all(
-    event.partnerLogoPaths.map(
-      async (path) => await getFixedImage({ graphql, path, height: 30 })
+    event.partnerLogos.map(
+      async (logo) =>
+        await getFixedImage({ graphql, path: logo.partnerLogoPath, height: 30 })
     )
   );
+
+  let ticketProviderLogo: any;
+  if (event.ticketProviderLogo) {
+    ticketProviderLogo = await getFixedImage({
+      graphql,
+      path: event.ticketProviderLogo,
+      height: 15,
+    });
+  }
+
+  let eventPhotosDesktop: any;
+  if (event.eventPhotos && event.eventPhotos.length > 0) {
+    eventPhotosDesktop = await Promise.all(
+      event.eventPhotos.map(
+        async (event) =>
+          await getFluidImage({
+            graphql,
+            path: event.eventPhoto,
+            quality: 90,
+            sizes: "(max:-width: 2000px)",
+          })
+      )
+    );
+  }
 
   const cover: any = {
     ...event.cover,
@@ -139,28 +184,28 @@ export const queryForProps = async (
     ...event.location,
     mapSrc: (parseHTML(event.location.mapIframe).childNodes[0] as HTMLElement)
       .attrs.src,
-    image: await getFluidImage({
-      graphql,
-      path: event.location.image,
-    }),
   };
+
   const newsletter = await queryForNewsletter(graphql);
   const joinSpeakers = await queryForJoinSpeakers(graphql);
 
-  const eventSpeakers: any = await Promise.all(
-    event.speakers.map(async (speaker) => {
-      const image = await getFixedImage({
-        graphql,
-        path: speaker.speakerPhotoPath,
-        height: 60,
-        width: 60,
-      });
-      return {
-        speakerName: speaker.speakerName,
-        speakerPhoto: image,
-      };
-    })
-  );
+  let eventSpeakers;
+  if (event.speakers) {
+    eventSpeakers = await Promise.all(
+      event.speakers.map(async (speaker) => {
+        const image = await getFixedImage({
+          graphql,
+          path: speaker.speakerPhotoPath,
+          height: 60,
+          width: 60,
+        });
+        return {
+          speakerName: speaker.speakerName,
+          speakerPhoto: image,
+        };
+      })
+    );
+  }
 
   return {
     ...event,
@@ -173,5 +218,7 @@ export const queryForProps = async (
     eventSpeakers,
     ...newsletter,
     joinSpeakers,
+    ticketProviderLogo,
+    eventPhotosDesktop,
   };
 };

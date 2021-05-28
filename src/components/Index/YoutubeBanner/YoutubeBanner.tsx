@@ -15,7 +15,7 @@ export const YoutubeBanner = ({
 }: YoutubeBannerProps) => {
   return (
     <div className="my-16 text-center flex flex-col justify-center align-center">
-      <h2 className="font-medium mb-6 mx-auto text-2xl md:text-3xl md:w-96">
+      <h2 className="font-medium mb-6 mx-auto md:w-96">
         {parse(youtubeBannerHeading)}
       </h2>
       <a
@@ -24,7 +24,7 @@ export const YoutubeBanner = ({
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Button variant={ButtonVariant.filledGrey}>
+        <Button variant={ButtonVariant.filledGrey} className={"hover:bg-white hover:text-customRed"}>
           {youtubeBannerLinkText}
         </Button>
       </a>

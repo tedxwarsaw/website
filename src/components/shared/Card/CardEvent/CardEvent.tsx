@@ -20,7 +20,7 @@ export const CardEvent = ({
   displayName,
   date,
 }: CardEventProps) => (
-  <div className=" pt-2 md:pt-3 pb-5 border-b-4 border-customTransparent  hover:border-customRed h-full flex flex-col">
+  <div className="pt-2 md:pt-3 pb-5 border-b-4 border-customTransparent h-full flex flex-col">
     <Link to={`/event/${slug}`}>
       <div className="relative card-image-container">
         <Img
@@ -33,6 +33,8 @@ export const CardEvent = ({
           fluid={coverDesktop}
           alt="Slider item image"
         />
+        <Button variant={ButtonVariant.filledRedWithBG} className={"hoverButton hover:bg-white hover:text-customRed"}>View Event</Button>
+        <div className={"red-border"}/>
       </div>
     </Link>
     <span className="absolute left-0 top-0  text-white text-sm px-3 bg-customRed md:py-1">
@@ -56,7 +58,7 @@ export const CardEvent = ({
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Button variant={ButtonVariant.filledRedWithBG}>Attend</Button>
+        <Button variant={ButtonVariant.filledRedWithBG} className={"hover:bg-white hover:text-customRed"}>Attend</Button>
       </Link>
       <Link
         to={`/event/${slug}`}
@@ -64,8 +66,7 @@ export const CardEvent = ({
         style={{ width: "fit-content" }}
       >
         <span className="my-auto flex items-center">
-          Learn more
-          <FaArrowRight className="ml-3" />
+          Learn more {'->'}
         </span>
       </Link>
     </div>

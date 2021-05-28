@@ -16,7 +16,7 @@ export const EventHighlight = ({
 }: EventHighlightProps) => {
   const descriptionSplit = splitTextInTwo(eventDescription);
   return (
-    <div className="pb-10 main-grid-mobile-full-span">
+    <div className="pb-10 main-grid-mobile-full-span mb-14">
       <div style={{ height: "fit-content" }}>
         <Img
           className="w-full z-0 md:hidden"
@@ -59,7 +59,7 @@ export const EventHighlight = ({
               style={{ width: "fit-content" }}
             >
               <span className="my-auto flex items-center">
-                Learn more <FaArrowRight className="ml-3 " />
+                Learn more {'->'}
               </span>
             </Link>
           </div>

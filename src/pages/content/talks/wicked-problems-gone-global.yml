@@ -1,0 +1,18 @@
+collectionId: talk
+slug: wicked-problems-gone-global
+displayName: Wicked Problems Gone Global
+talkDescription: Not a day goes by without news of floods, unemployment,
+  financial disasters and conflicts. We are headed into a perfect storm of
+  economic turmoil, climate disruption, water and energy shortages, and futurist
+  and strategic risk planner Kacper Nosarzewski spends his days assessing the
+  various scenarios of what happens when wicked problems go global.
+youtubeVideoId: https://www.youtube.com/watch?v=v7lO_6b4dBg&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=13
+speaker: Kacper Nosarzewski
+speakerProfileImage: talks/general/profile-placeholder.png
+speakerDescription: Futurist and strategic risk planner.
+eventSlug: poke-the-comfort-zone-2013
+cover:
+  image:
+    mobile: talks/wicked-problems-gone-global/coverPhotos/nosarz.png
+    desktop: talks/wicked-problems-gone-global/coverPhotos/nosarz.png
+duration: "5:49"

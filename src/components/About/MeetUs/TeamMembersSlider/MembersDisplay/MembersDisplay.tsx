@@ -17,12 +17,12 @@ export const MembersDisplay = ({
       const name = member.name.split(" ");
       return (
         <div
-          className="flex flex-col font-semibold w-28 mr-5 cursor-pointer mt-5"
+          className="flex flex-col font-semibold w-40 mr-5 cursor-pointer mt-5"
           key={member.name + index}
           onClick={() => setCurrentSlide(index)}
         >
           {name.map((word) => (
-            <span>{name[word]}</span>
+            <span key={word}>{word}</span>
           ))}
 
           <span

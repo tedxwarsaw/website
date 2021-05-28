@@ -33,9 +33,8 @@ interface Props {
 
 export const Button = (props: Props): JSX.Element => (
   <button
-    className={`p-2 px-6 rounded transform transition hover:scale-110
-                active:scale-90 ${getButtonClasses(props.variant)}
-                ${props.className != null ? props.className : ""}`}
+    className={`p-2 px-6 rounded ${getButtonClasses(props.variant)} ${props.className != null ? props.className : ""}`}
+    style={{'transition': '.15s'}}
     type={props.type}
   >
     {props.children}

@@ -2,6 +2,7 @@ import React from "react";
 import Img, { FixedObject } from "gatsby-image";
 import { Button, ButtonVariant } from "@/components/shared/Button";
 import { FaArrowRight } from "react-icons/fa";
+import "./Partners.styled.css";
 
 export interface PartnersProps {
   partnerSectionTitle: string;
@@ -26,7 +27,7 @@ export const Partners = ({
 }: PartnersProps) => (
   <div className="py-20 space-y-6">
     <div className="flex justify-between pb-6">
-      <h2 className="font-medium text-2xl md:text-3xl">
+      <h2 className="font-medium">
         {partnerSectionTitle}
       </h2>
       {showLinks && (
@@ -37,7 +38,7 @@ export const Partners = ({
             style={{ width: "fit-content" }}
           >
             <span className="my-auto flex items-center">
-              {getToKnowOurPartnersText} <FaArrowRight className="ml-2" />
+              {getToKnowOurPartnersText}
             </span>
           </a>
           <a
@@ -45,7 +46,7 @@ export const Partners = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="ml-5" variant={ButtonVariant.filledRedWithBG}>
+            <Button className="ml-5 hover:bg-white hover:text-customRed" variant={ButtonVariant.filledRedWithBG}>
               {joinOurPartnersText}
             </Button>
           </a>
@@ -53,20 +54,20 @@ export const Partners = ({
       )}
     </div>
 
-    <div className="flex flex-wrap space-y-4 xl:hidden">
+    <div className="flex flex-wrap xl:hidden partners-img-mobile-container">
       {partnerLogos.map((fixed, idx) => (
-        <Img key={idx} fixed={fixed} alt="Partner logo" style={{"filter": "grayscale(100%)", "margin": "5px"}} />
+          <Img key={idx} fixed={fixed} alt="Partner logo" className={"partners-img-mobile"} />
       ))}
     </div>
-    <div className="flex flex-wrap justify-between space-y-4  hidden xl:flex">
+    <div className="flex flex-wrap hidden xl:flex partners-img-desktop-container">
       {partnerLogosDesktop.map((fixed, idx) => (
-        <Img key={idx} fixed={fixed} alt="Partner logo" style={{"filter": "grayscale(100%)"}} />
+        <Img key={idx} fixed={fixed} alt="Partner logo"  className={"partners-img-desktop"} />
       ))}
     </div>
     {showLinks && (
       <div className="flex flex-col md:flex-row  md:items-center  items-start xl:hidden">
         <a href={joinOurPartnersLink} target="_blank" rel="noopener noreferrer">
-          <Button className="my-5">{joinOurPartnersText}</Button>
+          <Button className="my-5 hover:bg-white hover:text-customRed">{joinOurPartnersText}</Button>
         </a>
         <a
           href={getToKnowOurPartnersLink}
@@ -74,7 +75,7 @@ export const Partners = ({
           style={{ width: "fit-content" }}
         >
           <span className="my-2 md:my-0 md:ml-5 flex items-center">
-            {getToKnowOurPartnersText} <FaArrowRight className="ml-2" />
+            {getToKnowOurPartnersText + ' ->'}
           </span>
         </a>
       </div>

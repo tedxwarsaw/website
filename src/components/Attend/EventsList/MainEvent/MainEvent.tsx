@@ -52,14 +52,14 @@ export const MainEvent = ({
           </span>
           <span>{dateConverted.format("MMM Do, YYYY")}</span>
         </div>
-        <h2 className="text-2xl md:text-3xl my-5 xl:my-0">{displayName}</h2>
+        <h2 className="my-5 xl:my-0">{displayName}</h2>
         <p>{descriptionSplit[0]}</p>
         <div>
           <Link
             to={`/event/${slug}`}
             className="text-customRed text-sm flex hover:opacity-50 items-center my-5 xl:my-0"
           >
-            <span className="text-customRed">
+            <span className="text-customRed font-bold">
               Read more <HiMenuAlt2 className="inline w-6 h-6" />
             </span>
           </Link>

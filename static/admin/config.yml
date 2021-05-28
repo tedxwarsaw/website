@@ -2,6 +2,7 @@ backend:
   name: gitlab
   preview_context: preview_status
   repo: tedxwarsaw/tedxwarsaw.gitlab.io
+local_backend: true
 publish_mode: editorial_workflow
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
@@ -17,12 +18,15 @@ collections:
           - label: "Hero title"
             name: "heroTitle"
             widget: "string"
+            required: true
           - label: "Hero subtitle"
             name: "heroSubtitle"
             widget: "string"
+            required: true
           - label: "Hero button text"
             name: "heroButtonText"
             widget: "string"
+            required: true
           - label: "Hero button link"
             name: "heroButtonLink"
             widget: "string"
@@ -120,14 +124,31 @@ collections:
           - label: Join our partners link
             name: joinOurPartnersLink
             widget: string
-          - name: partnerLogoPaths
+          - name: partnerLogos
             label: Partner Logos
-            widget: image
-            allow_multiple: true
-            media_folder: "photos/partnerLogos"
-            media_library:
-              config:
-                multiple: true
+            widget: "list"
+            required: false
+            fields:
+              - { label: "name", name: "partnerName", widget: "string", required: false }
+              - {
+                label: "Partner Logo",
+                name: "partnerLogoPath",
+                widget: "image",
+                allow_multiple: false,
+                media_folder: "photos",
+                }
+          - label: "CenterTextSection title"
+            name: "centerTextSectionTitle"
+          - label: "CenterTextSection content"
+            name: "centerTextSectionContent"
+          - label: "CenterTextSection button link"
+            name: "centerTextSectionButtonLink"
+          - label: "CenterTextSection button text"
+            name: "centerTextSectionButtonText"
+          - label: "CenterTextSection button link"
+            name: "centerTextSectionButtonLinkSecond"
+          - label: "CenterTextSection button text"
+            name: "centerTextSectionButtonTextSecond"
       - label: "Attend"
         name: "attend"
         file: "src/pages/content/pages/attend.yaml"
@@ -571,11 +592,6 @@ collections:
             value_field: slug
             display_fields: ["displayName"]
             search_fields: ["displayName", "slug"]
-          - name: photos
-            label: Featured Photos
-            widget: image
-            allow_multiple: true
-            media_folder: "photos"
       - label: "Featured Event (shown in the navbar, footer, home page, attend page)"
         name: "featuredEvent"
         file: "src/pages/content/global/featuredEvent/featuredEvent.yaml"
@@ -749,7 +765,7 @@ collections:
       - label: "Event category"
         name: "category"
         widget: "select"
-        options: ["Live", "Conference", "Salon"]
+        options: ["Live", "Conference", "Salon", "Circle"]
       - name: city
         label: City
         widget: string
@@ -805,12 +821,14 @@ collections:
                 label: Mobile variant
                 widget: image
                 allow_multiple: false
-                media_folder: "events/{{slug}}/coverPhotos"
+                media_folder: "{{slug}}/coverPhotos"
+                public_folder: "events/{{slug}}/coverPhotos"
               - name: desktop
                 label: Desktop variant
                 widget: image
                 allow_multiple: false
-                media_folder: "events/{{slug}}/coverPhotos"
+                media_folder: "{{slug}}/coverPhotos"
+                public_folder: "events/{{slug}}/coverPhotos"
       - name: coverHero
         label: Cover hero section
         widget: object
@@ -839,12 +857,14 @@ collections:
                 label: Mobile variant
                 widget: image
                 allow_multiple: false
-                media_folder: "events/{{slug}}/coverPhotos"
+                media_folder: "{{slug}}/coverPhotos"
+                public_folder: "events/{{slug}}/coverPhotos"
               - name: desktop
                 label: Desktop variant
                 widget: image
                 allow_multiple: false
-                media_folder: "events/{{slug}}/coverPhotos"
+                media_folder: "{{slug}}/coverPhotos"
+                public_folder: "events/{{slug}}/coverPhotos"
       - name: "isOnline"
         label: "Is this an online event?"
         widget: boolean
@@ -872,7 +892,8 @@ collections:
             hint: A background image.
             widget: image
             allow_multiple: false
-            media_folder: "events/{{slug}}/locationPhoto"
+            media_folder: "{{slug}}/locationPhoto"
+            public_folder: "events/{{slug}}/locationPhoto"
       - name: callToAction
         label: The Red Section
         widget: object
@@ -889,17 +910,10 @@ collections:
           - name: buttonUrl
             widget: string
             label: Button URL
-      - name: partnerLogoPaths
-        label: Partner Logos
-        widget: image
-        allow_multiple: true
-        media_folder: "events/{{slug}}/partnerLogos"
-        media_library:
-          config:
-            multiple: true
       - name: speakers
         label: Event speakers
         widget: "list"
+        required: true
         fields:
           - { label: "Speaker's name", name: "speakerName", widget: "string" }
           - {
@@ -907,7 +921,42 @@ collections:
               name: "speakerPhotoPath",
               widget: "image",
               allow_multiple: false,
-              media_folder: "events/{{slug}}/speakerPhotos",
+              media_folder: "{{slug}}/speakerPhotos",
+              public_folder: "events/{{slug}}/speakerPhotos"
+            }
+      - name: partnerLogos
+        label: Partner Logos
+        widget: "list"
+        required: false
+        fields:
+          - {
+            label: "Partner Logo",
+            name: "partnerLogoPath",
+            widget: "image",
+            allow_multiple: false,
+            media_folder: "{{slug}}/partnerLogos",
+            public_folder: "events/{{slug}}/partnerLogos"
+            }
+      - name: ticketProviderLogo
+        label: Ticket Provider Logo
+        widget: "image"
+        allow_multiple: false
+        media_folder: "{{slug}}/partnerLogos"
+        public_folder: "events/{{slug}}/partnerLogos"
+        required: false
+      - name: eventPhotos
+        label: Event Photos
+        widget: "list"
+        required: false
+        default: []
+        fields:
+          - {
+            lebel: "Event Photo",
+            name: "eventPhoto",
+            widget: "image",
+            allow_multiple: false,
+            media_folder: "{{slug}}/eventPhotos",
+            public_folder: "events/{{slug}}/eventPhotos"
             }
   - label: "Talks"
     name: talks
@@ -943,8 +992,11 @@ collections:
         label: "Speaker name"
         widget: string
       - name: speakerProfileImage
-        label: "Speaker profile images"
-        widget: string
+        label: "Speakers profile image"
+        widget: image
+        allow_multiple: false
+        media_folder: "{{slug}}/photos"
+        public_folder: "talks/{{slug}}/photos"
       - name: speakerDescription
         label: "Speaker description"
         widget: string
@@ -970,11 +1022,13 @@ collections:
                 widget: image
                 allow_multiple: false
                 media_folder: "{{slug}}/coverPhotos"
+                public_folder: "talks/{{slug}}/coverPhotos"
               - name: desktop
                 label: Desktop variant
                 widget: image
                 allow_multiple: false
                 media_folder: "{{slug}}/coverPhotos"
+                public_folder: "talks/{{slug}}/coverPhotos"
       - name: duration
         label: Duration
         widget: string

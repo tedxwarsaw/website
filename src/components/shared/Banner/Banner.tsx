@@ -1,5 +1,6 @@
 import { Button, ButtonVariant } from "@/components/shared/Button";
 import React from "react";
+import Img, {FixedObject} from "gatsby-image";
 
 export enum BannerVariant {
   red = "red",
@@ -12,6 +13,7 @@ interface BannerProps {
   subtitle?: string;
   buttonText: string;
   buttonUrl: string;
+  logo?: FixedObject;
 }
 
 export const Banner = ({
@@ -20,42 +22,36 @@ export const Banner = ({
   subtitle,
   buttonText,
   buttonUrl,
-}: BannerProps) => (
-  <div
-    className={`main-grid-full-span h-96 flex flex-row items-center justify-center ${
-      variant === BannerVariant.white ? "bg-customLightGrey" : "bg-customRed"
-    }`}
-  >
-    <div
-      className={` text-center space-y-4 m-4 ${
-        variant === BannerVariant.white ? "" : "text-white"
+  logo
+}: BannerProps) => {
+  return <div className={`main-grid-full-span h-96 flex flex-row items-center justify-center ${
+          variant === BannerVariant.white ? "bg-customLightGrey" : "bg-customRed"
       }`}
-    >
-      <h2 className="text-3xl xl:text-4xl md:max-w-xl">{title}</h2>
-
+  >
+    <div className={`text-center ${variant === BannerVariant.white ? "" : "text-white"}`}>
+      <h2 className="md:max-w-xl font-bold">{title}</h2>
       {subtitle && (
-        <p
-          className={`${
-            variant === BannerVariant.white ? "" : "font-medium text-4xl"
-          }`}
-        >
-          {subtitle}
-        </p>
+          <p className={`${variant === BannerVariant.white ? "" : "font-medium text-4xl"}`}>
+            {subtitle}
+          </p>
       )}
 
-      <div className="h-2" />
+      <div className="h-2"/>
       <a href={buttonUrl} target="_blank" rel="noopener noreferrer">
         <Button
-          variant={
-            !variant || variant === BannerVariant.red
-              ? ButtonVariant.outlineWhite
-              : ButtonVariant.filledRedWithBG
-          }
-          className="font-normal text-lg px-20"
+            variant={
+              !variant || variant === BannerVariant.red
+                  ? ButtonVariant.outlineWhite
+                  : ButtonVariant.filledRedWithBG
+            }
+            className="font-normal text-lg px-20 mt-6 hover:bg-white hover:text-customRed"
         >
           {buttonText}
         </Button>
       </a>
+      {(logo && BannerVariant.red) && <div className={"mt-6"}>
+        <Img fixed={logo}/>
+      </div>}
     </div>
   </div>
-);
+};

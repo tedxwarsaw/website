@@ -5,6 +5,7 @@ const featuredEventQuery = `#graphql
 query FeaturedEventQuery {
   featuredEventMeta:  featuredEventYaml(collectionId: { eq: "featuredEvent" })  {
     slug
+    show
   }
 }
 `;
@@ -77,6 +78,8 @@ export const queryForFeatureEvent = async (
   };
 
   return {
+
+    ...featuredEventMeta,
     ...event,
     coverHero,
   };

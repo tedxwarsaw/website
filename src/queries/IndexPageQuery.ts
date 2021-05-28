@@ -39,7 +39,14 @@ export const pageQuery = `#graphql
       getToKnowOurPartnersLink
       joinOurPartnersText
       joinOurPartnersLink
-      partnerLogoPaths
+      partnerLogos
+      eventSlug
+      centerTextSectionTitle
+      centerTextSectionContent
+      centerTextSectionButtonText
+      centerTextSectionButtonLink
+      centerTextSectionButtonTextSecond
+      centerTextSectionButtonLinkSecond
     }
   }
 `;
@@ -79,7 +86,7 @@ export const queryForProps = async (
 
   const featuredEvent = await queryForFeatureEvent(graphql);
 
-  const {
+    const {
     data: { event },
   } = await graphql(eventQuery, {
     eventSlug: featuredEvent.slug,
@@ -140,12 +147,13 @@ export const queryForProps = async (
   });
 
   const partnerLogos: any = await Promise.all(
-    pagesYaml.partnerLogoPaths.map(
+    pagesYaml.partnerLogos.map(
       async (path) => await getFixedImage({ graphql, path, height: 30 })
     )
   );
+
   const partnerLogosDesktop: any = await Promise.all(
-    pagesYaml.partnerLogoPaths.map(
+    pagesYaml.partnerLogos.map(
       async (path) => await getFixedImage({ graphql, path, height: 60 })
     )
   );
@@ -163,6 +171,7 @@ export const queryForProps = async (
     heroBackgroundImageDesktop,
     eventHeader: event.displayName,
     eventDescription: event.description,
+    featuredEventShow: featuredEvent.show,
     eventHiglightImage,
     eventHiglightImageDesktop,
     eventSpeakerPhotos,

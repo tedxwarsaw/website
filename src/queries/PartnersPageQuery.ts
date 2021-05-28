@@ -10,7 +10,7 @@ export const pageQuery = `#graphql
       heroBackgroundImageUrlDesktop
       heroBackgroundImageAlt
       partnerSectionTitle
-      partnerLogoPaths
+      partnerLogos
       partnersContactContent
       partnersContacts {
         image
@@ -52,13 +52,13 @@ export const queryForProps = async (
     } = await queryForRecommendations(graphql);
 
     const partnerLogos: any = await Promise.all(
-        pagesYaml.partnerLogoPaths.map(
+        pagesYaml.partnerLogos.map(
             async (path) => await getFixedImage({ graphql, path, height: 30 })
         )
     );
 
     const partnerLogosDesktop: any = await Promise.all(
-        pagesYaml.partnerLogoPaths.map(
+        pagesYaml.partnerLogos.map(
             async (path) => await getFixedImage({ graphql, path, height: 60 })
         )
     );

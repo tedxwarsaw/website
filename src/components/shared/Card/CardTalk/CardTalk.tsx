@@ -2,6 +2,7 @@ import React from "react";
 import Img, { FluidObject } from "gatsby-image";
 import "../Card.styled.css";
 import { Link } from "gatsby";
+import {Button, ButtonVariant} from "../../Button";
 
 interface CardTalkProps {
   slug: string;
@@ -25,7 +26,7 @@ export const CardTalk = ({
   noBadge,
 }: CardTalkProps) => (
   <Link to={`/talk/${slug}`}>
-    <div className="border-b-4 pb-5 pt-2 md:pt-3 border-customTransparent  hover:border-customRed h-full flex flex-col">
+    <div className="border-b-4 pb-5 pt-2 md:pt-3 border-customTransparent h-full flex flex-col card-container">
       <div className="relative card-image-container">
         <Img
           className="w-full h-full md:hidden"
@@ -37,10 +38,11 @@ export const CardTalk = ({
           fluid={coverDesktop}
           alt="Slider item image"
         />
-
+        <Button variant={ButtonVariant.filledRedWithBG} className={"hoverButton hover:bg-white hover:text-customRed"}>View Talk</Button>
         <span className="absolute right-2 bottom-2 bg-customDarkGrey text-white font-light text-xs px-2">
           {duration}
         </span>
+        <div className={"red-border"}/>
       </div>
       <span
         className={`absolute left-0 top-0 bg-customDarkGrey text-white md:py-1 text-sm px-3 ${

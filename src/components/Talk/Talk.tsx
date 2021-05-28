@@ -38,7 +38,7 @@ export const Talk = ({
         </span>
       </Link>
       <div className="ml-1 mt-10">
-        <h2 className="text-2xl md:text-3xl font-bold">{speaker}</h2>
+        <h2 className="font-bold">{speaker}</h2>
         <p className="mt-5 text-2xl md:text-3xl font-light">{displayName}</p>
         <p className="text-2xl md:text-3xl font-light">{eventDisplayName}</p>
         <p className="mt-10">{duration.split(":")[0]} min watch</p>

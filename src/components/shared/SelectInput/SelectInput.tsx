@@ -40,12 +40,13 @@ export const SelectInput = ({
 
   return (
     <div
-      className={`my-3  xl:mx-4 cursor-pointer ${className ? className : ""}
+      className={`my-3  xl:mx-4 cursor-pointer 
       ${
         noBorder
           ? ""
           : "border border-customGrey border-opacity-50 rounded-md  xl:mx-4 "
       }
+      ${className ? className : ""}
       `}
     >
       <OutsideClickHandler

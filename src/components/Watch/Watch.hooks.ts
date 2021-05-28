@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePagination } from "@/components/shared/Pagination";
 import { durationFilters } from "@/components/Watch/helpers";
+import { useQueryParameters } from "@/hooks/useQueryParameters";
 
 export const useWatch = (talks) => {
   const [filteredTalks, setFilteredTalks] = useState(talks);
@@ -15,20 +16,24 @@ export const useWatch = (talks) => {
     21
   );
 
+  const { qs, params, updateQueryParams } = useQueryParameters();
+
   const filterTalks = (
     searchPhrase: string,
     eventSlug: string,
     durationFilter: string
   ) => {
-    setActiveFilters({
+    const filters = {
       searchPhrase: searchPhrase,
       eventSlug: eventSlug,
       durationFilter: durationFilter,
-    });
+    };
+
+    setActiveFilters(filters);
 
     let talksFiltered = [...talks];
 
-    if (searchPhrase !== "") {
+    if (searchPhrase) {
       talksFiltered = talksFiltered.filter((talk) =>
         Object.values(talk).some((val: string) => {
           if (typeof val === "string") {
@@ -39,18 +44,22 @@ export const useWatch = (talks) => {
         })
       );
     }
-    if (eventSlug !== "") {
+    if (eventSlug) {
       talksFiltered = talksFiltered.filter(
         (talk) => talk.eventSlug === eventSlug
       );
     }
 
-    if (durationFilter !== "") {
+    if (durationFilter) {
       talksFiltered = talksFiltered.filter((talk) =>
         durationFilters[durationFilter](talk.duration)
       );
     }
     setFilteredTalks(talksFiltered);
+
+    const paramsString = qs.stringify(filters);
+    updateQueryParams(paramsString);
+    // location.search = params;
   };
 
   const sortTalks = (sortType) => {
@@ -65,6 +74,14 @@ export const useWatch = (talks) => {
       setFilteredTalks(talksSorted);
     }
   };
+
+  useEffect(() => {
+    filterTalks(
+      params?.searchPhrase,
+      params?.eventSlug,
+      params?.durationFilter
+    );
+  }, []);
 
   return {
     activeFilters,
