@@ -15,27 +15,33 @@ cover:
     show: true
     link: https://example.com/
   image:
-    mobile: events/embrace-the-other-2014/coverPhotos/blank.png
-    desktop: events/embrace-the-other-2014/coverPhotos/blank.png
+    mobile: events/embrace-the-other-2014/coverPhotos/tedxwaw_embracetheother.png
+    desktop: events/embrace-the-other-2014/coverPhotos/tedxwaw_embracetheother.png
 coverHero:
   button:
     link: https://example.com/
     text: attend
     show: true
   image:
-    mobile: events/embrace-the-other-2014/coverPhotos/blank.png
-    desktop: events/embrace-the-other-2014/coverPhotos/blank.png
+    mobile: events/embrace-the-other-2014/coverPhotos/tedxwaw_embracetheother.png
+    desktop: events/embrace-the-other-2014/coverPhotos/tedxwaw_embracetheother.png
 isOnline: false
 location:
   displayName: Złote Tarasy Złota 59
   city: Warsaw
-  mapIframe: <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2443.7707125177826!2d20.9997369!3d52.2293834!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8c3c80e54d%3A0x12702cc984d8e75c!2sZ%C5%82ote%20Tarasy!5e0!3m2!1sen!2spl!4v1620902913424!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  mapIframe: <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2443.7707125177826!2d20.9997369!3d52.2293834!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8c3c80e54d%3A0x12702cc984d8e75c!2sZ%C5%82ote%20Tarasy!5e0!3m2!1sen!2spl!4v1620902913424!5m2!1sen!2spl"
+    width="600" height="450" style="border:0;" allowfullscreen=""
+    loading="lazy"></iframe>
   image: events/embrace-the-other-2014/locationPhoto/zlote.jpg
 callToAction:
   title: TEDxWarsaw 2014 pass
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
+speakers:
+  - speakerName: Unknown
+    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
 partnerLogos:
   - partnerName: logo1
     partnerLogoPath: events/2020/partnerLogos/logo-1.png
@@ -71,8 +77,5 @@ partnerLogos:
     partnerLogoPath: events/2020/partnerLogos/logo-16.png
   - partnerName: logo1
     partnerLogoPath: events/2020/partnerLogos/logo-17.png
-speakers:
-  - speakerName: Unknown
-    speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
 ticketProviderLogo: images/uploads/evenea2.png
 eventPhotos: []
