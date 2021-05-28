@@ -15,27 +15,61 @@ cover:
     link: https://example.com/
     show: true
   image:
-    mobile: events/the-little-things-2015/coverPhotos/blank.png
-    desktop: events/the-little-things-2015/coverPhotos/blank.png
+    mobile: events/the-little-things-2015/coverPhotos/tedxwaw_thelittlethings.png
+    desktop: events/the-little-things-2015/coverPhotos/tedxwaw_thelittlethings.png
 coverHero:
   button:
     text: attend
     link: https://example.com/
     show: true
   image:
-    mobile: events/the-little-things-2015/coverPhotos/blank.png
-    desktop: events/the-little-things-2015/coverPhotos/blank.png
+    mobile: events/the-little-things-2015/coverPhotos/tedxwaw_thelittlethings.png
+    desktop: events/the-little-things-2015/coverPhotos/tedxwaw_thelittlethings.png
 isOnline: false
 location:
   displayName: Teatr Polski
   city: Warsaw
-  mapIframe: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.2674309086055!2d21.017512215797048!3d52.23852597976195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc5f030cd111%3A0x6200c65161dadc70!2sTeatr%20Polski%20im.%20Arnolda%20Szyfmana%20w%20Warszawie!5e0!3m2!1sen!2spl!4v1620903023719!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  mapIframe: <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.2674309086055!2d21.017512215797048!3d52.23852597976195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc5f030cd111%3A0x6200c65161dadc70!2sTeatr%20Polski%20im.%20Arnolda%20Szyfmana%20w%20Warszawie!5e0!3m2!1sen!2spl!4v1620903023719!5m2!1sen!2spl"
+    width="600" height="450" style="border:0;" allowfullscreen=""
+    loading="lazy"></iframe>
   image: events/the-little-things-2015/locationPhoto/teatrpolski.jpg
 callToAction:
   title: TEDxWarsaw 2015 pass
   subtitle: 150 PLN
   buttonText: Buy now
   buttonUrl: https://example.com/
+speakers:
+  - speakerName: Hofesinka
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Woodsmoke
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Alicja Peszkowska
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Andrzej Lubowski
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Bogdan Gałązka
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Daniel Lewczuk
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Emma Bonnici
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Jakub Stefek
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Kinga Panasiewicz
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Michał Krupiński
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Monika Leończyk
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Paweł Najgebauer
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Robert Krool
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Shirin Naeimi
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
+  - speakerName: Tomasz Kopyra
+    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
 partnerLogos:
   - partnerName: logo1
     partnerLogoPath: events/2020/partnerLogos/logo-1.png
@@ -71,36 +105,5 @@ partnerLogos:
     partnerLogoPath: events/2020/partnerLogos/logo-16.png
   - partnerName: logo1
     partnerLogoPath: events/2020/partnerLogos/logo-17.png
-speakers:
-  - speakerName: Hofesinka
-    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
-  - speakerName: Woodsmoke
-    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
-  - speakerName: Alicja Peszkowska
-    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
-  - speakerName: Andrzej Lubowski
-    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
-  - speakerName: Bogdan Gałązka
-    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
-  - speakerName: Daniel Lewczuk
-    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
-  - speakerName: Emma Bonnici
-    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
-  - speakerName: Jakub Stefek
-    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
-  - speakerName: Kinga Panasiewicz
-    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
-  - speakerName: Michał Krupiński
-    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
-  - speakerName: Monika Leończyk
-    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
-  - speakerName: Paweł Najgebauer
-    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
-  - speakerName: Robert Krool
-    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
-  - speakerName: Shirin Naeimi
-    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
-  - speakerName: Tomasz Kopyra
-    speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
 ticketProviderLogo: images/uploads/evenea2.png
 eventPhotos: []
