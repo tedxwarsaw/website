@@ -58,6 +58,7 @@ export const queryForFeatureEvent = async (
     quality: 90,
     sizes: "(max:-width: 768px)",
   });
+
   const coverImageDesktop = await getFluidImage({
     graphql,
     path: event.coverHero.image.desktop,

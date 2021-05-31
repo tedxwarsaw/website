@@ -109,8 +109,7 @@ teamMembersSlider:
 
 
       I am passionate about helping people communicate and be more understanding towards each other’s needs.
-    profileImageUrl: images/uploads/meetusphoto.png
-    profileImage: photos/iryna.png
+    profileImageUrl: photos/iryna.png
   - name: Magdalena Fiałkowska
     title: Speakers Lead
     description: >-
@@ -140,8 +139,7 @@ teamMembersSlider:
       SztukaWystapien.pl. After hours, I’m a big fan of tea, lindy hop, natural ice-cream and
 
       cinema.
-    profileImageUrl: images/uploads/meetusphoto.png
-    profileImage: photos/magdalena.png
+    profileImageUrl: photos/magdalena.png
   - name: Edyta Kowal
     title: Marketing Lead
     description: >-
@@ -169,8 +167,7 @@ teamMembersSlider:
       initiative. After hours I co-drive an oldtimer, a blue MX5, and host a podcast called Szczypta.
 
       You can also listen to me at Facebook Talks which I have the pleasure to host.
-    profileImageUrl: images/uploads/meetusphoto.png
-    profileImage: photos/edyta.png
+    profileImageUrl: photos/edyta.png
   - name: Martyna Hrankowska
     title: Partnership Lead
     description: >-
@@ -190,8 +187,7 @@ teamMembersSlider:
       develop my interest in new technologies. Privately I love dogs, short films, books and good
 
       magazines, but most of all – travelling.
-    profileImageUrl: images/uploads/meetusphoto.png
-    profileImage: photos/martyna.png
+    profileImageUrl: photos/martyna.png
   - name: Michał Pienczak
     title: Finance Lead
     description: >-
@@ -213,8 +209,7 @@ teamMembersSlider:
       dealt with finances at AIESEC Poland. The people I look up to are Carl Sagan, Stefan
 
       Banach and Terry Pratchett.
-    profileImageUrl: images/uploads/meetusphoto.png
-    profileImage: photos/partner.png
+    profileImageUrl: photos/partner.png
   - name: Marek Zawada
     title: Location Lead
     description: >-
@@ -235,8 +230,7 @@ teamMembersSlider:
       His kids are so cool he has three – more can't fit in the Defender, but thankfully there’s
 
       always room for Floki, their extremely loud Bavarian Mountain Hound.
-    profileImageUrl: images/uploads/meetusphoto.png
-    profileImage: photos/zawada.png
+    profileImageUrl: photos/zawada.png
   - name: Hugo Dutka
     title: WWW Lead
     description: >-
@@ -250,8 +244,7 @@ teamMembersSlider:
       programmer. He likes indie pop, and spends his after-hours reading fantasy books and
 
       technology blogs.
-    profileImageUrl: images/uploads/meetusphoto.png
-    profileImage: photos/hugo.png
+    profileImageUrl: photos/hugo.png
   - name: Paweł Konopka
     title: Legal Lead
     description: >-
@@ -267,82 +260,73 @@ teamMembersSlider:
       Privately, I am a huge car fan, I listen to all kinds of music and once in a while I like to take a
 
       break from civilization and spend time in nature. I also like gangster and SF movies.
-    profileImage: photos/partner.png
+    profileImageUrl: photos/partner.png
 associates:
   - name: Monika Kaczmarska
     title: " "
     profileImageUrl: images/uploads/woman.jpg
     description: todo
-    profileImage: photos/partner.png
   - name: Maja Wieczorkowska
     title: " "
     profileImageUrl: images/uploads/woman.jpg
     description: todo
-    profileImage: photos/partner.png
   - name: Aldona Padula
     title: " "
     profileImageUrl: images/uploads/woman.jpg
     description: todo
-    profileImage: photos/partner.png
   - name: Milena Dzialuk
     title: " "
     profileImageUrl: images/uploads/woman.jpg
     description: todo
-    profileImage: photos/partner.png
   - name: Marta Witkowska
     title: " "
     profileImageUrl: images/uploads/woman.jpg
     description: todo
-    profileImage: photos/partner.png
   - name: Mateusz Delekta
     title: " "
     profileImageUrl: images/uploads/woman.jpg
     description: todo
-    profileImage: photos/partner.png
   - name: Ievgen Vietrov
     title: " "
     profileImageUrl: images/uploads/woman.jpg
     description: todo
-    profileImage: photos/partner.png
   - name: Tomasz Wojewoda
     title: " "
     profileImageUrl: images/uploads/woman.jpg
     description: todo
-    profileImage: photos/partner.png
   - name: Witold Zielonka
     title: " "
     profileImageUrl: images/uploads/woman.jpg
     description: todo
-    profileImage: photos/partner.png
   - name: Gosia Zaradkiewicz
     title: " "
     description: todo
-    profileImage: photos/partner.png
+    profileImageUrl: photos/partner.png
   - description: todo
     title: " "
-    profileImage: photos/partner.png
+    profileImageUrl: photos/partner.png
     name: Robin Baker
   - title: " "
     description: todo
-    profileImage: photos/partner.png
+    profileImageUrl: photos/partner.png
     name: Monika Dziubich
   - title: " "
     description: todo
-    profileImage: photos/partner.png
+    profileImageUrl: photos/partner.png
     name: Magdalena Bytniewska
   - title: " "
     description: todo
-    profileImage: photos/partner.png
+    profileImageUrl: photos/partner.png
     name: Katarzyna Moskal
   - title: " "
     description: todo
-    profileImage: photos/partner.png
+    profileImageUrl: photos/partner.png
     name: Cezary Skura
   - title: " "
     description: todo
-    profileImage: photos/partner.png
+    profileImageUrl: photos/partner.png
     name: Ewa Czech
   - title: " "
     description: todo
-    profileImage: photos/partner.png
+    profileImageUrl: photos/partner.png
     name: Justyna Dajnowska

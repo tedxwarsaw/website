@@ -296,7 +296,7 @@ collections:
                 }
               - {
                   label: "Profile image",
-                  name: "profileImage",
+                  name: "profileImageUrl",
                   widget: "image",
                   allow_multiple: false,
                   media_folder: "photos",
@@ -314,7 +314,7 @@ collections:
                 }
               - {
                   label: "Profile image",
-                  name: "profileImage",
+                  name: "profileImageUrl",
                   widget: "image",
                   allow_multiple: false,
                   media_folder: "photos",
@@ -779,6 +779,7 @@ collections:
         picker_utc: true
       - name: time
         label: "Time"
+        tip: "use \" quote mark, if you don't site won't build. ex. instead of 12:00 wrtie \"12:00\""
         widget: string
       - name: hook
         label: Hook
@@ -822,13 +823,13 @@ collections:
                 widget: image
                 allow_multiple: false
                 media_folder: "{{slug}}/coverPhotos"
-                public_folder: "events/{{slug}}/coverPhotos"
+                public_folder: "/events/{{slug}}/coverPhotos"
               - name: desktop
                 label: Desktop variant
                 widget: image
                 allow_multiple: false
                 media_folder: "{{slug}}/coverPhotos"
-                public_folder: "events/{{slug}}/coverPhotos"
+                public_folder: "/events/{{slug}}/coverPhotos"
       - name: coverHero
         label: Cover hero section
         widget: object
@@ -858,13 +859,13 @@ collections:
                 widget: image
                 allow_multiple: false
                 media_folder: "{{slug}}/coverPhotos"
-                public_folder: "events/{{slug}}/coverPhotos"
+                public_folder: "/events/{{slug}}/coverPhotos"
               - name: desktop
                 label: Desktop variant
                 widget: image
                 allow_multiple: false
                 media_folder: "{{slug}}/coverPhotos"
-                public_folder: "events/{{slug}}/coverPhotos"
+                public_folder: "/events/{{slug}}/coverPhotos"
       - name: "isOnline"
         label: "Is this an online event?"
         widget: boolean
@@ -893,7 +894,7 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "{{slug}}/locationPhoto"
-            public_folder: "events/{{slug}}/locationPhoto"
+            public_folder: "/events/{{slug}}/locationPhoto"
       - name: callToAction
         label: The Red Section
         widget: object
@@ -922,7 +923,7 @@ collections:
               widget: "image",
               allow_multiple: false,
               media_folder: "{{slug}}/speakerPhotos",
-              public_folder: "events/{{slug}}/speakerPhotos"
+              public_folder: "/events/{{slug}}/speakerPhotos"
             }
       - name: partnerLogos
         label: Partner Logos
@@ -935,14 +936,14 @@ collections:
             widget: "image",
             allow_multiple: false,
             media_folder: "{{slug}}/partnerLogos",
-            public_folder: "events/{{slug}}/partnerLogos"
+            public_folder: "/events/{{slug}}/partnerLogos"
             }
       - name: ticketProviderLogo
         label: Ticket Provider Logo
         widget: "image"
         allow_multiple: false
         media_folder: "{{slug}}/partnerLogos"
-        public_folder: "events/{{slug}}/partnerLogos"
+        public_folder: "/events/{{slug}}/partnerLogos"
         required: false
       - name: eventPhotos
         label: Event Photos
@@ -956,7 +957,7 @@ collections:
             widget: "image",
             allow_multiple: false,
             media_folder: "{{slug}}/eventPhotos",
-            public_folder: "events/{{slug}}/eventPhotos"
+            public_folder: "/events/{{slug}}/eventPhotos"
             }
   - label: "Talks"
     name: talks

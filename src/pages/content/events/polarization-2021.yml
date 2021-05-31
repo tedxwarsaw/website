@@ -4,7 +4,7 @@ displayName: TEDxWarsaw 2021 Polarization
 category: Conference
 city: Warsaw
 date: 11/06/2021
-time: 12:00 to change
+time: "12:00 to change"
 hook: Jesteśmy jak ogień i woda, jak Legia i Polonia, jak Staś i Nel. Jak
   Kielecki i Winiary, Canon i Nikon, jak ser żółty i ser biały. Dzieli nas
   przepaść, którą zasypujemy hejtem i kamieniami. Czy naprawdę jesteśmy aż tak
@@ -16,12 +16,12 @@ description: "O tym będziemy dyskutować już 10 czerwca w Warszawie. Przyjdź 
 cover:
   variant: light
   button:
-    text: Attend
-    link: https://example.com/
+    text: test
+    link: test
     show: true
   image:
-    mobile: events/polarization-2021/coverPhotos/1461x640_tedxwaw_polaryzacja_kv_www_desktop-1.png
-    desktop: events/polarization-2021/coverPhotos/1461x640_tedxwaw_polaryzacja_kv_www_desktop-2.png
+    mobile: events/polarization-2021/coverPhotos/starter-class-diagram.png
+    desktop: events/polarization-2021/coverPhotos/starter-class-diagram.png
 coverHero:
   button:
     text: attend

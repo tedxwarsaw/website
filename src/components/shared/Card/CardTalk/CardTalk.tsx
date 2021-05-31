@@ -50,7 +50,6 @@ export const CardTalk = ({
       >
         TALK
       </span>
-
       <div className="md:flex justify-between items-end mb-2 mt-5 md:my-5">
         <div>
           <span className="my-10">{speaker}</span>
