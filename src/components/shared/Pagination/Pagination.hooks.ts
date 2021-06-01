@@ -23,7 +23,13 @@ export const usePagination = (items, itemsPerPage) => {
   };
 
   useEffect(() => {
-    setNumberOfPages(1 + Math.ceil(items.length / itemsPerPage));
+    setNumberOfPages(
+      1 +
+        Math.floor(
+          (items.length - (itemsPerPage + 1) + itemsPerPage - 1) / itemsPerPage
+        )
+    );
+
     setItemsToShow(paginateItems(items, 1));
   }, [items]);
 
