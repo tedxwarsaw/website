@@ -297,9 +297,9 @@ collections:
               - {
                   label: "Profile image",
                   name: "profileImageUrl",
-                  widget: "image",
+                  widget: image,
                   allow_multiple: false,
-                  media_folder: "photos",
+                  media_folder: "photos"
                 }
           - label: "Associates"
             name: "associates"
@@ -315,9 +315,9 @@ collections:
               - {
                   label: "Profile image",
                   name: "profileImageUrl",
-                  widget: "image",
+                  widget: image,
                   allow_multiple: false,
-                  media_folder: "photos",
+                  media_folder: "photos"
                 }
       - label: "Speakers"
         name: "speakers"

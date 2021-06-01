@@ -1,6 +1,6 @@
 heroTitle: The People Behind the Stage. All volunteers.<br/>All passion.
-heroBackgroundImageUrl: images/uploads/meet-us-here.png
-heroBackgroundImageUrlDesktop: images/uploads/meet-us-here.png
+heroBackgroundImageUrl: photos/meet-us-here.png
+heroBackgroundImageUrlDesktop: photos/meet-us-here.png
 aboutUsContent: >-
   TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a
   four-day
@@ -77,7 +77,7 @@ AboutUsContent: >
 
   the most important topics right here, right now.
 AboutUsImageAlt: TEDxWarsaw image
-meetUsBackgroundImage: images/uploads/meet-us-bg.png
+meetUsBackgroundImage: photos/meet-us-bg.png
 meetUsBackgroundDesktop: photos/blank.png
 slug: /about
 AboutUsTitle: "## <b><span style='color:#E62B1E'>TEDx</span>Warsaw</b>"
@@ -87,9 +87,9 @@ aboutTedContent: TED is a nonprofit organization devoted to Ideas Worth
   Conferences invite the world’s leading thinkers and doers to speak for 18
   minutes or less. Many of these talks are then made available, at **[TED.com
   ->](https://www.ted.com)**.
-meetUsBackgroundImageDesktop: images/uploads/meet-us-bg.png
-AboutUsImageUrl: images/uploads/ted-x-warsaw-banner.png
-AboutUsImageUrlDesktop: images/uploads/ted-x-warsaw-banner.png
+meetUsBackgroundImageDesktop: photos/meet-us-bg.png
+AboutUsImageUrl: photos/ted-x-warsaw-banner.png
+AboutUsImageUrlDesktop: photos/ted-x-warsaw-banner.png
 teamMembersSlider:
   - name: Iryna Oleksiuk
     title: Host
@@ -264,39 +264,39 @@ teamMembersSlider:
 associates:
   - name: Monika Kaczmarska
     title: " "
-    profileImageUrl: images/uploads/woman.jpg
+    profileImageUrl: photos/woman.jpg
     description: todo
   - name: Maja Wieczorkowska
     title: " "
-    profileImageUrl: images/uploads/woman.jpg
+    profileImageUrl: photos/woman.jpg
     description: todo
   - name: Aldona Padula
     title: " "
-    profileImageUrl: images/uploads/woman.jpg
+    profileImageUrl: photos/woman.jpg
     description: todo
   - name: Milena Dzialuk
     title: " "
-    profileImageUrl: images/uploads/woman.jpg
+    profileImageUrl: photos/woman.jpg
     description: todo
   - name: Marta Witkowska
     title: " "
-    profileImageUrl: images/uploads/woman.jpg
+    profileImageUrl: photos/woman.jpg
     description: todo
   - name: Mateusz Delekta
     title: " "
-    profileImageUrl: images/uploads/woman.jpg
+    profileImageUrl: photos/woman.jpg
     description: todo
   - name: Ievgen Vietrov
     title: " "
-    profileImageUrl: images/uploads/woman.jpg
+    profileImageUrl: photos/woman.jpg
     description: todo
   - name: Tomasz Wojewoda
     title: " "
-    profileImageUrl: images/uploads/woman.jpg
+    profileImageUrl: photos/woman.jpg
     description: todo
   - name: Witold Zielonka
     title: " "
-    profileImageUrl: images/uploads/woman.jpg
+    profileImageUrl: photos/woman.jpg
     description: todo
   - name: Gosia Zaradkiewicz
     title: " "
