@@ -12,9 +12,9 @@ export const RelatedTalks = ({
   relatedTalks,
   eventName,
 }: RelatedTalksProps) => (
-  <div>
+  <div className="main-grid-full-span">
     {relatedTalks && relatedTalks.length > 0 && (
-      <div className=" mb-10">
+      <div className="recommendations-container mb-10">
         <h2>More from</h2>
         <p className="font-bold">{eventName}</p>
         <RecommendationsSlider>
