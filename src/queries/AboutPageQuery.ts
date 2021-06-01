@@ -68,7 +68,7 @@ export const queryForProps = async (
     pagesYaml.associates.map(async (associate) => {
       const image = await getFixedImage({
         graphql,
-        path: associate.profileImage,
+        path: associate.profileImageUrl,
         height: 150,
         width: 150,
       });

@@ -2,7 +2,7 @@ collectionId: recommendations
 recommendationsTitle: TEDxWarsaw Recommends
 recommendations:
   events:
-    - eventSlug: '2020'
+    - eventSlug: 'crunchtime-2017'
       order: 2
   talks:
     - talkSlug: "baby-do-garow"

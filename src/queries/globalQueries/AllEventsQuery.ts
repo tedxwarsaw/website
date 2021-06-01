@@ -42,6 +42,9 @@ export const queryForAllEvents = async (
         quality: 90,
         sizes: "(max:-width: 2000px)",
       });
+      console.log(
+        `************************************ ${event.slug} ********************************`
+      );
 
       const cover = {
         image: {
