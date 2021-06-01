@@ -7,7 +7,8 @@ export const useEventList = (events) => {
   const [filteredEvents, setFilteredEvents] = useState(events);
   const { itemsToShow, changePage, currentPage, numberOfPages } = usePagination(
     filteredEvents,
-    9
+    9,
+    1
   );
 
   const { qs, params, updateQueryParams } = useQueryParameters();

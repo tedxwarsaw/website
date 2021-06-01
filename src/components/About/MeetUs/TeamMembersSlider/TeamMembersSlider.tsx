@@ -12,18 +12,9 @@ interface TeamMembersSliderProps {
   teamMembers: TeamMember[];
 }
 
-export const TeamMembersSlider = ({
-  teamMembers
-}: TeamMembersSliderProps) => {
+export const TeamMembersSlider = ({ teamMembers }: TeamMembersSliderProps) => {
   const numberOfSlides = teamMembers.length;
-  const {
-    sliderRef,
-    inputSliderOnChange,
-    nextSlide,
-    prevSlide,
-    slider,
-    currentSlide,
-  } = useSlider(
+  const { sliderRef, nextSlide, prevSlide, slider, currentSlide } = useSlider(
     numberOfSlides,
     {
       mobile: 1,
@@ -49,7 +40,7 @@ export const TeamMembersSlider = ({
       </div>
       <div className="main-grid-full-span relative mb-10">
         <div className="relative main-grid z-10 team-members-slider-container">
-          <Slider sliderRef={sliderRef} style={{overflow: 'inherit'}}>
+          <Slider sliderRef={sliderRef}>
             {teamMembers.map((member, index) => (
               <div
                 className="flex flex-col md:grid md:grid-cols-2 md:grid-cols-2 w-full"

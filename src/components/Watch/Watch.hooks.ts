@@ -13,7 +13,8 @@ export const useWatch = (talks) => {
   const [activeSorting, setActiveSortings] = useState("Newest");
   const { itemsToShow, changePage, currentPage, numberOfPages } = usePagination(
     filteredTalks,
-    21
+    21,
+    0
   );
 
   const { qs, params, updateQueryParams } = useQueryParameters();
