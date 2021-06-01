@@ -19,9 +19,15 @@
     height: 100%;
 }
 
+@media only screen and (max-width: 1280px) {
+    .lines .line-container:nth-child(3){
+        display: none;
+    }
+}
+
 .lines .line-container .line{
-    border-left: 1px dotted black;
-    width: 1px;
+    border-left: 2px dotted #E2E2E2;
+    width: 0;
     height: 100%;
 }
 
