@@ -26,8 +26,6 @@ export const pageQuery = `#graphql
       AboutUsImageUrl
       AboutUsImageUrlDesktop
       AboutUsImageAlt
-      meetUsBackgroundImage
-      meetUsBackgroundImageDesktop
       teamMembersSlider {
         name
         title
@@ -102,20 +100,6 @@ export const queryForProps = async (
     })
   );
 
-  const meetUsBackgroundImage = await getFluidImage({
-    graphql,
-    path: pagesYaml.meetUsBackgroundImage,
-    quality: 90,
-    sizes: "(max:-width: 768px)",
-  });
-
-  const meetUsBackgroundImageDesktop = await getFluidImage({
-    graphql,
-    path: pagesYaml.meetUsBackgroundImageDesktop,
-    quality: 90,
-    sizes: "(max:-width: 2000px)",
-  });
-
   const AboutUsImage = await getFluidImage({
     graphql,
     path: pagesYaml.AboutUsImageUrl,
@@ -137,8 +121,6 @@ export const queryForProps = async (
     ...newsletter,
     heroBackgroundImage,
     heroBackgroundImageDesktop,
-    meetUsBackgroundImage,
-    meetUsBackgroundImageDesktop,
     associates,
     teamMembersSlider,
     AboutUsImage,

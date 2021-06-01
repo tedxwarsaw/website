@@ -42,7 +42,6 @@ export const queryForAllEvents = async (
         quality: 90,
         sizes: "(max:-width: 2000px)",
       });
-
       const cover = {
         image: {
           desktop: coverDesktop,

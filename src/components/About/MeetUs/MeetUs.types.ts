@@ -16,8 +16,6 @@ export interface TeamMember {
 }
 
 export interface MeetUsProps {
-  meetUsBackgroundImage: FluidObject;
-  meetUsBackgroundImageDesktop: FluidObject;
   teamMembersSlider: TeamMember[];
   associates: Associate[];
 }
