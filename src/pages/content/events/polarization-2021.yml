@@ -20,16 +20,16 @@ cover:
     link: test
     show: true
   image:
-    mobile: events/polarization-2021/coverPhotos/starter-class-diagram.png
-    desktop: events/polarization-2021/coverPhotos/starter-class-diagram.png
+    mobile: events/polarization-2021/coverPhotos/375x640_tedxwaw_polaryzacja_kv_www_mobile-1.png
+    desktop: events/polarization-2021/coverPhotos/1461x640_tedxwaw_polaryzacja_kv_www_desktop-1.png
 coverHero:
   button:
     text: attend
     link: https://example.com/
     show: true
   image:
-    mobile: events/polarization-2021/coverPhotos/375x640_tedxwaw_polaryzacja_kv_www_mobile-1.png
-    desktop: events/polarization-2021/coverPhotos/375x640_tedxwaw_polaryzacja_kv_www_mobile-2.png
+    mobile: events/polarization-2021/coverPhotos/375x640_tedxwaw_polaryzacja_kv_www_mobile-2.png
+    desktop: events/polarization-2021/coverPhotos/1461x640_tedxwaw_polaryzacja_kv_www_desktop-2.png
 isOnline: false
 location:
   displayName: Teatr Capitol

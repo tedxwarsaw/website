@@ -273,16 +273,6 @@ collections:
           - label: "TEDxWarsaw image alt"
             name: "AboutUsImageAlt"
             widget: string
-          - label: "Meet us background mobile image"
-            name: "meetUsBackgroundImage"
-            widget: image
-            allow_multiple: false
-            media_folder: "photos"
-          - label: "Meet us background desktop image"
-            name: "meetUsBackgroundDesktop"
-            widget: image
-            allow_multiple: false
-            media_folder: "photos"
           - label: "Team members slider"
             name: "teamMembersSlider"
             widget: "list"
