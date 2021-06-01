@@ -1,0 +1,36 @@
+.lines{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+}
+
+.lines .main-grid{
+    height: 100%;
+}
+
+.lines-grid{
+    height: 100%;
+    margin: 0;
+}
+
+.lines .line-container{
+    position: relative;
+    height: 100%;
+}
+
+.lines .line-container .line{
+    border-left: 1px dotted black;
+    width: 1px;
+    height: 100%;
+}
+
+.lines .line-container .line:nth-child(1){
+    position: absolute;
+    left: 0;
+}
+
+.lines .line-container .line:nth-child(2){
+    position: absolute;
+    right: 0;
+}
