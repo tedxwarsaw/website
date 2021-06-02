@@ -139,3 +139,21 @@ h3 {
 input {
   text-overflow: ellipsis;
 }
+
+.left-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.7385154745491946) 0%,
+    rgba(0, 0, 0, 0.6264706566220238) 37%,
+    rgba(255, 255, 255, 0) 88%
+  );
+}
+
+.bottom-gradient {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7385154745491946) 0%,
+    rgba(0, 0, 0, 0.6264706566220238) 33%,
+    rgba(255, 255, 255, 0) 88%
+  );
+}

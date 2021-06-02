@@ -72,8 +72,8 @@ export const queryForFeatureEvent = async (
       link: event.cover.button.link,
     },
     image: {
-      desktop: coverImage,
-      mobile: coverImageDesktop,
+      desktop: coverImageDesktop,
+      mobile: coverImage,
     },
   };
 

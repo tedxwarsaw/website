@@ -20,7 +20,7 @@ export const HeroSection = ({
   heroLinks,
   featuredButtonLink,
   fontMedium,
-  centerContentVertically
+  centerContentVertically,
 }: HeroSectionProps) => {
   return (
     <div className="main-grid-full-span">
@@ -28,14 +28,18 @@ export const HeroSection = ({
         image={heroBackgroundImage}
         imageDesktop={heroBackgroundImageDesktop}
         alt={heroBackgroundImageAlt}
-        style={{ height: "35rem" }}
-        classNameChild={`flex flex-col ${centerContentVertically ? "justify-center" : "justify-end"} justify-end md:justify-center`}
+        style={{ height: "40rem" }}
+        classNameChild={`left-gradient flex flex-col ${
+          centerContentVertically ? "justify-center" : "justify-end"
+        } justify-end md:justify-center`}
       >
         <div className="main-grid">
           <div className="flex flex-col">
-            <div className={`text-white  text-3xl  mb-7 w-4/5 md:w-1/2 ${
+            <div
+              className={`text-white  text-3xl  mb-7 w-4/5 md:w-1/2 ${
                 fontMedium ? "" : "md:text-5xl font-bold"
-            }`}>
+              }`}
+            >
               <ReactMarkdown rehypePlugins={[rehypeRaw]}>
                 {heroTitle}
               </ReactMarkdown>
@@ -50,14 +54,18 @@ export const HeroSection = ({
             )}
 
             <div className="flex flex-col md:flex-row md:align-center">
-              {heroButtonText && (<a
-                href={heroButtonLink}
-                className="mb-5 md:mb-0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className={"hover:bg-white hover:text-customRed"}>{heroButtonText}</Button>
-              </a>)}
+              {heroButtonText && (
+                <a
+                  href={heroButtonLink}
+                  className="mb-5 md:mb-0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className={"hover:bg-white hover:text-customRed"}>
+                    {heroButtonText}
+                  </Button>
+                </a>
+              )}
               {heroLinks?.map((heroLink) => (
                 <a
                   href={heroLink.path}
@@ -65,7 +73,7 @@ export const HeroSection = ({
                   key={heroLink.displayName}
                 >
                   <span className="my-auto flex items-center">
-                    {heroLink.displayName + ' ->'}
+                    {heroLink.displayName + " ->"}
                   </span>
                 </a>
               ))}

@@ -31,6 +31,7 @@ export const EventHero = ({
         image={backgroundImage}
         imageDesktop={backgroundImageDesktop}
         alt="Cover photo"
+        classNameChild="bottom-gradient"
       >
         <div className="h-full overflow-hidden">
           <div className="h-full flex flex-row items-center">

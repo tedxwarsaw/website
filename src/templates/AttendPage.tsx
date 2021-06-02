@@ -33,7 +33,7 @@ export interface Props
       city: string;
     };
     date: string;
-    coverHero: {
+    cover: {
       button: {
         text: string;
         show: boolean;
@@ -64,13 +64,11 @@ export const AttendPageTemplate = (props: Props) => (
       <>
         <HeroSection
           heroTitle={props.featuredEvent.hook}
-          heroButtonText={props.featuredEvent.coverHero.button.text}
-          heroButtonLink={props.featuredEvent.coverHero.button.link}
-          heroBackgroundImage={props.featuredEvent.coverHero.image.mobile}
-          heroBackgroundImageDesktop={
-            props.featuredEvent.coverHero.image.desktop
-          }
-          heroBackgroundImageAlt="Feture event hero"
+          heroButtonText={props.featuredEvent.cover.button.text}
+          heroButtonLink={props.featuredEvent.cover.button.link}
+          heroBackgroundImage={props.featuredEvent.cover.image.mobile}
+          heroBackgroundImageDesktop={props.featuredEvent.cover.image.desktop}
+          heroBackgroundImageAlt="Feature event hero"
           featuredButtonLink={`/event/${props.featuredEvent.slug}`}
           fontMedium
         />
