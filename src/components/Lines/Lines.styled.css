@@ -1,8 +1,16 @@
 .lines{
+    pointer-events: none;
     position: absolute;
     width: 100%;
     bottom: 0;
     top: 0;
+    z-index: 1;
+}
+
+.lines.wider{
+    margin-left: -16px;
+    margin-right: -16px;
+    width: calc(100% + 32px);
 }
 
 .lines .main-grid{
@@ -25,18 +33,18 @@
     }
 }
 
-.lines .line-container .line{
-    border-left: 2px dotted #E2E2E2;
+.lines .line-container .guide-line{
+    border-left: 2px dotted rgba(226, 226, 226, 0.7);
     width: 0;
     height: 100%;
 }
 
-.lines .line-container .line:nth-child(1){
+.lines .line-container .guide-line:nth-child(1){
     position: absolute;
     left: 0;
 }
 
-.lines .line-container .line:nth-child(2){
+.lines .line-container .guide-line:nth-child(2){
     position: absolute;
     right: 0;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { OurStoryProps } from "./OurStory.types";
 import Img from "gatsby-image";
 import { Link } from "gatsby";
+import {Lines} from "../../Lines/Lines";
 
 export const OurStory = ({ ourStoryTitle, ourStoryItems }: OurStoryProps) => {
   let items = [];
@@ -26,8 +27,9 @@ export const OurStory = ({ ourStoryTitle, ourStoryItems }: OurStoryProps) => {
   }
 
   return (
-    <div className="bg-customLightGrey main-grid-full-span pt-10 pb-10">
-      <div className="main-grid">
+    <div className="bg-customLightGrey main-grid-full-span pt-10 pb-10 relative">
+      <Lines/>
+      <div className="main-grid z-10">
         <div className="inner-grid">
           {storyItems.map((item, index) => (
             <div key={item + index}>{item}</div>

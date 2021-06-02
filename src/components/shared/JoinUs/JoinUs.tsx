@@ -5,6 +5,7 @@ import { Button, ButtonVariant } from "@/components/shared/Button";
 import { FaArrowRight } from "react-icons/fa";
 import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";
+import {Lines} from "../../Lines/Lines";
 export interface JoinUsProps {
   joinUsTitle: string;
   joinUsSubtitle: string;
@@ -32,10 +33,11 @@ export const JoinUs = ({
   joinUsBecomeSpeakerLink,
   backgroundColor
 }: JoinUsProps) => (
-  <div className={`${backgroundColor ? backgroundColor : 'bg-customLightGrey'} main-grid-full-span`}>
-    <div className="seamless-grid join-us-section-content">
+  <div className={`${backgroundColor ? backgroundColor : 'bg-customLightGrey'} main-grid-full-span relative`}>
+    <Lines onlyHorizontal={true}/>
+    <div className="seamless-grid join-us-section-content z-10">
       <div className="flex items-center join-us-section-left">
-        <div className="pr-20 py-10">
+        <div className="pr-20 py-10 z-10">
           <h2 className="font-medium"><ReactMarkdown rehypePlugins={[rehypeRaw]}>{joinUsTitle}</ReactMarkdown></h2>
           <p className="my-5">{joinUsSubtitle}</p>
           {joinUsVolunteerText && <a

@@ -9,7 +9,6 @@ interface Props {
 
 export const Page = (props: Props) => (
   <>
-    <Lines/>
     <Navbar />
     <main className="main-grid" style={{ minHeight: "calc(100vh - 64px)" }}>
       {props.children}

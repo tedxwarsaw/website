@@ -5,11 +5,14 @@
 .slider-wrapper-recommendations .keen-slider__slide {
   overflow: visible !important;
   padding-left: 10px;
+  min-width: calc(30% + 6px) !important;
+  margin-right: 36px;
 }
 
 .slider-wrapper-recommendations {
+  z-index: 2;
   margin-left: -10px;
-  margin-right: -10px;
+  max-width: calc(100% + 10px);
 }
 
 @media (max-width: theme("screens.xl")) {
