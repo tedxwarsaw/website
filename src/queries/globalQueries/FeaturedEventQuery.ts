@@ -22,7 +22,7 @@ const eventQuery = `#graphql
         displayName
         city
       }
-      coverHero {
+      cover {
         button {
           text
           show
@@ -53,23 +53,23 @@ export const queryForFeatureEvent = async (
 
   const coverImage = await getFluidImage({
     graphql,
-    path: event.coverHero.image.mobile,
+    path: event.cover.image.mobile,
     quality: 90,
     sizes: "(max:-width: 768px)",
   });
 
   const coverImageDesktop = await getFluidImage({
     graphql,
-    path: event.coverHero.image.desktop,
+    path: event.cover.image.desktop,
     quality: 90,
     sizes: "(max:-width: 2000px)",
   });
 
-  const coverHero = {
+  const cover = {
     button: {
-      text: event.coverHero.button.text,
-      show: event.coverHero.button.show,
-      link: event.coverHero.button.link,
+      text: event.cover.button.text,
+      show: event.cover.button.show,
+      link: event.cover.button.link,
     },
     image: {
       desktop: coverImage,
@@ -80,6 +80,6 @@ export const queryForFeatureEvent = async (
   return {
     ...featuredEventMeta,
     ...event,
-    coverHero,
+    cover,
   };
 };

@@ -47,7 +47,6 @@ export const pageQuery = `#graphql
         partnerName
         partnerLogoPath
       }
-      eventSlug
       centerTextSectionTitle
       centerTextSectionContent
       centerTextSectionButtonText
@@ -189,5 +188,6 @@ export const queryForProps = async (
     partnerLogos,
     partnerLogosDesktop,
     ...newsletter,
+    eventSlug: featuredEvent.slug,
   };
 };
