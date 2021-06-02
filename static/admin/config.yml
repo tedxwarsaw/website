@@ -811,7 +811,7 @@ collections:
         picker_utc: true
       - name: time
         label: "Time"
-        tip: "use \" quote mark, if you don't site won't build. ex. instead of 12:00 wrtie \"12:00\""
+        pattern: ['^"[^ ].*[^ ]"$', 'it must be enclosed with ""']
         widget: string
       - name: hook
         label: Hook
