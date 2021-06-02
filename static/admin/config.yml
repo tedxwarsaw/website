@@ -470,7 +470,7 @@ collections:
             name: "partnersContacts"
             widget: "list"
             fields:
-              - { label: "image", name: "image", widget: image }
+              - { label: "image", name: "image", widget: image, media_folder: "photos", public_folder: "pages/photos" }
               - { label: "name", name: "name", widget: string }
               - { label: "title", name: "title", widget: string }
               - { label: "email", name: "email", widget: string }
