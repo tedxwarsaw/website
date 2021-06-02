@@ -1,6 +1,10 @@
 import { Props } from "../templates/IndexPage";
 import { getFixedImage, getFluidImage } from "./utils";
-import { queryForFeatureEvent, queryForNewsletter, queryForRecommendations } from "./globalQueries";
+import {
+  queryForFeatureEvent,
+  queryForNewsletter,
+  queryForRecommendations,
+} from "./globalQueries";
 
 export const pageQuery = `#graphql
   query IndexPageTemplate {
@@ -39,7 +43,10 @@ export const pageQuery = `#graphql
       getToKnowOurPartnersLink
       joinOurPartnersText
       joinOurPartnersLink
-      partnerLogos
+      partnerLogos {
+        partnerName
+        partnerLogoPath
+      }
       eventSlug
       centerTextSectionTitle
       centerTextSectionContent
@@ -74,8 +81,6 @@ const eventQuery = `#graphql
   }
 `;
 
-
-
 export const queryForProps = async (
   graphql: (query: string, args?: any) => any
 ): Promise<Props> => {
@@ -86,7 +91,7 @@ export const queryForProps = async (
 
   const featuredEvent = await queryForFeatureEvent(graphql);
 
-    const {
+  const {
     data: { event },
   } = await graphql(eventQuery, {
     eventSlug: featuredEvent.slug,
@@ -148,13 +153,15 @@ export const queryForProps = async (
 
   const partnerLogos: any = await Promise.all(
     pagesYaml.partnerLogos.map(
-      async (path) => await getFixedImage({ graphql, path, height: 30 })
+      async (logo) =>
+        await getFixedImage({ graphql, path: logo.partnerLogoPath, height: 30 })
     )
   );
 
   const partnerLogosDesktop: any = await Promise.all(
     pagesYaml.partnerLogos.map(
-      async (path) => await getFixedImage({ graphql, path, height: 60 })
+      async (logo) =>
+        await getFixedImage({ graphql, path: logo.partnerLogoPath, height: 60 })
     )
   );
 

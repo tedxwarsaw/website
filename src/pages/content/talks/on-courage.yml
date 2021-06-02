@@ -2,7 +2,7 @@ collectionId: talk
 slug: o-odwadze
 displayName: O odwadze
 talkDescription: todo
-youtubeVideoId: https://www.youtube.com/watch?v=lmn3m1xxyfU&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=11
+youtubeVideoId: lmn3m1xxyfU
 speaker: Katarzyna Miller
 speakerProfileImage: talks/general/profile-placeholder.png
 speakerDescription: Katarzyna Miller jest polską psychoterapeutką z wieloletnim
@@ -14,4 +14,4 @@ cover:
   image:
     mobile: talks/o-odwadze/coverPhotos/kebab.png
     desktop: talks/on-courage/coverPhotos/kebab.png
-duration: "14:06"
+duration: '"14:06"'

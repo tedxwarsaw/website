@@ -67,8 +67,8 @@ export const queryForProps = async (
           mobile: coverMobile,
         },
       };
-
-      return { ...talk, cover };
+      const duration = talk.duration.replace('"', "").replace('"', "");
+      return { ...talk, cover, duration };
     })
   );
 

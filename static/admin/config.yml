@@ -41,11 +41,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background desktop image"
             name: "heroBackgroundImageUrlDesktop"
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background image alt"
             name: "heroBackgroundImageAlt"
             widget: string
@@ -86,11 +88,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Join us section image desktop"
             name: "joinUsImageDesktopPath"
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: Join us volunteer link text
             name: joinUsVolunteerText
             widget: string
@@ -136,6 +140,7 @@ collections:
                 widget: "image",
                 allow_multiple: false,
                 media_folder: "photos",
+                public_folder: "pages/photos",
                 }
           - label: "CenterTextSection title"
             name: "centerTextSectionTitle"
@@ -222,11 +227,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background desktop image"
             name: "heroBackgroundImageUrlDesktop"
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background image alt"
             name: "heroBackgroundImageAlt"
             widget: string
@@ -265,11 +272,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "TEDxWarsaw Desktop Image"
             name: "AboutUsImageUrlDesktop"
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "TEDxWarsaw image alt"
             name: "AboutUsImageAlt"
             widget: string
@@ -289,7 +298,8 @@ collections:
                   name: "profileImageUrl",
                   widget: image,
                   allow_multiple: false,
-                  media_folder: "photos"
+                  media_folder: "photos",
+                  public_folder: "pages/photos"
                 }
           - label: "Associates"
             name: "associates"
@@ -307,7 +317,8 @@ collections:
                   name: "profileImageUrl",
                   widget: image,
                   allow_multiple: false,
-                  media_folder: "photos"
+                  media_folder: "photos",
+                  public_folder: "pages/photos"
                 }
       - label: "Speakers"
         name: "speakers"
@@ -322,11 +333,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background desktop image"
             name: "heroBackgroundImageUrlDesktop"
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background image alt"
             name: "heroBackgroundImageAlt"
             widget: string
@@ -366,11 +379,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background desktop image"
             name: "heroBackgroundImageUrlDesktop"
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background image alt"
             name: "heroBackgroundImageAlt"
             widget: string
@@ -391,11 +406,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Meet us background desktop image"
             name: "meetUsImageUrlDesktop"
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Meet Us Image Alt"
             name: "meetUsImageAlt"
             widget: string
@@ -418,14 +435,34 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background desktop image"
             name: "heroBackgroundImageUrlDesktop"
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background image alt"
             name: "heroBackgroundImageAlt"
             widget: string
+          - label: Partner section title
+            name: partnerSectionTitle
+            widget: string
+          - name: partnerLogos
+            label: Partner Logos
+            widget: "list"
+            required: false
+            fields:
+              - { label: "name", name: "partnerName", widget: "string", required: false }
+              - {
+                label: "Partner Logo",
+                name: "partnerLogoPath",
+                widget: "image",
+                allow_multiple: false,
+                media_folder: "photos",
+                public_folder: "pages/photos",
+                }
+
           - label: "Partners Contacts Content"
             name: "partnersContactContent"
             widget: string
@@ -491,7 +528,7 @@ collections:
                 fields:
                   - { label: Title, name: title, widget: string }
                   - { label: Description, name: description, widget: string }
-                  - { label: Path, name: path, widget: string }
+                  - { label: Path, name: path, widget: string}
       - label: "Footer"
         name: "footer"
         file: "src/pages/content/global/footer.yaml"
@@ -518,7 +555,6 @@ collections:
                   - name: path
                     label: Path
                     widget: string
-                    pattern: ["^/.+$", "it must start with '/'"]
           - label: Third Column
             name: footerThirdColumn
             widget: object
@@ -538,7 +574,6 @@ collections:
                   - name: path
                     label: Path
                     widget: string
-                    pattern: ["^/.+$", "it must start with '/'"]
       - label: "Partnership Team (shown on all event pages)"
         name: "partnershipTeam"
         file: "src/pages/content/global/events/partnershipTeam/partnershipTeam.yaml"
@@ -568,6 +603,7 @@ collections:
                 widget: image
                 allow_multiple: false
                 media_folder: "photos"
+                public_folder: "global/events/photos"
       - label: "Suggested Event (shown on all event pages)"
         name: "suggestedEvent"
         file: "src/pages/content/global/events/suggestedEvent/suggestedEvent.yaml"
@@ -629,11 +665,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "global/photos"
           - name: newsletterBackgroundImageDesktopPath
             label: Newsletter background image desktop
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
       - label: "Recommendations (shown globally)"
         name: "recommendations"
         file: "src/pages/content/global/recommendations.yaml"
@@ -721,11 +759,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "global/photos"
           - name: sectionBackgroundImageUrlDesktop
             label: Section background image desktop
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "global/photos"
           - name: sectionBackgroundImageAlt
             label: Section background image alt
             widget: string
@@ -769,7 +809,7 @@ collections:
         picker_utc: true
       - name: time
         label: "Time"
-        tip: "use \" quote mark, if you don't site won't build. ex. instead of 12:00 wrtie \"12:00\""
+        pattern: ['^"[^ ].*[^ ]"$', 'it must be enclosed with ""']
         widget: string
       - name: hook
         label: Hook
@@ -813,13 +853,13 @@ collections:
                 widget: image
                 allow_multiple: false
                 media_folder: "{{slug}}/coverPhotos"
-                public_folder: "/events/{{slug}}/coverPhotos"
+                public_folder: "events/{{slug}}/coverPhotos"
               - name: desktop
                 label: Desktop variant
                 widget: image
                 allow_multiple: false
                 media_folder: "{{slug}}/coverPhotos"
-                public_folder: "/events/{{slug}}/coverPhotos"
+                public_folder: "events/{{slug}}/coverPhotos"
       - name: coverHero
         label: Cover hero section
         widget: object
@@ -849,13 +889,13 @@ collections:
                 widget: image
                 allow_multiple: false
                 media_folder: "{{slug}}/coverPhotos"
-                public_folder: "/events/{{slug}}/coverPhotos"
+                public_folder: "events/{{slug}}/coverPhotos"
               - name: desktop
                 label: Desktop variant
                 widget: image
                 allow_multiple: false
                 media_folder: "{{slug}}/coverPhotos"
-                public_folder: "/events/{{slug}}/coverPhotos"
+                public_folder: "events/{{slug}}/coverPhotos"
       - name: "isOnline"
         label: "Is this an online event?"
         widget: boolean
@@ -884,7 +924,7 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "{{slug}}/locationPhoto"
-            public_folder: "/events/{{slug}}/locationPhoto"
+            public_folder: "events/{{slug}}/locationPhoto"
       - name: callToAction
         label: The Red Section
         widget: object
@@ -913,7 +953,7 @@ collections:
               widget: "image",
               allow_multiple: false,
               media_folder: "{{slug}}/speakerPhotos",
-              public_folder: "/events/{{slug}}/speakerPhotos"
+              public_folder: "events/{{slug}}/speakerPhotos"
             }
       - name: partnerLogos
         label: Partner Logos
@@ -926,14 +966,14 @@ collections:
             widget: "image",
             allow_multiple: false,
             media_folder: "{{slug}}/partnerLogos",
-            public_folder: "/events/{{slug}}/partnerLogos"
+            public_folder: "events/{{slug}}/partnerLogos"
             }
       - name: ticketProviderLogo
         label: Ticket Provider Logo
         widget: "image"
         allow_multiple: false
         media_folder: "{{slug}}/partnerLogos"
-        public_folder: "/events/{{slug}}/partnerLogos"
+        public_folder: "events/{{slug}}/partnerLogos"
         required: false
       - name: eventPhotos
         label: Event Photos
@@ -947,7 +987,7 @@ collections:
             widget: "image",
             allow_multiple: false,
             media_folder: "{{slug}}/eventPhotos",
-            public_folder: "/events/{{slug}}/eventPhotos"
+            public_folder: "events/{{slug}}/eventPhotos"
             }
   - label: "Talks"
     name: talks
@@ -976,9 +1016,9 @@ collections:
         label: "Talk description"
         widget: string
       - name: youtubeVideoId
-        label: "Youtube lin"
+        label: "Youtube video id"
         widget: string
-        hint: "Embed link for this talk"
+        hint: "Id of this video. (f.e: 0x2_kWRB8-A) How to get the id: https://gist.github.com/jakebellacera/d81bbf12b99448188f183141e6696817"
       - name: speaker
         label: "Speaker name"
         widget: string
@@ -1024,3 +1064,4 @@ collections:
         label: Duration
         widget: string
         hint: Duration of this talk in format mm:ss (f.e. "3:14" )
+        pattern: ['"([^\\"]|\\")*"', "it must be enclosed with \""] 

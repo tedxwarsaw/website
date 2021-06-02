@@ -2,7 +2,7 @@ collectionId: talk
 slug: what-we-dont-know
 displayName: What We Don't Know
 talkDescription: todo
-youtubeVideoId: https://www.youtube.com/watch?v=p0BIqa_GAG0&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=10
+youtubeVideoId: p0BIqa_GAG0
 speaker: Jonathan MacDonald
 speakerProfileImage: talks/general/profile-placeholder.png
 speakerDescription: Jonathan MacDonald, strategist and crystal ball gazer. From
@@ -14,4 +14,4 @@ cover:
   image:
     mobile: talks/what-we-dont-know/coverPhotos/neck.png
     desktop: talks/what-we-dont-know/coverPhotos/neck.png
-duration: "17:47"
+duration: '"17:47"'

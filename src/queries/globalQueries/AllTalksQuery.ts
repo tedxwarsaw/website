@@ -69,7 +69,8 @@ export const queryForAllTalks = async (
 
       allEvents[talk.eventSlug] = event.displayName;
       const date = new Date(event.date).getTime();
-      return { ...talk, cover, date };
+      const duration = talk.duration.replace('"', "").replace('"', "");
+      return { ...talk, cover, date, duration };
     })
   );
 

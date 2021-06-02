@@ -99,16 +99,19 @@ export const IndexPageTemplate = (props: Props) => {
         joinUsBecomeSpeakerText={props.joinUsBecomeSpeakerText}
         joinUsBecomeSpeakerLink={props.joinUsBecomeSpeakerLink}
       />
-      <Partners
-        partnerSectionTitle={props.partnerSectionTitle}
-        getToKnowOurPartnersText={props.getToKnowOurPartnersText}
-        getToKnowOurPartnersLink={props.getToKnowOurPartnersLink}
-        joinOurPartnersText={props.joinOurPartnersText}
-        joinOurPartnersLink={props.joinOurPartnersLink}
-        partnerLogos={props.partnerLogos}
-        partnerLogosDesktop={props.partnerLogosDesktop}
-        showLinks
-      />
+      {props.partnerLogos.length > 0 && (
+        <Partners
+          partnerSectionTitle={props.partnerSectionTitle}
+          getToKnowOurPartnersText={props.getToKnowOurPartnersText}
+          getToKnowOurPartnersLink={props.getToKnowOurPartnersLink}
+          joinOurPartnersText={props.joinOurPartnersText}
+          joinOurPartnersLink={props.joinOurPartnersLink}
+          partnerLogos={props.partnerLogos}
+          partnerLogosDesktop={props.partnerLogosDesktop}
+          showLinks
+        />
+      )}
+
       <Newsletter
         variant={NewsletterVariant.black}
         newsletterTitle={props.newsletterTitle}
