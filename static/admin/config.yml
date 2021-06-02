@@ -605,7 +605,7 @@ collections:
                 widget: image
                 allow_multiple: false
                 media_folder: "photos"
-                public_folder: "pages/photos"
+                public_folder: "global/photos"
       - label: "Suggested Event (shown on all event pages)"
         name: "suggestedEvent"
         file: "src/pages/content/global/events/suggestedEvent/suggestedEvent.yaml"
@@ -667,7 +667,7 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
-            public_folder: "pages/photos"
+            public_folder: "global/photos"
           - name: newsletterBackgroundImageDesktopPath
             label: Newsletter background image desktop
             widget: image
@@ -761,13 +761,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
-            public_folder: "pages/photos"
+            public_folder: "global/photos"
           - name: sectionBackgroundImageUrlDesktop
             label: Section background image desktop
             widget: image
             allow_multiple: false
             media_folder: "photos"
-            public_folder: "pages/photos"
+            public_folder: "global/photos"
           - name: sectionBackgroundImageAlt
             label: Section background image alt
             widget: string
