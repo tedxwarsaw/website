@@ -20,10 +20,9 @@ export const EventDetails = ({
   description,
   slug,
   date,
-  time,
 }: EventDetailsProps) => {
   const descriptionSplit = splitTextInTwo(description);
-  const dateConverted = moment(date);
+  const dateConverted = moment(date, "DD/MM/YYYY");
 
   return (
     <div className="inner-grid py-10">
@@ -37,15 +36,13 @@ export const EventDetails = ({
           <span className="mt-3 md:hidden">
             {dateConverted.format("MMM Do, YYYY")}
           </span>
-          <span className="md:hidden">{time}</span>
         </div>
 
         <div className="col-start-2 col-end-5 row-start-1 hidden md:flex flex-col">
           <span>
             {location.displayName}, {location.city}
           </span>
-          <span className="mt-3">{dateConverted.format("MMM Do, YYYY")}</span>
-          <span>{time}</span>
+          <span className="mt-3">{dateConverted.format("D MMMM YYYY")}</span>
         </div>
       </div>
       <p className="xl:block hidden">{descriptionSplit[0]}</p>

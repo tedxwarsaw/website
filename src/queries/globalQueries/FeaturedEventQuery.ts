@@ -34,7 +34,6 @@ const eventQuery = `#graphql
         }
       }
       date
-      time
     }
   }
 `;
@@ -79,7 +78,6 @@ export const queryForFeatureEvent = async (
   };
 
   return {
-
     ...featuredEventMeta,
     ...event,
     coverHero,

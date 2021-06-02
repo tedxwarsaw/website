@@ -25,7 +25,7 @@ export const MainEvent = ({
   event: { displayName, slug, category, date, description, cover },
 }: MainEventProps) => {
   const descriptionSplit = splitTextInTwo(description);
-  const dateConverted = moment(date);
+  const dateConverted = moment(date, "DD/MM/YYYY");
 
   return (
     <div className="inner-grid col-start-1 col-end-2 md:col-end-3 xl:col-end-4 mb-10">
@@ -50,7 +50,7 @@ export const MainEvent = ({
           <span className="text-white text-sm px-3 bg-customDarkGrey md:py-1 mr-3">
             <Link to={`/event/${slug}`}>{category}</Link>
           </span>
-          <span>{dateConverted.format("MMM Do, YYYY")}</span>
+          <span>{dateConverted.format("D MMMM YYYY")}</span>
         </div>
         <h2 className="my-5 xl:my-0">{displayName}</h2>
         <p>{descriptionSplit[0]}</p>

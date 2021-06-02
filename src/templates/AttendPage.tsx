@@ -33,7 +33,6 @@ export interface Props
       city: string;
     };
     date: string;
-    time: string;
     coverHero: {
       button: {
         text: string;
@@ -79,7 +78,6 @@ export const AttendPageTemplate = (props: Props) => (
           location={props.featuredEvent.location}
           description={props.featuredEvent.description}
           date={props.featuredEvent.date}
-          time={props.featuredEvent.time}
           slug={props.featuredEvent.slug}
         />
         <Banner
