@@ -528,7 +528,7 @@ collections:
                 fields:
                   - { label: Title, name: title, widget: string }
                   - { label: Description, name: description, widget: string }
-                  - { label: Path, name: path, widget: string }
+                  - { label: Path, name: path, widget: string,pattern: ["^/.+$", "it must start with '/'"] }
       - label: "Footer"
         name: "footer"
         file: "src/pages/content/global/footer.yaml"
@@ -842,6 +842,7 @@ collections:
                 label: URL
                 widget: string
                 hint: The URL the button should point to.
+                pattern: ["^/.+$", "it must start with '/'"]
               - name: show
                 label: Show
                 widget: boolean
@@ -877,6 +878,7 @@ collections:
               - name: link
                 label: URL
                 widget: string
+                pattern: ["^/.+$", "it must start with '/'"]
                 hint: The URL the button should point to.
               - name: show
                 label: Show
