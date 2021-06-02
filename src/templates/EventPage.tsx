@@ -129,8 +129,7 @@ export const EventPageTemplate = (props: Props) => {
           />
         </>
       )}
-      {(props.eventPhotosDesktop ||
-        props.suggestedEvent?.photos.length > 0) && (
+      {(props.eventPhotosDesktop) && (
         <SuggestedEvent
           displayName={props.suggestedEvent.displayName}
           slug={props.suggestedEvent.slug}

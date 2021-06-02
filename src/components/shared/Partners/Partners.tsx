@@ -54,12 +54,12 @@ export const Partners = ({
       )}
     </div>
 
-    <div className="flex flex-wrap xl:hidden partners-img-mobile-container">
+    <div className="flex flex-wrap justify-between xl:hidden partners-img-mobile-container">
       {partnerLogos.map((fixed, idx) => (
           <Img key={idx} fixed={fixed} alt="Partner logo" className={"partners-img-mobile"} />
       ))}
     </div>
-    <div className="flex flex-wrap hidden xl:flex partners-img-desktop-container">
+    <div className="flex flex-wrap justify-between hidden xl:flex partners-img-desktop-container">
       {partnerLogosDesktop.map((fixed, idx) => (
         <Img key={idx} fixed={fixed} alt="Partner logo"  className={"partners-img-desktop"} />
       ))}

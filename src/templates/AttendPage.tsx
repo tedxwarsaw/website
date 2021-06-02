@@ -72,7 +72,7 @@ export const AttendPageTemplate = (props: Props) => (
             props.featuredEvent.coverHero.image.desktop
           }
           heroBackgroundImageAlt="Feture event hero"
-          featuredButtonLink={`/events/${props.featuredEvent.slug}`}
+          featuredButtonLink={`/event/${props.featuredEvent.slug}`}
           fontMedium
         />
         <EventDetails

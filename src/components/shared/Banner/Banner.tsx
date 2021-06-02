@@ -49,9 +49,6 @@ export const Banner = ({
           {buttonText}
         </Button>
       </a>
-      {(logo && BannerVariant.red) && <div className={"mt-6"}>
-        <Img fixed={logo}/>
-      </div>}
     </div>
   </div>
 };

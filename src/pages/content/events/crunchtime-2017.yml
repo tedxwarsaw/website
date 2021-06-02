@@ -35,13 +35,13 @@ location:
     width="600" height="450" style="border:0;" allowfullscreen=""
     loading="lazy"></iframe>
   city: Warsaw
-  displayName: Złote Tarasy Złota 59
+  displayName: Złote Tarasy
   image: events/crunchtime-2017/locationPhoto/zlote.jpg
 callToAction:
-  title: TEDxWarsaw 2017 pass
-  subtitle: 150 PLN
-  buttonText: Buy now
-  buttonUrl: https://example.com/
+  title: TEDxWarsaw 2017 Talks
+  subtitle: Available now
+  buttonText: Watch the talks
+  buttonUrl: /watch?eventSlug=crunchtime-2017
 speakers:
   - speakerName: Jazzpospolita
     speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png

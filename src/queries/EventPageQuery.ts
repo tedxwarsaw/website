@@ -144,7 +144,7 @@ export const queryForProps = async (
           await getFixedImage({
             graphql,
             path: logo.partnerLogoPath,
-            height: 60,
+            height: 50,
           })
       )
     );
