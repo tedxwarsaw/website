@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import moment from "moment";
 import React from "react";
 import { HiMenuAlt2 } from "react-icons/hi";
+import {Lines} from "../../Lines/Lines";
 
 interface EventDetailsProps {
   location: {
@@ -26,7 +27,8 @@ export const EventDetails = ({
   const dateConverted = moment(date);
 
   return (
-    <div className="inner-grid py-10">
+    <div className="inner-grid py-10 relative">
+      <Lines wider={true}/>
       <div className="gap-0 inner-grid">
         <div className="col-start-1 row-start-1 flex flex-col">
           <span className="font-bold">WHERE</span>
