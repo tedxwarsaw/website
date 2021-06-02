@@ -32,7 +32,7 @@ export const useEventList = (events) => {
     if (params.eventKind) {
       filterEvents(params.eventKind);
     }
-  }, []);
+  }, [params]);
 
   return {
     activeFilter,

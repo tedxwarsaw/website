@@ -140,3 +140,6 @@ h2 {
 h3 {
   font-size: theme("fontSize.xl");
 }
+input {
+  text-overflow: ellipsis;
+}

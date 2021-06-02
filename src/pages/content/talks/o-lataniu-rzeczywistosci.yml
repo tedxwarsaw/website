@@ -2,7 +2,7 @@ collectionId: talk
 slug: o-lataniu-rzeczywistosci
 displayName: O lataniu rzeczywistości
 talkDescription: todo
-youtubeVideoId: https://www.youtube.com/watch?v=b9oQ-vczuj8&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=4
+youtubeVideoId: b9oQ-vczuj8
 speaker: Siostra Małgorzata Chmielewska
 speakerProfileImage: talks/general/profile-placeholder.png
 speakerDescription: 'Siostra Małgorzata Chmielewska wierzy w praktyczne
@@ -16,4 +16,4 @@ cover:
   image:
     mobile: talks/o-lataniu-rzeczywistosci/coverPhotos/siostra.png
     desktop: talks/o-lataniu-rzeczywistosci/coverPhotos/siostra.png
-duration: "12:08"
+duration: '"12:08"'

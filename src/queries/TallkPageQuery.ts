@@ -139,13 +139,13 @@ export const queryForProps = async (
       });
 
       const eventDisplayName = event.displayName;
-
-      return { ...relatedTalk, cover, eventDisplayName };
+      const duration = relatedTalk.duration.replace('"', "").replace('"', "");
+      return { ...relatedTalk, cover, eventDisplayName, duration };
     })
   );
 
   const newsletter = await queryForNewsletter(graphql);
-
+  const duration = talk.duration.replace('"', "").replace('"', "");
   return {
     ...talk,
     ...newsletter,
@@ -153,5 +153,6 @@ export const queryForProps = async (
     cover,
     eventDisplayName,
     relatedTalks,
+    duration,
   };
 };

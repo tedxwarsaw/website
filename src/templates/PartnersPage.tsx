@@ -39,11 +39,13 @@ export const PartnersPageTemplate = (props: Props) => (
       partnersContactContent={props.partnersContactContent}
       partnersContacts={props.partnersContacts}
     />
-    <Partners
-      partnerSectionTitle={props.partnerSectionTitle}
-      partnerLogos={props.partnerLogos}
-      partnerLogosDesktop={props.partnerLogosDesktop}
-    />
+    {props.partnerLogos.length > 0 && (
+      <Partners
+        partnerSectionTitle={props.partnerSectionTitle}
+        partnerLogos={props.partnerLogos}
+        partnerLogosDesktop={props.partnerLogosDesktop}
+      />
+    )}
     <Recommendations
       recommendationsTitle={props.recommendationsTitle}
       recommendations={props.recommendations}
