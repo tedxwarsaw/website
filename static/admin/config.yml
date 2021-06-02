@@ -860,7 +860,7 @@ collections:
                 allow_multiple: false
                 media_folder: "{{slug}}/coverPhotos"
                 public_folder: "events/{{slug}}/coverPhotos"
-      - name: coverHero
+      - name: cover
         label: Cover hero section
         widget: object
         hint: Cover show as page hero, when this event is featured
