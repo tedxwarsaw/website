@@ -44,12 +44,12 @@ export const TeamMembersSlider = ({ teamMembers }: TeamMembersSliderProps) => {
             <Slider sliderRef={sliderRef}>
               {teamMembers.map((member, index) => (
                 <div
-                  className="flex flex-col md:grid md:grid-cols-2 md:grid-cols-2 w-full"
+                  className="flex flex-col md:grid md:grid-cols-2 md:grid-cols-2 h-full"
                   key={member.name + index}
                 >
                   <div className="h-64 md:h-auto border-none">
                     <Img
-                      className=" w-full z-0 md:hidden"
+                      className="h-full  z-0 md:hidden"
                       fluid={member.profileImage}
                       alt="Team member profile images"
                     />
