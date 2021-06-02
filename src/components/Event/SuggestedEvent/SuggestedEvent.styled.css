@@ -1,0 +1,6 @@
+@media (min-width: theme("screens.xl")) {
+  .suggested-event-slider-container {
+    max-width: calc(100vw - var(--side-gap));
+    overflow-x: hidden;
+  }
+}

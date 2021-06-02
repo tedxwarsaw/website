@@ -5,7 +5,7 @@ import { queryForJoinSpeakers, queryForNewsletter } from "./globalQueries";
 
 const firstQuery = `#graphql
   query FirstEvent {
-    suggestedEventYaml(collectionId: { eq: "suggestedEvent" }) {
+    suggestedEventYaml:  featuredEventYaml(collectionId: { eq: "featuredEvent" })  {
       slug
     }
     partnershipTeamYaml(collectionId: { eq: "eventPartnershipTeam" }) {

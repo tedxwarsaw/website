@@ -58,8 +58,6 @@ export const AboutPageTemplate = (props: Props) => (
       AboutUsImage={props.AboutUsImage}
     />
     <MeetUs
-      meetUsBackgroundImage={props.meetUsBackgroundImage}
-      meetUsBackgroundImageDesktop={props.meetUsBackgroundImageDesktop}
       teamMembersSlider={props.teamMembersSlider}
       associates={props.associates}
     />
