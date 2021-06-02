@@ -5,7 +5,7 @@ talkDescription: Audrey Scott and Daniel Noll have been travelling for over 6
   years and although they have seen a lot of tricky situations, they agree that
   the scariest moment was at the very start -- when they handed in their
   resignations.
-youtubeVideoId: https://www.youtube.com/watch?v=gyF_kZcdEGQ&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=12
+youtubeVideoId: gyF_kZcdEGQ
 speaker: Audrey Scott & Daniel Noll
 speakerProfileImage: talks/general/profile-placeholder.png
 speakerDescription: " As a married couple they are running one of the World's
@@ -16,4 +16,4 @@ cover:
   image:
     mobile: talks/what-is-your-what-if/coverPhotos/daniel.png
     desktop: talks/what-is-your-what-if/coverPhotos/daniel.png
-duration: "19:52"
+duration: '"19:52"'

@@ -15,4 +15,4 @@ cover:
   image:
     mobile: talks/no-strangers/coverPhotos/alternat.png
     desktop: talks/no-strangers/coverPhotos/alternat.png
-duration: "17:51"
+duration: '"17:51"'

@@ -3,7 +3,7 @@ slug: slowly-down-the-vistula
 displayName: Slowly Down the Vistula
 talkDescription: Louis-Philippe Loncke will tell us about how he packed what he
   could into a kayak and paddled down the Vistula from its source.
-youtubeVideoId: https://www.youtube.com/watch?v=wPUYejlFCxw&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=9
+youtubeVideoId: wPUYejlFCxw
 speaker: Louis-Philippe Loncke
 speakerProfileImage: talks/general/profile-placeholder.png
 speakerDescription: Belgian adventurer Louis-Philippe Loncke has walked across
@@ -14,4 +14,4 @@ cover:
   image:
     mobile: talks/slowly-down-the-vistula/coverPhotos/piggy.png
     desktop: talks/slowly-down-the-vistula/coverPhotos/piggy.png
-duration: "15:04"
+duration: '"15:04"'

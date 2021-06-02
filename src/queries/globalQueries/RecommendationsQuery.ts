@@ -142,6 +142,8 @@ export const queryForRecommendations = async (
           sizes: "(max:-width: 2000px)",
         });
 
+        const duration = talk.duration.replace('"', "").replace('"', "");
+
         if (loadedEvents[talk.eventSlug]) {
           return {
             item: {
@@ -149,6 +151,7 @@ export const queryForRecommendations = async (
               eventName: loadedEvents[talk.eventSlug].displayName,
               cover,
               coverDesktop,
+              duration,
             },
             order: talkQueryData.order,
           };
@@ -164,6 +167,7 @@ export const queryForRecommendations = async (
               eventName: event.displayName,
               cover,
               coverDesktop,
+              duration,
             },
             order: talkQueryData.order,
           };
