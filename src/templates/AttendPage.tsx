@@ -66,6 +66,7 @@ export const AttendPageTemplate = (props: Props) => (
           heroTitle={props.featuredEvent.hook}
           heroButtonText={props.featuredEvent.cover.button.text}
           heroButtonLink={props.featuredEvent.cover.button.link}
+          heroButtonShow={props.featuredEvent.cover.button.show}
           heroBackgroundImage={props.featuredEvent.cover.image.mobile}
           heroBackgroundImageDesktop={props.featuredEvent.cover.image.desktop}
           heroBackgroundImageAlt="Feature event hero"

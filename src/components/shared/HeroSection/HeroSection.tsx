@@ -17,6 +17,7 @@ export const HeroSection = ({
   heroBackgroundImageAlt,
   heroButtonText,
   heroButtonLink,
+  heroButtonShow,
   heroLinks,
   featuredButtonLink,
   fontMedium,
@@ -53,8 +54,8 @@ export const HeroSection = ({
               </p>
             )}
 
-            <div className="flex flex-col md:flex-row md:align-center">
-              {heroButtonText && (
+            <div className="flex flex-col md:flex-row md:align-center md:space-x-5">
+              {heroButtonText && heroButtonShow && (
                 <a
                   href={heroButtonLink}
                   className="mb-5 md:mb-0"
@@ -69,7 +70,7 @@ export const HeroSection = ({
               {heroLinks?.map((heroLink) => (
                 <a
                   href={heroLink.path}
-                  className="text-white flex hover:opacity-50 mb-10 md:mb-0 md:ml-5 items-center"
+                  className="text-white flex hover:opacity-50 mb-10 md:mb-0 items-center"
                   key={heroLink.displayName}
                 >
                   <span className="my-auto flex items-center">
@@ -78,7 +79,7 @@ export const HeroSection = ({
                 </a>
               ))}
               {featuredButtonLink && (
-                <div className="text-customRed font-medium flex flex-row items-center hover:text-white md:ml-5 mb-10 md:mb-0">
+                <div className="text-customRed font-medium flex flex-row items-center hover:text-white mb-10 md:mb-0">
                   <Link to={featuredButtonLink}>
                     <span>
                       Read more <HiMenuAlt2 className="inline w-6 h-6" />

@@ -5,6 +5,7 @@ export interface HeroSectionProps {
   heroSubtitle?: string;
   heroButtonText?: string;
   heroButtonLink?: string;
+  heroButtonShow?: boolean;
   heroLinks?: [
     {
       displayName: string;
