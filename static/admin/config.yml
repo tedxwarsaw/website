@@ -1020,9 +1020,9 @@ collections:
         label: "Talk description"
         widget: string
       - name: youtubeVideoId
-        label: "Youtube lin"
+        label: "Youtube video id"
         widget: string
-        hint: "Embed link for this talk"
+        hint: "Id of this video. (f.e: 0x2_kWRB8-A) How to get the id: https://gist.github.com/jakebellacera/d81bbf12b99448188f183141e6696817"
       - name: speaker
         label: "Speaker name"
         widget: string
@@ -1068,3 +1068,4 @@ collections:
         label: Duration
         widget: string
         hint: Duration of this talk in format mm:ss (f.e. "3:14" )
+        pattern: ['"([^\\"]|\\")*"', "it must be enclosed with \""] 

@@ -8,7 +8,7 @@ talkDescription: Accelerator and nuclear physicist Piotr Skowronski comes to us
   called CLIC.  This talk was given at a TEDx event using the TED conference
   format but independently organized by a local community. Learn more at
   http://ted.com/tedx
-youtubeVideoId: https://www.youtube.com/watch?v=9oTzFSmKyaw&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=17
+youtubeVideoId: 9oTzFSmKyaw
 speaker: Piotr Skowroński
 speakerProfileImage: talks/general/profile-placeholder.png
 speakerDescription: Accelerator and nuclear physicist.
@@ -17,4 +17,4 @@ cover:
   image:
     mobile: talks/is-it-worth-building-huge-particle-accelerators/coverPhotos/piotr.png
     desktop: talks/is-it-worth-building-huge-particle-accelerators/coverPhotos/piotr.png
-duration: "13:21"
+duration: '"13:21"'

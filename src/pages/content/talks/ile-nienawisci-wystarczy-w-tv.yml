@@ -3,7 +3,7 @@ slug: ile-nienawisci-wystarczy-w-tv
 displayName: Ile nienawiści wystarczy w TV?
 talkDescription: "Jak to jest z agresją w telewizji: interesuje widza, i dlatego
   telewizja decyduje się na jej serwowanie, czy jest zupełnie odwrotnie?"
-youtubeVideoId: https://www.youtube.com/watch?v=NnbxKy8P_ZA&list=PLCcuUt22Y8iX0f3VjRc-FIA1LCKp172b6&index=6
+youtubeVideoId: NnbxKy8P_ZA
 speaker: Andrzej Godlewski
 speakerProfileImage: talks/general/profile-placeholder.png
 speakerDescription: "Wieloletnie doświadczenie pracy w prasie i mediach
@@ -15,4 +15,4 @@ cover:
   image:
     mobile: talks/ile-nienawisci-wystarczy-w-tv/coverPhotos/andrzej.png
     desktop: talks/ile-nienawisci-wystarczy-w-tv/coverPhotos/andrzej.png
-duration: "17:55"
+duration: '"17:55"'
