@@ -348,7 +348,7 @@ collections:
             widget: string
           - label: "CenterTextSection content"
             name: "centerTextSectionContent"
-            widget: string,
+            widget: string
           - label: "CenterTextSection button link"
             name: "centerTextSectionButtonLink"
             widget: string
