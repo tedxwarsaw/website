@@ -1,10 +1,11 @@
-import React from "react";
+  import React from "react";
 import { MainEvent } from "./MainEvent";
 import { EventsListProps } from "@/components/Attend/EventsList";
 import { ListFilters } from "@/components/Attend/EventsList/ListFilters";
 import { CardEventAttend } from "@/components/shared/Card";
 import { useEventList } from "./EventList.hooks";
 import { Pagination } from "../../shared/Pagination";
+import {Lines} from "../../Lines/Lines";
 
 export const EventsList = ({ events, categories }: EventsListProps) => {
   const {
@@ -17,7 +18,8 @@ export const EventsList = ({ events, categories }: EventsListProps) => {
   } = useEventList(events);
 
   return (
-    <div className="py-10">
+    <div className="py-10 relative">
+      <Lines wider={true}/>
       <ListFilters
         filtersList={categories}
         changeFilter={filterEvents}

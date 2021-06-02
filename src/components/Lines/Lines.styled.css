@@ -34,7 +34,7 @@
 }
 
 .lines .line-container .guide-line{
-    border-left: 2px dotted rgba(226, 226, 226, 0.7);
+    border-left: 2px dotted rgba(0, 0, 0, 0.05);
     width: 0;
     height: 100%;
 }

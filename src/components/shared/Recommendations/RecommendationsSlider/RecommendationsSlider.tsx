@@ -31,13 +31,13 @@ export const RecommendationsSlider = ({ children }) => {
         {slider && numberOfSlides > 2 && (
           <div className="hidden md:block">
             <BsChevronLeft
-              className={`text-customRed hover:opacity-40 cursor-pointer stroke-1 text-3xl absolute left-0 top-1/3 z-10 xl:-left-10 ${
+              className={`text-customRed hover:opacity-40 cursor-pointer stroke-1 text-3xl absolute left-0 top-1/4 z-10 xl:-left-10 ${
                 currentSlide <= 0 ? "hidden" : ""
               }`}
               onClick={prevSlide}
             />
             <BsChevronRight
-              className={`text-customRed hover:opacity-40 cursor-pointer stroke-1 text-3xl absolute right-0 top-1/3 z-10 xl:-right-10 hidden  ${
+              className={`text-customRed hover:opacity-40 cursor-pointer stroke-1 text-3xl absolute right-0 top-1/4 z-10 xl:-right-10 hidden  ${
                 currentSlide >= numberOfSlides - slidesToShowDeskotop
                   ? "hidden"
                   : "xl:block"
@@ -45,7 +45,7 @@ export const RecommendationsSlider = ({ children }) => {
               onClick={nextSlide}
             />
             <BsChevronRight
-              className={`xl:hidden text-customRed hover:opacity-40 cursor-pointer stroke-1 text-3xl absolute right-0 top-1/3 z-10 xl:-right-10 ${
+              className={`xl:hidden text-customRed hover:opacity-40 cursor-pointer stroke-1 text-3xl absolute right-0 top-1/4 z-10 xl:-right-10 ${
                 currentSlide >= numberOfSlides - slidesToShowTablet
                   ? "hidden"
                   : ""
@@ -71,7 +71,6 @@ export const RecommendationsSlider = ({ children }) => {
         ) : (
           <Slider sliderRef={sliderRef} children={children} />
         )}
-        <div></div>
       </div>
       {numberOfSlides > 1 && (
         <SliderControls

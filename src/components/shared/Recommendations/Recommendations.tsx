@@ -12,7 +12,7 @@ export const Recommendations = ({
 }: RecommendationsProps) => {
   return (
       <div className={"main-grid-full-span relative"}>
-          <Lines/>
+          <Lines onlyHorizontal={true}/>
           <div className={`my-10 main-grid-full-span recommendations-container ${className && className}`}>
               <h2 className="font-bold">
                   {recommendationsTitle ? recommendationsTitle : "TEDxWarsaw Recommends"}
@@ -39,7 +39,6 @@ export const Recommendations = ({
                                   date={item.date}
                               />
                           )}
-                          <div className={"red-border"}/>
                       </div>
                   ))}
               </RecommendationsSlider>

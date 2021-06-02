@@ -57,6 +57,7 @@ export const CardTalk = ({
         </div>
       </div>
       <p className="pb-1 mt-auto">{eventName}</p>
+      <div className={"red-border"}/>
     </div>
   </Link>
 );

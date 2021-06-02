@@ -3,6 +3,7 @@ import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";
 import "./HowDoesItWork.styled.css";
 import { ProgressLine } from "./ProgressLine";
+import {Lines} from "../../Lines/Lines";
 
 interface Step {
   name: string;
@@ -14,7 +15,8 @@ export interface HowDoesItWorkProps {
 }
 
 export const HowDoesItWork = (props: HowDoesItWorkProps) => (
-  <div className="seamless-grid pt-20 pb-20">
+  <div className="seamless-grid pt-20 pb-20 relative">
+    <Lines wider={true}/>
     <div className="flex items-top col-start-2 col-end-3 text-2xl md:text-3xl font-bold">
       <ReactMarkdown rehypePlugins={[rehypeRaw]}>
         {props.howDoesItWorkTitle}

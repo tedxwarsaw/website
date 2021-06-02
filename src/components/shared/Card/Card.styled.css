@@ -20,6 +20,7 @@
   position: absolute;
   height: 3px;
   transition: .2s;
+  bottom: 0;
 }
 
 .hoverButton{
@@ -29,6 +30,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   transition: .2s;
+}
+
+.card-container{
+  position: relative;
 }
 
 .card-container:hover .red-border{

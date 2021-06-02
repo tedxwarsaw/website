@@ -25,7 +25,7 @@ export const CardEventAttend = ({
   const dateConverted = moment(date, "DD/MM/YYYY");
 
   return (
-    <div className="relative pt-2 md:pt-3 pb-5 border-b-4 border-customTransparent  hover:border-customRed h-full flex flex-col">
+    <div className="relative pt-2 md:pt-3 pb-5 border-b-4 border-customTransparent h-full flex flex-col card-container">
       <Link to={`/event/${slug}`}>
         <div className="relative card-image-container">
           <Img
@@ -38,7 +38,6 @@ export const CardEventAttend = ({
             fluid={coverDesktop}
             alt="Slider item image"
           />
-          <div className={"red-border"}/>
         </div>
       </Link>
       <span className="absolute -left-2 top-0  text-white text-sm px-3 bg-customDarkGrey md:py-1 uppercase">
@@ -74,6 +73,7 @@ export const CardEventAttend = ({
           </span>
         </Link>
       </div>
+      <div className={"red-border"}/>
     </div>
   );
 };

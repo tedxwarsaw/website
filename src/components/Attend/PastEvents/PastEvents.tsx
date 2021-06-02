@@ -1,4 +1,5 @@
 import React from "react";
+import {Lines} from "../../Lines/Lines";
 
 export interface PastEventsProps {
   pastEventsSectionTitle: string;
@@ -13,7 +14,8 @@ export const PastEvents = ({
   pastEventsSectionTitle,
   pastEventsItems,
 }: PastEventsProps) => (
-  <div className="my-16">
+  <div className="py-16 relative">
+    <Lines wider={true}/>
     <h2 className="mb-5 xl:mb-10 font-bold">
       {pastEventsSectionTitle}
     </h2>

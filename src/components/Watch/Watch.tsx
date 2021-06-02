@@ -6,6 +6,7 @@ import { WatchList } from "./WatchList";
 import { Pagination } from "@/components/shared/Pagination";
 import { useWatch } from "./Watch.hooks";
 import "./Watch.styled.css";
+import {Lines} from "../Lines/Lines";
 
 export const Watch = ({
   headerTitle,
@@ -27,7 +28,8 @@ export const Watch = ({
 
   return (
     <>
-      <div className="main-grid-full-span pt-16 bg-customLightGrey">
+      <div className="main-grid-full-span pt-16 bg-customLightGrey relative">
+        <Lines onlyHorizontal={true}/>
         <div className="inner-grid mb-10">
           <div className="col-start-1 col-span-full flex justify-center flex-col text-center gap-5">
             <ReactMarkdown className="text-4xl watch-heading-md">
@@ -58,8 +60,8 @@ export const Watch = ({
           </div>
         )}
       </div>
-
-      <div className="pb-10">
+      <div className="pb-10 relative">
+        <Lines wider={true}/>
         <WatchList
           talks={talksToShow}
           eventNames={eventNames}
