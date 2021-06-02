@@ -41,11 +41,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background desktop image"
             name: "heroBackgroundImageUrlDesktop"
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background image alt"
             name: "heroBackgroundImageAlt"
             widget: string
@@ -86,11 +88,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Join us section image desktop"
             name: "joinUsImageDesktopPath"
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: Join us volunteer link text
             name: joinUsVolunteerText
             widget: string
@@ -136,6 +140,7 @@ collections:
                 widget: "image",
                 allow_multiple: false,
                 media_folder: "photos",
+                public_folder: "pages/photos",
                 }
           - label: "CenterTextSection title"
             name: "centerTextSectionTitle"
@@ -222,11 +227,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background desktop image"
             name: "heroBackgroundImageUrlDesktop"
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background image alt"
             name: "heroBackgroundImageAlt"
             widget: string
@@ -265,11 +272,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "TEDxWarsaw Desktop Image"
             name: "AboutUsImageUrlDesktop"
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "TEDxWarsaw image alt"
             name: "AboutUsImageAlt"
             widget: string
@@ -289,7 +298,8 @@ collections:
                   name: "profileImageUrl",
                   widget: image,
                   allow_multiple: false,
-                  media_folder: "photos"
+                  media_folder: "photos",
+                  public_folder: "pages/photos"
                 }
           - label: "Associates"
             name: "associates"
@@ -307,7 +317,8 @@ collections:
                   name: "profileImageUrl",
                   widget: image,
                   allow_multiple: false,
-                  media_folder: "photos"
+                  media_folder: "photos",
+                  public_folder: "pages/photos"
                 }
       - label: "Speakers"
         name: "speakers"
@@ -322,11 +333,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background desktop image"
             name: "heroBackgroundImageUrlDesktop"
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background image alt"
             name: "heroBackgroundImageAlt"
             widget: string
@@ -366,11 +379,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background desktop image"
             name: "heroBackgroundImageUrlDesktop"
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background image alt"
             name: "heroBackgroundImageAlt"
             widget: string
@@ -391,11 +406,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Meet us background desktop image"
             name: "meetUsImageUrlDesktop"
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Meet Us Image Alt"
             name: "meetUsImageAlt"
             widget: string
@@ -418,11 +435,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background desktop image"
             name: "heroBackgroundImageUrlDesktop"
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - label: "Hero background image alt"
             name: "heroBackgroundImageAlt"
             widget: string
@@ -568,6 +587,7 @@ collections:
                 widget: image
                 allow_multiple: false
                 media_folder: "photos"
+                public_folder: "pages/photos"
       - label: "Suggested Event (shown on all event pages)"
         name: "suggestedEvent"
         file: "src/pages/content/global/events/suggestedEvent/suggestedEvent.yaml"
@@ -629,11 +649,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - name: newsletterBackgroundImageDesktopPath
             label: Newsletter background image desktop
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
       - label: "Recommendations (shown globally)"
         name: "recommendations"
         file: "src/pages/content/global/recommendations.yaml"
@@ -721,11 +743,13 @@ collections:
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - name: sectionBackgroundImageUrlDesktop
             label: Section background image desktop
             widget: image
             allow_multiple: false
             media_folder: "photos"
+            public_folder: "pages/photos"
           - name: sectionBackgroundImageAlt
             label: Section background image alt
             widget: string
