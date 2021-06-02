@@ -55,7 +55,7 @@ export const HeroSection = ({
             )}
 
             <div className="flex flex-col md:flex-row md:align-center md:space-x-5">
-              {heroButtonText && heroButtonShow && (
+              {heroButtonText && (heroButtonShow ?? true) && (
                 <a
                   href={heroButtonLink}
                   className="mb-5 md:mb-0"
