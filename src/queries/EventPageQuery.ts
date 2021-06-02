@@ -196,6 +196,12 @@ export const queryForProps = async (
     ...event.location,
     mapSrc: (parseHTML(event.location.mapIframe).childNodes[0] as HTMLElement)
       .attrs.src,
+    image: await getFluidImage({
+      graphql,
+      path: event.location.image,
+      quality: 90,
+      sizes: "(max:-width: 2000px)",
+    }),
   };
 
   const newsletter = await queryForNewsletter(graphql);
