@@ -605,7 +605,7 @@ collections:
                 widget: image
                 allow_multiple: false
                 media_folder: "photos"
-                public_folder: "global/photos"
+                public_folder: "global/events/photos"
       - label: "Suggested Event (shown on all event pages)"
         name: "suggestedEvent"
         file: "src/pages/content/global/events/suggestedEvent/suggestedEvent.yaml"
