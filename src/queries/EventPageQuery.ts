@@ -124,17 +124,17 @@ export const queryForProps = async (
     suggestedEvent.photos = photos;
   }
 
-  const partnerLogosDesktop: any = await Promise.all(
-    event.partnerLogos.map(
-      async (logo) =>
-        await getFixedImage({ graphql, path: logo.partnerLogoPath, height: 60 })
-    )
-  );
-
   const partnerLogos: any = await Promise.all(
     event.partnerLogos.map(
       async (logo) =>
         await getFixedImage({ graphql, path: logo.partnerLogoPath, height: 30 })
+    )
+  );
+
+  const partnerLogosDesktop: any = await Promise.all(
+    event.partnerLogos.map(
+      async (logo) =>
+        await getFixedImage({ graphql, path: logo.partnerLogoPath, height: 60 })
     )
   );
 

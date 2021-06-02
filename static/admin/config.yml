@@ -445,6 +445,24 @@ collections:
           - label: "Hero background image alt"
             name: "heroBackgroundImageAlt"
             widget: string
+          - label: Partner section title
+            name: partnerSectionTitle
+            widget: string
+          - name: partnerLogos
+            label: Partner Logos
+            widget: "list"
+            required: false
+            fields:
+              - { label: "name", name: "partnerName", widget: "string", required: false }
+              - {
+                label: "Partner Logo",
+                name: "partnerLogoPath",
+                widget: "image",
+                allow_multiple: false,
+                media_folder: "photos",
+                public_folder: "pages/photos",
+                }
+
           - label: "Partners Contacts Content"
             name: "partnersContactContent"
             widget: string
