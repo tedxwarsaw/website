@@ -2,7 +2,7 @@ collectionId: recommendations
 recommendationsTitle: TEDxWarsaw Recommends
 recommendations:
   events:
-    - eventSlug: 'crunchtime-2017'
+    - eventSlug: "polarization-2021"
       order: 2
   talks:
     - talkSlug: "baby-do-garow"
