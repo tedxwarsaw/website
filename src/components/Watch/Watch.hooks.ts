@@ -82,7 +82,8 @@ export const useWatch = (talks) => {
       params?.eventSlug,
       params?.durationFilter
     );
-  }, []);
+    console.log(params);
+  }, [params]);
 
   return {
     activeFilters,
