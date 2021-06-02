@@ -124,19 +124,31 @@ export const queryForProps = async (
     suggestedEvent.photos = photos;
   }
 
-  const partnerLogos: any = await Promise.all(
-    event.partnerLogos.map(
-      async (logo) =>
-        await getFixedImage({ graphql, path: logo.partnerLogoPath, height: 30 })
-    )
-  );
+  let partnerLogos = [];
+  let partnerLogosDesktop = [];
+  if (event.partnerLogos?.length > 0) {
+    partnerLogos = await Promise.all(
+      event.partnerLogos.map(
+        async (logo) =>
+          await getFixedImage({
+            graphql,
+            path: logo.partnerLogoPath,
+            height: 30,
+          })
+      )
+    );
 
-  const partnerLogosDesktop: any = await Promise.all(
-    event.partnerLogos.map(
-      async (logo) =>
-        await getFixedImage({ graphql, path: logo.partnerLogoPath, height: 60 })
-    )
-  );
+    partnerLogosDesktop = await Promise.all(
+      event.partnerLogos.map(
+        async (logo) =>
+          await getFixedImage({
+            graphql,
+            path: logo.partnerLogoPath,
+            height: 60,
+          })
+      )
+    );
+  }
 
   let ticketProviderLogo: any;
   if (event.ticketProviderLogo) {
