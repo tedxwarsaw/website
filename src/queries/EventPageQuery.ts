@@ -26,6 +26,7 @@ const secondQuery = `#graphql
     $suggestedEventSlug: String,
   ) {
     event: eventsYaml(slug: {eq: $eventSlug}) {
+      slug
       displayName
       city
       date
@@ -72,6 +73,9 @@ const secondQuery = `#graphql
     suggestedEventInfo: eventsYaml(slug: {eq: $suggestedEventSlug}) {
       slug
       displayName
+      eventPhotos {
+        eventPhoto
+      }
     }
   }
 `;
@@ -102,27 +106,13 @@ export const queryForProps = async (
     })
   );
 
-  const suggestedEvent: any = {
-    displayName: suggestedEventInfo.displayName,
-    slug: suggestedEventInfo.slug,
-  };
-
-  if (suggestedEvent.slug) {
-    const {
-      data: { event },
-    } = await graphql(secondQuery, {
-      eventSlug: suggestedEvent.slug,
-      suggestedEventSlug: suggestedEventYaml.slug,
-    });
-
-    const photos = await Promise.all(
-      event.eventPhotos.map(async (item) => {
-        const path = item.eventPhoto;
-        return await getFluidImage({ graphql, path });
-      })
-    );
-    suggestedEvent.photos = photos;
-  }
+  const suggestedEvent = suggestedEventInfo;
+  suggestedEvent.photos = await Promise.all(
+    suggestedEventInfo.eventPhotos.map(async (item) => {
+      const path = item.eventPhoto;
+      return await getFluidImage({ graphql, path });
+    })
+  );
 
   let partnerLogos = [];
   let partnerLogosDesktop = [];
@@ -159,8 +149,8 @@ export const queryForProps = async (
     });
   }
 
-  let eventPhotosDesktop: any;
-  if (event.eventPhotos && event.eventPhotos.length > 0) {
+  let eventPhotosDesktop = [];
+  if (event.eventPhotos.length > 0) {
     eventPhotosDesktop = await Promise.all(
       event.eventPhotos.map(
         async (event) =>

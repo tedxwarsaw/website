@@ -3,30 +3,22 @@ slug: men-and-women-2018
 displayName: TEDxWarsaw 2018 Men & Women
 category: Conference
 city: Warsaw
-date: 23/03/2018
+date: 22/03/2018
 time: "12:00"
-hook: todo
-description: todo
+hook: Time goes fast, wouldn't you say?
+description: "This year we will be focusing on such issues as: health, interaction design, mobility, glass ceiling, behavioral economics, sexuality, architecture and many more ... but that will be a surprise!"
 cover:
   variant: dark
   button:
     text: attend
     link: https://example.com/
-    show: true
-  image:
-    mobile: events/men-and-women-2018/coverPhotos/tedxwaw_men-women.png
-    desktop: events/men-and-women-2018/coverPhotos/tedxwaw_men-women.png
-coverHero:
-  button:
-    link: https://example.com/
-    text: attend
-    show: true
+    show: false
   image:
     mobile: events/men-and-women-2018/coverPhotos/tedxwaw_men-women.png
     desktop: events/men-and-women-2018/coverPhotos/tedxwaw_men-women.png
 isOnline: false
 location:
-  displayName: Złote Tarasy Złota 59
+  displayName: Multikino, Złote Tarasy
   city: Warsaw
   mapIframe: <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.7202868759105!2d20.999243415796712!3d52.23029947976031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8da58f0dd5%3A0x9f7d3a9040fbc02f!2sZ%C5%82ota%2059%2C%2000-120%20Warszawa!5e0!3m2!1sen!2spl!4v1620902992935!5m2!1sen!2spl"
@@ -34,77 +26,43 @@ location:
     loading="lazy"></iframe>
   image: events/men-and-women-2018/locationPhoto/zlote.jpg
 callToAction:
-  title: TEDxWarsaw 2018 pass
-  subtitle: 150 PLN
-  buttonText: Buy now
-  buttonUrl: https://example.com/
+  title: TEDxWarsaw 2018 Talks
+  subtitle: Available now
+  buttonText: Watch the talks
+  buttonUrl: https://www.youtube.com/watch?list=PLsRNoUx8w3rP1ibkXpJ_D5gcJ6Qy4fj1Y&v=12PX2nIjlK8
 speakers:
   - speakerName: Anna Jakubowski
-    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/partner.png
+    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/x.png
   - speakerName: Anna Zaleska
-    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/partner.png
+    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/x.png
   - speakerName: Anthony Barba
-    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/partner.png
+    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/x.png
   - speakerName: Cedric Dumont
-    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/partner.png
+    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/x.png
   - speakerName: Ewa Błaszczak
-    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/partner.png
+    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/x.png
   - speakerName: João de Sousa
-    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/partner.png
+    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/x.png
   - speakerName: Katarzyna Bogusz - Przybylska
-    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/partner.png
+    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/x.png
   - speakerName: Katarzyna Szymańska
-    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/partner.png
+    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/x.png
   - speakerName: Maciej Kraus
-    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/partner.png
+    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/x.png
   - speakerName: Magdalena Król
-    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/partner.png
+    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/x.png
   - speakerName: Mateusz Franczak
-    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/partner.png
+    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/x.png
   - speakerName: Michał Przerwa - Tetmajer
-    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/partner.png
+    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/x.png
   - speakerName: Rafał Agnieszczak
-    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/partner.png
+    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/x.png
   - speakerName: Sandra Osipiuk
-    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/partner.png
+    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/x.png
   - speakerName: Wiesław Bartkowski
-    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/partner.png
+    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/x.png
   - speakerName: Witold Jankowski
-    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/partner.png
+    speakerPhotoPath: events/men-and-women-2018/speakerPhotos/x.png
 partnerLogos:
-  - partnerName: logo1
-    partnerLogoPath: events/men-and-women-2018/partnerLogos/logo-1.png
-  - partnerName: logo1
-    partnerLogoPath: events/men-and-women-2018/partnerLogos/logo-2.png
-  - partnerName: logo1
-    partnerLogoPath: events/men-and-women-2018/partnerLogos/logo-3.png
-  - partnerName: logo1
-    partnerLogoPath: events/men-and-women-2018/partnerLogos/logo-4.png
-  - partnerName: logo1
-    partnerLogoPath: events/men-and-women-2018/partnerLogos/logo-5.png
-  - partnerName: logo1
-    partnerLogoPath: events/men-and-women-2018/partnerLogos/logo-6.png
-  - partnerName: logo1
-    partnerLogoPath: events/men-and-women-2018/partnerLogos/logo-7.png
-  - partnerName: logo1
-    partnerLogoPath: events/men-and-women-2018/partnerLogos/logo-8.png
-  - partnerName: logo1
-    partnerLogoPath: events/men-and-women-2018/partnerLogos/logo-9.png
-  - partnerName: logo1
-    partnerLogoPath: events/men-and-women-2018/partnerLogos/logo-10.png
-  - partnerName: logo1
-    partnerLogoPath: events/men-and-women-2018/partnerLogos/logo-11.png
-  - partnerName: logo1
-    partnerLogoPath: events/men-and-women-2018/partnerLogos/logo-12.png
-  - partnerName: logo1
-    partnerLogoPath: events/men-and-women-2018/partnerLogos/logo-13.png
-  - partnerName: logo1
-    partnerLogoPath: events/men-and-women-2018/partnerLogos/logo-14.png
-  - partnerName: logo1
-    partnerLogoPath: events/men-and-women-2018/partnerLogos/logo-15.png
-  - partnerName: logo1
-    partnerLogoPath: events/men-and-women-2018/partnerLogos/logo-16.png
-  - partnerName: logo1
-    partnerLogoPath: events/men-and-women-2018/partnerLogos/logo-17.png
 ticketProviderLogo: images/uploads/evenea2.png
 eventPhotos: []

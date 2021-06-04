@@ -4,15 +4,15 @@ displayName: TEDxWarsaw 2021 Polarization
 category: Conference
 city: Warsaw
 date: 10/06/2021
-hook:
-  "We’re like fire and water, like the Celtics and the Lakers, like Thor and Loki, Microsoft and
-  Apple, or like Swiss cheese and cottage cheese."
+hook: "Are we really that polarized? That DIFFERENT and disconnected?"
 description:
-  "There is a gulf between us, which we are often trying to fill in with hate, sticks,
-  and stones. Are we really that polarized? That DIFFERENT and disconnected?
-  This is the topic we will explore on June 10th in Warsaw. Come and show us WHAT IT MEANS TO BE YOU
-  in a divided world. Try to learn with us how to listen so that we can be heard and how to speak so
-  that we can be understood. Help us connect what is seemingly distant."
+  "We’re like fire and water, like the Celtics and the Lakers, like Thor and Loki,
+  Microsoft and Apple, or like Swiss cheese and cottage cheese. There is a gulf between us,
+  which we are often trying to fill in with hate, sticks, and stones. Are we really that polarized?
+  That DIFFERENT and disconnected? This is the topic we will explore on June 10th in Warsaw.
+  Come and show us WHAT IT MEANS TO BE YOU in a divided world. Try to learn with us how to listen
+  so that we can be heard and how to speak so that we can be understood. Help us connect what
+  is seemingly distant."
 cover:
   variant: dark
   button:
@@ -24,7 +24,7 @@ cover:
     desktop: events/polarization-2021/coverPhotos/1461x640_tedxwaw_polaryzacja_kv_www_desktop-1.png
 isOnline: false
 location:
-  displayName: Złote Tarasy
+  displayName: Mulitkino, Złote Tarasy
   city: Warsaw
   mapIframe: <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.7202868759105!2d20.999243415796712!3d52.23029947976031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8da58f0dd5%3A0x9f7d3a9040fbc02f!2sZ%C5%82ota%2059%2C%2000-120%20Warszawa!5e0!3m2!1sen!2spl!4v1620902876401!5m2!1sen!2spl"

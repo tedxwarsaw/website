@@ -3,31 +3,21 @@ slug: embrace-the-other-2014
 displayName: TEDxWarsaw Embrace The Other
 category: Conference
 city: Warsaw
-date: 14/03/2014
-time: "10:00am - 8:00pm CET (UTC +1hr)"
-hook: We celebrated our fifth birthday with the largest TEDx event ever held in
-  Poland, and one of the largest in the World.
-description: todo
+date: 13/03/2014
+hook: Embrace the other
+description: Jazz, astronomy, genetics, economics, traditional Polish cuisine, googlephobia, the Jewish cultural renaissance - these are just a few topics of the 5th edition of the TEDxWarsaw conference.
 cover:
   variant: dark
   button:
     text: attend
-    show: true
+    show: false
     link: https://example.com/
-  image:
-    mobile: events/embrace-the-other-2014/coverPhotos/tedxwaw_embracetheother.png
-    desktop: events/embrace-the-other-2014/coverPhotos/tedxwaw_embracetheother.png
-coverHero:
-  button:
-    link: https://example.com/
-    text: attend
-    show: true
   image:
     mobile: events/embrace-the-other-2014/coverPhotos/tedxwaw_embracetheother.png
     desktop: events/embrace-the-other-2014/coverPhotos/tedxwaw_embracetheother.png
 isOnline: false
 location:
-  displayName: Złote Tarasy Złota 59
+  displayName: Multikino, Złote Tarasy
   city: Warsaw
   mapIframe: <iframe
     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2443.7707125177826!2d20.9997369!3d52.2293834!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8c3c80e54d%3A0x12702cc984d8e75c!2sZ%C5%82ote%20Tarasy!5e0!3m2!1sen!2spl!4v1620902913424!5m2!1sen!2spl"
@@ -35,47 +25,16 @@ location:
     loading="lazy"></iframe>
   image: events/embrace-the-other-2014/locationPhoto/zlote.jpg
 callToAction:
-  title: TEDxWarsaw 2014 pass
-  subtitle: 150 PLN
-  buttonText: Buy now
-  buttonUrl: https://example.com/
+  title: TEDxWarsaw 2014 Photos
+  subtitle: Available now
+  buttonText: See the gallery
+  buttonUrl: https://www.flickr.com/photos/76700908@N06/albums/72157643051451784
 speakers:
-  - speakerName: Unknown
+  - speakerName: Coming soon
     speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
-partnerLogos:
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-1.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-2.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-3.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-4.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-5.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-6.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-7.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-8.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-9.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-10.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-11.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-12.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-13.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-14.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-15.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-16.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-17.png
+partnerLogos: []
 ticketProviderLogo: images/uploads/evenea2.png
-eventPhotos: []
+eventPhotos:
+  - eventPhoto: events/embrace-the-other-2014/eventPhotos/2.jpg
+  - eventPhoto: events/embrace-the-other-2014/eventPhotos/3.jpg
+  - eventPhoto: events/embrace-the-other-2014/eventPhotos/4.jpg

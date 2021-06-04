@@ -3,32 +3,18 @@ slug: in-a-heartbeat-2016
 displayName: TEDxWarsaw 2016 In a Heartbeat
 category: Conference
 city: Warsaw
-date: 01/04/2016
-time: "9:00am - 5:00pm CEST (UTC +2hrs)"
-hook: todo
-description: >-
-  Change is permanent and inevitable. Sometimes things change slowly. More often
-  than not, they change in a heartbeat. A choice is made. A direction is chosen.
-  A phone call is returned. Or not.
-
-  Is it about tiny, seemingly insignificant yet powerful and life-changing moments? Is it about our civilisation changing, and we're not even noticing it? Or is it about affairs of the heart? Passion? Health? Rhythm? All of the above? Let's find out.
+date: 31/03/2016
+hook: Change is permanent and inevitable. Sometimes things change slowly. More often than not, they change in a heartbeat.
+description: A choice is made. A direction is chosen. A phone call is returned. Or not. Is it about tiny, seemingly insignificant yet powerful and life-changing moments? Is it about our civilisation changing, and we're not even noticing it? Or is it about affairs of the heart? Passion? Health? Rhythm? All of the above? Let's find out.a
 cover:
   variant: dark
   button:
     text: Attend
     link: https://example.com/
-    show: true
+    show: false
   image:
     mobile: events/in-a-heartbeat-2016/coverPhotos/2016.png
     desktop: events/in-a-heartbeat-2016/coverPhotos/2016.png
-coverHero:
-  button:
-    text: attend
-    link: https://example.com/
-    show: true
-  image:
-    desktop: events/in-a-heartbeat-2016/coverPhotos/blank.png
-    mobile: events/in-a-heartbeat-2016/coverPhotos/blank.png
 isOnline: false
 location:
   displayName: Polin, Muzeum Historii Żydów Polskich
@@ -36,45 +22,11 @@ location:
   mapIframe: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2442.668756914635!2d20.991175215797337!3d52.249399979763815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc79a995b873%3A0xe21ada43504430b0!2sPOLIN%20Museum%20of%20the%20History%20of%20Polish%20Jews!5e0!3m2!1sen!2spl!4v1620902940581!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   image: events/in-a-heartbeat-2016/locationPhoto/polin.jpg
 callToAction:
-  title: TEDxWarsaw 2016 pass
-  subtitle: 150 PLN
-  buttonText: Buy now
-  buttonUrl: https://example.com/
-partnerLogos:
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-1.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-2.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-3.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-4.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-5.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-6.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-7.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-8.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-9.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-10.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-11.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-12.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-13.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-14.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-15.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-16.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-17.png
+  title: TEDxWarsaw 2016 Photos
+  subtitle: Available now
+  buttonText: Open the gallery
+  buttonUrl: https://www.facebook.com/media/set/?vanity=tedxwarsaw&set=a.10153647986118869
+partnerLogos: []
 speakers:
   - speakerName: Agnieszka Teodorowska
     speakerPhotoPath: events/in-a-heartbeat-2016/speakerPhotos/partner.png

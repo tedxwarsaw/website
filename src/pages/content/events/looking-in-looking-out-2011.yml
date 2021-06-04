@@ -3,33 +3,21 @@ slug: looking-in-looking-out-2011
 displayName: TEDxWarsaw 2011 Looking in, Looking out
 category: Conference
 city: Warsaw
-date: 23/03/2011
-time: "9:00am - 7:00pm CET (UTC +1hr)"
-hook: todo
-description: Our theme this year opens the door to introspection and discussion
-  of freedom, creative destruction, and inspiration from without. Prepare to be
-  challenged, surprised and delighted by a lineup of outstanding of speakers and
-  extraordinary artists.
+date: 24/03/2011
+hook: 'What is the power of an idea? It’s been said that someone with a new idea is a crackpot, until the idea succeeds, at which point he becomes an "instant" hero.'
+description: It’s also been said that the only thing to have ever changed the course of history have been groups of people coalescing around ideas. We would like to put a stake in the ground and state for the record that we, the TEDxWarsaw Team, believe that what the world at large, and this country in particular need right now, and most desperately, are a few good new ideas. We hope to participate in the process of bringing a few of them to light. Taking the TED stage as a benchmark and a waypoint, we feel humbled by the responsibility, and the opportunity, to seek out and present ideas worth sharing. Intelligent humans are able to discover and discuss without automatically limiting their horizons by their own worldview. Your insights are just as valuable as mine if they are drawn from a point of honest discovery and presented from a point of inviting honest discussion.
 cover:
   variant: dark
   button:
     text: attend
     link: https://example.com/
-    show: true
-  image:
-    mobile: events/looking-in-looking-out-2011/coverPhotos/tedxwaw_lookinginout.png
-    desktop: events/looking-in-looking-out-2011/coverPhotos/tedxwaw_lookinginout.png
-coverHero:
-  button:
-    text: attend
-    link: https://example.com/
-    show: true
+    show: false
   image:
     mobile: events/looking-in-looking-out-2011/coverPhotos/tedxwaw_lookinginout.png
     desktop: events/looking-in-looking-out-2011/coverPhotos/tedxwaw_lookinginout.png
 isOnline: false
 location:
-  displayName: Multikino Zlote Tarasy Zlota 59
+  displayName: Multikino, Złote Tarasy
   city: Warsaw
   mapIframe: <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.7707144180404!2d20.999736915945203!3d52.22938336547791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8c3c80e54d%3A0x12702cc984d8e75c!2sZ%C5%82ote%20Tarasy!5e0!3m2!1sen!2spl!4v1620911968430!5m2!1sen!2spl"
@@ -37,47 +25,13 @@ location:
     loading="lazy"></iframe>
   image: events/looking-in-looking-out-2011/locationPhoto/zlote.jpg
 callToAction:
-  title: TEDxWarsaw 2011 pass
-  subtitle: 150 PLN
-  buttonText: Buy now
-  buttonUrl: https://example.com/
+  title: TEDxWarsaw 2011 Photos
+  subtitle: Available now
+  buttonText: Open the gallery
+  buttonUrl: https://www.flickr.com/photos/76700908@N06/albums/72157643049452365
 speakers:
-  - speakerName: Unknown
+  - speakerName: Coming soon
     speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
-partnerLogos:
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-1.png
-  - partnerName: logo2
-    partnerLogoPath: events/2020/partnerLogos/logo-2.png
-  - partnerName: logo3
-    partnerLogoPath: events/2020/partnerLogos/logo-3.png
-  - partnerName: logo4
-    partnerLogoPath: events/2020/partnerLogos/logo-4.png
-  - partnerName: logo5
-    partnerLogoPath: events/2020/partnerLogos/logo-5.png
-  - partnerName: logo6
-    partnerLogoPath: events/2020/partnerLogos/logo-6.png
-  - partnerName: logo7
-    partnerLogoPath: events/2020/partnerLogos/logo-7.png
-  - partnerName: logo8
-    partnerLogoPath: events/2020/partnerLogos/logo-8.png
-  - partnerName: logo9
-    partnerLogoPath: events/2020/partnerLogos/logo-9.png
-  - partnerName: logo10
-    partnerLogoPath: events/2020/partnerLogos/logo-10.png
-  - partnerName: logo11
-    partnerLogoPath: events/2020/partnerLogos/logo-11.png
-  - partnerName: logo12
-    partnerLogoPath: events/2020/partnerLogos/logo-12.png
-  - partnerName: logo13
-    partnerLogoPath: events/2020/partnerLogos/logo-13.png
-  - partnerName: logo14
-    partnerLogoPath: events/2020/partnerLogos/logo-14.png
-  - partnerName: logo15
-    partnerLogoPath: events/2020/partnerLogos/logo-15.png
-  - partnerName: logo16
-    partnerLogoPath: events/2020/partnerLogos/logo-16.png
-  - partnerName: logo17
-    partnerLogoPath: events/2020/partnerLogos/logo-17.png
+partnerLogos: []
 ticketProviderLogo: images/uploads/evenea2.png
 eventPhotos: []

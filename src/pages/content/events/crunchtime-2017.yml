@@ -3,27 +3,15 @@ slug: crunchtime-2017
 displayName: TEDxWarsaw 2017 Crunchtime
 category: Conference
 city: Warsaw
-date: 24/03/2017
-hook: todo
-description: Our eighth major event brings you many perspectives on the problems
-  and challenges facing us today. Our speakers cover a broad range of subjects,
-  from communities living on trash heaps to municipal planning, and from the
-  refugee crisis to radicalisation – presenting their take on likely solutions
-  based on their expertise.
+date: 23/03/2017
+hook: There was a time when solving a problem could be attended to at a pace which allowed for considered response and a degree of comfort.
+description: "Over the last decade, or so, that pace has  quickened  to  a  point  where  the  same  considered  response  is  no  longer  possible and there is no comfort since the number of issues our civilization needs to deal with simultaneously has grown rapidly. Not only has there been an increase in the number of issues but their magnitude has also grown. Strategists, scientists, politicians, pundits and  ordinary  intelligent  observers  are  now  talking  about “wicked problems”. Climate change, health care issues,  income  disparity,  inadequate  education,  changing  labour markets, a rise of populism, growing technological exclusion – all of these and more are facing  us  at  the  same  time  and  our  decisive  action  is  needed  o  solve  not  a  few,  but most of those. We may be living in the best period ever, and we may indeed progress from  this  to  a  society based on  positive  values  and  one  which  can  be  generally considered  an improvement  on  what  we  have. Or,  we  can  rapidly  descend  into something very negative. Now is the time to decide. Crunchtime."
 cover:
   variant: dark
   button:
     text: attend
     link: https://example.com/
-    show: true
-  image:
-    mobile: events/crunchtime-2017/coverPhotos/tedxwaw_crunchtime.png
-    desktop: events/crunchtime-2017/coverPhotos/tedxwaw_crunchtime.png
-coverHero:
-  button:
-    text: attend
-    link: https://example.com/
-    show: true
+    show: false
   image:
     mobile: events/crunchtime-2017/coverPhotos/tedxwaw_crunchtime.png
     desktop: events/crunchtime-2017/coverPhotos/tedxwaw_crunchtime.png
@@ -34,13 +22,13 @@ location:
     width="600" height="450" style="border:0;" allowfullscreen=""
     loading="lazy"></iframe>
   city: Warsaw
-  displayName: Złote Tarasy
+  displayName: Multikino, Złote Tarasy
   image: events/crunchtime-2017/locationPhoto/zlote.jpg
 callToAction:
   title: TEDxWarsaw 2017 Talks
   subtitle: Available now
   buttonText: Watch the talks
-  buttonUrl: /watch?eventSlug=crunchtime-2017
+  buttonUrl: https://www.youtube.com/watch?list=PLsRNoUx8w3rNs8St8dDsmJTgs_I3uaH0W&v=Qsm3d7kWShg
 speakers:
   - speakerName: Jazzpospolita
     speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
@@ -80,42 +68,6 @@ speakers:
     speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
   - speakerName: Zbyszek Pawlak
     speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
-partnerLogos:
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-1.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-2.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-3.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-4.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-5.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-6.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-7.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-8.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-9.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-10.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-11.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-12.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-13.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-14.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-15.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-16.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-17.png
+partnerLogos: []
 ticketProviderLogo: images/uploads/evenea2.png
-eventPhotos:
-  - eventPhoto: events/crunchtime-2017/eventPhotos/teatrpolski.jpg
-  - eventPhoto: events/crunchtime-2017/eventPhotos/zlote.jpg
+eventPhotos: []

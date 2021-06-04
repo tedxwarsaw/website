@@ -1,11 +1,10 @@
 collectionId: event
 slug: define-your-place-2014
-displayName: TEDxWarsaw 2014 Define Your Place
+displayName: TEDxWarsawPresidentialPalace 2014 Define Your Place
 category: Conference
 city: Warsaw
-date: 30/05/2014
-time: "10:00am - 5:00pm CEST (UTC +2hrs)"
-hook: todo
+date: 29/05/2014
+hook: The TEDxWarsawPresidentialPalace event was held under the theme "Define Your Place".
 description: TEDxWarsaw team hosted a very special TEDx event, at the invitation
   of the President of the Republic of Poland. Organised with the assistance of
   the President's office but entirely independent in terms of theme, selection
@@ -16,15 +15,7 @@ cover:
   button:
     text: attent
     link: https://example.com/
-    show: true
-  image:
-    mobile: events/define-your-place-2014/coverPhotos/tedxwaw_defineyourplace.png
-    desktop: events/define-your-place-2014/coverPhotos/tedxwaw_defineyourplace.png
-coverHero:
-  button:
-    text: attend
-    link: https://example.com/
-    show: true
+    show: false
   image:
     mobile: events/define-your-place-2014/coverPhotos/tedxwaw_defineyourplace.png
     desktop: events/define-your-place-2014/coverPhotos/tedxwaw_defineyourplace.png
@@ -38,47 +29,13 @@ location:
     loading="lazy"></iframe>
   image: events/define-your-place-2014/locationPhoto/palacprezydencki.jpg
 callToAction:
-  title: TEDxWarsaw 2014 pass
-  subtitle: "150 PLN "
-  buttonText: Buy now
-  buttonUrl: https://example.com/
+  title: TEDxWarsawPresidentialPalace 2014 Talks
+  subtitle: Available now
+  buttonText: Watch the talks
+  buttonUrl: https://www.youtube.com/results?search_query=TEDxWarsawPresidentialPalace
 speakers:
-  - speakerName: Unknown
+  - speakerName: Coming soon
     speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
-partnerLogos:
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-1.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-2.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-3.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-4.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-5.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-6.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-7.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-8.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-9.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-10.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-11.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-12.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-13.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-14.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-15.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-16.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-17.png
+partnerLogos: []
 ticketProviderLogo: images/uploads/evenea2.png
 eventPhotos: []

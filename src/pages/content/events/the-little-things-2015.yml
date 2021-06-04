@@ -3,21 +3,11 @@ slug: the-little-things-2015
 displayName: TEDxWarsaw 2015 The Little Things
 category: Conference
 city: Warsaw
-date: 19/03/2015
-time: "9:00am - 3:00pm CET (UTC +1hr)"
-hook: Our sixth major annual event held at a wonderful, historic theatre in the
-  centre of Warsaw.
-description: todo
+date: 18/03/2015
+hook: Can small things make a big difference? What impact do small insects have on our lives and the world around us? Can anyone become a physicist?
+description: '"The Little Things" is the theme of the 6th edition of TEDxWarsaw, a conference that promotes inspiring and provocative views on reality.'
 cover:
   variant: dark
-  button:
-    text: attend
-    link: https://example.com/
-    show: true
-  image:
-    mobile: events/the-little-things-2015/coverPhotos/tedxwaw_thelittlethings.png
-    desktop: events/the-little-things-2015/coverPhotos/tedxwaw_thelittlethings.png
-coverHero:
   button:
     text: attend
     link: https://example.com/
@@ -35,10 +25,10 @@ location:
     loading="lazy"></iframe>
   image: events/the-little-things-2015/locationPhoto/teatrpolski.jpg
 callToAction:
-  title: TEDxWarsaw 2015 pass
-  subtitle: 150 PLN
-  buttonText: Buy now
-  buttonUrl: https://example.com/
+  title: TEDxWarsaw 2015 Photos
+  subtitle: Available now
+  buttonText: Open the gallery
+  buttonUrl: https://www.flickr.com/photos/132714971@N07/albums/72157652124955401
 speakers:
   - speakerName: Hofesinka
     speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
@@ -70,40 +60,6 @@ speakers:
     speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
   - speakerName: Tomasz Kopyra
     speakerPhotoPath: events/the-little-things-2015/speakerPhotos/partner.png
-partnerLogos:
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-1.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-2.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-3.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-4.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-5.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-6.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-7.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-8.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-9.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-10.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-11.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-12.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-13.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-14.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-15.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-16.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-17.png
+partnerLogos: []
 ticketProviderLogo: images/uploads/evenea2.png
 eventPhotos: []
