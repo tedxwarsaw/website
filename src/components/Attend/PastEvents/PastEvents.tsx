@@ -3,7 +3,7 @@ import React from "react";
 export interface PastEventsProps {
   pastEventsSectionTitle: string;
   pastEventsItems: {
-    title: string;
+    count: number;
     sectionName: string;
     description: string;
   }[];
@@ -14,14 +14,12 @@ export const PastEvents = ({
   pastEventsItems,
 }: PastEventsProps) => (
   <div className="my-16">
-    <h2 className="mb-5 xl:mb-10 font-bold">
-      {pastEventsSectionTitle}
-    </h2>
+    <h2 className="mb-5 xl:mb-10 font-bold">{pastEventsSectionTitle}</h2>
     <div className="inner-grid">
       {pastEventsItems.map((pastEvent, index) => (
-        <div className="my-5 xl:my-0" key={pastEvent.title + index}>
+        <div className="my-5 xl:my-0" key={index}>
           <span className="text-3xl md:text-4xl text-customRed font-bold">
-            {pastEvent.title}
+            x{pastEvent.count}
           </span>
           <p className="my-5 font-bold">{pastEvent.sectionName}</p>
           <p>{pastEvent.description}</p>

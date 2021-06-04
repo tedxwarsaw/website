@@ -183,9 +183,10 @@ collections:
             widget: "list"
             fields:
               - {
-                  label: "Red title of section",
-                  name: "title",
-                  widget: "string",
+                  label: "Event type",
+                  name: "eventTypeKey",
+                  widget: "select",
+                  options: ["Main Event", "Salon", "Live"],
                 }
               - { label: "Section name", name: "sectionName", widget: "string" }
               - {

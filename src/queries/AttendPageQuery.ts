@@ -16,7 +16,7 @@ const pageQuery = `#graphql
       ctaButtonLink
       pastEventsSectionTitle
       pastEventsItems {
-        title
+        eventTypeKey
         sectionName
         description
       }
@@ -43,6 +43,20 @@ export const queryForProps = async (
   const joinSpeakers = await queryForJoinSpeakers(graphql);
   const { events, categories } = await queryForAllEvents(graphql);
 
+  const categoryCount = {};
+  for (const { category } of events) {
+    if (category in categoryCount) {
+      categoryCount[category] += 1;
+    } else {
+      categoryCount[category] = 0;
+    }
+  }
+
+  const pastEventsItems = pagesYaml.pastEventsItems.map((item) => ({
+    ...item,
+    count: categoryCount[item.eventTypeKey] ?? 0,
+  }));
+
   return {
     ...pagesYaml,
     ...newsletter,
@@ -50,5 +64,6 @@ export const queryForProps = async (
     featuredEvent,
     events,
     categories,
+    pastEventsItems,
   };
 };
