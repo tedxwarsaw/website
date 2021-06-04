@@ -11,7 +11,7 @@ pastEventsItems:
     sectionName: TEDx Salon
     description: Salon events are often small weekly or monthly events that keeps a TEDx community engaged between regular TEDx events. It’s a unique kind of gathering that TEDx organizers hold which allows the conversation to continue, in person.
   - eventTypeKey: "Main Event"
-    sectionName: TEDx Conference
+    sectionName: TEDx Main Event
     description: In the spirit of TED’s mission, “ideas worth spreading,” the TEDx program helps communities, organizations and individuals produce TED-style events at the local level. TEDx events are planned and coordinated independently, on a community-by-community basis, under a free license from TED.
   - eventTypeKey: "Live"
     sectionName: TEDx Live
