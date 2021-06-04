@@ -795,7 +795,7 @@ collections:
       - label: "Event category"
         name: "category"
         widget: "select"
-        options: ["Live", "Conference", "Salon", "Circle"]
+        options: ["Live", "Main Event", "Salon", "Circle"]
       - name: city
         label: City
         widget: string

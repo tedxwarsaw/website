@@ -1,7 +1,7 @@
 collectionId: event
 slug: poke-the-comfort-zone-2013
 displayName: TEDxWarsaw 2013 Poke The Comfort Zone
-category: Salon
+category: "Main Event"
 city: Warsaw
 date: 21/03/2013
 hook: Get ready to be slapped out of complacency!
@@ -30,7 +30,7 @@ callToAction:
   buttonText: Open the gallery
   buttonUrl: https://www.flickr.com/photos/tedxwarsaw/page2
 speakers:
-  - speakerName: Unknown
+  - speakerName: Coming soon
     speakerPhotoPath: events/crunchtime-2017/speakerPhotos/partner.png
 partnerLogos: []
 ticketProviderLogo: images/uploads/evenea2.png
