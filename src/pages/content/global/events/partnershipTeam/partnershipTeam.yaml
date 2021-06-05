@@ -1,17 +1,17 @@
 collectionId: eventPartnershipTeam
 members:
   - areaOfResponsibility: Sponsorship
-    name: Marguerite Carson
-    phoneNumber: (959) 303-9191
-    email: example@tedxwarsaw.org
-    photo: global/events/partnershipTeam/photos/avatar.jpg
-  - areaOfResponsibility: Partnership
-    name: Scott Sparks
-    phoneNumber: (825) 414-3736
-    email: example@tedxwarsaw.org
-    photo: global/events/partnershipTeam/photos/avatar.jpg
-  - areaOfResponsibility: Media partnership
-    name: Jose Thornton
-    phoneNumber: (276) 597-2919
-    email: example@tedxwarsaw.org
-    photo: global/events/partnershipTeam/photos/avatar.jpg
+    name: Martyna Hrankowska
+    phoneNumber: ""
+    email: martyna@tedxwarsaw.org
+    photo: global/events/partnershipTeam/photos/martyna.jpg
+  - areaOfResponsibility: Sponsorship
+    name: Justyna Dajnowska
+    phoneNumber: ""
+    email: justyna@tedxwarsaw.org
+    photo: global/events/partnershipTeam/photos/justyna.jpg
+  - areaOfResponsibility: Media Partnership
+    name: Edyta Kowal
+    phoneNumber: ""
+    email: edyta@tedxwarsaw.org
+    photo: global/events/partnershipTeam/photos/edyta.jpg

@@ -51,13 +51,13 @@ partnersContactContent: We are a tight-knit team of passionate people who want
 templateKey: PartnersPage
 slug: /partners
 partnersContacts:
-  - image: images/uploads/woman.jpg
+  - image: global/events/partnershipTeam/photos/martyna.jpg
     name: Martyna Hrankowska
-    title: partnership
-    email: martyna@tedxwarsaw.com
-    phone: +49 999 999 999
-  - image: images/uploads/woman.jpg
-    name: Martyna Hrankowska
-    title: partnership
-    email: martyna@tedxwarsaw.com
-    phone: +49 999 999 999
+    title: Sponsorship
+    email: martyna@tedxwarsaw.org
+    phone: ""
+  - image: global/events/partnershipTeam/photos/edyta.jpg
+    name: Edyta Kowal
+    title: Media Partnership
+    email: edyta@tedxwarsaw.org
+    phone: ""
