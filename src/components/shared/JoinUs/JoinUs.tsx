@@ -2,7 +2,7 @@ import React from "react";
 import Img, { FluidObject } from "gatsby-image";
 import "./JoinUs.styled.css";
 import { Button, ButtonVariant } from "@/components/shared/Button";
-import { FaArrowRight } from "react-icons/fa";
+import { Link } from "gatsby";
 import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";
 export interface JoinUsProps {
@@ -38,33 +38,31 @@ export const JoinUs = ({
         <div className="pr-20 py-10">
           <h2 className="font-medium"><ReactMarkdown rehypePlugins={[rehypeRaw]}>{joinUsTitle}</ReactMarkdown></h2>
           <p className="my-5">{joinUsSubtitle}</p>
-          {joinUsVolunteerText && <a
-            href={joinUsVolunteerLink}
-            target="_blank"
-            rel="noopener noreferrer"
+          {joinUsVolunteerText && <Link
+            to={joinUsVolunteerLink}
           >
             <Button className="my-7 hover:bg-white hover:text-customRed" variant={ButtonVariant.filledRedWithBG}>
               {joinUsVolunteerText}
             </Button>
-          </a>}
-          <a
-            href={joinUsGetToKnowOurTeamLink}
+          </Link>}
+          <Link
+            to={joinUsGetToKnowOurTeamLink}
             className="text-customRed flex hover:opacity-50 items-center mb-5"
             style={{ width: "fit-content" }}
           >
             <span className="my-auto flex items-center">
               {joinUsGetToKnowOurTeamText}
             </span>
-          </a>
-          {joinUsBecomeSpeakerLink && <a
-            href={joinUsBecomeSpeakerLink}
+          </Link>
+          {joinUsBecomeSpeakerLink && <Link
+            to={joinUsBecomeSpeakerLink}
             className="text-customRed flex hover:opacity-50 items-center"
             style={{ width: "fit-content" }}
           >
             <span className="my-auto flex items-center">
               {joinUsBecomeSpeakerText}
             </span>
-          </a>}
+          </Link>}
         </div>
       </div>
       <div className="join-us-section-right">

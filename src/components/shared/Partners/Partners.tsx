@@ -1,7 +1,7 @@
 import React from "react";
 import Img, { FixedObject } from "gatsby-image";
 import { Button, ButtonVariant } from "@/components/shared/Button";
-import { FaArrowRight } from "react-icons/fa";
+import { Link } from "gatsby";
 import "./Partners.styled.css";
 
 export interface PartnersProps {
@@ -32,24 +32,22 @@ export const Partners = ({
       </h2>
       {showLinks && (
         <div className="flex items-center hidden xl:flex">
-          <a
-            href={getToKnowOurPartnersLink}
+          <Link
+            to={getToKnowOurPartnersLink}
             className="text-customRed flex hover:opacity-50 items-center"
             style={{ width: "fit-content" }}
           >
             <span className="my-auto flex items-center">
               {getToKnowOurPartnersText}
             </span>
-          </a>
-          <a
-            href={joinOurPartnersLink}
-            target="_blank"
-            rel="noopener noreferrer"
+          </Link>
+          <Link
+            to={joinOurPartnersLink}
           >
             <Button className="ml-5 hover:bg-white hover:text-customRed" variant={ButtonVariant.filledRedWithBG}>
               {joinOurPartnersText}
             </Button>
-          </a>
+          </Link>
         </div>
       )}
     </div>
@@ -66,18 +64,18 @@ export const Partners = ({
     </div>
     {showLinks && (
       <div className="flex flex-col md:flex-row  md:items-center  items-start xl:hidden">
-        <a href={joinOurPartnersLink} target="_blank" rel="noopener noreferrer">
+        <Link to={joinOurPartnersLink}>
           <Button className="my-5 hover:bg-white hover:text-customRed">{joinOurPartnersText}</Button>
-        </a>
-        <a
-          href={getToKnowOurPartnersLink}
+        </Link>
+        <Link
+          to={getToKnowOurPartnersLink}
           className="text-customRed flex hover:opacity-50 items-center"
           style={{ width: "fit-content" }}
         >
           <span className="my-2 md:my-0 md:ml-5 flex items-center">
             {getToKnowOurPartnersText}
           </span>
-        </a>
+        </Link>
       </div>
     )}
   </div>

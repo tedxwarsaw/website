@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, ButtonVariant } from "@/components/shared/Button";
 import parse from "html-react-parser";
+import { Link } from "gatsby";
 
 export interface YoutubeBannerProps {
   youtubeBannerHeading: string;
@@ -18,16 +19,14 @@ export const YoutubeBanner = ({
       <h2 className="font-medium mb-6 mx-auto md:w-96">
         {parse(youtubeBannerHeading)}
       </h2>
-      <a
-        href={youtubeBannerLinkUrl}
-        className="mb-5 md:mb-0"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Button variant={ButtonVariant.filledGrey} className={"hover:bg-white hover:text-customRed"}>
+      <Link to={youtubeBannerLinkUrl} className="mb-5 md:mb-0">
+        <Button
+          variant={ButtonVariant.filledGrey}
+          className={"hover:bg-white hover:text-customRed"}
+        >
           {youtubeBannerLinkText}
         </Button>
-      </a>
+      </Link>
     </div>
   );
 };

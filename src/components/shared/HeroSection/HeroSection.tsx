@@ -2,10 +2,8 @@ import React from "react";
 import { HeroSectionProps } from "./HeroSection.types";
 import { BackgroundImage } from "@/components/shared/BackgroundImage";
 import { Button } from "@/components/shared/Button";
-import { FaArrowRight } from "react-icons/fa";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { Link } from "gatsby";
-import parse from "html-react-parser";
 import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";
 
@@ -56,16 +54,11 @@ export const HeroSection = ({
 
             <div className="flex flex-col md:flex-row md:align-center md:space-x-5">
               {heroButtonText && (heroButtonShow ?? true) && (
-                <a
-                  href={heroButtonLink}
-                  className="mb-5 md:mb-0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <Link to={heroButtonLink} className="mb-5 md:mb-0">
                   <Button className={"hover:bg-white hover:text-customRed"}>
                     {heroButtonText}
                   </Button>
-                </a>
+                </Link>
               )}
               {heroLinks?.map((heroLink) => (
                 <a

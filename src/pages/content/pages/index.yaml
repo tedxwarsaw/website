@@ -3,7 +3,7 @@ templateKey: IndexPage
 heroTitle: Ideas worth spreading
 heroSubtitle: TEDxWarsaw is an annual event where dreamers,founders, activists, engineers, artists and other amazing speakers meet to share their ideas worth spreading.
 heroButtonText: Get Involved
-heroButtonLink: /testing
+heroButtonLink: /volunteers
 heroLinks:
   - displayName: About
     path: /about
@@ -22,22 +22,22 @@ ourStoryItems:
     text: marriage proposal on stage
 youtubeBannerHeading: We have <b>2mln+</b> views on YouTube
 youtubeBannerLinkText: Watch all talks
-youtubeBannerLinkUrl: www.youtube.com
+youtubeBannerLinkUrl: /watch
 joinUsTitle: "Join **TEDx Warsaw**."
 joinUsSubtitle: "Become our volunteer and enter the amazing world of TEDx"
 joinUsImagePath: "images/uploads/joinus.png"
 joinUsImageDesktopPath: "images/uploads/joinus.png"
 joinUsVolunteerText: "Get involved as a volunteer"
-joinUsVolunteerLink: "/about"
+joinUsVolunteerLink: "/volunteers"
 joinUsGetToKnowOurTeamText: "Get to know our team ->"
 joinUsGetToKnowOurTeamLink: "/about"
-joinUsBecomeSpeakerText: "Become TEDx Speaker ->"
-joinUsBecomeSpeakerLink: "/about"
+joinUsBecomeSpeakerText: "Become a TEDx Speaker ->"
+joinUsBecomeSpeakerLink: "/speakers"
 partnerSectionTitle: "Our partners"
 getToKnowOurPartnersText: "Get to know our partners ->"
-getToKnowOurPartnersLink: "/join"
+getToKnowOurPartnersLink: "/partners"
 joinOurPartnersText: "Join our partners"
-joinOurPartnersLink: "/join"
+joinOurPartnersLink: "/partners"
 partnerLogos:
   - partnerName: Forbes Women
     partnerLogoPath: events/polarization-2021/partnerLogos/forbes_women.jpg
