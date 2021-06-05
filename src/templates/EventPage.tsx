@@ -119,7 +119,7 @@ export const EventPageTemplate = (props: Props) => {
             variant={BannerVariant.white}
             subtitle="Become our volunteer and enter the amazing world of TEDx"
             buttonText="Get involved as a volunteer"
-            buttonUrl="/"
+            buttonUrl="/volunteers"
             logo={props.ticketProviderLogo}
           />
         </>

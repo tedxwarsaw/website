@@ -41,7 +41,9 @@ export const EventHero = ({
               </div>
               {buttonShow && (
                 <a href={buttonLink} target="_blank" rel="noopener noreferrer">
-                  <Button className="px-20 shadow-2xl hover:bg-white hover:text-customRed">{buttonText}</Button>
+                  <Button className="px-20 shadow-2xl hover:bg-white hover:text-customRed">
+                    {buttonText}
+                  </Button>
                 </a>
               )}
             </div>

@@ -4,7 +4,7 @@ isHeroNewsletter: false
 isCurrentEvent: true
 ctaBannerText: Become our partner and enter the amazing world of TEDx
 ctaButtonText: Get involved as a partner
-ctaButtonLink: /link
+ctaButtonLink: /partners
 pastEventsSectionTitle: TEDxWarsaw Events (List Incomplete)
 pastEventsItems:
   - eventTypeKey: "Salon"
@@ -29,5 +29,5 @@ joinUsContent2: >-
   or suggest someone who could
 joinUsButton1: Get involved as a volunteer
 joinUsButton2: Get involved as a speaker
-joinUsButtonUrl1: /test
-joinUsButtonUrl2: /test
+joinUsButtonUrl1: /volunteers
+joinUsButtonUrl2: /speakers

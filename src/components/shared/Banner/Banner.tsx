@@ -1,6 +1,7 @@
 import { Button, ButtonVariant } from "@/components/shared/Button";
 import React from "react";
-import Img, {FixedObject} from "gatsby-image";
+import { FixedObject } from "gatsby-image";
+import { Link } from "gatsby";
 
 export enum BannerVariant {
   red = "red",
@@ -22,7 +23,6 @@ export const Banner = ({
   subtitle,
   buttonText,
   buttonUrl,
-  logo
 }: BannerProps) => {
   return <div className={`main-grid-full-span h-96 flex flex-row items-center justify-center ${
           variant === BannerVariant.white ? "bg-customLightGrey" : "bg-customRed"
@@ -37,7 +37,7 @@ export const Banner = ({
       )}
 
       <div className="h-2"/>
-      <a href={buttonUrl} target="_blank" rel="noopener noreferrer">
+      <Link to={buttonUrl}>
         <Button
             variant={
               !variant || variant === BannerVariant.red
@@ -48,7 +48,7 @@ export const Banner = ({
         >
           {buttonText}
         </Button>
-      </a>
+      </Link>
     </div>
   </div>
 };
