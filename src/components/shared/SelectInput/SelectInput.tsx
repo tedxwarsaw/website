@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { UseFormRegister } from "react-hook-form";
 import { BsChevronUp } from "react-icons/bs";
 import OutsideClickHandler from "react-outside-click-handler";
-import { FormData } from "@/components/shared/Newsletter/NewsletterForm";
 import "./SelectInput.styled.css";
 
 interface SelectInputProps {
@@ -16,7 +14,6 @@ interface SelectInputProps {
   selectedValue?: string;
   wideDropdown?: boolean;
   className?: string;
-  register?: UseFormRegister<FormData>;
   noBorder?: boolean;
 }
 
@@ -28,7 +25,6 @@ export const SelectInput = ({
   placeholder,
   wideDropdown,
   className,
-  register,
   noBorder,
 }: SelectInputProps) => {
   const [isSelectActive, setIsSelectActive] = useState(false);
@@ -61,7 +57,7 @@ export const SelectInput = ({
             } ${wideDropdown ? "wide-dropdown-select" : ""} `}
           >
             {options.map((option) => {
-              const eventValue = register ? option.value : option.name;
+              const eventValue = option.name;
               return (
                 <div
                   className="option px-4 py-2 cursor-pointer"
@@ -85,23 +81,13 @@ export const SelectInput = ({
             className="selected-value cursor-pointer"
             onClick={() => setIsSelectActive((prev) => !prev)}
           >
-            {register ? (
-              <input
-                name={name}
-                placeholder={placeholder}
-                {...register(name)}
-                readOnly
-                className="outline-none cursor-pointer bg-transparent"
-              />
-            ) : (
-              <input
-                name={name}
-                placeholder={placeholder}
-                value={selectedValue}
-                readOnly
-                className="outline-none cursor-pointer bg-transparent"
-              />
-            )}
+            <input
+              name={name}
+              placeholder={placeholder}
+              value={selectedValue}
+              readOnly
+              className="outline-none cursor-pointer bg-transparent"
+            />
 
             <BsChevronUp className="stroke-1" />
           </div>
