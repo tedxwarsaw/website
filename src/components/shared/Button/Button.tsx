@@ -9,12 +9,13 @@ export enum ButtonVariant {
 
 const classes = {};
 classes[ButtonVariant.filledRed] =
-  "text-white bg-customRed hover:bg-white hover:text-customRed";
-classes[ButtonVariant.filledRedWithBG] = "text-white bg-customRed";
+  "border border-red-500 text-white bg-customRed hover:bg-white hover:text-customRed";
+classes[ButtonVariant.filledRedWithBG] =
+  "border border-red-500 text-white bg-customRed";
 classes[ButtonVariant.outlineWhite] =
-  "border border-white text-white bg-transparent hover:bg-white hover:text-red-500";
+  "border border-red-500 text-white bg-transparent hover:bg-white hover:text-red-500";
 classes[ButtonVariant.filledGrey] =
-  "text-white bg-customDarkGrey hover:bg-white hover:text-customDarkGrey";
+  "text-white bg-customDarkGrey hover:bg-white hover:border hover:border-red-500 hover:text-customDarkGrey";
 
 const getButtonClasses = (variant?: ButtonVariant): string => {
   if (variant == null || !classes.hasOwnProperty(variant)) {
@@ -33,8 +34,10 @@ interface Props {
 
 export const Button = (props: Props): JSX.Element => (
   <button
-    className={`p-2 px-6 rounded ${getButtonClasses(props.variant)} ${props.className != null ? props.className : ""}`}
-    style={{'transition': '.15s'}}
+    className={`p-2 px-6 rounded ${getButtonClasses(props.variant)} ${
+      props.className != null ? props.className : ""
+    }`}
+    style={{ transition: ".15s" }}
     type={props.type}
   >
     {props.children}
