@@ -75,7 +75,7 @@ export const Partners = ({
           style={{ width: "fit-content" }}
         >
           <span className="my-2 md:my-0 md:ml-5 flex items-center">
-            {getToKnowOurPartnersText + ' ->'}
+            {getToKnowOurPartnersText}
           </span>
         </a>
       </div>
