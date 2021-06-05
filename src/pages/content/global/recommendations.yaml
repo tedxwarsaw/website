@@ -5,9 +5,9 @@ recommendations:
     - eventSlug: "polarization-2021"
       order: 2
   talks:
-    - talkSlug: "baby-do-garow"
+    - talkSlug: "hacking-language-learning"
       order: 1
-    - talkSlug: "open-your-eyes"
+    - talkSlug: "o-lataniu-rzeczywistosci"
       order: 3
     - talkSlug: "slowly-down-the-vistula"
       order: 4

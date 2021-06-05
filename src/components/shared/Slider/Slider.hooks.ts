@@ -11,6 +11,7 @@ export const useSlider = (
   const [sliderRef, slider] = useKeenSlider({
     slidesPerView: slidesPerView.mobile,
     spacing: spacing.mobile,
+    controls: false,
     breakpoints: {
       "(min-width: 768px) and (max-width: 1280px)": {
         slidesPerView: slidesPerView.tablet,
