@@ -9,11 +9,11 @@ export enum ButtonVariant {
 
 const classes = {};
 classes[ButtonVariant.filledRed] =
-  "border border-red-500 text-white bg-customRed hover:bg-white hover:text-customRed";
+  "hover:border hover:border-red-500 text-white bg-customRed hover:bg-white hover:text-customRed";
 classes[ButtonVariant.filledRedWithBG] =
-  "border border-red-500 text-white bg-customRed";
+  "hover:border hover:border-red-500 text-white bg-customRed";
 classes[ButtonVariant.outlineWhite] =
-  "border border-red-500 text-white bg-transparent hover:bg-white hover:text-red-500";
+  "hover:border hover:border-red-500 text-white border border-white hover:bg-white hover:text-red-500";
 classes[ButtonVariant.filledGrey] =
   "text-white bg-customDarkGrey hover:bg-white hover:border hover:border-red-500 hover:text-customDarkGrey";
 

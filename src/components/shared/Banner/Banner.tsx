@@ -40,7 +40,7 @@ export const Banner = ({
       <Link to={buttonUrl}>
         <Button
             variant={
-              !variant || variant === BannerVariant.red
+              variant == null || variant === BannerVariant.red
                   ? ButtonVariant.outlineWhite
                   : ButtonVariant.filledRedWithBG
             }

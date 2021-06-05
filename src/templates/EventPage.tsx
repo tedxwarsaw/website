@@ -99,6 +99,7 @@ export const EventPageTemplate = (props: Props) => {
       )}
       <Banner
         title={props.callToAction.title}
+        variant={BannerVariant.red}
         subtitle={props.callToAction.subtitle}
         buttonText={props.callToAction.buttonText}
         buttonUrl={props.callToAction.buttonUrl}
