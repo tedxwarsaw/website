@@ -69,6 +69,7 @@ export const queryForProps = async (
         path: associate.profileImageUrl,
         height: 150,
         width: 150,
+        grayscale: true,
       });
       return {
         ...associate,
@@ -83,6 +84,7 @@ export const queryForProps = async (
         path: teamMember.profileImageUrl,
         quality: 100,
         sizes: "(max:-width: 768px)",
+        grayscale: true,
       });
 
       const profileImageDesktop = await getFluidImage({
@@ -90,6 +92,7 @@ export const queryForProps = async (
         path: teamMember.profileImageUrl,
         quality: 100,
         sizes: "(max:-width: 2000px)",
+        grayscale: true,
       });
 
       return {

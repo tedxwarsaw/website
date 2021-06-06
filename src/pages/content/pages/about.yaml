@@ -37,7 +37,8 @@ aboutTedSpeakers:
   - name: Daniel Kahneman
 aboutTedEventsTitle: "## TED **events**"
 aboutTedEvents:
-  - content: The annual TED Conference takes place each spring in Vancouver, British
+  - content:
+      The annual TED Conference takes place each spring in Vancouver, British
       Columbia.
   - content: TED has established the annual **TED Prize**, where exceptional
       individuals with a wish to change the world get help translating their
@@ -106,7 +107,13 @@ teamMembersSlider:
 
 
       I am passionate about helping people communicate and be more understanding towards each other’s needs.
-    profileImageUrl: pages/photos/iryna.png
+    profileImageUrl: pages/photos/heads/iryna_oleksiuk.png
+  - name: Elena Pawęta
+    title: License Holder
+    description: >-
+      Dr Elena Pawęta is an executive communication coach, speaker, TEDx organizer and university professor. She conducts courses, trainings and workshops on effective communication and business presentations internationally, in English, Polish and Russian languages. Her clients are among others: KPMG, PwC, Bosch, Deloitte, Bridgestone, GE Healthcare, Nestle, Santander Bank, Goldman Sachs, Astra Zeneca. As an assistant professor at SGH Warsaw School of Economics, she is specializing in international business, startup development and entrepreneurship.
+      Passionate about education and people development, Dr Elena is a District  Director in Toastmasters International District 108, serving 5 countries in Europe – Poland, Estonia, Latvia, Lithuania and Estonia. She has been organizing  TEDx and TEDxWomen conferences in Poland  for the last 7  years.
+    profileImageUrl: pages/photos/heads/elena_paweta.jpg
   - name: Magdalena Fiałkowska
     title: Speakers Lead
     description: >-
@@ -136,7 +143,7 @@ teamMembersSlider:
       SztukaWystapien.pl. After hours, I’m a big fan of tea, lindy hop, natural ice-cream and
 
       cinema.
-    profileImageUrl: pages/photos/magdalena.png
+    profileImageUrl: pages/photos/heads/magda_fialkowska.png
   - name: Edyta Kowal
     title: Marketing Lead
     description: >-
@@ -164,7 +171,7 @@ teamMembersSlider:
       initiative. After hours I co-drive an oldtimer, a blue MX5, and host a podcast called Szczypta.
 
       You can also listen to me at Facebook Talks which I have the pleasure to host.
-    profileImageUrl: pages/photos/edyta.png
+    profileImageUrl: pages/photos/heads/edyta_kowal.png
   - name: Martyna Hrankowska
     title: Partnership Lead
     description: >-
@@ -184,8 +191,8 @@ teamMembersSlider:
       develop my interest in new technologies. Privately I love dogs, short films, books and good
 
       magazines, but most of all – travelling.
-    profileImageUrl: pages/photos/martyna.png
-  - name: Michał Pienczak
+    profileImageUrl: pages/photos/heads/martyna_hrankowska.png
+  - name: Michał Bytniewski
     title: Finance Lead
     description: >-
       An economist by education, and after hours a passionate books and LEGO
@@ -227,7 +234,7 @@ teamMembersSlider:
       His kids are so cool he has three – more can't fit in the Defender, but thankfully there’s
 
       always room for Floki, their extremely loud Bavarian Mountain Hound.
-    profileImageUrl: pages/photos/zawada.png
+    profileImageUrl: pages/photos/heads/marek_zawada.jpg
   - name: Hugo Dutka
     title: WWW Lead
     description: >-
@@ -241,7 +248,7 @@ teamMembersSlider:
       programmer. He likes indie pop, and spends his after-hours reading fantasy books and
 
       technology blogs.
-    profileImageUrl: pages/photos/hugo.png
+    profileImageUrl: pages/photos/heads/hugo_dutka.png
   - name: Paweł Konopka
     title: Legal Lead
     description: >-
@@ -261,69 +268,81 @@ teamMembersSlider:
 associates:
   - name: Monika Kaczmarska
     title: " "
-    profileImageUrl: pages/photos/woman.jpg
-    description: todo
-  - name: Maja Wieczorkowska
-    title: " "
-    profileImageUrl: pages/photos/woman.jpg
+    profileImageUrl: pages/photos/associates/monika_kaczmarska.jpg
     description: todo
   - name: Aldona Padula
     title: " "
-    profileImageUrl: pages/photos/woman.jpg
+    profileImageUrl: pages/photos/associates/aldona_padula.jpg
     description: todo
   - name: Milena Dzialuk
     title: " "
-    profileImageUrl: pages/photos/woman.jpg
+    profileImageUrl: pages/photos/associates/milena_dzialuk.jpg
     description: todo
   - name: Marta Witkowska
     title: " "
-    profileImageUrl: pages/photos/woman.jpg
+    profileImageUrl: pages/photos/associates/marta_witkowska.jpg
     description: todo
   - name: Mateusz Delekta
     title: " "
-    profileImageUrl: pages/photos/woman.jpg
-    description: todo
-  - name: Ievgen Vietrov
-    title: " "
-    profileImageUrl: pages/photos/woman.jpg
+    profileImageUrl: pages/photos/associates/mateusz_delekta.jpg
     description: todo
   - name: Tomasz Wojewoda
     title: " "
-    profileImageUrl: pages/photos/woman.jpg
+    profileImageUrl: pages/photos/associates/tomasz_wojewoda.jpg
     description: todo
   - name: Witold Zielonka
     title: " "
-    profileImageUrl: pages/photos/woman.jpg
+    profileImageUrl: pages/photos/associates/witold_zielonka.jpg
     description: todo
-  - name: Gosia Zaradkiewicz
+  - name: Małgorzata Zaradkiewicz
     title: " "
     description: todo
-    profileImageUrl: pages/photos/partner.png
+    profileImageUrl: pages/photos/associates/małgorzata_zaradkiewicz.jpg
   - description: todo
     title: " "
-    profileImageUrl: pages/photos/partner.png
+    profileImageUrl: pages/photos/associates/robin_baker.jpg
     name: Robin Baker
   - title: " "
     description: todo
-    profileImageUrl: pages/photos/partner.png
+    profileImageUrl: pages/photos/associates/monika_dziubich.jpg
     name: Monika Dziubich
   - title: " "
     description: todo
-    profileImageUrl: pages/photos/partner.png
+    profileImageUrl: pages/photos/associates/magda_bytniewska.jpg
     name: Magdalena Bytniewska
   - title: " "
     description: todo
-    profileImageUrl: pages/photos/partner.png
+    profileImageUrl: pages/photos/associates/katarzyna_moskal.jpg
     name: Katarzyna Moskal
   - title: " "
     description: todo
-    profileImageUrl: pages/photos/partner.png
+    profileImageUrl: pages/photos/associates/cezary_skura.jpg
     name: Cezary Skura
   - title: " "
     description: todo
-    profileImageUrl: pages/photos/partner.png
+    profileImageUrl: pages/photos/associates/ewa_czech.jpg
     name: Ewa Czech
   - title: " "
     description: todo
-    profileImageUrl: pages/photos/partner.png
+    profileImageUrl: pages/photos/associates/justyna_dajnowska.jpg
     name: Justyna Dajnowska
+  - title: " "
+    description: todo
+    profileImageUrl: pages/photos/associates/asia_ziajor.jpg
+    name: Asia Ziajor
+  - title: " "
+    description: todo
+    profileImageUrl: pages/photos/associates/monika_kubacka.jpg
+    name: Monika Kubacka
+  - title: " "
+    description: todo
+    profileImageUrl: pages/photos/associates/monika_owczarek.jpg
+    name: Monika Owczarek
+  - name: Ievgen Vietrov
+    title: " "
+    profileImageUrl: pages/photos/associates/ievgen_vietrov.jpg
+    description: todo
+  - name: Maja Wieczorkowska
+    title: " "
+    profileImageUrl: pages/photos/partner.png
+    description: todo
