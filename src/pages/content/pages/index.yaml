@@ -25,8 +25,8 @@ youtubeBannerLinkText: Watch all talks
 youtubeBannerLinkUrl: /watch
 joinUsTitle: "Join **TEDx Warsaw**."
 joinUsSubtitle: "Become our volunteer and enter the amazing world of TEDx"
-joinUsImagePath: "images/uploads/joinus.png"
-joinUsImageDesktopPath: "images/uploads/joinus.png"
+joinUsImagePath: "images/uploads/join_tedxwarsaw.jpg"
+joinUsImageDesktopPath: "images/uploads/join_tedxwarsaw.jpg"
 joinUsVolunteerText: "Get involved as a volunteer"
 joinUsVolunteerLink: "/volunteers"
 joinUsGetToKnowOurTeamText: "Get to know our team ->"
