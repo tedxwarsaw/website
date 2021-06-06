@@ -5,7 +5,7 @@ import "./NewsletterForm.styled.css";
 export const NewsletterForm = () => {
   return (
     <form
-      action="https://example.com/"
+      action="https://tedxwarsaw.us2.list-manage.com/subscribe/post?u=db67c5c3bfd4a6e582b34ae78&amp;id=3c92076e33"
       method="post"
       className="bg-white md:flex justify-between items-center xl:px-8 rounded-md font-light col-start-2 col-end-3 md:col-end-5 xl:col-end-7 row-start-2 flex-col px-4 py-1 xl:flex xl:flex-row shadow-md"
     >
@@ -30,7 +30,7 @@ export const NewsletterForm = () => {
         >
           <input
             type="text"
-            name="b_63e06051fe09edd13b84518dc_d7783800e2"
+            name="b_db67c5c3bfd4a6e582b34ae78_3c92076e33"
             tabIndex={-1}
             value=""
           />
