@@ -26,6 +26,7 @@ const eventQuery = `#graphql
     event: eventsYaml(slug: {eq: $eventSlug}) {
       slug
       displayName
+      eventCategory: category
       description
       cover {
         image {
@@ -149,6 +150,7 @@ export const queryForRecommendations = async (
             item: {
               ...talk,
               eventName: loadedEvents[talk.eventSlug].displayName,
+              eventCategory: loadedEvents[talk.eventSlug].eventCategory,
               cover,
               coverDesktop,
               duration,
@@ -165,6 +167,7 @@ export const queryForRecommendations = async (
             item: {
               ...talk,
               eventName: event.displayName,
+              eventCategory: event.eventCategory,
               cover,
               coverDesktop,
               duration,

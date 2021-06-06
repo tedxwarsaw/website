@@ -33,6 +33,7 @@ export const Recommendations = ({
                 cover={item.cover}
                 coverDesktop={item.coverDesktop}
                 displayName={item.displayName}
+                eventCategory={item.eventCategory}
                 date={item.date}
               />
             )}
