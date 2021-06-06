@@ -35,9 +35,21 @@ module.exports = {
         static: path.join(__dirname, "static"),
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "TEDxWarsaw",
+        short_name: "TEDxWarsaw",
+        start_url: "/",
+        background_color: "#e62b1e",
+        theme_color: "#e62b1e",
+        icon: "src/pages/content/favicon.png",
+      },
+    },
     "gatsby-plugin-postcss",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-ts-config",
+    "gatsby-plugin-react-helmet",
   ],
 };
