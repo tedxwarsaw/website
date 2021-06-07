@@ -20,10 +20,14 @@ export const HowDoesItWork = (props: HowDoesItWorkProps) => (
         {props.howDoesItWorkTitle}
       </ReactMarkdown>
     </div>
-    <div className="col-start-2 col-end-3 mt-8 md:col-start-2 md:col-end-5 md:mt-8 xl:col-start-4 xl:col-end-7 xl:mt-0 font-normal steps pl-6">
-      <ProgressLine />
-      {props.howDoesItWorkSteps.map((step: Step) => (
-        <div className={"step"}>{step.name}</div>
+    <div className="col-start-2 col-end-3 mt-8 md:col-start-2 md:col-end-5 md:mt-8 xl:col-start-4 xl:col-end-7 xl:mt-0 font-normal steps">
+      {/*<ProgressLine />*/}
+      {props.howDoesItWorkSteps.map((step: Step, index: number) => (
+          <div className={"step"}>
+              {index == 0 && <span className={"dot-element"}/>}
+              {index == props.howDoesItWorkSteps.length - 1 && <span className={"dot-element-two"}/>}
+              {step.name}
+          </div>
       ))}
     </div>
   </div>
