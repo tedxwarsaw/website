@@ -3,6 +3,7 @@ import { RecommendedTalk } from "@/components/Watch/Watch.types";
 import { RecommendationsSlider } from "@/components/shared/Recommendations/RecommendationsSlider";
 import { CardTalk } from "@/components/shared/Card";
 import "../../shared/Recommendations/Recommendations.styled.css";
+import {Lines} from "../../Lines/Lines";
 
 export interface RelatedTalksProps {
   relatedTalks: RecommendedTalk[];
@@ -13,10 +14,11 @@ export const RelatedTalks = ({
   relatedTalks,
   eventName,
 }: RelatedTalksProps) => (
-  <>
+  <div className={"main-grid-full-span relative"}>
+    <Lines onlyHorizontal={true} wider={true}/>
     {relatedTalks && relatedTalks.length > 0 && (
       <div
-        className="main-grid-full-span recommendations-container mb-10"
+        className="main-grid-full-span recommendations-container pb-10"
         style={{ maxWidth: "100vw" }}
       >
         <h2>More from</h2>
@@ -39,5 +41,5 @@ export const RelatedTalks = ({
         </RecommendationsSlider>
       </div>
     )}
-  </>
+  </div>
 );
