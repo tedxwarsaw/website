@@ -2,7 +2,7 @@ import React from "react";
 import Img, { FluidObject } from "gatsby-image";
 import "../Card.styled.css";
 import { Link } from "gatsby";
-import {Button, ButtonVariant} from "../../Button";
+import { Button, ButtonVariant } from "../../Button";
 
 interface CardTalkProps {
   slug: string;
@@ -38,13 +38,18 @@ export const CardTalk = ({
           fluid={coverDesktop}
           alt="Slider item image"
         />
-        <Button variant={ButtonVariant.filledRedWithBG} className={"hoverButton hover:bg-white hover:text-customRed"}>View Talk</Button>
+        <Button
+          variant={ButtonVariant.filledRedWithBG}
+          className={"hoverButton hover:bg-white hover:text-customRed"}
+        >
+          View Talk
+        </Button>
         <span className="absolute right-2 bottom-2 bg-customDarkGrey text-white font-light text-xs px-2">
           {duration}
         </span>
       </div>
       <span
-        className={`absolute left-0 top-0 bg-customDarkGrey text-white md:py-1 text-sm px-3 ${
+        className={`absolute left-0 top-0 bg-customDarkGrey text-white md:py-1 text-sm px-3 -left-2 ${
           noBadge ? "hidden" : ""
         }`}
       >
@@ -57,7 +62,7 @@ export const CardTalk = ({
         </div>
       </div>
       <p className="pb-1 mt-auto">{eventName}</p>
-      <div className={"red-border"}/>
+      <div className={"red-border"} />
     </div>
   </Link>
 );

@@ -4,6 +4,7 @@
 
 .slider-wrapper-recommendations .keen-slider__slide {
   overflow: visible !important;
+  padding-left: 10px;
 }
 
 .slider-wrapper-recommendations {

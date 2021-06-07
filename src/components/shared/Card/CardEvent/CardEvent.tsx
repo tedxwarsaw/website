@@ -43,7 +43,7 @@ export const CardEvent = ({
         </Button>
       </div>
     </Link>
-    <span className="absolute left-0 top-0  text-white text-sm px-3 bg-customRed md:py-1">
+    <span className="absolute -left-2 top-0  text-white text-sm px-3 bg-customRed md:py-1">
       <Link to={`/event/${slug}`}>UPCOMING</Link>
     </span>
 
@@ -79,6 +79,6 @@ export const CardEvent = ({
         <span className="my-auto flex items-center">Learn more {"->"}</span>
       </Link>
     </div>
-    <div className={"red-border"}/>
+    <div className={"red-border"} />
   </div>
 );
