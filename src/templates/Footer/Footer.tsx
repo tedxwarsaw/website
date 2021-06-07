@@ -56,7 +56,7 @@ export const FooterTemplate = (props: Props) => (
                 to={`/event/${props.featuredEvent.slug}`}
                 className="text-red-500 font-bold hover:opacity-50"
               >
-                Join {'->'}
+                Join {"->"}
               </Link>
             </div>
           </Column>
@@ -67,7 +67,7 @@ export const FooterTemplate = (props: Props) => (
                 href="#newsletter"
                 className="text-red-500 font-bold hover:opacity-50"
               >
-                Join {'->'}
+                Join {"->"}
               </a>
             </div>
           </Column>
@@ -129,6 +129,9 @@ export const FooterTemplate = (props: Props) => (
             {link.displayName}
           </Link>
         ))}
+      </div>
+      <div className="col-span-full pt-10 font-light text-gray-400 text-xs">
+        This independent TEDx event is operated under license from TED.
       </div>
     </div>
   </footer>

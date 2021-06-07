@@ -118,7 +118,7 @@ export const EventPageTemplate = (props: Props) => {
         <>
           <BecomePartner partnershipTeam={props.partnershipTeam} />
           <Banner
-            title="Join TEDx Warsaw."
+            title="Join TEDxWarsaw."
             variant={BannerVariant.white}
             subtitle="Become our volunteer and enter the amazing world of TEDx"
             buttonText="Get involved as a volunteer"

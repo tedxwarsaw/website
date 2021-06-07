@@ -28,9 +28,9 @@ export const CenterTextSection = (props : CenterTextSectionProps) => {
             </ReactMarkdown>
             {props.centerTextSectionButtonLink &&
                 <div className="col-start-3 col-end-6">
-                    <Link to={props.centerTextSectionButtonLink}>
+                    <a href={props.centerTextSectionButtonLink} target="_blank" rel="noopener noreferrer">
                         <Button children={<span>{props.centerTextSectionButtonText}</span>} className="mt-10 hover:bg-white hover:text-customRed"/>
-                    </Link>
+                    </a>
                     {props.centerTextSectionButtonLinkSecond &&
                     <Link to={props.centerTextSectionButtonLinkSecond} className="text-customRed font-bold hover:opacity-50 mt-5 ml-10">
                       <span className="my-auto">

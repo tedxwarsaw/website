@@ -70,7 +70,7 @@ AboutUsContent: >
 
 
 
-  Our main event - TEDxWarsaw Conference - is a series of short talks, ranging from approximately five to eighteen
+  Our main event - TEDxWarsaw - is a series of short talks, ranging from approximately five to eighteen
 
   minutes in length. In between speakers you will have the opportunity to enjoy performances, eat some eclectic food
 
@@ -89,6 +89,12 @@ aboutTedContent: TED is a nonprofit organization devoted to Ideas Worth
 AboutUsImageUrl: pages/photos/ted-x-warsaw-banner.png
 AboutUsImageUrlDesktop: pages/photos/ted-x-warsaw-banner.png
 teamMembersSlider:
+  - name: Elena Pawęta
+    title: License Holder
+    description: >-
+      Dr Elena Pawęta is an executive communication coach, speaker, TEDx organizer and university professor. She conducts courses, trainings and workshops on effective communication and business presentations internationally, in English, Polish and Russian languages. Her clients are among others: KPMG, PwC, Bosch, Deloitte, Bridgestone, GE Healthcare, Nestle, Santander Bank, Goldman Sachs, Astra Zeneca. As an assistant professor at SGH Warsaw School of Economics, she is specializing in international business, startup development and entrepreneurship.
+      Passionate about education and people development, Dr Elena is a District  Director in Toastmasters International District 108, serving 5 countries in Europe – Poland, Estonia, Latvia, Lithuania and Estonia. She has been organizing  TEDx and TEDxWomen conferences in Poland  for the last 7  years.
+    profileImageUrl: pages/photos/heads/elena_paweta.jpg
   - name: Iryna Oleksiuk
     title: Host
     description: >-
@@ -97,23 +103,11 @@ teamMembersSlider:
       to co-create a path forward.
 
 
-
       I have spent more than a decade working with leadership teams for corporations such as Procter and Gamble, Motorola and Heineken. I have designed and delivered learning experiences for college students as part of AIESEC Poland, the largest student organization in the world. Most recently, I coached seven clean energy startup founders prior to their investment pitches at InnoEnergy 2020.
-
-
-
-      I'm the core team leader of TEDxWarsaw and I’m proud to mention that in 2019, 500 professionals attended the sold-out event.
-
 
 
       I am passionate about helping people communicate and be more understanding towards each other’s needs.
     profileImageUrl: pages/photos/heads/iryna_oleksiuk.png
-  - name: Elena Pawęta
-    title: License Holder
-    description: >-
-      Dr Elena Pawęta is an executive communication coach, speaker, TEDx organizer and university professor. She conducts courses, trainings and workshops on effective communication and business presentations internationally, in English, Polish and Russian languages. Her clients are among others: KPMG, PwC, Bosch, Deloitte, Bridgestone, GE Healthcare, Nestle, Santander Bank, Goldman Sachs, Astra Zeneca. As an assistant professor at SGH Warsaw School of Economics, she is specializing in international business, startup development and entrepreneurship.
-      Passionate about education and people development, Dr Elena is a District  Director in Toastmasters International District 108, serving 5 countries in Europe – Poland, Estonia, Latvia, Lithuania and Estonia. She has been organizing  TEDx and TEDxWomen conferences in Poland  for the last 7  years.
-    profileImageUrl: pages/photos/heads/elena_paweta.jpg
   - name: Magdalena Fiałkowska
     title: Speakers Lead
     description: >-
@@ -213,7 +207,7 @@ teamMembersSlider:
       dealt with finances at AIESEC Poland. The people I look up to are Carl Sagan, Stefan
 
       Banach and Terry Pratchett.
-    profileImageUrl: pages/photos/partner.png
+    profileImageUrl: pages/photos/heads/michal_bytniewski.jpg
   - name: Marek Zawada
     title: Location Lead
     description: >-

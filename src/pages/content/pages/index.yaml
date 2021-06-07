@@ -1,7 +1,7 @@
 slug: /
 templateKey: IndexPage
 heroTitle: Ideas worth spreading
-heroSubtitle: TEDxWarsaw is an annual event where dreamers,founders, activists, engineers, artists and other amazing speakers meet to share their ideas worth spreading.
+heroSubtitle: TEDxWarsaw is an annual event where dreamers, founders, activists, engineers, artists and other amazing speakers meet to share their ideas worth spreading.
 heroButtonText: Get Involved
 heroButtonLink: /volunteers
 heroLinks:
@@ -23,7 +23,7 @@ ourStoryItems:
 youtubeBannerHeading: We have <b>2mln+</b> views on YouTube
 youtubeBannerLinkText: Watch all talks
 youtubeBannerLinkUrl: /watch
-joinUsTitle: "Join **TEDx Warsaw**."
+joinUsTitle: "Join **TEDxWarsaw**."
 joinUsSubtitle: "Become our volunteer and enter the amazing world of TEDx"
 joinUsImagePath: "images/uploads/join_tedxwarsaw.jpg"
 joinUsImageDesktopPath: "images/uploads/join_tedxwarsaw.jpg"

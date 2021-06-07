@@ -1,6 +1,6 @@
 slug: /watch
 templateKey: WatchPage
-headerTitle: "## **100+ talks** to stir your curiosity"
+headerTitle: "## **100+ TEDxWarsaw talks** to stir your curiosity"
 headerSubtitle: "Find just the right one"
 recommendedTalks:
     - talkSlug: "hacking-language-learning"
