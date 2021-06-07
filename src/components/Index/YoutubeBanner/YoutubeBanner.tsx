@@ -17,7 +17,7 @@ export const YoutubeBanner = ({
 }: YoutubeBannerProps) => {
   return (
       <div className={"relative main-grid-full-span"}>
-        <Lines/>
+        <Lines onlyHorizontal={true}/>
         <div className="my-16 text-center flex flex-col justify-center align-center">
           <h2 className="font-medium mb-6 mx-auto md:w-96">
             {parse(youtubeBannerHeading)}

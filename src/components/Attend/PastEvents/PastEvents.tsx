@@ -14,7 +14,7 @@ export const PastEvents = ({
   pastEventsSectionTitle,
   pastEventsItems,
 }: PastEventsProps) => (
-  <div className="my-16 relative">
+  <div className="py-16 relative">
     <Lines wider={true}/>
     <h2 className="mb-5 xl:mb-10 font-bold">
       {pastEventsSectionTitle}

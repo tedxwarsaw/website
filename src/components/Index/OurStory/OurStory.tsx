@@ -4,7 +4,7 @@ import {Lines} from "../../Lines/Lines";
 
 export const OurStory = ({ ourStoryTitle, ourStoryItems }: OurStoryProps) => (
   <div className="bg-customLightGrey main-grid-full-span py-10 relative">
-    <Lines/>
+    <Lines onlyHorizontal={true}/>
     <div className="main-grid">
       <div className="flex flex-wrap justify-center">
         <div className="px-8 py-4">{ourStoryTitle}</div>

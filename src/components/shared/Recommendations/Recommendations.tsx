@@ -40,7 +40,6 @@ export const Recommendations = ({
                     date={item.date}
                   />
                 )}
-                <div className={"red-border"}/>
               </div>
             ))}
           </RecommendationsSlider>
