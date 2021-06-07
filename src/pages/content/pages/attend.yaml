@@ -5,7 +5,7 @@ isCurrentEvent: true
 ctaBannerText: Become our partner and enter the amazing world of TEDx
 ctaButtonText: Get involved as a partner
 ctaButtonLink: /partners
-pastEventsSectionTitle: TEDxWarsaw Events (List Incomplete)
+pastEventsSectionTitle: TEDxWarsaw Events (Sorting through archives. More coming soon.)
 pastEventsItems:
   - eventTypeKey: "Salon"
     sectionName: TEDx Salon
