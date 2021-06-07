@@ -18,7 +18,5 @@ footerThirdColumn:
     - displayName: Partners
       path: /partners
 footerBottomLinks:
-  - displayName: Privacy Policy
-    path: /privacy-policy
-  - displayName: Cookie Policy
-    path: /cookie-policy
+  - displayName: Newsletter
+    path: "#newsletter"

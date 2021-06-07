@@ -3,7 +3,7 @@ templateKey: IndexPage
 heroTitle: Ideas worth spreading
 heroSubtitle: TEDxWarsaw is an annual event where dreamers,founders, activists, engineers, artists and other amazing speakers meet to share their ideas worth spreading.
 heroButtonText: Get Involved
-heroButtonLink: /testing
+heroButtonLink: /volunteers
 heroLinks:
   - displayName: About
     path: /about
@@ -22,58 +22,41 @@ ourStoryItems:
     text: marriage proposal on stage
 youtubeBannerHeading: We have <b>2mln+</b> views on YouTube
 youtubeBannerLinkText: Watch all talks
-youtubeBannerLinkUrl: www.youtube.com
+youtubeBannerLinkUrl: /watch
 joinUsTitle: "Join **TEDx Warsaw**."
 joinUsSubtitle: "Become our volunteer and enter the amazing world of TEDx"
-joinUsImagePath: "images/uploads/joinus.png"
-joinUsImageDesktopPath: "images/uploads/joinus.png"
+joinUsImagePath: "images/uploads/join_tedxwarsaw.jpg"
+joinUsImageDesktopPath: "images/uploads/join_tedxwarsaw.jpg"
 joinUsVolunteerText: "Get involved as a volunteer"
-joinUsVolunteerLink: "/about"
+joinUsVolunteerLink: "/volunteers"
 joinUsGetToKnowOurTeamText: "Get to know our team ->"
 joinUsGetToKnowOurTeamLink: "/about"
-joinUsBecomeSpeakerText: "Become TEDx Speaker ->"
-joinUsBecomeSpeakerLink: "/about"
+joinUsBecomeSpeakerText: "Become a TEDx Speaker ->"
+joinUsBecomeSpeakerLink: "/speakers"
 partnerSectionTitle: "Our partners"
 getToKnowOurPartnersText: "Get to know our partners ->"
-getToKnowOurPartnersLink: "/join"
+getToKnowOurPartnersLink: "/partners"
 joinOurPartnersText: "Join our partners"
-joinOurPartnersLink: "/join"
+joinOurPartnersLink: "/partners"
 partnerLogos:
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-1.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-2.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-3.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-4.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-5.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-6.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-7.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-8.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-9.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-10.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-11.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-12.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-13.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-14.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-15.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-16.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-17.png
-eventSlug: "2020"
+  - partnerName: Forbes Women
+    partnerLogoPath: events/polarization-2021/partnerLogos/forbes_women.jpg
+  - partnerName: Lavazza
+    partnerLogoPath: events/polarization-2021/partnerLogos/lavazza.png
+  - partnerName: Mindspace
+    partnerLogoPath: events/polarization-2021/partnerLogos/mindspace.png
+  - partnerName: Newonce
+    partnerLogoPath: events/polarization-2021/partnerLogos/newonce.png
+  - partnerName: Noizz
+    partnerLogoPath: events/polarization-2021/partnerLogos/noizz.png
+  - partnerName: Pełną Parą
+    partnerLogoPath: events/polarization-2021/partnerLogos/pelnapara.png
+  - partnerName: Relacja
+    partnerLogoPath: events/polarization-2021/partnerLogos/relacja.png
+  - partnerName: Szczypta
+    partnerLogoPath: events/polarization-2021/partnerLogos/szczypta.png
+  - partnerName: Smartest Heads
+    partnerLogoPath: events/polarization-2021/partnerLogos/smartestheads.png
 centerTextSectionTitle: "## TEDxWarsaw"
 centerTextSectionContent: >-
   TEDxWarsaw is an annual event where dreamers, founders, activists, engineers, artists and other amazing speakers meet to share their ideas worth spreading.

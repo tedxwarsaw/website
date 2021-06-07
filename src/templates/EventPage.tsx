@@ -34,6 +34,7 @@ export interface Props
   partnerLogosDesktop: FixedObject[];
   partnershipTeam: PartnershipTeamMember[];
   suggestedEvent: SuggestedEvent;
+  slug: string;
   city: string;
   displayName: string;
   date: string;
@@ -60,8 +61,7 @@ export interface Props
   isOnline: boolean;
   joinSpeakers: JoinSpeakersSectionProps;
   ticketProviderLogo: FixedObject;
-  eventPhotos: FixedObject[];
-  eventPhotosDesktop: FixedObject[];
+  eventPhotosDesktop: FluidObject[];
 }
 
 export interface SuggestedEvent {
@@ -95,21 +95,18 @@ export const EventPageTemplate = (props: Props) => {
         <div className="text-lg hidden md:block">{descriptionParts[1]}</div>
         <div className="text-lg block md:hidden">{props.description}</div>
       </div>
-
       {!props.isOnline && <EventPlace location={props.location} />}
-
       {props.eventSpeakers && props.eventSpeakers.length > 0 && (
         <EventSpeakers eventSpeakers={props.eventSpeakers} />
       )}
-
       <Banner
         title={props.callToAction.title}
+        variant={BannerVariant.red}
         subtitle={props.callToAction.subtitle}
         buttonText={props.callToAction.buttonText}
         buttonUrl={props.callToAction.buttonUrl}
         logo={props.ticketProviderLogo}
       />
-
       {props.partnerLogos.length !== 0 && (
         <Partners
           partnerSectionTitle="Event partners"
@@ -117,7 +114,6 @@ export const EventPageTemplate = (props: Props) => {
           partnerLogosDesktop={props.partnerLogosDesktop}
         />
       )}
-
       {isFutureEvent && (
         <>
           <BecomePartner partnershipTeam={props.partnershipTeam} />
@@ -126,25 +122,26 @@ export const EventPageTemplate = (props: Props) => {
             variant={BannerVariant.white}
             subtitle="Become our volunteer and enter the amazing world of TEDx"
             buttonText="Get involved as a volunteer"
-            buttonUrl="/"
+            buttonUrl="/volunteers"
             logo={props.ticketProviderLogo}
           />
         </>
       )}
-
-      {(props.eventPhotosDesktop ||
-        props.suggestedEvent?.photos.length > 0) && (
+      {props.eventPhotosDesktop.length > 0 ? (
         <SuggestedEvent
-          displayName={props.suggestedEvent.displayName}
-          slug={props.suggestedEvent.slug}
-          photos={
-            props.eventPhotosDesktop
-              ? props.eventPhotosDesktop
-              : props.suggestedEvent.photos
-          }
+          displayName={props.displayName}
+          slug={props.slug}
+          photos={props.eventPhotosDesktop}
         />
+      ) : (
+        props.suggestedEvent.photos.length > 0 && (
+          <SuggestedEvent
+            displayName={props.suggestedEvent.displayName}
+            slug={props.suggestedEvent.slug}
+            photos={props.suggestedEvent.photos}
+          />
+        )
       )}
-
       {!isFutureEvent && (
         <HeroSection
           heroTitle={props.joinSpeakers.sectionTitle}
@@ -160,7 +157,6 @@ export const EventPageTemplate = (props: Props) => {
           fontMedium
         />
       )}
-
       <Newsletter
         variant={NewsletterVariant.white}
         newsletterTitle={props.newsletterTitle}

@@ -11,7 +11,7 @@ interface MainEventProps {
     slug: string;
     category: string;
     date: string;
-    description: string;
+    hook: string;
     cover: {
       image: {
         desktop: FluidObject;
@@ -22,10 +22,9 @@ interface MainEventProps {
 }
 
 export const MainEvent = ({
-  event: { displayName, slug, category, date, description, cover },
+  event: { displayName, slug, category, date, hook, cover },
 }: MainEventProps) => {
-  const descriptionSplit = splitTextInTwo(description);
-  const dateConverted = moment(date);
+  const dateConverted = moment(date, "DD/MM/YYYY");
 
   return (
     <div className="inner-grid col-start-1 col-end-2 md:col-end-3 xl:col-end-4 mb-10">
@@ -45,15 +44,16 @@ export const MainEvent = ({
           </div>
         </Link>
       </div>
-      <div className=" md:col-start-2 md:col-end-3  xl:col-start-3 xl:col-end-full flex flex-col justify-between">
+      <div className="md:col-start-2 md:col-end-3 xl:col-start-3 xl:col-end-full flex flex-col space-y-6">
         <div className="mt-5 md:mt-0">
           <span className="text-white text-sm px-3 bg-customDarkGrey md:py-1 mr-3">
             <Link to={`/event/${slug}`}>{category}</Link>
           </span>
-          <span>{dateConverted.format("MMM Do, YYYY")}</span>
+          <span>{dateConverted.format("D MMMM YYYY")}</span>
         </div>
         <h2 className="my-5 xl:my-0">{displayName}</h2>
-        <p>{descriptionSplit[0]}</p>
+        <p>{hook}</p>
+        <div className="flex-grow"></div>
         <div>
           <Link
             to={`/event/${slug}`}

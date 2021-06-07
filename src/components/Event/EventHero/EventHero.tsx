@@ -31,6 +31,7 @@ export const EventHero = ({
         image={backgroundImage}
         imageDesktop={backgroundImageDesktop}
         alt="Cover photo"
+        classNameChild="bottom-gradient"
       >
         <div className="h-full overflow-hidden">
           <div className="h-full flex flex-row items-center">
@@ -40,7 +41,9 @@ export const EventHero = ({
               </div>
               {buttonShow && (
                 <a href={buttonLink} target="_blank" rel="noopener noreferrer">
-                  <Button className="px-20 shadow-2xl hover:bg-white hover:text-customRed">{buttonText}</Button>
+                  <Button className="px-20 shadow-2xl hover:bg-white hover:text-customRed">
+                    {buttonText}
+                  </Button>
                 </a>
               )}
             </div>

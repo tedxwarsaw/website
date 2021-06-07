@@ -9,6 +9,7 @@ export interface RecommendedItem {
   speaker?: string;
   eventSlug?: string;
   eventName?: string;
+  eventCategory?: string;
   duration?: string;
 }
 

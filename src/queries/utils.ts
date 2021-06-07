@@ -27,23 +27,26 @@ export const getFixedImage = async ({
   height,
   width,
   quality,
+  grayscale,
 }: {
   graphql: (query: string, args?: any) => any;
   path: string;
   height?: number;
   width?: number;
   quality?: number;
+  grayscale?: boolean;
 }): Promise<FixedObject> => {
   const query = `#graphql
     query (
       $height: Int,
       $width: Int,
       $quality: Int,
-      $path: String
+      $path: String,
+      $grayscale: Boolean,
     ) {
       photo: file(relativePath: { eq: $path }) {
         childImageSharp {
-          fixed(width: $width, height: $height, quality: $quality) {
+          fixed(width: $width, height: $height, quality: $quality, grayscale: $grayscale) {
             ${gatsbyImageFixedFragment}
           }
         }
@@ -59,6 +62,7 @@ export const getFixedImage = async ({
       width,
       height,
       quality,
+      grayscale,
     })
   );
   return photo.childImageSharp.fixed;
@@ -69,21 +73,24 @@ export const getFluidImage = async ({
   path,
   sizes,
   quality,
+  grayscale,
 }: {
   graphql: (query: string, args?: any) => any;
   path: string;
   sizes?: string;
   quality?: number;
+  grayscale?: boolean;
 }): Promise<FluidObject> => {
   const query = `#graphql
     query (
       $sizes: String,
       $quality: Int,
       $path: String
+      $grayscale: Boolean,
     ) {
       photo: file(relativePath: { eq: $path }) {
         childImageSharp {
-          fluid(sizes: $sizes, quality: $quality) {
+          fluid(sizes: $sizes, quality: $quality, grayscale: $grayscale) {
             ${gatsbyImageFluidFragment}
           }
         }
@@ -98,6 +105,7 @@ export const getFluidImage = async ({
       path,
       sizes,
       quality,
+      grayscale,
     })
   );
   return photo.childImageSharp.fluid;

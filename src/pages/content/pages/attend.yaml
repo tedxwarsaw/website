@@ -4,18 +4,18 @@ isHeroNewsletter: false
 isCurrentEvent: true
 ctaBannerText: Become our partner and enter the amazing world of TEDx
 ctaButtonText: Get involved as a partner
-ctaButtonLink: /link
-pastEventsSectionTitle: TEDxWarsaw Past Events
+ctaButtonLink: /partners
+pastEventsSectionTitle: TEDxWarsaw Events (List Incomplete)
 pastEventsItems:
-  - title: "x10"
+  - eventTypeKey: "Salon"
     sectionName: TEDx Salon
-    description: Please join our newsletter to be the first to know about TEDxWarsaw events, news and much more.
-  - title: "x10"
-    sectionName: TEDx Conference
-    description: Please join our newsletter to be the first to know about TEDxWarsaw events, news and much more.
-  - title: "x10"
+    description: Salon events are often small weekly or monthly events that keeps a TEDx community engaged between regular TEDx events. It’s a unique kind of gathering that TEDx organizers hold which allows the conversation to continue, in person.
+  - eventTypeKey: "Main Event"
+    sectionName: TEDx Main Event
+    description: In the spirit of TED’s mission, “ideas worth spreading,” the TEDx program helps communities, organizations and individuals produce TED-style events at the local level. TEDx events are planned and coordinated independently, on a community-by-community basis, under a free license from TED.
+  - eventTypeKey: "Live"
     sectionName: TEDx Live
-    description: Please join our newsletter to be the first to know about TEDxWarsaw events, news and much more.
+    description: TEDxLive events are centered around the live webcast of an official TED Conference. Here, the world becomes TED’s audience.
 joinUsTitle: "## Join **TEDx Warsaw** "
 joinUsContent1: >-
   Become our volunteer
@@ -29,5 +29,5 @@ joinUsContent2: >-
   or suggest someone who could
 joinUsButton1: Get involved as a volunteer
 joinUsButton2: Get involved as a speaker
-joinUsButtonUrl1: /test
-joinUsButtonUrl2: /test
+joinUsButtonUrl1: /volunteers
+joinUsButtonUrl2: /speakers

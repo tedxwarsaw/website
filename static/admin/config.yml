@@ -183,9 +183,10 @@ collections:
             widget: "list"
             fields:
               - {
-                  label: "Red title of section",
-                  name: "title",
-                  widget: "string",
+                  label: "Event type",
+                  name: "eventTypeKey",
+                  widget: "select",
+                  options: ["Main Event", "Salon", "Live"],
                 }
               - { label: "Section name", name: "sectionName", widget: "string" }
               - {
@@ -348,7 +349,7 @@ collections:
             widget: string
           - label: "CenterTextSection content"
             name: "centerTextSectionContent"
-            widget: string,
+            widget: string
           - label: "CenterTextSection button link"
             name: "centerTextSectionButtonLink"
             widget: string
@@ -795,7 +796,7 @@ collections:
       - label: "Event category"
         name: "category"
         widget: "select"
-        options: ["Live", "Conference", "Salon", "Circle"]
+        options: ["Live", "Main Event", "Salon", "Circle"]
       - name: city
         label: City
         widget: string
@@ -807,10 +808,6 @@ collections:
         date_format: "DD/MM/YYYY"
         time_format: false
         picker_utc: true
-      - name: time
-        label: "Time"
-        pattern: ['^"[^ ].*[^ ]"$', 'it must be enclosed with ""']
-        widget: string
       - name: hook
         label: Hook
         widget: text
@@ -829,42 +826,6 @@ collections:
             widget: "select"
             hint: Use 'light' when the cover image is light, 'dark' when its dark. This will adjust the text's color appropriately.
             options: ["dark", "light"]
-          - name: button
-            label: Button
-            widget: object
-            fields:
-              - name: text
-                label: Text
-                widget: string
-              - name: link
-                label: URL
-                widget: string
-                hint: The URL the button should point to.
-              - name: show
-                label: Show
-                widget: boolean
-                hint: Whether to show the button or not.
-          - name: image
-            label: Cover image
-            widget: object
-            fields:
-              - name: mobile
-                label: Mobile variant
-                widget: image
-                allow_multiple: false
-                media_folder: "{{slug}}/coverPhotos"
-                public_folder: "events/{{slug}}/coverPhotos"
-              - name: desktop
-                label: Desktop variant
-                widget: image
-                allow_multiple: false
-                media_folder: "{{slug}}/coverPhotos"
-                public_folder: "events/{{slug}}/coverPhotos"
-      - name: coverHero
-        label: Cover hero section
-        widget: object
-        hint: Cover show as page hero, when this event is featured
-        fields:
           - name: button
             label: Button
             widget: object

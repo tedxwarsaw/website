@@ -30,7 +30,8 @@ module.exports = {
   },
   variants: {
     extend: {
-      borderWidth: ["last"],
+      borderWidth: ["hover", "last"],
+      borderColor: ["hover", "last"],
       scale: ["active"],
     },
   },

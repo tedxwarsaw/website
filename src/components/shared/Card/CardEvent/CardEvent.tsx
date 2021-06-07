@@ -10,6 +10,7 @@ interface CardEventProps {
   cover: FluidObject;
   coverDesktop: FluidObject;
   displayName: string;
+  eventCategory: string;
   date?: string;
 }
 
@@ -19,6 +20,7 @@ export const CardEvent = ({
   coverDesktop,
   displayName,
   date,
+  eventCategory,
 }: CardEventProps) => (
   <div className="pt-2 md:pt-3 pb-5 border-b-4 border-customTransparent h-full flex flex-col card-container">
     <Link to={`/event/${slug}`}>
@@ -33,7 +35,12 @@ export const CardEvent = ({
           fluid={coverDesktop}
           alt="Slider item image"
         />
-        <Button variant={ButtonVariant.filledRedWithBG} className={"hoverButton hover:bg-white hover:text-customRed"}>View Event</Button>
+        <Button
+          variant={ButtonVariant.filledRedWithBG}
+          className={"hoverButton hover:bg-white hover:text-customRed"}
+        >
+          View Event
+        </Button>
       </div>
     </Link>
     <span className="absolute left-0 top-0  text-white text-sm px-3 bg-customRed md:py-1">
@@ -43,7 +50,7 @@ export const CardEvent = ({
     <Link to={`/event/${slug}`}>
       <div className="md:flex justify-between items-end mb-2 mt-5 md:my-5">
         <div>
-          <span className="font-bold my-10">Title</span>
+          <span className="font-bold my-10">{eventCategory}</span>
           <h3 className="min-h-10">{displayName}</h3>
         </div>
         <p>{date}</p>
@@ -57,16 +64,19 @@ export const CardEvent = ({
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Button variant={ButtonVariant.filledRedWithBG} className={"hover:bg-white hover:text-customRed"}>Attend</Button>
+        <Button
+          variant={ButtonVariant.filledRedWithBG}
+          className={"hover:bg-white hover:text-customRed"}
+        >
+          Attend
+        </Button>
       </Link>
       <Link
         to={`/event/${slug}`}
         className="text-customRed text-sm flex hover:opacity-50 items-center ml-5"
         style={{ width: "fit-content" }}
       >
-        <span className="my-auto flex items-center">
-          Learn more {'->'}
-        </span>
+        <span className="my-auto flex items-center">Learn more {"->"}</span>
       </Link>
     </div>
     <div className={"red-border"}/>

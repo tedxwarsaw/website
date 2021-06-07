@@ -1,49 +1,41 @@
 collectionId: event
 slug: polarization-2021
 displayName: TEDxWarsaw 2021 Polarization
-category: Conference
+category: "Main Event"
 city: Warsaw
-date: 11/06/2021
-time: "12:00 to change"
-hook: Jesteśmy jak ogień i woda, jak Legia i Polonia, jak Staś i Nel. Jak
-  Kielecki i Winiary, Canon i Nikon, jak ser żółty i ser biały. Dzieli nas
-  przepaść, którą zasypujemy hejtem i kamieniami. Czy naprawdę jesteśmy aż tak
-  spolaryzowani? Aż tak INNI?
-description: "O tym będziemy dyskutować już 10 czerwca w Warszawie. Przyjdź i
-  pokaż nam, JAK TO JEST BYĆ TOBĄ w podzielonym świecie. Spróbuj wspólnie z nami
-  nauczyć się słuchać tak, żeby usłyszeć i z drugiej strony - mówić tak, żeby
-  Cię zrozumiano. Pomóż nam połączyć to, co pozornie odległe. "
+date: 10/06/2021
+hook: "Are we really that polarized? That DIFFERENT and disconnected?"
+description:
+  "We’re like fire and water, like the Celtics and the Lakers, like Thor and Loki,
+  Microsoft and Apple, or like Swiss cheese and cottage cheese. There is a gulf between us,
+  which we are often trying to fill in with hate, sticks, and stones. Are we really that polarized?
+  That DIFFERENT and disconnected? This is the topic we will explore on June 10th in Warsaw.
+  Come and show us WHAT IT MEANS TO BE YOU in a divided world. Try to learn with us how to listen
+  so that we can be heard and how to speak so that we can be understood. Help us connect what
+  is seemingly distant."
 cover:
-  variant: light
+  variant: dark
   button:
     text: test
     link: test
-    show: true
+    show: false
   image:
     mobile: events/polarization-2021/coverPhotos/375x640_tedxwaw_polaryzacja_kv_www_mobile-1.png
     desktop: events/polarization-2021/coverPhotos/1461x640_tedxwaw_polaryzacja_kv_www_desktop-1.png
-coverHero:
-  button:
-    text: attend
-    link: https://example.com/
-    show: true
-  image:
-    mobile: events/polarization-2021/coverPhotos/375x640_tedxwaw_polaryzacja_kv_www_mobile-2.png
-    desktop: events/polarization-2021/coverPhotos/1461x640_tedxwaw_polaryzacja_kv_www_desktop-2.png
 isOnline: false
 location:
-  displayName: Teatr Capitol
-  city: Warsaw Marszałkowska 115
+  displayName: Multikino, Złote Tarasy
+  city: Warsaw
   mapIframe: <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.119884714369!2d21.000902815797073!3d52.241206079762435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc62f900ec7f%3A0x9e0c6d6ac4d6e639!2sCapitol%20Theater!5e0!3m2!1sen!2spl!4v1620911355243!5m2!1sen!2spl"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.7202868759105!2d20.999243415796712!3d52.23029947976031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8da58f0dd5%3A0x9f7d3a9040fbc02f!2sZ%C5%82ota%2059%2C%2000-120%20Warszawa!5e0!3m2!1sen!2spl!4v1620902876401!5m2!1sen!2spl"
     width="600" height="450" style="border:0;" allowfullscreen=""
     loading="lazy"></iframe>
-  image: events/polarization-2021/locationPhoto/capitol.jpg
+  image: events/polarization-2021/locationPhoto/zlote.jpg
 callToAction:
-  title: TEDxWarsaw 2021 pass
-  subtitle: 150 PLN
-  buttonText: Buy now
-  buttonUrl: https://example.com/
+  title: TEDxWarsaw 2021
+  subtitle: Facebook Event
+  buttonText: Join
+  buttonUrl: https://www.facebook.com/events/309848130666835
 speakers:
   - speakerName: Jimek
     speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_jimek.png
@@ -67,42 +59,24 @@ speakers:
     speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_łukawski.png
   - speakerName: Zosia Kierner
     speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_kierner.png
-  - speakerName: Miguel Cano
-    speakerPhotoPath: events/polarization-2021/speakerPhotos/tedxpolarization_www_bw_1080x1080_miguel.png
 partnerLogos:
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-1.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-2.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-3.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-4.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-5.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-6.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-7.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-8.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-9.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-10.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-11.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-12.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-13.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-14.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-15.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-16.png
-  - partnerName: logo1
-    partnerLogoPath: events/2020/partnerLogos/logo-17.png
+  - partnerName: Forbes Women
+    partnerLogoPath: events/polarization-2021/partnerLogos/forbes_women.jpg
+  - partnerName: Lavazza
+    partnerLogoPath: events/polarization-2021/partnerLogos/lavazza.png
+  - partnerName: Mindspace
+    partnerLogoPath: events/polarization-2021/partnerLogos/mindspace.png
+  - partnerName: Newonce
+    partnerLogoPath: events/polarization-2021/partnerLogos/newonce.png
+  - partnerName: Noizz
+    partnerLogoPath: events/polarization-2021/partnerLogos/noizz.png
+  - partnerName: Pełną Parą
+    partnerLogoPath: events/polarization-2021/partnerLogos/pelnapara.png
+  - partnerName: Relacja
+    partnerLogoPath: events/polarization-2021/partnerLogos/relacja.png
+  - partnerName: Szczypta
+    partnerLogoPath: events/polarization-2021/partnerLogos/szczypta.png
+  - partnerName: Smartest Heads
+    partnerLogoPath: events/polarization-2021/partnerLogos/smartestheads.png
 ticketProviderLogo: images/uploads/evenea2.png
 eventPhotos: []

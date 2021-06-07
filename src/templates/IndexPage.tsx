@@ -50,20 +50,6 @@ export const IndexPageTemplate = (props: Props) => {
         heroBackgroundImageDesktop={props.heroBackgroundImageDesktop}
         heroBackgroundImageAlt={props.heroBackgroundImageAlt}
       />
-      {props.featuredEventShow && props.eventHeader && (
-        <CenterTextSection
-          centerTextSectionTitle={props.centerTextSectionTitle}
-          centerTextSectionContent={props.centerTextSectionContent}
-          centerTextSectionButtonLink={props.centerTextSectionButtonLink}
-          centerTextSectionButtonText={props.centerTextSectionButtonText}
-          centerTextSectionButtonLinkSecond={
-            props.centerTextSectionButtonLinkSecond
-          }
-          centerTextSectionButtonTextSecond={
-            props.centerTextSectionButtonTextSecond
-          }
-        />
-      )}
       <OurStory
         ourStoryTitle={props.ourStoryTitle}
         ourStoryItems={props.ourStoryItems}

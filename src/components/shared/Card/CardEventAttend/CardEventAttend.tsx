@@ -47,9 +47,7 @@ export const CardEventAttend = ({
       <Link to={`/event/${slug}`}>
         <div className="md:flex justify-between items-end mb-2 mt-5 md:my-5">
           <div>
-            <span className="my-10">
-              {dateConverted.format("MMM Do, YYYY")}
-            </span>
+            <span className="my-10">{dateConverted.format("D MMMM YYYY")}</span>
             <h3 className="min-h-10 font-bold">{displayName}</h3>
           </div>
         </div>
@@ -57,12 +55,10 @@ export const CardEventAttend = ({
 
       <div className="flex items-center mt-auto">
         <Link
-            to={`/watch?eventSlug=${slug}`}
-            className="text-customRed text-sm flex hover:opacity-50 items-center mr-6"
+          to={`/watch?eventSlug=${slug}`}
+          className="text-customRed text-sm flex hover:opacity-50 items-center mr-6"
         >
-          <span className="text-customRed font-bold">
-            {'Watch talks ->'}
-          </span>
+          <span className="text-customRed font-bold">{"Watch talks ->"}</span>
         </Link>
         <Link
           to={`/event/${slug}`}
