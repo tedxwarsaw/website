@@ -75,5 +75,19 @@ partnerLogos:
     partnerLogoPath: events/polarization-2021/partnerLogos/szczypta.png
   - partnerName: Smartest Heads
     partnerLogoPath: events/polarization-2021/partnerLogos/smartestheads.png
+  - partnerName: AllBright
+    partnerLogoPath: events/polarization-2021/partnerLogos/allbright.png
+  - partnerName: BCS
+    partnerLogoPath: events/polarization-2021/partnerLogos/bcs.jpg
+  - partnerName: EXS
+    partnerLogoPath: events/polarization-2021/partnerLogos/exs.png
+  - partnerName: Kinoteka
+    partnerLogoPath: events/polarization-2021/partnerLogos/kinoteka.jpg
+  - partnerName: Student Coin
+    partnerLogoPath: events/polarization-2021/partnerLogos/studentcoin.jpg
+  - partnerName: PFR Szkoła
+    partnerLogoPath: events/polarization-2021/partnerLogos/pfr_szkola.png
+  - partnerName: PFR
+    partnerLogoPath: events/polarization-2021/partnerLogos/pfr.jpg
 ticketProviderLogo: images/uploads/evenea2.png
 eventPhotos: []
