@@ -71,6 +71,8 @@ partnerLogos:
     partnerLogoPath: events/polarization-2021/partnerLogos/pfr_szkola.png
   - partnerName: PFR
     partnerLogoPath: events/polarization-2021/partnerLogos/pfr.jpg
+  - partnerName: Pismo
+    partnerLogoPath: events/polarization-2021/partnerLogos/pismo.png
 centerTextSectionTitle: "## TEDxWarsaw"
 centerTextSectionContent: >-
   TEDxWarsaw is an annual event where dreamers, founders, activists, engineers, artists and other amazing speakers meet to share their ideas worth spreading.

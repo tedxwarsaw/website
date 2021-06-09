@@ -89,5 +89,7 @@ partnerLogos:
     partnerLogoPath: events/polarization-2021/partnerLogos/pfr_szkola.png
   - partnerName: PFR
     partnerLogoPath: events/polarization-2021/partnerLogos/pfr.jpg
+  - partnerName: Pismo
+    partnerLogoPath: events/polarization-2021/partnerLogos/pismo.png
 ticketProviderLogo: images/uploads/evenea2.png
 eventPhotos: []
