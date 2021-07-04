@@ -1,0 +1,22 @@
+collectionId: talk
+slug: maths-its-not-what-you-think
+displayName: Maths - It's not what You Think
+talkDescription: Kami Kulesza graduated from the University of South Africa in
+  Pretoria majoring in computer science, mathematics and physics. Next he got a
+  PhD in cryptography from Polish Academy of Sciences. This multi-field
+  background set him off on the path to an international career, and he is now
+  managing a team of eccentrics at the research centre that he heads at the
+  Polish Academy of Sciences. Passionate about research, and with over one
+  hundred commercial and R&D projects under his belt, he demonstrates how
+  mathematics applies to real-world problems.
+youtubeVideoId: 1hA6anLaf_s
+speaker: Kamil Kulesza
+speakerProfileImage: talks/maths-its-not-what-you-think/photos/blank.png
+speakerDescription: Kamil Kulesza is a mathematician who applies his scientific
+  training to very practical real life situations.
+eventSlug: in-a-heartbeat-2016
+cover:
+  image:
+    mobile: talks/maths-its-not-what-you-think/coverPhotos/kamil.png
+    desktop: talks/maths-its-not-what-you-think/coverPhotos/kamil.png
+duration: '"16:27"'
