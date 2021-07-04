@@ -1,0 +1,24 @@
+collectionId: talk
+slug: music-performance
+displayName: Music Performance
+talkDescription: "Pop-up Books perform their second ever live show in front of
+  the TEDxWarsaw audience. Songs performed were You Are The Summer, Don't Follow
+  Me, Bridge Will Burn, 100 Echoes, and Without You.  *Due to issues with Front
+  of House, and with the monitoring on stage, the audio of the performance is
+  uneven and, on a couple of occasions, drops out briefly*  Seattle-born Jules
+  Jones (vocals / bass) and Scottish émigré Neil Milton (vocals / guitar) formed
+  Pop-up Books in Warsaw in early 2019, after drafting in Poles, Tomek
+  Dorobczyński (drums) and Maurycy Bór (guitar) to complete the line-up. "
+youtubeVideoId: uEJgaTUBI0A
+speaker: Pop-up Books
+speakerProfileImage: talks/music-performance/photos/blank.png
+speakerDescription: Pop-up Books have a love for harmony-rich, 60s-inspired
+  indie-pop. C86 dreaming of '68, you might say. This talk was given at a TEDx
+  event using the TED conference format but independently organized by a local
+  community.
+eventSlug: dare-2019
+cover:
+  image:
+    mobile: talks/music-performance/coverPhotos/dare.png
+    desktop: talks/music-performance/coverPhotos/dare.png
+duration: '"20:56"'
