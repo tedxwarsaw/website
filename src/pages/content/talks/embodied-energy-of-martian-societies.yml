@@ -1,0 +1,22 @@
+collectionId: talk
+slug: embodied-energy-of-martian-societies
+displayName: "Embodied energy of Martian societies "
+talkDescription: "Leszek Orzechowski - założyciel grupy badawczej Space is More
+  oraz doktorant PWr badający typologię architektury związanej z kosmosem i
+  przestrzenią kosmiczną. Był głównym projektantem w serii raportów o załogowych
+  lotach kosmicznch na Marsa i Księżyc prezentowanych podczas licznych
+  konferencji. "
+youtubeVideoId: 3B8rjc74UGw
+speaker: Leszek Orzechowski
+speakerProfileImage: talks/photos/blank.png
+speakerDescription: "Nazywa siebie kosmicznym architektem i wraz z zespołem
+  uczestniczył w licznych projektkach i konkursach skupiających się na tym jak
+  ludzie będę mogli żyć i prosperować poza Ziemią. Obecnie Leszek zarządza
+  centrum badawczym Lunares, którego celem jest prowadzenie badań nad
+  psychologią i zdrowiem człowieka podczas symulowanych misji kosmicznych. "
+eventSlug: dare-2019
+cover:
+  image:
+    mobile: talks/coverPhotos/leszek.png
+    desktop: talks/coverPhotos/leszek.png
+duration: '"6:41"'
