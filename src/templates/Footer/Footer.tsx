@@ -130,8 +130,14 @@ export const FooterTemplate = (props: Props) => (
           </Link>
         ))}
       </div>
-      <div className="col-span-full pt-10 font-light text-gray-400 text-xs">
-        This independent TEDx event is operated under license from TED.
+    </div>
+    <div className="col-span-full text-xs text-gray-500 mb-10">
+      <div className={"md:float-left"}>
+        {`@ ${(new Date).getFullYear()} - TEDxWarsaw. All rights reserved`}
+        <span className={"ml-8"}>This independent TEDx event is operated under license from TED</span>
+      </div>
+      <div className="xl:text-right xl:float-right mt-6 xl:mt-0">
+        Created by <a href={'https://allbright.io'} target={"_blank"} className="font-bold underline">allbright.io</a>, Hugo Dutka | Design by Marta Olczak
       </div>
     </div>
   </footer>
