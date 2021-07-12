@@ -1,0 +1,21 @@
+collectionId: talk
+slug: music-performance
+displayName: Music Performance
+talkDescription: "He seeks inspiration everywhere - in electronic music,
+  hip-hop, reggae - transforming their elements into their own musical language.
+  João collaborated with Andrzej Smolik, Mikromusic and many jazz artists. His
+  songs were featured in the 'RAM Cafe vol. 7' radio album and also in the
+  'Siesta vol. 11' by Marcin Kydryński. He also performed with an orchestra. "
+youtubeVideoId: TchE7GUXIx8
+speaker: João de Sousa
+speakerProfileImage: talks/music-performance/photos/blank.png
+speakerDescription: João de Sousa is a singer, guitarist and composer valued on
+  the Polish music scene. He comes from Porto, Portugal and his lusophone roots
+  have a significant impact on the music he creates although fascinations with
+  other genres such as jazz and world music, freely move him away from fado.
+eventSlug: men-and-women-2018
+cover:
+  image:
+    mobile: talks/music-performance/coverPhotos/nice.png
+    desktop: talks/music-performance/coverPhotos/nice.png
+duration: '"22:58"'
