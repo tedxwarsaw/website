@@ -5,6 +5,7 @@ import { Link } from "gatsby";
 import Img, { FluidObject } from "gatsby-image";
 import { SuggestedEventSlider } from "./SuggestedEventSlider";
 import "./SuggestedEvent.styled.css";
+import {Lines} from "../../Lines/Lines";
 
 interface SuggestedEventProps {
   displayName: string;
@@ -18,7 +19,8 @@ export const SuggestedEvent = ({
   photos,
 }: SuggestedEventProps) => {
   return (
-    <div className="main-grid-full-span py-20 space-y-4">
+    <div className="main-grid-full-span py-20 space-y-4 relative">
+      <Lines onlyHorizontal={true}/>
       <div className="seamless-grid">
         <div className="col-start-2 col-span-full">
           <div className="space-y-4 col-start-2 col-end-3">

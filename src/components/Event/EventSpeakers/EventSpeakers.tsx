@@ -1,12 +1,14 @@
 import React from "react";
 import Img, { FixedObject } from "gatsby-image";
+import {Lines} from "../../Lines/Lines";
 
 export interface EventSpeakersProps {
   eventSpeakers: { speakerName: string; speakerPhoto: FixedObject }[];
 }
 
 export const EventSpeakers = ({ eventSpeakers }: EventSpeakersProps) => (
-  <div className="inner-grid py-20 grid-flow-row ">
+  <div className="inner-grid py-20 grid-flow-row relative">
+    <Lines wider={true}/>
     <h2 className="font-medium row-start-1 col-span-full mb-10">
       Speakers
     </h2>

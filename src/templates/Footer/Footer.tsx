@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FeaturedEvent } from "../../types";
+import {Lines} from "../../components/Lines/Lines";
 
 interface Props {
   logoPath: string;
@@ -41,8 +42,9 @@ const Column = (props: { title: string; children: React.ReactNode }) => (
 );
 
 export const FooterTemplate = (props: Props) => (
-  <footer className="main-grid border-t">
-    <div className="inner-grid my-10 space-y-10 xl:space-y-0">
+  <footer className="main-grid border-t relative">
+    <Lines onlyHorizontal={true} wider={true}/>
+    <div className="inner-grid my-10 space-y-10 xl:space-y-0 z-10">
       <Link to="/" className="h-12 flex flex-row items-center">
         <img className="h-full" src={props.logoPath} alt="Logo" />
       </Link>

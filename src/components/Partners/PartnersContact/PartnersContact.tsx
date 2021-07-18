@@ -1,6 +1,7 @@
 import React from "react";
 import Img, {FluidObject} from "gatsby-image";
 import "./PartnersContact.styled.css";
+import {Lines} from "../../Lines/Lines";
 
 interface Contact {
     image: FluidObject,
@@ -16,7 +17,8 @@ export interface PartnersContactProps {
 }
 
 export const PartnersContact = (props: PartnersContactProps) => (
-    <div className="main-grid-full-span bg-customLightGrey py-10">
+    <div className="main-grid-full-span bg-customLightGrey py-10 relative">
+        <Lines />
         <div className="flex main-grid">
             <div className="px-5 md:px-0 ">
                 <div className="inner-grid">

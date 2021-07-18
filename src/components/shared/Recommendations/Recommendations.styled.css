@@ -8,8 +8,9 @@
 }
 
 .slider-wrapper-recommendations {
+  z-index: 2;
   margin-left: -10px;
-  margin-right: -10px;
+  max-width: calc(100% + 10px);
 }
 
 @media (max-width: theme("screens.xl")) {

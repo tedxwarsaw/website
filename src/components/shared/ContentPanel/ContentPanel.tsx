@@ -1,6 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import {Lines} from "../../Lines/Lines";
 
 interface ContentPanel {
     title: string;
@@ -8,7 +9,8 @@ interface ContentPanel {
 }
 
 export const ContentPanel = ({title, content}: ContentPanel) => (
-    <div className="seamless-grid pt-20 pb-20">
+    <div className="seamless-grid pt-20 pb-20 relative wider">
+        <Lines />
         <div className="flex items-top col-start-2 col-end-3 text-2xl md:text-3xl">
             <ReactMarkdown rehypePlugins={[rehypeRaw]}>
                 {title}
