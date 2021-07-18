@@ -8,7 +8,7 @@ talkDescription: "Leszek Orzechowski - założyciel grupy badawczej Space is Mor
   konferencji. "
 youtubeVideoId: 3B8rjc74UGw
 speaker: Leszek Orzechowski
-speakerProfileImage: talks/photos/blank.png
+speakerProfileImage: talks/embodied-energy-of-martian-societies/photos/blank.png
 speakerDescription: "Nazywa siebie kosmicznym architektem i wraz z zespołem
   uczestniczył w licznych projektkach i konkursach skupiających się na tym jak
   ludzie będę mogli żyć i prosperować poza Ziemią. Obecnie Leszek zarządza
@@ -17,6 +17,6 @@ speakerDescription: "Nazywa siebie kosmicznym architektem i wraz z zespołem
 eventSlug: dare-2019
 cover:
   image:
-    mobile: talks/coverPhotos/leszek.png
-    desktop: talks/coverPhotos/leszek.png
+    mobile: talks/embodied-energy-of-martian-societies/coverPhotos/leszek.png
+    desktop: talks/embodied-energy-of-martian-societies/coverPhotos/leszek.png
 duration: '"6:41"'
