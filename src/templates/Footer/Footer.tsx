@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FeaturedEvent } from "../../types";
-import {Lines} from "../../components/Lines/Lines";
+import { Lines } from "../../components/Lines/Lines";
 
 interface Props {
   logoPath: string;
@@ -43,7 +43,7 @@ const Column = (props: { title: string; children: React.ReactNode }) => (
 
 export const FooterTemplate = (props: Props) => (
   <footer className="main-grid border-t relative">
-    <Lines onlyHorizontal={true} wider={true}/>
+    <Lines onlyHorizontal={true} wider={true} />
     <div className="inner-grid my-10 space-y-10 xl:space-y-0 z-10">
       <Link to="/" className="h-12 flex flex-row items-center">
         <img className="h-full" src={props.logoPath} alt="Logo" />
@@ -130,8 +130,26 @@ export const FooterTemplate = (props: Props) => (
           </Link>
         ))}
       </div>
-      <div className="col-span-full pt-10 font-light text-gray-400 text-xs">
-        This independent TEDx event is operated under license from TED.
+    </div>
+    <div className="col-span-full text-xs text-gray-500 mb-10">
+      <div className="flex md:float-left">
+        <span>
+          {`@ ${new Date().getFullYear()} - TEDxWarsaw. All rights reserved`}
+        </span>
+        <span className="ml-8">
+          This independent TEDx event is operated under license from TED
+        </span>
+      </div>
+      <div className="xl:text-right xl:float-right mt-6 xl:mt-0">
+        Created by{" "}
+        <a
+          href={"https://allbright.io"}
+          target={"_blank"}
+          className="font-bold underline"
+        >
+          allbright.io
+        </a>
+        , Hugo Dutka | Design by Marta Olczak
       </div>
     </div>
   </footer>

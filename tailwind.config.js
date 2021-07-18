@@ -24,7 +24,6 @@ module.exports = {
       md: "640px",
       xl: "1280px",
       lg: "1024px",
-      xl: "1280px",
       "2xl": "1536px",
     },
   },
@@ -35,5 +34,5 @@ module.exports = {
       scale: ["active"],
     },
   },
-  plugins: [],
+  plugins: []
 };
