@@ -12,9 +12,9 @@ export const ListFilters = ({
   activeFilter,
 }: ListFiltersProps) => (
   <div className="flex items-center flex-wrap my-5 font-semibold gap-y-5">
-    <span className="text-customRed mr-7">Filter</span>
+    <span className="text-customRed mr-7 z-10">Filter</span>
     <span
-      className={`py-2 px-6 mx-2 rounded-md cursor-pointer ${
+      className={`py-2 px-6 mx-2 rounded-md cursor-pointer z-10 ${
         activeFilter === "all"
           ? "bg-customDarkGrey text-white"
           : "bg-white text-black border border-1"
@@ -25,7 +25,7 @@ export const ListFilters = ({
     </span>
     {filtersList.map((filter) => (
       <span
-        className={`py-2 px-6 mx-2 rounded-md cursor-pointer ${
+        className={`py-2 px-6 mx-2 rounded-md cursor-pointer z-10 ${
           activeFilter === filter
             ? "bg-customDarkGrey text-white"
             : "bg-white text-black border border-1"

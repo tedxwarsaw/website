@@ -27,6 +27,22 @@ partnerLogos:
     partnerLogoPath: events/polarization-2021/partnerLogos/szczypta.png
   - partnerName: Smartest Heads
     partnerLogoPath: events/polarization-2021/partnerLogos/smartestheads.png
+  - partnerName: AllBright
+    partnerLogoPath: events/polarization-2021/partnerLogos/allbright.png
+  - partnerName: BCS
+    partnerLogoPath: events/polarization-2021/partnerLogos/bcs.jpg
+  - partnerName: EXS
+    partnerLogoPath: events/polarization-2021/partnerLogos/exs.png
+  - partnerName: Kinoteka
+    partnerLogoPath: events/polarization-2021/partnerLogos/kinoteka.jpg
+  - partnerName: Student Coin
+    partnerLogoPath: events/polarization-2021/partnerLogos/studentcoin.jpg
+  - partnerName: PFR Szkoła
+    partnerLogoPath: events/polarization-2021/partnerLogos/pfr_szkola.png
+  - partnerName: PFR
+    partnerLogoPath: events/polarization-2021/partnerLogos/pfr.jpg
+  - partnerName: Pismo
+    partnerLogoPath: events/polarization-2021/partnerLogos/pismo.png
 partnersContactContent: We are a tight-knit team of passionate people who want
   to share the best with others. Above all, however, we are all volunteers. We
   believe that with a strong partner who shares our values, we can do more and

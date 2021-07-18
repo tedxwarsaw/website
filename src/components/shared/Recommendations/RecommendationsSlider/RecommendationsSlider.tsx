@@ -71,7 +71,6 @@ export const RecommendationsSlider = ({ children }) => {
         ) : (
           <Slider sliderRef={sliderRef} children={children} />
         )}
-        <div></div>
       </div>
       {numberOfSlides > 1 && (
         <SliderControls

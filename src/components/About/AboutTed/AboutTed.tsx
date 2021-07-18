@@ -2,6 +2,7 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import "./AboutTed.styled.css";
+import {Lines} from "../../Lines/Lines";
 
 interface TedSpeaker {
   name: string;
@@ -13,7 +14,8 @@ export interface AboutTedProps {
 }
 
 export const AboutTed = (props: AboutTedProps) => (
-  <div className="bg-customLightGrey main-grid-full-span">
+  <div className="bg-customLightGrey main-grid-full-span relative">
+    <Lines wider={true}/>
     <div className="seamless-grid pt-20 pb-20">
       <div className="flex items-top col-start-2 col-end-3">
         <h2>

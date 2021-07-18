@@ -22,7 +22,7 @@ export const CardEvent = ({
   date,
   eventCategory,
 }: CardEventProps) => (
-  <div className="pt-2 md:pt-3 pb-5 border-b-4 border-customTransparent h-full flex flex-col">
+  <div className="pt-2 md:pt-3 pb-5 border-b-4 border-customTransparent h-full flex flex-col card-container">
     <Link to={`/event/${slug}`}>
       <div className="relative card-image-container">
         <Img
@@ -43,7 +43,7 @@ export const CardEvent = ({
         </Button>
       </div>
     </Link>
-    <span className="absolute left-0 top-0  text-white text-sm px-3 bg-customRed md:py-1">
+    <span className="absolute -left-2 top-0  text-white text-sm px-3 bg-customRed md:py-1">
       <Link to={`/event/${slug}`}>UPCOMING</Link>
     </span>
 
@@ -79,5 +79,6 @@ export const CardEvent = ({
         <span className="my-auto flex items-center">Learn more {"->"}</span>
       </Link>
     </div>
+    <div className={"red-border"} />
   </div>
 );

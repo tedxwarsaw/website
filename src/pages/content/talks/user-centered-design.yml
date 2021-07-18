@@ -1,0 +1,18 @@
+collectionId: talk
+slug: user-centered-design
+displayName: User-centered Design
+talkDescription: "User Experience is a term much lauded these days -- Aga
+  believes that its most elegant expressions boil down to \"dream, design,
+  build\". Aga Szóstek's pursuit of human-centered design has helped companies
+  big and small develop far-reaching strategies aiming at satisfying basic needs
+  of customers as a fundamental principle of design. "
+youtubeVideoId: k7CX2JYxfE8
+speaker: Aga Szóstek
+speakerProfileImage: talks/user-centered-design/photos/blank.png
+speakerDescription: Designer.
+eventSlug: poke-the-comfort-zone-2013
+cover:
+  image:
+    mobile: talks/user-centered-design/coverPhotos/aga.png
+    desktop: talks/user-centered-design/coverPhotos/aga.png
+duration: '"12:10"'

@@ -2,6 +2,7 @@ import React from "react";
 import Img, { FluidObject } from "gatsby-image";
 import "./AboutUs.styled.css";
 import { ContentPanel } from "@/components/shared/ContentPanel";
+import {Lines} from "../../Lines/Lines";
 
 export interface Content {
   content: string;
@@ -19,7 +20,8 @@ export interface AboutUsProps {
 }
 
 export const AboutUs = (props: AboutUsProps) => (
-  <div className="main-grid-full-span">
+  <div className="main-grid-full-span relative">
+    <Lines wider={true}/>
     <div className={"main-grid mt-8"}>
       <div className={"flex col-start-2 col-end-5"}>
         <Img

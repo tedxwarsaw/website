@@ -2,6 +2,7 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import "./AboutTedEvents.styled.css";
+import {Lines} from "../../Lines/Lines";
 
 export interface Content {
   content: string;
@@ -20,11 +21,8 @@ export interface TedEventsProps {
 }
 
 export const AboutTedEvents = (props: TedEventsProps) => (
-  <div
-    className={`${
-      props.background == "white" ? "" : "bg-customLightGrey"
-    } main-grid-full-span`}
-  >
+  <div className={`${props.background == "white" ? "" : "bg-customLightGrey"} main-grid-full-span relative`}>
+    <Lines wider={true}/>
     <div className="main-grid pt-10 pb-10">
       <div
         className={`items-top ${props.titleFontClass} col-start-1 col-end-full`}

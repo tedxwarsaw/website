@@ -16,6 +16,7 @@ import { Button } from "../components/shared/Button";
 import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";
 import { Link } from "gatsby";
+import {Lines} from "../components/Lines/Lines";
 
 export interface Props
   extends NewsletterProps,
@@ -132,7 +133,8 @@ export const AttendPageTemplate = (props: Props) => (
 
     <EventsList events={props.events} categories={props.categories} />
 
-    <div className="main-grid-full-span bg-customLightGrey py-10">
+    <div className="main-grid-full-span bg-customLightGrey py-10 relative">
+      <Lines wider={true} onlyHorizontal={true}/>
       <div className="flex main-grid">
         <div className="px-5 md:px-0 ">
           <div className="inner-grid md:text-left text-center">

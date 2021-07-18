@@ -1,5 +1,6 @@
 import React from "react";
 import Img, { FixedObject } from "gatsby-image";
+import {Lines} from "../../Lines/Lines";
 
 export interface PartnershipTeamMember {
   areaOfResponsibility: string;
@@ -14,7 +15,8 @@ interface BecomePartnerProps {
 }
 
 export const BecomePartner = ({ partnershipTeam }: BecomePartnerProps) => (
-  <div className="py-20 inner-grid space-y-6">
+  <div className="py-20 inner-grid space-y-6 relative">
+    <Lines wider={true} onlyHorizontal={true}/>
     <div className="col-span-full text-3xl">
       <div className="font-bold">Become our partner</div>
       <div className="font-light">and enter the world of TEDx</div>

@@ -5,6 +5,7 @@ import "./Talk.styled.css";
 import { Link } from "gatsby";
 import { TalkDetails } from "./TalkDetails";
 import { FixedObject } from "gatsby-image";
+import {Lines} from "../Lines/Lines";
 
 export interface TalkProps {
   youtubeVideoId: string;
@@ -27,7 +28,8 @@ export const Talk = ({
   speakerDescription,
   speakerProfileImage,
 }: TalkProps) => (
-  <div className="main-grid-full-span seamless-grid gap-y-10 mb-10">
+  <div className="main-grid-full-span seamless-grid gap-y-10 mb-10 relative">
+    <Lines onlyHorizontal={true}/>
     <div className="col-start-1 col-end-4 md:col-end-3 xl:col-start-1 xl:col-end-5">
       <YouTube videoId={youtubeVideoId} className="talk-video-iframe" />
     </div>

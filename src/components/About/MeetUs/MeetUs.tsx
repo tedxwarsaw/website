@@ -2,6 +2,7 @@ import React from "react";
 import { MeetUsProps } from "./MeetUs.types";
 import { Associates } from "./Associates";
 import { TeamMembersSlider } from "@/components/About/MeetUs/TeamMembersSlider";
+import {Lines} from "../../Lines/Lines";
 
 export const MeetUs = ({ teamMembersSlider, associates }: MeetUsProps) => (
   <div className="main-grid-full-span bg-black py-10" id={"meet-us-section"}>

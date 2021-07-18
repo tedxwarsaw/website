@@ -1,8 +1,10 @@
 import React from "react";
 import { OurStoryProps } from "./OurStory.types";
+import {Lines} from "../../Lines/Lines";
 
 export const OurStory = ({ ourStoryTitle, ourStoryItems }: OurStoryProps) => (
-  <div className="bg-customLightGrey main-grid-full-span py-10">
+  <div className="bg-customLightGrey main-grid-full-span py-10 relative">
+    <Lines onlyHorizontal={true}/>
     <div className="main-grid">
       <div className="flex flex-wrap justify-center">
         <div className="px-8 py-4">{ourStoryTitle}</div>

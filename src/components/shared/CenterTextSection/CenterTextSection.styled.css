@@ -20,4 +20,9 @@
 
 .centerTextSection a{
     color: theme("colors.customRed");
+    transition: .2s;
+}
+
+.centerTextSection a:hover{
+    color: black;
 }
