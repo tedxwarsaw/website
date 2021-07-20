@@ -1,0 +1,24 @@
+collectionId: talk
+slug: recipes-for-success
+displayName: Recipes for success
+talkDescription: Ola Lazar -- food blogger and author of books on cooking, a
+  champion of healthy, wholesome food and a leading proponent of 'good eating'
+  in Poland. Restaurant critic running the popular crowd-sourced restaurant
+  guide gastronauci.pl. Ola will explain, how good eating translates into good
+  living, sharing her most precious recipes for success.
+youtubeVideoId: 0tChBb7Nie4
+speaker: "Ola Lazar "
+speakerProfileImage: talks/recipes-for-success/photos/blank.png
+speakerDescription: In the spirit of ideas worth spreading, TEDx is a program of
+  local, self-organized events that bring people together to share a TED-like
+  experience. At a TEDx event, TEDTalks video and live speakers combine to spark
+  deep discussion and connection in a small group. These local, self-organized
+  events are branded TEDx, where x = independently organized TED event. The TED
+  Conference provides general guidance for the TEDx program, but individual TEDx
+  events are self-organized.* (*Subject to certain rules and regulations)
+eventSlug: inspire-to-be-inspired-2012
+cover:
+  image:
+    desktop: talks/recipes-for-success/coverPhotos/olalaz.png
+    mobile: talks/recipes-for-success/coverPhotos/olalaz.png
+duration: '"13:11"'
