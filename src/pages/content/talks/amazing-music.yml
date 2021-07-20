@@ -1,0 +1,24 @@
+collectionId: talk
+slug: amazing-music
+displayName: Amazing Music
+talkDescription: "F.O.U.R.S. -- jazz quartet from Krakow.  Michał Salamon is a
+  young pianist making his mark as a solo player and with the ensemble, which is
+  also composed of saxophonist Staszek Plewniak, bass player Szymon Frankowski,
+  Szymon Madej on drums. They describe their approach as seeking mood and
+  emotion rather than extravagant flashiness. "
+youtubeVideoId: EIxm9rCVk94
+speaker: F.O.U.R.S.
+speakerProfileImage: talks/amazing-music/photos/blank.png
+speakerDescription: " In the spirit of ideas worth spreading, TEDx is a program
+  of local, self-organized events that bring people together to share a TED-like
+  experience. At a TEDx event, TEDTalks video and live speakers combine to spark
+  deep discussion and connection in a small group. These local, self-organized
+  events are branded TEDx, where x = independently organized TED event. The TED
+  Conference provides general guidance for the TEDx program, but individual TEDx
+  events are self-organized.* (*Subject to certain rules and regulations)"
+eventSlug: inspire-to-be-inspired-2012
+cover:
+  image:
+    mobile: talks/amazing-music/coverPhotos/four.png
+    desktop: talks/amazing-music/coverPhotos/four.png
+duration: '"14:59"'
