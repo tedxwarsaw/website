@@ -1,0 +1,20 @@
+collectionId: talk
+slug: stereotypy-w-ue
+displayName: Stereotypy w UE
+talkDescription: Rafał Trzaskowski opowiada o tym, co Unia Europejska uczyniła
+  dla swoich obywateli i o ważnej roli polskich polityków w strukturach
+  unijnych.
+youtubeVideoId: nPGVm6OesQk
+speaker: Rafał Trzaskowski
+speakerProfileImage: talks/photos/blank.png
+speakerDescription: Rafał Trzaskowski – członek Parlamentu Europejskiego, jeden
+  z czołowych polskich ekspertów w Komisji Europejskiej. Prowadzi zajęcia na
+  temat procesu podejmowania decyzji w instytucjach Unii Europejskiej i
+  integracji europejskiej na Uniwersytecie Warszawskim. Jest komentatorem
+  bieżących wydarzeń politycznych i stosunków międzynarodowych.
+eventSlug: inspire-to-be-inspired-2012
+cover:
+  image:
+    mobile: talks/coverPhotos/rafalt.png
+    desktop: talks/coverPhotos/rafalt.png
+duration: '"12:10"'
