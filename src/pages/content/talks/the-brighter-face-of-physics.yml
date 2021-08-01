@@ -1,0 +1,23 @@
+collectionId: talk
+slug: the-brighter-face-of-physics
+displayName: The brighter face of physics
+talkDescription: "Michał showed us how physics can become a wonderous hobby by
+  encouraging us to try experiments which we can conduct at home. "
+youtubeVideoId: OO-m_dendus
+speaker: Michał Krupiński
+speakerProfileImage: talks/the-brighter-face-of-physics/photos/blank.png
+speakerDescription: " Michał Krupiński is a physicist who holds a passion for
+  popularizing science. He currently works in the Institute of Nuclear Physics,
+  Polish Academy of Sciences where he studies nanomagnetism, researches new
+  materials and discovers their previously unknown properties. He holds a strong
+  belief that new physics is participatory and everone can contribute to it. In
+  this spirit he cooperates with organizations such as Polish Children's Fund,
+  and Children's University.  This talk was given at a TEDx event using the TED
+  conference format but independently organized by a local community. Learn more
+  at http://ted.com/tedx"
+eventSlug: embrace-the-other-2014
+cover:
+  image:
+    desktop: talks/the-brighter-face-of-physics/coverPhotos/damnn.png
+    mobile: talks/the-brighter-face-of-physics/coverPhotos/damnn.png
+duration: '"14:41"'
