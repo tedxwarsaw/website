@@ -1,0 +1,23 @@
+collectionId: talk
+slug: sympathy-for-the-future
+displayName: Sympathy for the Future
+talkDescription: A doctorate in artificial intelligence, long-term
+  specialisation in human-computer interaction and an interest in disruptive
+  technologies make Aleksandra Przegalińska an ideal candidate to take a look at
+  the rapid growth of computer technologies and answer the question "What could
+  possibly go wrong?"
+youtubeVideoId: FfLYZ1q-IwM
+speaker: Aleksandra Przegalińska
+speakerProfileImage: talks/sympathy-for-the-future/photos/blank.png
+speakerDescription: A technology lover and a hip hop fan by night, by day,
+  Aleksandra Przegalińska is Assistant Professor at the Center for Research on
+  Organizations and Workplaces and the New Research on Digital Societies Group
+  at the Koźmiński University in Warsaw. This talk was given at a TEDx event
+  using the TED conference format but independently organized by a local
+  community. Learn more at http://ted.com/tedx
+eventSlug: in-a-heartbeat-2016
+cover:
+  image:
+    mobile: talks/sympathy-for-the-future/coverPhotos/aga.png
+    desktop: talks/sympathy-for-the-future/coverPhotos/aga.png
+duration: '"11:13"'
