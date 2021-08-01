@@ -1,0 +1,24 @@
+collectionId: talk
+slug: jak-podrozowac-w-czasie
+displayName: Jak podrożować w czasie
+talkDescription: In Jacek Szycht`s photographs, every single creature captured
+  by the camera comes across as photosexual. Casting the spell of light and
+  shadow on a daily basis, Jacek finds inspiration in music and colour trends in
+  fashion. His recent project merges his love for stories encapsulated in images
+  and his life-long ambition to travel in time.
+youtubeVideoId: 67CucIV4GJQ
+speaker: Jacek Szycht
+speakerProfileImage: talks/jak-podrozowac-w-czasie/photos/blank.png
+speakerDescription: In the spirit of ideas worth spreading, TEDx is a program of
+  local, self-organized events that bring people together to share a TED-like
+  experience. At a TEDx event, TEDTalks video and live speakers combine to spark
+  deep discussion and connection in a small group. These local, self-organized
+  events are branded TEDx, where x = independently organized TED event. The TED
+  Conference provides general guidance for the TEDx program, but individual TEDx
+  events are self-organized.* (*Subject to certain rules and regulations)
+eventSlug: define-your-place-2014
+cover:
+  image:
+    mobile: talks/jak-podrozowac-w-czasie/coverPhotos/limpbizkit.png
+    desktop: talks/jak-podrozowac-w-czasie/coverPhotos/limpbizkit.png
+duration: '"16:40"'
