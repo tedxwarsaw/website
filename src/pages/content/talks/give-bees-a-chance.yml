@@ -1,0 +1,22 @@
+collectionId: talk
+slug: give-bees-a-chance
+displayName: Give Bees a Chance
+talkDescription: In 2014 Kamil's first hive appeared in the Warsaw suburb of
+  Mokotów and now, in addition to running beekeeping workshops and an
+  educational programme, Kamil is looking after some fifty hives in total; some
+  of them are in private gardens dotted around the city but others stand in the
+  strangest places, including roofs of shopping malls.  Fascinated with all
+  things bee for two decades, Kamil Baj finally took a gamble in 2013, and
+  became an urban beekeeper.
+youtubeVideoId: 93EggOtgx7A
+speaker: Kamil Baj
+speakerProfileImage: talks/photos/blank.png
+speakerDescription: This talk was given at a TEDx event using the TED conference
+  format but independently organized by a local community. Learn more at
+  http://ted.com/tedx
+eventSlug: in-a-heartbeat-2016
+cover:
+  image:
+    mobile: talks/give-bees-a-chance/coverPhotos/kamilbaj.png
+    desktop: talks/give-bees-a-chance/coverPhotos/kamilbaj.png
+duration: '"12:18"'
