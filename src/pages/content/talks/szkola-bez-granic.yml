@@ -1,0 +1,24 @@
+collectionId: talk
+slug: szkola-bez-granic
+displayName: Szkoła bez granic
+talkDescription: Physicist and astrophysicist Lech Mankiewicz, works on robotic
+  telescopes in his pursuit of the mysteries of the Universe. With both his feet
+  firmly on the ground, however, he encourages educators and parents to embrace
+  technology in schools. He has also enabled Polish teenagers to discover
+  several planetoids, one of which has been named after him.
+youtubeVideoId: FgyUJd3tKzc
+speaker: Lech Mankiewicz
+speakerProfileImage: talks/szkola-bez-granic/photos/blank.png
+speakerDescription: In the spirit of ideas worth spreading, TEDx is a program of
+  local, self-organized events that bring people together to share a TED-like
+  experience. At a TEDx event, TEDTalks video and live speakers combine to spark
+  deep discussion and connection in a small group. These local, self-organized
+  events are branded TEDx, where x = independently organized TED event. The TED
+  Conference provides general guidance for the TEDx program, but individual TEDx
+  events are self-organized.* (*Subject to certain rules and regulations)
+eventSlug: define-your-place-2014
+cover:
+  image:
+    mobile: talks/szkola-bez-granic/coverPhotos/yeahhh.png
+    desktop: talks/szkola-bez-granic/coverPhotos/yeahhh.png
+duration: '"10:20"'
