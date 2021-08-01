@@ -1,0 +1,24 @@
+collectionId: talk
+slug: accordion
+displayName: Accordion
+talkDescription: The first ever accordionist to play solo accompanied by the
+  National Philharmonic Orchestra of Warsaw, Paweł Janas knows how to harness
+  the forces of vacuum and pressure to create most seductive vibrations and
+  indulge in aerophonic experiments with uncommon instrumental duos. In Paweł`s
+  hands, the accordion becomes modern and striking.
+youtubeVideoId: U1Lqe5cot78
+speaker: Pawel Janas
+speakerProfileImage: talks/accordion/photos/blank.png
+speakerDescription: In the spirit of ideas worth spreading, TEDx is a program of
+  local, self-organized events that bring people together to share a TED-like
+  experience. At a TEDx event, TEDTalks video and live speakers combine to spark
+  deep discussion and connection in a small group. These local, self-organized
+  events are branded TEDx, where x = independently organized TED event. The TED
+  Conference provides general guidance for the TEDx program, but individual TEDx
+  events are self-organized.* (*Subject to certain rules and regulations)
+eventSlug: embrace-the-other-2014
+cover:
+  image:
+    mobile: talks/accordion/coverPhotos/accordion.png
+    desktop: talks/accordion/coverPhotos/accordion.png
+duration: '"17:57"'
