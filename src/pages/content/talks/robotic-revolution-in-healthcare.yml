@@ -1,0 +1,24 @@
+collectionId: talk
+slug: robotic-revolution-in-healthcare
+displayName: Robotic revolution in healthcare
+talkDescription: With degrees in robotics and biomedical engineering, Michał
+  Mikulski advocates a global robotics revolution aimed at enhancing physical
+  training. To that end he is heading up a company which is developing and
+  producing robots and exoskeletons designed to transform physiotherapy and
+  healthcare.
+youtubeVideoId: Y9xyNdpbr94
+speaker: Michał Mikulski
+speakerProfileImage: talks/robotic-revolution-in-healthcare/photos/blank.png
+speakerDescription: In the spirit of ideas worth spreading, TEDx is a program of
+  local, self-organized events that bring people together to share a TED-like
+  experience. At a TEDx event, TEDTalks video and live speakers combine to spark
+  deep discussion and connection in a small group. These local, self-organized
+  events are branded TEDx, where x = independently organized TED event. The TED
+  Conference provides general guidance for the TEDx program, but individual TEDx
+  events are self-organized.* (*Subject to certain rules and regulations)
+eventSlug: embrace-the-other-2014
+cover:
+  image:
+    mobile: talks/robotic-revolution-in-healthcare/coverPhotos/massive.png
+    desktop: talks/robotic-revolution-in-healthcare/coverPhotos/massive.png
+duration: '"13:21"'
