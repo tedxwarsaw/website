@@ -1,0 +1,23 @@
+collectionId: talk
+slug: performance
+displayName: Performance
+talkDescription: A little taste of what Woodsmoke can do.
+youtubeVideoId: mnRPSfmR1Bs
+speaker: Woodsmoke
+speakerProfileImage: talks/performance/photos/blank.png
+speakerDescription: "Woodsmoke Avantgarde Trio is a project founded by two young
+  musicians from Poland accompanied by a few other instrumentalists. Their goal
+  is to mix dense old-time ambience with progressive melodies and rhythms into
+  music sought by fans of modern instrumental art. To achieve this they exploit
+  sounds of different acoustic instruments: from piano, guitars and strings to
+  accordion, flutes and cellos. Their inspiration comes from many genres such as
+  ambient, jazz, post rock, folk and classical music. They have just finished
+  working on their debut album ’Places from a distance'.  This talk was given at
+  a TEDx event using the TED conference format but independently organized by a
+  local community. Learn more at http://ted.com/tedx"
+eventSlug: embrace-the-other-2014
+cover:
+  image:
+    mobile: talks/performance/coverPhotos/notaperfomrnamce.png
+    desktop: talks/performance/coverPhotos/notaperfomrnamce.png
+duration: '"17:43"'
