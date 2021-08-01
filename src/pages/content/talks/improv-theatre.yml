@@ -1,0 +1,24 @@
+collectionId: talk
+slug: improv-theatre
+displayName: Improv theatre
+talkDescription: Improvised performance involving the TEDx audience - improvised
+  short performances based on words suggested by the viewers.
+youtubeVideoId: vCaV19Zct2g
+speaker: Hofesinka
+speakerProfileImage: talks/improv-theatre/photos/blank.png
+speakerDescription: " HOFESINKA is a group of comedians performing one of the
+  most spectacular and lively types of comedy – improvisation. Improv is a
+  performance created live, by actors making it up in front of the audience.
+  Constant interaction with the viewers, their active contributions to the show
+  and the choice of topics limited only by imagination guarantee quality fun
+  regardless of time, place and circumstances. Trained at the famous iO Chicago
+  improvisational theatre, they define their style as a combination of the
+  Chicago and Lublin-Mazovian improv schools.  This talk was given at a TEDx
+  event using the TED conference format but independently organized by a local
+  community. Learn more at http://ted.com/tedx"
+eventSlug: embrace-the-other-2014
+cover:
+  image:
+    mobile: talks/improv-theatre/coverPhotos/hofe.png
+    desktop: talks/improv-theatre/coverPhotos/hofe.png
+duration: '"11:53"'
