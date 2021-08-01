@@ -1,0 +1,24 @@
+collectionId: talk
+slug: inter-species-communication
+displayName: Inter-species communication
+talkDescription: "Natalia Strokowska loves exploring the world of animals: both
+  domestic pets and wildlife around the globe. A freshly minted doctor of
+  veterinary medicine, she has been travelling for years, getting experience in
+  both clinical and research fields and has recently spoken at the World
+  Veterinary Congress in Prague."
+youtubeVideoId: kbofuXgjFU8
+speaker: Natalia Strokowska
+speakerProfileImage: talks/inter-species-communication/photos/blank.png
+speakerDescription: In the spirit of ideas worth spreading, TEDx is a program of
+  local, self-organized events that bring people together to share a TED-like
+  experience. At a TEDx event, TEDTalks video and live speakers combine to spark
+  deep discussion and connection in a small group. These local, self-organized
+  events are branded TEDx, where x = independently organized TED event. The TED
+  Conference provides general guidance for the TEDx program, but individual TEDx
+  events are self-organized.* (*Subject to certain rules and regulations)
+eventSlug: embrace-the-other-2014
+cover:
+  image:
+    mobile: talks/inter-species-communication/coverPhotos/getintheframe.png
+    desktop: talks/inter-species-communication/coverPhotos/getintheframe.png
+duration: '"11:16"'
