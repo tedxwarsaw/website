@@ -1,0 +1,20 @@
+collectionId: talk
+slug: a-story-a-story-let-it-come-let-it-go
+displayName: A story, a story! Let it come, let it go!
+talkDescription: In the spirit of ideas worth spreading, TEDx is a program of
+  local, self-organized events that bring people together to share a TED-like
+  experience. At a TEDx event, TEDTalks video and live speakers combine to spark
+  deep discussion and connection in a small group.
+youtubeVideoId: 7MgpAG2sobk
+speaker: Jan Blake
+speakerProfileImage: talks/photos/blank.png
+speakerDescription: These local, self-organized events are branded TEDx, where x
+  = independently organized TED event. The TED Conference provides general
+  guidance for the TEDx program, but individual TEDx events are self-organized.*
+  (*Subject to certain rules and regulations)
+eventSlug: define-your-place-2014
+cover:
+  image:
+    mobile: talks/coverPhotos/sugar.png
+    desktop: talks/coverPhotos/sugar.png
+duration: '"18:18"'
