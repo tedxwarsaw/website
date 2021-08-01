@@ -1,0 +1,17 @@
+collectionId: talk
+slug: music-performance
+displayName: Music performance
+talkDescription: Agacello performs Brazilian Story - "Believe in your own musical intuition"
+youtubeVideoId: hg80VodpaBw
+speaker: Agacello
+speakerProfileImage: talks/music-performance/photos/blank.png
+speakerDescription: " Agnieszka Teodorowska, a.k.a. Agacello, combines her love
+  for the cello with passion for Brazilian and folk music.  This talk was given
+  at a TEDx event using the TED conference format but independently organized by
+  a local community. Learn more at https://www.ted.com/tedx"
+eventSlug: in-a-heartbeat-2016
+cover:
+  image:
+    mobile: talks/music-performance/coverPhotos/agacell.png
+    desktop: talks/music-performance/coverPhotos/agacell.png
+duration: '"16:57"'
