@@ -1,0 +1,25 @@
+collectionId: talk
+slug: insights-of-peoples-everyday-lives
+displayName: Insights of people's everyday lives
+talkDescription: Oskar Korkman -- consumer insights director at Nokia, with
+  anthropology/ethnography and business design background; currently works on
+  global understanding of people's ways of connecting and building
+  relationships. Oskar will talk about the importance of developing deep
+  insights in our everyday lives, and what is stable and essential in social
+  networks.
+youtubeVideoId: Kov4J668P1Q
+speaker: Oskar Korkman
+speakerProfileImage: talks/insights-of-peoples-everyday-lives/photos/blank.png
+speakerDescription: " In the spirit of ideas worth spreading, TEDx is a program
+  of local, self-organized events that bring people together to share a TED-like
+  experience. At a TEDx event, TEDTalks video and live speakers combine to spark
+  deep discussion and connection in a small group. These local, self-organized
+  events are branded TEDx, where x = independently organized TED event. The TED
+  Conference provides general guidance for the TEDx program, but individual TEDx
+  events are self-organized.* (*Subject to certain rules and regulations)"
+eventSlug: looking-in-looking-out-2011
+cover:
+  image:
+    mobile: talks/insights-of-peoples-everyday-lives/coverPhotos/oskar.png
+    desktop: talks/insights-of-peoples-everyday-lives/coverPhotos/oskar.png
+duration: '"14:04"'
