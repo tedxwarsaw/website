@@ -1,0 +1,30 @@
+collectionId: event
+slug: tedx-warsaw-2010
+displayName: TEDxWarsaw 2010
+category: Main Event
+city: Warsaw
+date: 19/05/2010
+hook: The first TEDxWarsaw event.
+description: The first TEDxWarsaw event.
+cover:
+  variant: dark
+  button:
+    text: attend
+    link: https://example.com/
+    show: false
+  image:
+    desktop: events/tedx-warsaw-2010/coverPhotos/blank.png
+    mobile: events/tedx-warsaw-2010/coverPhotos/blank.png
+isOnline: false
+location:
+  city: Warsaw
+  displayName: unspecified
+  mapIframe: unspecified
+  image: events/tedx-warsaw-2010/locationPhoto/blank.png
+callToAction:
+  title: TEDxWarsaw 2010 Talks
+  subtitle: Available now
+  buttonText: Watch the talks
+  buttonUrl: https://www.youtube.com/watch?list=PLsRNoUx8w3rNs8St8dDsmJTgs_I3uaH0W&v=Qsm3d7kWShg
+ticketProviderLogo: events/tedx-warsaw-2010/partnerLogos/blank.png
+eventPhotos: []
