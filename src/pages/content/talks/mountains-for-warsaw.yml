@@ -1,0 +1,26 @@
+collectionId: talk
+slug: mountains-for-warsaw
+displayName: Mountains for Warsaw
+talkDescription: Grzegorz Piątek is an architecture critic, curator and an
+  editor at Architektura-murator magazine. He has written widely on design and
+  architecture, curated a number of successful exhibits, including one at the
+  Venice Architecture Biennale in 2008 and is the Creative Director of Warsaw as
+  a candidate for the title of European Capital of Culture in 2016. Grzegorz
+  talks about a novel idea meant to halt urban sprawl - why not put a ring of
+  mountains around the city. About TEDx, x=independently organized TED event.
+youtubeVideoId: zBlyrXH-uLM
+speaker: Grzegorz Piątek
+speakerProfileImage: talks/mountains-for-warsaw/photos/blank.png
+speakerDescription: In the spirit of ideas worth spreading, TEDx is a program of
+  local, self- organized events that bring people together to share a TED-like
+  experience. At a TEDx event, TEDTalks video and live speakers combine to spark
+  deep discussion and connection in a small group. These local, self-organized
+  events are branded TEDx, where x=independently organized TED event. The TED
+  Conference provides general guidance for the TEDx program, but individual TEDx
+  events are self-organized.* (*Subject to certain rules and regulations)
+eventSlug: looking-in-looking-out-2011
+cover:
+  image:
+    mobile: talks/mountains-for-warsaw/coverPhotos/gregori.png
+    desktop: talks/mountains-for-warsaw/coverPhotos/gregori.png
+duration: '"17:00"'
