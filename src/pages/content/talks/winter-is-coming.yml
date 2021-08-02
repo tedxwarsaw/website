@@ -1,0 +1,17 @@
+collectionId: talk
+slug: winter-is-coming
+displayName: "Winter is coming: Nine months in the Antarctic"
+talkDescription: "Brien Barnett comes from Montana but has been living in Warsaw
+  for some time now. In his talk he takes us on a journey through Antarctica and
+  tells us what life is like there in winter. "
+youtubeVideoId: oPDaWYUCn8Y
+speaker: Brien Barnett
+speakerProfileImage: talks/winter-is-coming/photos/blank.png
+speakerDescription: The presentation was delivered at a local TEDx conference,
+  organized independently of the TED conference.
+eventSlug: inspire-to-be-inspired-2012
+cover:
+  image:
+    mobile: talks/coverPhotos/1116.png
+    desktop: talks/coverPhotos/1116.png
+duration: '"11:16"'
