@@ -1,0 +1,24 @@
+collectionId: talk
+slug: if-u-want-to-do-biology-learn-maths
+displayName: If you want to do Biology learn Maths
+talkDescription: Paweł Golik -- geneticist and molecular biologist. Heads the
+  Institute of Genetics and Biotechnology at the University of Warsaw. Works on
+  genetics and evolution of mitochondria, RNA processing and mitochondrial
+  diseases. Paweł talked about how the Human Genome Project changed our views on
+  genetics.
+youtubeVideoId: g4mczIekQPo
+speaker: Pawel Golik
+speakerProfileImage: talks/if-u-want-to-do-biology-learn-maths/photos/blank.png
+speakerDescription: " In the spirit of ideas worth spreading, TEDx is a program
+  of local, self-organized events that bring people together to share a TED-like
+  experience. At a TEDx event, TEDTalks video and live speakers combine to spark
+  deep discussion and connection in a small group. These local, self-organized
+  events are branded TEDx, where x = independently organized TED event. The TED
+  Conference provides general guidance for the TEDx program, but individual TEDx
+  events are self-organized.* (*Subject to certain rules and regulations)"
+eventSlug: looking-in-looking-out-2011
+cover:
+  image:
+    mobile: talks/if-u-want-to-do-biology-learn-maths/coverPhotos/sideways.png
+    desktop: talks/if-u-want-to-do-biology-learn-maths/coverPhotos/sideways.png
+duration: '"17:33"'
