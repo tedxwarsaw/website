@@ -1,0 +1,26 @@
+collectionId: talk
+slug: kropka-w-kropke
+displayName: Kropka w kropkę
+talkDescription: "Opowieść  o tym jak dużo połączenia o nas mówią i o tym jak
+  inni mogą to wykorzystać. Czym są kropki i kreski w sieci. Link do prezentacji
+  wyświetlanej w trakcie wystąpienia: https://www.mimuw.edu.pl/~oski/files/..."
+youtubeVideoId: l8TjefKyr3Y
+speaker: Oskar Skibski
+speakerProfileImage: talks/kropka-w-kropke/photos/blank.png
+speakerDescription: Oskar to absolwent Informatyki na Uniwersytecie Warszawskim,
+  w roku 2014 uzyskał tytuł doktora. Obecnie zatrudniony jako badacz
+  uniwersytecki i oddany wykładowca. Zarządza dwoma dużymi projektami o
+  całkowitym budżecie ponad jednego miliona złotych. Jego specjalizacja to
+  rozwiązania kooperacyjne w teorii gier i analiza sieci. Efektem jego badań są
+  między innymi analizy sieci społecznościowych i siatek terrorystycznych.
+  Prezentował swoje osiągnięcia naukowe na całym świecie, od Buenos Aires i San
+  Francisco po Singapur i Tokio. Poza swoją działalnością na uczelni
+  współpracuje z Ministerstwem Finansów w zakresie analizy i oceny ryzyka oraz
+  zapobieganiu praniu brudnych pieniędzy i finansowaniu działalności organizacji
+  terrorystycznych.
+eventSlug: crunchtime-2017
+cover:
+  image:
+    mobile: talks/kropka-w-kropke/coverPhotos/morelikewscibski.png
+    desktop: talks/kropka-w-kropke/coverPhotos/morelikewscibski.png
+duration: '"12:59"'
