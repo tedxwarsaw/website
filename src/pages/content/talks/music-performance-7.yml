@@ -1,0 +1,18 @@
+collectionId: talk
+slug: music-performance
+displayName: Music performance
+talkDescription: Stefan Nowakowski -- double bass, bass guitar // Wojtek
+  Oleksiak -- percussion, drum instruments // Michał Przerwa-Tetmajer --
+  electric guitar // Michał Załęski -- keyboard instruments.
+youtubeVideoId: XThEHCZTQaA
+speaker: Jazzpospolita
+speakerProfileImage: talks/music-performance/photos/blank.png
+speakerDescription: Jazzpospolita -- a band founded in 2008 in Warsaw, creating
+  music on the border of jazz, post-rock and electronics. During the eight years
+  of its activity it has released six albums and played 300 concerts.
+eventSlug: crunchtime-2017
+cover:
+  image:
+    desktop: talks/music-performance/coverPhotos/yeahtheresthemusicperformance.png
+    mobile: talks/music-performance/coverPhotos/yeahtheresthemusicperformance.png
+duration: '"24:48"'
