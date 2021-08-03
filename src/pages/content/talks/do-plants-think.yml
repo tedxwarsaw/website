@@ -1,0 +1,25 @@
+collectionId: talk
+slug: do-plants-think
+displayName: Do Plants Think
+talkDescription: Stanisław Karpiński -- scientist, professor at Warsaw
+  University of Life Sciences, whose research in molecular biology of plants,
+  genetics and biophysics has resulted in publication in "Nature" and "Plant
+  Cell". Professor Karpinski will talk about his (and Magdalena
+  Szechyńska-Hebla) investigation on the secret life of plants. TEDxWarsaw is a
+  local, independently organised TEDx event, operated under license from TED.
+youtubeVideoId: PycwHxwpxaQ
+speaker: Stanislaw Karpinski
+speakerProfileImage: talks/do-plants-think/photos/blank.png
+speakerDescription: In the spirit of ideas worth spreading, TEDx is a program of
+  local, self-organized events that bring people together to share a TED-like
+  experience. At a TEDx event, TEDTalks video and live speakers combine to spark
+  deep discussion and connection in a small group. These local, self-organized
+  events are branded TEDx, where x = independently organized TED event. The TED
+  Conference provides general guidance for the TEDx program, but individual TEDx
+  events are self-organized. (Subject to certain rules and regulations.)
+eventSlug: looking-in-looking-out-2011
+cover:
+  image:
+    mobile: talks/do-plants-think/coverPhotos/pleasestfu.png
+    desktop: talks/do-plants-think/coverPhotos/pleasestfu.png
+duration: '"16:57"'
