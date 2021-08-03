@@ -1,0 +1,25 @@
+collectionId: talk
+slug: clarity-from-above-on-drones-data-and-fresh-perspectives
+displayName: Clarity from above - On drones, data and fresh perspectives
+talkDescription: Talk about getting stuff together and innovating withouth
+  inventing. How mix of drones, photogrammetry from XIX century, cloud and HTML5
+  can solve current construction challenges of safety and improve quality? The
+  future and it tech is already here – crunch it!
+youtubeVideoId: NSGTEPTkEyE
+speaker: Adam Wiśniewski
+speakerProfileImage: talks/clarity-from-above-on-drones-data-and-fresh-perspectives/photos/blank.png
+speakerDescription: Adam Wiśniewski is a director at PwC Poland in Drone Powered
+  Solutions team. Adam leads the team which consists of professionals with
+  various background – from management consultants with business experience to
+  engineers and photogrammetry and cartography specialists. In recent years, he
+  has focused on practical implementation of drone enabled services, such as
+  data gathering, cloud GIS/ortho processing and asset maintenance and
+  construction supervision. He holds a Master’s Degree from Warsaw School of
+  Economics in Finance and Banking, as well as BVLOS Certificate for drone
+  operators.
+eventSlug: crunchtime-2017
+cover:
+  image:
+    mobile: talks/clarity-from-above-on-drones-data-and-fresh-perspectives/coverPhotos/icantbelieveyouvedonethis.png
+    desktop: talks/clarity-from-above-on-drones-data-and-fresh-perspectives/coverPhotos/icantbelieveyouvedonethis.png
+duration: '"21:00"'
