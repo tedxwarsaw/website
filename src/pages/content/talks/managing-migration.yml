@@ -1,0 +1,16 @@
+collectionId: talk
+slug: managing-migration
+displayName: Managing migration
+talkDescription: "History repeates itself: the refugee crisis - context and details."
+youtubeVideoId: 1bZPVwKaEWk
+speaker: Wojtek Wilk
+speakerProfileImage: talks/managing-migration/photos/blank.png
+speakerDescription: Wojtek is the President of the Polish Center for
+  International Aid (PCPM), which provides humanitarian and development
+  assistance in 8 countries in Asia, Africa and Europe. Former SGH lecturer.
+eventSlug: crunchtime-2017
+cover:
+  image:
+    mobile: talks/managing-migration/coverPhotos/polskinicolascage.png
+    desktop: talks/managing-migration/coverPhotos/polskinicolascage.png
+duration: '"16:49"'
