@@ -1,0 +1,24 @@
+collectionId: talk
+slug: architecture-and-national-identity
+displayName: Architecture and national identity
+talkDescription: Marek Krawczyński  - architect and pianist from Sydney and
+  Warsaw, responsible for the rebuilding of the Sydney Opera House and an
+  advocate for architecture as a means of fostering national identity. For more
+  information visit http://tedxwarsaw.com. About TEDx, x=independently organized
+  event.
+youtubeVideoId: lXCPKp4chLU
+speaker: Mark Krawczyński
+speakerProfileImage: talks/architecture-and-national-identity/photos/blank.png
+speakerDescription: In the spirit of ideas worth spreading, TEDx is a program of
+  local, self-organized events that bring people together to share a TED-like
+  experience. At a TEDx event, TEDTalks video and live speakers combine to spark
+  deep discussion and connection in a small group. These local, self-organized
+  events are branded TEDx, where x = independently organized TED event. The TED
+  Conference provides general guidance for the TEDx program, but individual TEDx
+  events are self-organized. (Subject to certain rules and regulations.)
+eventSlug: looking-in-looking-out-2011
+cover:
+  image:
+    mobile: talks/architecture-and-national-identity/coverPhotos/mark.png
+    desktop: talks/architecture-and-national-identity/coverPhotos/mark.png
+duration: '"17:49"'
