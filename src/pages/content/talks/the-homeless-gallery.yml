@@ -1,0 +1,23 @@
+collectionId: talk
+slug: the-homeless-gallery
+displayName: The Homeless Gallery
+talkDescription: Tomek Sikora - photographer who is in demand around the world
+  as much as an advertising man as a maker of art images. He talked about the
+  "Homeless Gallery" -- a little idea which has grown into a rapidly growing
+  international art movement.
+youtubeVideoId: u8XaK3jEePM
+speaker: Tomek Sikora
+speakerProfileImage: talks/the-homeless-gallery/photos/blank.png
+speakerDescription: " In the spirit of ideas worth spreading, TEDx is a program
+  of local, self-organized events that bring people together to share a TED-like
+  experience. At a TEDx event, TEDTalks video and live speakers combine to spark
+  deep discussion and connection in a small group. These local, self-organized
+  events are branded TEDx, where x = independently organized TED event. The TED
+  Conference provides general guidance for the TEDx program, but individual TEDx
+  events are self-organized.* (*Subject to certain rules and regulations)"
+eventSlug: looking-in-looking-out-2011
+cover:
+  image:
+    mobile: talks/the-homeless-gallery/coverPhotos/reallyslow.png
+    desktop: talks/the-homeless-gallery/coverPhotos/reallyslow.png
+duration: '"6:00"'
