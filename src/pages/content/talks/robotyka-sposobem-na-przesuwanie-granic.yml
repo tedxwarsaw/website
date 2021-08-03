@@ -1,0 +1,27 @@
+collectionId: talk
+slug: robotyka-sposobem-na-przesuwanie-granic
+displayName: Robotyka sposobem na przesuwanie granic
+talkDescription: "Robotyka daje możliwość wyjścia poza ograniczenia natury. "
+youtubeVideoId: pJuP13l9dw0
+speaker: Jakub Kreft & Marcin Sadowski
+speakerProfileImage: talks/robotyka-sposobem-na-przesuwanie-granic/photos/blank.png
+speakerDescription: "Kuba swoją przygodę z robotyką zaczął już na przełomie
+  gimnazjum i liceum, kiedy to w ręce wpadł mu robotyczny zestaw klocków LEGO.
+  Jest Prezesem Koła Naukowego Automatyki i Robotyki Robomatic, a w tym roku
+  również głównym koordynatorem Turnieju Robotów mobilnych Robomaticon: Turniej
+  Robotów Mobilnych 2017! Jego największym sukcesem było zdobycie finansowania
+  na projekt autonomicznego robota wyścigowego na międzynarodowe zawody w
+  Kanadzie już na pierwszym roku studiów. W wolnych chwilach jest fanatykiem
+  nurkowania, płyt winylowych i dobrej whisky.  Marcin studiuje Mechatronikę na
+  Warsaw University of Technology. Już na pierwszym roku wstąpił do koła
+  naukowego “Robomatic”, a w 2016 r. wraz ze swoim zespołem przygotował
+  Robomaticon: Turniej Robotów Mobilnych. To wydarzenie z roku na rok spotyka
+  się z coraz większym zainteresowaniem mediów i publiczności. Marcin rozwija
+  swoje umiejętności programistyczne również poza uczelnią. Założył z bratem i
+  kolegą firmę tworzącą aplikacje mobilne i webowe. "
+eventSlug: crunchtime-2017
+cover:
+  image:
+    mobile: talks/robotyka-sposobem-na-przesuwanie-granic/coverPhotos/hesashorty.png
+    desktop: talks/robotyka-sposobem-na-przesuwanie-granic/coverPhotos/hesashorty.png
+duration: '"11:28"'
