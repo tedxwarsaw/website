@@ -1,0 +1,25 @@
+collectionId: talk
+slug: steelpan-band
+displayName: Steelpan Band
+talkDescription: Wojtek Sówka -- artist and musician who has been building and
+  playing percussion instruments for twenty-five years. Recently Wojtek and an
+  international team of friends constructed a set of twelve giant drums (largest
+  in the World.) Wojtek, a practitioner of the Caribbean art of making and
+  playing steelpans, will tell his story and play for us. TEDxWarsaw is a local,
+  independently organised TEDx event, operated under license from TED.
+youtubeVideoId: 5sYSfJEKpYw
+speaker: Wojtek Sowka
+speakerProfileImage: talks/steelpan-band/photos/blank.png
+speakerDescription: In the spirit of ideas worth spreading, TEDx is a program of
+  local, self-organized events that bring people together to share a TED-like
+  experience. At a TEDx event, TEDTalks video and live speakers combine to spark
+  deep discussion and connection in a small group. These local, self-organized
+  events are branded TEDx, where x = independently organized TED event. The TED
+  Conference provides general guidance for the TEDx program, but individual TEDx
+  events are self-organized. (Subject to certain rules and regulations.)
+eventSlug: looking-in-looking-out-2011
+cover:
+  image:
+    desktop: talks/steelpan-band/coverPhotos/anotherdayanothermusicperformance.png
+    mobile: talks/steelpan-band/coverPhotos/anotherdayanothermusicperformance.png
+duration: '"12:29"'
