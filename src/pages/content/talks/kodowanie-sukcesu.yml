@@ -9,7 +9,7 @@ talkDescription: Myślisz, że stresu należy unikać za wszelką cenę? Wydaje 
   jest antykruchość i jak ją osiągnąć.
 youtubeVideoId: gvOmYcvT5fE
 speaker: Witold Jankowski
-speakerProfileImage: talks/photos/blank.png
+speakerProfileImage: talks/kodowanie-sukcesu/photos/blank.png
 speakerDescription: " Redaktor naczelny „Harvard Business Review Polska” oraz
   prezes zarządu ICAN Institute. Jeden z najbardziej doświadczonych konsultantów
   strategicznych w Europie. Jest uznanym mówcą konferencyjnym i inspiracyjnym.
@@ -21,6 +21,6 @@ speakerDescription: " Redaktor naczelny „Harvard Business Review Polska” ora
 eventSlug: men-and-women-2018
 cover:
   image:
-    mobile: talks/coverPhotos/broo.png
-    desktop: talks/coverPhotos/broo.png
+    mobile: talks/kodowanie-sukcesu/coverPhotos/broo.png
+    desktop: talks/kodowanie-sukcesu/coverPhotos/broo.png
 duration: '"16:13"'

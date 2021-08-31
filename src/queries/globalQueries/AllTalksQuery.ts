@@ -41,36 +41,41 @@ export const queryForAllTalks = async (
 
   const talksData = await Promise.all(
     talks.map(async (talk) => {
-      const coverMobile = await getFluidImage({
-        graphql,
-        path: talk.cover.image.mobile,
-        quality: 90,
-        sizes: "(max:-width: 768px)",
-      });
-      const coverDesktop = await getFluidImage({
-        graphql,
-        path: talk.cover.image.desktop,
-        quality: 90,
-        sizes: "(max:-width: 2000px)",
-      });
+      try {
+        const coverMobile = await getFluidImage({
+          graphql,
+          path: talk.cover.image.mobile,
+          quality: 90,
+          sizes: "(max:-width: 768px)",
+        });
+        const coverDesktop = await getFluidImage({
+          graphql,
+          path: talk.cover.image.desktop,
+          quality: 90,
+          sizes: "(max:-width: 2000px)",
+        });
 
-      const cover = {
-        image: {
-          desktop: coverDesktop,
-          mobile: coverMobile,
-        },
-      };
+        const cover = {
+          image: {
+            desktop: coverDesktop,
+            mobile: coverMobile,
+          },
+        };
 
-      const {
-        data: { event },
-      } = await graphql(eventQuery, {
-        eventSlug: talk.eventSlug,
-      });
+        const {
+          data: { event },
+        } = await graphql(eventQuery, {
+          eventSlug: talk.eventSlug,
+        });
 
-      allEvents[talk.eventSlug] = event.displayName;
-      const date = new Date(event.date).getTime();
-      const duration = talk.duration.replace('"', "").replace('"', "");
-      return { ...talk, cover, date, duration };
+        allEvents[talk.eventSlug] = event.displayName;
+        const date = new Date(event.date).getTime();
+        const duration = talk.duration.replace('"', "").replace('"', "");
+        return { ...talk, cover, date, duration };
+      } catch (err) {
+        console.error(`thrown at talk ${JSON.stringify(talk)}`);
+        throw err;
+      }
     })
   );
 

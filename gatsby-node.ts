@@ -1,15 +1,38 @@
 import path from "path";
-import { queryForProps as queryForEventProps } from "./src/queries/EventPageQuery";
-import { queryForProps as queryForHomeProps } from "./src/queries/IndexPageQuery";
-import { queryForProps as queryForAttendProps } from "./src/queries/AttendPageQuery";
-import { queryForProps as queryForAboutProps } from "./src/queries/AboutPageQuery";
-import { queryForProps as queryForWatchProps } from "./src/queries/WatchPageQuery";
-import { queryForProps as queryForSpeakersProps } from "./src/queries/SpeakersPageQuery";
-import { queryForProps as queryForVolunteerProps } from "./src/queries/VolunteerPageQuery";
-import { queryForProps as queryForTalkProps } from "./src/queries/TallkPageQuery";
-import { queryForProps as queryForPartnersProps } from "./src/queries/PartnersPageQuery";
-import { queryForProps as queryForPrivacyPolicyProps } from "./src/queries/PrivacyPolicyPageQuery";
-import { queryForProps as queryForCookiePolicyProps } from "./src/queries/CookiePolicyPageQuery";
+import { queryForProps as _queryForEventProps } from "./src/queries/EventPageQuery";
+import { queryForProps as _queryForHomeProps } from "./src/queries/IndexPageQuery";
+import { queryForProps as _queryForAttendProps } from "./src/queries/AttendPageQuery";
+import { queryForProps as _queryForAboutProps } from "./src/queries/AboutPageQuery";
+import { queryForProps as _queryForWatchProps } from "./src/queries/WatchPageQuery";
+import { queryForProps as _queryForSpeakersProps } from "./src/queries/SpeakersPageQuery";
+import { queryForProps as _queryForVolunteerProps } from "./src/queries/VolunteerPageQuery";
+import { queryForProps as _queryForTalkProps } from "./src/queries/TallkPageQuery";
+import { queryForProps as _queryForPartnersProps } from "./src/queries/PartnersPageQuery";
+import { queryForProps as _queryForPrivacyPolicyProps } from "./src/queries/PrivacyPolicyPageQuery";
+import { queryForProps as _queryForCookiePolicyProps } from "./src/queries/CookiePolicyPageQuery";
+
+const logArgsOnError = <T>(fn: (...args: any[]) => Promise<T>) => async (
+  ...args: any[]
+): Promise<T> => {
+  try {
+    return await fn(...args);
+  } catch (err) {
+    console.error(`${fn.name} threw with args ${JSON.stringify(args)}`);
+    throw err;
+  }
+};
+
+const queryForEventProps = logArgsOnError(_queryForEventProps);
+const queryForHomeProps = logArgsOnError(_queryForHomeProps);
+const queryForAttendProps = logArgsOnError(_queryForAttendProps);
+const queryForAboutProps = logArgsOnError(_queryForAboutProps);
+const queryForWatchProps = logArgsOnError(_queryForWatchProps);
+const queryForSpeakersProps = logArgsOnError(_queryForSpeakersProps);
+const queryForVolunteerProps = logArgsOnError(_queryForVolunteerProps);
+const queryForTalkProps = logArgsOnError(_queryForTalkProps);
+const queryForPartnersProps = logArgsOnError(_queryForPartnersProps);
+const queryForPrivacyPolicyProps = logArgsOnError(_queryForPrivacyPolicyProps);
+const queryForCookiePolicyProps = logArgsOnError(_queryForCookiePolicyProps);
 
 const pageQuery = `#graphql
   query Page {
@@ -85,7 +108,6 @@ export const createPages = async ({ actions, graphql }) => {
     })
   );
 
-
   const eventsResult = await graphql(eventQuery);
 
   if (eventsResult.errors) {
@@ -122,7 +144,7 @@ export const createPages = async ({ actions, graphql }) => {
       const props = await queryForTalkProps(graphql, node.slug);
       createPage({
         path: `talk/${slug}`,
-        component: path.resolve(`src/templates/TalkPage.tsx`) ,
+        component: path.resolve(`src/templates/TalkPage.tsx`),
         context: {
           props,
         },

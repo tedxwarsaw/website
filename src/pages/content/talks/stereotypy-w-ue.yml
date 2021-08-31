@@ -6,7 +6,7 @@ talkDescription: Rafał Trzaskowski opowiada o tym, co Unia Europejska uczyniła
   unijnych.
 youtubeVideoId: nPGVm6OesQk
 speaker: Rafał Trzaskowski
-speakerProfileImage: talks/photos/blank.png
+speakerProfileImage: talks/stereotypy-w-ue/photos/blank.png
 speakerDescription: Rafał Trzaskowski – członek Parlamentu Europejskiego, jeden
   z czołowych polskich ekspertów w Komisji Europejskiej. Prowadzi zajęcia na
   temat procesu podejmowania decyzji w instytucjach Unii Europejskiej i
@@ -15,6 +15,6 @@ speakerDescription: Rafał Trzaskowski – członek Parlamentu Europejskiego, je
 eventSlug: inspire-to-be-inspired-2012
 cover:
   image:
-    mobile: talks/coverPhotos/rafalt.png
-    desktop: talks/coverPhotos/rafalt.png
+    mobile: talks/stereotypy-w-ue/coverPhotos/rafalt.png
+    desktop: talks/stereotypy-w-ue/coverPhotos/rafalt.png
 duration: '"12:10"'
