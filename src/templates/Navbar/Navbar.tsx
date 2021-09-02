@@ -69,15 +69,13 @@ export const NavbarTemplate = (props: Props) => {
 
   return (
     <>
-      <header className="main-grid h-16 shadow">
-        <div className="col-span-full flex flex-row items-center justify-center">
-          <div className="flex flex-row items-center h-full w-full justify-between max-w-screen-xl">
+      <header className="seamless-grid h-16 shadow">
+        <div className="col-span-full flex flex-row items-center justify-center pl-6">
+          <div className="flex flex-row items-center h-full w-full justify-between">
             <Link to="/" className="h-10 flex flex-row items-center">
               <img className="h-full" src={logoPath} alt="Logo" />
             </Link>
-            <div
-              className={`h-full hidden lg:flex flex-row items-center uppercase font-semibold navbar-links`}
-            >
+            <div className="h-full hidden lg:flex flex-row items-center uppercase font-semibold navbar-links">
               {navbarLinks.map((link, idx) => (
                 <Link
                   className={`h-full flex flex-row items-center mr-10 

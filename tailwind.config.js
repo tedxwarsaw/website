@@ -34,5 +34,5 @@ module.exports = {
       scale: ["active"],
     },
   },
-  plugins: []
+  plugins: [],
 };
