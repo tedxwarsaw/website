@@ -34,13 +34,7 @@ export const SearchBarForm = ({
             placeholder="Search"
             onChange={handleSearchChange}
           />
-          <div
-            className={`search-icon rounded-r-md ${
-              activeFilters.searchPhrase !== ""
-                ? "bg-customRed text-white"
-                : " text-customRed"
-            }`}
-          >
+          <div className="search-icon rounded-r-md text-customRed">
             <AiOutlineSearch className="text-2xl" />
           </div>
         </div>
