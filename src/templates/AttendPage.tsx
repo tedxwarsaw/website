@@ -134,8 +134,8 @@ export const AttendPageTemplate = (props: Props) => (
     <EventsList events={props.events} categories={props.categories} />
 
     <div className="main-grid-full-span bg-customLightGrey pt-10 pb-20 relative">
-      <Lines wider={true} onlyHorizontal={true} />
       <div className="flex main-grid">
+        <Lines onlyHorizontal={true} />
         <div className="px-5 md:px-0 ">
           <div className="inner-grid md:text-left text-center">
             <div className="block">

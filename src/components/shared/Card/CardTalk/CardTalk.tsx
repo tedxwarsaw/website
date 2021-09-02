@@ -26,7 +26,7 @@ export const CardTalk = ({
   noBadge,
 }: CardTalkProps) => (
   <Link to={`/talk/${slug}`}>
-    <div className="border-b-4 pb-5 pt-2 md:pt-3 border-customTransparent h-full flex flex-col card-container">
+    <div className="border-b-4 pb-5 pt-2 md:pt-3 border-customTransparent h-full flex flex-col card-container z-10">
       <div className="relative card-image-container">
         <Img
           className="w-full h-full md:hidden"

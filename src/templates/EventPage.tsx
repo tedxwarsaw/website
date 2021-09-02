@@ -88,12 +88,12 @@ export const EventPageTemplate = (props: Props) => {
       />
       <div className="inner-grid py-20 space-y-10 xl:space-y-0 relative">
         <Lines wider={true}/>
-        <div className="font-bold text-3xl md:col-span-2 xl:col-span-1">
+        <div className="font-bold text-3xl md:col-span-2 xl:col-span-1 z-10">
           {props.hook}
         </div>
-        <div className="text-lg hidden md:block">{descriptionParts[0]}</div>
-        <div className="text-lg hidden md:block">{descriptionParts[1]}</div>
-        <div className="text-lg block md:hidden">{props.description}</div>
+        <div className="text-lg hidden md:block z-10">{descriptionParts[0]}</div>
+        <div className="text-lg hidden md:block z-10">{descriptionParts[1]}</div>
+        <div className="text-lg block md:hidden z-10">{props.description}</div>
       </div>
       {!props.isOnline && <EventPlace location={props.location} />}
       {props.eventSpeakers && props.eventSpeakers.length > 0 && (

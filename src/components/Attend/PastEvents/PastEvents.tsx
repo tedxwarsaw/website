@@ -15,12 +15,12 @@ export const PastEvents = ({
   pastEventsItems,
 }: PastEventsProps) => (
   <div className="py-16 relative">
-    <Lines wider={true}/>
-    <h2 className="mb-5 xl:mb-10 font-bold">
-      {pastEventsSectionTitle}
-    </h2>
+      <h2 className="mb-5 xl:mb-10 font-bold">
+          {pastEventsSectionTitle}
+      </h2>
     <div className="inner-grid">
-      {pastEventsItems.map((pastEvent, index) => (
+        <Lines wider={true}/>
+        {pastEventsItems.map((pastEvent, index) => (
         <div className="my-5 xl:my-0" key={index}>
           <span className="text-3xl md:text-4xl text-customRed font-bold">
             x{pastEvent.count}

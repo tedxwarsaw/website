@@ -29,10 +29,10 @@ export const Partners = ({
   <div className="relative">
     <Lines onlyHorizontal={true} wider={true} />
     <div className="py-20 space-y-6">
-      <div className="flex justify-between pb-6">
+      <div className="flex justify-between pb-6 z-10">
         <h2 className="font-medium">{partnerSectionTitle}</h2>
         {showLinks && (
-          <div className="flex items-center hidden xl:flex">
+          <div className="flex items-center hidden xl:flex z-10">
             <Link
               to={getToKnowOurPartnersLink}
               className="text-customRed flex hover:opacity-50 items-center"
@@ -60,7 +60,7 @@ export const Partners = ({
             key={idx}
             fixed={fixed}
             alt="Partner logo"
-            className={"partners-img-mobile"}
+            className={"partners-img-mobile z-10"}
           />
         ))}
       </div>

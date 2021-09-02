@@ -28,7 +28,7 @@ export const EventDetails = ({
   return (
     <div className="inner-grid py-10 relative">
       <Lines wider={true}/>
-      <div className="gap-0 inner-grid">
+      <div className="gap-0 inner-grid z-10">
         <div className="col-start-1 row-start-1 flex flex-col">
           <span className="font-bold">WHERE</span>
           <span className="md:hidden">
@@ -48,7 +48,7 @@ export const EventDetails = ({
         </div>
       </div>
       <p className="xl:block hidden">{descriptionSplit[0]}</p>
-      <div>
+      <div className="z-10">
         <p className="xl:block hidden mb-5">{descriptionSplit[1]}</p>
         <p className="xl:hidden mt-5 md:mt-0 mb-5">{description}</p>
         <Link to={`/event/${slug}`}>

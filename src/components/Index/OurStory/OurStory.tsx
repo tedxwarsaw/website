@@ -8,7 +8,7 @@ export const OurStory = ({ ourStoryTitle, ourStoryItems }: OurStoryProps) => (
     <Lines onlyHorizontal={true} />
     <div className="main-grid">
       <div className="inner-grid our-story-desktop">
-        <div className="pr-8 py-4 flex">
+        <div className="pr-8 py-4 flex z-10">
           <p>{ourStoryTitle}</p>
           {ourStoryItems.map(({ boldText, text }, i) => {
             if (i % 4 !== 0) return;

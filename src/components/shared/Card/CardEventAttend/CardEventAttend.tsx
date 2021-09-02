@@ -25,7 +25,7 @@ export const CardEventAttend = ({
   const dateConverted = moment(date, "DD/MM/YYYY");
 
   return (
-    <div className="relative pt-2 md:pt-3 pb-5 border-b-4 border-customTransparent h-full flex flex-col card-container">
+    <div className="relative pt-2 md:pt-3 pb-5 border-b-4 border-customTransparent h-full flex flex-col card-container z-10">
       <Link to={`/event/${slug}`}>
         <div className="relative card-image-container">
           <Img
