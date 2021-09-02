@@ -13,3 +13,9 @@
     display: none;
   }
 }
+
+@media (min-width: theme("screens.md")) {
+  .our-story-mobile {
+    display: none;
+  }
+}

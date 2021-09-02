@@ -13,7 +13,7 @@ export const OurStory = ({ ourStoryTitle, ourStoryItems }: OurStoryProps) => (
           {ourStoryItems.map(({ boldText, text }, i) => {
             if (i % 4 !== 0) return;
             return (
-              <div className="px-8" key={i}>
+              <div className="px-14" key={i}>
                 <p>
                   <b>{boldText}</b> {text}
                 </p>
@@ -25,7 +25,7 @@ export const OurStory = ({ ourStoryTitle, ourStoryItems }: OurStoryProps) => (
           {ourStoryItems.map(({ boldText, text }, i) => {
             if (i % 4 !== 1 && i % 4 !== 2) return;
             return (
-              <div className="pr-8" key={i}>
+              <div className="pr-14" key={i}>
                 <p>
                   <b>{boldText}</b> {text}
                 </p>
@@ -37,7 +37,7 @@ export const OurStory = ({ ourStoryTitle, ourStoryItems }: OurStoryProps) => (
           {ourStoryItems.map(({ boldText, text }, i) => {
             if (i % 4 !== 3) return;
             return (
-              <div className="pr-8" key={i}>
+              <div className="pr-14" key={i}>
                 <p>
                   <b>{boldText}</b> {text}
                 </p>
@@ -77,35 +77,6 @@ export const OurStory = ({ ourStoryTitle, ourStoryItems }: OurStoryProps) => (
         </div>
       </div>
 
-      <div className="inner-grid our-story-tablet">
-        <div className="pr-8 py-4 flex justify-between">
-          <p>{ourStoryTitle}</p>
-          {ourStoryItems.map(({ boldText, text }, i) => {
-            if (i % 4 !== 0 && i % 4 !== 1) return;
-            return (
-              <div className="px-8" key={i}>
-                <p>
-                  <b>{boldText}</b>
-                </p>
-                <p>{text}</p>
-              </div>
-            );
-          })}
-        </div>
-        <div className="py-4 flex justify-between">
-          {ourStoryItems.map(({ boldText, text }, i) => {
-            if (i % 4 !== 2 && i % 4 !== 3) return;
-            return (
-              <div className="pr-8" key={i}>
-                <p>
-                  <b>{boldText}</b>
-                </p>
-                <p>{text}</p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
       <div className="inner-grid our-story-mobile">
         <div className="pr-8  flex flex-col justify-between">
           <p className="pb-8">{ourStoryTitle}</p>
