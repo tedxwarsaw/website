@@ -1,12 +1,6 @@
 import React from "react";
 import { StaticQuery, graphql, Link } from "gatsby";
-import Img, { FixedObject } from "gatsby-image";
-import {
-  FaArrowRight,
-  FaFacebook,
-  FaTwitter,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FeaturedEvent } from "../../types";
 import { Lines } from "../../components/Lines/Lines";
@@ -123,7 +117,11 @@ export const FooterTemplate = (props: Props) => (
           </div>
         </Column>
       </div>
-      <div className="col-span-full flex flex-row lowercase space-x-6 font-light">
+      <span className="w-full h-0.5 bg-black opacity-10 col-span-full" />
+      <div
+        className="col-span-full flex flex-row lowercase space-x-6 font-light"
+        style={{ marginTop: "15px" }}
+      >
         {props.bottomLinks.map((link, idx) => (
           <Link key={idx} className="lowercase hover:opacity-50" to={link.path}>
             {link.displayName}

@@ -38,9 +38,7 @@ export const Newsletter = ({
         >
           <div className="seamless-grid mb-10 md:mb-0">
             <div className="col-start-2 col-end-3 pr-10 md:pr-0 mb-10">
-              <h2 className="text-white font-medium">
-                {newsletterTitle}
-              </h2>
+              <h2 className="text-white font-medium">{newsletterTitle}</h2>
               <p className="text-white my-5">{newsletterMessage1}</p>
               <p className="text-white">{newsletterMessage2}</p>
             </div>
@@ -54,14 +52,24 @@ export const Newsletter = ({
       <div className="main-grid-full-span" id="newsletter">
         <div className="bg-customLightGrey py-12">
           <div className="seamless-grid mb-10 md:mb-0">
-            <div className={`col-start-2 col-end-7 inner-grid ${newsletterMessage1 ? '' : 'mb-10'}`}>
+            <div
+              className={`col-start-2 col-end-7 inner-grid ${
+                newsletterMessage1 ? "" : "mb-10"
+              }`}
+            >
               <h2 className="font-medium">{newsletterTitle}</h2>
-              {newsletterMessage1 && <p className="my-5 col-start-1 col-end-2 row-start-2">
-                {newsletterMessage1}
-              </p>}
-              {newsletterMessage1 ? <p className="col-start-1 col-end-2 row-start-3 md:col-start-2 md:col-end-3 md:row-start-2 my-5 ">
-                {newsletterMessage2}
-              </p> : <p>{newsletterMessage2}</p>}
+              {newsletterMessage1 && (
+                <p className="my-5 col-start-1 col-end-2 row-start-2">
+                  {newsletterMessage1}
+                </p>
+              )}
+              {newsletterMessage1 ? (
+                <p className="col-start-1 col-end-2 row-start-3 md:col-start-2 md:col-end-3 md:row-start-2 my-5 ">
+                  {newsletterMessage2}
+                </p>
+              ) : (
+                <p>{newsletterMessage2}</p>
+              )}
             </div>
             <NewsletterForm />
           </div>
