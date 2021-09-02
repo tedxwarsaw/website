@@ -22,7 +22,7 @@ export interface AboutUsProps {
 export const AboutUs = (props: AboutUsProps) => (
   <div className="main-grid-full-span relative">
     <Lines wider={true}/>
-    <div className={"main-grid mt-8"}>
+    <div className={"main-grid mt-16"}>
       <div className={"flex col-start-2 col-end-5"}>
         <Img
           className="w-full h-full"

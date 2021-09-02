@@ -29,7 +29,7 @@ export const AboutTed = (props: AboutTedProps) => (
           </ReactMarkdown>
         </div>
 
-        <div className={"border p-5 mt-8"}>
+        <div className={"border-2 p-5 mt-8"}>
           <div className={"font-bold"}>TED speakers have included</div>
           <div>{`${props.aboutTedSpeakers
             .map((x: TedSpeaker) => x.name)
