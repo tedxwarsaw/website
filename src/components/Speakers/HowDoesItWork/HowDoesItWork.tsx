@@ -15,7 +15,7 @@ export interface HowDoesItWorkProps {
 
 export const HowDoesItWork = (props: HowDoesItWorkProps) => (
   <div className="seamless-grid pt-20 pb-20 relative wider">
-    <Lines onlyHorizontal={true}/>
+    <Lines />
     <div className="flex items-top col-start-2 col-end-3 text-2xl md:text-3xl font-bold">
       <ReactMarkdown rehypePlugins={[rehypeRaw]}>
         {props.howDoesItWorkTitle}

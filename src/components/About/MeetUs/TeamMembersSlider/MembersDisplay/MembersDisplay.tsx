@@ -17,16 +17,13 @@ export const MembersDisplay = ({
       const name = member.name.split(" ");
       return (
         <div
-          className="flex flex-col font-semibold w-40 mr-5 cursor-pointer mt-5"
+          className="flex flex-col font-regular mr-5 cursor-pointer mt-5"
           key={member.name + index}
           onClick={() => setCurrentSlide(index)}
         >
-          {name.map((word) => (
-            <span key={word}>{word}</span>
-          ))}
-
+          <span>{`${name[0]} `} <br className="xl:hidden lg:hidden"/>{name[1]}</span>
           <span
-            className={`h-1 bg-customRed rounded-sm w-full mt-3  ${
+            className={`h-1 bg-customRed rounded-sm sm:w-full md:w-auto mt-3  ${
               activeMemberIndex === index ? "opacity-100" : "opacity-50"
             }`}
           />
