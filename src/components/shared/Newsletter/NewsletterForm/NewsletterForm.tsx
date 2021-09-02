@@ -7,11 +7,11 @@ export const NewsletterForm = () => {
     <form
       action="https://tedxwarsaw.us2.list-manage.com/subscribe/post?u=db67c5c3bfd4a6e582b34ae78&amp;id=3c92076e33"
       method="post"
-      className="bg-white md:flex justify-between items-center xl:px-8 rounded-md font-light col-start-2 col-end-3 md:col-end-5 xl:col-end-7 row-start-2 flex-col px-4 py-1 xl:flex xl:flex-row shadow-md"
+      className="bg-white md:flex justify-between items-center xl:px-8 rounded-md font-light col-start-2 col-end-3 md:col-end-5 xl:col-end-7 row-start-2 flex-col px-2 py-1 xl:flex xl:flex-row shadow-md"
     >
       <div className="newsletter-form-fields xl:flex xl:flex-grow">
         <input
-          className="my-3 xl:ml-5 p-4 border border-opacity-50 border-customGrey rounded-md md:row-start-2 md:col-start-2 md:col-end-3 xl:flex-grow"
+          className="my-3  p-4 border border-opacity-50 border-customGrey rounded-md md:row-start-2 md:col-start-2 md:col-end-3 xl:flex-grow"
           name="FNAME"
           type="text"
           placeholder="First Name"

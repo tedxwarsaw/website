@@ -46,7 +46,7 @@ export const MainEvent = ({
       </div>
       <div className="md:col-start-2 md:col-end-3 xl:col-start-3 xl:col-end-full flex flex-col space-y-6">
         <div className="mt-5 md:mt-0">
-          <span className="text-white text-sm px-3 bg-customDarkGrey md:py-1 mr-3">
+          <span className="text-white uppercase text-sm px-3 bg-customDarkGrey md:py-1 mr-3 font-bold">
             <Link to={`/event/${slug}`}>{category}</Link>
           </span>
           <span>{dateConverted.format("D MMMM YYYY")}</span>

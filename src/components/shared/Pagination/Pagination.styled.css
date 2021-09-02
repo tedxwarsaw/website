@@ -22,6 +22,17 @@
   justify-content: center;
 }
 
+@media (max-width: theme("screens.md")) {
+  .pagination > li > a,
+  .pagination-container > .previous-button,
+  .pagination-container > .next-button,
+  .pagination-container > .first-button,
+  .pagination-container > .last-button {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 .pagination > .active {
   color: theme("colors.customRed");
 }

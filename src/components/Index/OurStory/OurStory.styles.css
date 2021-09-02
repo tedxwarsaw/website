@@ -1,0 +1,21 @@
+@media (max-width: theme("screens.xl")) {
+  .our-story-desktop {
+    display: none;
+  }
+}
+@media (max-width: theme("screens.md")) {
+  .our-story-tablet {
+    display: none;
+  }
+}
+@media (min-width: theme("screens.xl")) {
+  .our-story-tablet {
+    display: none;
+  }
+}
+
+@media (min-width: theme("screens.md")) {
+  .our-story-mobile {
+    display: none;
+  }
+}

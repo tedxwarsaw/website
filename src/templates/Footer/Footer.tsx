@@ -1,12 +1,6 @@
 import React from "react";
 import { StaticQuery, graphql, Link } from "gatsby";
-import Img, { FixedObject } from "gatsby-image";
-import {
-  FaArrowRight,
-  FaFacebook,
-  FaTwitter,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FeaturedEvent } from "../../types";
 import { Lines } from "../../components/Lines/Lines";
@@ -42,7 +36,7 @@ const Column = (props: { title: string; children: React.ReactNode }) => (
 );
 
 export const FooterTemplate = (props: Props) => (
-  <footer className="main-grid border-t relative">
+  <footer className="main-grid relative">
     <Lines onlyHorizontal={true} wider={true} />
     <div className="inner-grid my-10 space-y-10 xl:space-y-0 z-10">
       <Link to="/" className="h-12 flex flex-row items-center">
@@ -123,7 +117,14 @@ export const FooterTemplate = (props: Props) => (
           </div>
         </Column>
       </div>
-      <div className="col-span-full flex flex-row lowercase space-x-6 font-light">
+      <span
+        className="w-full h-px bg-black opacity-10 col-span-full"
+        style={{ marginTop: "30px" }}
+      />
+      <div
+        className="col-span-full flex flex-row lowercase space-x-6 font-light"
+        style={{ marginTop: "15px" }}
+      >
         {props.bottomLinks.map((link, idx) => (
           <Link key={idx} className="lowercase hover:opacity-50" to={link.path}>
             {link.displayName}

@@ -1,3 +1,13 @@
 .watch-heading-md strong {
   color: theme("colors.customRed");
 }
+
+.watch-heading-md h2 {
+  font-size: 40px;
+}
+
+@media (max-width: theme("screens.xl")) {
+  .watch-heading-md h2 {
+    font-size: 20px;
+  }
+}
