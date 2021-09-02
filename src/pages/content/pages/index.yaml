@@ -1,7 +1,7 @@
-slug: /
-templateKey: IndexPage
 heroTitle: Ideas worth spreading
-heroSubtitle: TEDxWarsaw is an annual event where dreamers, founders, activists, engineers, artists and other amazing speakers meet to share their ideas worth spreading.
+heroSubtitle: TEDxWarsaw is an annual event where dreamers, founders, activists,
+  engineers, artists and other amazing speakers meet to share their ideas worth
+  spreading.
 heroButtonText: Get Involved
 heroButtonLink: /volunteers
 heroLinks:
@@ -16,28 +16,29 @@ ourStoryItems:
     text: major events
   - boldText: 7000+
     text: guests
-  - boldText: "230+"
+  - boldText: 230+
     text: speakers
   - boldText: "1"
     text: marriage proposal on stage
+eventSlug: polarization-2021
 youtubeBannerHeading: We have <b>2mln+</b> views on YouTube
 youtubeBannerLinkText: Watch all talks
 youtubeBannerLinkUrl: /watch
-joinUsTitle: "Join **TEDxWarsaw**."
-joinUsSubtitle: "Become our volunteer and enter the amazing world of TEDx"
-joinUsImagePath: "images/uploads/join_tedxwarsaw.jpg"
-joinUsImageDesktopPath: "images/uploads/join_tedxwarsaw.jpg"
-joinUsVolunteerText: "Get involved as a volunteer"
-joinUsVolunteerLink: "/volunteers"
-joinUsGetToKnowOurTeamText: "Get to know our team ->"
-joinUsGetToKnowOurTeamLink: "/about"
-joinUsBecomeSpeakerText: "Become a TEDx Speaker ->"
-joinUsBecomeSpeakerLink: "/speakers"
-partnerSectionTitle: "Our partners"
-getToKnowOurPartnersText: "Get to know our partners ->"
-getToKnowOurPartnersLink: "/partners"
-joinOurPartnersText: "Join our partners"
-joinOurPartnersLink: "/partners"
+joinUsTitle: Join **TEDxWarsaw**.
+joinUsSubtitle: Become our volunteer and enter the amazing world of TEDx
+joinUsImagePath: images/uploads/join_tedxwarsaw.jpg
+joinUsImageDesktopPath: images/uploads/join_tedxwarsaw.jpg
+joinUsVolunteerText: Get involved as a volunteer
+joinUsVolunteerLink: /volunteers
+joinUsGetToKnowOurTeamText: Get to know our team ->
+joinUsGetToKnowOurTeamLink: /about
+joinUsBecomeSpeakerText: Become a TEDx Speaker ->
+joinUsBecomeSpeakerLink: /speakers
+partnerSectionTitle: Our partners
+getToKnowOurPartnersText: Get to know our partners ->
+getToKnowOurPartnersLink: /partners
+joinOurPartnersText: Join our partners
+joinOurPartnersLink: /partners
 partnerLogos:
   - partnerName: Forbes Women
     partnerLogoPath: events/polarization-2021/partnerLogos/forbes_women.jpg
@@ -74,9 +75,12 @@ partnerLogos:
   - partnerName: Pismo
     partnerLogoPath: events/polarization-2021/partnerLogos/pismo.png
 centerTextSectionTitle: "## TEDxWarsaw"
-centerTextSectionContent: >-
-  TEDxWarsaw is an annual event where dreamers, founders, activists, engineers, artists and other amazing speakers meet to share their ideas worth spreading.
-centerTextSectionButtonText: Get involved
+centerTextSectionContent: TEDxWarsaw is an annual event where dreamers,
+  founders, activists, engineers, artists and other amazing speakers meet to
+  share their ideas worth spreading.
 centerTextSectionButtonLink: /volunteers
-centerTextSectionButtonTextSecond: About ->
+centerTextSectionButtonText: Get involved
 centerTextSectionButtonLinkSecond: /about
+templateKey: IndexPage
+slug: /
+centerTextSectionButtonTextSecond: About ->
