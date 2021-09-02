@@ -31,10 +31,7 @@ export const Watch = ({
       <div className="main-grid-full-span pt-16 bg-customLightGrey relative">
         <Lines onlyHorizontal={true} />
         <div className="inner-grid mb-10">
-          <div
-            className="col-start-1 col-span-full flex justify-center flex-col text-center gap-5"
-            style={{ fontSize: "40px" }}
-          >
+          <div className="col-start-1 col-span-full flex justify-center flex-col text-center gap-5">
             <ReactMarkdown className="watch-heading-md">
               {headerTitle}
             </ReactMarkdown>
