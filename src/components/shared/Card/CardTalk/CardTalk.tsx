@@ -49,7 +49,7 @@ export const CardTalk = ({
         </span>
       </div>
       <span
-        className={`absolute left-0 top-0 bg-customDarkGrey text-white md:py-1 text-sm px-3 -left-2 ${
+        className={`absolute font-bold left-0 top-0 bg-customDarkGrey text-white md:py-1 text-sm px-3 -left-2 ${
           noBadge ? "hidden" : ""
         }`}
       >

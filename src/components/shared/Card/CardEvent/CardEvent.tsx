@@ -43,7 +43,7 @@ export const CardEvent = ({
         </Button>
       </div>
     </Link>
-    <span className="absolute -left-2 top-0  text-white text-sm px-3 bg-customRed md:py-1">
+    <span className="absolute -left-2 top-0 font-bold text-white text-sm px-3 bg-customRed md:py-1">
       <Link to={`/event/${slug}`}>UPCOMING</Link>
     </span>
 

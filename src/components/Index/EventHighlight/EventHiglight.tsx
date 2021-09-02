@@ -34,7 +34,7 @@ export const EventHighlight = ({
           <span className="text-2xl md:text-3xl">{eventHeader}</span>
         </div>
         <div className="inner-grid">
-          <div className="grid grid-flow-row grid-cols-5 md:grid-cols-4 md:gap-0 xl:gap-4 xl:grid-cols-5 gap-4 row-gap-4 mb -10">
+          <div className="grid grid-flow-row grid-cols-5 md:grid-cols-4 md:gap-0 xl:gap-4 xl:grid-cols-5 gap-4 row-gap-4 mb-10">
             {eventSpeakerPhotos.map((profileImage, index) => {
               return (
                 <Img
@@ -47,19 +47,19 @@ export const EventHighlight = ({
             })}
           </div>
           <div className="xl:block hidden">
-            <p>{descriptionSplit[0]}</p>
+            <p className="text-xl">{descriptionSplit[0]}</p>
           </div>
 
           <div className="md:col-start-2 xl:col-start-3">
-            <p className="xl:block hidden">{descriptionSplit[1]}</p>
-            <p className="xl:hidden">{eventDescription}</p>
+            <p className="xl:block hidden text-xl">{descriptionSplit[1]}</p>
+            <p className="xl:hidden text-xl">{eventDescription}</p>
             <Link
               to={`/event/${eventSlug}`}
               className="text-customRed flex font-bold hover:opacity-50 mt-5 items-center"
               style={{ width: "fit-content" }}
             >
               <span className="my-auto flex items-center">
-                Learn more {'->'}
+                Learn more {"->"}
               </span>
             </Link>
           </div>
