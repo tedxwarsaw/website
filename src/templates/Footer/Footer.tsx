@@ -36,7 +36,7 @@ const Column = (props: { title: string; children: React.ReactNode }) => (
 );
 
 export const FooterTemplate = (props: Props) => (
-  <footer className="main-grid border-t relative">
+  <footer className="main-grid relative">
     <Lines onlyHorizontal={true} wider={true} />
     <div className="inner-grid my-10 space-y-10 xl:space-y-0 z-10">
       <Link to="/" className="h-12 flex flex-row items-center">
@@ -117,7 +117,10 @@ export const FooterTemplate = (props: Props) => (
           </div>
         </Column>
       </div>
-      <span className="w-full h-0.5 bg-black opacity-10 col-span-full" />
+      <span
+        className="w-full h-px bg-black opacity-10 col-span-full"
+        style={{ marginTop: "30px" }}
+      />
       <div
         className="col-span-full flex flex-row lowercase space-x-6 font-light"
         style={{ marginTop: "15px" }}

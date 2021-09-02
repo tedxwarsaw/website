@@ -40,7 +40,7 @@ export const CardEventAttend = ({
           />
         </div>
       </Link>
-      <span className="absolute -left-2 top-0  text-white text-sm px-3 bg-customDarkGrey md:py-1 uppercase">
+      <span className="absolute -left-2 top-0  text-white text-sm px-3 bg-customDarkGrey md:py-1 uppercase font-bold">
         <Link to={`/event/${slug}`}>{category}</Link>
       </span>
 
@@ -69,7 +69,7 @@ export const CardEventAttend = ({
           </span>
         </Link>
       </div>
-      <div className={"red-border"}/>
+      <div className={"red-border"} />
     </div>
   );
 };
