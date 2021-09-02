@@ -74,6 +74,10 @@ partnerLogos:
     partnerLogoPath: events/polarization-2021/partnerLogos/pfr.jpg
   - partnerName: Pismo
     partnerLogoPath: events/polarization-2021/partnerLogos/pismo.png
+  - partnerName: DELORD
+    partnerLogoPath: pages/photos/delordlogoblue.png
+  - partnerName: 2loud
+    partnerLogoPath: pages/photos/2loud_logo_event_2b.png
 centerTextSectionTitle: "## TEDxWarsaw"
 centerTextSectionContent: TEDxWarsaw is an annual event where dreamers,
   founders, activists, engineers, artists and other amazing speakers meet to
