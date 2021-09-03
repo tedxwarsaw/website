@@ -63,7 +63,7 @@ export const Watch = ({
           eventNames={eventNames}
           recommendedTalks={recommendedTalks}
         />
-        {numberOfPages - 1 > 1 && (
+        {numberOfPages - 1 > 1 && talksToShow.length !== 0 && (
           <Pagination
             numberOfPages={numberOfPages}
             changePage={changePage}

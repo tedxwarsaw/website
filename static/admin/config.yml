@@ -793,6 +793,10 @@ collections:
         label: "Display name"
         widget: string
         hint: "The name of the event. For example, TEDxWarsaw 2020."
+      - name: edition
+        label: "Edition name"
+        widget: string
+        hint: "Edition of the event. For example, Dare."
       - label: "Event category"
         name: "category"
         widget: "select"
