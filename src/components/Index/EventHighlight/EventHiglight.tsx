@@ -5,6 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 import "./EventHighlight.styles.css";
 import { splitTextInTwo } from "@/utils";
 import { Link } from "gatsby";
+import {Lines} from "@/components/Lines/Lines";
 
 export const EventHighlight = ({
   eventHiglightImage,
@@ -16,21 +17,22 @@ export const EventHighlight = ({
 }: EventHighlightProps) => {
   const descriptionSplit = splitTextInTwo(eventDescription);
   return (
-    <div className="pb-10 main-grid-mobile-full-span mb-14">
+    <div className="pb-16 main-grid-mobile-full-span relative">
+      <Lines wider={true}/>
       <div style={{ height: "fit-content" }}>
         <Img
-          className="w-full z-0 md:hidden"
+          className="w-full z-10 md:hidden"
           fluid={eventHiglightImage}
           alt="Event highlight background"
         />
         <Img
-          className="w-full z-0 hidden md:block"
+          className="w-full z-10 hidden md:block"
           fluid={eventHiglightImageDesktop}
           alt="Event highlight background"
         />
       </div>
-      <div className="px-5 md:px-0 ">
-        <div className="w-full py-10">
+      <div className="px-5 md:px-0">
+        <div className="w-full py-10 z-10">
           <span className="text-2xl md:text-3xl">{eventHeader}</span>
         </div>
         <div className="inner-grid">
@@ -38,7 +40,7 @@ export const EventHighlight = ({
             {eventSpeakerPhotos.map((profileImage, index) => {
               return (
                 <Img
-                  className="rounded-full max-h-0.5 partners-profile-images"
+                  className="rounded-full max-h-0.5 partners-profile-images z-10"
                   fixed={profileImage}
                   alt="Speaker profile images"
                   key={profileImage.base64 + `${index}`}
@@ -46,11 +48,11 @@ export const EventHighlight = ({
               );
             })}
           </div>
-          <div className="xl:block hidden">
+          <div className="xl:block hidden z-10">
             <p className="text-xl">{descriptionSplit[0]}</p>
           </div>
 
-          <div className="md:col-start-2 xl:col-start-3">
+          <div className="md:col-start-2 xl:col-start-3 z-10">
             <p className="xl:block hidden text-xl">{descriptionSplit[1]}</p>
             <p className="xl:hidden text-xl">{eventDescription}</p>
             <Link
