@@ -3,7 +3,7 @@ export interface YamlPage<Fields> {
 }
 
 export interface FeaturedEvent {
-  displayName: string;
+  : string;
   slug: string;
   show: boolean;
 }
