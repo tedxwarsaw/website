@@ -133,14 +133,19 @@ collections:
             widget: "list"
             required: false
             fields:
-              - { label: "name", name: "partnerName", widget: "string", required: false }
               - {
-                label: "Partner Logo",
-                name: "partnerLogoPath",
-                widget: "image",
-                allow_multiple: false,
-                media_folder: "photos",
-                public_folder: "pages/photos",
+                  label: "name",
+                  name: "partnerName",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Partner Logo",
+                  name: "partnerLogoPath",
+                  widget: "image",
+                  allow_multiple: false,
+                  media_folder: "photos",
+                  public_folder: "pages/photos",
                 }
           - label: "CenterTextSection title"
             name: "centerTextSectionTitle"
@@ -300,7 +305,7 @@ collections:
                   widget: image,
                   allow_multiple: false,
                   media_folder: "photos",
-                  public_folder: "pages/photos"
+                  public_folder: "pages/photos",
                 }
           - label: "Associates"
             name: "associates"
@@ -319,7 +324,7 @@ collections:
                   widget: image,
                   allow_multiple: false,
                   media_folder: "photos",
-                  public_folder: "pages/photos"
+                  public_folder: "pages/photos",
                 }
       - label: "Speakers"
         name: "speakers"
@@ -454,14 +459,19 @@ collections:
             widget: "list"
             required: false
             fields:
-              - { label: "name", name: "partnerName", widget: "string", required: false }
               - {
-                label: "Partner Logo",
-                name: "partnerLogoPath",
-                widget: "image",
-                allow_multiple: false,
-                media_folder: "photos",
-                public_folder: "pages/photos",
+                  label: "name",
+                  name: "partnerName",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Partner Logo",
+                  name: "partnerLogoPath",
+                  widget: "image",
+                  allow_multiple: false,
+                  media_folder: "photos",
+                  public_folder: "pages/photos",
                 }
 
           - label: "Partners Contacts Content"
@@ -471,7 +481,13 @@ collections:
             name: "partnersContacts"
             widget: "list"
             fields:
-              - { label: "image", name: "image", widget: image, media_folder: "photos", public_folder: "pages/photos" }
+              - {
+                  label: "image",
+                  name: "image",
+                  widget: image,
+                  media_folder: "photos",
+                  public_folder: "pages/photos",
+                }
               - { label: "name", name: "name", widget: string }
               - { label: "title", name: "title", widget: string }
               - { label: "email", name: "email", widget: string }
@@ -529,7 +545,7 @@ collections:
                 fields:
                   - { label: Title, name: title, widget: string }
                   - { label: Description, name: description, widget: string }
-                  - { label: Path, name: path, widget: string}
+                  - { label: Path, name: path, widget: string }
       - label: "Footer"
         name: "footer"
         file: "src/pages/content/global/footer.yaml"
@@ -794,6 +810,10 @@ collections:
         widget: string
         hint: "The name of the event. For example, TEDxWarsaw 2020."
       - name: edition
+        label: "Edition"
+        widget: string
+        hint: "The edition of the event. For example, Dare."
+      - name: edition
         label: "Edition name"
         widget: string
         hint: "Edition of the event. For example, Dare."
@@ -918,7 +938,7 @@ collections:
               widget: "image",
               allow_multiple: false,
               media_folder: "{{slug}}/speakerPhotos",
-              public_folder: "events/{{slug}}/speakerPhotos"
+              public_folder: "events/{{slug}}/speakerPhotos",
             }
       - name: partnerLogos
         label: Partner Logos
@@ -926,12 +946,12 @@ collections:
         required: false
         fields:
           - {
-            label: "Partner Logo",
-            name: "partnerLogoPath",
-            widget: "image",
-            allow_multiple: false,
-            media_folder: "{{slug}}/partnerLogos",
-            public_folder: "events/{{slug}}/partnerLogos"
+              label: "Partner Logo",
+              name: "partnerLogoPath",
+              widget: "image",
+              allow_multiple: false,
+              media_folder: "{{slug}}/partnerLogos",
+              public_folder: "events/{{slug}}/partnerLogos",
             }
       - name: ticketProviderLogo
         label: Ticket Provider Logo
@@ -947,12 +967,12 @@ collections:
         default: []
         fields:
           - {
-            lebel: "Event Photo",
-            name: "eventPhoto",
-            widget: "image",
-            allow_multiple: false,
-            media_folder: "{{slug}}/eventPhotos",
-            public_folder: "events/{{slug}}/eventPhotos"
+              lebel: "Event Photo",
+              name: "eventPhoto",
+              widget: "image",
+              allow_multiple: false,
+              media_folder: "{{slug}}/eventPhotos",
+              public_folder: "events/{{slug}}/eventPhotos",
             }
   - label: "Talks"
     name: talks
@@ -1029,4 +1049,4 @@ collections:
         label: Duration
         widget: string
         hint: Duration of this talk in format mm:ss (f.e. "3:14" )
-        pattern: ['"([^\\"]|\\")*"', "it must be enclosed with \""] 
+        pattern: ['"([^\\"]|\\")*"', 'it must be enclosed with "']

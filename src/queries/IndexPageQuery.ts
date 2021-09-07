@@ -64,6 +64,7 @@ const eventQuery = `#graphql
     event: eventsYaml(slug: {eq: $eventSlug}) {
       slug
       displayName
+      edition
       description
       cover {
         image {
@@ -176,6 +177,7 @@ export const queryForProps = async (
     heroBackgroundImage,
     heroBackgroundImageDesktop,
     eventHeader: event.displayName,
+    eventEdition: event.edition,
     eventDescription: event.description,
     featuredEventShow: featuredEvent.show,
     eventHiglightImage,

@@ -21,10 +21,7 @@ import {
   NewsletterProps,
   NewsletterVariant,
 } from "@/components/shared/Newsletter";
-import {
-  CenterTextSection,
-  CenterTextSectionProps,
-} from "../components/shared/CenterTextSection";
+import { CenterTextSectionProps } from "../components/shared/CenterTextSection";
 
 export interface Props
   extends HeroSectionProps,
@@ -35,7 +32,9 @@ export interface Props
     JoinUsProps,
     PartnersProps,
     CenterTextSectionProps,
-    NewsletterProps {}
+    NewsletterProps {
+  featuredEventShow: boolean;
+}
 
 export const IndexPageTemplate = (props: Props) => {
   return (
@@ -68,6 +67,7 @@ export const IndexPageTemplate = (props: Props) => {
           eventHiglightImage={props.eventHiglightImage}
           eventHiglightImageDesktop={props.eventHiglightImageDesktop}
           eventHeader={props.eventHeader}
+          eventEdition={props.eventEdition}
           eventSpeakerPhotos={props.eventSpeakerPhotos}
           eventDescription={props.eventDescription}
           eventSlug={props.eventSlug}
