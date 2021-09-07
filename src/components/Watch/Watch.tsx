@@ -56,20 +56,24 @@ export const Watch = ({
           </div>
         )}
       </div>
-      <div className="pb-10 relative">
+      <div className="main-grid-full-span relative">
         <Lines wider={true} />
-        <WatchList
-          talks={talksToShow}
-          eventNames={eventNames}
-          recommendedTalks={recommendedTalks}
-        />
-        {numberOfPages - 1 > 1 && talksToShow.length !== 0 && (
-          <Pagination
-            numberOfPages={numberOfPages}
-            changePage={changePage}
-            currentPage={currentPage}
-          />
-        )}
+        <div className="main-grid">
+          <div className="pb-10 relative">
+            <WatchList
+              talks={talksToShow}
+              eventNames={eventNames}
+              recommendedTalks={recommendedTalks}
+            />
+            {numberOfPages - 1 > 1 && talksToShow.length !== 0 && (
+              <Pagination
+                numberOfPages={numberOfPages}
+                changePage={changePage}
+                currentPage={currentPage}
+              />
+            )}
+          </div>
+        </div>
       </div>
     </>
   );
