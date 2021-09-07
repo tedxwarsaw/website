@@ -26,6 +26,7 @@ const eventQuery = `#graphql
   ) {
     event: eventsYaml(slug: {eq: $eventSlug}) {
       displayName
+      edition
       date
     }
   }
@@ -68,7 +69,7 @@ export const queryForAllTalks = async (
           eventSlug: talk.eventSlug,
         });
 
-        allEvents[talk.eventSlug] = event.displayName;
+        allEvents[talk.eventSlug] = event.displayName + " - " + event.edition;
         const date = new Date(event.date).getTime();
         const duration = talk.duration.replace('"', "").replace('"', "");
         return { ...talk, cover, date, duration };
