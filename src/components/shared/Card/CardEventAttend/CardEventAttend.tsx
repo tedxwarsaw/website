@@ -10,6 +10,7 @@ interface CardEventAttendProps {
   cover: FluidObject;
   coverDesktop: FluidObject;
   displayName: string;
+  edition: string;
   date?: string;
   category: string;
 }
@@ -19,6 +20,7 @@ export const CardEventAttend = ({
   cover,
   coverDesktop,
   displayName,
+  edition,
   date,
   category,
 }: CardEventAttendProps) => {
@@ -48,7 +50,9 @@ export const CardEventAttend = ({
         <div className="md:flex justify-between items-end mb-2 mt-5 md:my-5">
           <div>
             <span className="my-10">{dateConverted.format("D MMMM YYYY")}</span>
-            <h3 className="min-h-10 font-bold">{displayName}</h3>
+            <h3 className="min-h-10 font-bold">
+              {displayName + " - " + edition}
+            </h3>
           </div>
         </div>
       </Link>

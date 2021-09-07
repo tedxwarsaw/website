@@ -1,11 +1,11 @@
-  import React from "react";
+import React from "react";
 import { MainEvent } from "./MainEvent";
 import { EventsListProps } from "@/components/Attend/EventsList";
 import { ListFilters } from "@/components/Attend/EventsList/ListFilters";
 import { CardEventAttend } from "@/components/shared/Card";
 import { useEventList } from "./EventList.hooks";
 import { Pagination } from "../../shared/Pagination";
-import {Lines} from "../../Lines/Lines";
+import { Lines } from "../../Lines/Lines";
 
 export const EventsList = ({ events, categories }: EventsListProps) => {
   const {
@@ -19,7 +19,7 @@ export const EventsList = ({ events, categories }: EventsListProps) => {
 
   return (
     <div className="py-10 relative">
-      <Lines wider={true}/>
+      <Lines wider={true} />
       <ListFilters
         filtersList={categories}
         changeFilter={filterEvents}
@@ -36,11 +36,12 @@ export const EventsList = ({ events, categories }: EventsListProps) => {
               } else {
                 return (
                   <CardEventAttend
-                    key={event.displayName + index}
+                    key={event.displayName + event.edition}
                     slug={event.slug}
                     cover={event.cover.image.mobile}
                     coverDesktop={event.cover.image.desktop}
                     displayName={event.displayName}
+                    edition={event.edition}
                     date={event.date}
                     category={event.category}
                   />

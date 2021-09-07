@@ -8,6 +8,7 @@ import { HiMenuAlt2 } from "react-icons/hi";
 interface MainEventProps {
   event: {
     displayName: string;
+    edition: string;
     slug: string;
     category: string;
     date: string;
@@ -22,7 +23,7 @@ interface MainEventProps {
 }
 
 export const MainEvent = ({
-  event: { displayName, slug, category, date, hook, cover },
+  event: { displayName, edition, slug, category, date, hook, cover },
 }: MainEventProps) => {
   const dateConverted = moment(date, "DD/MM/YYYY");
 
@@ -51,9 +52,13 @@ export const MainEvent = ({
           </span>
           <span>{dateConverted.format("D MMMM YYYY")}</span>
         </div>
-        <h2 className="my-5 xl:my-0">{displayName}</h2>
+        <h2 className="my-5 xl:my-0">
+          {displayName}
+          <p className="font-bold">{edition}</p>
+        </h2>
+
         <p>{hook}</p>
-        <div className="flex-grow"/>
+        <div className="flex-grow" />
         <div>
           <Link
             to={`/event/${slug}`}
