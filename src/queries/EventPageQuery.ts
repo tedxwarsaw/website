@@ -28,6 +28,7 @@ const secondQuery = `#graphql
     event: eventsYaml(slug: {eq: $eventSlug}) {
       slug
       displayName
+      edition
       city
       date
       description

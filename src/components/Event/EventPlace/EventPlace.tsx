@@ -18,6 +18,7 @@ export const EventPlace = ({ location }: EventPlaceProps) => (
         image={location.image}
         alt="Cover photo"
         style={{ height: "30rem" }}
+        noLines
       >
         <div className="absolute w-screen main-grid h-60 overflow-hidden text-white space-y-0 py-10">
           <div className="font-medium text-4xl text-shadow max-w-md">

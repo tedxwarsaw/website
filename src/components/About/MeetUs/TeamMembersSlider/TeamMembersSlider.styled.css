@@ -16,8 +16,17 @@
   left: 0;
   transform: translate(-50%, -50%);
 }
+
+.team-members-slider-container .control-left svg{
+transform: translateX(-1px);
+}
+
 .team-members-slider-container .control-right {
   right: var(--side-gap);
+}
+
+.team-members-slider-container .control-right svg{
+  transform: translateX(3px);
 }
 
 @media (max-width: theme("screens.xl")) {

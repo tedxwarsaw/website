@@ -20,14 +20,14 @@ export const CenterTextSection = (props : CenterTextSectionProps) => {
     return <div className="main-grid-full-span bg-customLightGrey relative">
         <Lines />
         <div className="main-grid centerTextSection pt-14 pb-14">
-            <ReactMarkdown rehypePlugins={[rehypeRaw]} className="mt-10 centerText text-2xl md:text-3xl font-bold">
+            <ReactMarkdown rehypePlugins={[rehypeRaw]} className="mt-10 centerText text-2xl md:text-3xl font-bold z-10">
                 {props.centerTextSectionTitle}
             </ReactMarkdown>
-            <ReactMarkdown rehypePlugins={[rehypeRaw]} className="mt-6 centerText-70">
+            <ReactMarkdown rehypePlugins={[rehypeRaw]} className="mt-6 centerText-70 z-10">
                 {props.centerTextSectionContent}
             </ReactMarkdown>
             {props.centerTextSectionButtonLink &&
-                <div className="col-start-3 col-end-6">
+                <div className="col-start-3 col-end-6">text-2xl md:text-3xl
                     <a href={props.centerTextSectionButtonLink} target="_blank" rel="noopener noreferrer">
                         <Button children={<span>{props.centerTextSectionButtonText}</span>} className="mt-10 hover:bg-white hover:text-customRed"/>
                     </a>

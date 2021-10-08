@@ -21,6 +21,7 @@
   transition: all 0.4 ease;
   overflow-y: scroll;
   padding-left: 20px;
+  min-width: 448px;
 }
 
 .select-box .options-container::-webkit-scrollbar {

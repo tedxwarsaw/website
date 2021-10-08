@@ -8,6 +8,7 @@ import { HiMenuAlt2 } from "react-icons/hi";
 interface MainEventProps {
   event: {
     displayName: string;
+    edition: string;
     slug: string;
     category: string;
     date: string;
@@ -22,7 +23,7 @@ interface MainEventProps {
 }
 
 export const MainEvent = ({
-  event: { displayName, slug, category, date, hook, cover },
+  event: { displayName, edition, slug, category, date, hook, cover },
 }: MainEventProps) => {
   const dateConverted = moment(date, "DD/MM/YYYY");
 
@@ -30,7 +31,7 @@ export const MainEvent = ({
     <div className="inner-grid col-start-1 col-end-2 md:col-end-3 xl:col-end-4 mb-10">
       <div className="col-start-1 md:col-end-2 xl:col-end-3">
         <Link to={`/event/${slug}`}>
-          <div className="relative h-full">
+          <div className="relative h-full z-10">
             <Img
               className="h-full md:hidden"
               fluid={cover.image.mobile}
@@ -44,16 +45,20 @@ export const MainEvent = ({
           </div>
         </Link>
       </div>
-      <div className="md:col-start-2 md:col-end-3 xl:col-start-3 xl:col-end-full flex flex-col space-y-6">
+      <div className="md:col-start-2 md:col-end-3 xl:col-start-3 xl:col-end-full flex flex-col space-y-6 z-10">
         <div className="mt-5 md:mt-0">
-          <span className="text-white text-sm px-3 bg-customDarkGrey md:py-1 mr-3">
+          <span className="text-white uppercase text-sm px-3 bg-customDarkGrey md:py-1 mr-3 font-bold">
             <Link to={`/event/${slug}`}>{category}</Link>
           </span>
           <span>{dateConverted.format("D MMMM YYYY")}</span>
         </div>
-        <h2 className="my-5 xl:my-0">{displayName}</h2>
+        <h2 className="my-5 xl:my-0">
+          {displayName}
+          <p className="font-bold">{edition}</p>
+        </h2>
+
         <p>{hook}</p>
-        <div className="flex-grow"></div>
+        <div className="flex-grow" />
         <div>
           <Link
             to={`/event/${slug}`}

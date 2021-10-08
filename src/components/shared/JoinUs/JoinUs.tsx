@@ -34,7 +34,7 @@ export const JoinUs = ({
   backgroundColor
 }: JoinUsProps) => (
   <div className={`${backgroundColor ? backgroundColor : 'bg-customLightGrey'} main-grid-full-span relative`}>
-    <Lines onlyHorizontal={true}/>
+    <Lines onlyHorizontal={true} colorRight={'#ffffff1a'}/>
     <div className="seamless-grid join-us-section-content z-10">
       <div className="flex items-center join-us-section-left">
         <div className="pr-20 py-10 z-10">

@@ -6,6 +6,7 @@ const eventsQuery = `#graphql
       nodes {
         slug
         displayName
+        edition
         hook
         description
         category

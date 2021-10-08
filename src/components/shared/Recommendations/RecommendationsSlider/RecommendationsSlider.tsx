@@ -22,7 +22,7 @@ export const RecommendationsSlider = ({ children }) => {
       tablet: slidesToShowTablet,
       desktop: slidesToShowDeskotop,
     },
-    { mobile: 10, tablet: 20, desktop: 20 }
+    { mobile: 10, tablet: 20, desktop: 54 }
   );
 
   return (

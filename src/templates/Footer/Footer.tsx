@@ -1,12 +1,6 @@
 import React from "react";
 import { StaticQuery, graphql, Link } from "gatsby";
-import Img, { FixedObject } from "gatsby-image";
-import {
-  FaArrowRight,
-  FaFacebook,
-  FaTwitter,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FeaturedEvent } from "../../types";
 import { Lines } from "../../components/Lines/Lines";
@@ -42,13 +36,13 @@ const Column = (props: { title: string; children: React.ReactNode }) => (
 );
 
 export const FooterTemplate = (props: Props) => (
-  <footer className="main-grid border-t relative">
-    <Lines onlyHorizontal={true} wider={true} />
+  <footer className="main-grid relative">
     <div className="inner-grid my-10 space-y-10 xl:space-y-0 z-10">
-      <Link to="/" className="h-12 flex flex-row items-center">
+      <Lines onlyHorizontal={true} />
+      <Link to="/" className="h-12 flex flex-row items-center z-10">
         <img className="h-full" src={props.logoPath} alt="Logo" />
       </Link>
-      <div className="col-span-full xl:col-span-2 grid gap-16 grid-cols-2 md:grid-cols-4">
+      <div className="col-span-full xl:col-span-2 grid gap-16 grid-cols-2 md:grid-cols-4 z-10">
         {props.featuredEvent.show ? (
           <Column title={props.featuredEvent.displayName}>
             <div>
@@ -123,7 +117,14 @@ export const FooterTemplate = (props: Props) => (
           </div>
         </Column>
       </div>
-      <div className="col-span-full flex flex-row lowercase space-x-6 font-light">
+      <span
+        className="w-full h-px bg-black opacity-10 col-span-full"
+        style={{ marginTop: "30px" }}
+      />
+      <div
+        className="col-span-full flex flex-row lowercase space-x-6 font-light z-10"
+        style={{ marginTop: "15px" }}
+      >
         {props.bottomLinks.map((link, idx) => (
           <Link key={idx} className="lowercase hover:opacity-50" to={link.path}>
             {link.displayName}
@@ -131,7 +132,7 @@ export const FooterTemplate = (props: Props) => (
         ))}
       </div>
     </div>
-    <div className="col-span-full text-xs text-gray-500 mb-10">
+    <div className="col-span-full text-xs text-gray-500 mb-10 z-10">
       <div className="flex md:float-left">
         <span>
           {`@ ${new Date().getFullYear()} - TEDxWarsaw. All rights reserved`}

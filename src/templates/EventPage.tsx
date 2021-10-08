@@ -24,7 +24,7 @@ import { HeroSection } from "@/components/shared/HeroSection";
 import moment from "moment";
 import { JoinSpeakersSectionProps } from "@/queries/globalQueries/JoinSpeakersQuery";
 import { CoverVariant } from "@/types";
-import {Lines} from "../components/Lines/Lines";
+import { Lines } from "@/components/Lines/Lines";
 
 export interface Props
   extends NewsletterProps,
@@ -37,6 +37,7 @@ export interface Props
   slug: string;
   city: string;
   displayName: string;
+  edition: string;
   date: string;
   hook: string;
   description: string;
@@ -86,14 +87,24 @@ export const EventPageTemplate = (props: Props) => {
         buttonText={props.cover.button.text}
         buttonLink={props.cover.button.link}
       />
-      <div className="inner-grid py-20 space-y-10 xl:space-y-0 relative">
-        <Lines wider={true}/>
-        <div className="font-bold text-3xl md:col-span-2 xl:col-span-1">
-          {props.hook}
+      <div className="main-grid-full-span relative">
+        <Lines wider={true} />
+        <div className="main-grid">
+          <div className="inner-grid py-20 space-y-10 xl:space-y-0 relative">
+            <div className="font-bold text-3xl md:col-span-2 xl:col-span-1 z-10">
+              {props.hook}
+            </div>
+            <div className="text-lg hidden md:block z-10">
+              {descriptionParts[0]}
+            </div>
+            <div className="text-lg hidden md:block z-10">
+              {descriptionParts[1]}
+            </div>
+            <div className="text-lg block md:hidden z-10">
+              {props.description}
+            </div>
+          </div>
         </div>
-        <div className="text-lg hidden md:block">{descriptionParts[0]}</div>
-        <div className="text-lg hidden md:block">{descriptionParts[1]}</div>
-        <div className="text-lg block md:hidden">{props.description}</div>
       </div>
       {!props.isOnline && <EventPlace location={props.location} />}
       {props.eventSpeakers && props.eventSpeakers.length > 0 && (

@@ -26,7 +26,7 @@ export const CardTalk = ({
   noBadge,
 }: CardTalkProps) => (
   <Link to={`/talk/${slug}`}>
-    <div className="border-b-4 pb-5 pt-2 md:pt-3 border-customTransparent h-full flex flex-col card-container">
+    <div className="border-b-4 pb-5 pt-2 md:pt-3 border-customTransparent h-full flex flex-col card-container z-10">
       <div className="relative card-image-container">
         <Img
           className="w-full h-full md:hidden"
@@ -49,7 +49,7 @@ export const CardTalk = ({
         </span>
       </div>
       <span
-        className={`absolute left-0 top-0 bg-customDarkGrey text-white md:py-1 text-sm px-3 -left-2 ${
+        className={`absolute font-bold left-0 top-0 bg-customDarkGrey text-white md:py-1 text-sm px-3 -left-2 ${
           noBadge ? "hidden" : ""
         }`}
       >

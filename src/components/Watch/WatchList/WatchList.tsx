@@ -29,9 +29,7 @@ export const WatchList = ({
         </div>
       ) : (
         <div>
-          <h2 className="font-bold w-32 pt-5">
-            TEDxWarsaw Recommends
-          </h2>
+          <h2 className="font-bold w-32 pt-5">TEDxWarsaw Recommends</h2>
           <RecommendationsSlider>
             {recommendedTalks.map((item) => (
               <div key={item.displayName} className="h-full">

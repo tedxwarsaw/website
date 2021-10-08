@@ -22,14 +22,14 @@ export const AboutTed = (props: AboutTedProps) => (
           About <span className="text-customRed font-bold">TED</span>
         </h2>
       </div>
-      <div className="col-start-2 col-end-3 mt-8 md:col-start-2 md:col-end-5 md:mt-8 xl:col-start-4 xl:col-end-7 xl:mt-0 font-normal ">
+      <div className="col-start-2 col-end-3 mt-8 md:col-start-2 md:col-end-5 md:mt-8 xl:col-start-4 xl:col-end-7 xl:mt-0 font-normal z-10">
         <div className="about-ted-content">
           <ReactMarkdown rehypePlugins={[rehypeRaw]}>
             {props.aboutTedContent}
           </ReactMarkdown>
         </div>
 
-        <div className={"border p-5 mt-8"}>
+        <div className={"border-2 p-5 mt-8"}>
           <div className={"font-bold"}>TED speakers have included</div>
           <div>{`${props.aboutTedSpeakers
             .map((x: TedSpeaker) => x.name)

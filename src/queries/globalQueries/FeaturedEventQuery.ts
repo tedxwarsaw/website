@@ -40,7 +40,7 @@ const eventQuery = `#graphql
 
 export const queryForFeatureEvent = async (
   graphql: (query: string, args?: any) => any
-): Promise<NewsletterProps> => {
+): Promise<any> => {
   const {
     data: { featuredEventMeta },
   } = await graphql(featuredEventQuery);
